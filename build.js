@@ -492,6 +492,7 @@ function renderDuprCheck(loc) {
     ourWideL: [{ x: 28, y: 286 }, { x: 182, y: 268 }],
     ourWideR: [{ x: 272, y: 286 }, { x: 118, y: 268 }],
     ourScramble: [{ x: 120, y: 400 }, { x: 205, y: 414 }],
+    ourReturn: [{ x: 206, y: 412 }, { x: 96, y: 284 }],
     oppOneBackR: [{ x: 90, y: 188 }, { x: 235, y: 92 }],
     oppStaggerL: [{ x: 60, y: 188 }, { x: 210, y: 120 }]
   };

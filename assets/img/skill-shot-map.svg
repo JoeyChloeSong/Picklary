@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">Pickleball shot map</title>
+  <desc id="desc">A court with arcs for dink, third-shot drop, drive, and reset patterns.</desc>
+  <rect width="720" height="420" rx="28" fill="#fbfaf5"/>
+  <rect x="68" y="54" width="584" height="312" rx="18" fill="#e7f1ed" stroke="#1E6F5C" stroke-width="4"/>
+  <line x1="360" y1="54" x2="360" y2="366" stroke="#1E6F5C" stroke-width="5"/>
+  <line x1="220" y1="54" x2="220" y2="366" stroke="#1E6F5C" stroke-width="3" opacity=".45"/>
+  <line x1="500" y1="54" x2="500" y2="366" stroke="#1E6F5C" stroke-width="3" opacity=".45"/>
+  <path d="M130 305 C250 145 430 145 590 305" fill="none" stroke="#f4b400" stroke-width="8" stroke-linecap="round"/>
+  <path d="M590 305 l-24 -5 l13 -20" fill="none" stroke="#f4b400" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M510 145 C470 115 410 115 370 145" fill="none" stroke="#1E6F5C" stroke-width="7" stroke-linecap="round"/>
+  <path d="M220 270 C285 235 310 200 352 184" fill="none" stroke="#1d2421" stroke-width="6" stroke-linecap="round" stroke-dasharray="10 10"/>
+  <path d="M348 254 C390 240 430 245 496 276" fill="none" stroke="#1E6F5C" stroke-width="6" stroke-linecap="round"/>
+  <g font-family="Inter,Arial" font-weight="700" font-size="18" fill="#1d2421">
+    <text x="112" y="338">Drive</text><text x="252" y="236">3rd drop</text><text x="422" y="112">Dink</text><text x="432" y="312">Reset</text>
+  </g>
+  <circle cx="130" cy="305" r="10" fill="#f4b400"/><circle cx="590" cy="305" r="10" fill="#f4b400"/>
+</svg>

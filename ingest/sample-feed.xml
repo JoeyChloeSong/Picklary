@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Example Source Feed (sample)</title>
+    <link>https://example.org/</link>
+    <description>A local sample feed so the pipeline can be demonstrated offline.</description>
+    <item>
+      <title>Sample: regional league announces autumn schedule</title>
+      <link>https://example.org/announcements/autumn-schedule</link>
+      <description>A short source blurb. The pipeline keeps only a link and writes our own one-line summary — it does not store this text as published content.</description>
+      <pubDate>Mon, 05 May 2026 09:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Sample: maker releases a new control-oriented paddle</title>
+      <link>https://example.com/news/control-paddle</link>
+      <description>Source blurb about a product. We verify specs on the official page and add our own comparison reasoning before drafting anything.</description>
+      <pubDate>Thu, 08 May 2026 14:30:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

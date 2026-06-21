@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">DUPR level ladder from 2.0 to 5.0</title>
+  <desc id="desc">A refined level ladder: 2.0 (teal circle), 3.0 (amber diamond), 4.0 (blue square), and 5.0 (purple star), rising from beginner to advanced.</desc>
+  <defs>
+    <linearGradient id="rung" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#1E6F5C"/>
+      <stop offset="0.5" stop-color="#2f6fed"/>
+      <stop offset="1" stop-color="#7b53e0"/>
+    </linearGradient>
+    <filter id="ds" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#14513f" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="720" height="420" rx="28" fill="#fbfaf5"/>
+  <text x="96" y="386" font-family="Inter,Arial" font-size="16" font-weight="600" fill="#7a8780">Beginner</text>
+  <text x="624" y="60" text-anchor="end" font-family="Inter,Arial" font-size="16" font-weight="600" fill="#7a8780">Advanced</text>
+  <line x1="112" y1="332" x2="610" y2="92" stroke="url(#rung)" stroke-width="11" stroke-linecap="round"/>
+  <!-- minor levels: 2.5 / 3.5 / 4.5 -->
+  <g fill="#cfcdbf">
+    <circle cx="195" cy="292" r="8"/><circle cx="361" cy="212" r="8"/><circle cx="527" cy="132" r="8"/>
+  </g>
+  <g fill="#ffffff" font-family="Inter,Arial" font-size="13" font-weight="600">
+    <text x="195" y="276" text-anchor="middle" fill="#9a978a">2.5</text>
+    <text x="361" y="196" text-anchor="middle" fill="#9a978a">3.5</text>
+    <text x="527" y="116" text-anchor="middle" fill="#9a978a">4.5</text>
+  </g>
+  <g font-family="Inter,Arial" font-weight="700" filter="url(#ds)">
+    <!-- 2.0 teal circle -->
+    <circle cx="112" cy="332" r="26" fill="#1E6F5C" stroke="#ffffff" stroke-width="4"/>
+    <text x="112" y="338" text-anchor="middle" font-size="17" fill="#ffffff">2.0</text>
+    <!-- 3.0 amber diamond -->
+    <rect x="-22" y="-22" width="44" height="44" rx="7" fill="#E8A800" stroke="#ffffff" stroke-width="4" transform="translate(278,252) rotate(45)"/>
+    <text x="278" y="258" text-anchor="middle" font-size="17" fill="#3a2c00">3.0</text>
+    <!-- 4.0 blue square -->
+    <rect x="418" y="146" width="52" height="52" rx="10" fill="#2f6fed" stroke="#ffffff" stroke-width="4"/>
+    <text x="444" y="178" text-anchor="middle" font-size="17" fill="#ffffff">4.0</text>
+    <!-- 5.0 purple star -->
+    <path transform="translate(610,92)" d="M0,-27 L6.7,-9.2 L25.7,-8.3 L10.9,3.5 L15.9,21.8 L0,11.4 L-15.9,21.8 L-10.9,3.5 L-25.7,-8.3 L-6.7,-9.2 Z" fill="#7b53e0" stroke="#ffffff" stroke-width="3.5"/>
+    <text x="610" y="98" text-anchor="middle" font-size="15" fill="#ffffff">5.0</text>
+  </g>
+</svg>

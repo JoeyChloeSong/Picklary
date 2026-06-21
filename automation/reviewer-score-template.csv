@@ -1,0 +1,2 @@
+paddle_model,brand,reviewer,score,score_scale,review_url,review_date,one_line_takeaway,permission_checked
+Example Paddle,Example Brand,Example Reviewer,8.7,10,https://example.com/review,2026-06-19,"Control-first paddle with above-average spin",no

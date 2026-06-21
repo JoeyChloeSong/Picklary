@@ -1,0 +1,231 @@
+{
+  "site": {
+    "skip": "Skip to content"
+  },
+  "nav": {
+    "home": "Home",
+    "guides": "Guides",
+    "columns": "Columns",
+    "brief": "The Brief",
+    "about": "About",
+    "contact": "Contact",
+    "menu": "Menu",
+    "levelPathway": "Levels",
+    "paddles": "Paddles",
+    "players": "Pro Players",
+    "highlights": "Highlights",
+    "dupr": "DUPR",
+    "rulesSkills": "Rules & Skills",
+    "boards": "Boards"
+  },
+  "lang": {
+    "label": "Language",
+    "choose": "Choose a language"
+  },
+  "hero": {
+    "kicker": "Pickleball growth map",
+    "title": "Pick your level. Learn the skill. Choose the paddle. Share the highlight.",
+    "lead": "Picklary helps players choose a 2.0–5.0 pathway, learn rules and skills, compare popular paddles, study pro player profiles, and upload highlights for feedback.",
+    "ctaPrimary": "Choose my level",
+    "ctaSecondary": "Compare paddles",
+    "ctaTertiary": "Upload a highlight"
+  },
+  "pathway": {
+    "label": "DUPR pathway 2.0–5.0",
+    "note": "Choose your current level and follow the next skill, paddle, and highlight-feedback path."
+  },
+  "section": {
+    "categories": "Explore by topic",
+    "latest": "Latest guides",
+    "featured": "Editor's picks",
+    "brief": "The Brief",
+    "columns": "From the editor",
+    "principles": "How we write",
+    "editor": "Who runs Picklary",
+    "contact": "Questions or corrections?",
+    "experiences": "Four ways to use Picklary",
+    "levels": "Choose your level",
+    "paddleRankings": "Popular paddle finder",
+    "playerProfiles": "Pro player profiles",
+    "highlightBattle": "Highlight battle",
+    "quickStart": "Start here"
+  },
+  "label": {
+    "featured": "Editor's pick",
+    "column": "Column",
+    "level": "Level",
+    "published": "Published",
+    "updated": "Updated",
+    "by": "By",
+    "toc": "In this article",
+    "takeaways": "Key takeaways",
+    "mistakes": "Common beginner mistakes",
+    "checklist": "Quick checklist",
+    "faq": "Frequently asked",
+    "related": "Related reading",
+    "readMore": "Read guide",
+    "allGuides": "All guides",
+    "inCategory": "More in",
+    "backHome": "Back to home",
+    "tryTool": "Try the paddle finder"
+  },
+  "author": {
+    "title": "The editor & columns",
+    "visitorIntro": "Read the columns the editor has put together — shorter, opinionated pieces on where players actually get stuck.",
+    "adminIntro": "You're signed in as editor.",
+    "writeColumn": "Write a new column",
+    "principlesTitle": "Editorial principles",
+    "columnsTitle": "Columns"
+  },
+  "brief": {
+    "title": "The Brief",
+    "intro": "A periodic, plain-English digest: what's worth knowing in gear, rules, and the competitive scene — in our own words, each item linking to its primary source. We don't republish other people's articles.",
+    "source": "Source",
+    "edition": "Edition",
+    "disclaimer": "Each item is summarised in our own words and links to its primary source. Picklary does not reproduce source text."
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Picklary is email-based. Questions, corrections, and suggestions are all welcome.",
+    "emailLabel": "Email",
+    "formName": "Your name",
+    "formEmail": "Your email",
+    "formMessage": "Message",
+    "formSend": "Open in your email app",
+    "note": "This form opens a pre-filled message in your own email app. Picklary does not run a server that receives messages, so nothing is stored here."
+  },
+  "categories": {
+    "title": "Guides by topic",
+    "intro": "Every guide lives in one of five topics. Pick where you want to improve."
+  },
+  "fallback": {
+    "notice": "This article hasn't been translated yet — showing the original English."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "built": "An independent, reader-focused pickleball information site.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms",
+    "disclaimer": "Disclaimer",
+    "sitemap": "Sitemap",
+    "contact": "Contact",
+    "about": "About",
+    "editorial": "Editorial policy",
+    "corrections": "Corrections",
+    "community": "Community guidelines",
+    "advertising": "Advertising disclosure",
+    "cookies": "Cookie notice"
+  },
+  "tool": {
+    "title": "Paddle finder",
+    "intro": "Answer three quick questions for a starting profile to shop by. This suggests a paddle type, not a specific product — feel always wins, so try before you buy.",
+    "q1": "What do you want most from a paddle?",
+    "q1a": "Control & touch",
+    "q1b": "Spin",
+    "q1c": "Easy power",
+    "q2": "At the net, you'd rather have…",
+    "q2a": "Quick hands",
+    "q2b": "Stability",
+    "q3": "Any arm or elbow soreness?",
+    "q3a": "Yes — go gentle",
+    "q3b": "No issues",
+    "result": "Your starting profile",
+    "restart": "Start over",
+    "next": "Next",
+    "profileIntro": "Based on your answers, look for:",
+    "recControl": "a control-oriented paddle — softer feel and a forgiving sweet spot",
+    "recSpin": "a textured or raw carbon face for extra spin and bite",
+    "recPower": "an easy-power paddle that pops without a big swing",
+    "recHands": "a lighter, maneuverable build for quick hands at the net",
+    "recStability": "a slightly heavier, stable head that holds its line",
+    "recGentle": "a lower-vibration build (softer core, cushioned grip) to be kinder to your arm",
+    "note": "A starting point for shopping, not a specific product. Feel is personal — try before you buy."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "That page may have moved or never existed. Try the homepage, or browse the guides.",
+    "cta": "Go to homepage"
+  },
+  "sitemap": {
+    "title": "Sitemap",
+    "intro": "Every page on Picklary, in one place."
+  },
+  "breadcrumb": {
+    "home": "Home"
+  },
+  "side": {
+    "label": "Quick section navigation",
+    "title": "Quick pick",
+    "levels": "Levels",
+    "rules": "Rules",
+    "skills": "Skills",
+    "paddles": "Paddles",
+    "players": "Players",
+    "highlights": "Highlights"
+  },
+  "level": {
+    "indexTitle": "Choose your pickleball level",
+    "indexIntro": "Select from 2.0 to 5.0 to get level-matched skills, drills, paddle profile, and recommended guides.",
+    "focus": "What to focus on",
+    "skills": "Core skills",
+    "drills": "Drills to run",
+    "paddle": "Best paddle profile",
+    "related": "Recommended next reads",
+    "next": "Next level",
+    "back": "All levels"
+  },
+  "paddles": {
+    "title": "Paddle rankings and finder",
+    "intro": "Browse popular paddles by brand, type, shape, price band, level fit, traits, and review signals. Verify current price and approval status before buying.",
+    "filters": "Filter paddles",
+    "allBrands": "All brands",
+    "allStyles": "All styles",
+    "allLevels": "All levels",
+    "price": "Price band",
+    "type": "Type",
+    "shape": "Shape",
+    "core": "Core",
+    "face": "Face",
+    "traits": "Traits",
+    "usedBy": "Used by / line",
+    "reviewSignal": "Review signal",
+    "approvalNote": "Prices, specs, and approved-equipment status can change. Treat this as a research dashboard and verify official retailer and equipment-list pages before purchase.",
+    "openFinder": "Use paddle finder",
+    "viewDetails": "View details"
+  },
+  "players": {
+    "title": "World pro player profiles",
+    "intro": "Study major pro players by style, skills, events, paddle line, live DUPR/ranking links, and news-tracking shortcuts.",
+    "skills": "Major skills",
+    "achievements": "Career notes",
+    "events": "Events",
+    "paddle": "Paddle / sponsor line",
+    "watch": "What to study",
+    "live": "Check live DUPR, rankings, results, and news",
+    "sourceNote": "Live DUPR, results, seedings, and news change frequently. The profile is a learning card; use official sources for current numbers.",
+    "viewProfile": "View profile"
+  },
+  "highlights": {
+    "title": "Highlight Battle",
+    "intro": "Organize highlight clips with level and skill tags, then use the sample leaderboard and feedback template to build better clip-review habits.",
+    "uploadTitle": "Create a highlight card in your browser",
+    "clipTitle": "Clip title",
+    "level": "Your level",
+    "skill": "Skill tag",
+    "file": "Video file",
+    "submit": "Add preview card",
+    "leaderboard": "Weekly leaderboard",
+    "votes": "recommendations",
+    "note": "Feedback prompt",
+    "moderation": "This tool does not upload video to a server; it creates a browser-only preview card. Before public sharing, check copyright, likeness, privacy, reporting, and moderation rules."
+  },
+  "visual": {
+    "court": "Court zones: serve boxes, net, and kitchen line.",
+    "skills": "Shot map: dink, drive, third-shot drop, and reset.",
+    "paddles": "Paddle shapes affect reach, forgiveness, and hand speed.",
+    "dupr": "Level ladder from 2.0 through 5.0.",
+    "players": "Player cards connect skills, results, DUPR, and news.",
+    "highlights": "Highlight uploads create feedback and ranking loops.",
+    "boards": "Pickleball community board for FAQ and Q&A"
+  }
+}

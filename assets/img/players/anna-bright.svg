@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="900" viewBox="0 0 400 500" role="img" aria-labelledby="title desc">
+<title id="title">Anna Bright illustrated profile card</title>
+<desc id="desc">An original stylized profile card, not a photographic likeness.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#264653"/><stop offset="1" stop-color="#bc4749"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#14231f" flood-opacity=".25"/></filter>
+  <style>
+    .init{font:900 74px Arial,sans-serif;fill:#fff;text-anchor:middle}
+    .name{font:900 24px Arial,sans-serif;fill:#1b2a26;text-anchor:middle}
+    .small{font:700 12px Arial,sans-serif;letter-spacing:.12em;fill:#1e6f5c;text-anchor:middle}
+    .cap{font:700 11px Arial,sans-serif;letter-spacing:.10em;fill:#ffffff;text-anchor:middle;opacity:.88}
+  </style>
+</defs>
+<rect width="400" height="500" rx="28" fill="#f6fbf7"/>
+<rect x="20" y="20" width="360" height="460" rx="24" fill="#ffffff" stroke="#d9e8df"/>
+<g filter="url(#shadow)">
+  <rect x="56" y="48" width="288" height="278" rx="34" fill="url(#bg)"/>
+  <circle cx="200" cy="160" r="70" fill="#ffffff" fill-opacity=".22"/>
+  <circle cx="200" cy="140" r="42" fill="#ffffff" fill-opacity=".72"/>
+  <path d="M120 285c14-58 52-88 80-88s66 30 80 88" fill="#ffffff" fill-opacity=".72"/>
+  <circle cx="316" cy="78" r="30" fill="#f2b84b"/>
+  <text x="316" y="83" class="cap">USA</text>
+  <text x="200" y="183" class="init">AB</text>
+</g>
+<text x="200" y="350" class="name">Anna Bright</text>
+<text x="200" y="415" class="small">USA · PRO PROFILE</text>
+<text x="200" y="445" class="small">ILLUSTRATED CARD</text>
+</svg>

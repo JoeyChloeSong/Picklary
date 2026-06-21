@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Picklary — Admin (demo)</title>
+<style>
+  :root{
+    --main:#1E6F5C;--main-dark:#14513f;--main-tint:#e7f1ed;--sub:#F4B400;
+    --ink:#1d2421;--soft:#5b665f;--paper:#f4f5f2;--card:#fff;--line:#e0e2dc;--bad:#b4453a;
+    --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+    --sans:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:15px;line-height:1.55}
+  a{color:var(--main)}
+  button{font-family:var(--sans);cursor:pointer}
+  .hidden{display:none!important}
+  /* login */
+  .login{min-height:100vh;display:grid;place-items:center;padding:1.5rem}
+  .login__card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:2rem;max-width:420px;width:100%;box-shadow:0 10px 40px -20px rgba(0,0,0,.3)}
+  .login__card h1{font-size:1.4rem;margin:0 0 .3rem}
+  .login__card p{color:var(--soft);margin:.2rem 0 1rem}
+  .login__card input{width:100%;padding:.7rem .9rem;border:1.5px solid var(--line);border-radius:9px;font-size:1rem;margin-bottom:.8rem}
+  .warn{background:#fff6e2;border:1px solid #f3dca0;border-radius:9px;padding:.7rem .9rem;font-size:.85rem;color:#6b5a23;margin-top:1rem}
+  .btn{display:inline-block;background:var(--main);color:#fff;border:0;border-radius:999px;padding:.6rem 1.1rem;font-weight:600;text-decoration:none}
+  .btn:hover{background:var(--main-dark)}
+  .btn--ghost{background:transparent;color:var(--main);border:1.5px solid var(--line)}
+  .btn--ghost:hover{background:var(--main-tint)}
+  .btn--bad{background:var(--bad)}
+  .btn--sm{padding:.35rem .7rem;font-size:.82rem}
+  /* shell */
+  .shell{display:grid;grid-template-columns:230px 1fr;min-height:100vh}
+  .side{background:var(--ink);color:#cfd6d2;padding:1.2rem 0}
+  .side__brand{font-weight:700;color:#fff;padding:0 1.2rem 1rem;font-size:1.15rem;display:flex;align-items:center;gap:.5rem}
+  .side__brand small{display:block;font-weight:400;color:#8fa39b;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
+  .side a{display:block;padding:.6rem 1.2rem;color:#cfd6d2;text-decoration:none;font-size:.92rem;border-left:3px solid transparent}
+  .side a:hover{background:rgba(255,255,255,.06);color:#fff}
+  .side a.active{background:rgba(244,180,0,.12);border-left-color:var(--sub);color:#fff}
+  .side__foot{padding:1rem 1.2rem;border-top:1px solid rgba(255,255,255,.1);margin-top:1rem}
+  .main{padding:1.6rem 2rem}
+  .main h1{font-size:1.5rem;margin:0 0 .2rem}
+  .lead{color:var(--soft);margin:.1rem 0 1.4rem;max-width:60ch}
+  /* dashboard cards */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.1rem}
+  .stat b{font-size:2rem;font-family:var(--mono);color:var(--main);display:block}
+  .stat span{color:var(--soft);font-size:.85rem}
+  /* tables */
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  th,td{text-align:left;padding:.65rem .8rem;border-bottom:1px solid var(--line);font-size:.9rem}
+  th{background:#fafbf9;font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--soft)}
+  tr:last-child td{border-bottom:0}
+  .pill{font-family:var(--mono);font-size:.68rem;padding:.12rem .5rem;border-radius:999px;text-transform:uppercase;letter-spacing:.05em}
+  .pill--pub{background:var(--main-tint);color:var(--main-dark)}
+  .pill--draft{background:#fbeacb;color:#7a5b12}
+  .toolbar{display:flex;gap:.6rem;align-items:center;margin-bottom:1rem;flex-wrap:wrap}
+  .toolbar .spacer{flex:1}
+  /* editor */
+  .field{margin-bottom:1rem;max-width:760px}
+  .field label{display:block;font-weight:600;font-size:.85rem;margin-bottom:.3rem}
+  .field input,.field select,.field textarea{width:100%;padding:.55rem .75rem;border:1.5px solid var(--line);border-radius:9px;font-size:.95rem;font-family:var(--sans)}
+  .field textarea{min-height:200px;font-family:var(--mono);font-size:.85rem;line-height:1.5}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:760px}
+  .tabs{display:flex;gap:.4rem;margin:0 0 1rem;border-bottom:1px solid var(--line);flex-wrap:wrap}
+  .tab{background:transparent;border:0;border-bottom:2px solid transparent;padding:.5rem .8rem;font-weight:600;color:var(--soft)}
+  .tab.active{color:var(--main);border-bottom-color:var(--main)}
+  .tab .dot{font-size:.6rem;vertical-align:middle}
+  .tdone{color:var(--main)} .tmiss{color:#bb8a1c}
+  .hint{font-size:.82rem;color:var(--soft);margin:.3rem 0 0}
+  .notice{background:var(--main-tint);border:1px solid #cfe3db;border-radius:10px;padding:.8rem 1rem;font-size:.86rem;margin:1rem 0;max-width:760px}
+  .notice--warn{background:#fff6e2;border-color:#f3dca0}
+  .inbox-item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;margin-bottom:.8rem}
+  .inbox-item h3{margin:.1rem 0 .3rem;font-size:1.02rem}
+  .inbox-item .meta{font-family:var(--mono);font-size:.72rem;color:var(--soft);margin-bottom:.4rem}
+  .swatch{display:inline-block;width:16px;height:16px;border-radius:4px;vertical-align:middle;margin-right:.4rem;border:1px solid rgba(0,0,0,.1)}
+  @media(max-width:760px){.shell{grid-template-columns:1fr}.side{position:sticky;top:0;z-index:5}.row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div id="login" class="login">
+  <div class="login__card">
+    <h1>Picklary Admin</h1>
+    <p>Demo content manager</p>
+    <input id="pw" type="password" placeholder="Demo password" autocomplete="off">
+    <button class="btn" id="loginBtn" style="width:100%">Sign in</button>
+    <p id="loginErr" style="color:var(--bad);font-size:.85rem;margin:.6rem 0 0" class="hidden">Wrong password.</p>
+    <div class="warn">
+      <strong>This is a front-end demo, not real security.</strong> The password check and all editing happen in your browser only (localStorage). Anyone with the files can read the demo password. Don't put anything private here. To actually publish changes, export the JSON, replace the files in <code>/data</code>, and run <code>npm run build</code>.
+    </div>
+  </div>
+</div>
+
+<div id="app" class="shell hidden">
+  <aside class="side">
+    <div class="side__brand">Picklary <small id="brandTag">admin · demo</small></div>
+    <nav id="nav">
+      <a href="#dashboard">Dashboard</a>
+      <a href="#posts">Posts</a>
+      <a href="#columns">Columns</a>
+      <a href="#categories">Categories</a>
+      <a href="#inbox">Ingestion Inbox</a>
+      <a href="#settings">Site Settings</a>
+    </nav>
+    <div class="side__foot">
+      <button class="btn btn--ghost btn--sm" id="exportBtn" style="color:#cfd6d2;border-color:#3a4742;width:100%;margin-bottom:.5rem">Export JSON</button>
+      <button class="btn btn--ghost btn--sm" id="importBtn" style="color:#cfd6d2;border-color:#3a4742;width:100%;margin-bottom:.5rem">Import JSON</button>
+      <input id="importFile" type="file" accept="application/json" class="hidden">
+      <button class="btn btn--ghost btn--sm" id="resetBtn" style="color:#cfd6d2;border-color:#3a4742;width:100%;margin-bottom:.5rem">Reset to defaults</button>
+      <button class="btn btn--ghost btn--sm" id="logoutBtn" style="color:#cfd6d2;border-color:#3a4742;width:100%">Sign out</button>
+    </div>
+  </aside>
+  <main class="main" id="view"></main>
+</div>
+
+<script>
+"use strict";
+var ADMIN_KEY="picklelevel.admin", CMS_KEY="courtnote.cms";
+var DEFAULT_PW="courtnote";
+var state=null; // {config, categories, posts, columns, inbox}
+
+/* ---------- auth ---------- */
+function loggedIn(){try{return localStorage.getItem(ADMIN_KEY)==="1";}catch(e){return false;}}
+function setLoggedIn(v){try{v?localStorage.setItem(ADMIN_KEY,"1"):localStorage.removeItem(ADMIN_KEY);}catch(e){}}
+
+document.getElementById("loginBtn").addEventListener("click",doLogin);
+document.getElementById("pw").addEventListener("keydown",function(e){if(e.key==="Enter")doLogin();});
+function doLogin(){
+  var pw=document.getElementById("pw").value;
+  var expected=(state&&state.config&&state.config.adminDemoPassword)||DEFAULT_PW;
+  if(pw===expected){setLoggedIn(true);showApp();}
+  else document.getElementById("loginErr").classList.remove("hidden");
+}
+document.getElementById("logoutBtn").addEventListener("click",function(){setLoggedIn(false);location.reload();});
+
+/* ---------- data loading ---------- */
+function loadDefaults(){
+  var files=["site.config","categories","posts","columns"];
+  return Promise.all(files.map(function(f){
+    return fetch("/data/"+f+".json").then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});
+  })).then(function(res){
+    return fetch("/data/ingested.json").then(function(r){return r.ok?r.json():[];}).catch(function(){return [];})
+      .then(function(inbox){
+        return {config:res[0]||{},categories:res[1]||[],posts:res[2]||[],columns:res[3]||[],inbox:inbox||[]};
+      });
+  });
+}
+function loadState(){
+  var saved=null;
+  try{saved=JSON.parse(localStorage.getItem(CMS_KEY));}catch(e){}
+  if(saved&&saved.posts){state=saved;return Promise.resolve(state);}
+  return loadDefaults().then(function(d){state=d;save();return state;});
+}
+function save(){try{localStorage.setItem(CMS_KEY,JSON.stringify(state));}catch(e){alert("Could not save (storage full or blocked).");}}
+function resetDefaults(){
+  if(!confirm("Discard local edits and reload the original data files?"))return;
+  loadDefaults().then(function(d){state=d;save();route();});
+}
+
+/* ---------- helpers ---------- */
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+function slugify(s){return String(s).toLowerCase().trim().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");}
+function locales(){return (state.config.locales)||["en"];}
+function sourceLocale(){return state.config.sourceLocale||state.config.defaultLocale||"en";}
+function langName(code){return (state.config.languageNames&&state.config.languageNames[code])||code;}
+function catName(id){var c=state.categories.find(function(x){return x.id===id||x.slug===id;});return c?c.name:id;}
+function byId(arr,id){return arr.find(function(x){return x.id===id;});}
+
+/* ---------- views ---------- */
+function setActive(hash){
+  Array.prototype.forEach.call(document.querySelectorAll("#nav a"),function(a){
+    a.classList.toggle("active",a.getAttribute("href")===("#"+hash));
+  });
+}
+function view(html){document.getElementById("view").innerHTML=html;}
+
+function dashboard(){
+  setActive("dashboard");
+  var pub=state.posts.filter(function(p){return p.status==="published";}).length;
+  var dr=state.posts.filter(function(p){return p.status!=="published";}).length;
+  var colPub=state.columns.filter(function(c){return c.status==="published";}).length;
+  view(
+    "<h1>Dashboard</h1><p class='lead'>A working copy of your content lives in this browser. Edit freely, then <strong>Export JSON</strong> and drop it into <code>/data</code> to publish.</p>"+
+    "<div class='cards'>"+
+      stat(pub,"Published posts")+stat(dr,"Draft posts")+stat(colPub,"Columns")+
+      stat(state.categories.length,"Categories")+stat(state.inbox.length,"Inbox items")+
+    "</div>"+
+    "<div class='notice notice--warn'>Publishing is a manual, intentional step on purpose: it keeps a human in the loop and keeps the site AdSense-safe. This panel never writes to the server or auto-publishes.</div>"
+  );
+}
+function stat(n,label){return "<div class='stat'><b>"+n+"</b><span>"+esc(label)+"</span></div>";}
+
+function postsList(){
+  setActive("posts");
+  view(
+    "<div class='toolbar'><h1 style='margin:0'>Posts</h1><div class='spacer'></div><a class='btn' href='#posts/new'>+ New post</a></div>"+
+    listTable(state.posts,"posts")
+  );
+}
+function columnsList(){
+  setActive("columns");
+  view(
+    "<div class='toolbar'><h1 style='margin:0'>Columns</h1><div class='spacer'></div><a class='btn' href='#columns/new'>+ New column</a></div>"+
+    listTable(state.columns,"columns")
+  );
+}
+function listTable(items,kind){
+  if(!items.length)return "<p class='lead'>Nothing yet.</p>";
+  var rows=items.map(function(it){
+    var st=it.status==="published"?"<span class='pill pill--pub'>Published</span>":"<span class='pill pill--draft'>Draft</span>";
+    var cat=kind==="posts"?"<td>"+esc(catName(it.category))+"</td>":"";
+    var tr=locales().filter(function(l){return l!==sourceLocale();}).map(function(l){
+      var has=it.translations&&it.translations[l]&&it.translations[l].title;
+      return "<span class='dot "+(has?"tdone":"tmiss")+"' title='"+esc(langName(l))+(has?" — translated":" — missing")+"'>●</span>";
+    }).join(" ");
+    return "<tr><td><a href='#"+kind+"/edit/"+esc(it.id)+"'>"+esc(it.title||"(untitled)")+"</a></td>"+cat+
+      "<td>"+st+"</td><td>"+esc(it.date||"")+"</td><td>"+tr+"</td>"+
+      "<td><button class='btn btn--ghost btn--sm' data-del='"+esc(kind)+":"+esc(it.id)+"'>Delete</button></td></tr>";
+  }).join("");
+  return "<table><thead><tr><th>Title</th>"+(kind==="posts"?"<th>Category</th>":"")+"<th>Status</th><th>Date</th><th>Translations</th><th></th></tr></thead><tbody>"+rows+"</tbody></table>"+
+    "<p class='hint'>Translation dots: green = translated, amber = missing (falls back to the source language and is marked <code>noindex</code> until translated).</p>";
+}
+
+var editLocale=null;
+function editor(kind,id){
+  setActive(kind);
+  var isNew=!id;
+  var arr=state[kind];
+  var item=isNew?newItem(kind):JSON.parse(JSON.stringify(byId(arr,id)||{}));
+  editLocale=sourceLocale();
+  renderEditor(kind,item,isNew);
+}
+function newItem(kind){
+  var base={id:(kind==="posts"?"post":"col")+"-"+Date.now(),slug:"",title:"",subtitle:"",summary:"",body:"",status:"draft",date:new Date().toISOString().slice(0,10),translations:{}};
+  if(kind==="posts"){base.category=(state.categories[0]||{}).id||"";base.featured=false;}
+  return base;
+}
+function renderEditor(kind,item,isNew){
+  var src=sourceLocale();
+  var tabs=locales().map(function(l){
+    var has=l===src||(item.translations&&item.translations[l]&&item.translations[l].title);
+    var badge=l===src?"":(" <span class='"+(has?"tdone":"tmiss")+"'>"+(has?"✓":"○")+"</span>");
+    return "<button class='tab"+(l===editLocale?" active":"")+"' data-loc='"+l+"'>"+esc(langName(l))+badge+"</button>";
+  }).join("");
+
+  var onSrc=editLocale===src;
+  var t=onSrc?item:(item.translations[editLocale]||{});
+  function f(name){return esc(t[name]!=null?t[name]:"");}
+
+  var catOpts=state.categories.map(function(c){return "<option value='"+esc(c.id)+"'"+(item.category===c.id?" selected":"")+">"+esc(c.name)+"</option>";}).join("");
+
+  var srcOnlyFields= onSrc ? (
+    (kind==="posts"?"<div class='row'><div class='field'><label>Category</label><select id='f-category'>"+catOpts+"</select></div>"+
+      "<div class='field'><label>Status</label><select id='f-status'><option value='draft'"+(item.status!=="published"?" selected":"")+">Draft</option><option value='published'"+(item.status==="published"?" selected":"")+">Published</option></select></div></div>"
+      :"<div class='field' style='max-width:360px'><label>Status</label><select id='f-status'><option value='draft'"+(item.status!=="published"?" selected":"")+">Draft</option><option value='published'"+(item.status==="published"?" selected":"")+">Published</option></select></div>")+
+    "<div class='row'><div class='field'><label>Slug</label><input id='f-slug' value='"+esc(item.slug||"")+"'></div>"+
+    "<div class='field'><label>Date (YYYY-MM-DD)</label><input id='f-date' value='"+esc(item.date||"")+"'></div></div>"
+  ) : (
+    "<div class='notice'>Editing the <strong>"+esc(langName(editLocale))+"</strong> translation. Leave fields empty to fall back to the source language. Only publish a translation you (or a fluent reviewer) have actually checked — machine-translated text published as-is hurts SEO and AdSense review.</div>"
+  );
+
+  view(
+    "<div class='toolbar'><a class='btn btn--ghost btn--sm' href='#"+kind+"'>&larr; Back</a><h1 style='margin:0;font-size:1.25rem'>"+(isNew?"New ":"Edit ")+kind.slice(0,-1)+"</h1></div>"+
+    "<div class='tabs'>"+tabs+"</div>"+
+    "<div class='field'><label>Title"+(onSrc?"":" ("+esc(langName(editLocale))+")")+"</label><input id='f-title' value='"+f("title")+"'></div>"+
+    "<div class='field'><label>Subtitle</label><input id='f-subtitle' value='"+f("subtitle")+"'></div>"+
+    "<div class='field'><label>Summary</label><textarea id='f-summary' style='min-height:70px'>"+f("summary")+"</textarea></div>"+
+    srcOnlyFields+
+    "<div class='field'><label>Body (HTML — use &lt;h2 id=\"...\"&gt; for sections)</label><textarea id='f-body'>"+f("body")+"</textarea></div>"+
+    "<div class='toolbar'><button class='btn' id='saveBtn'>Save</button>"+
+      (onSrc?"":"<button class='btn btn--ghost' id='clearTrans'>Clear this translation</button>")+
+      "<span class='spacer'></span>"+
+      (isNew?"":"<button class='btn btn--bad btn--ghost btn--sm' data-del='"+esc(kind)+":"+esc(item.id)+"'>Delete</button>")+
+    "</div>"+
+    "<p class='hint'>Saved to your browser. Export JSON and run <code>npm run build</code> to publish.</p>"
+  );
+
+  // tab switching (persist current field edits first)
+  Array.prototype.forEach.call(document.querySelectorAll(".tab"),function(b){
+    b.addEventListener("click",function(){collect(kind,item,isNew,false);editLocale=b.getAttribute("data-loc");renderEditor(kind,item,isNew);});
+  });
+  document.getElementById("saveBtn").addEventListener("click",function(){collect(kind,item,isNew,true);});
+  var ct=document.getElementById("clearTrans");
+  if(ct)ct.addEventListener("click",function(){delete item.translations[editLocale];editLocale=src;renderEditor(kind,item,isNew);});
+}
+function val(id){var e=document.getElementById(id);return e?e.value:undefined;}
+function collect(kind,item,isNew,persist){
+  var src=sourceLocale();
+  if(editLocale===src){
+    item.title=val("f-title");item.subtitle=val("f-subtitle");item.summary=val("f-summary");item.body=val("f-body");
+    if(val("f-status")!=null)item.status=val("f-status");
+    if(val("f-slug")!=null)item.slug=val("f-slug")||slugify(item.title);
+    if(val("f-date")!=null)item.date=val("f-date");
+    if(kind==="posts"&&val("f-category")!=null)item.category=val("f-category");
+  }else{
+    item.translations=item.translations||{};
+    var tr={title:val("f-title"),subtitle:val("f-subtitle"),summary:val("f-summary"),body:val("f-body")};
+    if(tr.title||tr.summary||tr.body)item.translations[editLocale]=tr; else delete item.translations[editLocale];
+  }
+  if(!persist)return;
+  var arr=state[kind];
+  var ex=byId(arr,item.id);
+  if(ex)Object.assign(ex,item); else arr.unshift(item);
+  save();
+  location.hash="#"+kind;
+}
+
+function categoriesView(){
+  setActive("categories");
+  var rows=state.categories.map(function(c){
+    return "<tr><td>"+esc(c.name)+"</td><td><code>"+esc(c.slug)+"</code></td><td>"+esc(c.blurb||"")+"</td></tr>";
+  }).join("");
+  view("<h1>Categories</h1><p class='lead'>Categories are defined in <code>data/categories.js</code> with their translations. Edit them there for full control.</p>"+
+    "<table><thead><tr><th>Name</th><th>Slug</th><th>Blurb</th></tr></thead><tbody>"+rows+"</tbody></table>");
+}
+
+function settingsView(){
+  setActive("settings");
+  var c=state.config;
+  view("<h1>Site Settings</h1><p class='lead'>These fill the site’s identity. ★ marked fields must be your real details before launch — never invent a name, email, or address.</p>"+
+    "<div class='field'><label>Site name</label><input id='s-name' value='"+esc(c.siteName||"")+"'></div>"+
+    "<div class='field'><label>Tagline</label><input id='s-tag' value='"+esc(c.tagline||"")+"'></div>"+
+    "<div class='field'><label>★ Contact email</label><input id='s-email' value='"+esc(c.email||"")+"'></div>"+
+    "<div class='field'><label>★ Site URL</label><input id='s-url' value='"+esc(c.url||"")+"'></div>"+
+    "<div class='row'><div class='field'><label>★ Owner / editor name</label><input id='s-owner' value='"+esc((c.owner&&c.owner.name)||"")+"'></div>"+
+    "<div class='field'><label>Owner one-line bio</label><input id='s-bio' value='"+esc((c.owner&&c.owner.bio)||"")+"'></div></div>"+
+    "<div class='row'><div class='field'><label><span class='swatch' style='background:"+esc(c.colors&&c.colors.main||"#1E6F5C")+"'></span>Main color</label><input id='s-main' value='"+esc(c.colors&&c.colors.main||"")+"'></div>"+
+    "<div class='field'><label><span class='swatch' style='background:"+esc(c.colors&&c.colors.sub||"#F4B400")+"'></span>Accent color</label><input id='s-sub' value='"+esc(c.colors&&c.colors.sub||"")+"'></div></div>"+
+    "<div class='toolbar'><button class='btn' id='s-save'>Save settings</button></div>"+
+    "<div class='notice'>Colors here are stored with your content. The live site reads its palette from <code>assets/css/style.css</code> (the <code>--main</code>/<code>--sub</code> variables) — update both to fully rebrand.</div>");
+  document.getElementById("s-save").addEventListener("click",function(){
+    c.siteName=val("s-name");c.tagline=val("s-tag");c.email=val("s-email");c.url=val("s-url");
+    c.owner=c.owner||{};c.owner.name=val("s-owner");c.owner.bio=val("s-bio");
+    c.colors=c.colors||{};c.colors.main=val("s-main");c.colors.sub=val("s-sub");
+    save();alert("Saved to your browser. Export JSON to publish.");
+  });
+}
+
+function inboxView(){
+  setActive("inbox");
+  var items=state.inbox||[];
+  var body=items.length?items.map(function(it){
+    return "<div class='inbox-item'><div class='meta'>"+esc((it.type||"item").toUpperCase())+" · "+esc(it.source||"")+" · "+esc((it.fetchedAt||"").slice(0,10))+"</div>"+
+      "<h3>"+esc(it.title||"")+"</h3><p style='margin:.2rem 0 .6rem;color:var(--soft)'>"+esc(it.summary||"")+"</p>"+
+      (it.sourceUrl?"<a href='"+esc(it.sourceUrl)+"' target='_blank' rel='noopener'>View source ↗</a> · ":"")+
+      "<span class='hint'>License: "+esc(it.license||"link + own-words summary only")+"</span>"+
+      "<div style='margin-top:.6rem'><button class='btn btn--ghost btn--sm' data-draft='"+esc(it.id)+"'>Turn into a draft</button></div></div>";
+  }).join(""):"<p class='lead'>Inbox is empty. Run <code>npm run ingest</code> (after enabling permitted sources) to populate it.</p>";
+  view("<h1>Ingestion Inbox</h1><p class='lead'>Items the pipeline fetched from permitted sources. <strong>Nothing here is on the site.</strong> Review, rewrite in your own words, then create a draft — a human always decides what gets published.</p>"+
+    "<div class='notice'>The sample items below are placeholders so you can see the flow. Configure real, permitted sources in <code>ingest/sources.config.json</code> and see <code>COMPLIANCE.md</code> before enabling anything.</div>"+body);
+  Array.prototype.forEach.call(document.querySelectorAll("[data-draft]"),function(b){
+    b.addEventListener("click",function(){
+      var it=(state.inbox||[]).find(function(x){return x.id===b.getAttribute("data-draft");});
+      if(!it)return;
+      var d=newItem("posts");
+      d.title=it.title||"";d.slug=slugify(d.title);
+      d.summary="";d.body="<p>Draft started from an inbox item. Write your own explanation here and link to the source — do not paste the source text.</p>";
+      d.status="draft";
+      state.posts.unshift(d);save();
+      alert("Created a draft post. Open Posts to write it up in your own words.");
+      location.hash="#posts/edit/"+d.id;
+    });
+  });
+}
+
+/* ---------- delete (event delegation) ---------- */
+document.getElementById("view").addEventListener("click",function(e){
+  var b=e.target.closest("[data-del]");if(!b)return;
+  var parts=b.getAttribute("data-del").split(":");var kind=parts[0],id=parts[1];
+  if(!confirm("Delete this "+kind.slice(0,-1)+"? (Local copy only.)"))return;
+  state[kind]=state[kind].filter(function(x){return x.id!==id;});save();route();
+});
+
+/* ---------- export / import / reset ---------- */
+document.getElementById("exportBtn").addEventListener("click",function(){
+  var payload={config:state.config,categories:state.categories,posts:state.posts,columns:state.columns};
+  var blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});
+  var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="courtnote-content.json";a.click();
+});
+document.getElementById("importBtn").addEventListener("click",function(){document.getElementById("importFile").click();});
+document.getElementById("importFile").addEventListener("change",function(e){
+  var file=e.target.files[0];if(!file)return;
+  var r=new FileReader();
+  r.onload=function(){try{var d=JSON.parse(r.result);
+    if(d.posts)state.posts=d.posts;if(d.columns)state.columns=d.columns;
+    if(d.categories)state.categories=d.categories;if(d.config)state.config=d.config;
+    save();route();alert("Imported.");}catch(err){alert("Could not parse that file.");}};
+  r.readAsText(file);
+});
+document.getElementById("resetBtn").addEventListener("click",resetDefaults);
+
+/* ---------- router ---------- */
+function route(){
+  if(!loggedIn()){document.getElementById("app").classList.add("hidden");document.getElementById("login").classList.remove("hidden");return;}
+  var h=(location.hash||"#dashboard").slice(1);
+  var seg=h.split("/");
+  if(seg[0]==="posts"&&seg[1]==="new")return editor("posts",null);
+  if(seg[0]==="posts"&&seg[1]==="edit")return editor("posts",seg[2]);
+  if(seg[0]==="posts")return postsList();
+  if(seg[0]==="columns"&&seg[1]==="new")return editor("columns",null);
+  if(seg[0]==="columns"&&seg[1]==="edit")return editor("columns",seg[2]);
+  if(seg[0]==="columns")return columnsList();
+  if(seg[0]==="categories")return categoriesView();
+  if(seg[0]==="inbox")return inboxView();
+  if(seg[0]==="settings")return settingsView();
+  return dashboard();
+}
+window.addEventListener("hashchange",route);
+
+function showApp(){
+  document.getElementById("login").classList.add("hidden");
+  document.getElementById("app").classList.remove("hidden");
+  route();
+}
+
+/* ---------- boot ---------- */
+loadState().then(function(){
+  if(loggedIn())showApp();
+  // if not logged in, the login screen is already visible
+}).catch(function(){
+  // even if data fails to load, allow login; editor will start empty
+  state=state||{config:{},categories:[],posts:[],columns:[],inbox:[]};
+  if(loggedIn())showApp();
+});
+</script>
+</body>
+</html>

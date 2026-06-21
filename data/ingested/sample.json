@@ -1,0 +1,38 @@
+{
+  "_note": "SAMPLE ingested items for the admin Inbox demo. The pipeline (ingest/pipeline.js) writes files like this after fetching enabled, permitted sources. Nothing here is published until a human reviews it. Replace with real output by running `npm run ingest` once you have configured permitted sources in ingest/sources.config.json.",
+  "items": [
+    {
+      "id": "sample-001",
+      "type": "news",
+      "title": "Example: a national federation publishes updated tournament sanctioning notes",
+      "summary": "Example digest item for the editor inbox. In production, replace this with a short, factual note written from the source and link back to the original.",
+      "source": "Example Federation (sample)",
+      "sourceUrl": "https://example.org/announcements/sample",
+      "fetchedAt": "2026-05-02T09:00:00Z",
+      "status": "new",
+      "license": "link-only; summarise in our own words; do not republish"
+    },
+    {
+      "id": "sample-002",
+      "type": "release",
+      "title": "Example: a paddle maker announces a new control-oriented model",
+      "summary": "Example editor note: verify specs against the maker's official page before drafting or publishing.",
+      "source": "Example Paddle Co. (sample)",
+      "sourceUrl": "https://example.com/news/sample-release",
+      "fetchedAt": "2026-05-05T14:30:00Z",
+      "status": "new",
+      "license": "facts/specs only; no marketing copy reproduced"
+    },
+    {
+      "id": "sample-003",
+      "type": "review",
+      "title": "Example: a reviewer publishes impressions of a midweight paddle",
+      "summary": "Example editor note: cite that a review exists, summarize the takeaway in original wording, and add independent reasoning.",
+      "source": "Example Review Site (sample)",
+      "sourceUrl": "https://example.net/reviews/sample",
+      "fetchedAt": "2026-05-08T11:15:00Z",
+      "status": "new",
+      "license": "link + brief attributed summary only"
+    }
+  ]
+}

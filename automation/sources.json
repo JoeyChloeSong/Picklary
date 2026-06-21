@@ -1,0 +1,231 @@
+{
+  "_comment": "PickleLevel automation sources. The agent stores source links, metadata, hashes, and short own-words drafts only. Confirm each site's Terms/robots/API rules before enabling or adding sources.",
+  "settings": {
+    "userAgent": "PickleLevelUpdateAgent/1.0 (+contact: hello@picklary.com)",
+    "requestDelayMs": 1200,
+    "maxBytesPerSource": 240000,
+    "maxDraftsPerRun": 12,
+    "defaultLanguage": "ko"
+  },
+  "sources": [
+    {
+      "id": "ppa-tour-home",
+      "label": "PPA Tour official site",
+      "url": "https://ppatour.com/",
+      "type": "html",
+      "category": "news",
+      "region": "global",
+      "priority": "high",
+      "enabled": true,
+      "monitorFor": [
+        "news",
+        "match results",
+        "live scoring",
+        "brackets",
+        "major announcements"
+      ],
+      "permissionNote": "Official public page. Store facts, link, and own-words draft only. Do not republish article text."
+    },
+    {
+      "id": "ppa-tour-schedule",
+      "label": "PPA Tour schedule",
+      "url": "https://ppatour.com/schedule/",
+      "type": "html",
+      "category": "tournaments",
+      "region": "global",
+      "priority": "high",
+      "enabled": true,
+      "monitorFor": [
+        "upcoming tournament dates",
+        "locations",
+        "event pages",
+        "registration links",
+        "participant fields"
+      ],
+      "permissionNote": "Official public schedule. Link back for live details."
+    },
+    {
+      "id": "ppa-challenger-schedule",
+      "label": "PPA Challenger schedule",
+      "url": "https://ppachallenger.com/schedule/",
+      "type": "html",
+      "category": "tournaments",
+      "region": "global",
+      "priority": "medium",
+      "enabled": true,
+      "monitorFor": [
+        "challenger tournament dates",
+        "locations",
+        "points",
+        "registration details"
+      ],
+      "permissionNote": "Official public schedule. Link back for event details."
+    },
+    {
+      "id": "major-league-pickleball",
+      "label": "Major League Pickleball",
+      "url": "https://majorleaguepickleball.co/",
+      "type": "html",
+      "category": "tournaments",
+      "region": "global",
+      "priority": "high",
+      "enabled": true,
+      "monitorFor": [
+        "team events",
+        "schedule",
+        "standings",
+        "match results",
+        "drafts"
+      ],
+      "permissionNote": "Official public site. Summarize in own words and link back."
+    },
+    {
+      "id": "mlp-standings",
+      "label": "Major League Pickleball standings",
+      "url": "https://majorleaguepickleball.co/standings/",
+      "type": "html",
+      "category": "results",
+      "region": "global",
+      "priority": "high",
+      "enabled": true,
+      "monitorFor": [
+        "standings",
+        "season records",
+        "playoff race",
+        "team results"
+      ],
+      "permissionNote": "Official public standings. Link back for live tables."
+    },
+    {
+      "id": "dupr-rankings",
+      "label": "DUPR rankings",
+      "url": "https://www.dupr.com/rankings",
+      "type": "html",
+      "category": "rankings",
+      "region": "global",
+      "priority": "high",
+      "enabled": true,
+      "monitorFor": [
+        "DUPR ranking changes",
+        "top players",
+        "rating movements"
+      ],
+      "permissionNote": "Official public rankings page. Link back for live ratings."
+    },
+    {
+      "id": "usa-pickleball-rules",
+      "label": "USA Pickleball official rules",
+      "url": "https://usapickleball.org/what-is-pickleball/official-rules/",
+      "type": "html",
+      "category": "rules",
+      "region": "global",
+      "priority": "high",
+      "enabled": true,
+      "monitorFor": [
+        "official rulebook changes",
+        "rule interpretations",
+        "rule PDFs"
+      ],
+      "permissionNote": "Official public rules hub. Link to the official rulebook instead of copying long text."
+    },
+    {
+      "id": "usap-equipment-paddle-list",
+      "label": "USA Pickleball approved paddle list",
+      "url": "https://equipment.usapickleball.org/paddle-list/",
+      "type": "html",
+      "category": "rules",
+      "region": "global",
+      "priority": "critical",
+      "enabled": true,
+      "monitorFor": [
+        "approved paddle list",
+        "decertified paddles",
+        "newly added paddles",
+        "tournament legality"
+      ],
+      "permissionNote": "Official equipment search page. Use it as the authoritative legality check and link back."
+    },
+    {
+      "id": "upaa-rulebook",
+      "label": "UPA-A official rulebook",
+      "url": "https://upaa.unitedpickleball.com/official-rulebook/",
+      "type": "html",
+      "category": "rules",
+      "region": "global",
+      "priority": "high",
+      "enabled": true,
+      "monitorFor": [
+        "pro tour rules",
+        "PPA/MLP rule changes",
+        "equipment standards",
+        "scoring rules"
+      ],
+      "permissionNote": "Official pro-governance rulebook page. Link back for exact text."
+    },
+    {
+      "id": "joola-pickleball-paddles",
+      "label": "JOOLA pickleball paddles",
+      "url": "https://joolausa.com/collections/pickleball-paddles",
+      "type": "html",
+      "category": "paddles",
+      "region": "global",
+      "priority": "medium",
+      "enabled": false,
+      "monitorFor": [
+        "new paddle launches",
+        "price changes",
+        "model availability"
+      ],
+      "permissionNote": "Brand commerce page. Disabled by default because product pages change frequently; enable only if useful and permitted."
+    },
+    {
+      "id": "selkirk-pickleball-paddles",
+      "label": "Selkirk pickleball paddles",
+      "url": "https://www.selkirk.com/collections/pickleball-paddles",
+      "type": "html",
+      "category": "paddles",
+      "region": "global",
+      "priority": "medium",
+      "enabled": false,
+      "monitorFor": [
+        "new paddle launches",
+        "price changes",
+        "model availability"
+      ],
+      "permissionNote": "Brand commerce page. Disabled by default; enable after reviewing terms and noise level."
+    },
+    {
+      "id": "pickleball-review-score-template",
+      "label": "Manual reviewer score template",
+      "url": "manual://automation/reviewer-score-template.csv",
+      "type": "manual-csv",
+      "category": "paddles",
+      "region": "global",
+      "priority": "medium",
+      "enabled": true,
+      "monitorFor": [
+        "reviewer scores",
+        "market reaction",
+        "review roundup"
+      ],
+      "permissionNote": "Manual CSV input. Use only reviewer scores you are allowed to cite and link to."
+    },
+    {
+      "id": "ppa-international-news",
+      "label": "PPA international news and expansion",
+      "url": "https://ppatour.com/",
+      "type": "html",
+      "category": "international",
+      "region": "global",
+      "priority": "medium",
+      "enabled": true,
+      "monitorFor": [
+        "non-U.S. tournament pages",
+        "international expansion",
+        "host cities outside the United States",
+        "registration details"
+      ],
+      "permissionNote": "Link back and summarize only confirmed event facts."
+    }
+  ]
+}

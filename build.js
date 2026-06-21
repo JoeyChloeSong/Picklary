@@ -548,6 +548,52 @@ function renderDuprCheck(loc) {
     <g data-markers></g>
   </svg>`;
 
+  const lp = (slug) => link(loc, 'level/' + slug + '/');
+  const faqs = [
+    { q: t('Is this an official DUPR rating?','이게 공식 DUPR 점수인가요?'), a: t('No. The self-check estimates a level from the shots you choose in ten situations. A real DUPR rating is calculated from your logged match results at dupr.com.','아니요. 자가진단은 10가지 상황에서 고른 샷으로 레벨을 추정합니다. 실제 DUPR 점수는 dupr.com에 기록된 경기 결과로 산출됩니다.') },
+    { q: t('How accurate is it?','얼마나 정확한가요?'), a: t('It reflects decision-making, not match results, so treat it as a friendly starting point rather than a precise number.','경기 결과가 아니라 의사결정을 반영하므로, 정확한 숫자라기보다 친근한 출발점으로 여기세요.') },
+    { q: t('How many questions are there?','문항은 몇 개인가요?'), a: t('Ten court situations each time, drawn at random from a larger pool, with the difficulty adapting to your answers.','매번 더 큰 풀에서 무작위로 뽑힌 10가지 코트 상황이며, 답에 따라 난이도가 조정됩니다.') },
+    { q: t('Will my result change if I retake it?','다시 하면 결과가 바뀌나요?'), a: t('It can. Scenarios are drawn randomly and adapt, so retaking may shift the estimate a little.','바뀔 수 있습니다. 상황이 무작위로 뽑히고 적응형이라, 다시 하면 추정치가 조금 달라질 수 있습니다.') },
+    { q: t('What level should a beginner expect?','초보자는 어느 레벨이 나오나요?'), a: t('New players often land around 2.0 to 2.5. The description of the band matters more than the exact number.','초보자는 보통 2.0~2.5 부근입니다. 정확한 숫자보다 그 구간의 설명이 더 중요합니다.') },
+    { q: t('How do I move up a level?','레벨을 올리려면?'), a: t('Train the skills for your band. The level pages and guides like dinking and the third-shot drop show what to work on next.','자기 구간의 기술을 훈련하세요. 레벨 페이지와 딩크·세 번째 샷 드롭 같은 가이드가 다음에 무엇을 연습할지 알려줍니다.') },
+    { q: t('Does a higher number mean I am better?','숫자가 높으면 더 잘하는 건가요?'), a: t('It reflects your shot selection in these scenarios. Real improvement shows up in matches over time.','이 상황들에서의 샷 선택을 반영합니다. 진짜 향상은 시간이 지나며 경기에서 드러납니다.') }
+  ];
+  const faqJsonld = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+  const explainer = `
+<section class="band"><div class="wrap narrow">
+  <h2>${esc(t('What the DUPR self-check is','DUPR 자가진단이란?'))}</h2>
+  <p>${esc(t('The DUPR self-check is a quick, court-based quiz. In ten situations you choose a shot, a power level, and a target, and we estimate the pickleball level your decisions point to. It takes a couple of minutes and needs no account.','DUPR 자가진단은 코트 기반의 간단한 퀴즈입니다. 10가지 상황에서 샷·강도·방향을 고르면, 당신의 판단이 가리키는 피클볼 레벨을 추정해 드립니다. 몇 분이면 끝나고 계정도 필요 없습니다.'))}</p>
+  <p>${esc(t('It is built to test shot selection — the choices that separate levels — rather than how hard you can hit. There are no trick questions; pick what you would actually do on court.','강하게 칠 수 있는지가 아니라, 레벨을 가르는 선택인 샷 셀렉션을 테스트하도록 만들었습니다. 함정 문제는 없으니 코트에서 실제로 할 행동을 고르세요.'))}</p>
+
+  <h2>${esc(t('Official DUPR vs the Picklary self-check','공식 DUPR과 Picklary 자가진단의 차이'))}</h2>
+  <ul>
+    <li>${esc(t('Official DUPR is calculated from the scores of real matches you log, on one scale for all players. It is the number used to seed tournaments and build fair games.','공식 DUPR은 당신이 기록한 실제 경기 점수로, 모든 선수를 하나의 척도에 올려 산출됩니다. 대회 시드와 공정한 매칭에 쓰이는 숫자입니다.'))}</li>
+    <li>${esc(t('The Picklary self-check is only an estimate from your shot choices. It does not log matches and is not affiliated with DUPR; use it to find a starting point while you learn the system.','Picklary 자가진단은 샷 선택에 기반한 추정일 뿐입니다. 경기를 기록하지 않고 DUPR과 제휴 관계도 아닙니다. 시스템을 익히는 동안 출발점을 찾는 용도로 쓰세요.'))}</li>
+  </ul>
+  <p>${esc(t('New to the rating itself? Read ','레이팅 자체가 처음이라면 '))}<a href="${link(loc, 'what-is-dupr/')}">${esc(t('what DUPR is','DUPR란 무엇인가'))}</a>${esc(t('.','를 읽어 보세요.'))}</p>
+
+  <h2>${esc(t('What each level feels like','레벨별 특징'))}</h2>
+  <p>${esc(t('These are general skill descriptions, not official cut-offs. The self-check points you to the band that best matches your decisions.','아래는 공식 기준이 아니라 일반적인 실력 설명입니다. 자가진단은 당신의 판단에 가장 잘 맞는 구간을 알려 줍니다.'))}</p>
+  <ul>
+    <li><a href="${lp('2-5')}">${esc(t('Level 2.5','레벨 2.5'))}</a> — ${esc(t('developing consistency: you can sustain short rallies and are learning the kitchen, serve, and return.','일관성 형성기: 짧은 랠리를 이어갈 수 있고 키친·서브·리턴을 배우는 단계.'))}</li>
+    <li><a href="${lp('3-0')}">${esc(t('Level 3.0','레벨 3.0'))}</a> — ${esc(t('reliable rallies: dependable serve and return, beginning to use the third-shot drop and to dink with some control.','안정적 랠리: 서브·리턴이 믿을 만하고, 세 번째 샷 드롭과 어느 정도 통제된 딩크를 쓰기 시작.'))}</li>
+    <li><a href="${lp('3-5')}">${esc(t('Level 3.5','레벨 3.5'))}</a> — ${esc(t('shot selection under pressure: steadier drops, dinks, and resets, better court position, and fewer unforced errors.','압박 속 샷 선택: 드롭·딩크·리셋이 더 안정되고 코트 위치가 좋아지며 범실이 줄어듦.'))}</li>
+    <li><a href="${lp('4-0')}">${esc(t('Level 4.0','레벨 4.0'))}</a> — ${esc(t('advanced strategy: you control pace, mix drives and drops, stay patient at the kitchen, and target deliberately.','고급 전략: 템포를 조절하고 드라이브와 드롭을 섞으며, 키친에서 인내심 있게 의도적으로 공략.'))}</li>
+  </ul>
+
+  <h2>${esc(t('How to use your result','결과 활용법'))}</h2>
+  <p>${esc(t('Use the estimate to decide what to practise next, not to label yourself. If the quiz nudged you toward soft shots or resets, that is your cue.','결과는 자신을 규정하는 라벨이 아니라 다음에 무엇을 연습할지 정하는 데 쓰세요. 퀴즈가 소프트 샷이나 리셋을 권했다면 그게 신호입니다.'))}</p>
+  <ul>
+    <li>${esc(t('Open your ','당신의 '))}<a href="${link(loc, 'level/')}">${esc(t('level pathway','레벨 로드맵'))}</a>${esc(t(' and read the band just above yours.',' 을 열어 바로 윗 구간을 읽어 보세요.'))}</li>
+    <li>${esc(t('Drill the fundamentals: ','기본기를 연습하세요: '))}<a href="${link(loc, 'dinking-fundamentals/')}">${esc(t('dinking','딩크'))}</a>${esc(t(' and the ',' 와 '))}<a href="${link(loc, 'the-third-shot-drop-explained/')}">${esc(t('third-shot drop','세 번째 샷 드롭'))}</a>.</li>
+    <li>${esc(t('Then log real matches to build an actual DUPR rating.','그다음 실제 경기를 기록해 진짜 DUPR 점수를 쌓으세요.'))}</li>
+  </ul>
+
+  <h2>${esc(t('Frequently asked questions','자주 묻는 질문'))}</h2>
+  ${faqs.map((f) => `<h3>${esc(f.q)}</h3><p>${esc(f.a)}</p>`).join('\n  ')}
+
+  <p class="notice">${esc(t('Reminder: this is an estimate of shot selection, not an official DUPR rating. Real DUPR comes from logged matches at dupr.com.','참고: 이것은 샷 선택에 대한 추정이며 공식 DUPR 점수가 아닙니다. 실제 DUPR은 dupr.com의 기록된 경기에서 나옵니다.'))}</p>
+</div></section>`;
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: t('DUPR self-check', 'DUPR 자가진단') }])}
 <section class="page-head"><div class="wrap">
   <p class="page-head__eyebrow">${esc(tt(loc, 'pathway.label'))}</p>
@@ -575,8 +621,9 @@ function renderDuprCheck(loc) {
   </div>
   <div class="quiz__result" data-q-result hidden></div>
   <script type="application/json" id="dupr-quiz-data">${data}</script>
-</div></section>`;
-  return layout({ loc, rel: 'dupr-self-check/', title: t('DUPR self-check', 'DUPR 자가진단'), description: t('A 10-question, court-based self-assessment that estimates your pickleball level from your shot decisions.', '샷 선택으로 피클볼 레벨을 추정하는 코트 기반 10문항 자가진단.'), bodyHtml: body, bodyClass: 'page-quiz' });
+</div></section>
+${explainer}`;
+  return layout({ loc, rel: 'dupr-self-check/', title: t('DUPR self-check', 'DUPR 자가진단'), description: t('A 10-question, court-based self-assessment that estimates your pickleball level from your shot decisions.', '샷 선택으로 피클볼 레벨을 추정하는 코트 기반 10문항 자가진단.'), bodyHtml: body, bodyClass: 'page-quiz', jsonld: [faqJsonld] });
 }
 
 function visualFigure(loc, key, cls) {
@@ -2131,120 +2178,90 @@ function render404() {
   return layout({ loc, rel: '', title: tt(loc, 'notFound.title'), description: tt(loc, 'notFound.body'), noindex: true, bodyHtml: body });
 }
 
+function render410() {
+  const loc = DEFAULT;
+  const body = `<section class="page-head"><div class="wrap">
+  <h1>This page is gone</h1>
+  <p class="page-head__intro">This address is no longer part of Picklary and has been permanently removed. 이 주소는 더 이상 Picklary의 페이지가 아니며 영구적으로 삭제되었습니다.</p>
+  <p><a class="btn btn--primary" href="${link(loc, '')}">${esc(tt(loc, 'notFound.cta'))}</a></p>
+</div></section>`;
+  return layout({ loc, rel: '', title: 'Gone — Picklary', description: 'This page has been permanently removed.', noindex: true, bodyHtml: body });
+}
 
-function renderRootRedirectIndex() {
-  const det = config.languageDetection || {};
-  const fallback = (det.fallbackLocale && locales.includes(det.fallbackLocale)) ? det.fallbackLocale : DEFAULT;
-  const countryLocaleMap = det.countryLocaleMap || { ko: ['KR'], es: [] };
-  const geoEndpoints = det.geoEndpoints || [];
-  const timeoutMs = Number(det.timeoutMs || 1600);
-  const script = `(function(){
-  "use strict";
-  var SUPPORTED=${JSON.stringify(locales)};
-  var FALLBACK=${JSON.stringify(fallback)};
-  var MANUAL_KEY="picklelevel.lang";
-  var DETECTED_KEY="picklelevel.lang.detected";
-  var COUNTRY_LOCALE_MAP=${JSON.stringify(countryLocaleMap)};
-  var GEO_ENDPOINTS=${JSON.stringify(geoEndpoints)};
-  var TIMEOUT_MS=${JSON.stringify(timeoutMs)};
-  var redirected=false;
-  function supported(locale){return SUPPORTED.indexOf(locale)>=0;}
-  function normalLocale(locale){locale=String(locale||"").toLowerCase();return supported(locale)?locale:FALLBACK;}
-  function readStorage(key){try{return localStorage.getItem(key);}catch(e){return null;}}
-  function writeDetected(data){try{localStorage.setItem(DETECTED_KEY,JSON.stringify(data));}catch(e){}}
-  function redirect(locale, source, country){
-    if(redirected) return;
-    locale=normalLocale(locale);
-    redirected=true;
-    writeDetected({locale:locale,source:source||"unknown",country:country||"",at:new Date().toISOString()});
-    window.location.replace("/"+locale+"/");
-  }
-  function localeFromCountry(country){
-    country=String(country||"").toUpperCase();
-    if(!country) return "";
-    for(var locale in COUNTRY_LOCALE_MAP){
-      if(Object.prototype.hasOwnProperty.call(COUNTRY_LOCALE_MAP, locale)){
-        var list=COUNTRY_LOCALE_MAP[locale]||[];
-        if(list.indexOf(country)>=0 && supported(locale)) return locale;
-      }
-    }
-    return FALLBACK;
-  }
-  function localeFromBrowser(){
-    var langs=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||navigator.userLanguage||""];
-    for(var i=0;i<langs.length;i++){
-      var primary=String(langs[i]||"").split("-")[0].toLowerCase();
-      if(supported(primary)) return primary;
-    }
-    return FALLBACK;
-  }
-  function fetchWithTimeout(url, options, ms){
-    options=options||{};
-    if(typeof AbortController==="undefined") return fetch(url, options);
-    var controller=new AbortController();
-    var id=setTimeout(function(){try{controller.abort();}catch(e){}}, ms||TIMEOUT_MS);
-    options.signal=controller.signal;
-    return fetch(url, options).finally(function(){clearTimeout(id);});
-  }
-  function parseTrace(text){
-    var m=String(text||"").match(/(?:^|\\n)loc=([A-Za-z]{2})/);
-    return m?m[1].toUpperCase():"";
-  }
-  function pickCountryFromJson(json, fields){
-    fields=fields&&fields.length?fields:["country_code","country","countryCode"];
-    for(var i=0;i<fields.length;i++){
-      var v=json&&json[fields[i]];
-      if(v) return String(v).toUpperCase();
-    }
-    return "";
-  }
-  async function countryFromEndpoint(ep){
-    if(!ep||!ep.url) return "";
-    var res=await fetchWithTimeout(ep.url,{cache:"no-store",credentials:"omit"},TIMEOUT_MS);
-    if(!res||!res.ok) return "";
-    if(ep.type==="cloudflareTrace") return parseTrace(await res.text());
-    if(ep.type==="json") return pickCountryFromJson(await res.json(),ep.countryFields);
-    return "";
-  }
-  async function detectCountry(){
-    for(var i=0;i<GEO_ENDPOINTS.length;i++){
-      try{
-        var cc=await countryFromEndpoint(GEO_ENDPOINTS[i]);
-        if(cc) return cc;
-      }catch(e){}
-    }
-    return "";
-  }
-  var manual=readStorage(MANUAL_KEY);
-  if(supported(manual)) return redirect(manual,"manual","");
-  setTimeout(function(){redirect(FALLBACK,"timeout","");}, Math.max(2500, TIMEOUT_MS*2+400));
-  detectCountry().then(function(country){
-    if(country) redirect(localeFromCountry(country),"ip",country);
-    else redirect(localeFromBrowser(),"browser","");
-  }).catch(function(){redirect(localeFromBrowser(),"fallback","");});
-})();`;
-  const labels = {
-    ko: '한국어', en: 'English', es: 'Español'
-  };
-  const links = locales.map((l) => `<a href="/${l}/">${esc(labels[l] || config.languageNames[l] || l)}</a>`).join(' · ');
+
+function renderRootLanding() {
+  const labels = { ko: '한국어', en: 'English', es: 'Español' };
+  const langButtons = locales.map((l) =>
+    `<a class="lang-btn" href="/${l}/">${esc(labels[l] || (config.languageNames && config.languageNames[l]) || l)}</a>`
+  ).join('');
+  const altTags = locales.map((l) =>
+    `<link rel="alternate" hreflang="${l}" href="${config.url}/${l}/">`
+  ).join('\n  ');
+  const sections = [
+    { en:'Levels & DUPR pathway', ko:'레벨 & DUPR 로드맵', href:'level/', be:'Find your level from 2.0 to 5.0 and the skills that move you up.', bk:'2.0~5.0 레벨과 다음 단계로 올라가는 데 필요한 기술을 확인하세요.' },
+    { en:'DUPR self-check', ko:'DUPR 자가진단', href:'dupr-self-check/', be:'Answer ten on-court situations and get a level estimate.', bk:'코트 위 10가지 상황에 답하고 레벨을 추정해 보세요.' },
+    { en:'Paddles', ko:'패들', href:'paddles/', be:'Compare paddle types, materials, and what suits your game.', bk:'패들 종류와 소재, 내게 맞는 선택을 비교하세요.' },
+    { en:'Pro players', ko:'프로 선수', href:'players/', be:'Study the styles and patterns of top players.', bk:'정상급 선수들의 스타일과 패턴을 살펴보세요.' },
+    { en:'Tournaments', ko:'대회 정보', href:'tournaments/', be:'See how events work and what is happening in the scene.', bk:'대회 진행 방식과 최신 소식을 확인하세요.' },
+    { en:'Guides', ko:'가이드', href:'categories/', be:'Rules, skills, gear, and getting started, all explained.', bk:'규칙·기술·장비·입문까지 차근차근 설명합니다.' }
+  ];
+  const cards = sections.map((s) =>
+    `<a class="card" href="/${DEFAULT}/${s.href}"><span class="card__title">${esc(s.en)}</span><span class="card__title-ko">${esc(s.ko)}</span><span class="card__blurb">${esc(s.be)}</span><span class="card__blurb">${esc(s.bk)}</span></a>`
+  ).join('');
+  const desc = 'Picklary is a bilingual pickleball learning hub: DUPR levels and a self-check, paddle comparisons, pro players, tournaments, and step-by-step guides.';
   return `<!doctype html>
-<html lang="${fallback}">
+<html lang="${DEFAULT}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${esc(config.siteName)} language redirect</title>
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="${config.url}/${fallback}/">
-  <noscript><meta http-equiv="refresh" content="0; url=/${fallback}/"></noscript>
-  <script>${script.replace(/<\/script/gi, '<\\/script')}</script>
-  <style>body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;margin:0;background:#f7faf8;color:#16332b}.box{max-width:720px;margin:12vh auto;padding:32px;border-radius:24px;background:white;box-shadow:0 14px 40px rgba(0,0,0,.08)}a{color:#1E6F5C;font-weight:700}</style>
+  <title>${esc(config.siteName)} — Pickleball levels, DUPR, paddles, players & tournaments</title>
+  <meta name="description" content="${esc(desc)}">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="${config.url}/">
+  ${altTags}
+  <link rel="alternate" hreflang="x-default" href="${config.url}/${DEFAULT}/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="${esc(config.siteName)}">
+  <meta property="og:title" content="${esc(config.siteName)} — Pickleball levels, DUPR, paddles, players & tournaments">
+  <meta property="og:description" content="${esc(desc)}">
+  <meta property="og:url" content="${config.url}/">
+  <style>
+    :root{--teal:#1E6F5C;--ink:#16332b;--cream:#f7faf8;--line:#e2ebe6}
+    *{box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0;background:var(--cream);color:var(--ink);line-height:1.6}
+    .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+    header.top{padding:28px 0 8px}
+    .brand{font-weight:800;font-size:1.5rem;letter-spacing:-.02em;color:var(--teal)}
+    .hero{padding:24px 0 8px}
+    .hero h1{font-size:1.85rem;line-height:1.25;margin:.2em 0 .45em}
+    .hero p{margin:.35em 0;color:#33473f}
+    .langs{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 8px}
+    .lang-btn{display:inline-block;padding:12px 22px;border-radius:999px;background:var(--teal);color:#fff;font-weight:700;text-decoration:none}
+    .lang-btn+.lang-btn{background:#fff;color:var(--teal);border:2px solid var(--teal)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:28px 0 48px}
+    .card{display:flex;flex-direction:column;gap:4px;padding:20px;border:1px solid var(--line);border-radius:18px;background:#fff;text-decoration:none;color:inherit;transition:box-shadow .15s,transform .15s}
+    .card:hover{box-shadow:0 12px 30px rgba(0,0,0,.07);transform:translateY(-2px)}
+    .card__title{font-weight:800;color:var(--teal)}
+    .card__title-ko{font-weight:700;font-size:.92rem;color:#2c5e51}
+    .card__blurb{font-size:.9rem;color:#4a5b54}
+    footer.foot{padding:20px 0 40px;color:#6b776f;font-size:.85rem}
+    footer.foot a{color:var(--teal)}
+  </style>
 </head>
 <body>
-  <main class="box">
-    <h1>${esc(config.siteName)}</h1>
-    <p>We are choosing the best language version for you. 사용자의 지역에 맞는 언어 페이지로 이동합니다.</p>
-    <p>${links}</p>
+  <header class="top"><div class="wrap"><span class="brand">${esc(config.siteName)}</span></div></header>
+  <main>
+    <section class="hero"><div class="wrap">
+      <h1>Pickleball levels, DUPR, paddles, players &amp; tournaments — in one place</h1>
+      <p>Picklary is a bilingual pickleball learning hub. Find your level, take the DUPR self-check, compare paddles, study pro players, and follow tournaments and the wider scene.</p>
+      <p>Picklary는 피클볼 학습 허브입니다. 내 레벨 찾기, DUPR 자가진단, 패들 비교, 프로 선수 분석, 대회 정보까지 한곳에서 만나보세요.</p>
+      <div class="langs">${langButtons}</div>
+    </div></section>
+    <section><div class="wrap">
+      <div class="grid">${cards}</div>
+    </div></section>
   </main>
+  <footer class="foot"><div class="wrap">© ${new Date().getFullYear()} ${esc(config.siteName)} · <a href="/${DEFAULT}/about/">About</a> · <a href="/${DEFAULT}/privacy/">Privacy</a> · <a href="/sitemap.xml">Sitemap</a></div></footer>
 </body>
 </html>`;
 }
@@ -2270,6 +2287,8 @@ function copyDir(src, dest) {
 
 function buildSitemapXml() {
   const urls = [];
+  // Root global landing page (indexable, language-neutral)
+  urls.push(`  <url>\n    <loc>${config.url}/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>`);
   const add = (rel, changefreq, priority) => {
     const alts = locales.map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${config.url}${link(l, rel)}"/>`).join('\n');
     for (const loc of locales) {
@@ -2360,6 +2379,7 @@ function build() {
 
   // root files
   writeFile('404.html', render404());
+  writeFile('410.html', render410());
   writeFile('robots.txt', `User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /data/\nDisallow: /i18n/\n\nSitemap: ${config.url}/sitemap.xml\n`);
   const adsensePubId = (((config.adsense && config.adsense.clientId) || '').trim()).replace(/^ca-/, '');
   writeFile('ads.txt', adsensePubId
@@ -2367,7 +2387,7 @@ function build() {
     : `# Set adsense.clientId in data/site.config.js to auto-generate this line, e.g.:\n# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0\n`);
   writeFile('sitemap.xml', buildSitemapXml());
   // root index -> IP/country-aware language redirect
-  writeFile('index.html', renderRootRedirectIndex());
+  writeFile('index.html', renderRootLanding());
 
   // counts
   const pages = locales.length * (11 + categories.length + publishedPosts.length + publishedColumns.length + 3);

@@ -215,34 +215,47 @@
     "featured": true,
     "status": "published",
     "date": "2026-03-09",
-    "updated": "2026-06-02",
+    "updated": "2026-06-21",
     "title": "How to choose your first pickleball paddle",
     "subtitle": "Weight, grip size, core, and face — what each one changes, in plain terms.",
     "summary": "A buying-decision guide that explains the four attributes that actually change how a paddle plays, so you can match one to your game.",
-    "body": "\n<p>Your first paddle does not need to be expensive — it needs to match how you play. Four attributes do most of the work: weight, grip size, core thickness, and face material. Understand these and you can ignore most marketing.</p>\n<h2 id=\"weight\">Weight</h2>\n<p>Paddles are usually grouped as lightweight (roughly 7.3 oz or under), midweight (about 7.3–8.4 oz), and heavy (8.5 oz and up). Heavier paddles give more power and stability but are slower to manoeuvre and harder on the arm. Lighter paddles offer quick hands at the net and more control, with less free power. Most new players are well served by something in the midweight range, which balances the two.</p>\n<h2 id=\"grip-size\">Grip size</h2>\n<p>Grip circumference typically runs from about 4 to 4.5 inches. A smaller grip lets you use more wrist, which helps with spin, while a larger grip gives more stability and can reduce arm fatigue. A quick check: hold the paddle and see if your index finger fits in the gap between your fingertips and palm. When unsure, choose the smaller size — you can build a grip up with an overgrip, but you cannot shrink one.</p>\n<h2 id=\"core\">Core thickness</h2>\n<p>Nearly all modern paddles use a polymer honeycomb core. Thickness, usually around 13 to 16 mm, is the part you can feel. Thicker cores tend to be more forgiving and controlled, with a softer feel that suits the dinking game. Thinner cores deliver more pop and power but can be less forgiving on off-centre hits. For learning control, a thicker core is the friendlier choice.</p>\n<h2 id=\"face\">Face material</h2>\n<p>The hitting surface is commonly fiberglass/composite, graphite, or raw carbon fiber. Fiberglass tends to be poppier and more powerful; graphite is light with a controlled feel; raw carbon fiber has a textured surface that helps generate spin and has become very popular for its blend of control and touch. We cover these in depth in a separate guide.</p>\n<h2 id=\"putting-it-together\">Putting it together</h2>\n<p>For a first paddle, a reasonable starting point is a midweight paddle with a roughly 16 mm core, a grip that fits your hand or slightly smaller, and a control-oriented face. If you intend to play sanctioned tournaments, check that the model appears on the USA Pickleball approved list. Beyond that, the best paddle is the one that feels natural when you play — borrow a few from friends before you buy if you can.</p>",
+    "body": "\n<p>Your first paddle does not need to be expensive, but it should fit how you play. Four things change how a paddle feels more than anything else: weight, grip size, shape, and core thickness — with the face material on top. Understand those, and you can walk into any shop or scroll any website and choose well instead of guessing. Here is what each one actually does.</p>\n\n<h2 id=\"weight\">Weight: the biggest single factor</h2>\n<p>Weight changes almost everything about how a paddle behaves. Paddles are usually grouped as light (under about 7.3 oz), midweight (roughly 7.3–8.4 oz), and heavy (over about 8.4 oz). A light paddle is quick and easy to maneuver, gives you more control and faster hands at the net, and is gentler on your arm — but you supply more of the power yourself. A heavy paddle delivers more power and plows through the ball with more stability, but it is slower to move and puts more strain on your elbow and shoulder, which can lead to soreness. For most new players a midweight paddle is the sweet spot: enough power to keep the ball deep, enough control to stay in dink rallies, and not so heavy that your arm tires.</p>\n\n<h2 id=\"grip\">Grip size</h2>\n<p>Grip size affects comfort, control, and how much wrist you can use. A smaller grip lets you snap the wrist for spin and switch hands quickly, while a larger grip is more stable and reduces the urge to over-grip. A quick test: hold the paddle and slide the index finger of your other hand into the gap between your fingertips and palm — it should fit snugly with about a finger's width of room. When in doubt, choose the smaller grip: you can build a small grip up with an overgrip, but you cannot shrink one that is too big. A grip that is too large is a common, quiet cause of elbow pain.</p>\n\n<h2 id=\"shape\">Shape</h2>\n<p>Paddle shape is a trade-off between sweet spot and reach. A standard or \"classic\" shape has a balanced layout and a large, forgiving sweet spot, which is why it is the easiest to learn on. An elongated shape adds reach and a little more power for serves and drives, but the sweet spot is narrower and less forgiving, so it suits players who already make consistent contact. A widebody shape maximises the sweet spot and is very beginner-friendly. As a first paddle, a standard or widebody shape will reward you with more clean hits while you are still grooving your contact point.</p>\n\n<h2 id=\"core\">Core thickness</h2>\n<p>Almost all modern paddles use a polymer honeycomb core, and its thickness sets the feel. A thicker core (around 16 mm) plays softer and more controlled, absorbs pace for cleaner resets, is more forgiving on off-centre hits, and is usually quieter. A thinner core (around 13 mm) gives more pop and power but is less forgiving and can feel harsh. Beginners almost always benefit from a thicker, control-oriented core: it makes the soft game easier and protects your shots when you mishit.</p>\n\n<h2 id=\"face\">Face material</h2>\n<p>The hitting surface — fiberglass, graphite, or carbon fiber — tilts a paddle toward power or control and affects spin. It is enough here to know that fiberglass leans toward power, while graphite and raw carbon lean toward control and spin. Because this deserves its own explanation, see our full guide to <a href=\"/en/paddle-face-materials-compared/\">paddle face materials</a> before you decide.</p>\n\n<h2 id=\"budget\">Budget: what a beginner actually needs</h2>\n<p>You do not need a tour-level paddle to learn, and the most expensive option can actually be harder to play with because many are tuned for advanced, aggressive styles. At the same time, avoid the cheapest all-wood paddles bundled in big-box sets — they are heavy and unforgiving. A sensible mid-range paddle in a control-friendly weight and shape will serve you far better than overspending, and you can upgrade later once you know your style. Spend your money on a paddle that fits, not on the highest price tag. While you are kitting out, our <a href=\"/en/building-a-starter-kit-on-a-budget/\">starter-kit guide</a> and notes on <a href=\"/en/why-court-shoes-matter/\">court shoes</a> cover the rest.</p>\n\n<h2 id=\"test\">Try before you commit</h2>\n<p>Whenever you can, hit with a paddle before buying. Many clubs keep loaner paddles, retailers run demo programs, and friends are usually happy to let you try theirs for a few rallies. Pay attention to three things: does it feel light enough to react at the net, comfortable in your hand without squeezing, and stable when you mishit slightly off-centre? If yes to all three, it is a good fit — regardless of brand or price.</p>\n\n<p>Choosing a first paddle comes down to fit, not hype. Pick a midweight, control-friendly paddle with a comfortable grip and a forgiving shape, and you will spend your early months improving your game instead of fighting your equipment.</p>",
     "keyTakeaways": [
-      "Midweight paddles balance power and control for most new players.",
-      "When unsure on grip, size down — an overgrip can build it up later.",
-      "Thicker (~16 mm) cores feel softer and more forgiving for learning control."
+      "Weight is the biggest factor: midweight (about 7.3–8.4 oz) is the best all-round choice for beginners.",
+      "Pick the smaller grip when unsure — you can add an overgrip but cannot shrink one that is too big.",
+      "A standard or widebody shape has a larger, more forgiving sweet spot than an elongated one.",
+      "A thicker core (about 16 mm) plays softer, more controlled, and more forgiving.",
+      "A sensible mid-range paddle that fits beats the most expensive model."
     ],
     "commonMistakes": [
-      "Buying the heaviest, most powerful paddle and straining the arm.",
-      "Choosing a grip that is too large because it felt \"solid\" in the shop.",
-      "Paying for pro-level features before your game can use them."
+      "Buying a heavy or pro-level paddle that strains the arm and is hard to control.",
+      "Choosing a grip that is too large, a quiet cause of elbow pain.",
+      "Starting with an elongated shape before your contact is consistent.",
+      "Settling for a cheap all-wood paddle from a big-box bundle."
     ],
     "checklist": [
-      "Is the weight in the midweight range?",
-      "Does the grip fit (or is it slightly small)?",
-      "Is the face control-oriented, and is the model tournament-approved if you need that?"
+      "Aim for a midweight paddle (about 7.3–8.4 oz)",
+      "Check grip with the finger-gap test; err smaller",
+      "Pick a standard or widebody shape",
+      "Choose a thicker (~16 mm) control core",
+      "Hit with it (loaner/demo) before buying if you can"
     ],
     "faq": [
       {
-        "q": "How much should a first paddle cost?",
-        "a": "You can get a capable midweight paddle without paying top-tier prices. Spend more only once you know what you want to improve."
+        "q": "What weight should a beginner choose?",
+        "a": "A midweight paddle (about 7.3–8.4 oz) is the best all-round start: enough power to keep the ball deep, enough control for dinks, and not heavy enough to strain your arm."
       },
       {
-        "q": "Graphite or carbon fiber for a beginner?",
-        "a": "Both are control-friendly. Raw carbon fiber adds spin-friendly texture; graphite is light and simple. Either is a fine first choice."
+        "q": "How do I know my grip size?",
+        "a": "Hold the paddle and slide your other index finger into the gap between fingertips and palm — about a finger of room is right. When unsure, choose smaller and add an overgrip."
+      },
+      {
+        "q": "Thick or thin core?",
+        "a": "Beginners usually want a thicker core (around 16 mm): it is softer, more forgiving on mishits, and makes the soft game easier. Thinner cores add pop but are less forgiving."
+      },
+      {
+        "q": "Do I need an expensive paddle?",
+        "a": "No. A sensible mid-range paddle that fits your hand and style will serve you better than a tour-level model, which is often tuned for advanced play."
       }
     ],
     "related": [
@@ -1321,34 +1334,47 @@
     "featured": false,
     "status": "published",
     "date": "2026-06-10",
-    "updated": "2026-06-14",
+    "updated": "2026-06-21",
     "title": "How to follow the global scene and find official rankings",
     "subtitle": "Go to the primary source, not second-hand reposts.",
     "summary": "Where to find official players, rankings, and results worldwide — and how to read them without relying on numbers that change week to week.",
-    "body": "\n<p>The professional and international side of pickleball moves quickly, and a lot of what circulates online is second-hand or already out of date. The reliable habit is simple: go to the primary source. This guide is about <em>where</em> to look and <em>how</em> to read it, not a snapshot of standings that would be stale by next week.</p>\n<h2 id=\"rankings\">Where official rankings live</h2>\n<p>Most ratings and rankings come from the body that administers them, so start there rather than with an aggregator. A results-based rating system publishes its own ratings; a tour or tournament circuit publishes its own points standings; a national or international federation publishes its own sanctioned results. Because these are the organisations that calculate the numbers, their pages are the version that is current and correct. When you see a ranking quoted elsewhere, trace it back to that origin before trusting it.</p>\n<h2 id=\"tours-vs-ratings\">Tours, ratings, and federations are different things</h2>\n<p>It helps to separate three ideas that are easy to blur. A <strong>rating</strong> (results-based) estimates how well you play and updates from match outcomes. A <strong>tour's points standing</strong> reflects how a player has placed across that circuit's events. A <strong>federation ranking</strong> follows sanctioned competition under a governing body. A player can sit very differently on each, so always note which one a number actually is before comparing players.</p>\n<h2 id=\"results\">Following events and results</h2>\n<p>For live and recent results, the event or tour's own site and official channels are the fastest accurate source. Many publish brackets and scores during play. For recordings, look for the official broadcast or the event's own channel rather than re-uploaded clips, which are often removed and rarely complete.</p>\n<h2 id=\"reading-critically\">Reading the scene critically</h2>\n<p>Because the sport is growing fast, formats, sponsors, and even governing structures shift from season to season. Treat sweeping claims — \"the biggest\", \"the official world number one\" — with mild caution unless they link to a primary source, and prefer recent pages over old summaries. A little skepticism keeps you from repeating something that was true a year ago and is not now.</p>\n<p>The short version: bookmark the organisations that actually produce the data, learn which kind of number each one publishes, and read those directly. It is less convenient than a single feed, but it is the only way to be consistently right.</p>",
+    "body": "\n<p>Pickleball's professional scene is growing fast, and that growth comes with a problem: results, rankings, and \"news\" get reposted across social media until the details are wrong. The reliable way to follow the sport is to go to the primary source — the official tour and event sites — rather than second-hand reposts. Here is how the global scene is organised and how to follow it without being misled.</p>\n\n<h2 id=\"tours\">The main professional tours and leagues</h2>\n<p>At the top of the sport are a few major organisations. The PPA Tour and the APP Tour run professional tournament circuits with brackets across age and skill divisions, and Major League Pickleball (MLP) runs a team-based league format. You do not need to memorise their histories; what matters is that each one publishes its own schedule, brackets, and results on its official site and app. When you want to know who is playing this weekend or who won a draw, the tour's own site is the source that is actually correct.</p>\n\n<h2 id=\"watch\">Where to watch</h2>\n<p>The tours stream and broadcast their events through their official channels and broadcast partners, including their own YouTube channels and websites. Because the exact broadcasters and streaming deals change from season to season, the durable habit is to start at the tour's official site and follow the \"watch\" or \"live\" links from there rather than relying on a link someone reposted. That way you always reach the current, legitimate stream.</p>\n\n<h2 id=\"rankings\">Official rankings versus DUPR</h2>\n<p>Two different number systems often get confused. A pro tour's <em>rankings</em> are built from points earned at that tour's professional events, and they tell you who is performing best on that circuit. <a href=\"/en/what-is-dupr/\">DUPR</a> is a separate rating, calculated from the scores of logged matches across the whole playing population, used to seed events and build fair recreational games. A touring pro will have both, but the two answer different questions — tour ranking is \"who is winning pro events,\" while DUPR is \"how strong is this player overall.\" Always check which one a headline is actually talking about.</p>\n\n<h2 id=\"verify\">How to verify what you read</h2>\n<p>When you see a surprising result or ranking claim, trace it back to the official source before believing or sharing it. Reposts routinely scramble scores, mix up draws, or attach the wrong photo. The official tour or event page will have the bracket and the final score; if a claim is not on the primary source, treat it as unconfirmed. This same discipline — primary source first — is how we handle results on this site.</p>\n\n<h2 id=\"players\">Following players</h2>\n<p>To follow specific players, use the tour's official player pages and the players' own verified accounts rather than fan reposts. Official player pages link to schedules and current standings, and verified accounts are where players announce their own news. This keeps your information first-hand and current, and avoids the rumours that spread quickly in a fast-growing sport.</p>\n\n<h2 id=\"amateur\">Amateur versus pro</h2>\n<p>Most of us play and compete at the amateur level, and the pro scene is mainly something to watch and learn from. Studying how the best players construct points — their patience at the kitchen, their third-shot choices, their targeting — is one of the fastest ways to improve your own game. If you want to compete yourself, the amateur divisions at sanctioned events are open to you; our guide to <a href=\"/en/how-a-pickleball-tournament-works/\">how a tournament works</a> explains how to enter at your level.</p>\n\n<h2 id=\"picklary\">Using Picklary to keep up</h2>\n<p>To make this easier, our <a href=\"/en/tournaments/\">tournaments</a> and <a href=\"/en/updates/\">update centre</a> sections track the scene and point you to the primary sources for schedules, results, and rule changes, rather than re-reporting unverified claims. Use them as a starting hub, then click through to the official tour and event pages for the final word.</p>\n\n<p>The scene moves fast, but the habit that keeps you accurate is simple and evergreen: go to the official tour or event source first, confirm before you share, and never confuse a tour ranking with a DUPR rating.</p>",
     "keyTakeaways": [
-      "Trace any ranking back to the organisation that calculates it before trusting it.",
-      "Ratings, tour standings, and federation rankings are different — note which one a number is.",
-      "Use official event channels for results and broadcasts, not re-uploaded clips."
+      "Follow the sport through primary sources — official tour and event sites — not second-hand reposts.",
+      "The major bodies include the PPA Tour, the APP Tour, and team-based Major League Pickleball.",
+      "A pro tour ranking (points from pro events) is different from a DUPR rating (from logged matches).",
+      "Trace surprising results to the official bracket before believing or sharing them.",
+      "Study pro point construction to improve your own game; enter amateur divisions to compete."
     ],
     "commonMistakes": [
-      "Trusting an aggregator or social post over the primary source.",
-      "Comparing players across two different ranking systems as if they were the same.",
-      "Repeating \"world number one\"-style claims that are out of date."
+      "Trusting reposted scores or rankings that scramble the details.",
+      "Confusing a tour ranking with a DUPR rating.",
+      "Relying on a reposted stream link instead of the tour’s official watch page.",
+      "Following fan accounts instead of official player pages and verified accounts."
     ],
     "checklist": [
-      "Do you know which body produces the ranking you are reading?",
-      "Is the page current, or a year-old summary?",
-      "Are you watching an official broadcast rather than a re-upload?"
+      "Bookmark the official PPA, APP, and MLP sites",
+      "Start at the tour site for schedules, brackets, and streams",
+      "Confirm results on the primary source before sharing",
+      "Separate tour rankings from DUPR",
+      "Use Picklary tournaments/updates as a hub to primary sources"
     ],
     "faq": [
       {
-        "q": "Why not just follow a rankings aggregator?",
-        "a": "Aggregators can lag or mix systems together. The administering body is the version that is current and internally consistent, so it is the one to trust."
+        "q": "What are the main pro pickleball organisations?",
+        "a": "The PPA Tour and APP Tour run professional tournament circuits, and Major League Pickleball runs a team-based league. Each publishes its own schedule and results on its official site."
       },
       {
-        "q": "Is a rating the same as a world ranking?",
-        "a": "No. A results-based rating estimates your playing level; a world or tour ranking reflects competitive placings. They measure different things."
+        "q": "Where should I watch pro pickleball?",
+        "a": "Start at the tour’s official site and follow its watch or live links. Broadcasters and streaming deals change each season, so the official site is the durable way to reach the current stream."
+      },
+      {
+        "q": "Is a pro ranking the same as DUPR?",
+        "a": "No. A tour ranking comes from points at that tour’s pro events; DUPR is a separate rating from logged match scores across all players. They answer different questions."
+      },
+      {
+        "q": "How do I avoid pickleball misinformation?",
+        "a": "Trace any surprising result or ranking to the official tour or event page before believing or sharing it. Reposts often scramble scores and draws."
       }
     ],
     "related": [
@@ -1386,6 +1412,699 @@
             "a": "브랜드 공식 페이지, 선수 공식 프로필, 투어/스폰서 발표를 함께 확인하는 것이 안전합니다."
           }
         ]
+      }
+    }
+  },
+  {
+    "id": "p-dupr-3-0",
+    "slug": "what-does-a-dupr-3-0-player-look-like",
+    "category": "compete",
+    "featured": false,
+    "status": "published",
+    "date": "2026-06-21",
+    "updated": "2026-06-21",
+    "title": "What a DUPR 3.0 player looks like — and how 3.0 differs from 3.5",
+    "subtitle": "The skills, habits, and gaps that define the most common rec level.",
+    "summary": "A plain description of the shots and decisions typical of a 3.0 player, how 3.0 differs from 3.5, and how to tell roughly where you sit.",
+    "body": "\n<p>\"3.0\" is the level most recreational players hover around, which makes it the one people ask about most. Below is a plain, practical picture of what a 3.0 player can usually do, where they still struggle, and how 3.0 differs from 3.5. These are general skill descriptions, not official DUPR cut-offs — a real <a href=\"/en/what-is-dupr/\">DUPR rating</a> comes only from logged matches — but they will help you place yourself honestly.</p>\n\n<h2 id=\"can-do\">What a 3.0 player can usually do</h2>\n<p>A 3.0 player has the basics working. They can get serves and returns in consistently, sustain a medium-length rally without spraying easy balls, and hit a recognisable dink. They understand the core rules, know to let the serve and return bounce, and they get themselves up to the kitchen line during a point. The game looks organised rather than chaotic, and points are usually lost to a missed execution rather than total confusion about what to do.</p>\n\n<h2 id=\"struggle\">Where 3.0 players still struggle</h2>\n<p>The gaps at 3.0 are mostly about consistency under pressure and shot selection. The third-shot drop is hit-or-miss, so the trip from the baseline to the kitchen is risky. Dinks pop up too high when an opponent applies pressure, and there is a strong urge to speed the ball up too early instead of staying patient. Resets — softening a hard ball back into the kitchen — are unreliable, and footwork at the kitchen often drifts, leading to volleys taken off-balance. None of this is unusual; it is exactly the work that the next level is built on.</p>\n\n<h2 id=\"vs-35\">3.0 versus 3.5: the real difference</h2>\n<p>The jump to 3.5 is not about hitting harder — it is about doing the right thing more often. A 3.5 player has a more dependable third-shot drop, keeps dinks low under pressure, can reset a fast ball instead of popping it up, and makes noticeably fewer unforced errors. They are more patient in the soft game, hold the kitchen line as a pair, and choose targets on purpose rather than just returning the ball. In short, 3.0 can execute the shots in calm moments; 3.5 executes them when the point gets uncomfortable.</p>\n\n<h2 id=\"tell\">How to tell if you are around 3.0</h2>\n<p>Ask yourself a few honest questions. Can you keep a gentle dink rally going, or does it break down after two or three balls? Does your third-shot drop land in the kitchen more often than not, or do you mostly drive and hope? When a ball comes at you fast, do you reset it softly or pop it up? If your honest answers are \"rallies break down,\" \"I drive more than I drop,\" and \"I tend to pop it up,\" you are likely in the 3.0 range with clear, trainable next steps. To turn that picture into a starting estimate, try our <a href=\"/en/dupr-self-check/\">DUPR self-check</a>, and read the <a href=\"/en/level/3-0/\">Level 3.0</a> and <a href=\"/en/level/3-5/\">Level 3.5</a> pathway pages.</p>\n\n<h2 id=\"next\">Where to go next</h2>\n<p>If you recognise yourself here, the fastest progress comes from a few targeted skills rather than playing more games on autopilot. A reliable <a href=\"/en/the-third-shot-drop-explained/\">third-shot drop</a> and patient, low <a href=\"/en/dinking-fundamentals/\">dinking</a> are the two biggest levers from 3.0 to 3.5. Build those, log some real matches to earn an actual DUPR, and the number will follow your improving game rather than the other way around.</p>",
+    "keyTakeaways": [
+      "3.0 is the most common rec level: basics work, but consistency under pressure is the gap.",
+      "A 3.0 player can serve, return, rally, and dink, and gets to the kitchen during points.",
+      "The 3.0-to-3.5 jump is about doing the right thing more often, not hitting harder.",
+      "3.5 means a dependable third-shot drop, low dinks under pressure, resets, and fewer errors.",
+      "These are descriptive levels, not official cut-offs; a real DUPR comes from logged matches."
+    ],
+    "commonMistakes": [
+      "Driving the third shot and hoping instead of practising a drop.",
+      "Speeding the ball up too early instead of staying patient in dinks.",
+      "Popping resets up when the ball comes fast.",
+      "Treating a level label as a verdict rather than a training guide."
+    ],
+    "checklist": [
+      "Can you sustain a dink rally past a few balls?",
+      "Does your third-shot drop land in the kitchen more often than not?",
+      "Can you reset a fast ball softly instead of popping it up?",
+      "Do you hold the kitchen line with your partner?",
+      "Take the self-check, then log matches for a real DUPR"
+    ],
+    "faq": [
+      {
+        "q": "Is 3.0 a beginner level?",
+        "a": "Not quite. A true beginner is usually around 2.0 to 2.5. A 3.0 player has the basics working and loses points to missed execution rather than confusion."
+      },
+      {
+        "q": "How long does it take to go from 3.0 to 3.5?",
+        "a": "It varies widely with practice quality. Targeted drilling of the third-shot drop, dinks, and resets moves people up faster than only playing games."
+      },
+      {
+        "q": "Is this an official DUPR description?",
+        "a": "No. These are general skill characteristics commonly associated with the range. A real DUPR rating is calculated from your logged match results at dupr.com."
+      },
+      {
+        "q": "How do I find my level quickly?",
+        "a": "Use the Picklary self-check for a starting estimate from your shot decisions, then log real matches to build an actual DUPR."
+      }
+    ],
+    "related": [
+      "pickleball-3-0-to-3-5-improvement-plan",
+      "what-is-dupr",
+      "the-third-shot-drop-explained"
+    ],
+    "translations": {
+      "ko": {
+        "title": "DUPR 3.0은 어떤 모습일까 — 3.0과 3.5의 차이",
+        "subtitle": "가장 흔한 동호인 레벨을 정의하는 기술·습관·약점.",
+        "summary": "3.0 플레이어가 보통 하는 샷과 판단, 3.0과 3.5의 차이, 그리고 내가 대략 어디쯤인지 가늠하는 법."
+      }
+    }
+  },
+  {
+    "id": "p-3-0-to-3-5",
+    "slug": "pickleball-3-0-to-3-5-improvement-plan",
+    "category": "skills",
+    "featured": false,
+    "status": "published",
+    "date": "2026-06-21",
+    "updated": "2026-06-21",
+    "title": "From 3.0 to 3.5: a focused improvement plan",
+    "subtitle": "The handful of skills that actually move you up a level.",
+    "summary": "The specific shots and habits that separate 3.5 from 3.0, plus a simple practice structure to build them.",
+    "body": "\n<p>Going from 3.0 to 3.5 is the most-wanted jump in recreational pickleball, and the good news is that it comes from a short list of specific skills rather than a vague \"get better.\" A 3.5 player is not stronger; they are more reliable when the point gets uncomfortable. Here are the skills that close the gap and a simple way to practise them.</p>\n\n<h2 id=\"difference\">What 3.5 actually adds</h2>\n<p>The difference is consistency under pressure and smarter shot selection: a dependable third-shot drop, dinks that stay low when an opponent pushes, the ability to reset a fast ball, deeper returns, and tighter positioning — all adding up to far fewer unforced errors. If you want the full picture of where you are starting from, read <a href=\"/en/what-does-a-dupr-3-0-player-look-like/\">what a 3.0 player looks like</a> first.</p>\n\n<h2 id=\"drop\">Skill 1: a reliable third-shot drop</h2>\n<p>The drop is what lets you leave the baseline safely, and an unreliable one keeps you stuck in defence. Drill it on its own: from the baseline, aim soft arcs into the kitchen, counting how many land in versus sail long or into the net. Our guide to the <a href=\"/en/the-third-shot-drop-explained/\">third-shot drop</a> breaks down the technique. Aim to make it your default third shot, with the drive as a change-up rather than your only plan.</p>\n\n<h2 id=\"dinks\">Skill 2: patient, low dinks</h2>\n<p>At 3.5, dinks stay low and players wait for a genuine mistake instead of forcing one. Practise cross-court dink rallies and keep the ball below net height; the moment it sits up is your cue to attack, not before. The <a href=\"/en/dinking-fundamentals/\">dinking fundamentals</a> guide covers grip, contact, and targeting. Patience here wins more points than power ever will.</p>\n\n<h2 id=\"returns\">Skill 3: deep returns and getting to the net</h2>\n<p>A deep return pins the serving team back and buys you time to reach the kitchen behind it. Work on returning deep and immediately moving forward, rather than admiring the shot from the baseline. Our <a href=\"/en/serve-and-return-basics/\">serve and return</a> guide explains the targets. Simply getting both feet to the kitchen line after your return removes a huge share of 3.0 errors.</p>\n\n<h2 id=\"reset\">Skill 4: resets under pressure</h2>\n<p>When a ball comes at you fast, a 3.5 player softens it back into the kitchen instead of panicking or popping it up. Practise taking pace off the ball with a relaxed grip and a still paddle face. The reset is what keeps you in points you used to lose outright, and it is one of the clearest markers of the 3.5 level.</p>\n\n<h2 id=\"position\">Skill 5: positioning as a pair</h2>\n<p>Move with your partner like you are connected by a rope: when one shifts to cover a wide ball, the other slides to protect the middle. Holding the kitchen line together, rather than one up and one back, denies opponents the easy gaps. Our <a href=\"/en/doubles-positioning-basics/\">doubles positioning</a> guide shows the basic movements.</p>\n\n<h2 id=\"errors\">The biggest lever: fewer unforced errors</h2>\n<p>More than any single shot, 3.5 players simply miss less. Before chasing winners, count your unforced errors in a few games — balls you gave away with no pressure. Cutting those in half will raise your level faster than any flashy shot, because most recreational points are lost, not won.</p>\n\n<h2 id=\"plan\">A simple weekly plan</h2>\n<p>Spend more time drilling than playing while you build these skills — a rough split of two parts focused drilling to one part games works well. A practical session: ten minutes of cross-court dinks, ten minutes of third-shot drops, ten minutes of reset practice against a feeder, then games where you consciously use what you drilled. Keep one measurable goal per session, like \"drop lands in the kitchen 7 of 10 times.\" Then log real matches to earn an actual DUPR, and use the <a href=\"/en/dupr-self-check/\">self-check</a> and the <a href=\"/en/level/3-5/\">Level 3.5</a> page to track where you are heading.</p>",
+    "keyTakeaways": [
+      "The 3.0-to-3.5 jump comes from a short list of skills, not a vague \"get better\".",
+      "Build a reliable third-shot drop, patient low dinks, deep returns, resets, and pair positioning.",
+      "The single biggest lever is cutting unforced errors, since most rec points are lost, not won.",
+      "Drill more than you play while building skills; keep one measurable goal per session.",
+      "Log real matches to earn a DUPR; use the self-check to track direction."
+    ],
+    "commonMistakes": [
+      "Only playing games instead of drilling the specific weak skills.",
+      "Chasing winners while giving away easy unforced errors.",
+      "Driving every third shot instead of building a drop.",
+      "Staying at the baseline to admire a return instead of moving up."
+    ],
+    "checklist": [
+      "Third-shot drop as your default, drive as a change-up",
+      "Keep dinks below net height and wait for the real mistake",
+      "Return deep and move both feet to the kitchen",
+      "Reset fast balls softly instead of popping up",
+      "Drill 2:1 over games; one measurable goal per session"
+    ],
+    "faq": [
+      {
+        "q": "What is the fastest way to reach 3.5?",
+        "a": "Drill the third-shot drop, low dinks, and resets, and cut your unforced errors. Targeted practice moves you up faster than only playing games."
+      },
+      {
+        "q": "Should I drill or just play more?",
+        "a": "Both, but weight it toward drilling while you build new skills — roughly two parts drilling to one part games — then test them in real games."
+      },
+      {
+        "q": "How do I know I have reached 3.5?",
+        "a": "Your drop is dependable, your dinks stay low under pressure, you reset fast balls, and you make clearly fewer unforced errors. Log matches to confirm with a real DUPR."
+      },
+      {
+        "q": "Is power important for 3.5?",
+        "a": "Less than you think. Consistency, patience, and shot selection separate 3.5 from 3.0 far more than how hard you can hit."
+      }
+    ],
+    "related": [
+      "what-does-a-dupr-3-0-player-look-like",
+      "the-third-shot-drop-explained",
+      "dinking-fundamentals"
+    ],
+    "translations": {
+      "ko": {
+        "title": "3.0에서 3.5로: 집중 향상 플랜",
+        "subtitle": "실제로 한 레벨을 올려 주는 몇 가지 기술.",
+        "summary": "3.5를 3.0과 가르는 구체적 샷과 습관, 그리고 그것을 쌓는 간단한 연습 구조."
+      }
+    }
+  },
+  {
+    "id": "p-self-rate",
+    "slug": "how-to-self-rate-your-pickleball-level",
+    "category": "compete",
+    "featured": false,
+    "status": "published",
+    "date": "2026-06-21",
+    "updated": "2026-06-21",
+    "title": "How to self-rate your pickleball level before you have a DUPR",
+    "subtitle": "Honest markers to place yourself — and why it is only a starting point.",
+    "summary": "A practical way to estimate your pickleball level from your shots and decisions, what to look at honestly, and how to confirm it with a real DUPR.",
+    "body": "\n<p>Before you have logged enough matches for a real rating, a self-rating helps you find suitable games and set goals. The catch is that self-rating is rough and easy to get wrong in both directions. Here is how to place yourself honestly from what you actually do on court, and how to confirm it once you start playing rated matches.</p>\n\n<h2 id=\"why-rough\">Why self-rating is only a starting point</h2>\n<p>You cannot see yourself play, you remember your best shots more than your misses, and you have no record of how strong your opponents were. That is exactly why a real <a href=\"/en/what-is-dupr/\">DUPR rating</a> is calculated from logged match scores instead of opinion. Treat any self-rating — including the result of a quiz — as a friendly estimate to get you started, not a verdict.</p>\n\n<h2 id=\"look-at\">What to look at honestly</h2>\n<p>Skill level is mostly about consistency and decisions, not your single best shot. Ask yourself: can you keep the ball in play through a rally, or do easy balls sail out? Are your serve and return dependable? Can you sustain a gentle dink rally, or does it break down quickly? Do you use a third-shot drop, or only drive? When a ball comes fast, do you reset it or panic? And roughly how many points do you give away with unforced errors? Your honest answers to these say far more about your level than how hard you can hit.</p>\n\n<h2 id=\"bands\">A rough self-rating guide</h2>\n<p>Use these as general markers, not official cut-offs, and read the matching <a href=\"/en/level/\">level pathway</a> pages for detail:</p>\n<ul>\n  <li><strong>Around 2.5</strong> — you can rally a little and are still learning the kitchen, serve, and return; rallies break down often.</li>\n  <li><strong>Around 3.0</strong> — serve, return, and medium rallies are reliable, you reach the kitchen, but the third-shot drop and dinks are inconsistent under pressure.</li>\n  <li><strong>Around 3.5</strong> — dependable drops, low dinks, resets, better positioning, and noticeably fewer unforced errors.</li>\n  <li><strong>Around 4.0</strong> — you control pace, mix drives and drops, stay patient at the kitchen, and target deliberately.</li>\n</ul>\n\n<h2 id=\"honest\">Be honest in both directions</h2>\n<p>Two mistakes are common. Inflating your level leads to lopsided games where you struggle and no one enjoys it. Sandbagging — rating yourself low, especially to win — does the same in reverse and is discouraged everywhere, including at <a href=\"/en/how-a-pickleball-tournament-works/\">tournaments</a>. The most useful rating is the honest one, because it puts you in competitive games where you actually improve.</p>\n\n<h2 id=\"tool\">Use the self-check, then log matches</h2>\n<p>To turn this into a concrete estimate, take the <a href=\"/en/dupr-self-check/\">DUPR self-check</a>: ten on-court situations where you pick a shot, power, and target, and it estimates a level from your decisions. It is a starting point, not an official number. Once you have a sense of where you sit, the only way to get a true rating is to play and log matches — through a club, league, tournament, or verified recreational play — so your number reflects real results over time.</p>",
+    "keyTakeaways": [
+      "A self-rating helps you find games and set goals, but it is rough and easy to get wrong.",
+      "Judge level by consistency and decisions — rallies, returns, dinks, drops, resets, errors — not your best shot.",
+      "Use 2.5/3.0/3.5/4.0 as general markers, not official cut-offs.",
+      "Be honest in both directions; inflating and sandbagging both ruin games.",
+      "Take the self-check for an estimate, then log matches for a true DUPR."
+    ],
+    "commonMistakes": [
+      "Rating yourself from your best shots instead of your overall consistency.",
+      "Inflating your level into games you cannot compete in.",
+      "Sandbagging a low rating, especially to win.",
+      "Treating a quiz estimate as an official DUPR number."
+    ],
+    "checklist": [
+      "Can you keep the ball in play through a rally?",
+      "Are your serve and return dependable?",
+      "Can you sustain a dink rally and use a third-shot drop?",
+      "Do you reset fast balls instead of panicking?",
+      "Take the self-check, then log matches for a real DUPR"
+    ],
+    "faq": [
+      {
+        "q": "How accurate is a self-rating?",
+        "a": "Only roughly. You remember your best shots, cannot see yourself play, and lack opponent context. Use it as a starting estimate and confirm with logged matches."
+      },
+      {
+        "q": "What is the difference between self-rating and DUPR?",
+        "a": "A self-rating is your own estimate; DUPR is calculated from the scores of real matches you log, on one scale for all players."
+      },
+      {
+        "q": "Should I rate myself higher to improve faster?",
+        "a": "No. Honest games are where you improve. Inflating your level leads to lopsided matches; an accurate rating puts you in competitive ones."
+      },
+      {
+        "q": "How do I get an official rating?",
+        "a": "Create a free DUPR account and get matches logged through a club, league, tournament, or verified recreational play. The more varied matches you log, the more reliable it becomes."
+      }
+    ],
+    "related": [
+      "what-does-a-dupr-3-0-player-look-like",
+      "what-is-dupr",
+      "how-a-pickleball-tournament-works"
+    ],
+    "translations": {
+      "ko": {
+        "title": "DUPR 없이 내 피클볼 레벨 스스로 판단하는 법",
+        "subtitle": "자신을 자리매김하는 솔직한 기준 — 그리고 왜 출발점일 뿐인지.",
+        "summary": "샷과 판단으로 내 피클볼 레벨을 추정하는 실용적 방법, 무엇을 솔직히 봐야 하는지, 그리고 진짜 DUPR로 확인하는 법."
+      }
+    }
+  },
+  {
+    "id": "p-3-5-to-4-0",
+    "slug": "pickleball-3-5-to-4-0-habits-to-fix",
+    "category": "skills",
+    "featured": false,
+    "status": "published",
+    "date": "2026-06-21",
+    "updated": "2026-06-21",
+    "title": "From 3.5 to 4.0: the habits you have to fix",
+    "subtitle": "The jump is less about new shots and more about unlearning bad ones.",
+    "summary": "The specific habits that cap a 3.5 player, and how fixing patience, resets, targeting, and shot selection unlocks 4.0.",
+    "body": "\n<p>The 3.5-to-4.0 jump frustrates a lot of players because it does not come from learning a flashy new shot. By 3.5 you already own the shots; what holds you back is a handful of habits that quietly give away points. Fix these and 4.0 follows. These are general skill descriptions, not official cut-offs — your real <a href=\"/en/what-is-dupr/\">DUPR</a> comes from logged matches — but they are the habits that matter.</p>\n\n<h2 id=\"patience\">Habit 1: impatience in the soft game</h2>\n<p>The most common 3.5 ceiling is speeding up a ball that was not actually attackable. A 4.0 player has the discipline to keep dinking and resetting until they get a ball clearly above net height, then attacks the right one. Build shot tolerance: be willing to play six, eight, ten dinks and wait for the real opening instead of forcing it on the third.</p>\n\n<h2 id=\"reset\">Habit 2: not resetting under pressure</h2>\n<p>At 3.5, fast balls often get blocked back too high or popped up. A 4.0 player absorbs pace and drops a hard ball softly back into the kitchen, neutralising the attack. Practise taking pace off with a loose grip and a still face until the reset is automatic; it turns points you used to lose into points you stay in.</p>\n\n<h2 id=\"targeting\">Habit 3: predictable, aimless shots</h2>\n<p>Many 3.5 players hit the same dink and the same return to the same place. A 4.0 player targets on purpose — at the opponents' feet, at the weaker player, to the open middle, behind a player who is leaning. Add intention to every ball: even a defensive dink should be going somewhere specific.</p>\n\n<h2 id=\"drop-mix\">Habit 4: a one-dimensional third shot</h2>\n<p>Driving every third shot, or dropping every third shot, is readable. A 4.0 player has both a reliable <a href=\"/en/the-third-shot-drop-explained/\">drop</a> and a drive, and chooses based on the ball and the opponents' position. Make the drop your dependable default and use the drive as a genuine change-up, not your only escape from the baseline.</p>\n\n<h2 id=\"errors\">Habit 5: unforced errors and rushed footwork</h2>\n<p>The single clearest difference at 4.0 is fewer free points given away. Much of that is footwork — getting set and balanced rather than reaching and lunging. Move your feet to the ball, hit from a stable base, and count your unforced errors in real games; halving them does more for your level than any winner.</p>\n\n<h2 id=\"strategy\">Habit 6: playing without a plan</h2>\n<p>4.0 doubles is a team game: communicating, holding the kitchen line together, covering the middle, and stacking if it helps your match-up. Talk to your partner about who takes the middle and which opponent to target. A clear, simple plan beats two players freelancing. Drill these habits, log real matches to track your DUPR, and use the <a href=\"/en/dupr-self-check/\">self-check</a> and the <a href=\"/en/level/4-0/\">Level 4.0</a> page to see where you are heading.</p>",
+    "keyTakeaways": [
+      "The 3.5-to-4.0 jump is about fixing habits, not learning new shots.",
+      "Be patient in the soft game and attack only a genuinely high ball.",
+      "Reset hard balls softly instead of blocking them up.",
+      "Target on purpose and keep both a drop and a drive for the third shot.",
+      "Cut unforced errors with better footwork, and play with a team plan."
+    ],
+    "commonMistakes": [
+      "Speeding up balls that were not actually attackable.",
+      "Popping up resets instead of absorbing pace.",
+      "Hitting the same predictable dink and return every time.",
+      "Relying on only a drive or only a drop on the third shot."
+    ],
+    "checklist": [
+      "Wait for a ball above net height before attacking",
+      "Reset fast balls softly into the kitchen",
+      "Aim at feet, the weak player, or the open middle",
+      "Keep a dependable drop plus a drive change-up",
+      "Communicate and hold the kitchen line as a pair"
+    ],
+    "faq": [
+      {
+        "q": "Why am I stuck at 3.5?",
+        "a": "Usually because of habits, not missing shots: speeding up too early, weak resets, predictable targets, and unforced errors. Fixing those unlocks 4.0."
+      },
+      {
+        "q": "Do I need more power to reach 4.0?",
+        "a": "No. Patience, resets, targeting, and fewer errors separate 4.0 from 3.5 far more than power does."
+      },
+      {
+        "q": "Should I learn to stack?",
+        "a": "It can help if it improves your match-up (for example keeping a strong forehand in the middle), but a clear team plan and communication matter more than stacking itself."
+      },
+      {
+        "q": "Is this an official DUPR description?",
+        "a": "No. These are general skill characteristics. A real DUPR rating comes from your logged match results at dupr.com."
+      }
+    ],
+    "related": [
+      "pickleball-3-0-to-3-5-improvement-plan",
+      "what-does-a-dupr-3-0-player-look-like",
+      "the-third-shot-drop-explained"
+    ],
+    "translations": {
+      "ko": {
+        "title": "3.5에서 4.0으로: 고쳐야 할 습관",
+        "subtitle": "도약은 새 샷보다 나쁜 습관을 버리는 것에 가깝다.",
+        "summary": "3.5 플레이어를 가로막는 구체적 습관과, 인내·리셋·타깃팅·샷 선택을 고쳐 4.0을 여는 법."
+      }
+    }
+  },
+  {
+    "id": "p-low-dupr",
+    "slug": "why-your-dupr-is-lower-than-expected",
+    "category": "compete",
+    "featured": false,
+    "status": "published",
+    "date": "2026-06-21",
+    "updated": "2026-06-21",
+    "title": "Why your DUPR is lower than you expected",
+    "subtitle": "It is usually the rating being honest, not wrong.",
+    "summary": "The common reasons a DUPR rating feels low — reliability, opponent strength, score margins, and inflated self or club ratings — and what to do about it.",
+    "body": "\n<p>A lot of players look at their DUPR and feel it is too low. Almost always, the rating is not broken — it is being honest in a way self-ratings and club labels are not. Here is why your number might come out lower than you expected, and what actually moves it.</p>\n\n<h2 id=\"results\">It measures results, not effort or best shots</h2>\n<p>DUPR is calculated from the scores of matches you log, weighed against the strength of your opponents. It does not see how good your best shot is, how hard you trained, or how you felt you played — only what the scoreboard says against whom. A rating that feels low is usually just reflecting results honestly. For the full picture of how it works, see <a href=\"/en/what-is-dupr/\">what DUPR is</a>.</p>\n\n<h2 id=\"reliability\">Early ratings are less settled</h2>\n<p>When you have logged only a few matches, the system has little information and your rating is less reliable, so it can sit lower or swing more. As you log more matches against varied opponents, the rating stabilises and better reflects your true level. A new rating is a first estimate, not a final verdict.</p>\n\n<h2 id=\"margins\">Score margins matter</h2>\n<p>DUPR pays attention to how close matches are, not just who won. Narrow losses to strong players can help your rating, while scraping out close wins over much weaker players does little. If you mostly log blowouts in either direction, your number may not move the way raw win-loss would suggest.</p>\n\n<h2 id=\"inflation\">Self-ratings and club ratings often run high</h2>\n<p>Many players are used to a self-assessed or club number that drifted upward over time, because local labels are generous and rarely tested across a wider pool. DUPR puts everyone on one universal scale, so it often lands lower than a flattering local rating. That gap is normal; see <a href=\"/en/official-dupr-vs-club-ratings/\">official DUPR vs club ratings</a> for why.</p>\n\n<h2 id=\"opponents\">You may be logging your toughest matches</h2>\n<p>If the matches that get logged are mostly your competitive league and tournament games against strong opponents, your results there will be harder-earned than your casual wins, and your rating reflects that tougher slate. That is the system working as intended, not penalising you.</p>\n\n<h2 id=\"lag\">It lags your improvement</h2>\n<p>Your rating reflects recent results, so a week of real improvement shows up only once the wins follow. Be patient: keep playing well and the number catches up rather than leading.</p>\n\n<h2 id=\"do\">What to actually do</h2>\n<p>Log more matches against a variety of opponents, play people slightly above you, and keep scores competitive rather than chasing easy blowouts. Above all, treat DUPR as a tool to find fair games and track long-term progress, not a verdict on you as a player. If you want a quick gut-check on where your decisions sit, the <a href=\"/en/dupr-self-check/\">self-check</a> gives an estimate while your logged rating matures.</p>",
+    "keyTakeaways": [
+      "DUPR measures logged results against opponent strength, not effort or your best shot.",
+      "Early ratings are less reliable and can sit lower or swing more.",
+      "Close losses to strong players can help; blowout wins over weak players do little.",
+      "Self and club ratings often run high, so DUPR can feel lower by comparison.",
+      "It lags improvement — keep playing well and the number catches up."
+    ],
+    "commonMistakes": [
+      "Assuming a low rating is an error rather than honest feedback.",
+      "Comparing DUPR directly to an inflated club or self-rating.",
+      "Logging only easy blowouts and expecting big movement.",
+      "Obsessing over short-term swings instead of the trend."
+    ],
+    "checklist": [
+      "Log more matches against varied opponents",
+      "Play people slightly above your level",
+      "Keep scores competitive, not lopsided",
+      "Judge the long-term trend, not single results",
+      "Use the self-check as a gut-check while your rating matures"
+    ],
+    "faq": [
+      {
+        "q": "Is my DUPR wrong if it feels low?",
+        "a": "Almost never. It reflects logged results against real opponents. A low-feeling rating is usually honest, where self or club ratings were generous."
+      },
+      {
+        "q": "How do I raise my DUPR?",
+        "a": "Log more competitive matches against varied and slightly stronger opponents, and keep scores close. Blowout wins over weak players move it little."
+      },
+      {
+        "q": "Why did my rating drop after a good week?",
+        "a": "It reflects recent logged results, so improvement shows up only once the wins follow. Keep playing well and it catches up."
+      },
+      {
+        "q": "Should I stop logging losses?",
+        "a": "No. Competitive losses, especially close ones against strong players, give the system the information it needs and can even help your rating."
+      }
+    ],
+    "related": [
+      "what-is-dupr",
+      "official-dupr-vs-club-ratings",
+      "how-to-self-rate-your-pickleball-level"
+    ],
+    "translations": {
+      "ko": {
+        "title": "DUPR 점수가 생각보다 낮게 나오는 이유",
+        "subtitle": "대개 레이팅이 틀린 게 아니라 정직한 것이다.",
+        "summary": "DUPR이 낮게 느껴지는 흔한 이유 — 신뢰도, 상대 강함, 점수 차, 부풀려진 자가·클럽 평가 — 와 대처법."
+      }
+    }
+  },
+  {
+    "id": "p-dupr-vs-club",
+    "slug": "official-dupr-vs-club-ratings",
+    "category": "compete",
+    "featured": false,
+    "status": "published",
+    "date": "2026-06-21",
+    "updated": "2026-06-21",
+    "title": "Official DUPR vs club ratings: why they differ",
+    "subtitle": "Your club says 3.5, DUPR says 3.2 — here is what is going on.",
+    "summary": "How club, league, and self ratings differ from DUPR, why a gap is normal, and which number to trust for which purpose.",
+    "body": "\n<p>It is common to carry two different numbers: a club or league rating that says one thing and a DUPR that says another. Neither is necessarily \"wrong\" — they are built differently and answer different questions. Here is why they differ and how to use each one.</p>\n\n<h2 id=\"club\">What a club or league rating is</h2>\n<p>Club, league, and ladder ratings are local. They might come from a coach's or director's assessment, a sign-up self-rating, or results within that specific community. Because they are calibrated to one pool of players and are often generous, they work well for organising local play but do not necessarily translate to other clubs or to tournaments.</p>\n\n<h2 id=\"dupr\">What DUPR is</h2>\n<p>DUPR is a universal, algorithmic rating calculated from the scores of logged matches across the whole playing population, on one scale for everyone. That is the point of it: a rating that means the same thing from club to club and city to city. For the full explanation, see <a href=\"/en/what-is-dupr/\">what DUPR is</a>.</p>\n\n<h2 id=\"why\">Why the two diverge</h2>\n<p>Several things pull them apart. Local pools vary in strength, so a \"3.5\" at one club is not a \"3.5\" at another. Self and club ratings tend to drift upward over time and rarely get tested against a wider field. And the methods differ — a human label or a local ladder is not the same as an algorithm weighing opponent strength and score margins. A gap of a few tenths is completely normal, and a DUPR that lands lower is usually the more honest number. If yours feels low, <a href=\"/en/why-your-dupr-is-lower-than-expected/\">why your DUPR is lower than expected</a> covers the reasons.</p>\n\n<h2 id=\"which\">Which number to trust for what</h2>\n<p>Use your club or league rating for the play it was designed for: local leagues, club ladders, and casual round-robins where everyone is on the same local scale. Use DUPR when you need a rating that travels — cross-club play, finding fair games with strangers, and many <a href=\"/en/how-a-pickleball-tournament-works/\">tournaments</a> that seed or split divisions by DUPR. Picking the right number for the context avoids both mismatched games and unnecessary frustration.</p>\n\n<h2 id=\"mindset\">Do not let the gap discourage you</h2>\n<p>A lower DUPR than your club number does not mean you got worse overnight; it means you are now measured on a wider, more honest scale. Treat it as useful information, keep logging competitive matches, and let your rating reflect your real results over time. If you want a quick estimate of where your decisions sit while you build a logged rating, try the <a href=\"/en/dupr-self-check/\">self-check</a>.</p>",
+    "keyTakeaways": [
+      "Club and league ratings are local and often generous; DUPR is universal and algorithmic.",
+      "A gap of a few tenths between them is completely normal.",
+      "Local pools, rating drift, and different methods explain the difference.",
+      "Use club ratings for local play; use DUPR for cross-club games and tournaments.",
+      "A lower DUPR is usually the more honest number, not a sign you got worse."
+    ],
+    "commonMistakes": [
+      "Assuming a club rating and a DUPR should match exactly.",
+      "Treating a flattering local rating as your true level.",
+      "Using a club rating to enter DUPR-based tournament divisions.",
+      "Feeling discouraged by a normal gap between the two."
+    ],
+    "checklist": [
+      "Know which rating an event or league actually uses",
+      "Use your club rating for local leagues and ladders",
+      "Use DUPR for cross-club play and tournaments",
+      "Expect a few tenths of difference as normal",
+      "Keep logging matches so DUPR reflects real results"
+    ],
+    "faq": [
+      {
+        "q": "Why is my DUPR lower than my club rating?",
+        "a": "Club ratings are local and often generous, while DUPR is a universal scale weighing real results and opponent strength. A lower, more honest DUPR is normal."
+      },
+      {
+        "q": "Which rating is correct?",
+        "a": "Neither is simply \"correct\" — they answer different questions. Club ratings suit local play; DUPR is the portable rating for cross-club games and tournaments."
+      },
+      {
+        "q": "Should I use my club rating to enter a tournament?",
+        "a": "Only if that event uses skill-level divisions. Many events seed or split by DUPR, so check which rating the tournament actually uses."
+      },
+      {
+        "q": "Will my DUPR catch up to my club rating?",
+        "a": "It reflects your real logged results. If your club rating was generous, the two may simply settle at different points; keep logging competitive matches."
+      }
+    ],
+    "related": [
+      "what-is-dupr",
+      "why-your-dupr-is-lower-than-expected",
+      "how-a-pickleball-tournament-works"
+    ],
+    "translations": {
+      "ko": {
+        "title": "공식 DUPR vs 클럽 레벨: 왜 다른가",
+        "subtitle": "클럽은 3.5라는데 DUPR은 3.2 — 무슨 일인가.",
+        "summary": "클럽·리그·자가 평가가 DUPR과 어떻게 다른지, 격차가 왜 정상인지, 어떤 숫자를 어떤 목적에 믿을지."
+      }
+    }
+  },
+  {
+    "id": "p-dupr-2-5",
+    "slug": "what-does-a-dupr-2-5-player-look-like",
+    "category": "skills",
+    "featured": false,
+    "status": "published",
+    "date": "2026-06-21",
+    "updated": "2026-06-21",
+    "title": "What a DUPR 2.5 player looks like — and how to reach 3.0",
+    "subtitle": "The advanced-beginner level, and the path out of it.",
+    "summary": "A plain description of a 2.5 player, the consistency gaps that define the level, and the steps that lead to 3.0.",
+    "body": "\n<p>2.5 is the advanced-beginner level: past your very first sessions, but still building the consistency that defines a 3.0 player. Here is a plain picture of what 2.5 looks like and the clearest path to 3.0. As always, these are general skill descriptions rather than official cut-offs — a real <a href=\"/en/what-is-dupr/\">DUPR</a> comes from logged matches.</p>\n\n<h2 id=\"can-do\">What a 2.5 player can usually do</h2>\n<p>A 2.5 player knows the rules well enough to play a real game, can get serves and returns in much of the time, and can keep a short rally going. They are starting to understand the kitchen and that the serve and return must bounce, and they attempt dinks even if they are not yet reliable. The game is recognisable pickleball rather than constant scrambling.</p>\n\n<h2 id=\"struggle\">Where 2.5 players struggle</h2>\n<p>The defining gap is consistency. Serves and returns still miss more often than they should, rallies break down after a few balls, and dinks tend to sail or pop up. Players at this level often rush to the net too early or stay back too long, and they reach the kitchen line late. Points are frequently decided by an easy unforced error rather than by a tough shot.</p>\n\n<h2 id=\"vs-30\">2.5 versus 3.0</h2>\n<p>The move to 3.0 is mostly about reliability. A 3.0 player lands serves and returns consistently, sustains medium-length rallies without spraying easy balls, and gets up to the kitchen during the point. They are not doing anything exotic — they are simply missing less and controlling the ball more. To see the target clearly, read <a href=\"/en/what-does-a-dupr-3-0-player-look-like/\">what a 3.0 player looks like</a>.</p>\n\n<h2 id=\"path\">How to reach 3.0</h2>\n<p>Build in order. First, make your serve and return dependable — getting them in every time removes the biggest source of lost points at this level; our <a href=\"/en/serve-and-return-basics/\">serve and return basics</a> guide shows the targets. Second, commit to letting the serve and return bounce and then moving forward to the kitchen line. Third, start a soft game: practise gentle <a href=\"/en/dinking-fundamentals/\">dinks</a> so a rally does not end the moment it slows down. A simple, repeatable practice plan helps; our <a href=\"/en/first-30-days-practice-routine/\">first 30 days routine</a> lays one out.</p>\n\n<h2 id=\"mindset\">Keep it simple and consistent</h2>\n<p>At 2.5, the fastest progress comes from consistency, not fancy shots. Keep the ball in play, reduce easy misses, and get to the kitchen, and you will be at 3.0 sooner than you think. When you want a starting estimate of your level, the <a href=\"/en/dupr-self-check/\">self-check</a> gives one from your shot decisions, and logging real matches will build your true DUPR over time.</p>",
+    "keyTakeaways": [
+      "2.5 is the advanced-beginner level: a real game, but consistency is still being built.",
+      "A 2.5 player rallies a little, attempts dinks, and is learning the kitchen and the bounce rules.",
+      "The 2.5-to-3.0 jump is mostly about reliability — missing less and controlling more.",
+      "Build in order: dependable serve and return, then the kitchen, then a soft game.",
+      "Consistency beats fancy shots at this level."
+    ],
+    "commonMistakes": [
+      "Missing too many serves and returns.",
+      "Rushing to the net too early or staying back too long.",
+      "Letting rallies end as soon as the ball slows down.",
+      "Chasing fancy shots before the basics are consistent."
+    ],
+    "checklist": [
+      "Land your serve and return nearly every time",
+      "Let the serve and return bounce, then move up",
+      "Get both feet to the kitchen line during points",
+      "Practise gentle dinks to extend rallies",
+      "Follow a simple, repeatable practice plan"
+    ],
+    "faq": [
+      {
+        "q": "Is 2.5 a complete beginner?",
+        "a": "Not quite. A complete beginner is around 2.0. A 2.5 player can play a real game but still misses basics like serves, returns, and dinks more than a 3.0 would."
+      },
+      {
+        "q": "What should I practise first at 2.5?",
+        "a": "Make your serve and return dependable. Getting them in consistently removes the biggest source of lost points and is the fastest route toward 3.0."
+      },
+      {
+        "q": "How long does 2.5 to 3.0 take?",
+        "a": "It varies with practice quality, but focusing on consistency — fewer easy misses and getting to the kitchen — moves people up faster than chasing winners."
+      },
+      {
+        "q": "Is this an official rating description?",
+        "a": "No. These are general skill characteristics. A real DUPR rating is calculated from your logged match results at dupr.com."
+      }
+    ],
+    "related": [
+      "what-does-a-dupr-3-0-player-look-like",
+      "first-30-days-practice-routine",
+      "serve-and-return-basics"
+    ],
+    "translations": {
+      "ko": {
+        "title": "DUPR 2.5는 어떤 모습일까 — 3.0으로 가는 법",
+        "subtitle": "고급 입문 단계, 그리고 거기서 벗어나는 길.",
+        "summary": "2.5 플레이어에 대한 솔직한 설명, 이 레벨을 정의하는 일관성 격차, 그리고 3.0으로 이어지는 단계."
+      }
+    }
+  },
+  {
+    "id": "p-control-power",
+    "slug": "control-vs-power-pickleball-paddles",
+    "category": "gear",
+    "featured": false,
+    "status": "published",
+    "date": "2026-06-21",
+    "updated": "2026-06-21",
+    "title": "Control vs power paddles: which one suits you",
+    "subtitle": "Every paddle sits somewhere on a control-to-power spectrum.",
+    "summary": "What makes a paddle lean toward control or power, the trade-offs of each, and how to choose the side of the spectrum that fits your game.",
+    "body": "\n<p>Paddles are often described as \"control\" or \"power,\" but really every paddle sits somewhere on a spectrum between the two. Understanding what pushes a paddle toward one end helps you choose one that supports how you actually play instead of fighting it. Here is what separates the two, the trade-offs, and how to pick your side.</p>\n\n<h2 id=\"power\">What makes a paddle power-oriented</h2>\n<p>A power paddle springs the ball back with extra pace. That usually comes from a thinner core, a stiffer or flexier face that pops, a heavier or more head-heavy build, and sometimes an elongated shape. The upside is easy put-aways, strong drives, and deep serves with less effort. The trade-off is that power paddles are harder to control on touch shots — dinks and resets tend to fly or pop up — they are less forgiving on off-centre hits, and they can put more strain on your arm.</p>\n\n<h2 id=\"control\">What makes a paddle control-oriented</h2>\n<p>A control paddle is built for touch and consistency. A thicker core (around 16 mm) plays softer and absorbs pace, a raw carbon face grips the ball for spin and predictability, and a balanced shape gives a larger, more forgiving sweet spot. The upside is dependable dinks, drops, and resets, easier spin, and forgiveness when you mishit. The trade-off is that you supply more of your own power, so put-aways take more deliberate technique.</p>\n\n<h2 id=\"swingweight\">Weight and swing weight</h2>\n<p>How a paddle feels in motion matters as much as the number on the scale. A head-heavy paddle hits with more power but is slower to maneuver, while a more balanced or head-light paddle is quicker at the net for fast hands and resets. If a paddle feels sluggish in a quick exchange, its swing weight is probably too high for you, regardless of the static weight.</p>\n\n<h2 id=\"who\">Who should pick which</h2>\n<p>Most beginners and anyone who lives in the soft game — dinkers, droppers, and players who win with patience and placement — are better served by a control-leaning paddle. Players who supply their own power, hit a lot of drives, or play singles may prefer something further toward the power end. Modern recreational doubles, where the soft game decides points, has trended strongly toward control-and-spin paddles for exactly this reason.</p>\n\n<h2 id=\"decide\">How to decide for yourself</h2>\n<p>Start from your style and your body. If you tend to overhit and miss, lean control; if you struggle to put balls away or end points, lean a little toward power. If your elbow or shoulder gets sore, a lighter, softer control paddle is kinder. Whenever you can, demo a paddle from each end of the spectrum and feel the difference. Our guides to <a href=\"/en/paddle-face-materials-compared/\">paddle face materials</a> and <a href=\"/en/how-to-choose-your-first-pickleball-paddle/\">choosing your first paddle</a> cover the specifics that drive feel.</p>\n\n<h2 id=\"bottom\">The bottom line</h2>\n<p>There is no universally \"best\" side — only the side that fits your game. Match the paddle to how you win points and how your arm feels, and you will spend your time improving rather than compensating for the wrong tool.</p>",
+    "keyTakeaways": [
+      "Every paddle sits on a control-to-power spectrum rather than being purely one or the other.",
+      "Power comes from thinner cores, poppy faces, and heavier or elongated builds; control from thicker cores and raw carbon faces.",
+      "Power paddles aid put-aways but are harder to control; control paddles aid touch but ask you to supply power.",
+      "Swing weight (how it feels in motion) matters as much as static weight.",
+      "Most soft-game and rec-doubles players are better served by control-leaning paddles."
+    ],
+    "commonMistakes": [
+      "Buying a power paddle then struggling to control dinks and resets.",
+      "Judging a paddle by static weight alone and ignoring swing weight.",
+      "Choosing power when your real problem is overhitting and errors.",
+      "Ignoring arm comfort when picking a heavier, stiffer paddle."
+    ],
+    "checklist": [
+      "Decide whether you overhit (lean control) or struggle to finish (lean power)",
+      "Check swing weight, not just the number on the scale",
+      "Prefer a thicker control core if you live in the soft game",
+      "Factor in elbow and shoulder comfort",
+      "Demo a paddle from each end before deciding"
+    ],
+    "faq": [
+      {
+        "q": "Is a control or power paddle better for beginners?",
+        "a": "Usually control. A thicker-core, control-leaning paddle is more forgiving, makes dinks and resets easier, and is gentler on the arm while you build technique."
+      },
+      {
+        "q": "What gives a paddle more power?",
+        "a": "A thinner core, a poppy or stiffer face, and a heavier or more head-heavy build, sometimes in an elongated shape. These add pace but reduce touch and forgiveness."
+      },
+      {
+        "q": "Does swing weight matter?",
+        "a": "Yes. A paddle can feel slow even at a low static weight if its weight is concentrated in the head. Quick hands at the net favour a more balanced swing weight."
+      },
+      {
+        "q": "Why do most doubles players choose control?",
+        "a": "Because rec doubles is decided by the soft game — dinks, resets, and drops — where control and spin matter more than raw power."
+      }
+    ],
+    "related": [
+      "how-to-choose-your-first-pickleball-paddle",
+      "paddle-face-materials-compared",
+      "choosing-a-pickleball-paddle-for-3-5-players"
+    ],
+    "translations": {
+      "ko": {
+        "title": "컨트롤 vs 파워 패들: 무엇이 맞을까",
+        "subtitle": "모든 패들은 컨트롤-파워 스펙트럼 어딘가에 있다.",
+        "summary": "패들이 컨트롤 또는 파워로 기우는 이유, 각각의 트레이드오프, 그리고 내 경기에 맞는 쪽을 고르는 법."
+      }
+    }
+  },
+  {
+    "id": "p-paddle-3-5",
+    "slug": "choosing-a-pickleball-paddle-for-3-5-players",
+    "category": "gear",
+    "featured": false,
+    "status": "published",
+    "date": "2026-06-21",
+    "updated": "2026-06-21",
+    "title": "Choosing a pickleball paddle for 3.5 players",
+    "subtitle": "At 3.5 the soft game decides points, so let your paddle support it.",
+    "summary": "What a 3.5 player should look for in a paddle — control, spin, and a comfortable swing weight — and why chasing pure power usually backfires.",
+    "body": "\n<p>By 3.5, you are winning and losing points in the soft game — dinks, resets, drops, and shot selection — not by out-hitting people. That should shape your paddle choice. A 3.5 player is usually best served by a control-and-spin paddle that rewards touch and consistency, rather than a pure power weapon. Here is what to look for.</p>\n\n<h2 id=\"why-control\">Why control beats power at 3.5</h2>\n<p>The skills that move you up at this level — patient dinks, dependable drops, and resets under pressure — all depend on touch. A paddle tuned purely for power makes those harder, sending dinks long and popping resets up. Since you win with placement and patience (see <a href=\"/en/pickleball-3-0-to-3-5-improvement-plan/\">going from 3.0 to 3.5</a>), choose a paddle that makes the soft game easier, not one that fights it.</p>\n\n<h2 id=\"face\">Face: lean toward raw carbon</h2>\n<p>A raw carbon (textured) face grips the ball for spin and gives a consistent, predictable response across the hitting surface — exactly what a developing 3.5 game benefits from. Fiberglass adds power but less control. Our <a href=\"/en/paddle-face-materials-compared/\">paddle face materials</a> guide explains the differences in depth.</p>\n\n<h2 id=\"core\">Core: thicker for feel</h2>\n<p>A thicker core (around 16 mm) plays softer, absorbs pace for cleaner resets, and is more forgiving on off-centre hits. That forgiveness matters at 3.5, where you are still tightening up your contact point. A thinner, poppier core can feel harsh and unforgiving when you are trying to play touch shots.</p>\n\n<h2 id=\"weight\">Weight and swing weight</h2>\n<p>Pick a weight you can swing comfortably for a full session without your arm tiring, and pay attention to swing weight — how the paddle feels in motion. Fast hands at the kitchen and quick resets favour a balanced, maneuverable paddle over a head-heavy one. If it feels sluggish in a hands battle, it is too much paddle for you.</p>\n\n<h2 id=\"shape\">Shape</h2>\n<p>A standard shape gives a larger, more forgiving sweet spot and is the safe default. An elongated shape adds reach and a little power but narrows the sweet spot, so only choose it if your contact is already consistent and you specifically want the reach for serves and drives.</p>\n\n<h2 id=\"dont\">Do not over-buy</h2>\n<p>You do not need the most expensive paddle to play 3.5 well, and many premium paddles are tuned for aggressive advanced play. A good mid-to-upper-mid control paddle that fits your hand will serve you better than a hyped power model. And remember the bigger truth at this level: consistency and shot selection raise your game far more than any paddle. Before you decide, revisit the fundamentals of <a href=\"/en/how-to-choose-your-first-pickleball-paddle/\">choosing a paddle</a> and demo a couple of options.</p>\n\n<h2 id=\"bottom\">The bottom line</h2>\n<p>For most 3.5 players: a raw carbon face, a thicker control core, a comfortable swing weight, and a forgiving shape. Match the paddle to the soft game you are building, and let your improving touch — not your equipment — carry you toward 4.0.</p>",
+    "keyTakeaways": [
+      "At 3.5 the soft game decides points, so favour control and spin over pure power.",
+      "Lean toward a raw carbon face for spin and a consistent response.",
+      "A thicker (~16 mm) core plays softer and is more forgiving on mishits.",
+      "Pick a comfortable, maneuverable swing weight for fast hands and resets.",
+      "Do not over-buy — consistency and shot selection matter more than the paddle."
+    ],
+    "commonMistakes": [
+      "Chasing a pure power paddle that makes dinks and resets harder.",
+      "Buying a thin, poppy core that feels harsh on touch shots.",
+      "Choosing a head-heavy paddle that is slow in hands battles.",
+      "Assuming a premium paddle will do the work that practice should."
+    ],
+    "checklist": [
+      "Raw carbon (textured) face for spin and consistency",
+      "Thicker control core (around 16 mm)",
+      "Comfortable, maneuverable swing weight",
+      "Standard shape unless your contact is very consistent",
+      "Demo a couple of control paddles before buying"
+    ],
+    "faq": [
+      {
+        "q": "What kind of paddle is best for a 3.5 player?",
+        "a": "Usually a control-and-spin paddle: a raw carbon face, a thicker (~16 mm) core, a comfortable swing weight, and a forgiving shape that supports dinks, resets, and drops."
+      },
+      {
+        "q": "Should a 3.5 player use a power paddle?",
+        "a": "Generally no. At 3.5 you win with touch and placement, and a pure power paddle makes the soft game harder. Lean control unless you struggle to finish points."
+      },
+      {
+        "q": "Do I need an expensive paddle at 3.5?",
+        "a": "No. A good mid-range control paddle that fits your hand is plenty. Consistency and shot selection improve your level more than gear."
+      },
+      {
+        "q": "Is an elongated paddle good for 3.5?",
+        "a": "Only if your contact is already consistent and you want the extra reach for serves and drives, since it narrows the sweet spot. Otherwise a standard shape is safer."
+      }
+    ],
+    "related": [
+      "control-vs-power-pickleball-paddles",
+      "pickleball-3-0-to-3-5-improvement-plan",
+      "paddle-face-materials-compared"
+    ],
+    "translations": {
+      "ko": {
+        "title": "3.5 플레이어를 위한 패들 고르기",
+        "subtitle": "3.5에선 소프트 게임이 포인트를 결정하니 패들이 그걸 받쳐 주게 하라.",
+        "summary": "3.5 플레이어가 패들에서 봐야 할 것 — 컨트롤·스핀·편안한 스윙 웨이트 — 와, 순수 파워를 좇으면 보통 역효과인 이유."
+      }
+    }
+  },
+  {
+    "id": "p-paddle-tennis",
+    "slug": "pickleball-paddles-for-tennis-players",
+    "category": "gear",
+    "featured": false,
+    "status": "published",
+    "date": "2026-06-21",
+    "updated": "2026-06-21",
+    "title": "Pickleball paddles for tennis players switching over",
+    "subtitle": "What transfers from tennis, what does not, and the paddle that helps.",
+    "summary": "How a tennis background shapes paddle choice, the habits to adjust, and why the soft game matters more than the power you bring.",
+    "body": "\n<p>Tennis players usually pick pickleball up quickly — and then hit a wall built out of their own habits. Your hand-eye coordination, footwork, and instinct for power and spin all transfer, but the full swing, the continental-everything grip, and a power-first mindset can hold you back. Here is how to choose a paddle and adjust your game as a tennis convert.</p>\n\n<h2 id=\"transfers\">What transfers and what does not</h2>\n<p>Coming from tennis, your contact, court coverage, anticipation, and ability to generate spin are real advantages. What does not transfer cleanly is the long, fast swing — pickleball rewards compact, controlled strokes — and the habit of trying to win every point with pace. The single biggest adjustment is learning the soft game, where patience beats power.</p>\n\n<h2 id=\"paddle\">The paddle many converts like</h2>\n<p>Tennis players often feel at home with a slightly heavier and sometimes elongated paddle, which gives a familiar plow-through feel on drives and a bit more reach. Pair that with a control-oriented build so the paddle does not amplify your tendency to overhit: a thicker core to soften touch shots and a raw carbon face for the spin you already know how to produce. That combination keeps the power you enjoy while taming it enough to play the soft game.</p>\n\n<h2 id=\"grip\">Grip size and spin</h2>\n<p>Tennis players sometimes reach for a larger grip out of habit, but a slightly smaller grip lets you use the wrist for spin and quick hands at the net, which suits pickleball. Choose by comfort, and remember you can build a small grip up with an overgrip but cannot shrink one that is too large. Our guide to <a href=\"/en/how-to-choose-your-first-pickleball-paddle/\">choosing a paddle</a> covers grip sizing in detail.</p>\n\n<h2 id=\"adjust\">The adjustments that matter most</h2>\n<p>No paddle fixes habits — these do. Shorten your swing, especially at the kitchen, where compact punch volleys and soft hands win. Learn the <a href=\"/en/the-third-shot-drop-explained/\">third-shot drop</a> instead of driving every ball, and build patience in <a href=\"/en/dinking-fundamentals/\">dinking</a> rallies rather than trying to end points early. And respect the kitchen rule — you cannot crash the net and put everything away the way an aggressive tennis player might want to.</p>\n\n<h2 id=\"power-trap\">The power trap</h2>\n<p>The most common tennis-convert mistake is over-relying on power: big drives that sail out, hard third shots that get reset, and impatience that hands opponents free points. Channel your athleticism into placement, spin, and getting to the kitchen, and your tennis background becomes an edge rather than a habit to overcome.</p>\n\n<h2 id=\"bottom\">The bottom line</h2>\n<p>Pick a control-leaning paddle with enough weight and reach to feel familiar — a thicker core, a raw carbon face, and a comfortable grip — then spend your energy shortening your swing and learning the soft game. The athletic foundation is already there; the soft game is what turns a strong tennis player into a strong pickleball player.</p>",
+    "keyTakeaways": [
+      "Hand-eye, footwork, and spin transfer from tennis; the full swing and power-first mindset do not.",
+      "Many converts like a slightly heavier or elongated paddle, paired with a control build to tame overhitting.",
+      "A thicker core and raw carbon face keep familiar power while supporting touch and spin.",
+      "A slightly smaller grip suits wrist spin and quick hands; choose by comfort.",
+      "The real fix is shortening your swing and learning the soft game, not the paddle."
+    ],
+    "commonMistakes": [
+      "Bringing a full tennis swing to compact pickleball strokes.",
+      "Driving every ball instead of using a third-shot drop.",
+      "Over-relying on power and giving away unforced errors.",
+      "Crashing the net without respecting the kitchen rule."
+    ],
+    "checklist": [
+      "Choose a control-leaning paddle with familiar weight and reach",
+      "Thicker core and raw carbon face to tame overhitting",
+      "Pick a comfortable grip; smaller helps wrist spin",
+      "Shorten your swing, especially at the kitchen",
+      "Learn the third-shot drop and dink patience"
+    ],
+    "faq": [
+      {
+        "q": "What paddle is best for a tennis player switching to pickleball?",
+        "a": "Often a slightly heavier or elongated, control-leaning paddle: a thicker core and raw carbon face give a familiar feel and spin while taming the tendency to overhit."
+      },
+      {
+        "q": "Do my tennis skills transfer to pickleball?",
+        "a": "Much of it does — contact, footwork, anticipation, and spin. The full swing and power-first mindset do not, so the big adjustment is the soft game."
+      },
+      {
+        "q": "Should I use a bigger grip like in tennis?",
+        "a": "Usually a slightly smaller grip suits pickleball, helping wrist spin and fast hands. Choose by comfort, and you can add an overgrip to a small grip if needed."
+      },
+      {
+        "q": "Why do I keep losing to weaker-looking players?",
+        "a": "Often because power alone does not win pickleball. Patience, the third-shot drop, dinks, and respecting the kitchen beat big swings."
+      }
+    ],
+    "related": [
+      "how-to-choose-your-first-pickleball-paddle",
+      "control-vs-power-pickleball-paddles",
+      "the-third-shot-drop-explained"
+    ],
+    "translations": {
+      "ko": {
+        "title": "테니스 전향자를 위한 피클볼 패들",
+        "subtitle": "테니스에서 무엇이 옮겨오고 무엇은 아닌지, 그리고 도움이 되는 패들.",
+        "summary": "테니스 배경이 패들 선택을 어떻게 좌우하는지, 고칠 습관, 그리고 가져온 파워보다 소프트 게임이 더 중요한 이유."
+      }
+    }
+  },
+  {
+    "id": "p-expensive-paddle",
+    "slug": "what-to-know-before-buying-an-expensive-pickleball-paddle",
+    "category": "gear",
+    "featured": false,
+    "status": "published",
+    "date": "2026-06-21",
+    "updated": "2026-06-21",
+    "title": "What to know before buying an expensive pickleball paddle",
+    "subtitle": "What more money actually buys — and what it does not.",
+    "summary": "What a premium paddle adds, where returns diminish, and when an upgrade is genuinely worth it versus when a mid-range paddle is plenty.",
+    "body": "\n<p>Premium paddles are tempting, and marketing makes every release sound essential. Before you spend, it helps to know what more money actually buys, where the gains stop mattering, and when an upgrade is genuinely worth it. The short version: a great paddle helps a little, but it cannot buy the skill that practice does.</p>\n\n<h2 id=\"buys\">What more money buys</h2>\n<p>Higher-priced paddles generally offer better materials and construction — raw carbon faces, thermoformed or unibody builds, refined cores — which can mean a more consistent response, a slightly larger sweet spot, better spin, and more durability. These are real but refined gains: a premium paddle feels nicer and more predictable, not five levels better.</p>\n\n<h2 id=\"doesnt\">What it does not buy</h2>\n<p>An expensive paddle does not buy consistency, patience, or shot selection — the things that actually decide points. Worse, many premium paddles are tuned for advanced, aggressive players and can be less forgiving for beginners and intermediates, making the soft game harder rather than easier. A pricey paddle in the wrong hands can hold you back.</p>\n\n<h2 id=\"returns\">Diminishing returns</h2>\n<p>The biggest jump in quality is from a cheap all-wood bundle paddle to a solid mid-range one — that change is genuinely felt. From a good mid-range paddle to a premium one, the difference is incremental and mostly about feel and refinement. For most players, the sensible mid-range option captures the large majority of the benefit at a fraction of the cost. Our <a href=\"/en/how-to-choose-your-first-pickleball-paddle/\">choosing a paddle</a> and <a href=\"/en/building-a-starter-kit-on-a-budget/\">starter-kit</a> guides cover sensible options.</p>\n\n<h2 id=\"worth\">When an upgrade is genuinely worth it</h2>\n<p>An upgrade makes sense when you have plateaued and understand your own style, when you want a specific property your current paddle lacks — more spin, a softer feel for resets, a particular swing weight — or when your current paddle is worn out or causing arm pain. In those cases, choosing along the <a href=\"/en/control-vs-power-pickleball-paddles/\">control-to-power spectrum</a> deliberately, rather than by price, is what matters.</p>\n\n<h2 id=\"smart\">How to buy smart</h2>\n<p>Demo before you buy whenever possible, and judge a paddle by fit — weight, swing weight, grip, and feel — not by its price or hype. Check the grip size, consider durability and any warranty, and ignore claims that a paddle will transform your game. The right question is never \"what is the best paddle,\" but \"what fits how I play.\"</p>\n\n<h2 id=\"bottom\">The bottom line</h2>\n<p>Spend enough to get a solid, well-built paddle that fits your style, and stop there until you have a concrete reason to upgrade. Put the money you save toward court time and coaching — both will raise your level far more than the most expensive paddle ever could.</p>",
+    "keyTakeaways": [
+      "More money buys better materials, feel, spin, and durability — refined, not transformative, gains.",
+      "It does not buy consistency or shot selection, and premium paddles can be less forgiving for beginners.",
+      "The big quality jump is cheap-to-mid-range; mid-range-to-premium is incremental.",
+      "Upgrade when you have plateaued, want a specific property, or your paddle is worn or hurts your arm.",
+      "Buy by fit and demo first — not by price or hype."
+    ],
+    "commonMistakes": [
+      "Buying a premium paddle expecting it to fix your game.",
+      "Choosing an advanced, less-forgiving paddle as a beginner.",
+      "Paying for incremental gains you will not feel yet.",
+      "Judging a paddle by price and marketing instead of fit."
+    ],
+    "checklist": [
+      "Get a solid mid-range paddle before considering premium",
+      "Have a concrete reason (plateau, specific property, worn paddle) to upgrade",
+      "Choose along the control-to-power spectrum, not by price",
+      "Demo and judge by weight, swing weight, grip, and feel",
+      "Put savings toward court time and coaching"
+    ],
+    "faq": [
+      {
+        "q": "Is an expensive pickleball paddle worth it?",
+        "a": "Sometimes. It buys refined materials, feel, and spin, but not skill. The big quality jump is from cheap to mid-range; premium is incremental and best when you have a specific reason."
+      },
+      {
+        "q": "Will a better paddle improve my game?",
+        "a": "A little, by feeling more consistent. But consistency, patience, and shot selection — built through practice and court time — improve your level far more than any paddle."
+      },
+      {
+        "q": "When should I upgrade my paddle?",
+        "a": "When you have plateaued and know your style, want a property your paddle lacks (spin, softer feel, a certain swing weight), or your paddle is worn or causing arm pain."
+      },
+      {
+        "q": "Should a beginner buy a premium paddle?",
+        "a": "Usually not. Many premium paddles are tuned for advanced aggressive play and are less forgiving. A solid mid-range control paddle serves beginners better."
+      }
+    ],
+    "related": [
+      "how-to-choose-your-first-pickleball-paddle",
+      "control-vs-power-pickleball-paddles",
+      "paddle-face-materials-compared"
+    ],
+    "translations": {
+      "ko": {
+        "title": "비싼 피클볼 패들을 사기 전에 알아야 할 것",
+        "subtitle": "더 많은 돈이 실제로 사는 것 — 그리고 사지 못하는 것.",
+        "summary": "프리미엄 패들이 더하는 것, 수익이 줄어드는 지점, 그리고 업그레이드가 진짜 가치 있을 때와 중급 패들로 충분할 때."
       }
     }
   }

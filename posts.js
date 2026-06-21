@@ -291,30 +291,47 @@
     "featured": false,
     "status": "published",
     "date": "2026-03-24",
-    "updated": "2026-05-15",
+    "updated": "2026-06-21",
     "title": "Paddle face materials, compared: carbon fiber, fiberglass, hybrid",
     "subtitle": "What the hitting surface actually changes — power, control, and spin.",
     "summary": "A like-for-like comparison of the common paddle face materials and who each one suits.",
-    "body": "\n<p>The paddle face is the surface that meets the ball, and it has a real effect on feel. The three you will see most are fiberglass (composite), graphite, and raw carbon fiber, plus hybrids that blend ideas. Here is what each tends to do.</p>\n<h2 id=\"fiberglass\">Fiberglass / composite</h2>\n<p>Fiberglass faces are generally poppier. They flex a little more on contact and return energy quickly, which can give a powerful, lively feel — helpful if you want easy pace on drives and putaways. The trade-off is that the extra pop can make soft, controlled shots slightly harder to place, so very touch-oriented players sometimes prefer something firmer.</p>\n<h2 id=\"graphite\">Graphite</h2>\n<p>Graphite faces are thin, light, and known for a consistent, controlled response. The feedback is crisp and predictable, which many players like for dinking and resets. There is usually a little less raw power than fiberglass, but the control and quick handling are the appeal.</p>\n<h2 id=\"carbon-fiber\">Raw carbon fiber</h2>\n<p>Raw (unpainted) carbon fiber has become very popular. The gritty, textured surface grips the ball for a moment longer, which helps players add spin, while the material itself feels controlled and stable. For many improving players it is a sweet spot: enough touch for the soft game and enough texture to develop spin. Texture does wear over time, which is worth knowing.</p>\n<h2 id=\"hybrids\">Hybrids and thermoformed builds</h2>\n<p>You will also see hybrids and \"thermoformed\" paddles, where the construction (not just the face) is engineered for a firmer, more connected feel and a larger sweet spot. These blur the simple categories above, so read what a paddle is actually trying to do rather than the label alone.</p>\n<h2 id=\"which-to-pick\">Which to pick</h2>\n<p>If you want easy power, lean fiberglass. If you want crisp control, graphite is dependable. If you want a spin-friendly all-rounder, raw carbon fiber is a strong default and the reason it dominates many line-ups right now. As always, feel beats spec sheets — try before you commit when you can.</p>",
+    "body": "\n<p>When you compare pickleball paddles, the face material is one of the biggest drivers of how a paddle feels and plays. It affects power, control, spin, and the size of the sweet spot. This guide explains the common face materials, what each one does, and how to pick the surface that suits your style and level — without getting lost in marketing.</p>\n\n<h2 id=\"face-vs-core\">Face versus core</h2>\n<p>A paddle has two parts that shape its feel: the <strong>core</strong> (almost always a polymer honeycomb today, which provides cushioning and quiet, consistent response) and the <strong>face</strong>, the hitting surface laid over the core. The core thickness affects touch and forgiveness, but the face material is what your ball actually grips and rebounds off, so it has an outsized effect on spin and feel.</p>\n\n<h2 id=\"fiberglass\">Fiberglass (composite)</h2>\n<p>Fiberglass faces are flexible and tend to deliver more power and \"pop.\" Because the surface flexes on contact, it can spring the ball back with extra pace, which many beginners and bangers enjoy. The trade-off is a smaller effective sweet spot and slightly less control on touch shots. If you want easy power and you mostly drive and serve hard, a fiberglass or composite face is friendly and usually affordable.</p>\n\n<h2 id=\"graphite\">Graphite</h2>\n<p>Graphite faces are stiff and very lightweight. They give a consistent, predictable response and tend to favour control and touch over raw power. Players who live in the soft game — dinkers, droppers, and resetters — often prefer graphite for its precision and quick hands at the net. It is a long-standing, reliable choice for control-oriented players.</p>\n\n<h2 id=\"carbon\">Carbon fiber</h2>\n<p>Carbon fiber, including the popular raw or textured \"T700-style\" surfaces, has become the dominant choice in modern control paddles. A raw carbon face has a slightly gritty texture that grips the ball, which helps generate spin, and it tends to be durable and very consistent across the face. Carbon paddles usually lean toward control and spin rather than pure power, which is why so many intermediate and advanced players gravitate to them.</p>\n\n<h2 id=\"hybrid\">Hybrid and composite faces</h2>\n<p>Many paddles blend materials — for example a carbon or graphite face over a particular core, or a composite weave — to balance power and control. There is no single \"best\" material; manufacturers tune the whole package (face, core, thickness, shape, and weight) to hit a target feel. Treat the material as one ingredient, not the whole recipe.</p>\n\n<h2 id=\"spin\">Surface texture and spin</h2>\n<p>The texture of the face affects how much the surface grips the ball, and grippier surfaces generate more spin. Because spin became such an advantage, governing bodies regulate how rough a paddle surface may be, and approved paddles must stay within those limits. In practice this means a textured carbon face will help your topspin and slice, but no legal paddle gives you unlimited spin — technique still matters more than the surface.</p>\n\n<h2 id=\"construction\">A note on construction</h2>\n<p>Modern \"thermoformed\" and unibody paddles wrap the face and core together for a stiffer, more connected feel and a larger sweet spot. Construction is changing fast, so when you read a spec sheet, look past the material name to how the paddle is actually built and what feel it is aiming for.</p>\n\n<h2 id=\"choose\">How to choose by style and level</h2>\n<p>Match the face to how you play. If you want power and you are early in your journey, fiberglass or composite is forgiving and fun. If you value control, touch, and spin — and especially as you move into the soft game — a graphite or raw carbon face will reward you. New players do not need the most expensive carbon paddle; a sensible mid-range paddle in the right style matters far more. For the bigger picture on picking a paddle, see <a href=\"/en/how-to-choose-your-first-pickleball-paddle/\">how to choose your first paddle</a> and our <a href=\"/en/building-a-starter-kit-on-a-budget/\">starter-kit guide</a>.</p>",
     "keyTakeaways": [
-      "Fiberglass = more pop and power; graphite = light and controlled.",
-      "Raw carbon fiber adds spin-friendly texture with a controlled feel.",
-      "Carbon texture wears over time; hybrids/thermoformed builds blur categories."
+      "The face material strongly affects power, control, spin, and sweet-spot size.",
+      "Fiberglass/composite leans toward power and pop; graphite leans toward control and touch.",
+      "Carbon fiber (esp. raw/textured) favours control and spin and dominates modern paddles.",
+      "Surface texture aids spin, but roughness is regulated — no legal paddle gives unlimited spin.",
+      "Material is one ingredient; core, thickness, shape, and weight shape the whole feel."
     ],
     "commonMistakes": [
-      "Choosing by material name alone instead of how the paddle plays.",
-      "Expecting texture-based spin to last forever — it wears.",
-      "Assuming \"more power\" is always better; control wins most rallies."
+      "Buying purely on the material name without considering the whole paddle.",
+      "Assuming a more expensive carbon paddle automatically suits a beginner.",
+      "Expecting a textured face to create spin without proper technique.",
+      "Ignoring core thickness and weight, which also shape feel."
     ],
     "checklist": [
-      "Do you want power, control, or spin most?",
-      "Have you matched the face to that priority?",
-      "If buying carbon for spin, do you accept that texture fades?"
+      "Decide your priority: power, control, or spin",
+      "Power-first → fiberglass/composite; control/spin → graphite or raw carbon",
+      "Check core thickness and paddle weight, not just the face",
+      "Confirm the paddle is on the approved list if you will compete",
+      "Pick a sensible mid-range paddle over the most expensive one"
     ],
     "faq": [
       {
-        "q": "Does the face really affect spin?",
-        "a": "Texture helps, but technique matters more. A textured carbon face makes good spin technique a little more effective."
+        "q": "Which face material is best for beginners?",
+        "a": "There is no universal best, but fiberglass/composite gives easy power and is forgiving, while raw carbon or graphite suits players who want control and touch. Choose by your style, not price."
+      },
+      {
+        "q": "Does a carbon face really add spin?",
+        "a": "A textured carbon surface grips the ball and helps spin, but roughness is regulated and technique matters more. It assists spin; it does not manufacture it for you."
+      },
+      {
+        "q": "Is graphite or carbon fiber better?",
+        "a": "Both favour control over power. Graphite is a classic, consistent control surface; raw carbon adds grip for spin and is the modern trend. Feel preference decides it."
+      },
+      {
+        "q": "Do I need an expensive paddle to start?",
+        "a": "No. A sensible mid-range paddle in the right style will serve a new player far better than the most expensive carbon model."
       }
     ],
     "related": [
@@ -362,31 +379,48 @@
     "featured": true,
     "status": "published",
     "date": "2026-04-07",
-    "updated": "2026-06-10",
+    "updated": "2026-06-21",
     "level": "2.0–3.0",
     "title": "Your first 30 days: a practice routine for 2.0–3.0 players",
     "subtitle": "A simple, repeatable plan that builds the skills that matter early.",
     "summary": "A four-week practice framework for new players, focused on the few skills that raise your level fastest.",
-    "body": "\n<p>Early progress in pickleball is less about talent and more about practising the right few things repeatedly. This is a simple month-long framework you can adapt to whatever court time you have.</p>\n<h2 id=\"the-priorities\">The priorities</h2>\n<p>At 2.0–3.0, four skills move the needle most: a reliable serve and return, getting to the kitchen line, controlled dinks, and a soft third shot. Almost everything else can wait. Spending your time here gives the biggest return.</p>\n<h2 id=\"week-by-week\">A week-by-week shape</h2>\n<p><strong>Week 1 — serve and return.</strong> Spend most of your time landing serves deep and getting returns in play, deep and high enough to give you time to move up. Consistency beats power: aim to put nearly every serve in.</p>\n<p><strong>Week 2 — getting to the line.</strong> Practise moving forward after your return and settling at the kitchen line in a balanced, ready position. Play points where your only goal is to reach the line and stay there.</p>\n<p><strong>Week 3 — dinking.</strong> Add controlled dinks: soft shots that land in the kitchen and stay low. Rally cooperatively with a partner before trying to win points with them.</p>\n<p><strong>Week 4 — the third shot.</strong> Work on a soft third shot (a drop or a controlled drive) that lets your team move up. This is the hardest of the four and will keep improving for months.</p>\n<h2 id=\"how-to-practise\">How to practise so it sticks</h2>\n<p>Warm up with cooperative dinking before every session — it trains touch and reads. Use targets (a towel or cones in the kitchen) to make practice measurable. Keep a short note of what felt better each time. And play games, but pick one focus per game rather than trying to fix everything at once.</p>\n<h2 id=\"staying-realistic\">Staying realistic</h2>\n<p>You will have sessions that feel like steps backward; that is normal and not a sign you are doing it wrong. Improvement in pickleball is uneven. Track effort and consistency rather than wins, and the level tends to follow.</p>",
+    "body": "\n<p>The first month of pickleball decides whether you build good habits or messy ones that take years to fix. You do not need a coach or hours a day — you need a simple, repeatable plan that introduces the right skills in the right order. Here is a four-week routine for a brand-new 2.0 to 3.0 player, built around short, focused sessions you can do a few times a week.</p>\n\n<h2 id=\"warmup\">A two-minute warm-up</h2>\n<p>Start every session the same way: a light jog or some side shuffles, a few arm circles and gentle shoulder rolls, and ten easy dinks or bounces on your paddle to wake up your hands. Warming up protects your shoulder and wrist, and a consistent ritual also tells your brain it is time to focus. Wear proper court shoes from day one — running shoes do not grip for the side-to-side movement, and ankle injuries are the most common way new players lose their first month.</p>\n\n<h2 id=\"week1\">Week 1: rules, serve, return, ready position</h2>\n<p>Spend the first week getting comfortable with the basics that start every rally. Learn the rules well enough that the two-bounce rule and the kitchen are automatic. Practise a consistent serve to a deep target, and a deep return down the middle followed by moving toward the net. Drill your athletic ready position — knees bent, paddle up and out in front — until it feels natural. The goal this week is consistency and rules, not power.</p>\n\n<h2 id=\"week2\">Week 2: dinking and kitchen footwork</h2>\n<p>Now build the soft game. Spend most of your practice at the kitchen line dinking — cross-court with a partner, or against a wall on your own — focusing on a relaxed grip and a low-to-high push rather than a swing. Work on your kitchen footwork: stepping in for bounced balls, sliding sideways for wide dinks, and keeping your feet behind the line for volleys. Dinking is the skill most beginners skip and most intermediate players wish they had drilled earlier.</p>\n\n<h2 id=\"week3\">Week 3: the third-shot drop and transition</h2>\n<p>With dinking underway, add the shot that connects the baseline to the net: the third-shot drop. Practise lifting the ball softly from the baseline into the kitchen, then take a few steps in and split-step. Pair the drop with transition footwork — advancing in stages rather than sprinting — so you learn the drop and the move together, because in a real rally they are one play. Expect this to be frustrating; soft touch under pressure is the hardest part of the game, and it comes with reps.</p>\n\n<h2 id=\"week4\">Week 4: games, strategy, and positioning</h2>\n<p>In the final week, put it together in real games, but play with intent. Pick one focus per game — \"get to the kitchen every rally,\" or \"always stay even with my partner,\" or \"let everything bounce that I should.\" Apply the positioning basics: move as a pair, take the middle with communication, and race to the kitchen. Playing with a single clear goal each game turns open play into deliberate practice instead of just hitting around.</p>\n\n<h2 id=\"tracking\">Track progress and stay realistic</h2>\n<p>Keep it light but measurable: count your serves in, your dinks in a row, your drops that stay unattackable. Beating your own numbers week to week is far more motivating than worrying about your rating. And be patient — most players feel clumsy for the first few weeks and then improve in sudden jumps. The plateau before a jump is normal, not a sign you are doing it wrong.</p>\n\n<h2 id=\"schedule\">A sample week</h2>\n<p>If you can practise three times a week, a simple split works well: one session on serve and return, one on dinking and kitchen footwork, and one playing games with a single focus. Even 30 to 45 minutes each is plenty in the first month. Quality and consistency beat marathon sessions, and short regular practice is also far kinder to a body that is still adapting to a new sport.</p>\n\n<p>Follow this for a month and you will not be an expert — but you will have clean fundamentals, good habits, and a clear path forward. From here, deepen each skill: <a href=\"/en/dinking-fundamentals/\">dinking</a>, <a href=\"/en/the-third-shot-drop-explained/\">the third-shot drop</a>, and doubles positioning.</p>",
     "keyTakeaways": [
-      "Prioritise four skills: serve/return, getting to the line, dinks, third shot.",
-      "Consistency beats power at this level — put the ball in play first.",
-      "Pick one focus per practice game instead of fixing everything at once."
+      "You don’t need a coach — a simple, repeatable plan in the right order is enough.",
+      "Week 1 rules/serve/return; Week 2 dinking; Week 3 third-shot drop; Week 4 games with intent.",
+      "Wear court shoes from day one to avoid the most common beginner injuries.",
+      "Practise with one clear focus per session instead of just hitting around.",
+      "Track your own numbers and expect improvement to come in sudden jumps."
     ],
     "commonMistakes": [
-      "Practising powerful drives before a reliable serve and return.",
-      "Standing at the baseline instead of moving up to the kitchen line.",
-      "Judging progress by wins rather than consistency."
+      "Chasing power before consistency and soft hands.",
+      "Skipping dinking practice because it feels boring.",
+      "Wearing running shoes instead of court shoes.",
+      "Playing only games and never drilling specific skills."
     ],
     "checklist": [
-      "Can you land nearly every serve in?",
-      "Do you move up to the line after your return?",
-      "Can you rally 10+ cooperative dinks with a partner?"
+      "Two-minute warm-up and proper court shoes every session",
+      "Week 1: consistent serve, deep return, ready position",
+      "Week 2: dinking and kitchen footwork",
+      "Week 3: third-shot drop and transition",
+      "Week 4: games with one focus each"
     ],
     "faq": [
       {
-        "q": "How often should I practise?",
-        "a": "Even two focused sessions a week produce steady progress if you keep the same priorities. Frequency helps more than long, unfocused sessions."
+        "q": "How often should I practise in the first month?",
+        "a": "Three short sessions a week of 30–45 minutes is plenty. Consistency beats long, occasional sessions, and short practice is easier on a body adapting to a new sport."
+      },
+      {
+        "q": "Do I really need court shoes right away?",
+        "a": "Yes. Pickleball involves quick side-to-side movement that running shoes are not built for, and ankle injuries are a common way beginners lose their first month."
+      },
+      {
+        "q": "Why does everyone push dinking so early?",
+        "a": "Because the soft game is the foundation of pickleball above the beginner level, and it is the skill most players wish they had drilled from the start instead of just hitting hard."
+      },
+      {
+        "q": "I feel like I am not improving. Is that normal?",
+        "a": "Completely. Most players feel clumsy for a few weeks and then improve in sudden jumps. A plateau before a jump is normal, not a sign you are doing it wrong."
       }
     ],
     "related": [
@@ -399,30 +433,43 @@
         "title": "처음 30일 연습 루틴: 2.0~3.0 플레이어용",
         "subtitle": "한 달 동안 규칙, 랠리 안정성, 네트 앞 기본기를 단계적으로 쌓는 루틴입니다.",
         "summary": "입문자가 첫 30일 동안 무엇을 연습해야 하는지 주차별로 정리한 실전 루틴입니다.",
-        "body": "\n<p>처음 30일은 화려한 기술보다 공을 오래 살리고 기본 위치를 익히는 시간이 되어야 합니다. 이 루틴은 매주 한두 가지 목표만 잡아 부담 없이 반복할 수 있도록 구성했습니다.</p>\n<h2 id=\"week1\">1주차: 규칙과 랠리</h2>\n<p>서브 방향, 투바운스, 키친 규칙을 익히고 짧은 랠리를 안정적으로 이어가는 데 집중합니다. 강하게 치기보다 네트 위로 충분한 높이를 주고 코트 안에 넣는 감각을 우선하세요.</p>\n<h2 id=\"week2\">2주차: 서브와 리턴</h2>\n<p>서브는 깊고 안정적으로, 리턴은 높고 길게 보내는 연습을 합니다. 복식에서는 리턴 후 앞으로 이동해 키친 라인에 서는 습관을 들이는 것이 중요합니다.</p>\n<h2 id=\"week3\">3주차: 딩크와 리셋</h2>\n<p>네트 앞에서 부드럽게 공을 넘기는 딩크를 연습합니다. 상대가 강하게 친 공은 맞받아치기보다 속도를 죽여 키친에 떨어뜨리는 리셋 감각을 익히세요.</p>\n<h2 id=\"week4\">4주차: 간단한 경기 패턴</h2>\n<p>서브, 리턴, 세 번째 샷, 네트 접근이라는 흐름을 연결합니다. 경기 후에는 실점 원인을 하나만 적어 다음 연습의 주제로 삼으면 성장 속도가 빨라집니다.</p>",
+        "body": "\n<p>피클볼의 첫 한 달은 좋은 습관을 쌓을지, 아니면 고치는 데 몇 년이 걸리는 엉성한 습관을 들일지를 결정합니다. 코치나 하루 몇 시간이 필요한 게 아니라, 올바른 기술을 올바른 순서로 소개하는 단순하고 반복 가능한 계획이 필요합니다. 다음은 갓 시작한 2.0~3.0 플레이어를 위한 4주 루틴으로, 주 몇 회 할 수 있는 짧고 집중된 세션 중심입니다.</p>\n\n<h2 id=\"warmup\">2분 워밍업</h2>\n<p>모든 세션을 같은 방식으로 시작하세요 — 가벼운 조깅이나 사이드 셔플, 팔 돌리기와 부드러운 어깨 돌리기, 그리고 손을 깨우는 쉬운 딩크나 패들 위 바운드 10번. 워밍업은 어깨와 손목을 보호하고, 일관된 의식은 뇌에 집중할 시간이라고 알립니다. 첫날부터 제대로 된 코트화를 신으세요 — 러닝화는 좌우 움직임에 그립이 안 맞고, 발목 부상은 초보가 첫 달을 날리는 가장 흔한 이유입니다.</p>\n\n<h2 id=\"week1\">1주차: 규칙·서브·리턴·준비 자세</h2>\n<p>첫 주는 모든 랠리를 시작하는 기본기에 익숙해지는 데 쓰세요. 투바운스 규칙과 키친이 자동이 될 만큼 규칙을 익히세요. 깊은 목표로 일관된 서브를, 가운데로 깊은 리턴 뒤 네트로 이동하는 것을 연습하세요. 균형 잡힌 준비 자세 — 무릎 굽히고, 패들은 몸 앞 위로 — 가 자연스러워질 때까지 반복하세요. 이번 주 목표는 파워가 아니라 일관성과 규칙입니다.</p>\n\n<h2 id=\"week2\">2주차: 딩크와 키친 풋워크</h2>\n<p>이제 소프트 게임을 쌓습니다. 연습의 대부분을 키친 라인에서 딩크에 쓰세요 — 파트너와 크로스로, 혹은 혼자 벽에 — 스윙이 아니라 느슨한 그립과 로우-투-하이 푸시에 집중합니다. 키친 풋워크도 연습하세요: 바운드 공을 받으러 들어가기, 넓은 딩크에 옆으로 이동, 발리 때 발을 선 뒤에 두기. 딩크는 초보가 가장 많이 건너뛰고, 중급자가 더 일찍 연습했더라면 하고 가장 많이 아쉬워하는 기술입니다.</p>\n\n<h2 id=\"week3\">3주차: 세 번째 샷 드롭과 트랜지션</h2>\n<p>딩크가 자리 잡으면, 베이스라인과 네트를 잇는 샷을 더하세요 — 세 번째 샷 드롭. 베이스라인에서 키친으로 공을 부드럽게 들어 올린 뒤, 몇 걸음 전진하고 스플릿 스텝을 연습합니다. 드롭을 트랜지션 풋워크 — 달리지 말고 단계적으로 전진 — 와 짝지어, 드롭과 이동을 함께 익히세요. 실제 랠리에서 둘은 하나의 플레이이기 때문입니다. 답답할 겁니다 — 압박 속 부드러운 터치는 게임에서 가장 어려운 부분이고, 반복으로 옵니다.</p>\n\n<h2 id=\"week4\">4주차: 게임·전략·포지셔닝</h2>\n<p>마지막 주에는 실제 게임에서 종합하되, 의도를 갖고 치세요. 게임마다 하나의 초점을 고르세요 — \"매 랠리 키친까지 간다\", \"항상 파트너와 나란히 있는다\", \"받아야 할 건 다 바운드시킨다\". 포지셔닝 기본을 적용하세요: 한 쌍으로 움직이고, 콜로 가운데를 처리하고, 키친으로 경주하기. 게임마다 하나의 분명한 목표를 가지면, 오픈 플레이가 그냥 치는 것이 아니라 의도적 연습이 됩니다.</p>\n\n<h2 id=\"tracking\">진행을 기록하고 현실적으로</h2>\n<p>가볍지만 측정 가능하게 유지하세요 — 들어간 서브 수, 연속 딩크 수, 공격당하지 않은 드롭 수를 세보세요. 주마다 자기 기록을 깨는 것이, 레이팅을 걱정하는 것보다 훨씬 동기부여가 됩니다. 그리고 인내하세요 — 대부분은 처음 몇 주 어설프게 느끼다가 어느 순간 갑자기 도약합니다. 도약 전의 정체기는 잘못하고 있다는 신호가 아니라 정상입니다.</p>\n\n<h2 id=\"schedule\">예시 한 주</h2>\n<p>주 3회 연습할 수 있다면 간단한 분배가 좋습니다 — 한 번은 서브·리턴, 한 번은 딩크·키친 풋워크, 한 번은 하나의 초점으로 게임. 각 30~45분이면 첫 달엔 충분합니다. 품질과 일관성이 마라톤 세션을 이기고, 짧고 규칙적인 연습은 새 운동에 적응 중인 몸에도 훨씬 부드럽습니다.</p>\n\n<p>이대로 한 달을 하면 전문가가 되진 않겠지만, 깔끔한 기본기와 좋은 습관, 그리고 분명한 길이 생깁니다. 여기서부터 각 기술을 깊이 파세요: <a href=\"/ko/dinking-fundamentals/\">딩크</a>, <a href=\"/ko/the-third-shot-drop-explained/\">세 번째 샷 드롭</a>, 그리고 복식 포지셔닝.</p>",
         "keyTakeaways": [
-          "첫 달은 파워보다 랠리 안정성이 우선입니다.",
-          "리턴 후 키친 라인으로 이동하는 습관을 들이세요.",
-          "매주 하나의 실수만 줄이는 방식이 효과적입니다."
+          "코치가 필요 없습니다 — 올바른 순서의 단순하고 반복 가능한 계획이면 충분합니다.",
+          "1주 규칙/서브/리턴, 2주 딩크, 3주 세 번째 샷 드롭, 4주 의도를 가진 게임.",
+          "첫날부터 코트화를 신어 흔한 초보 부상을 피하세요.",
+          "그냥 치지 말고 세션마다 하나의 분명한 초점으로 연습하세요.",
+          "자기 기록을 추적하고, 향상은 갑작스러운 도약으로 온다고 기대하세요."
         ],
         "commonMistakes": [
-          "처음부터 강한 드라이브만 연습함.",
-          "리턴 후 베이스라인에 머무름.",
-          "경기 후 무엇을 고칠지 기록하지 않음."
+          "일관성·부드러운 손보다 파워를 먼저 좇음.",
+          "지루하다고 딩크 연습을 건너뜀.",
+          "코트화 대신 러닝화를 신음.",
+          "특정 기술 드릴 없이 게임만 함."
         ],
         "checklist": [
-          "서브 10개 중 8개 이상을 넣을 수 있나요?",
-          "리턴 후 앞으로 이동하나요?",
-          "딩크 랠리를 10번 이상 이어갈 수 있나요?"
+          "세션마다 2분 워밍업과 제대로 된 코트화",
+          "1주: 일관된 서브, 깊은 리턴, 준비 자세",
+          "2주: 딩크와 키친 풋워크",
+          "3주: 세 번째 샷 드롭과 트랜지션",
+          "4주: 각 하나의 초점으로 게임"
         ],
         "faq": [
           {
-            "q": "매일 연습해야 하나요?",
-            "a": "짧게라도 반복하면 좋지만 휴식도 중요합니다. 주 2~3회라도 목표가 분명하면 충분히 발전합니다."
+            "q": "첫 달엔 얼마나 자주 연습해야 하나요?",
+            "a": "주 3회, 30~45분 짧은 세션이면 충분합니다. 일관성이 길고 가끔 하는 세션을 이기고, 짧은 연습은 새 운동에 적응 중인 몸에도 더 좋습니다."
           },
           {
-            "q": "처음부터 DUPR를 신경 써야 하나요?",
-            "a": "아닙니다. 먼저 규칙과 랠리 안정성을 익히는 것이 우선입니다."
+            "q": "코트화가 정말 바로 필요한가요?",
+            "a": "네. 피클볼은 러닝화가 감당하지 못하는 빠른 좌우 움직임이 많고, 발목 부상은 초보가 첫 달을 날리는 흔한 원인입니다."
+          },
+          {
+            "q": "왜 다들 딩크를 그렇게 일찍 강조하나요?",
+            "a": "소프트 게임이 초보 단계 위 피클볼의 토대이고, 많은 선수가 세게만 치지 말고 처음부터 연습했더라면 하고 가장 아쉬워하는 기술이기 때문입니다."
+          },
+          {
+            "q": "안 느는 것 같아요. 정상인가요?",
+            "a": "완전히 정상입니다. 대부분 몇 주 어설프다가 어느 순간 갑자기 도약합니다. 도약 전 정체기는 잘못의 신호가 아닙니다."
           }
         ]
       }
@@ -538,34 +585,47 @@
     "featured": true,
     "status": "published",
     "date": "2026-05-11",
-    "updated": "2026-06-12",
+    "updated": "2026-06-21",
     "title": "What is DUPR? How the rating system works and how to use it",
     "subtitle": "A plain explanation of the rating you will keep hearing about.",
     "summary": "What DUPR measures, how it differs from self-rating, and how players use it to find fair matches and tournament divisions.",
-    "body": "\n<p>DUPR stands for Dynamic Universal Pickleball Rating. It is a rating system widely used to estimate playing level, and you will see it referenced for matchmaking and for tournament divisions. Here is what it actually means.</p>\n<h2 id=\"what-it-measures\">What it measures</h2>\n<p>DUPR is based on the results of real matches — who you played, whether you won, and the score — rather than a self-assessment. Because it uses match data, it updates as you play, which is why it is called \"dynamic.\" Players typically carry separate ratings for singles and doubles, since those are different games.</p>\n<h2 id=\"the-scale\">The scale</h2>\n<p>Ratings sit on a scale that runs roughly from 2.0 up to the very top of the pro game, with most recreational players somewhere in the 3.0 to 4.5 range. The exact number matters less than what it is for: giving players and organisers a common, results-based reference point.</p>\n<h2 id=\"vs-self-rating\">DUPR vs. self-rating</h2>\n<p>Many local events still use self-rating, where you enter the division you think fits (3.0, 3.5, 4.0, and so on). Self-rating is simple but inconsistent — people misjudge their level in both directions. A results-based rating like DUPR aims to be more objective, which is why more tournaments use it to set fairer brackets.</p>\n<h2 id=\"how-to-use-it\">How to use it</h2>\n<p>To get a meaningful rating you need recorded matches, so the practical step is to play in events or sessions where results are submitted. Treat your number as feedback, not identity: it will move around, especially early on with fewer matches behind it. Use it to find competitive matches and to choose tournament divisions where you will get good games.</p>\n<h2 id=\"check-the-source\">Check the current details</h2>\n<p>Specifics of how the algorithm weights matches, and exactly which events feed it, can change over time. For current rules, supported events, and how to create or claim a rating, check the official DUPR website rather than relying on second-hand summaries.</p>",
+    "body": "\n<p>DUPR — the Dynamic Universal Pickleball Rating — is the rating system you will hear about constantly once you start playing competitively. It is a single number that estimates your playing strength from the actual results of your matches. This guide explains what DUPR is, how the number moves, how to get one, and what it can and cannot tell you.</p>\n\n<h2 id=\"what\">What DUPR actually is</h2>\n<p>DUPR is an algorithmic rating calculated from the scores of matches you play and log. Instead of asking you to self-assess as a \"3.5 player,\" it looks at who you played, whether you won or lost, and the actual score, and updates a number that reflects how you are really performing. It is widely used to seed tournaments, build balanced leagues, and match players of similar levels for competitive games.</p>\n\n<h2 id=\"scale\">The scale</h2>\n<p>DUPR is commonly expressed on a scale that runs from roughly 2.0 up to around 8.0. Most recreational players live in the 2.5 to 4.5 range; strong amateurs sit higher, and touring professionals occupy the top of the scale. The important thing is not memorising bands but understanding that the scale is continuous — your rating is a precise decimal, not a wide bracket, so small improvements show up as small movements.</p>\n\n<h2 id=\"universal\">Why \"universal\" matters</h2>\n<p>The \"universal\" in DUPR is the point of the whole system: it puts everyone on one scale regardless of age or gender, and it can rate both singles and doubles. That means a rating earned by an older player in mixed doubles is comparable to one earned by a younger player in men's singles. Because it is built from results across the whole playing population, it travels with you between clubs, cities, and tournaments rather than being a local label.</p>\n\n<h2 id=\"how-it-moves\">How your number changes</h2>\n<p>Every match you log updates your rating. Beating players rated above you pushes your number up; losing to players below you pulls it down; close scores against strong opponents can move you even in a loss. Early on, your rating swings more because the system has little information about you; as you log more matches, the rating becomes more \"reliable\" and changes more gradually. This is why one bad night does not wreck a well-established rating — the system weighs your whole recent body of results.</p>\n\n<h2 id=\"singles-doubles\">Singles and doubles are separate</h2>\n<p>You carry separate DUPR ratings for singles and doubles, because they are genuinely different games. A player with excellent soft hands and positioning may rate higher in doubles than in singles, where court coverage and power matter more. Do not be surprised if your two numbers differ; that gap is information about your game, not an error.</p>\n\n<h2 id=\"get-one\">How to get a DUPR rating</h2>\n<p>Create a free account, then start getting matches logged. Many clubs, leagues, and tournaments report results to DUPR automatically, and you can also record recreational matches yourself with verification from the other players. The more real, competitive matches you log against a variety of opponents, the more accurate and stable your rating becomes. You can always check the official system and your own rating at <a href=\"https://www.dupr.com\" rel=\"nofollow noopener\" target=\"_blank\">dupr.com</a>.</p>\n\n<h2 id=\"self-check\">DUPR vs a quick self-check</h2>\n<p>A real DUPR rating only comes from logged match results — there is no shortcut. If you just want a rough idea of where you might sit while you learn the system, our <a href=\"/en/dupr-self-check/\">DUPR self-check</a> gives a decision-making estimate from on-court scenarios. Treat that as a friendly starting guess, not an official rating; the only thing that produces a true DUPR number is playing and logging matches.</p>\n\n<h2 id=\"not\">What DUPR is not</h2>\n<p>DUPR is a useful tool, not a verdict on you as a player. It cannot capture why you lost, whether you were experimenting with a new shot, or how much you have improved this week before the results catch up. Use it to find fair games and track long-term progress, and avoid obsessing over small day-to-day movements. The number serves your pickleball; your pickleball does not serve the number.</p>",
     "keyTakeaways": [
-      "DUPR is results-based and updates as you play (it is \"dynamic\").",
-      "Singles and doubles usually carry separate ratings.",
-      "Treat your rating as feedback, not identity — it moves, especially early."
+      "DUPR (Dynamic Universal Pickleball Rating) is an algorithmic rating built from your real match scores.",
+      "It runs on one continuous scale (roughly 2.0–8.0) for all ages, genders, singles and doubles.",
+      "Your rating moves with every logged match and becomes more reliable as you log more.",
+      "Singles and doubles ratings are separate because they are different games.",
+      "A true DUPR only comes from logged matches; a self-check is just a rough estimate."
     ],
     "commonMistakes": [
-      "Expecting a stable rating before you have many recorded matches.",
-      "Treating the number as a fixed label rather than a moving estimate.",
-      "Relying on second-hand summaries instead of the official source for current rules."
+      "Treating a quick self-rating as if it were an official DUPR number.",
+      "Obsessing over tiny day-to-day movements instead of long-term trend.",
+      "Expecting your singles and doubles ratings to be identical.",
+      "Logging only easy wins, which gives the system a skewed picture."
     ],
     "checklist": [
-      "Do you have recorded matches feeding your rating?",
-      "Do you know your separate singles and doubles ratings?",
-      "Are you using it to pick fair divisions and matches?"
+      "Create a free DUPR account",
+      "Get matches logged through a club, league, tournament, or verified rec play",
+      "Play a variety of opponents to stabilise your rating",
+      "Check singles and doubles separately",
+      "Watch the long-term trend, not single results"
     ],
     "faq": [
       {
-        "q": "Is DUPR the same as a 3.5 self-rating?",
-        "a": "They roughly overlap in range, but DUPR is computed from results while self-rating is your own estimate. They will not always match."
+        "q": "Is DUPR free?",
+        "a": "Yes, creating an account and getting a rating is free. You build your rating by logging match results."
       },
       {
-        "q": "Where do I check official details?",
-        "a": "Use the official DUPR website for the current algorithm rules, supported events, and how to claim a rating."
+        "q": "How many matches do I need before my rating is meaningful?",
+        "a": "There is no fixed number, but the more matches you log against varied opponents, the more reliable and stable your rating becomes. Early ratings swing more."
+      },
+      {
+        "q": "Why is my doubles rating different from my singles rating?",
+        "a": "They are separate because the games reward different skills. Soft hands and positioning matter more in doubles; court coverage and power matter more in singles."
+      },
+      {
+        "q": "Can I raise my DUPR by only playing weaker opponents?",
+        "a": "Not really. Beating much lower-rated players does little for your number, and the system weighs the strength of your opponents and the closeness of scores."
       }
     ],
     "related": [
@@ -613,34 +673,47 @@
     "featured": false,
     "status": "published",
     "date": "2026-05-27",
-    "updated": "2026-06-09",
+    "updated": "2026-06-21",
     "title": "How a pickleball tournament works: formats and brackets",
     "subtitle": "What to expect at your first event, from divisions to medal matches.",
     "summary": "A newcomer-friendly explainer of tournament divisions, common formats, and how brackets decide medals.",
-    "body": "\n<p>Your first tournament is far less intimidating once you know how events are organised. Most of it comes down to divisions and a format.</p>\n<h2 id=\"divisions\">Divisions</h2>\n<p>Players are grouped into divisions so you compete against a similar level and, often, a similar age group. Skill divisions are set either by self-rating (3.0, 3.5, 4.0, and so on) or by a results-based rating like DUPR. You usually enter the division that matches your level; entering too high or too low makes for lopsided games.</p>\n<h2 id=\"formats\">Common formats</h2>\n<p><strong>Round robin:</strong> everyone in a group plays everyone else, and standings decide placement. It guarantees several matches, which is great value for a first event.</p>\n<p><strong>Single elimination:</strong> lose once and you are out. It is fast but can mean a short day.</p>\n<p><strong>Double elimination:</strong> you drop to a losers' (or \"consolation\") bracket after one loss and are only out after a second. This is common because it guarantees at least two matches and rewards consistency.</p>\n<p><strong>Pool play into a bracket:</strong> a round robin to seed players, followed by an elimination bracket for the medals — a frequent hybrid at larger events.</p>\n<h2 id=\"medals\">How medals are decided</h2>\n<p>In bracket formats, the winners advance until a final decides gold and silver, with a separate match often deciding bronze. In round robins, final standings decide the placements. The tournament software handles the brackets; your job is just to know when and where your next match is.</p>\n<h2 id=\"how-to-prepare\">How to prepare</h2>\n<p>Arrive early, bring more water and food than you think you need, and expect downtime between matches. Warm up properly, since first matches often start cold. Most importantly, pick a realistic division — a good day of competitive games at your level beats being overmatched in a higher one.</p>",
+    "body": "\n<p>Your first pickleball tournament feels confusing from the outside: brackets, divisions, pool play, medal matches, and a schedule that seems to assume you already know how it all fits together. It is simpler than it looks. Here is how a typical tournament is organised, how the formats work, and how to choose the right division so your first event is fun instead of overwhelming.</p>\n\n<h2 id=\"divisions\">Divisions: how players are grouped</h2>\n<p>Tournaments split players into divisions so you compete against people at a similar level and stage of life. Divisions are usually defined two ways: by <strong>age bracket</strong> (for example 19+, 35+, 50+, 65+) and by <strong>skill level</strong> (often 3.0, 3.5, 4.0, and so on, or by DUPR rating). You also choose an <strong>event type</strong> — men's or women's singles, men's or women's doubles, and mixed doubles. You can often enter more than one event, such as a doubles division and a mixed division, on different days.</p>\n\n<h2 id=\"formats\">The two main formats</h2>\n<p>Most divisions run in one of two formats. In <strong>round robin</strong>, everyone in a small group plays everyone else, and final standings come from win-loss records; this guarantees you several matches even if you lose early. In <strong>single or double elimination</strong>, you advance through a bracket — single elimination sends you home after one loss, while double elimination gives you a second life in a \"back draw\" (the consolation bracket) so one bad match does not end your day. Larger events often combine them: a round-robin <strong>pool play</strong> stage seeds players into an elimination bracket.</p>\n\n<h2 id=\"medals\">Medal matches</h2>\n<p>In elimination formats, the bracket narrows to a gold-medal match between the two finalists, and usually a bronze-medal match for third place. In double elimination, the team coming up through the back draw may have to beat the unbeaten team twice to win gold, since that team has not lost yet — a quirk worth knowing before you are surprised by it on the day.</p>\n\n<h2 id=\"scoring\">Scoring in tournaments</h2>\n<p>Most tournament matches are played to 11 points, win by 2, exactly like recreational games. Important matches — medal rounds especially — are often best-of-three games, and some events use games to 15. The format for your division is published in advance, so check it so you can pace yourself; a best-of-three medal match is a very different physical test from a single game to 11.</p>\n\n<h2 id=\"sanctioned\">Sanctioned vs unsanctioned events</h2>\n<p>Events are either sanctioned by a governing body or run independently. Sanctioned tournaments follow standardised rules and equipment requirements and often feed results into rating systems, which matters if you care about an official record. Unsanctioned and club events are usually more relaxed and a great place to start. Either way, read the event's rules page so you know the ball being used, the format, and any equipment requirements before you arrive.</p>\n\n<h2 id=\"choose\">Choosing the right division</h2>\n<p>Pick the division that matches your honest level. It is tempting to enter low to win medals, but \"sandbagging\" — playing well below your real ability — makes for lopsided, unfun matches and is discouraged everywhere. If you are unsure, enter at your <a href=\"/en/what-is-dupr/\">DUPR</a> or self-rated level and treat your first event as a benchmark. You will learn more from competitive losses than from easy wins.</p>\n\n<h2 id=\"day-of\">What to expect on the day</h2>\n<p>Arrive early, check in at the registration desk, and find the schedule board or app that lists your court assignments and times. Warm up before your first match, bring more water and food than you think you need, and expect downtime between rounds. Matches are usually self-officiated until the later rounds, so brush up on the basics in our <a href=\"/en/pickleball-rules-at-a-glance/\">rules guide</a>, especially line calls and the score-calling sequence. Above all, treat your first tournament as a learning experience — the nerves fade fast once the first serve goes in.</p>",
     "keyTakeaways": [
-      "Divisions group you by skill (self-rating or DUPR) and often age.",
-      "Double elimination is common because it guarantees at least two matches.",
-      "Pick a realistic division for better games and a better day."
+      "Divisions group players by age bracket and skill level (or DUPR), plus event type (singles, doubles, mixed).",
+      "Round robin guarantees several matches; elimination brackets can be single or double (with a back draw).",
+      "Brackets end in a gold-medal match and usually a bronze-medal match.",
+      "Most matches are to 11 win by 2; medal rounds are often best-of-three.",
+      "Enter your honest level — sandbagging makes for lopsided, unfun matches."
     ],
     "commonMistakes": [
-      "Entering a division above your level and getting overmatched.",
-      "Underestimating downtime, water, and food needs.",
-      "Starting your first match without a proper warm-up."
+      "Entering a division well below your real level to chase medals.",
+      "Not checking the format, so a best-of-three medal match catches you unprepared.",
+      "Under-packing on water, food, and rest between rounds.",
+      "Forgetting that early-round matches are usually self-officiated."
     ],
     "checklist": [
-      "Have you chosen a division that matches your level?",
-      "Do you know your format (round robin, single/double elimination)?",
-      "Are you packed for a long day with downtime?"
+      "Choose age/skill division and event type honestly",
+      "Read the event rules page (ball, format, equipment)",
+      "Arrive early and check in; find your court schedule",
+      "Warm up; bring extra water and snacks",
+      "Review line calls and the score-calling sequence"
     ],
     "faq": [
       {
-        "q": "What is a consolation bracket?",
-        "a": "In double elimination, it is the second bracket you drop into after one loss. You can still medal from it in many formats."
+        "q": "What is the difference between single and double elimination?",
+        "a": "In single elimination one loss ends your event. In double elimination you drop into a back (consolation) draw after a loss and can keep playing, so it takes two losses to be out."
       },
       {
-        "q": "Self-rating or DUPR divisions — which will I face?",
-        "a": "It depends on the event. Larger and sanctioned events increasingly use DUPR; many local events still use self-rating."
+        "q": "Why might the finalist have to win twice?",
+        "a": "In double elimination, if the team coming through the back draw has one loss and the other team has none, the back-draw team must beat them twice to level the losses and win gold."
+      },
+      {
+        "q": "Can I play more than one event?",
+        "a": "Usually yes — many players enter both a gender doubles division and a mixed doubles division, often scheduled on different days."
+      },
+      {
+        "q": "Do I need a rating to enter?",
+        "a": "Not always, but skill divisions are defined by level or DUPR, so you choose the division that matches your honest ability."
       }
     ],
     "related": [
@@ -856,43 +929,48 @@
     "featured": false,
     "status": "published",
     "date": "2026-06-07",
-    "updated": "2026-06-07",
+    "updated": "2026-06-21",
     "level": "3.0–3.5",
     "title": "The third-shot drop, explained: why it matters and how to drill it",
     "subtitle": "The shot that lets your team get to the net.",
     "summary": "What the third-shot drop is, when to use it versus a drive, and how to practise it.",
-    "body": "\n<p>The third-shot drop is the shot that separates players who stay stuck at the baseline from players who get to control the net. It is not flashy, it takes patience to learn, and it is one of the highest-value skills in doubles. Here is what it is, why it matters, and how to practise it without getting discouraged.</p>\n\n<h2 id=\"what-it-is\">What the third-shot drop is</h2>\n<p>It is the third shot of the rally — hit by the serving team — played softly so the ball arcs up and lands gently in the opponents' non-volley zone (the kitchen). Done well, it drops over the net with little pace, so the opponents at the net cannot attack it. The point of the shot is not to win the rally outright; it is to buy your team time to move forward and join your opponents at the kitchen line.</p>\n\n<h2 id=\"why-it-matters\">Why it matters: the two-bounce disadvantage</h2>\n<p>Because of the two-bounce rule, the serving team has to let the return bounce before hitting their third shot, which means they are usually stuck back near the baseline while the returning team has already moved up to the net. The team at the net has the advantage. A good third-shot drop neutralizes that: it gives you a safe ball that cannot be smashed back, and the seconds it takes to float over the net are the seconds you use to advance. Get to the kitchen line and the playing field is even.</p>\n\n<h2 id=\"drop-vs-drive\">Drop vs drive: when to use each</h2>\n<p>The drop is not your only option on the third shot. The drive — a faster, lower shot hit with pace — is the alternative, and good players choose between them based on the ball they get:</p>\n<ul>\n<li><strong>Use a drop</strong> when the return lands deep and pushes you back, or comes in low, so you cannot comfortably attack. This is the most common situation.</li>\n<li><strong>Use a drive</strong> when the return sits up high or short and you can step in and hit it cleanly, or to pressure opponents and set up an easier fourth-shot drop.</li>\n</ul>\n<p>Beginners often default to driving everything because it feels powerful. Learning to drop when the situation calls for it is what unlocks the net.</p>\n\n<h2 id=\"mechanics\">The mechanics</h2>\n<p>The drop is a low-to-high, soft-hands shot, powered more by your legs than your arm:</p>\n<ul>\n<li>Get low with your knees and contact the ball out in front of you.</li>\n<li>Swing from low to high in a gentle lifting motion — you are lifting the ball, not hitting it.</li>\n<li>Keep a relaxed grip and soft wrist; tension sends the ball long.</li>\n<li>Aim for the apex of the arc to be on your side of the net, so the ball is descending as it crosses and lands soft in the kitchen.</li>\n</ul>\n\n<h2 id=\"how-to-drill\">How to drill it</h2>\n<p>The drop rewards repetition. A simple progression:</p>\n<ul>\n<li><strong>Close range first:</strong> start at the kitchen line and drop balls into the opposite kitchen until the soft, lifting feel is natural.</li>\n<li><strong>Step back gradually:</strong> move to mid-court, then toward the baseline, keeping the same soft motion. Distance is just more lift, not more swing.</li>\n<li><strong>With a partner:</strong> have them feed you returns from the net while you drop from the baseline; then add \"drop and follow,\" where you move forward after a good drop.</li>\n<li><strong>Track makes, not perfection:</strong> count how many of ten land in the kitchen. Improvement is the goal, not a flawless shot.</li>\n</ul>\n\n<h2 id=\"progression\">A realistic timeline</h2>\n<p>The third-shot drop feels awkward at first and misses often land in the net or sit up to be attacked. That is normal — it is a touch shot, and touch takes time. Expect weeks of drilling before it holds up in games. Stick with it: few skills do more to move you from chasing rallies to controlling them.</p>\n",
+    "body": "\n<p>The third-shot drop is the shot that separates players who stay stuck at the baseline from players who get to control the net. It is not flashy, it takes patience to learn, and it is one of the highest-value skills in doubles. Here is what it is, why it matters, how to hit it, and how to practise it without getting discouraged.</p>\n\n<h2 id=\"what-it-is\">What the third-shot drop is</h2>\n<p>It is the third shot of the rally — the serving team's first shot after the serve and the return — played softly so the ball arcs up and lands gently in the opponents' non-volley zone. Done well it drops over the net with almost no pace, so the opponents standing at the kitchen cannot attack it. The job of the shot is not to win the rally outright; it is to buy your team time to move forward from the baseline to the kitchen line, where points are actually decided.</p>\n\n<h2 id=\"why\">Why it matters so much</h2>\n<p>Because of the two-bounce rule, the serving team must let the return bounce before hitting the third shot, which means they start the rally pinned at the baseline while the receiving team is already at the net. If you drive that third shot, a good net team simply blocks it back at your feet and you stay stuck. A soft drop, by contrast, lands unattackable in the kitchen and gives you the two or three seconds you need to walk forward. Once both teams are at the kitchen, the rally resets to even — and that is the whole point of the shot.</p>\n\n<h2 id=\"shape\">The shape of a good drop</h2>\n<p>A good drop has a high, soft arc. The peak of the arc should be on your side of the net, so the ball is already falling as it crosses — that downward flight is what makes it land short and unattackable. A common mental cue is to picture the ball clearing the net by a foot or two and dying in the kitchen, not skimming the tape on a flat line. Height with softness beats a low, fast drop that the opponents can pick out of the air.</p>\n\n<h2 id=\"technique\">How to hit it</h2>\n<p>Get low by bending your knees, and contact the ball out in front of your body with a gentle low-to-high lift. The power comes from your legs and a small shoulder push, not from a big arm swing or a flick of the wrist — soft hands are everything. Keep the paddle face slightly open and let the ball sit on the face for a fraction longer than feels natural. Think \"lift and follow through toward the target,\" not \"hit.\" If you are swinging hard, you are doing it wrong.</p>\n\n<h2 id=\"decision\">Drop or drive?</h2>\n<p>You do not have to drop every third shot. The simple rule: drop when you are pushed deep or the ball is low, and drive when the return sits up high enough to attack. A drive can be a good change-up — especially if the opponents are weak at handling pace or are crowding the line — but the drop is the reliable default that lets you advance. Many intermediate players improve fastest by committing to the drop for a few weeks until it is dependable, then adding the drive as a weapon.</p>\n\n<h2 id=\"footwork\">Footwork after the drop</h2>\n<p>The drop is only half the play; moving in is the other half. After you hit it, take a few controlled steps forward and split-step (a small balanced hop) as the opponents make contact, so you are stable and ready to react. Do not sprint blindly to the kitchen — if your drop is a little high and they attack, you want to be balanced enough to reset the next ball. Advance in stages: drop, move, split, read, move again, until you reach the line.</p>\n\n<h2 id=\"drills\">How to practise it</h2>\n<p>Drop practice rewards repetition. With a partner, stand at the baseline while they feed from the kitchen, and hit ten drops in a row aiming to land them soft in the kitchen; count how many stay unattackable and try to beat your number. Then add movement: drop, take two steps in, and reset the feed. Solo, you can drop against a wall or into a target (a towel or hoop laid in the kitchen). Fifteen focused minutes a few times a week will do more than hours of game play, because games give you only a handful of third shots each.</p>\n\n<p>The drop feels frustrating at first because soft touch under pressure is genuinely hard. Stick with it. It is the single skill that most reliably moves players from the 3.0 plateau into confident, net-controlling pickleball. Pair it with steady <a href=\"/en/dinking-fundamentals/\">dinking</a> and you have the core of the soft game.</p>",
     "keyTakeaways": [
-      "The third-shot drop is a soft arc into the opponents' kitchen that cannot be attacked.",
-      "Its job is to buy time so your team can advance to the net.",
-      "Drop when pushed deep or low; drive when the ball sits up for you.",
-      "It is a low-to-high, soft-hands shot powered by your legs."
+      "The third-shot drop is a soft arc into the opponents’ kitchen that cannot be attacked.",
+      "Its job is to buy time so your team can advance from the baseline to the net.",
+      "Power comes from the legs and soft hands, not a big arm swing or wrist flick.",
+      "Drop when pushed deep or low; drive only when the ball sits up high.",
+      "Move in after the drop and split-step as the opponents contact the ball."
     ],
     "commonMistakes": [
       "Driving every third shot because power feels safer.",
-      "Swinging harder from the baseline instead of adding lift.",
-      "Gripping tightly, which sends the drop long.",
-      "Standing still after a good drop instead of moving up."
+      "Swinging hard from the baseline instead of lifting low-to-high.",
+      "Gripping tightly, which kills the soft touch.",
+      "Sprinting to the kitchen off-balance instead of advancing in stages."
     ],
     "checklist": [
-      "Get low and contact the ball out front",
+      "Bend your knees and contact the ball out front",
       "Lift low-to-high with soft hands",
-      "Aim the arc's peak on your side of the net",
-      "Land the ball in the kitchen, then move forward",
-      "Drill from close range before stepping back"
+      "Arc the peak on your side so the ball falls into the kitchen",
+      "Take controlled steps in and split-step on their contact",
+      "Reset, don’t panic, if a drop pops up"
     ],
     "faq": [
       {
         "q": "Is the third-shot drop only for advanced players?",
-        "a": "It is most reliable for intermediate and up, but everyone benefits from practising it early. Even an imperfect drop teaches the soft-hands feel that the rest of the net game depends on."
+        "a": "It is most reliable for intermediate and up, but everyone benefits from practising it early. Even an imperfect drop teaches the soft-hands feel the rest of the net game depends on."
       },
       {
-        "q": "Should I always drop and never drive?",
-        "a": "No. Choose based on the ball you get. Drop when you are pushed back or the ball is low; drive when it sits up and you can attack cleanly."
+        "q": "My drops keep getting attacked. What is wrong?",
+        "a": "They are probably landing too high or too deep. Aim for a higher arc that peaks on your side and dies just over the net inside the kitchen, and relax your grip so the ball does not fly."
       },
       {
-        "q": "Why do my drops keep landing in the net?",
-        "a": "Usually too little lift or too much arm. Get lower, swing from low to high, and think about lifting the ball rather than hitting it."
+        "q": "Should I ever drive the third shot instead?",
+        "a": "Yes, when the return sits up high enough to attack or the opponents struggle with pace. Use the drive as a change-up, but keep the drop as your dependable default."
+      },
+      {
+        "q": "How far should I move in after dropping?",
+        "a": "Advance in stages rather than all at once. Take a few steps, split-step as they hit, read the ball, and keep moving until you reach the kitchen line balanced."
       }
     ],
     "related": [
@@ -905,30 +983,43 @@
         "title": "3구 드롭 설명: 왜 중요하고 어떻게 연습할까",
         "subtitle": "서브 팀이 네트로 올라가기 위해 꼭 익혀야 할 전환 샷입니다.",
         "summary": "3구 드롭의 목적, 궤적, 실수 원인, 단계별 드릴을 3.0~3.5 레벨에 맞춰 설명합니다.",
-        "body": "\n<p>3구 드롭은 서브, 리턴 다음에 서브 팀이 치는 세 번째 샷을 부드럽게 키친 안으로 떨어뜨리는 기술입니다. 목표는 바로 득점이 아니라 네트 앞으로 안전하게 이동할 시간을 만드는 것입니다.</p>\n<h2 id=\"why\">왜 필요한가</h2>\n<p>서브 팀은 투바운스 규칙 때문에 리턴을 한 번 바운드시킨 뒤 쳐야 합니다. 이때 강하게만 치면 상대가 네트 앞에서 쉽게 공격할 수 있습니다. 드롭은 상대의 공격을 줄이고 우리 팀이 키친 라인으로 전진할 시간을 줍니다.</p>\n<h2 id=\"shape\">좋은 궤적</h2>\n<p>좋은 드롭은 네트를 충분히 넘되 높게 뜨지 않고 상대 키친 안에 부드럽게 떨어집니다. 공을 밀어 올리는 느낌으로 치고, 손목을 과하게 쓰지 않는 것이 안정적입니다.</p>\n<h2 id=\"mistake\">흔한 실수</h2>\n<p>너무 낮게 쳐서 네트에 걸리거나, 너무 높게 띄워 상대에게 공격 기회를 줍니다. 또 한 번에 완벽한 드롭을 넣으려다 몸이 멈추는 경우가 많습니다. 드롭 후에는 다음 공을 준비하며 앞으로 이동해야 합니다.</p>\n<h2 id=\"drill\">연습법</h2>\n<p>베이스라인에서 시작해 키친 안 목표 지점을 정하고 10개 중 몇 개가 들어가는지 기록하세요. 익숙해지면 중간 지점에서 리셋, 베이스라인에서 드롭, 실제 랠리 연결 순서로 난도를 올립니다.</p>",
+        "body": "\n<p>세 번째 샷 드롭은 베이스라인에 묶여 있는 선수와 네트를 장악하는 선수를 가르는 샷입니다. 화려하지 않고 익히는 데 인내가 필요하지만, 복식에서 가치가 가장 높은 기술 중 하나입니다. 무엇인지, 왜 중요한지, 어떻게 치는지, 그리고 좌절하지 않고 연습하는 법을 정리합니다.</p>\n\n<h2 id=\"what-it-is\">세 번째 샷 드롭이란</h2>\n<p>랠리의 세 번째 샷 — 서브와 리턴 다음, 서브 팀이 치는 첫 샷 — 을 부드럽게 쳐서 공이 포물선을 그리며 상대 비발리 구역에 살짝 떨어지게 하는 기술입니다. 잘 치면 거의 속도 없이 네트를 넘어 떨어져, 키친에 서 있는 상대가 공격할 수 없습니다. 이 샷의 목적은 곧바로 득점하는 것이 아니라, 우리 팀이 베이스라인에서 키친 라인 — 실제로 포인트가 결정되는 곳 — 으로 전진할 시간을 버는 것입니다.</p>\n\n<h2 id=\"why\">왜 그토록 중요한가</h2>\n<p>투바운스 규칙 때문에 서브 팀은 리턴을 바운드시킨 뒤 세 번째 샷을 쳐야 하고, 그래서 리시브 팀이 이미 네트에 있는 동안 베이스라인에 묶인 채 랠리를 시작합니다. 이때 강하게 드라이브하면 좋은 네트 팀은 그대로 발 앞으로 블록해 돌려보내고, 우리는 계속 묶입니다. 반대로 부드러운 드롭은 키친에 공격 불가능하게 떨어져, 앞으로 걸어 나갈 2~3초를 줍니다. 양 팀이 모두 키친에 서면 랠리는 동등하게 리셋됩니다 — 이것이 이 샷의 전부입니다.</p>\n\n<h2 id=\"shape\">좋은 드롭의 궤적</h2>\n<p>좋은 드롭은 높고 부드러운 포물선을 그립니다. 포물선의 정점이 네트 너머가 아니라 우리 쪽에 와야 하며, 그래야 공이 네트를 넘을 때 이미 떨어지는 중입니다 — 이 하강 궤도가 공을 짧고 공격 불가능하게 만듭니다. 흔한 이미지 단서는 \"네트를 30~60cm 정도 넘겨 키친 안에서 죽게 한다\"는 것입니다. 네트를 빠르게 스치는 낮은 드롭보다, 부드러운 높이가 낫습니다.</p>\n\n<h2 id=\"technique\">치는 법</h2>\n<p>무릎을 굽혀 낮은 자세를 만들고, 공을 몸 앞에서 부드러운 로우-투-하이로 들어 올리며 맞힙니다. 힘은 큰 팔 스윙이나 손목 튕김이 아니라 다리와 어깨의 작은 밀기에서 나옵니다 — 부드러운 손이 전부입니다. 라켓면을 살짝 열고, 공을 평소보다 아주 살짝 더 면 위에 얹는 느낌으로 치세요. \"친다\"가 아니라 \"들어 올려 목표 방향으로 따라간다\"고 생각하세요. 세게 휘두르고 있다면 잘못된 것입니다.</p>\n\n<h2 id=\"decision\">드롭이냐 드라이브냐</h2>\n<p>모든 세 번째 샷을 드롭할 필요는 없습니다. 간단한 원칙 — 깊게 밀렸거나 공이 낮으면 드롭, 리턴이 공격할 만큼 높게 뜨면 드라이브. 드라이브는 좋은 변화구입니다(특히 상대가 빠른 공 처리에 약하거나 라인에 너무 붙어 있을 때). 하지만 전진을 가능하게 하는 믿을 만한 기본값은 드롭입니다. 많은 중급자는 몇 주간 드롭에 집중해 안정시킨 뒤 드라이브를 무기로 추가할 때 가장 빨리 늘었습니다.</p>\n\n<h2 id=\"footwork\">드롭 후의 풋워크</h2>\n<p>드롭은 절반일 뿐, 전진이 나머지 절반입니다. 친 뒤에는 통제된 몇 걸음을 앞으로 옮기고, 상대가 임팩트하는 순간 스플릿 스텝(작고 균형 잡힌 점프)을 해서 안정된 상태로 반응할 준비를 합니다. 무작정 키친으로 달려가지 마세요 — 드롭이 약간 높아 상대가 공격하면, 다음 공을 리셋할 만큼 균형이 잡혀 있어야 합니다. 단계적으로 전진하세요: 드롭 → 이동 → 스플릿 → 읽기 → 다시 이동, 라인에 닿을 때까지.</p>\n\n<h2 id=\"drills\">연습법</h2>\n<p>드롭은 반복에 보답합니다. 파트너와 함께, 나는 베이스라인에 서고 상대가 키친에서 공을 피드해 주면, 키친에 부드럽게 떨어지도록 드롭 10개를 연속으로 치세요 — 공격 불가능하게 들어간 개수를 세고 기록 갱신을 노립니다. 그다음 이동을 더합니다: 드롭 → 두 걸음 전진 → 피드 리셋. 혼자라면 벽에 드롭하거나 키친에 둔 목표물(수건이나 훌라후프)을 노립니다. 게임은 세 번째 샷을 몇 번밖에 안 주니, 주 몇 회 집중 15분이 게임 몇 시간보다 낫습니다.</p>\n\n<p>처음엔 드롭이 답답합니다 — 압박 속 부드러운 터치는 정말 어렵기 때문입니다. 그래도 붙잡고 가세요. 3.0 정체기에서 네트를 장악하는 자신감 있는 피클볼로 가장 확실하게 끌어올리는 단 하나의 기술입니다. 안정적인 <a href=\"/ko/dinking-fundamentals/\">딩크</a>와 짝지으면 소프트 게임의 핵심이 완성됩니다.</p>",
         "keyTakeaways": [
-          "3구 드롭은 득점 샷보다 전진을 돕는 전환 샷입니다.",
-          "공을 낮고 부드럽게 키친 안에 떨어뜨리는 것이 목표입니다.",
-          "드롭 후 바로 다음 위치로 이동해야 효과가 있습니다."
+          "세 번째 샷 드롭은 상대 키친에 공격 불가능하게 떨어지는 부드러운 포물선 샷입니다.",
+          "목적은 베이스라인에서 네트로 전진할 시간을 버는 것입니다.",
+          "힘은 큰 팔 스윙·손목이 아니라 다리와 부드러운 손에서 나옵니다.",
+          "깊게 밀리거나 낮으면 드롭, 공이 높이 뜰 때만 드라이브.",
+          "드롭 후 전진하고, 상대 임팩트 순간 스플릿 스텝을 하세요."
         ],
         "commonMistakes": [
-          "너무 높게 띄워 공격당함.",
-          "네트에 걸릴까 봐 팔을 멈춤.",
-          "샷을 친 뒤 앞으로 움직이지 않음."
+          "힘이 안전해 보여서 모든 세 번째 샷을 드라이브함.",
+          "로우-투-하이로 들지 않고 베이스라인에서 세게 휘두름.",
+          "꽉 쥐어 부드러운 터치를 죽임.",
+          "단계적으로 전진하지 않고 균형 잃은 채 키친으로 달림."
         ],
         "checklist": [
-          "목표 지점을 정하고 연습하나요?",
-          "드롭 후 한두 걸음 전진하나요?",
-          "높게 뜬 공을 바로 알아차리나요?"
+          "무릎을 굽히고 공을 몸 앞에서 임팩트",
+          "부드러운 손으로 로우-투-하이로 들어 올리기",
+          "정점을 우리 쪽에 두어 공이 키친으로 떨어지게",
+          "통제된 걸음으로 전진, 상대 임팩트에 스플릿 스텝",
+          "드롭이 떠도 당황 말고 리셋"
         ],
         "faq": [
           {
-            "q": "3구는 항상 드롭해야 하나요?",
-            "a": "아닙니다. 상대 위치와 리턴 높이에 따라 드라이브도 선택할 수 있습니다."
+            "q": "세 번째 샷 드롭은 상급자만의 기술인가요?",
+            "a": "중급 이상에서 가장 안정적이지만, 일찍 연습하면 누구에게나 도움이 됩니다. 불완전한 드롭도 네트 게임 전체가 의존하는 부드러운 손의 감각을 길러 줍니다."
           },
           {
-            "q": "초보자는 언제부터 연습하나요?",
-            "a": "서브와 리턴이 안정된 뒤 3.0 전후부터 꾸준히 연습하면 좋습니다."
+            "q": "드롭이 자꾸 공격당해요. 뭐가 문제인가요?",
+            "a": "대개 너무 높거나 깊게 떨어지는 것입니다. 정점이 우리 쪽에 오는 더 높은 포물선으로, 네트를 살짝 넘겨 키친 안에서 죽게 하고, 그립을 풀어 공이 튀어 나가지 않게 하세요."
+          },
+          {
+            "q": "세 번째 샷을 드라이브해도 되나요?",
+            "a": "됩니다 — 리턴이 공격할 만큼 높거나 상대가 빠른 공에 약할 때요. 드라이브는 변화구로 쓰고, 드롭을 믿을 만한 기본값으로 유지하세요."
+          },
+          {
+            "q": "드롭 후 얼마나 전진해야 하나요?",
+            "a": "한 번에 다 가지 말고 단계적으로요. 몇 걸음 옮기고 상대 임팩트에 스플릿 스텝, 공을 읽고, 균형 잡힌 채 키친 라인까지 계속 이동하세요."
           }
         ]
       }
@@ -941,43 +1032,48 @@
     "featured": false,
     "status": "published",
     "date": "2026-06-08",
-    "updated": "2026-06-08",
+    "updated": "2026-06-21",
     "level": "2.0–3.0",
     "title": "Serve and return basics: common mistakes and fixes",
     "subtitle": "Build two reliable shots before anything fancy.",
     "summary": "Simple ways to make your serve and return consistent and deep.",
-    "body": "\n<p>Every rally starts with a serve and a return, yet beginners spend almost no time on them. That is backwards. Two reliable, deep shots win more games at the start than any fancy technique, because they keep the ball in play and put your opponents under pressure from the first contact. Here is how to make both dependable.</p>\n\n<h2 id=\"the-serve\">The serve: legal and simple</h2>\n<p>The serve in pickleball is meant to start the point, not end it, and the motion is deliberately simple. The traditional serve is hit underhand with an upward motion and contact below your waist. Many players also use the drop serve, where you drop the ball and hit it after it bounces. The exact technical requirements live in the official rulebook, and it is worth a quick read so you serve legally — but the spirit is clear: a controlled, underhand serve, not a big overhead.</p>\n<p>Your first goal is simply to get it in consistently. A serve that lands in, every time, beats a hard serve that misses one in three.</p>\n\n<h2 id=\"aim-deep\">Aim deep, not hard</h2>\n<p>Once your serve is reliable, the single best upgrade is depth. A deep serve that lands near the baseline pushes the returner back and makes their job harder; a short serve lets them step in and take control. Aim to land your serve in the back third of the service area. You do not need pace to do this — a smooth, slightly higher arc with good depth is more effective and more repeatable than a flat, hard serve that clips the net or sails out.</p>\n\n<h2 id=\"the-return\">The return: your most underrated shot</h2>\n<p>The return is arguably more important than the serve, because a good return takes away the serving team's natural advantage. The returning team gets to move to the net first, so a deep return that keeps the servers pinned at the baseline sets you up to control the rally. As with the serve, depth beats power: a deep, safe return that lands near the baseline is the goal.</p>\n\n<h2 id=\"return-then-move\">Return deep, then move up</h2>\n<p>The return is also your ticket to the net. The pattern is: hit a deep return, then follow it forward toward the kitchen line so you and your partner can take the advantageous net position. A common beginner habit is to hit the return and then admire it or rush forward before contact — both cost you. Make solid contact first, then move. Returning deep and getting to the line is one of the simplest high-value habits in doubles.</p>\n\n<h2 id=\"mistakes-fixes\">Common mistakes and fixes</h2>\n<ul>\n<li><strong>Serving too cautiously and short:</strong> you avoid faults but hand the returner easy control. Fix: commit to depth with a smooth arc, aiming for the back third.</li>\n<li><strong>Trying to hit winners off the serve or return:</strong> power leads to errors here. Fix: prioritize getting it in and getting it deep.</li>\n<li><strong>Returning short:</strong> a shallow return lets the servers attack. Fix: aim well past the kitchen, toward the baseline.</li>\n<li><strong>Rushing the net before contact:</strong> moving early pulls you off the shot. Fix: make clean contact, then advance.</li>\n<li><strong>Aiming for the lines:</strong> the corners tempt errors. Fix: aim for safe, deep targets a little inside the lines.</li>\n</ul>\n\n<p>None of this is glamorous, and that is the point. Spend a few practice sessions just serving deep and returning deep, and you will quietly win more points than the player chasing a flashy put-away.</p>\n",
+    "body": "\n<p>The serve and the return are the two shots that start every single rally, and getting them reliable is the fastest way to stop giving away cheap points. Neither needs to be fancy. A consistent, deep serve and a consistent, deep return — followed by getting to the net — will win you far more points at the beginner and intermediate levels than any flashy winner. Here is how to build both.</p>\n\n<h2 id=\"serve-goal\">The serve: consistency first</h2>\n<p>The single most important quality of a serve is that it goes in. A serve fault gives the rally away for free, so before you chase pace or spin, build a serve you can land nine times out of ten. Remember the legal requirements: contact below the waist, an underhand motion with the paddle head below the wrist, served diagonally into the correct box, clearing the kitchen. If those rules feel awkward, use the legal drop serve — drop the ball, let it bounce, and hit it — which removes the contact-height rules and is much easier to repeat.</p>\n\n<h2 id=\"serve-placement\">Where to serve</h2>\n<p>Aim deep. A serve that lands near the opponents' baseline pushes them back and makes their return harder, while a short serve invites an easy, aggressive return. The safest target is deep and toward the middle, which reduces angles and cuts down on errors. As you improve, you can occasionally serve deep to the opponent's backhand to draw a weaker return, but never sacrifice consistency to do it. Power is the last thing to add, not the first.</p>\n\n<h2 id=\"return-goal\">The return: deep, then forward</h2>\n<p>The return has two jobs: land deep, and get you to the net. Because of the two-bounce rule, you must let the serve bounce before returning, which gives you time — use it. Hit a deep return down the middle, then move forward to the kitchen line behind your shot. A deep return keeps the serving team pinned at the baseline and forces them into a hard third shot, while a short return lets them move up easily and takes away your advantage.</p>\n\n<h2 id=\"return-footwork\">Footwork after the return</h2>\n<p>The biggest beginner mistake is admiring the return and standing still. The return is your ticket to the net, so the moment you hit it, start moving forward. You will not always reach the kitchen before the third shot arrives — that is fine; advance as far as you can, split-step when the opponents make contact, and continue once you have read the ball. As the returning team, you have the positional advantage at the start of the rally, and good footwork is how you keep it.</p>\n\n<h2 id=\"depth\">Why depth beats power</h2>\n<p>New players often try to hit hard serves and returns, but pace without depth just gives the opponents a fast ball to redirect. Depth, on the other hand, eats up the opponents' time and space no matter how hard you hit. A medium-pace serve that lands two feet from the baseline is far more useful than a hard one that lands mid-court. Train yourself to think \"deep and in\" on every serve and return, and the points will follow.</p>\n\n<h2 id=\"drills\">Simple drills</h2>\n<p>For serving, set a target a couple of feet inside the baseline — a towel or cone works — and serve ten balls, counting how many land deep and in. Track your number over sessions; aim for eight out of ten before adding any pace. For returns, have a partner serve to you and practise returning deep down the middle and immediately moving to the kitchen, holding your split-step on their third shot. Even five minutes of each before you play turns two shaky shots into dependable ones.</p>\n\n<p>Serve and return are unglamorous, but they set up everything else. Pair a dependable deep return with a solid <a href=\"/en/the-third-shot-drop-explained/\">third-shot drop</a> and you control how almost every rally begins.</p>",
     "keyTakeaways": [
-      "Reliable, deep serves and returns win more early games than fancy shots.",
-      "Get the serve in first; then prioritize depth over power.",
-      "A deep return cancels the serving team's advantage and lets you move up.",
-      "Make clean contact before moving toward the net."
+      "A serve’s most important quality is that it goes in — build consistency before pace.",
+      "Serve deep and toward the middle to push opponents back and reduce errors.",
+      "The return has two jobs: land deep and get you to the net.",
+      "Move forward the instant you hit your return; split-step on the third shot.",
+      "Depth beats power on both shots — think \"deep and in.\""
     ],
     "commonMistakes": [
-      "Hitting serves and returns too hard and missing often.",
-      "Serving or returning short and giving away control.",
-      "Aiming for the lines and racking up errors.",
-      "Rushing forward before you have hit the ball."
+      "Chasing pace or spin before the serve is reliable.",
+      "Serving or returning short, which invites an aggressive reply.",
+      "Standing still to admire the return instead of moving to the net.",
+      "Trying to hit winners off the serve or return instead of building the point."
     ],
     "checklist": [
-      "A legal, repeatable underhand or drop serve",
-      "Serve lands in the back third of the box",
-      "Return lands deep, near the baseline",
-      "Follow your return toward the kitchen line",
-      "Aim for safe targets a little inside the lines"
+      "Legal serve: underhand, below the waist, correct diagonal box",
+      "Aim the serve deep and toward the middle",
+      "Let the serve bounce, then return deep down the middle",
+      "Move to the kitchen behind your return",
+      "Split-step as the opponents hit the third shot"
     ],
     "faq": [
       {
-        "q": "Is the serve underhand?",
-        "a": "The traditional serve is underhand with contact below the waist and an upward motion; the drop serve (drop the ball and hit it after a bounce) is also widely used. Check the current official rulebook for the exact requirements."
+        "q": "Should I use the drop serve or the traditional serve?",
+        "a": "Either is legal. The drop serve (drop, bounce, hit) removes the contact-height rules and is easier to repeat, so it is a great choice for beginners building consistency."
       },
       {
-        "q": "Should I add spin or power to my serve?",
-        "a": "Not at first. Consistency and depth matter far more for beginners. Add variety only once your basic serve lands in reliably."
+        "q": "Where should I aim my return?",
+        "a": "Deep and down the middle is the safest, highest-percentage target. It keeps the serving team pinned at the baseline and reduces the angles they can use against you."
       },
       {
-        "q": "Why is the return so important?",
-        "a": "The returning team gets to the net first. A deep return keeps the servers pinned back, so you and your partner can take the advantageous net position."
+        "q": "Why does everyone say to return deep?",
+        "a": "A deep return forces the serving team to hit a hard third shot from the baseline and gives you time to get to the net, where points are won."
+      },
+      {
+        "q": "Is it worth learning a spin serve?",
+        "a": "Only after your serve is consistent. Spin and pace are useful change-ups later, but an unreliable fancy serve loses more points than a plain deep one ever will."
       }
     ],
     "related": [
@@ -990,30 +1086,43 @@
         "title": "서브와 리턴 기본: 흔한 실수와 교정법",
         "subtitle": "2.0~3.0 플레이어가 경기 흐름을 안정시키는 가장 빠른 방법입니다.",
         "summary": "깊은 서브, 안정적인 리턴, 리턴 후 전진 습관을 중심으로 기본기를 정리했습니다.",
-        "body": "\n<p>서브와 리턴은 모든 랠리의 시작입니다. 화려하지 않지만 여기서 실수가 줄면 경기 전체가 안정됩니다. 2.0~3.0 단계에서는 강한 서브보다 넣는 서브, 강한 리턴보다 깊은 리턴이 더 중요합니다.</p>\n<h2 id=\"serve\">서브 목표</h2>\n<p>서브는 먼저 성공률을 높여야 합니다. 네트 바로 위를 노리기보다 충분한 높이와 깊이를 주어 상대를 뒤에 묶어두는 것이 좋습니다. 코너를 무리하게 노리다 폴트를 늘리는 것은 피하세요.</p>\n<h2 id=\"return\">리턴 목표</h2>\n<p>리턴은 깊고 안정적으로 보내는 것이 좋습니다. 깊은 리턴은 서브 팀의 세 번째 샷을 어렵게 만들고, 리시브 팀이 키친 라인으로 올라갈 시간을 줍니다.</p>\n<h2 id=\"move\">리턴 후 움직임</h2>\n<p>리턴을 친 뒤 베이스라인에 머무르면 네트 앞 주도권을 놓치기 쉽습니다. 리턴 후에는 파트너와 함께 전진해 키친 라인을 점유하세요. 단, 공이 짧거나 높게 오는 상황에서는 균형을 먼저 잡아야 합니다.</p>\n<h2 id=\"fix\">교정 드릴</h2>\n<p>서브 20개 중 성공률을 기록하고, 리턴은 코트 뒤쪽 3분의 1을 목표로 연습하세요. 성공률이 올라가면 방향을 좌우로 나누되, 힘보다 깊이를 우선합니다.</p>",
+        "body": "\n<p>서브와 리턴은 모든 랠리를 시작하는 두 샷이며, 이 둘을 안정시키는 것이 쉬운 실점을 멈추는 가장 빠른 길입니다. 둘 다 화려할 필요가 없습니다. 일관되게 깊은 서브와 일관되게 깊은 리턴 — 그리고 네트로 전진하기 — 만으로도 초·중급에서는 어떤 화려한 위너보다 훨씬 많은 포인트를 가져옵니다. 두 샷을 어떻게 만드는지 알아봅시다.</p>\n\n<h2 id=\"serve-goal\">서브: 일관성이 먼저</h2>\n<p>서브에서 가장 중요한 자질은 \"들어간다\"는 것입니다. 서브 폴트는 랠리를 공짜로 내주는 것이니, 속도나 스핀을 좇기 전에 열 번 중 아홉 번 넣을 수 있는 서브부터 만드세요. 규칙을 기억하세요 — 타점은 허리 아래, 패들 헤드가 손목보다 아래인 언더핸드, 올바른 대각선 박스로, 키친을 넘겨서. 규칙이 어색하면 합법적인 드롭 서브를 쓰세요 — 공을 떨어뜨려 바운드시킨 뒤 치면 타점 높이 규칙이 사라져 반복하기 훨씬 쉽습니다.</p>\n\n<h2 id=\"serve-placement\">어디로 서브할까</h2>\n<p>깊게 노리세요. 상대 베이스라인 근처에 떨어지는 서브는 상대를 뒤로 밀고 리턴을 어렵게 만들지만, 짧은 서브는 쉽고 공격적인 리턴을 부릅니다. 가장 안전한 목표는 깊고 가운데 쪽으로 — 각을 줄여 실수를 낮춥니다. 실력이 늘면 가끔 상대 백핸드 쪽으로 깊게 넣어 약한 리턴을 유도할 수 있지만, 그러려고 일관성을 희생하지는 마세요. 파워는 가장 마지막에 더하는 것이지 처음이 아닙니다.</p>\n\n<h2 id=\"return-goal\">리턴: 깊게, 그다음 전진</h2>\n<p>리턴에는 두 가지 임무가 있습니다 — 깊게 떨어뜨리기, 그리고 네트로 가기. 투바운스 규칙 때문에 서브를 바운드시킨 뒤 리턴해야 하므로 시간이 생깁니다 — 그 시간을 쓰세요. 가운데로 깊게 리턴한 뒤, 자기 샷을 따라 키친 라인으로 전진하세요. 깊은 리턴은 서브 팀을 베이스라인에 묶고 어려운 세 번째 샷을 강요하지만, 짧은 리턴은 상대가 쉽게 전진하게 해 우리의 이점을 없앱니다.</p>\n\n<h2 id=\"return-footwork\">리턴 후의 풋워크</h2>\n<p>가장 큰 초보 실수는 리턴을 감상하며 가만히 서 있는 것입니다. 리턴은 네트로 가는 입장권이니, 치는 즉시 앞으로 움직이세요. 세 번째 샷이 오기 전에 항상 키친에 닿지는 못합니다 — 괜찮습니다. 갈 수 있는 만큼 전진하고, 상대가 임팩트할 때 스플릿 스텝을 하고, 공을 읽은 뒤 계속 가세요. 리턴 팀은 랠리 시작에서 위치상 유리하며, 좋은 풋워크가 그 이점을 지킵니다.</p>\n\n<h2 id=\"depth\">왜 깊이가 파워를 이기는가</h2>\n<p>초보는 흔히 강한 서브·리턴을 치려 하지만, 깊이 없는 속도는 상대에게 되받아치기 좋은 빠른 공을 줄 뿐입니다. 반면 깊이는 아무리 약하게 쳐도 상대의 시간과 공간을 빼앗습니다. 베이스라인 60cm 앞에 떨어지는 중간 속도 서브가, 코트 중앙에 떨어지는 강한 서브보다 훨씬 유용합니다. 모든 서브·리턴에서 \"깊게, 그리고 인\"을 생각하도록 훈련하면 포인트가 따라옵니다.</p>\n\n<h2 id=\"drills\">간단한 드릴</h2>\n<p>서브는 베이스라인 60cm 안쪽에 목표물(수건이나 콘)을 두고 10개를 넣어 깊고 인으로 들어간 개수를 세세요. 세션마다 기록을 추적하고, 속도를 더하기 전 10개 중 8개를 목표로 합니다. 리턴은 파트너가 서브해 주면 가운데로 깊게 리턴하고 곧바로 키친으로 이동하며, 상대 세 번째 샷에 스플릿 스텝을 유지하는 연습을 하세요. 경기 전 각 5분씩만 해도 불안하던 두 샷이 믿을 만한 샷으로 바뀝니다.</p>\n\n<p>서브와 리턴은 수수하지만 나머지 모든 것을 세팅합니다. 믿을 만한 깊은 리턴을 탄탄한 <a href=\"/ko/the-third-shot-drop-explained/\">세 번째 샷 드롭</a>과 짝지으면, 거의 모든 랠리의 시작을 우리가 통제하게 됩니다.</p>",
         "keyTakeaways": [
-          "초보 단계에서는 강한 서브보다 안정적인 서브가 우선입니다.",
-          "깊은 리턴은 네트 앞으로 올라갈 시간을 만듭니다.",
-          "리턴 후 전진은 복식에서 매우 중요한 습관입니다."
+          "서브에서 가장 중요한 자질은 \"들어간다\"는 것 — 속도보다 일관성을 먼저.",
+          "깊고 가운데로 서브해 상대를 밀고 실수를 줄이세요.",
+          "리턴의 두 임무: 깊게 떨어뜨리기, 그리고 네트로 가기.",
+          "리턴을 치는 즉시 전진하고, 세 번째 샷에 스플릿 스텝.",
+          "두 샷 모두 깊이가 파워를 이깁니다 — \"깊게, 그리고 인\"."
         ],
         "commonMistakes": [
-          "서브 에이스를 노리다 폴트가 많아짐.",
-          "리턴을 짧게 줘서 바로 공격당함.",
-          "리턴 후 베이스라인에 머무름."
+          "서브가 안정되기 전에 속도·스핀을 좇음.",
+          "서브·리턴을 짧게 쳐 공격적인 응수를 부름.",
+          "리턴을 감상하며 가만히 서서 네트로 안 감.",
+          "포인트를 쌓지 않고 서브·리턴으로 위너를 노림."
         ],
         "checklist": [
-          "서브 성공률을 기록하나요?",
-          "리턴이 상대 코트 깊은 곳으로 가나요?",
-          "리턴 후 키친 라인으로 이동하나요?"
+          "합법 서브: 언더핸드·허리 아래·올바른 대각선 박스",
+          "서브는 깊고 가운데로",
+          "서브를 바운드시킨 뒤 가운데로 깊게 리턴",
+          "리턴을 따라 키친으로 전진",
+          "상대 세 번째 샷에 스플릿 스텝"
         ],
         "faq": [
           {
-            "q": "서브는 세게 쳐야 하나요?",
-            "a": "처음에는 깊고 안정적으로 넣는 것이 더 중요합니다."
+            "q": "드롭 서브와 전통 서브 중 뭐가 좋나요?",
+            "a": "둘 다 합법입니다. 드롭 서브(떨어뜨려 바운드 후 치기)는 타점 높이 규칙이 없어 반복이 쉬워, 일관성을 쌓는 초보에게 좋은 선택입니다."
           },
           {
-            "q": "리턴은 어디를 노리면 좋나요?",
-            "a": "상대 코트 깊은 곳을 우선 노리세요. 그러면 전진 시간이 생깁니다."
+            "q": "리턴은 어디로 보내야 하나요?",
+            "a": "가운데로 깊게가 가장 안전하고 확률 높은 목표입니다. 서브 팀을 베이스라인에 묶고 상대가 쓸 수 있는 각을 줄입니다."
+          },
+          {
+            "q": "왜 다들 깊게 리턴하라고 하나요?",
+            "a": "깊은 리턴은 서브 팀이 베이스라인에서 어려운 세 번째 샷을 치게 만들고, 포인트가 결정되는 네트로 갈 시간을 줍니다."
+          },
+          {
+            "q": "스핀 서브를 배울 가치가 있나요?",
+            "a": "서브가 일관된 다음에만요. 스핀·속도는 나중의 좋은 변화구이지만, 불안정한 화려한 서브는 평범하고 깊은 서브보다 더 많이 실점합니다."
           }
         ]
       }
@@ -1026,42 +1135,47 @@
     "featured": false,
     "status": "published",
     "date": "2026-06-08",
-    "updated": "2026-06-08",
+    "updated": "2026-06-21",
     "title": "Doubles positioning basics: when (and why) to stack",
     "subtitle": "Move with your partner and cover the court.",
     "summary": "How partners should move together, and a plain explanation of stacking.",
-    "body": "\n<p>Most points in recreational doubles are lost not because of a bad shot, but because of bad positioning — partners drifting apart, leaving gaps, or staying back when they should be up. Good positioning is mostly a few simple habits. Once those are in place, you can understand the strategy beginners hear about constantly: stacking.</p>\n\n<h2 id=\"move-as-a-unit\">Move as a unit</h2>\n<p>The most important idea in doubles is that you and your partner move together, as if connected by a short rope. If one of you goes forward, the other goes forward; if one is pulled back to chase a lob, the other drops back too. The goal is to keep a roughly even line across the court so there is no large gap between you for opponents to exploit. When partners move independently, one of them is almost always out of position.</p>\n\n<h2 id=\"get-to-the-line\">Get to the kitchen line together</h2>\n<p>The strongest position in doubles is both players up at the kitchen line. From there you can hit down on balls, take away angles, and pressure your opponents. So the shared objective of most rallies is simple: get both of you to the line and hold it. After a return or a good third-shot drop, advance together. Avoid the common pattern where one player races to the net while the other lingers at the baseline — that staggered, \"one up, one back\" shape leaves a big diagonal gap and is easy to attack.</p>\n\n<h2 id=\"cover-the-middle\">Cover the middle</h2>\n<p>A surprising number of balls go down the middle, both because it is the lowest part of the net and because partners hesitate over who takes it. A good default: the player whose forehand is in the middle usually takes the middle ball, and a quick call of \"mine\" or \"yours\" prevents the awkward moment where you both watch it go by. Talk constantly. Communication is positioning.</p>\n\n<h2 id=\"what-stacking-is\">What \"stacking\" actually is</h2>\n<p>Stacking is a positioning strategy, not a special rule. Normally, partners switch sides based on the score and serving order. Stacking is when a team deliberately lines up so that a particular player always ends up on a particular side — for example, to keep both players' forehands in the middle, or to keep a stronger player on the side they prefer. To do it, players start on the same side and then move into their preferred positions as the serve is struck. It is completely legal; you are just choosing where to stand within the rules.</p>\n\n<h2 id=\"should-beginners-stack\">Should beginners stack?</h2>\n<p>Usually not yet. Stacking adds coordination and a real risk of confusion about who serves and where everyone stands, which can cause faults if you get it wrong. It is worth learning once you and a regular partner have a clear reason — such as protecting a strong forehand or a one-sided player — and once your basic positioning is solid. Until then, focus on moving as a unit, getting to the line together, and covering the middle. Those habits win more points than any formation.</p>\n",
+    "body": "\n<p>Pickleball doubles is won and lost on positioning far more than on individual shots. Two players who move well as a team will beat two better shot-makers who are constantly out of position. The good news is that doubles positioning comes down to a handful of simple principles. Learn these and you will stop leaving gaps, stop colliding with your partner, and start controlling the court.</p>\n\n<h2 id=\"pair\">Move as a pair</h2>\n<p>The most important idea in doubles is that you and your partner are connected by an invisible rope about 8 to 10 feet long. When your partner moves left, you move left; when they get pulled wide, you slide to cover the middle. You are not two singles players sharing a court — you are one unit defending a width. If you both chase your own side independently, the middle opens up, and the middle is where most points are won.</p>\n\n<h2 id=\"goal\">The goal: both up at the kitchen</h2>\n<p>The strongest position in doubles is both players side by side at the kitchen line. From there you can hit down on anything that pops up and you cut off the angles. So the entire early part of a rally — the return, the third shot, the transition — is really just a race to get your team to the kitchen line first or together. Whoever controls the kitchen usually controls the point.</p>\n\n<h2 id=\"up-back\">Up and back: the weak formation</h2>\n<p>When one partner is at the net and the other is stuck at the baseline, your team is vulnerable: there is a huge gap between you, and opponents will attack the deep player or the seam. If you find yourself \"one up, one back,\" the back player's priority is to hit a shot soft enough (a drop or reset) to buy time to advance, while the front player holds the line. Get even again as fast as you safely can — staggered formations are temporary, not a plan.</p>\n\n<h2 id=\"middle\">Who takes the middle</h2>\n<p>A ball down the middle is the most common source of confusion, because both players can reach it and neither is sure whose it is. Two simple rules prevent the mess: generally the player with the forehand in the middle takes it, and always call it. A quick \"mine\" or \"yours\" eliminates the awkward moment where you both watch the ball go by or both swing at it. Talk on every middle ball until it becomes automatic.</p>\n\n<h2 id=\"transition\">Moving through the transition zone</h2>\n<p>The mid-court area between the baseline and the kitchen — no-man's-land — is the most dangerous place to stand, because balls land at your feet there. The key is to pass through it, not park in it. After a drop or reset, take a few steps in, split-step as the opponents make contact, and keep advancing in stages with your partner. Move together so you arrive at the kitchen line as a connected pair, not one at a time.</p>\n\n<h2 id=\"lobs-switches\">Lobs, switches, and communication</h2>\n<p>When opponents lob over one of you, the simplest rule is that whoever can take it does, and if you have to cross behind your partner, call \"switch\" so they slide to cover your old spot. Communication is the glue of good doubles: use short, loud calls — \"mine,\" \"yours,\" \"switch,\" \"bounce\" (let it go, it is out), \"out.\" None of it has to be sophisticated; it just has to be consistent and audible. Teams that talk look like they have played together for years even when they have not.</p>\n\n<p>Positioning is a skill you can practise without hitting a single hard shot. Play points with the single goal of always being even with your partner and always getting to the kitchen together, and your results will jump before your strokes ever change. Combine this with steady <a href=\"/en/dinking-fundamentals/\">dinking</a> at the line and you have the foundation of solid doubles.</p>",
     "keyTakeaways": [
-      "Move with your partner as if joined by a short rope — up together, back together.",
-      "The goal of most rallies is to get both players to the kitchen line.",
-      "Cover the middle and call the ball to avoid letting it through.",
-      "Stacking is a legal positioning choice, not a rule — and not essential for beginners."
+      "You and your partner are joined by an invisible 8–10 ft rope — move as one unit.",
+      "The strongest position is both players up at the kitchen line.",
+      "\"One up, one back\" is a weak, temporary formation — get even quickly.",
+      "The forehand usually takes the middle, and you always call it.",
+      "Pass through the transition zone in stages; never park in no-man’s-land."
     ],
     "commonMistakes": [
-      "Playing 'one up, one back' and leaving a big diagonal gap.",
-      "Drifting apart so opponents can split you.",
-      "Both players (or neither) going for the middle ball.",
-      "Trying to stack before basic positioning and communication are solid."
+      "Both players covering only their own side, leaving the middle open.",
+      "Standing in no-man’s-land instead of advancing through it.",
+      "Staying \"one up, one back\" instead of getting even.",
+      "Saying nothing on middle balls and lobs."
     ],
     "checklist": [
-      "Stay level with your partner across the court",
-      "Advance to the kitchen line together after the return/drop",
-      "Decide who covers the middle and call it",
-      "Communicate every rally ('mine' / 'yours' / 'switch')",
-      "Add stacking only when you have a clear reason"
+      "Slide with your partner to keep the gap small",
+      "Race to get both players to the kitchen line",
+      "Forehand takes the middle — and call \"mine/yours\"",
+      "Move through transition in stages, together",
+      "Call \"switch\" when you cross behind your partner"
     ],
     "faq": [
       {
-        "q": "Is stacking against the rules?",
-        "a": "No. Stacking is just choosing where you and your partner stand within the rules. As long as the correct server serves from the correct side, you can position yourselves however you like."
+        "q": "Should we ever play one up and one back on purpose?",
+        "a": "Occasionally as a temporary defensive position, but it is a weak formation with a big gap. The goal is almost always to get both players even at the kitchen line as soon as you safely can."
       },
       {
-        "q": "Should both players really be at the net?",
-        "a": "Most of the time, yes. Both players at the kitchen line is the strongest doubles position. The main exception is dropping back together to handle a lob."
+        "q": "Who should take the ball down the middle?",
+        "a": "As a default, the player whose forehand is in the middle takes it, but the real rule is to call it every time. A quick \"mine\" or \"yours\" prevents both confusion and collisions."
       },
       {
-        "q": "Who should take the middle ball?",
-        "a": "A common default is the player with the forehand in the middle, but the real fix is communication — call 'mine' or 'yours' early so the ball is never left for no one."
+        "q": "What do I do when I get lobbed?",
+        "a": "Whoever can reach it takes it. If you have to cross behind your partner to chase it, call \"switch\" so they slide over to cover the side you left."
+      },
+      {
+        "q": "How can I practise positioning?",
+        "a": "Play games with the single rule that you must always be roughly even with your partner and always move to the kitchen together. It improves results faster than working on strokes."
       }
     ],
     "related": [
@@ -1074,30 +1188,43 @@
         "title": "복식 포지셔닝 기본: 어디에 서야 할까",
         "subtitle": "키친 라인, 중간 전환 구역, 파트너 간격을 쉽게 설명합니다.",
         "summary": "복식에서 자주 생기는 위치 실수와 네트 앞 주도권을 잡는 기본 원칙을 정리했습니다.",
-        "body": "\n<p>피클볼 복식에서 실력 차이는 샷보다 위치에서 먼저 드러나는 경우가 많습니다. 좋은 위치에 있으면 어려운 공도 쉽게 보이고, 나쁜 위치에 있으면 쉬운 공도 급해집니다.</p>\n<h2 id=\"line\">키친 라인 점유</h2>\n<p>복식의 기본 목표는 가능한 한 두 선수가 함께 키친 라인 근처에 서는 것입니다. 이 위치에서는 상대의 높은 공을 공격하고, 짧은 공에도 빠르게 대응할 수 있습니다.</p>\n<h2 id=\"transition\">전환 구역 조심</h2>\n<p>베이스라인과 키친 사이 중간 공간은 공격받기 쉬운 구역입니다. 이곳에 오래 머물면 발밑으로 오는 공을 처리하기 어렵습니다. 이동 중에는 멈춰서 리셋하고, 기회가 되면 다시 앞으로 들어가세요.</p>\n<h2 id=\"partner\">파트너와의 간격</h2>\n<p>두 선수가 너무 벌어지면 가운데가 열리고, 너무 붙으면 사이드가 비게 됩니다. 공의 위치에 따라 함께 좌우로 움직이는 것이 중요합니다. 한 명만 앞으로 가고 한 명은 뒤에 남는 상황도 줄여야 합니다.</p>\n<h2 id=\"stack\">스태킹은 언제 배울까</h2>\n<p>스태킹은 특정 선수가 원하는 위치에서 플레이하기 위해 서브와 리턴 위치를 조정하는 전술입니다. 기본 포지셔닝과 점수 위치를 먼저 이해한 뒤 배우는 것이 좋습니다.</p>",
+        "body": "\n<p>피클볼 복식은 개별 샷보다 포지셔닝에서 훨씬 더 많이 승부가 갈립니다. 팀으로 잘 움직이는 두 명이, 항상 자리를 벗어나 있는 더 좋은 샷메이커 두 명을 이깁니다. 다행히 복식 포지셔닝은 몇 가지 간단한 원칙으로 압축됩니다. 이것을 익히면 빈 공간을 내주지 않고, 파트너와 부딪히지 않으며, 코트를 장악하기 시작합니다.</p>\n\n<h2 id=\"pair\">한 쌍으로 움직여라</h2>\n<p>복식에서 가장 중요한 개념은, 나와 파트너가 약 2.5~3m 길이의 보이지 않는 줄로 연결돼 있다는 것입니다. 파트너가 왼쪽으로 가면 나도 왼쪽으로, 파트너가 넓게 끌려가면 나는 가운데를 덮으러 이동합니다. 우리는 코트를 나눠 쓰는 두 명의 단식 선수가 아니라, 너비를 함께 지키는 하나의 단위입니다. 각자 자기 쪽만 좇으면 가운데가 열리고, 대부분의 포인트는 그 가운데에서 결정됩니다.</p>\n\n<h2 id=\"goal\">목표: 둘 다 키친 앞으로</h2>\n<p>복식에서 가장 강한 위치는 두 선수가 나란히 키친 라인에 서는 것입니다. 거기서는 뜨는 공을 모두 내리칠 수 있고 각을 차단합니다. 그래서 랠리의 초반 전체 — 리턴, 세 번째 샷, 트랜지션 — 는 사실 우리 팀을 먼저, 혹은 함께 키친 라인에 보내려는 경주입니다. 키친을 장악하는 쪽이 보통 포인트를 장악합니다.</p>\n\n<h2 id=\"up-back\">앞뒤(원 업 원 백): 약한 대형</h2>\n<p>한 명은 네트, 다른 한 명은 베이스라인에 묶이면 팀은 취약합니다 — 둘 사이에 큰 빈틈이 생기고, 상대는 뒤쪽 선수나 그 틈을 공격합니다. \"원 업 원 백\"이 됐다면, 뒤쪽 선수의 우선순위는 전진할 시간을 벌 만큼 부드러운 샷(드롭이나 리셋)을 치는 것이고, 앞쪽 선수는 라인을 지킵니다. 안전하게 가능한 한 빨리 다시 나란해지세요 — 어긋난 대형은 일시적인 것이지 계획이 아닙니다.</p>\n\n<h2 id=\"middle\">가운데는 누가 받나</h2>\n<p>가운데로 오는 공은 가장 흔한 혼선의 원인입니다 — 둘 다 닿을 수 있고 누구 것인지 확신이 없기 때문이죠. 두 가지 간단한 규칙이 혼란을 막습니다 — 보통 가운데에서 포핸드인 선수가 받고, 항상 콜하세요. 빠른 \"마인\"이나 \"유어스\" 한마디면, 둘 다 공을 보내거나 둘 다 휘두르는 어색한 순간이 사라집니다. 자동이 될 때까지 모든 가운데 공에 말하세요.</p>\n\n<h2 id=\"transition\">트랜지션 존 통과하기</h2>\n<p>베이스라인과 키친 사이의 미드코트 — 노맨스랜드 — 는 서 있기 가장 위험한 곳입니다. 공이 발 앞에 떨어지기 때문이죠. 핵심은 그곳에 머무르지 말고 통과하는 것입니다. 드롭이나 리셋 뒤 몇 걸음 전진하고, 상대가 임팩트할 때 스플릿 스텝, 파트너와 함께 단계적으로 계속 나아갑니다. 함께 움직여 한 명씩이 아니라 연결된 한 쌍으로 키친 라인에 도착하세요.</p>\n\n<h2 id=\"lobs-switches\">로브·스위치·커뮤니케이션</h2>\n<p>상대가 둘 중 한 명 위로 로브를 올리면, 가장 간단한 규칙은 닿을 수 있는 사람이 받는 것이고, 파트너 뒤를 가로질러야 한다면 \"스위치\"라고 외쳐 파트너가 내 자리를 덮게 합니다. 커뮤니케이션은 좋은 복식의 접착제입니다 — 짧고 큰 콜을 쓰세요: \"마인\", \"유어스\", \"스위치\", \"바운스\"(놔둬, 아웃이야), \"아웃\". 정교할 필요는 없고, 일관되고 들리기만 하면 됩니다. 말하는 팀은 실제로는 아니어도 수년간 함께한 팀처럼 보입니다.</p>\n\n<p>포지셔닝은 강한 샷 하나 없이도 연습할 수 있는 기술입니다. \"항상 파트너와 나란히 있고, 항상 함께 키친으로 간다\"는 단 하나의 목표로 포인트를 해보세요 — 스트로크가 바뀌기도 전에 결과가 뛸 것입니다. 여기에 라인에서의 안정적인 <a href=\"/ko/dinking-fundamentals/\">딩크</a>를 더하면 탄탄한 복식의 토대가 완성됩니다.</p>",
         "keyTakeaways": [
-          "복식에서는 두 선수가 함께 키친 라인을 점유하는 것이 중요합니다.",
-          "전환 구역에 오래 머물면 발밑 공격을 받기 쉽습니다.",
-          "파트너와 함께 좌우로 움직여 가운데 공간을 줄이세요."
+          "나와 파트너는 2.5~3m의 보이지 않는 줄로 연결 — 하나의 단위로 움직이세요.",
+          "가장 강한 위치는 두 선수가 키친 라인에 함께 서는 것입니다.",
+          "\"원 업 원 백\"은 약하고 일시적인 대형 — 빨리 나란해지세요.",
+          "가운데는 보통 포핸드가 받고, 항상 콜합니다.",
+          "트랜지션 존은 단계적으로 통과하고, 노맨스랜드에 머무르지 마세요."
         ],
         "commonMistakes": [
-          "한 명만 앞으로 가고 한 명은 뒤에 남음.",
-          "전환 구역에서 멈춰 공격당함.",
-          "파트너와 간격이 너무 벌어짐."
+          "둘 다 자기 쪽만 덮어 가운데를 비움.",
+          "노맨스랜드를 통과하지 않고 그 자리에 섬.",
+          "나란해지지 않고 \"원 업 원 백\"을 유지함.",
+          "가운데 공과 로브에 아무 말도 안 함."
         ],
         "checklist": [
-          "파트너와 함께 전진하나요?",
-          "가운데 공에 대한 콜을 하나요?",
-          "전환 구역에서 리셋할 줄 아나요?"
+          "파트너와 함께 이동해 틈을 좁게 유지",
+          "두 선수를 키친 라인에 보내는 경주",
+          "가운데는 포핸드가 — \"마인/유어스\" 콜",
+          "트랜지션은 함께 단계적으로 통과",
+          "파트너 뒤를 가로지를 땐 \"스위치\" 콜"
         ],
         "faq": [
           {
-            "q": "항상 키친 라인으로 가야 하나요?",
-            "a": "대부분 유리하지만 무리하게 뛰어들기보다 균형을 잡고 이동해야 합니다."
+            "q": "일부러 원 업 원 백으로 쳐도 되나요?",
+            "a": "일시적 수비 위치로 가끔은요. 하지만 큰 틈이 있는 약한 대형입니다. 목표는 거의 항상 안전해지는 즉시 두 선수가 키친 라인에 나란히 서는 것입니다."
           },
           {
-            "q": "스태킹은 초보도 해야 하나요?",
-            "a": "처음에는 기본 위치와 점수 규칙을 먼저 익히는 것이 좋습니다."
+            "q": "가운데 공은 누가 받아야 하나요?",
+            "a": "기본은 가운데에서 포핸드인 선수가 받지만, 진짜 규칙은 매번 콜하는 것입니다. 빠른 \"마인/유어스\"가 혼선과 충돌을 모두 막습니다."
+          },
+          {
+            "q": "로브를 맞으면 어떻게 하나요?",
+            "a": "닿을 수 있는 사람이 받습니다. 쫓아가느라 파트너 뒤를 가로질러야 하면 \"스위치\"라고 외쳐 파트너가 내가 비운 쪽을 덮게 하세요."
+          },
+          {
+            "q": "포지셔닝은 어떻게 연습하나요?",
+            "a": "\"항상 파트너와 대략 나란히, 항상 함께 키친으로 이동\"이라는 단 하나의 규칙으로 게임하세요. 스트로크 연습보다 결과를 더 빨리 끌어올립니다."
           }
         ]
       }

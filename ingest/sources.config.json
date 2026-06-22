@@ -1,0 +1,31 @@
+{
+  "_README": "Sources the ingestion pipeline MAY read. Everything is DISABLED by default on purpose. Before setting enabled:true for any source, confirm you are allowed to use it (see COMPLIANCE.md): check the site's Terms, robots.txt, and feed/API license. The pipeline only ever stores a link + your own short summary draft — it never republishes source text. Pickleball video/highlights are never re-hosted; treat them as links + your own recaps.",
+  "settings": {
+    "userAgent": "PickleLevelBot/1.0 (+contact: hello@example.com)",
+    "requestDelayMs": 1500,
+    "respectRobots": true,
+    "maxItemsPerSource": 10
+  },
+  "sources": [
+    {
+      "id": "example-federation-news",
+      "type": "rss",
+      "label": "Example Federation — announcements",
+      "url": "https://example.org/feed.xml",
+      "category": "compete",
+      "enabled": false,
+      "permission": "UNVERIFIED — confirm feed is offered for syndication; link-only + own-words summary",
+      "license": "link-only"
+    },
+    {
+      "id": "example-maker-blog",
+      "type": "rss",
+      "label": "Example Paddle Maker — product news",
+      "url": "https://example.com/blog/rss",
+      "category": "gear",
+      "enabled": false,
+      "permission": "UNVERIFIED — facts/specs only, verify against official product page",
+      "license": "facts-only"
+    }
+  ]
+}

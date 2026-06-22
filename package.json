@@ -1,0 +1,25 @@
+{
+  "name": "picklelevel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Picklary — a level-based pickleball hub with skills, paddles, pro profiles, highlights, and AdSense-safe static pages.",
+  "scripts": {
+    "build": "node build.js",
+    "start": "node build.js && node start-local.js",
+    "serve": "node start-local.js",
+    "dev": "node build.js && node start-local.js",
+    "ingest": "node ingest/pipeline.js",
+    "ingest:dry": "node ingest/pipeline.js --dry",
+    "digest": "node ingest/digest-builder.js",
+    "agent:status": "node automation/picklelevel-agent.js --status",
+    "agent:scan": "node automation/picklelevel-agent.js --scan",
+    "agent:scan:dry": "node automation/picklelevel-agent.js --scan --dry-run",
+    "agent:publish": "node automation/picklelevel-agent.js --publish-approved",
+    "agent:review": "node automation/picklelevel-agent.js --status",
+    "dupr:refresh": "node automation/update-dupr-snapshot.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,16 @@
+For AdSense review, deploy the `dist` folder only.
+
+Windows local preview:
+1. Double-click 00_RUN_SITE_WINDOWS.bat
+2. Open the local URL shown in the terminal.
+
+Manual build:
+npm run build
+
+Netlify manual deploy:
+1. Run npm run build
+2. Upload the dist folder
+
+Vercel/Cloudflare Pages:
+Build command: npm run build
+Output directory: dist

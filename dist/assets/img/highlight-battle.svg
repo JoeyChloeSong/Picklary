@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">Highlight battle upload and voting</title>
+  <desc id="desc">A video upload card with upvotes and weekly ranking.</desc>
+  <rect width="720" height="420" rx="28" fill="#fbfaf5"/>
+  <rect x="112" y="54" width="238" height="312" rx="28" fill="#1E6F5C"/>
+  <rect x="133" y="86" width="196" height="238" rx="16" fill="#e7f1ed"/>
+  <polygon points="205,170 205,240 267,205" fill="#f4b400"/>
+  <circle cx="232" cy="342" r="10" fill="#f4b400"/>
+  <rect x="390" y="84" width="218" height="74" rx="16" fill="#fff" stroke="#e3e1d6" stroke-width="4"/>
+  <rect x="390" y="181" width="218" height="74" rx="16" fill="#fff" stroke="#e3e1d6" stroke-width="4"/>
+  <rect x="390" y="278" width="218" height="74" rx="16" fill="#fff" stroke="#e3e1d6" stroke-width="4"/>
+  <g font-family="Inter,Arial" font-weight="800" font-size="28" fill="#1d2421"><text x="418" y="131">#1</text><text x="418" y="228">#2</text><text x="418" y="325">#3</text></g>
+  <g fill="#f4b400"><path d="M544 114c8-18 40-12 40 12 0 26-40 45-40 45s-40-19-40-45c0-24 32-30 40-12z" transform="scale(.55) translate(475 83)"/></g>
+  <g font-family="Inter,Arial" font-size="15" fill="#4f5b56"><text x="474" y="130">votes + feedback</text><text x="474" y="227">level tags</text><text x="474" y="324">weekly battle</text></g>
+</svg>

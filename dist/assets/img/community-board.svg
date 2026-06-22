@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" role="img" aria-labelledby="title desc">
+  <title id="title">Pickleball community board illustration</title>
+  <desc id="desc">FAQ and Q&A cards arranged around a pickleball court diagram.</desc>
+  <rect width="760" height="520" rx="34" fill="#fbfaf5"/>
+  <rect x="56" y="70" width="648" height="360" rx="28" fill="#e7f1ed" stroke="#1E6F5C" stroke-width="6"/>
+  <line x1="380" y1="70" x2="380" y2="430" stroke="#1E6F5C" stroke-width="5" opacity=".55"/>
+  <line x1="56" y1="250" x2="704" y2="250" stroke="#1E6F5C" stroke-width="5" opacity=".55"/>
+  <rect x="110" y="108" width="250" height="118" rx="18" fill="#fff" stroke="#e3e1d6" stroke-width="4"/>
+  <rect x="400" y="108" width="250" height="118" rx="18" fill="#fff" stroke="#e3e1d6" stroke-width="4"/>
+  <rect x="110" y="276" width="250" height="118" rx="18" fill="#fff" stroke="#e3e1d6" stroke-width="4"/>
+  <rect x="400" y="276" width="250" height="118" rx="18" fill="#fff" stroke="#e3e1d6" stroke-width="4"/>
+  <circle cx="146" cy="146" r="20" fill="#F4B400"/>
+  <circle cx="436" cy="146" r="20" fill="#F4B400"/>
+  <circle cx="146" cy="314" r="20" fill="#F4B400"/>
+  <circle cx="436" cy="314" r="20" fill="#F4B400"/>
+  <path d="M140 142h12v8h-12zM430 142h12v8h-12zM140 310h12v8h-12zM430 310h12v8h-12z" fill="#1E6F5C" opacity=".75"/>
+  <g stroke="#1d2421" stroke-linecap="round" stroke-width="8" opacity=".75">
+    <line x1="182" y1="140" x2="312" y2="140"/>
+    <line x1="182" y1="168" x2="292" y2="168"/>
+    <line x1="472" y1="140" x2="604" y2="140"/>
+    <line x1="472" y1="168" x2="584" y2="168"/>
+    <line x1="182" y1="308" x2="312" y2="308"/>
+    <line x1="182" y1="336" x2="286" y2="336"/>
+    <line x1="472" y1="308" x2="604" y2="308"/>
+    <line x1="472" y1="336" x2="572" y2="336"/>
+  </g>
+  <g fill="#1E6F5C">
+    <circle cx="632" cy="66" r="34"/>
+    <circle cx="666" cy="66" r="10" fill="#fbfaf5" opacity=".75"/>
+    <circle cx="622" cy="54" r="7" fill="#fbfaf5" opacity=".75"/>
+    <circle cx="622" cy="78" r="7" fill="#fbfaf5" opacity=".75"/>
+  </g>
+  <text x="95" y="470" fill="#14513f" font-family="Arial, sans-serif" font-size="28" font-weight="700">FAQ · Q&amp;A · Feedback</text>
+</svg>

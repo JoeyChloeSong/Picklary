@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">Pickleball court zones</title>
+  <desc id="desc">A simplified pickleball court diagram showing service boxes, kitchen zones, and the net.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#1E6F5C"/><stop offset="1" stop-color="#4FA88C"/></linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#14513f" flood-opacity=".18"/></filter>
+  </defs>
+  <rect width="720" height="420" rx="28" fill="#fbfaf5"/>
+  <rect x="58" y="48" width="604" height="324" rx="18" fill="url(#g)" filter="url(#s)"/>
+  <rect x="80" y="72" width="560" height="276" rx="8" fill="none" stroke="#fff" stroke-width="7"/>
+  <line x1="360" y1="72" x2="360" y2="348" stroke="#f4b400" stroke-width="8"/>
+  <line x1="220" y1="72" x2="220" y2="348" stroke="#fff" stroke-width="5" opacity=".9"/>
+  <line x1="500" y1="72" x2="500" y2="348" stroke="#fff" stroke-width="5" opacity=".9"/>
+  <line x1="80" y1="210" x2="220" y2="210" stroke="#fff" stroke-width="5" opacity=".9"/>
+  <line x1="500" y1="210" x2="640" y2="210" stroke="#fff" stroke-width="5" opacity=".9"/>
+  <rect x="220" y="72" width="140" height="276" fill="#f4b400" opacity=".25"/>
+  <rect x="360" y="72" width="140" height="276" fill="#f4b400" opacity=".25"/>
+  <text x="290" y="196" text-anchor="middle" font-family="Inter,Arial" font-weight="700" font-size="22" fill="#fff">Kitchen</text>
+  <text x="430" y="196" text-anchor="middle" font-family="Inter,Arial" font-weight="700" font-size="22" fill="#fff">Kitchen</text>
+  <path d="M116 310 C154 260 194 238 218 228" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+  <path d="M218 228 l-18 -3 l9 17" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="116" cy="310" r="11" fill="#f4b400" stroke="#fff" stroke-width="4"/>
+  <text x="120" y="42" font-family="Inter,Arial" font-size="16" font-weight="700" fill="#1d2421">Serve deep, move forward, respect the non-volley zone</text>
+</svg>

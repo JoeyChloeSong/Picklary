@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="900" viewBox="0 0 400 500" role="img" aria-labelledby="title desc">
+<title id="title">Paddletek Tempest Wave Pro v3 illustrated paddle card</title>
+<desc id="desc">A stylized non-photographic product card created for Picklary.</desc>
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#43aa8b"/><stop offset="1" stop-color="#1e6f5c"/></linearGradient>
+  <radialGradient id="spot" cx="50%" cy="38%" r="65%"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="13" flood-color="#14231f" flood-opacity=".22"/></filter>
+  <style>
+    .brand{font:700 20px Arial,sans-serif;letter-spacing:.12em;fill:#ffffff;text-anchor:middle}
+    .model{font:800 22px Arial,sans-serif;fill:#ffffff;text-anchor:middle}
+    .small{font:700 11px Arial,sans-serif;letter-spacing:.10em;fill:#e8fff8;text-anchor:middle;opacity:.9}
+    .price{font:900 25px Arial,sans-serif;fill:#1b2a26;text-anchor:middle}
+  </style>
+</defs>
+<rect width="400" height="500" rx="28" fill="#f6fbf7"/>
+<rect x="20" y="20" width="360" height="460" rx="24" fill="#ffffff" stroke="#d9e8df"/>
+<g filter="url(#shadow)">
+  <rect x="127.5" y="58" width="145" height="230" rx="42" fill="url(#g)"/>
+  <rect x="127.5" y="58" width="145" height="230" rx="42" fill="url(#spot)"/>
+  <path d="M145.5 90 C 177.5 66, 222.5 66, 254.5 90" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="3"/>
+  <rect x="174" y="282" width="52" height="128" rx="20" fill="#2c2f31"/>
+  <rect x="179" y="291" width="42" height="110" rx="17" fill="#3d4448"/>
+  <path d="M183 304 h34 M183 326 h34 M183 348 h34 M183 370 h34" stroke="#eaf4f1" stroke-opacity=".28" stroke-width="3"/>
+</g>
+<text x="200" y="112" class="brand">PADDLETEK</text>
+<text x="200" y="170" class="model">Tempest Wave Pro</text><text x="200" y="196" class="model">v3</text>
+<text x="200" y="262" class="small">CONTROL · TRADITIONAL</text>
+<rect x="105" y="405" width="190" height="48" rx="24" fill="#f2b84b"/>
+<text x="200" y="437" class="price">$179.99</text>
+<text x="200" y="382" class="small" fill="#1e6f5c">CONTROL · TOUCH · FORGIVENESS</text>
+</svg>

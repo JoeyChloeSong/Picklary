@@ -1011,13 +1011,51 @@ ${featured.length ? `<section class="band band--alt">
 }
 
 function renderLevelsIndex(loc) {
+  const L = (en, ko) => (loc === 'ko' ? ko : en);
+  const explainer = `
+<section class="band"><div class="wrap narrow">
+  <h2>${esc(L('Pickleball levels 2.0 to 5.0: an overview', '피클볼 2.0~5.0 레벨 개요'))}</h2>
+  <p>${esc(L('Levels are a useful shorthand for skill, but they are general descriptions, not official cut-offs. The real, portable rating is DUPR, calculated from your logged matches. Use the bands below to orient yourself, then confirm with a self-check and real matches.', '레벨은 실력을 가리키는 유용한 약칭이지만, 공식 기준이 아니라 일반적 설명입니다. 진짜이자 이동 가능한 레이팅은 기록된 경기로 산출되는 DUPR입니다. 아래 구간으로 방향을 잡은 뒤 자가진단과 실제 경기로 확인하세요.'))} <a href="${link(loc, 'what-is-dupr/')}">${esc(L('What is DUPR?', 'DUPR란?'))}</a></p>
+  <ul>
+    <li>${esc(L('2.0\u20132.5 (beginner): learning the rules, serve, return, and kitchen; rallies are short and consistency is the main gap.', '2.0~2.5 (입문): 규칙·서브·리턴·키친을 배우는 단계; 랠리가 짧고 일관성이 주된 과제.'))}</li>
+    <li>${esc(L('3.0 (advanced beginner): dependable serve and return, medium rallies, and getting to the kitchen, but the third-shot drop and dinks are inconsistent under pressure.', '3.0 (고급 입문): 서브·리턴이 믿을 만하고 중간 랠리를 이어가며 키친에 도달하지만, 세 번째 샷 드롭과 딩크가 압박 속에서 들쭉날쭉.'))}</li>
+    <li>${esc(L('3.5 (intermediate): a reliable drop, low dinks under pressure, resets, better positioning, and noticeably fewer unforced errors.', '3.5 (중급): 믿을 만한 드롭, 압박 속 낮은 딩크, 리셋, 더 나은 포지셔닝, 눈에 띄게 적은 범실.'))}</li>
+    <li>${esc(L('4.0 (advanced): controls pace, mixes drives and drops, stays patient at the kitchen, and targets deliberately.', '4.0 (상급): 템포를 조절하고 드라이브와 드롭을 섞으며, 키친에서 인내하고 의도적으로 공략.'))}</li>
+    <li>${esc(L('4.5\u20135.0 (highly skilled): precise, strategic, and consistent under real pressure, with few weaknesses to exploit.', '4.5~5.0 (고숙련): 정밀하고 전략적이며 실전 압박 속에서도 일관되고, 파고들 약점이 거의 없음.'))}</li>
+  </ul>
+
+  <h2>${esc(L('3.0 vs 3.5: the difference', '3.0과 3.5의 차이'))}</h2>
+  <p>${esc(L('The jump is not about hitting harder; it is about doing the right thing more often. A 3.5 player keeps dinks low under pressure, has a dependable third-shot drop, resets fast balls instead of popping them up, and simply misses less.', '도약은 더 세게 치는 게 아니라 옳은 선택을 더 자주 하는 것입니다. 3.5는 압박 속에서도 딩크를 낮게 유지하고, 믿을 만한 세 번째 샷 드롭을 갖고, 빠른 공을 띄우지 않고 리셋하며, 단지 덜 실수합니다.'))} <a href="${link(loc, 'what-does-a-dupr-3-0-player-look-like/')}">${esc(L('What a 3.0 player looks like', '3.0은 어떤 모습일까'))}</a> · <a href="${link(loc, 'pickleball-3-0-to-3-5-improvement-plan/')}">${esc(L('3.0 to 3.5 plan', '3.0→3.5 플랜'))}</a></p>
+
+  <h2>${esc(L('3.5 vs 4.0: the difference', '3.5와 4.0의 차이'))}</h2>
+  <p>${esc(L('At 4.0 the shots are already there; what changes is patience, reliable resets, deliberate targeting, a drop-and-drive mix, and a team plan. The 3.5-to-4.0 jump is mostly about unlearning a few habits.', '4.0에선 샷은 이미 갖춰져 있고, 바뀌는 것은 인내·믿을 만한 리셋·의도적 타깃팅·드롭과 드라이브 혼합·팀 계획입니다. 3.5→4.0 도약은 대부분 몇 가지 습관을 버리는 것입니다.'))} <a href="${link(loc, 'pickleball-3-5-to-4-0-habits-to-fix/')}">${esc(L('3.5 to 4.0: habits to fix', '3.5→4.0: 고쳐야 할 습관'))}</a></p>
+
+  <h2>${esc(L('Common mistakes by level', '레벨별 자주 하는 실수'))}</h2>
+  <ul>
+    <li>${esc(L('2.5: missing too many serves and returns, and letting rallies end as soon as the ball slows.', '2.5: 서브·리턴을 너무 많이 놓치고, 공이 느려지는 순간 랠리를 끝냄.'))}</li>
+    <li>${esc(L('3.0: driving every third shot and hoping, and speeding up balls too early.', '3.0: 모든 세 번째 샷을 드라이브하고 운에 맡기며, 너무 일찍 공을 빠르게 침.'))}</li>
+    <li>${esc(L('3.5: popping resets up and hitting predictable, aimless dinks and returns.', '3.5: 리셋을 띄우고, 예측 가능하고 목적 없는 딩크·리턴을 침.'))}</li>
+    <li>${esc(L('4.0: freelancing without a team plan and attacking balls that are not truly attackable.', '4.0: 팀 계획 없이 즉흥적으로 하고, 진짜 공격할 수 없는 공을 공격함.'))}</li>
+  </ul>
+
+  <h2>${esc(L('Recommended practice by level', '레벨별 추천 연습'))}</h2>
+  <ul>
+    <li>${esc(L('2.5: groove a dependable serve and return, and a simple routine.', '2.5: 믿을 만한 서브·리턴과 단순한 루틴을 몸에 붙이기.'))} <a href="${link(loc, 'serve-and-return-basics/')}">${esc(L('Serve & return', '서브와 리턴'))}</a> · <a href="${link(loc, 'first-30-days-practice-routine/')}">${esc(L('First 30 days', '첫 30일'))}</a></li>
+    <li>${esc(L('3.0: build the third-shot drop and patient dinking.', '3.0: 세 번째 샷 드롭과 인내심 있는 딩크 쌓기.'))} <a href="${link(loc, 'the-third-shot-drop-explained/')}">${esc(L('Third-shot drop', '세 번째 샷 드롭'))}</a> · <a href="${link(loc, 'dinking-fundamentals/')}">${esc(L('Dinking', '딩크'))}</a></li>
+    <li>${esc(L('3.5: drill resets under pressure and pair positioning.', '3.5: 압박 속 리셋과 한 쌍 포지셔닝 드릴.'))} <a href="${link(loc, 'doubles-positioning-basics/')}">${esc(L('Doubles positioning', '복식 포지셔닝'))}</a></li>
+    <li>${esc(L('4.0: refine targeting, shot selection, and team strategy.', '4.0: 타깃팅·샷 선택·팀 전략 다듬기.'))}</li>
+  </ul>
+
+  <p class="level-index-cta"><a class="btn btn--primary" href="${link(loc, 'dupr-self-check/')}">${esc(L('Not sure where you fit? Take the DUPR self-check →', '내 레벨이 헷갈리나요? DUPR 자가진단 →'))}</a></p>
+</div></section>`;
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: tt(loc, 'level.indexTitle') }])}
 <section class="page-head page-head--visual"><div class="wrap two-col two-col--wide">
   <div><p class="page-head__eyebrow">${esc(tt(loc, 'pathway.label'))}</p><h1>${esc(tt(loc, 'level.indexTitle'))}</h1><p class="page-head__intro">${esc(tt(loc, 'level.indexIntro'))}</p><p class="level-index-cta"><a class="btn btn--primary" href="${link(loc, 'dupr-self-check/')}">${esc(loc === 'ko' ? '내 레벨 자가진단 시작 →' : 'Try the DUPR self-check →')}</a></p></div>
   ${visualFigure(loc, 'dupr')}
 </div></section>
 <section class="band"><div class="wrap">${levelGrid(loc)}</div></section>
-<section class="band band--alt"><div class="wrap two-col two-col--wide"><div><h2>DUPR</h2><p>${esc(loc === 'ko' ? 'DUPR가 무엇인지 먼저 이해하면 레벨 선택과 목표 설정이 훨씬 쉬워집니다.' : 'Understanding DUPR first makes level selection and goal setting easier.')}</p><a class="btn btn--primary" href="${link(loc, 'what-is-dupr/')}">${esc(tt(loc, 'nav.dupr'))}</a></div>${visualFigure(loc, 'court')}</div></section>`;
+<section class="band band--alt"><div class="wrap two-col two-col--wide"><div><h2>DUPR</h2><p>${esc(loc === 'ko' ? 'DUPR가 무엇인지 먼저 이해하면 레벨 선택과 목표 설정이 훨씬 쉬워집니다.' : 'Understanding DUPR first makes level selection and goal setting easier.')}</p><a class="btn btn--primary" href="${link(loc, 'what-is-dupr/')}">${esc(tt(loc, 'nav.dupr'))}</a></div>${visualFigure(loc, 'court')}</div></section>
+${explainer}`;
   return layout({ loc, rel: 'level/', title: tt(loc, 'level.indexTitle'), description: tt(loc, 'level.indexIntro'), bodyHtml: body });
 }
 

@@ -1,0 +1,49 @@
+{
+  "id": "2026-06-27-usap-equipment-paddle-list-e860c3d6",
+  "status": "draft",
+  "type": "rules",
+  "priority": "critical",
+  "sourceId": "usap-equipment-paddle-list",
+  "sourceName": "USA Pickleball approved paddle list",
+  "sourceUrl": "https://equipment.usapickleball.org/paddle-list/",
+  "fetchedAt": "2026-06-27T14:06:09.603Z",
+  "detectedAt": "2026-06-27",
+  "change": "first-scan-baseline",
+  "title": "[Baseline saved] USA Pickleball approved paddle list monitoring started",
+  "titleKo": "[기준 저장] USA Pickleball approved paddle list 모니터링 시작",
+  "summary": "USA Pickleball approved paddle list has been registered as an automation source. Future changes will create review drafts.",
+  "summaryKo": "USA Pickleball approved paddle list 페이지를 자동 업데이트 소스로 등록했습니다. 이후 페이지 변경이 감지되면 검수용 초안이 생성됩니다.",
+  "action": "Open the source, verify the exact facts, rewrite in your own words, then approve.",
+  "actionKo": "원문을 열어 정확한 사실을 확인하고, 직접 쓴 문장으로 수정한 뒤 승인하세요.",
+  "tags": [
+    "approved paddle list",
+    "decertified paddles",
+    "newly added paddles",
+    "tournament legality"
+  ],
+  "tagsKo": [
+    "approved paddle list",
+    "decertified paddles",
+    "newly added paddles",
+    "tournament legality"
+  ],
+  "verificationQuestions": [
+    "What exactly changed compared with the previous scan?",
+    "Is this an official source or a third-party listing?",
+    "Does the update affect players immediately, or is it only an announcement?",
+    "Do we need to update an existing PickleLevel page?"
+  ],
+  "verificationQuestionsKo": [
+    "이전 스캔과 비교해 실제로 무엇이 바뀌었나요?",
+    "공식 출처인가요, 제3자 안내 페이지인가요?",
+    "선수/대회 참가자에게 즉시 영향을 주는 변경인가요, 단순 공지인가요?",
+    "PickleLevel의 기존 페이지를 수정해야 하나요?"
+  ],
+  "rawSnapshot": {
+    "title": "USA Pickleball approved paddle list",
+    "h1": "",
+    "description": "/* Original: https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic|Nunito+Sans:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic|Public+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&#038;subset=cyrillic,cyrillic-ext,greek,greek-ext,hebrew,latin,latin",
+    "hash": "89a4401aa3e3c386e57157e0f498e2e4cc9c3104c1458c0176628db6c90b28d4",
+    "previousHash": null
+  }
+}

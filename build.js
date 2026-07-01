@@ -393,7 +393,7 @@ function layout(opts) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css?v=mobile-interface-parity-20260701">
   ${jsonldTags}
   ${adsenseTags}
 </head>
@@ -404,7 +404,7 @@ function layout(opts) {
 ${opts.bodyHtml}
   </main>
   ${footer(loc)}
-  <script src="/assets/js/site.js" defer></script>
+  <script src="/assets/js/site.js?v=mobile-interface-parity-20260701" defer></script>
 </body>
 </html>`;
 }

@@ -787,7 +787,7 @@
   var courtFlat = root.querySelector(".court-flat");
   var courtIso = root.querySelector(".court-iso");
   var courtToggle = root.querySelector("[data-court-toggle]");
-  var courtMode = "iso";
+  var courtMode = (window.matchMedia && window.matchMedia("(max-width: 760px)").matches) ? "flat" : "iso";
   var nextBtn = root.querySelector("[data-q-next]");
   var backBtn = root.querySelector("[data-q-back]");
   var promptEl = root.querySelector("[data-q-prompt]");
@@ -1029,7 +1029,12 @@
     if (!z.hasAttribute("aria-pressed")) z.setAttribute("aria-pressed", "false");
   });
   if (courtToggle) {
-    courtToggle.addEventListener("click", function () {
+    var lastCourtToggle = 0;
+    function toggleCourtView(e) {
+      var now = Date.now();
+      if (now - lastCourtToggle < 320) { if (e) e.preventDefault(); return; }
+      lastCourtToggle = now;
+      if (e) { e.preventDefault(); e.stopPropagation(); }
       courtMode = courtMode === "iso" ? "flat" : "iso";
       var isoOn = courtMode === "iso";
       if (courtFlat) courtFlat.style.display = isoOn ? "none" : "";
@@ -1039,7 +1044,10 @@
       var a = answers[pos];
       zoneEls.forEach(function (z) { var on = a && a.zone === z.getAttribute("data-zone"); z.classList.toggle("is-selected", on); z.setAttribute("aria-pressed", on ? "true" : "false"); });
       drawScene(served[pos]);
-    });
+    }
+    courtToggle.addEventListener("click", toggleCourtView);
+    courtToggle.addEventListener("touchend", toggleCourtView, { passive: false });
+    courtToggle.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") toggleCourtView(e); });
   }
 
   shotBtns.forEach(function (b) { b.addEventListener("click", function () { answers[pos].shot = b.getAttribute("data-val"); shotBtns.forEach(function (x) { x.classList.toggle("is-selected", x === b); }); updateNext(); }); });

@@ -1,0 +1,49 @@
+{
+  "id": "2026-07-01-mlp-standings-3c07cd44",
+  "status": "draft",
+  "type": "results",
+  "priority": "high",
+  "sourceId": "mlp-standings",
+  "sourceName": "Major League Pickleball standings",
+  "sourceUrl": "https://majorleaguepickleball.co/standings/",
+  "fetchedAt": "2026-07-01T15:11:48.923Z",
+  "detectedAt": "2026-07-01",
+  "change": "first-scan-baseline",
+  "title": "[Baseline saved] Major League Pickleball standings monitoring started",
+  "titleKo": "[기준 저장] Major League Pickleball standings 모니터링 시작",
+  "summary": "Major League Pickleball standings has been registered as an automation source. Future changes will create review drafts.",
+  "summaryKo": "Major League Pickleball standings 페이지를 자동 업데이트 소스로 등록했습니다. 이후 페이지 변경이 감지되면 검수용 초안이 생성됩니다.",
+  "action": "Open the source, verify the exact facts, rewrite in your own words, then approve.",
+  "actionKo": "원문을 열어 정확한 사실을 확인하고, 직접 쓴 문장으로 수정한 뒤 승인하세요.",
+  "tags": [
+    "standings",
+    "season records",
+    "playoff race",
+    "team results"
+  ],
+  "tagsKo": [
+    "standings",
+    "season records",
+    "playoff race",
+    "team results"
+  ],
+  "verificationQuestions": [
+    "What exactly changed compared with the previous scan?",
+    "Is this an official source or a third-party listing?",
+    "Does the update affect players immediately, or is it only an announcement?",
+    "Do we need to update an existing PickleLevel page?"
+  ],
+  "verificationQuestionsKo": [
+    "이전 스캔과 비교해 실제로 무엇이 바뀌었나요?",
+    "공식 출처인가요, 제3자 안내 페이지인가요?",
+    "선수/대회 참가자에게 즉시 영향을 주는 변경인가요, 단순 공지인가요?",
+    "PickleLevel의 기존 페이지를 수정해야 하나요?"
+  ],
+  "rawSnapshot": {
+    "title": "Standings - Major League Pickleball",
+    "h1": "",
+    "description": "Standings - Major League Pickleball Skip to main content Skip to footer SCHEDULE 2026 Season Season Overview Dallas: May 22 &#8211; 25 Columbus: May 28 &#8211; 31 St. Louis: June 4 &#8211; 7 Austin: June 11 &#8211; 14 St. Petersburg: June 17 &#8211; 21 New York: June 25 &#8211; 28 Grand Rapids: July 8 &#8211; 12 San Diego: July 16-19 Chicago: July 23 &#8211; 26 Orlando: July 30 &#8211; Aug 2 Dallas (Playoffs): Aug 7-9 Newport Beach (Playoffs): Aug 14-16 New York City (Finals)",
+    "hash": "08cf53ebfe6bca5ea0211bd046180a7a99a36c14bedd271db961ecb249adf0f3",
+    "previousHash": null
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "ppa-tour-schedule": {
+    "hash": "0f27435e14dba6b69b6fb2e4a150f58193982680e897a16139a5a435376cfe17",
+    "lastFetchedAt": "2026-07-01T15:11:33.368Z",
+    "lastChangedAt": "2026-07-01T15:11:33.368Z",
+    "title": "Upcoming Tour Stops | PPA Tour",
+    "description": "The official professional pickleball tournament schedule of the PPA Tour, comprising 25 tour stops throughout the United States.",
+    "url": "https://ppatour.com/schedule/"
+  },
+  "ppa-challenger-schedule": {
+    "hash": "8dc585eadfbd5d5d9f83039ae94cb0ddb9be41d925c444fea07f82d90f7cb872",
+    "lastFetchedAt": "2026-07-01T15:11:37.100Z",
+    "lastChangedAt": "2026-07-01T15:11:37.100Z",
+    "title": "Upcoming Tour Stops | PPA Challengers",
+    "description": "The official professional pickleball tournament schedule of the PPA Tour, comprising 25 tour stops throughout the United States.",
+    "url": "https://ppachallenger.com/schedule/"
+  },
+  "major-league-pickleball": {
+    "hash": "139b251172742ba52f786bf5913b46fe42db3bfc29b602980632000d549cb150",
+    "lastFetchedAt": "2026-07-01T15:11:44.377Z",
+    "lastChangedAt": "2026-07-01T15:11:44.377Z",
+    "title": "Major League Pickleball",
+    "description": "Explore Major League Pickleball for the latest events, standings, and news. Follow your favorite teams and players in exciting matches and tournaments.",
+    "url": "https://majorleaguepickleball.co/"
+  },
+  "mlp-standings": {
+    "hash": "08cf53ebfe6bca5ea0211bd046180a7a99a36c14bedd271db961ecb249adf0f3",
+    "lastFetchedAt": "2026-07-01T15:11:48.923Z",
+    "lastChangedAt": "2026-07-01T15:11:48.923Z",
+    "title": "Standings - Major League Pickleball",
+    "description": "Standings - Major League Pickleball Skip to main content Skip to footer SCHEDULE 2026 Season Season Overview Dallas: May 22 &#8211; 25 Columbus: May 28 &#8211; 31 St. Louis: June 4 &#8211; 7 Austin: June 11 &#8211; 14 St. Petersburg: June 17 &#8211; 21 New York: June 25 &#8211; 28 Grand Rapids: July 8 &#8211; 12 San Diego: July 16-19 Chicago: July 23 &#8211; 26 Orlando: July 30 &#8211; Aug 2 Dallas (Playoffs): Aug 7-9 Newport Beach (Playoffs): Aug 14-16 New York City (Finals)",
+    "url": "https://majorleaguepickleball.co/standings/"
+  },
+  "dupr-rankings": {
+    "hash": "58c221d79d419394f8864f453339e44a075214717a6071284b0eeb8c313fc471",
+    "lastFetchedAt": "2026-07-01T15:11:50.295Z",
+    "lastChangedAt": "2026-07-01T15:11:50.295Z",
+    "title": "DUPR Top Rankings",
+    "description": "DUPR Top Rankings Ratings Search Players How It Works How to Get Rated Pickleball Rules Support Rankings Top Ranked Players Continental Rankings Club Rankings College Rankings Events Explore Events High School College College Ambassadors Minor League Pickleball Coaching Find a Coach Become a DUPR Coach Company Our Partners Pickleball Market Consumer Habits Careers Blog Start a Club LOGIN SIGN UP DUPR RANKINGS Updated: May 18, 2026 Open Senior Junior Men&#x27;s Doubles Women&#",
+    "url": "https://www.dupr.com/rankings"
+  },
+  "usa-pickleball-rules": {
+    "hash": "98267a1f0862fa073b7f819f27073f53fe1259efd686fdd8dd427ffb34a3fc5a",
+    "lastFetchedAt": "2026-07-01T15:11:53.106Z",
+    "lastChangedAt": "2026-07-01T15:11:53.106Z",
+    "title": "Official USA Pickleball Rulebook",
+    "description": "The Official USA Pickleball Rulebook is the definitive resource for how pickleball is played. All official play should follow the USA Pickleball Rulebook.",
+    "url": "https://usapickleball.org/what-is-pickleball/official-rules/"
+  },
+  "usap-equipment-paddle-list": {
+    "hash": "82912b237bad3a1a954076aa978629fb6887256e06375b4d9c52a2076525aee5",
+    "lastFetchedAt": "2026-07-01T15:11:57.251Z",
+    "lastChangedAt": "2026-07-01T15:11:57.251Z",
+    "title": "Approved Pickleball Paddles | USA Pickleball",
+    "description": "These approved pickleball paddles have been certified by USA Pickleball for play in all USA Pickleball sanctioned tournaments.",
+    "url": "https://equipment.usapickleball.org/paddle-list/"
+  },
+  "upaa-rulebook": {
+    "hash": "f8d5f9e3d546049e52dbd67c8aead8e3e49b3d15a1a9e38fb47cac08af45ca85",
+    "lastFetchedAt": "2026-07-01T15:11:59.206Z",
+    "lastChangedAt": "2026-07-01T15:11:59.206Z",
+    "title": "Official Rulebook &#8211; UPA-A",
+    "description": "Official Rulebook &#8211; UPA-A Skip to content About Us Paddles Certification Information Stamp Artwork 2026 Checklist Certification Application Paddle Rules Approved Paddles Approved Paddles List De-Listed Paddles Feedback Governance Official Rulebook UPA-A Referee Affiliates News Blogs Contact Contact Us Get Updates ZH About Us Paddles Certification Information Stamp Artwork 2026 Checklist Certification Application Paddle Rules Approved Paddles Approved Paddles List De-Lis",
+    "url": "https://upaa.unitedpickleball.com/official-rulebook/"
+  },
+  "pickleball-review-score-template": {
+    "hash": "53273f32e390a02b1db98879a404ee4ef9128b99e966bbd7254377e67a9b5597",
+    "lastFetchedAt": "2026-07-01T15:12:00.407Z",
+    "lastChangedAt": "2026-07-01T15:12:00.407Z",
+    "title": "Manual reviewer score template",
+    "description": "[manual source] manual://automation/reviewer-score-template.csv",
+    "url": "manual://automation/reviewer-score-template.csv"
+  }
+}

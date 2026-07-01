@@ -1,0 +1,9 @@
+<svg viewBox="0 0 660 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pickleball skill illustration">
+<text x="30" y="34" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="21" font-weight="700" fill="#1d2421">Level 2.5</text><text x="30" y="50" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13" font-weight="500" fill="#5f6b66">Deep return · then get to the kitchen line</text>
+  <rect x="26" y="56" width="608" height="280" rx="16" fill="#eef3f0" stroke="#1E6F5C" stroke-width="3"/>
+  <line x1="330" y1="56" x2="330" y2="336" stroke="#14513f" stroke-width="3.2"/>
+  <line x1="270" y1="56" x2="270" y2="336" stroke="#1E6F5C" stroke-width="2" opacity="0.32"/>
+  <line x1="390" y1="56" x2="390" y2="336" stroke="#1E6F5C" stroke-width="2" opacity="0.32"/>
+  <line x1="26" y1="196" x2="270" y2="196" stroke="#1E6F5C" stroke-width="1.4" opacity="0.16"/>
+  <line x1="390" y1="196" x2="634" y2="196" stroke="#1E6F5C" stroke-width="1.4" opacity="0.16"/><path d="M 96 262 Q 331 34 566 130" fill="none" stroke="#F4B400" stroke-width="4" stroke-linecap="round"/><circle cx="566" cy="130" r="7" fill="#F4B400" stroke="#14513f" stroke-width="1.6"/><circle cx="96" cy="278" r="9" fill="#1E6F5C" stroke="#fff" stroke-width="2.4"/><line x1="116" y1="276" x2="262" y2="262" stroke="#475569" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="5 6"/><polygon points="262.0,262.0 253.7,267.6 252.8,258.1" fill="#475569"/><text x="70" y="250" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="14.5" font-weight="700" fill="#1d2421" text-anchor="start">Deep return</text><text x="150" y="304" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="14.5" font-weight="700" fill="#475569" text-anchor="start">Move up behind it</text>
+</svg>

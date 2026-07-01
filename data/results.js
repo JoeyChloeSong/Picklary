@@ -11,24 +11,36 @@
  *    reputable source and written your own summary.
  */
 module.exports = [
-  {
+    {
     id: 'r-2026-mlp', slug: '2026-mlp-season', status: 'published',
     event: 'Major League Pickleball 2026 (in progress)', eventKo: '메이저 리그 피클볼 2026 (진행 중)',
     tier: 'Team league', tierKo: '팀 리그',
-    dates: '2026 season — ongoing', datesKo: '2026 시즌 — 진행 중',
+    dates: '2026 season — May to August', datesKo: '2026 시즌 — 5~8월',
     location: 'Multiple U.S. host cities', locationKo: '미국 여러 개최 도시',
-    sourceName: 'MLP', sourceUrl: 'https://majorleaguepickleball.co/league-standings/',
-    checked: '2026-06-19',
-    summary: 'MLP’s team season runs through the summer in a multi-event format where standings points accumulate toward the playoffs. Through the early events the league has been defined by parity, with several different teams taking event titles.',
-    summaryKo: 'MLP 팀 시즌은 여름 내내 여러 이벤트로 진행되며, standings 포인트가 누적되어 플레이오프로 이어집니다. 초반 이벤트들은 “전력 평준화”가 특징으로, 여러 팀이 번갈아 이벤트 우승을 차지했습니다.',
+    sourceName: 'MLP', sourceUrl: 'https://majorleaguepickleball.co/standings/',
+    liveUrl: 'https://majorleaguepickleball.co/standings/', liveLabel: 'Live standings & New York scores', liveLabelKo: '라이브 순위·뉴욕 스코어',
+    checked: '2026-06-26',
+    summary: 'MLP’s 20-team coed league plays nine regular-season events from May to August, and standings points — not single-event wins — decide the 12-team playoff field. Five stops are complete and the New York event is underway; St. Louis and New Jersey have pulled clear at the top.',
+    summaryKo: 'MLP는 20개 코에드 팀이 5~8월 9개 정규 이벤트를 치르며, 단일 이벤트 우승이 아니라 standings 포인트로 12팀 플레이오프 진출이 정해집니다. 5개 대회가 끝나고 뉴욕 대회가 진행 중이며, St. Louis와 New Jersey가 선두권을 형성했습니다.',
+    winnersLabel: 'Event-by-event results (5 of 9 regular-season stops)', winnersLabelKo: '이벤트별 결과 (정규 9개 중 5개 완료)',
     winners: [
-      { division: 'Latest event — MLP Austin', divisionKo: '최근 이벤트 — MLP 오스틴', champ: 'New Jersey 5s' },
-      { division: 'Standings leader (early season)', divisionKo: '시즌 초반 standings 선두', champ: 'New Jersey 5s' },
-      { division: 'Week 1 — MLP Dallas', divisionKo: '1주차 — MLP 댈러스', champ: 'Los Angeles Mad Drops' }
+      { division: 'Dallas — May 22–25 (opener)', divisionKo: '댈러스 — 5/22–25 (개막)', champ: 'LA Mad Drops', note: 'Mad Drops lifted the first Super Sunday Belt.', noteKo: 'Mad Drops가 첫 Super Sunday 벨트 획득.' },
+      { division: 'Columbus — May 28–31', divisionKo: '콜럼버스 — 5/28–31', champ: 'New Jersey 5s', silver: 'St. Louis Shock', bronze: 'Columbus Sliders', note: '5s swept the Shock 3-0 (11-3, 11-8, 11-9); host Sliders took 3rd.', noteKo: '5s가 Shock를 3-0(11-3, 11-8, 11-9)으로 완파; 홈팀 Sliders 3위.' },
+      { division: 'St. Louis — June 4–7', divisionKo: '세인트루이스 — 6/4–7', champ: 'St. Louis Shock', silver: 'LA Mad Drops', note: 'Shock won 3-0, combined 33-9.', noteKo: 'Shock가 3-0(합산 33-9)으로 우승.' },
+      { division: 'Austin — June 11–14', divisionKo: '오스틴 — 6/11–14', champ: 'New Jersey 5s', note: '5s added a second title; the Shock and Mad Drops did not play this stop.', noteKo: '5s가 두 번째 우승; 이 대회에는 Shock·Mad Drops 불참.' },
+      { division: 'St. Petersburg — June 17–21', divisionKo: '세인트피터스버그 — 6/17–21', champ: 'St. Louis Shock', silver: 'LA Mad Drops', bronze: 'Brooklyn Pickleball Team', note: 'Shock beat the Mad Drops 3-0 (33-15) in the rubber match; Palm Beach 4th.', noteKo: 'Shock가 결승서 Mad Drops를 3-0(33-15)으로; Palm Beach 4위.' }
     ],
-    storylineTitle: 'Storyline', storylineTitleKo: '관전 포인트',
-    storyline: 'The New Jersey 5s recovered from a slow opening event to win MLP Austin and climb back atop the standings, going unbeaten across their last two events. With teams trading wins, playoff seeding is tight.',
-    storylineKo: '뉴저지 5s는 부진했던 개막 이벤트를 딛고 MLP 오스틴에서 우승하며 다시 standings 선두로 올라섰고, 최근 두 이벤트를 무패로 마쳤습니다. 팀들이 승리를 주고받으며 플레이오프 시드 경쟁이 치열합니다.'
+    standingsLabel: 'Title race so far', standingsLabelKo: '현재 타이틀 레이스',
+    standings: [
+      { team: 'St. Louis Shock', note: 'Won St. Louis and St. Pete; unbeaten in matches since late May and tracking toward a top-2 seed.', noteKo: 'St. Louis·St. Pete 우승; 5월 말 이후 경기 무패로 톱2 시드 유력.' },
+      { team: 'New Jersey 5s', note: 'Bounced back from a 4th-place opener to win Columbus and Austin, led by Anna Leigh Waters.', noteKo: '개막 4위에서 반등해 Columbus·Austin 우승, 애나 리 워터스가 견인.' },
+      { team: 'LA Mad Drops', note: 'Won the Dallas opener, then runner-up in St. Louis and St. Pete — swept by the Shock both times.', noteKo: 'Dallas 우승 후 St. Louis·St. Pete 준우승 — 두 번 모두 Shock에 스윕.' },
+      { team: 'Columbus Sliders', note: '2025 champions; added Tyra Black by trade for a four-deep Top-10 doubles lineup.', noteKo: '2025 챔피언; 트레이드로 Tyra Black을 더해 톱10 복식 4인 라인업 구성.' },
+      { team: 'Palm Beach Royals', note: 'Expansion side off to a strong debut behind Tyson McGuffin and Sofia Sewing.', noteKo: '신생팀이지만 타이슨 맥거핀·소피아 슈잉을 앞세워 호조의 데뷔.' }
+    ],
+    storylineTitle: 'Storyline — the Shock’s surge', storylineTitleKo: '관전 포인트 — Shock의 질주',
+    storyline: 'The St. Louis Shock have been the story of the summer, taking back-to-back titles in St. Louis and St. Pete and staying unbeaten in matches since late May behind Anna Bright, Kate Fahey, Gabe Tardio and Hayden Patriquin. New Jersey answered an early stumble with wins in Columbus and Austin, while the Mad Drops keep reaching finals only to meet the Shock. With the Mid-Season Tournament next (July 8–12, alongside the Beer City Open and featuring all 20 teams plus guest national squads), seeding for the expanded playoffs is still wide open.',
+    storylineKo: 'St. Louis Shock가 여름의 주인공입니다. St. Louis·St. Pete를 연달아 제패하고 5월 말 이후 경기 무패 행진을 이어가고 있죠(애나 브라이트·케이트 페이히·게이브 타르디오·헤이든 파트리퀸). New Jersey는 초반 부진을 Columbus·Austin 우승으로 만회했고, Mad Drops는 결승마다 Shock에 막혔습니다. 다음은 Mid-Season 토너먼트(7/8–12, Beer City Open 병행, 20개 팀+게스트 국가대표팀)이며, 확대된 플레이오프 시드는 아직 활짝 열려 있습니다.'
   },
   {
     id: 'r-2026-ppa-finals', slug: '2026-ppa-finals', status: 'published',

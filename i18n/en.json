@@ -4,19 +4,25 @@
   },
   "nav": {
     "home": "Home",
-    "guides": "Guides",
+    "guides": "Insights",
     "columns": "Columns",
     "brief": "The Brief",
     "about": "About",
     "contact": "Contact",
     "menu": "Menu",
-    "levelPathway": "Levels",
-    "paddles": "Paddles",
-    "players": "Pro Players",
+    "levelPathway": "Level Up",
+    "paddles": "Gear Lab",
+    "players": "Pro Scene",
     "highlights": "Highlights",
     "dupr": "DUPR",
     "rulesSkills": "Rules & Skills",
-    "boards": "Boards"
+    "boards": "Play Hub",
+    "blogs": "Off-court",
+    "levelUp": "Level Up",
+    "gearLab": "Gear Lab",
+    "proScene": "Pro Scene",
+    "playHub": "Play Hub",
+    "insights": "Insights"
   },
   "lang": {
     "label": "Language",
@@ -24,15 +30,15 @@
   },
   "hero": {
     "kicker": "Pickleball growth map",
-    "title": "Pick your level. Learn the skill. Choose the paddle. Share the highlight.",
-    "lead": "Picklary helps players choose a 2.0–5.0 pathway, learn rules and skills, compare popular paddles, study pro player profiles, and upload highlights for feedback.",
-    "ctaPrimary": "Choose my level",
-    "ctaSecondary": "Compare paddles",
-    "ctaTertiary": "Upload a highlight"
+    "title": "Level up your pickleball game, choose smarter gear, and find people to play with.",
+    "lead": "Picklary brings together level guides, DUPR self-checks, gear criteria, pro-scene context, and review-first community tools in one pickleball hub.",
+    "ctaPrimary": "Pick my level",
+    "ctaSecondary": "Explore Gear Lab",
+    "ctaTertiary": "Find people to play with"
   },
   "pathway": {
     "label": "DUPR pathway 2.0–5.0",
-    "note": "Choose your current level and follow the next skill, paddle, and highlight-feedback path."
+    "note": "Pick a level to see the next skill focus, gear clues, and practice path."
   },
   "section": {
     "categories": "Explore by topic",
@@ -154,14 +160,22 @@
     "home": "Home"
   },
   "side": {
-    "label": "Quick section navigation",
-    "title": "Quick pick",
-    "levels": "Levels",
-    "rules": "Rules",
+    "label": "Quick navigation",
+    "title": "Quick Moves",
+    "levels": "Level",
+    "rules": "Learn",
     "skills": "Skills",
-    "paddles": "Paddles",
-    "players": "Players",
-    "highlights": "Highlights"
+    "paddles": "Gear Lab",
+    "players": "Pros",
+    "highlights": "Highlights",
+    "start": "Start",
+    "play": "Play",
+    "explore": "Explore",
+    "selfCheck": "Self-check",
+    "dupr": "DUPR",
+    "gearLab": "Gear Lab",
+    "proScene": "Pro Scene",
+    "insights": "Insights"
   },
   "level": {
     "indexTitle": "Choose your pickleball level",
@@ -190,7 +204,7 @@
     "usedBy": "Used by / line",
     "reviewSignal": "Review signal",
     "approvalNote": "Prices, specs, and approved-equipment status can change. Treat this as a research dashboard and verify official retailer and equipment-list pages before purchase.",
-    "openFinder": "Use paddle finder",
+    "openFinder": "Paddle Finder",
     "viewDetails": "View details"
   },
   "players": {

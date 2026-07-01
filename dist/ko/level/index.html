@@ -1,6 +1,6 @@
 <!doctype html>
-<!-- Picklary build: 2026-06-22 00:12 UTC (brand=Picklary) -->
-<html lang="ko" dir="ltr">
+<!-- Picklary build: 2026-07-01 05:10 UTC (brand=Picklary) -->
+<html lang="ko" dir="ltr" data-theme="levels">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,17 +11,26 @@
   <link rel="alternate" hreflang="ko" href="https://picklary.com/ko/level/">
   <link rel="alternate" hreflang="en" href="https://picklary.com/en/level/">
   <link rel="alternate" hreflang="x-default" href="https://picklary.com/en/level/">
+  <link rel="alternate" type="application/rss+xml" title="Picklary" href="https://picklary.com/ko/feed.xml">
   <meta property="og:site_name" content="Picklary">
   <meta property="og:type" content="website">
   <meta property="og:title" content="내 피클볼 레벨 선택하기">
   <meta property="og:description" content="2.0부터 5.0까지 자신의 레벨을 고르면, 해당 단계에 맞는 스킬·드릴·패들 성향·추천 가이드를 볼 수 있습니다.">
   <meta property="og:url" content="https://picklary.com/ko/level/">
   <meta property="og:locale" content="ko">
+  <meta property="og:image" content="https://picklary.com/assets/icons/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="내 피클볼 레벨 선택하기">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="내 피클볼 레벨 선택하기">
   <meta name="twitter:description" content="2.0부터 5.0까지 자신의 레벨을 고르면, 해당 단계에 맞는 스킬·드릴·패들 성향·추천 가이드를 볼 수 있습니다.">
+  <meta name="twitter:image" content="https://picklary.com/assets/icons/og-default.png">
   <meta name="theme-color" content="#1E6F5C">
+  
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <link rel="mask-icon" href="/assets/icons/favicon.svg" color="#1E6F5C">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -34,11 +43,11 @@
 <header class="masthead">
   <div class="wrap masthead__inner">
     <a class="brand" href="/ko/" aria-label="Picklary — home">
-      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__mark" aria-hidden="true"><svg class="brand__logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="15" y="11" width="11" height="42" rx="5.5" fill="#1E6F5C"/><circle cx="37.5" cy="25.5" r="16" fill="#F4B400"/><circle cx="37.5" cy="25.5" r="2.16" fill="#155446"/><circle cx="45.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="41.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="33.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="29.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="33.50" cy="18.57" r="2.16" fill="#155446"/><circle cx="41.50" cy="18.57" r="2.16" fill="#155446"/></svg></span>
       <span class="brand__name">Picklary</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">메뉴</button>
-    <nav id="primary-nav" class="nav" aria-label="Primary"><a href="/ko/level/" class="is-active" aria-current="page">레벨별 성장</a><a href="/ko/paddles/">패들 랭킹</a><a href="/ko/players/">프로 선수</a><a href="/ko/tournaments/">대회정보</a><a href="/ko/updates/">업데이트센터</a><a href="/ko/boards/">게시판</a><a href="/ko/highlights/">하이라이트 배틀</a><a href="/ko/what-is-dupr/">DUPR란?</a><a href="/ko/categories/">가이드</a></nav>
+    <nav id="primary-nav" class="nav" aria-label="Primary"><a href="/ko/">홈</a><a href="/ko/level/" class="is-active" aria-current="page">레벨업</a><a href="/ko/gear/">패들/장비</a><a href="/ko/pro-scene/">선수·투어</a><a href="/ko/boards/">커뮤니티</a><a href="/ko/categories/">가이드</a></nav>
     <form class="lang" aria-label="언어">
       <span class="lang__icon" aria-hidden="true">🌐</span>
       <label class="visually-hidden" for="lang-select">언어 선택</label>
@@ -46,61 +55,71 @@
     </form>
   </div>
 </header>
-  <nav class="side-rail" aria-label="빠른 섹션 이동">
-    <span class="side-rail__title">빠른 선택</span>
-    <div class="side-rail__levels"><a href="/ko/level/2-0/">2.0</a><a href="/ko/level/2-5/">2.5</a><a href="/ko/level/3-0/">3.0</a><a href="/ko/level/3-5/">3.5</a><a href="/ko/level/4-0/">4.0</a><a href="/ko/level/4-5/">4.5</a><a href="/ko/level/5-0/">5.0</a></div>
-    <div class="side-rail__main"><a href="/ko/category/rules-and-getting-started/">규칙</a><a href="/ko/category/skills-and-drills/">스킬</a><a href="/ko/paddles/">패들</a><a href="/ko/players/">선수</a><a href="/ko/tournaments/">대회정보</a><a href="/ko/updates/">업데이트센터</a><a href="/ko/boards/dupr-faq/">레벨별 FAQ</a><a href="/ko/boards/qna/">상황별 Q&amp;A</a><a href="/ko/highlights/">영상</a></div>
+  <nav class="side-rail" aria-label="빠른 이동">
+    <span class="side-rail__title">빠른 메뉴</span>
+    <div class="side-rail__group side-rail__group--levels"><span class="side-rail__group-title">레벨</span><div class="side-rail__levels"><a href="/ko/level/2-0/">2.0</a><a href="/ko/level/2-5/">2.5</a><a href="/ko/level/3-0/">3.0</a><a href="/ko/level/3-5/">3.5</a><a href="/ko/level/4-0/">4.0</a><a href="/ko/level/4-5/">4.5</a><a href="/ko/level/5-0/">5.0</a></div></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">시작하기</span><a href="/ko/dupr-self-check/">자가진단</a><a href="/ko/what-is-dupr/">DUPR</a></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">커뮤니티</span><a href="/ko/boards/friends/">친구찾기</a><a href="/ko/boards/partners/">파트너찾기</a><a href="/ko/boards/tournaments/">대회찾기</a><a href="/ko/boards/coaches/">코치찾기</a></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">둘러보기</span><a href="/ko/gear/">패들/장비</a><a href="/ko/pro-scene/">선수·투어</a><a href="/ko/categories/">가이드</a></div>
   </nav>
   <main id="main">
 <nav class="crumbs" aria-label="Breadcrumb"><ol class="wrap"><li aria-current="page">홈</li><li aria-current="page">내 피클볼 레벨 선택하기</li></ol></nav>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://picklary.com/ko/"},{"@type":"ListItem","position":2,"name":"내 피클볼 레벨 선택하기"}]}</script>
 <section class="page-head page-head--visual"><div class="wrap two-col two-col--wide">
-  <div><p class="page-head__eyebrow">DUPR pathway 2.0~5.0</p><h1>내 피클볼 레벨 선택하기</h1><p class="page-head__intro">2.0부터 5.0까지 자신의 레벨을 고르면, 해당 단계에 맞는 스킬·드릴·패들 성향·추천 가이드를 볼 수 있습니다.</p><p class="level-index-cta"><a class="btn btn--primary" href="/ko/dupr-self-check/">내 레벨 자가진단 시작 →</a></p></div>
-  <figure class="visual-card "><img src="/assets/img/dupr-ladder.svg" alt="2.0부터 5.0까지의 성장 레벨 사다리." loading="lazy"><figcaption>2.0부터 5.0까지의 성장 레벨 사다리.</figcaption></figure>
+  <div><p class="page-head__eyebrow">DUPR 레벨 경로 2.0~5.0</p><h1>내 피클볼 레벨 선택하기</h1><p class="page-head__intro">2.0부터 5.0까지 자신의 레벨을 고르면, 해당 단계에 맞는 스킬·드릴·패들 성향·추천 가이드를 볼 수 있습니다.</p><p class="level-index-cta"><a class="btn btn--dupr" href="/ko/dupr-self-check/">DUPR 자가진단 →</a></p><div class="dupr-teaser" aria-label="왜 해볼 만할까요?">
+    <div class="dupr-teaser__icon" aria-hidden="true">◎</div>
+    <div>
+      <p class="dupr-teaser__eyebrow">왜 해볼 만할까요?</p>
+      <h3>10개 코트 상황으로 내 판단 습관을 확인합니다.</h3>
+      <p>공식 점수는 아니지만, 3D 코트 상황에서 어떤 샷을 고르는지 보고 다음 연습 포인트를 바로 잡을 수 있습니다.</p>
+      <p class="dupr-teaser__chips"><span>10문항</span><span>3D 코트</span><span>연습 포인트</span></p>
+    </div>
+  </div></div>
+  <figure class="visual-card "><img src="/assets/img/level-up-ladder-simple.webp" width="1581" height="966" alt="2.0부터 5.0까지의 성장 레벨 사다리." loading="lazy"><figcaption>2.0부터 5.0까지의 성장 레벨 사다리.</figcaption></figure>
 </div></section>
-<section class="band"><div class="wrap"><div class="level-grid"><article class="level-card">
+<section class="band"><div class="wrap"><div class="level-grid"><article class="level-card" style="--lvl:#1E6F5C;--lvl-on:#ffffff;--lvl-tint:#e8f1ee;">
     <a href="/ko/level/2-0/" class="level-card__link">
       <span class="level-card__badge">2.0</span>
       <h3>레벨 2.0: 완전 입문 기초</h3>
       <p>규칙, 키친, 기본 컨트롤을 배우는 입문자를 위한 출발 경로입니다.</p>
       <div class="pills pills--compact"><span class="pill">서브와 리턴 기본</span><span class="pill">준비 자세</span><span class="pill">투바운스 규칙</span></div>
     </a>
-  </article><article class="level-card">
+  </article><article class="level-card" style="--lvl:#2E9E8C;--lvl-on:#ffffff;--lvl-tint:#e4f4f0;">
     <a href="/ko/level/2-5/" class="level-card__link">
       <span class="level-card__badge">2.5</span>
       <h3>레벨 2.5: 안정성 만들기</h3>
       <p>입문 규칙 이해에서 안정적인 랠리 구성으로 넘어가는 연결 단계입니다.</p>
       <div class="pills pills--compact"><span class="pill">깊은 리턴</span><span class="pill">기본 딩크</span><span class="pill">초기 스플릿 스텝</span></div>
     </a>
-  </article><article class="level-card">
+  </article><article class="level-card" style="--lvl:#F4B400;--lvl-on:#1d2421;--lvl-tint:#fdf3d4;">
     <a href="/ko/level/3-0/" class="level-card__link">
       <span class="level-card__badge">3.0</span>
       <h3>레벨 3.0: 랠리가 되는 플레이어</h3>
       <p>공을 넘기는 것은 가능하지만 승점 구조가 필요한 플레이어를 위한 단계입니다.</p>
-      <div class="pills pills--compact"><span class="pill">3rd shot drop 입문</span><span class="pill">크로스 딩크</span><span class="pill">전환구역 리셋</span></div>
+      <div class="pills pills--compact"><span class="pill">3구 드롭 입문</span><span class="pill">크로스 딩크</span><span class="pill">전환구역 리셋</span></div>
     </a>
-  </article><article class="level-card">
+  </article><article class="level-card" style="--lvl:#E0822E;--lvl-on:#ffffff;--lvl-tint:#fcefe2;">
     <a href="/ko/level/3-5/" class="level-card__link">
       <span class="level-card__badge">3.5</span>
       <h3>레벨 3.5: 패턴과 압박</h3>
       <p>중립 랠리를 유리한 상황으로 바꾸는 패턴이 필요한 단계입니다.</p>
       <div class="pills pills--compact"><span class="pill">딩크 패턴</span><span class="pill">스피드업 선택</span><span class="pill">카운터 블록</span></div>
     </a>
-  </article><article class="level-card">
+  </article><article class="level-card" style="--lvl:#0ea5e9;--lvl-on:#ffffff;--lvl-tint:#e0f2fe;">
     <a href="/ko/level/4-0/" class="level-card__link">
       <span class="level-card__badge">4.0</span>
       <h3>레벨 4.0: 고급 더블스 전략</h3>
       <p>샷 품질, 회복, 전술적 절제가 매 랠리에서 중요한 경쟁 단계입니다.</p>
       <div class="pills pills--compact"><span class="pill">압박 리셋</span><span class="pill">카운터 교환</span><span class="pill">드라이브+드롭 패턴</span></div>
     </a>
-  </article><article class="level-card">
+  </article><article class="level-card" style="--lvl:#2563eb;--lvl-on:#ffffff;--lvl-tint:#dbeafe;">
     <a href="/ko/level/4-5/" class="level-card__link">
       <span class="level-card__badge">4.5</span>
       <h3>레벨 4.5: 토너먼트 압박</h3>
       <p>실수를 줄이고 상대별 플랜이 필요한 상급 경쟁자 단계입니다.</p>
       <div class="pills pills--compact"><span class="pill">상대 분석 노트</span><span class="pill">서브-리턴 배치</span><span class="pill">저실수 압박</span></div>
     </a>
-  </article><article class="level-card">
+  </article><article class="level-card" style="--lvl:#7c3aed;--lvl-on:#ffffff;--lvl-tint:#ede9fe;">
     <a href="/ko/level/5-0/" class="level-card__link">
       <span class="level-card__badge">5.0</span>
       <h3>레벨 5.0: 프로 패턴 연구</h3>
@@ -108,7 +127,7 @@
       <div class="pills pills--compact"><span class="pill">프로 패턴 연구</span><span class="pill">카운터 위장</span><span class="pill">고급 파트너 시스템</span></div>
     </a>
   </article></div></div></section>
-<section class="band band--alt"><div class="wrap two-col two-col--wide"><div><h2>DUPR</h2><p>DUPR가 무엇인지 먼저 이해하면 레벨 선택과 목표 설정이 훨씬 쉬워집니다.</p><a class="btn btn--primary" href="/ko/what-is-dupr/">DUPR란?</a></div><figure class="visual-card "><img src="/assets/img/court-zones.svg" alt="코트 구역: 서브 박스, 네트, 키친 라인을 한눈에 봅니다." loading="lazy"><figcaption>코트 구역: 서브 박스, 네트, 키친 라인을 한눈에 봅니다.</figcaption></figure></div></section>
+<section class="band band--alt"><div class="wrap two-col two-col--wide"><div><h2>DUPR</h2><p>DUPR가 무엇인지 먼저 이해하면 레벨 선택과 목표 설정이 훨씬 쉬워집니다.</p><a class="btn btn--dupr btn--dupr-wide" href="/ko/what-is-dupr/">DUPR란?</a></div><figure class="visual-card "><img src="/assets/img/dupr-level-up-dashboard.webp" width="1448" height="1086" alt="DUPR 레벨 업 대시보드" loading="lazy"><figcaption>DUPR 레벨 업 대시보드</figcaption></figure></div></section>
 
 <section class="band"><div class="wrap narrow">
   <h2>피클볼 2.0~5.0 레벨 개요</h2>
@@ -143,21 +162,24 @@
     <li>4.0: 타깃팅·샷 선택·팀 전략 다듬기.</li>
   </ul>
 
-  <p class="level-index-cta"><a class="btn btn--primary" href="/ko/dupr-self-check/">내 레벨이 헷갈리나요? DUPR 자가진단 →</a></p>
+  <p class="level-index-cta"><a class="btn btn--dupr" href="/ko/dupr-self-check/">내 레벨이 헷갈리나요? DUPR 자가진단 →</a></p>
 </div></section>
   </main>
   <footer class="site-foot">
   <div class="wrap site-foot__inner">
     <div class="site-foot__brand">
-      <span class="brand__name">Picklary</span>
+      <span class="site-foot__lockup"><span class="brand__mark" aria-hidden="true"><svg class="brand__logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="15" y="11" width="11" height="42" rx="5.5" fill="#f4f7f6"/><circle cx="37.5" cy="25.5" r="16" fill="#F4B400"/><circle cx="37.5" cy="25.5" r="2.16" fill="#155446"/><circle cx="45.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="41.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="33.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="29.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="33.50" cy="18.57" r="2.16" fill="#155446"/><circle cx="41.50" cy="18.57" r="2.16" fill="#155446"/></svg></span><span class="brand__name">Picklary</span></span>
       <p>독립적으로 운영되는, 독자 중심의 피클볼 정보 사이트입니다.</p>
       <p class="site-foot__editor">작성
-        <a href="/ko/author/">Picklary 에디터</a> ·
-        <a href="mailto:hello@picklary.com">hello@picklary.com</a></p>
+        <a href="/ko/author/">Shawn</a> ·
+        <a href="mailto:iam4na2@gmail.com">iam4na2@gmail.com</a></p>
+      <p class="site-foot__blogs">다른 블로그:
+        <a href="https://picklary.blogspot.com" rel="me noopener" target="_blank">Blogspot</a> ·
+        <a href="https://blog.naver.com/arctic" rel="me noopener" target="_blank">Naver</a></p>
     </div>
     <nav class="site-foot__links" aria-label="Footer"><a href="/ko/about/">소개</a><a href="/ko/editorial-policy/">편집 정책</a><a href="/ko/corrections-policy/">정정 정책</a><a href="/ko/advertising-disclosure/">광고·제휴 고지</a><a href="/ko/community-guidelines/">커뮤니티 가이드라인</a><a href="/ko/privacy/">개인정보처리방침</a><a href="/ko/cookie-policy/">쿠키 정책</a><a href="/ko/terms/">이용약관</a><a href="/ko/disclaimer/">면책고지</a><a href="/ko/contact/">문의</a><a href="/ko/sitemap/">사이트맵</a></nav>
   </div>
-  <div class="wrap site-foot__legal">© 2026 Picklary. All rights reserved. <span class="site-foot__build" title="site build time">build 2026-06-22 00:12 UTC</span></div>
+  <div class="wrap site-foot__legal">© 2026 Picklary. 무단 전재 및 재배포 금지. <span class="site-foot__build" title="site build time">build 2026-07-01 05:10 UTC</span></div>
 </footer>
   <script src="/assets/js/site.js" defer></script>
 </body>

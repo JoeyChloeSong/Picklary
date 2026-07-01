@@ -1,6 +1,6 @@
 <!doctype html>
-<!-- Picklary build: 2026-06-22 00:12 UTC (brand=Picklary) -->
-<html lang="en" dir="ltr">
+<!-- Picklary build: 2026-07-01 05:10 UTC (brand=Picklary) -->
+<html lang="en" dir="ltr" data-theme="guides">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,17 +11,26 @@
   <link rel="alternate" hreflang="ko" href="https://picklary.com/ko/categories/">
   <link rel="alternate" hreflang="en" href="https://picklary.com/en/categories/">
   <link rel="alternate" hreflang="x-default" href="https://picklary.com/en/categories/">
+  <link rel="alternate" type="application/rss+xml" title="Picklary" href="https://picklary.com/en/feed.xml">
   <meta property="og:site_name" content="Picklary">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Guides by topic">
   <meta property="og:description" content="Every guide lives in one of five topics. Pick where you want to improve.">
   <meta property="og:url" content="https://picklary.com/en/categories/">
   <meta property="og:locale" content="en">
+  <meta property="og:image" content="https://picklary.com/assets/icons/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Guides by topic">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Guides by topic">
   <meta name="twitter:description" content="Every guide lives in one of five topics. Pick where you want to improve.">
+  <meta name="twitter:image" content="https://picklary.com/assets/icons/og-default.png">
   <meta name="theme-color" content="#1E6F5C">
+  
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <link rel="mask-icon" href="/assets/icons/favicon.svg" color="#1E6F5C">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -34,11 +43,11 @@
 <header class="masthead">
   <div class="wrap masthead__inner">
     <a class="brand" href="/en/" aria-label="Picklary — home">
-      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__mark" aria-hidden="true"><svg class="brand__logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="15" y="11" width="11" height="42" rx="5.5" fill="#1E6F5C"/><circle cx="37.5" cy="25.5" r="16" fill="#F4B400"/><circle cx="37.5" cy="25.5" r="2.16" fill="#155446"/><circle cx="45.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="41.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="33.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="29.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="33.50" cy="18.57" r="2.16" fill="#155446"/><circle cx="41.50" cy="18.57" r="2.16" fill="#155446"/></svg></span>
       <span class="brand__name">Picklary</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
-    <nav id="primary-nav" class="nav" aria-label="Primary"><a href="/en/level/">Levels</a><a href="/en/paddles/">Paddles</a><a href="/en/players/">Pro Players</a><a href="/en/tournaments/">Tournaments</a><a href="/en/updates/">Update Center</a><a href="/en/boards/">Boards</a><a href="/en/highlights/">Highlights</a><a href="/en/what-is-dupr/">DUPR</a><a href="/en/categories/" class="is-active" aria-current="page">Guides</a></nav>
+    <nav id="primary-nav" class="nav" aria-label="Primary"><a href="/en/">Home</a><a href="/en/level/">Level Up</a><a href="/en/gear/">Gear Lab</a><a href="/en/pro-scene/">Pro Scene</a><a href="/en/boards/">Play Hub</a><a href="/en/categories/" class="is-active" aria-current="page">Insights</a></nav>
     <form class="lang" aria-label="Language">
       <span class="lang__icon" aria-hidden="true">🌐</span>
       <label class="visually-hidden" for="lang-select">Choose a language</label>
@@ -46,57 +55,62 @@
     </form>
   </div>
 </header>
-  <nav class="side-rail" aria-label="Quick section navigation">
-    <span class="side-rail__title">Quick pick</span>
-    <div class="side-rail__levels"><a href="/en/level/2-0/">2.0</a><a href="/en/level/2-5/">2.5</a><a href="/en/level/3-0/">3.0</a><a href="/en/level/3-5/">3.5</a><a href="/en/level/4-0/">4.0</a><a href="/en/level/4-5/">4.5</a><a href="/en/level/5-0/">5.0</a></div>
-    <div class="side-rail__main"><a href="/en/category/rules-and-getting-started/">Rules</a><a href="/en/category/skills-and-drills/">Skills</a><a href="/en/paddles/">Paddles</a><a href="/en/players/">Players</a><a href="/en/tournaments/">Tournaments</a><a href="/en/updates/">Update Center</a><a href="/en/boards/dupr-faq/">Level FAQ</a><a href="/en/boards/qna/">Q&amp;A Board</a><a href="/en/highlights/">Highlights</a></div>
+  <nav class="side-rail" aria-label="Quick navigation">
+    <span class="side-rail__title">Quick Moves</span>
+    <div class="side-rail__group side-rail__group--levels"><span class="side-rail__group-title">Level</span><div class="side-rail__levels"><a href="/en/level/2-0/">2.0</a><a href="/en/level/2-5/">2.5</a><a href="/en/level/3-0/">3.0</a><a href="/en/level/3-5/">3.5</a><a href="/en/level/4-0/">4.0</a><a href="/en/level/4-5/">4.5</a><a href="/en/level/5-0/">5.0</a></div></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">Start</span><a href="/en/dupr-self-check/">Self-check</a><a href="/en/what-is-dupr/">DUPR</a></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">Play</span><a href="/en/boards/friends/">Find Friends</a><a href="/en/boards/partners/">Find Partners</a><a href="/en/boards/tournaments/">Find Tournaments</a><a href="/en/boards/coaches/">Find Coaches</a></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">Explore</span><a href="/en/gear/">Gear Lab</a><a href="/en/pro-scene/">Pro Scene</a></div>
   </nav>
   <main id="main">
 <nav class="crumbs" aria-label="Breadcrumb"><ol class="wrap"><li aria-current="page">Home</li><li aria-current="page">Guides by topic</li></ol></nav>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://picklary.com/en/"},{"@type":"ListItem","position":2,"name":"Guides by topic"}]}</script>
-<section class="page-head"><div class="wrap">
-  <h1>Guides by topic</h1>
-  <p class="page-head__intro">Every guide lives in one of five topics. Pick where you want to improve.</p>
+<section class="page-head page-head--visual"><div class="wrap two-col two-col--wide">
+  <div><p class="page-head__eyebrow">Guides by topic</p><h1>Guides by topic</h1><p class="page-head__intro">An Insights hub that trims overlap and groups rules, blog gateways, and learning-oriented community tools in one place.</p></div>
+  <figure class="visual-card "><img src="/assets/img/insights-dashboard-design.webp" width="1400" height="1050" alt="Guides by topic" loading="lazy"><figcaption>Guides by topic</figcaption></figure>
 </div></section>
-<section class="band"><div class="wrap"><div class="topics"><a class="topic topic--gear" href="/en/category/paddles-and-gear/">
-      <span class="topic__icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="13" y="6" width="18" height="23" rx="9" stroke="currentColor" stroke-width="2.4"/><rect x="19" y="27" width="6" height="13" rx="3" fill="currentColor"/><circle cx="34.5" cy="33" r="5.5" stroke="currentColor" stroke-width="2.2"/></svg></span>
-      <h3>Paddles &amp; Gear</h3>
-      <p>Honest, comparison-first guidance on paddles, shoes, and balls.</p>
-      <span class="topic__count">8 guides</span>
-    </a><a class="topic topic--skills" href="/en/category/skills-and-drills/">
-      <span class="topic__icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="15" stroke="currentColor" stroke-width="2.4"/><circle cx="24" cy="24" r="8.5" stroke="currentColor" stroke-width="2.2"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg></span>
-      <h3>Skills &amp; Drills</h3>
-      <p>A practice pathway organised by DUPR level, from 2.0 to 4.0+.</p>
-      <span class="topic__count">7 guides</span>
-    </a><a class="topic topic--rules" href="/en/category/rules-and-getting-started/">
-      <span class="topic__icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 13c-4-3-11-3-15-1v25c4-2 11-2 15 1" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 13c4-3 11-3 15-1v25c-4-2-11-2-15 1" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><line x1="24" y1="13" x2="24" y2="38" stroke="currentColor" stroke-width="2.4"/></svg></span>
-      <h3>Rules &amp; Getting Started</h3>
-      <p>Scoring, the serve, the kitchen, positioning, and court etiquette.</p>
-      <span class="topic__count">4 guides</span>
-    </a><a class="topic topic--compete" href="/en/category/tournaments-and-leagues/">
-      <span class="topic__icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 9h16v9a8 8 0 0 1-16 0Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M16 12h-4a4 4 0 0 0 4 7" stroke="currentColor" stroke-width="2.2"/><path d="M32 12h4a4 4 0 0 1-4 7" stroke="currentColor" stroke-width="2.2"/><line x1="24" y1="26" x2="24" y2="32" stroke="currentColor" stroke-width="2.4"/><rect x="17.5" y="32" width="13" height="4.5" rx="1.6" fill="currentColor"/></svg></span>
-      <h3>Tournaments &amp; Leagues</h3>
-      <p>How tournaments are run, DUPR explained, and the competitive scene.</p>
-      <span class="topic__count">6 guides</span>
-    </a><a class="topic topic--scene" href="/en/category/players-and-global-scene/">
-      <span class="topic__icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="15" stroke="currentColor" stroke-width="2.4"/><ellipse cx="24" cy="24" rx="6.5" ry="15" stroke="currentColor" stroke-width="2.2"/><line x1="9" y1="24" x2="39" y2="24" stroke="currentColor" stroke-width="2.2"/><path d="M12.5 16h23M12.5 32h23" stroke="currentColor" stroke-width="2.2"/></svg></span>
-      <h3>Players &amp; Global Scene</h3>
-      <p>How to follow the pro game and find official rankings worldwide.</p>
-      <span class="topic__count">1 guides</span>
-    </a></div></div></section>
+<section class="band"><div class="wrap"><div class="hub-chooser hub-chooser--insights"><a class="board-card board-card--rules" href="/en/pro-scene/rules/"><span class="board-card__eyebrow">Rules hub</span><span class="board-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.8h8.8A3.2 3.2 0 0 1 18 8v11.2H8.2A2.2 2.2 0 0 1 6 17V4.8Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 8h6M9 11h6M9 14h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M6 17c0-1.2.9-2 2.2-2H18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><h3>PPA &amp; MLP Rulebook + Rule Changes</h3><p>Open PPA/MLP rules, rulebooks, and notable season changes from this single card.</p><span class="board-card__cta"><span>Open</span><span aria-hidden="true">→</span></span></a><article class="board-card board-card--skill">
+    <span class="board-card__eyebrow">Moved from Play Hub</span>
+    <span class="board-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m10 9 5 2.8-5 2.8V9Z" fill="currentColor"/><path d="M7 20h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+    <h3>Skill Review · Q&amp;A · FAQ</h3>
+    <p>Learning-focused content split out of Play Hub is now grouped here.</p>
+    <div class="board-card__actions board-card__actions--stack">
+      <a class="community-shortcut community-shortcut--partners" href="/en/boards/skill-review/"><span class="community-shortcut__icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m10 9 5 2.8-5 2.8V9Z" fill="currentColor"/><path d="M7 20h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><strong>Skill Review</strong><small>Video-based feedback and community estimate</small></span></a>
+      <a class="community-shortcut community-shortcut--tournaments" href="/en/boards/qna/"><span class="community-shortcut__icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-7l-4.5 3v-3H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><strong>Q&amp;A</strong><small>Questions and answers for match situations</small></span></a>
+      <a class="community-shortcut community-shortcut--coaches" href="/en/boards/dupr-faq/"><span class="community-shortcut__icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9.7 9.6A2.4 2.4 0 0 1 12 8c1.4 0 2.5.8 2.5 2.1 0 1.1-.7 1.7-1.7 2.3-.7.4-.8.8-.8 1.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17" r="1" fill="currentColor"/></svg></span><span><strong>FAQ</strong><small>Level-based frequently asked questions</small></span></a>
+    </div>
+  </article><article class="board-card board-card--blogs">
+    <span class="board-card__eyebrow">Blog links</span>
+    <span class="board-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-7l-4.5 3v-3H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+    <h3>Blog gateways</h3>
+    <p>Direct gateways to the external Picklary blogs.</p>
+    <div class="board-card__actions board-card__actions--stack">
+      <a class="community-shortcut community-shortcut--partners" href="https://picklary.blogspot.com/" target="_blank" rel="noopener noreferrer"><span class="community-shortcut__icon" aria-hidden="true">↗</span><span><strong>picklary.blogspot.com</strong><small>Google Blogger</small></span></a>
+      <a class="community-shortcut community-shortcut--coaches" href="https://blog.naver.com/arctic" target="_blank" rel="noopener noreferrer"><span class="community-shortcut__icon" aria-hidden="true">↗</span><span><strong>blog.naver.com/arctic</strong><small>Naver Blog</small></span></a>
+    </div>
+  </article></div></div></section>
+<section class="band"><div class="wrap narrow prose source-panel source-panel--hub"><h2>Why this layout</h2><p>Play Hub now focuses on real-world connections, while Insights gathers rules, content, and learning boards to improve findability.</p></div></section>
+<section class="band "><div class="wrap narrow prose adsense-depth">
+    <h2>How to use Picklary guides</h2>
+    <p>This is more than a list of articles. It is the starting map for players who want to learn pickleball in a practical order: rules first, then skills, gear, ratings, players, and the competitive scene.</p><p>If you are new, begin with the level pathway and the DUPR self-check. If you already play, open the skill category that matches your biggest mistake. If you are shopping for gear, compare materials and shapes before using the paddle finder. Player and pro-tour pages are meant for studying patterns from higher-level games.</p><p>Picklary does not copy official rule books or live rankings as a substitute for the source. We link to the source where facts can change and add plain-language explanations, examples, and player-focused takeaways.</p>
+    <ul><li>Start with your level if you are unsure where you fit.</li><li>Use the skills section for one fix at a time.</li><li>Verify current prices, legality, and rankings at the linked official sources.</li><li>Read player pages as pattern study, not celebrity news.</li></ul><h2>Editorial quality note</h2><p>This page is structured to help a reader decide what to do next. Instead of only collecting external information, it explains the reading order, what to verify, and how the topic connects to player improvement, gear choice, or match understanding. Facts that can change are supported with source links, while Picklary adds plain-language interpretation and practical use.</p><p>This section also clarifies the page purpose so it does not look like a thin link list. It documents editorial standards, review expectations, copyright caution, user safety, and links to related tools or guides. As the site grows, this area can keep pointing readers to the most useful internal pages.</p><p>The goal is not to repeat the same text across the site, but to explain the role of each page and connect it to the right tool, guide, or verification link. A reader should be able to move from this overview to a specific action, such as reading a related guide, trying a tool, checking a primary source, or returning later when new examples are published.</p>
+  </div></section>
   </main>
   <footer class="site-foot">
   <div class="wrap site-foot__inner">
     <div class="site-foot__brand">
-      <span class="brand__name">Picklary</span>
+      <span class="site-foot__lockup"><span class="brand__mark" aria-hidden="true"><svg class="brand__logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="15" y="11" width="11" height="42" rx="5.5" fill="#f4f7f6"/><circle cx="37.5" cy="25.5" r="16" fill="#F4B400"/><circle cx="37.5" cy="25.5" r="2.16" fill="#155446"/><circle cx="45.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="41.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="33.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="29.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="33.50" cy="18.57" r="2.16" fill="#155446"/><circle cx="41.50" cy="18.57" r="2.16" fill="#155446"/></svg></span><span class="brand__name">Picklary</span></span>
       <p>An independent, reader-focused pickleball information site.</p>
       <p class="site-foot__editor">By
-        <a href="/en/author/">The Picklary Editor</a> ·
-        <a href="mailto:hello@picklary.com">hello@picklary.com</a></p>
+        <a href="/en/author/">Shawn</a> ·
+        <a href="mailto:iam4na2@gmail.com">iam4na2@gmail.com</a></p>
+      <p class="site-foot__blogs">More blogs:
+        <a href="https://picklary.blogspot.com" rel="me noopener" target="_blank">Blogspot</a> ·
+        <a href="https://blog.naver.com/arctic" rel="me noopener" target="_blank">Naver</a></p>
     </div>
     <nav class="site-foot__links" aria-label="Footer"><a href="/en/about/">About</a><a href="/en/editorial-policy/">Editorial Policy</a><a href="/en/corrections-policy/">Corrections Policy</a><a href="/en/advertising-disclosure/">Advertising Disclosure</a><a href="/en/community-guidelines/">Community Guidelines</a><a href="/en/privacy/">Privacy Policy</a><a href="/en/cookie-policy/">Cookie Policy</a><a href="/en/terms/">Terms</a><a href="/en/disclaimer/">Disclaimer</a><a href="/en/contact/">Contact</a><a href="/en/sitemap/">Sitemap</a></nav>
   </div>
-  <div class="wrap site-foot__legal">© 2026 Picklary. All rights reserved. <span class="site-foot__build" title="site build time">build 2026-06-22 00:12 UTC</span></div>
+  <div class="wrap site-foot__legal">© 2026 Picklary. All rights reserved. <span class="site-foot__build" title="site build time">build 2026-07-01 05:10 UTC</span></div>
 </footer>
   <script src="/assets/js/site.js" defer></script>
 </body>

@@ -1,27 +1,36 @@
 <!doctype html>
-<!-- Picklary build: 2026-06-22 00:12 UTC (brand=Picklary) -->
-<html lang="ko" dir="ltr">
+<!-- Picklary build: 2026-07-01 05:10 UTC (brand=Picklary) -->
+<html lang="ko" dir="ltr" data-theme="guides">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>상황별 Q&amp;A 게시판 · Picklary</title>
+  <title>상황별 질의응답 · Picklary</title>
   <meta name="description" content="“이 상황에서는 어떻게 해야 하나요?”를 묻고 답하는 게시판 데모입니다. 현재 정적 사이트 버전에서는 입력 내용이 본인 브라우저에만 저장되며, 실제 공개 운영 전에는 로그인·신고·검수·스팸 방지 기능이 필요합니다.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://picklary.com/ko/boards/qna/">
   <link rel="alternate" hreflang="ko" href="https://picklary.com/ko/boards/qna/">
   <link rel="alternate" hreflang="en" href="https://picklary.com/en/boards/qna/">
   <link rel="alternate" hreflang="x-default" href="https://picklary.com/en/boards/qna/">
+  <link rel="alternate" type="application/rss+xml" title="Picklary" href="https://picklary.com/ko/feed.xml">
   <meta property="og:site_name" content="Picklary">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="상황별 Q&amp;A 게시판">
+  <meta property="og:title" content="상황별 질의응답">
   <meta property="og:description" content="“이 상황에서는 어떻게 해야 하나요?”를 묻고 답하는 게시판 데모입니다. 현재 정적 사이트 버전에서는 입력 내용이 본인 브라우저에만 저장되며, 실제 공개 운영 전에는 로그인·신고·검수·스팸 방지 기능이 필요합니다.">
   <meta property="og:url" content="https://picklary.com/ko/boards/qna/">
   <meta property="og:locale" content="ko">
+  <meta property="og:image" content="https://picklary.com/assets/icons/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="상황별 질의응답">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="상황별 Q&amp;A 게시판">
+  <meta name="twitter:title" content="상황별 질의응답">
   <meta name="twitter:description" content="“이 상황에서는 어떻게 해야 하나요?”를 묻고 답하는 게시판 데모입니다. 현재 정적 사이트 버전에서는 입력 내용이 본인 브라우저에만 저장되며, 실제 공개 운영 전에는 로그인·신고·검수·스팸 방지 기능이 필요합니다.">
+  <meta name="twitter:image" content="https://picklary.com/assets/icons/og-default.png">
   <meta name="theme-color" content="#1E6F5C">
+  
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <link rel="mask-icon" href="/assets/icons/favicon.svg" color="#1E6F5C">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -34,11 +43,11 @@
 <header class="masthead">
   <div class="wrap masthead__inner">
     <a class="brand" href="/ko/" aria-label="Picklary — home">
-      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__mark" aria-hidden="true"><svg class="brand__logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="15" y="11" width="11" height="42" rx="5.5" fill="#1E6F5C"/><circle cx="37.5" cy="25.5" r="16" fill="#F4B400"/><circle cx="37.5" cy="25.5" r="2.16" fill="#155446"/><circle cx="45.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="41.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="33.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="29.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="33.50" cy="18.57" r="2.16" fill="#155446"/><circle cx="41.50" cy="18.57" r="2.16" fill="#155446"/></svg></span>
       <span class="brand__name">Picklary</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">메뉴</button>
-    <nav id="primary-nav" class="nav" aria-label="Primary"><a href="/ko/level/">레벨별 성장</a><a href="/ko/paddles/">패들 랭킹</a><a href="/ko/players/">프로 선수</a><a href="/ko/tournaments/">대회정보</a><a href="/ko/updates/">업데이트센터</a><a href="/ko/boards/" class="is-active" aria-current="page">게시판</a><a href="/ko/highlights/">하이라이트 배틀</a><a href="/ko/what-is-dupr/">DUPR란?</a><a href="/ko/categories/">가이드</a></nav>
+    <nav id="primary-nav" class="nav" aria-label="Primary"><a href="/ko/">홈</a><a href="/ko/level/">레벨업</a><a href="/ko/gear/">패들/장비</a><a href="/ko/pro-scene/">선수·투어</a><a href="/ko/boards/" class="is-active" aria-current="page">커뮤니티</a><a href="/ko/categories/">가이드</a></nav>
     <form class="lang" aria-label="언어">
       <span class="lang__icon" aria-hidden="true">🌐</span>
       <label class="visually-hidden" for="lang-select">언어 선택</label>
@@ -46,17 +55,19 @@
     </form>
   </div>
 </header>
-  <nav class="side-rail" aria-label="빠른 섹션 이동">
-    <span class="side-rail__title">빠른 선택</span>
-    <div class="side-rail__levels"><a href="/ko/level/2-0/">2.0</a><a href="/ko/level/2-5/">2.5</a><a href="/ko/level/3-0/">3.0</a><a href="/ko/level/3-5/">3.5</a><a href="/ko/level/4-0/">4.0</a><a href="/ko/level/4-5/">4.5</a><a href="/ko/level/5-0/">5.0</a></div>
-    <div class="side-rail__main"><a href="/ko/category/rules-and-getting-started/">규칙</a><a href="/ko/category/skills-and-drills/">스킬</a><a href="/ko/paddles/">패들</a><a href="/ko/players/">선수</a><a href="/ko/tournaments/">대회정보</a><a href="/ko/updates/">업데이트센터</a><a href="/ko/boards/dupr-faq/">레벨별 FAQ</a><a href="/ko/boards/qna/">상황별 Q&amp;A</a><a href="/ko/highlights/">영상</a></div>
+  <nav class="side-rail" aria-label="빠른 이동">
+    <span class="side-rail__title">빠른 메뉴</span>
+    <div class="side-rail__group side-rail__group--levels"><span class="side-rail__group-title">레벨</span><div class="side-rail__levels"><a href="/ko/level/2-0/">2.0</a><a href="/ko/level/2-5/">2.5</a><a href="/ko/level/3-0/">3.0</a><a href="/ko/level/3-5/">3.5</a><a href="/ko/level/4-0/">4.0</a><a href="/ko/level/4-5/">4.5</a><a href="/ko/level/5-0/">5.0</a></div></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">시작하기</span><a href="/ko/dupr-self-check/">자가진단</a><a href="/ko/what-is-dupr/">DUPR</a></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">커뮤니티</span><a href="/ko/boards/friends/">친구찾기</a><a href="/ko/boards/partners/">파트너찾기</a><a href="/ko/boards/tournaments/">대회찾기</a><a href="/ko/boards/coaches/">코치찾기</a></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">둘러보기</span><a href="/ko/gear/">패들/장비</a><a href="/ko/pro-scene/">선수·투어</a></div>
   </nav>
   <main id="main">
-<nav class="crumbs" aria-label="Breadcrumb"><ol class="wrap"><li aria-current="page">홈</li><li><a href="/ko/boards/">피클볼 게시판</a></li><li aria-current="page">상황별 Q&amp;A 게시판</li></ol></nav>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://picklary.com/ko/"},{"@type":"ListItem","position":2,"name":"피클볼 게시판","item":"https://picklary.com/ko/boards/"},{"@type":"ListItem","position":3,"name":"상황별 Q&A 게시판"}]}</script>
+<nav class="crumbs" aria-label="Breadcrumb"><ol class="wrap"><li aria-current="page">홈</li><li><a href="/ko/boards/">Picklary 커뮤니티</a></li><li aria-current="page">상황별 질의응답</li></ol></nav>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://picklary.com/ko/"},{"@type":"ListItem","position":2,"name":"Picklary 커뮤니티","item":"https://picklary.com/ko/boards/"},{"@type":"ListItem","position":3,"name":"상황별 질의응답"}]}</script>
 <section class="page-head page-head--visual"><div class="wrap two-col two-col--wide">
-  <div><p class="page-head__eyebrow">상황별 Q&amp;A</p><h1>상황별 Q&amp;A 게시판</h1><p class="page-head__intro">“이 상황에서는 어떻게 해야 하나요?”를 묻고 답하는 게시판 데모입니다. 현재 정적 사이트 버전에서는 입력 내용이 본인 브라우저에만 저장되며, 실제 공개 운영 전에는 로그인·신고·검수·스팸 방지 기능이 필요합니다.</p></div>
-  <figure class="visual-card "><img src="/assets/img/community-board.svg" alt="FAQ와 Q&amp;A를 중심으로 한 피클볼 커뮤니티 게시판 이미지" loading="lazy"><figcaption>FAQ와 Q&amp;A를 중심으로 한 피클볼 커뮤니티 게시판 이미지</figcaption></figure>
+  <div><p class="page-head__eyebrow">상황별 질의응답</p><h1>상황별 질의응답</h1><p class="page-head__intro">“이 상황에서는 어떻게 해야 하나요?”를 묻고 답하는 게시판 데모입니다. 현재 정적 사이트 버전에서는 입력 내용이 본인 브라우저에만 저장되며, 실제 공개 운영 전에는 로그인·신고·검수·스팸 방지 기능이 필요합니다.</p></div>
+  <figure class="visual-card "><img src="/assets/img/play-hub-dashboard-design.webp" width="1400" height="1050" alt="자주 묻는 질문과 질의응답을 중심으로 한 피클볼 커뮤니티 게시판 이미지" loading="lazy"><figcaption>자주 묻는 질문과 질의응답을 중심으로 한 피클볼 커뮤니티 게시판 이미지</figcaption></figure>
 </div></section>
 <section class="band"><div class="wrap two-col two-col--wide board-demo" data-qna-demo
   data-votes-label="추천" data-answers-label="답변" data-add-answer="답변 추가" data-answer-placeholder="상황, 추천 샷, 피해야 할 선택을 함께 적어 주세요." data-curated="에디터 선별" data-suggested="내 브라우저 저장" data-empty="아직 표시할 질문이 없습니다.">
@@ -120,15 +131,18 @@
   <footer class="site-foot">
   <div class="wrap site-foot__inner">
     <div class="site-foot__brand">
-      <span class="brand__name">Picklary</span>
+      <span class="site-foot__lockup"><span class="brand__mark" aria-hidden="true"><svg class="brand__logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="15" y="11" width="11" height="42" rx="5.5" fill="#f4f7f6"/><circle cx="37.5" cy="25.5" r="16" fill="#F4B400"/><circle cx="37.5" cy="25.5" r="2.16" fill="#155446"/><circle cx="45.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="41.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="33.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="29.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="33.50" cy="18.57" r="2.16" fill="#155446"/><circle cx="41.50" cy="18.57" r="2.16" fill="#155446"/></svg></span><span class="brand__name">Picklary</span></span>
       <p>독립적으로 운영되는, 독자 중심의 피클볼 정보 사이트입니다.</p>
       <p class="site-foot__editor">작성
-        <a href="/ko/author/">Picklary 에디터</a> ·
-        <a href="mailto:hello@picklary.com">hello@picklary.com</a></p>
+        <a href="/ko/author/">Shawn</a> ·
+        <a href="mailto:iam4na2@gmail.com">iam4na2@gmail.com</a></p>
+      <p class="site-foot__blogs">다른 블로그:
+        <a href="https://picklary.blogspot.com" rel="me noopener" target="_blank">Blogspot</a> ·
+        <a href="https://blog.naver.com/arctic" rel="me noopener" target="_blank">Naver</a></p>
     </div>
     <nav class="site-foot__links" aria-label="Footer"><a href="/ko/about/">소개</a><a href="/ko/editorial-policy/">편집 정책</a><a href="/ko/corrections-policy/">정정 정책</a><a href="/ko/advertising-disclosure/">광고·제휴 고지</a><a href="/ko/community-guidelines/">커뮤니티 가이드라인</a><a href="/ko/privacy/">개인정보처리방침</a><a href="/ko/cookie-policy/">쿠키 정책</a><a href="/ko/terms/">이용약관</a><a href="/ko/disclaimer/">면책고지</a><a href="/ko/contact/">문의</a><a href="/ko/sitemap/">사이트맵</a></nav>
   </div>
-  <div class="wrap site-foot__legal">© 2026 Picklary. All rights reserved. <span class="site-foot__build" title="site build time">build 2026-06-22 00:12 UTC</span></div>
+  <div class="wrap site-foot__legal">© 2026 Picklary. 무단 전재 및 재배포 금지. <span class="site-foot__build" title="site build time">build 2026-07-01 05:10 UTC</span></div>
 </footer>
   <script src="/assets/js/site.js" defer></script>
 </body>

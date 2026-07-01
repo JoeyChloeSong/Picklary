@@ -1,27 +1,36 @@
 <!doctype html>
-<!-- Picklary build: 2026-06-22 00:12 UTC (brand=Picklary) -->
-<html lang="ko" dir="ltr">
+<!-- Picklary build: 2026-07-01 05:10 UTC (brand=Picklary) -->
+<html lang="ko" dir="ltr" data-theme="home">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>대회 &amp; 리그 · Picklary</title>
-  <meta name="description" content="대회 진행 방식, DUPR 설명, 경쟁 씬 개요.">
+  <title>대회·리그 · Picklary</title>
+  <meta name="description" content="대회 진행 방식, DUPR 설명, 경쟁 무대 개요. 이 주제의 가이드·글·도구를 한곳에 모았습니다.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://picklary.com/ko/category/tournaments-and-leagues/">
   <link rel="alternate" hreflang="ko" href="https://picklary.com/ko/category/tournaments-and-leagues/">
   <link rel="alternate" hreflang="en" href="https://picklary.com/en/category/tournaments-and-leagues/">
   <link rel="alternate" hreflang="x-default" href="https://picklary.com/en/category/tournaments-and-leagues/">
+  <link rel="alternate" type="application/rss+xml" title="Picklary" href="https://picklary.com/ko/feed.xml">
   <meta property="og:site_name" content="Picklary">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="대회 &amp; 리그">
-  <meta property="og:description" content="대회 진행 방식, DUPR 설명, 경쟁 씬 개요.">
+  <meta property="og:title" content="대회·리그">
+  <meta property="og:description" content="대회 진행 방식, DUPR 설명, 경쟁 무대 개요. 이 주제의 가이드·글·도구를 한곳에 모았습니다.">
   <meta property="og:url" content="https://picklary.com/ko/category/tournaments-and-leagues/">
   <meta property="og:locale" content="ko">
+  <meta property="og:image" content="https://picklary.com/assets/icons/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="대회·리그">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="대회 &amp; 리그">
-  <meta name="twitter:description" content="대회 진행 방식, DUPR 설명, 경쟁 씬 개요.">
+  <meta name="twitter:title" content="대회·리그">
+  <meta name="twitter:description" content="대회 진행 방식, DUPR 설명, 경쟁 무대 개요. 이 주제의 가이드·글·도구를 한곳에 모았습니다.">
+  <meta name="twitter:image" content="https://picklary.com/assets/icons/og-default.png">
   <meta name="theme-color" content="#1E6F5C">
+  
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <link rel="mask-icon" href="/assets/icons/favicon.svg" color="#1E6F5C">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -34,11 +43,11 @@
 <header class="masthead">
   <div class="wrap masthead__inner">
     <a class="brand" href="/ko/" aria-label="Picklary — home">
-      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__mark" aria-hidden="true"><svg class="brand__logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="15" y="11" width="11" height="42" rx="5.5" fill="#1E6F5C"/><circle cx="37.5" cy="25.5" r="16" fill="#F4B400"/><circle cx="37.5" cy="25.5" r="2.16" fill="#155446"/><circle cx="45.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="41.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="33.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="29.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="33.50" cy="18.57" r="2.16" fill="#155446"/><circle cx="41.50" cy="18.57" r="2.16" fill="#155446"/></svg></span>
       <span class="brand__name">Picklary</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">메뉴</button>
-    <nav id="primary-nav" class="nav" aria-label="Primary"><a href="/ko/level/">레벨별 성장</a><a href="/ko/paddles/">패들 랭킹</a><a href="/ko/players/">프로 선수</a><a href="/ko/tournaments/">대회정보</a><a href="/ko/updates/">업데이트센터</a><a href="/ko/boards/">게시판</a><a href="/ko/highlights/">하이라이트 배틀</a><a href="/ko/what-is-dupr/">DUPR란?</a><a href="/ko/categories/">가이드</a></nav>
+    <nav id="primary-nav" class="nav" aria-label="Primary"><a href="/ko/">홈</a><a href="/ko/level/">레벨업</a><a href="/ko/gear/">패들/장비</a><a href="/ko/pro-scene/" class="is-active" aria-current="page">선수·투어</a><a href="/ko/boards/">커뮤니티</a><a href="/ko/categories/">가이드</a></nav>
     <form class="lang" aria-label="언어">
       <span class="lang__icon" aria-hidden="true">🌐</span>
       <label class="visually-hidden" for="lang-select">언어 선택</label>
@@ -46,77 +55,94 @@
     </form>
   </div>
 </header>
-  <nav class="side-rail" aria-label="빠른 섹션 이동">
-    <span class="side-rail__title">빠른 선택</span>
-    <div class="side-rail__levels"><a href="/ko/level/2-0/">2.0</a><a href="/ko/level/2-5/">2.5</a><a href="/ko/level/3-0/">3.0</a><a href="/ko/level/3-5/">3.5</a><a href="/ko/level/4-0/">4.0</a><a href="/ko/level/4-5/">4.5</a><a href="/ko/level/5-0/">5.0</a></div>
-    <div class="side-rail__main"><a href="/ko/category/rules-and-getting-started/">규칙</a><a href="/ko/category/skills-and-drills/">스킬</a><a href="/ko/paddles/">패들</a><a href="/ko/players/">선수</a><a href="/ko/tournaments/">대회정보</a><a href="/ko/updates/">업데이트센터</a><a href="/ko/boards/dupr-faq/">레벨별 FAQ</a><a href="/ko/boards/qna/">상황별 Q&amp;A</a><a href="/ko/highlights/">영상</a></div>
+  <nav class="side-rail" aria-label="빠른 이동">
+    <span class="side-rail__title">빠른 메뉴</span>
+    <div class="side-rail__group side-rail__group--levels"><span class="side-rail__group-title">레벨</span><div class="side-rail__levels"><a href="/ko/level/2-0/">2.0</a><a href="/ko/level/2-5/">2.5</a><a href="/ko/level/3-0/">3.0</a><a href="/ko/level/3-5/">3.5</a><a href="/ko/level/4-0/">4.0</a><a href="/ko/level/4-5/">4.5</a><a href="/ko/level/5-0/">5.0</a></div></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">시작하기</span><a href="/ko/dupr-self-check/">자가진단</a><a href="/ko/what-is-dupr/">DUPR</a></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">커뮤니티</span><a href="/ko/boards/friends/">친구찾기</a><a href="/ko/boards/partners/">파트너찾기</a><a href="/ko/boards/tournaments/">대회찾기</a><a href="/ko/boards/coaches/">코치찾기</a></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">둘러보기</span><a href="/ko/gear/">패들/장비</a><a href="/ko/pro-scene/">선수·투어</a><a href="/ko/categories/">가이드</a></div>
   </nav>
   <main id="main">
-<nav class="crumbs" aria-label="Breadcrumb"><ol class="wrap"><li aria-current="page">홈</li><li><a href="/ko/categories/">주제별 가이드</a></li><li aria-current="page">대회 &amp; 리그</li></ol></nav>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://picklary.com/ko/"},{"@type":"ListItem","position":2,"name":"주제별 가이드","item":"https://picklary.com/ko/categories/"},{"@type":"ListItem","position":3,"name":"대회 & 리그"}]}</script>
+<nav class="crumbs" aria-label="Breadcrumb"><ol class="wrap"><li aria-current="page">홈</li><li><a href="/ko/categories/">주제별 가이드</a></li><li aria-current="page">대회·리그</li></ol></nav>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://picklary.com/ko/"},{"@type":"ListItem","position":2,"name":"주제별 가이드","item":"https://picklary.com/ko/categories/"},{"@type":"ListItem","position":3,"name":"대회·리그"}]}</script>
 <section class="page-head"><div class="wrap">
   <p class="page-head__eyebrow">가이드</p>
-  <h1>대회 &amp; 리그</h1>
-  <p class="page-head__intro">픽업 게임을 넘어 도전할 준비가 되셨나요? 이 글들은 대회 구조(포맷·브래킷·디비전), DUPR이 무엇이고 어떻게 쓰는지, 리그와 투어가 어떻게 맞물리는지를 다룹니다. 내부자가 아니라 첫 대회를 앞둔 사람을 위한 설명입니다.</p>
+  <h1>대회·리그</h1>
+  <p class="page-head__intro">오픈플레이을 넘어 도전할 준비가 되셨나요? 이 글들은 대회 구조(포맷·브래킷·디비전), DUPR이 무엇이고 어떻게 쓰는지, 리그와 투어가 어떻게 맞물리는지를 다룹니다. 내부자가 아니라 첫 대회를 앞둔 사람을 위한 설명입니다.</p>
 </div></section>
 <section class="band"><div class="wrap">
-  <div class="cards"><article class="card">
+  <div class="cards"><article class="card card--compete">
+    <a class="card__link" href="/ko/how-to-use-dupr-without-overreacting-to-one-number/">
+      <span class="card__cat">대회·리그</span>
+      <h3 class="card__title">DUPR 점수를 볼 때 주의할 점: 숫자보다 중요한 것</h3>
+      <p class="card__summary">DUPR와 커뮤니티 DUPR식 예상치를 한 경기, 한 영상, 한 숫자에 과도하게 반응하지 않고 활용하는 균형 잡힌 가이드입니다.</p>
+      <span class="card__meta">수정 2026년 6월 28일</span>
+    </a>
+  </article><article class="card card--compete">
     <a class="card__link" href="/ko/official-dupr-vs-club-ratings/">
-      <span class="card__cat">대회 &amp; 리그</span>
+      <span class="card__cat">대회·리그</span>
       <h3 class="card__title">공식 DUPR vs 클럽 레벨: 왜 다른가</h3>
       <p class="card__summary">클럽·리그·자가 평가가 DUPR과 어떻게 다른지, 격차가 왜 정상인지, 어떤 숫자를 어떤 목적에 믿을지.</p>
       <span class="card__meta">수정 2026년 6월 21일</span>
     </a>
-  </article><article class="card">
+  </article><article class="card card--compete">
     <a class="card__link" href="/ko/why-your-dupr-is-lower-than-expected/">
-      <span class="card__cat">대회 &amp; 리그</span>
+      <span class="card__cat">대회·리그</span>
       <h3 class="card__title">DUPR 점수가 생각보다 낮게 나오는 이유</h3>
       <p class="card__summary">DUPR이 낮게 느껴지는 흔한 이유 — 신뢰도, 상대 강함, 점수 차, 부풀려진 자가·클럽 평가 — 와 대처법.</p>
       <span class="card__meta">수정 2026년 6월 21일</span>
     </a>
-  </article><article class="card">
+  </article><article class="card card--compete">
     <a class="card__link" href="/ko/how-to-self-rate-your-pickleball-level/">
-      <span class="card__cat">대회 &amp; 리그</span>
+      <span class="card__cat">대회·리그</span>
       <h3 class="card__title">DUPR 없이 내 피클볼 레벨 스스로 판단하는 법</h3>
       <p class="card__summary">샷과 판단으로 내 피클볼 레벨을 추정하는 실용적 방법, 무엇을 솔직히 봐야 하는지, 그리고 진짜 DUPR로 확인하는 법.</p>
       <span class="card__meta">수정 2026년 6월 21일</span>
     </a>
-  </article><article class="card">
+  </article><article class="card card--compete">
     <a class="card__link" href="/ko/what-does-a-dupr-3-0-player-look-like/">
-      <span class="card__cat">대회 &amp; 리그</span>
+      <span class="card__cat">대회·리그</span>
       <h3 class="card__title">DUPR 3.0은 어떤 모습일까 — 3.0과 3.5의 차이</h3>
       <p class="card__summary">3.0 플레이어가 보통 하는 샷과 판단, 3.0과 3.5의 차이, 그리고 내가 대략 어디쯤인지 가늠하는 법.</p>
       <span class="card__meta">수정 2026년 6월 21일</span>
     </a>
-  </article><article class="card">
+  </article><article class="card card--compete">
     <a class="card__link" href="/ko/how-a-pickleball-tournament-works/">
-      <span class="card__cat">대회 &amp; 리그</span>
+      <span class="card__cat">대회·리그</span>
       <h3 class="card__title">피클볼 대회는 어떻게 진행될까</h3>
       <p class="card__summary">피클볼 대회 신청 전 알아야 할 레벨 구분, 종목, 경기 방식, 준비물을 정리했습니다.</p>
       <span class="card__meta">수정 2026년 6월 21일</span>
     </a>
-  </article><article class="card">
+  </article><article class="card card--compete">
     <a class="card__link" href="/ko/what-is-dupr/">
-      <span class="card__cat">대회 &amp; 리그</span>
+      <span class="card__cat">대회·리그</span>
       <h3 class="card__title">DUPR란 무엇인가: 피클볼 레이팅 쉽게 이해하기</h3>
       <p class="card__summary">DUPR의 의미, 레이팅이 사용되는 상황, 2.0~5.0 레벨을 어떻게 해석해야 하는지 설명합니다.</p>
       <span class="card__meta">수정 2026년 6월 21일</span>
     </a>
   </article></div>
 </div></section>
+<section class="band "><div class="wrap narrow prose adsense-depth">
+    <h2>대회·리그 카테고리 읽는 순서</h2>
+    <p>대회·리그 카테고리에는 현재 7개의 관련 가이드가 정리되어 있습니다. 이 묶음은 검색 유입을 위한 얕은 링크 모음이 아니라, 같은 주제를 단계적으로 읽을 수 있도록 만든 학습 경로입니다.</p><p>처음 읽을 글을 고르기 어렵다면 DUPR란 무엇인가: 피클볼 레이팅 쉽게 이해하기, 피클볼 대회는 어떻게 진행될까, DUPR 3.0은 어떤 모습일까 — 3.0과 3.5의 차이 같은 글부터 시작해 보세요. 핵심 개념을 이해한 뒤 관련 글로 이동하면 같은 시간을 써도 훨씬 빠르게 경기 선택이 정리됩니다.</p><p>각 글은 가능한 한 실제 플레이어가 바로 적용할 수 있는 질문으로 시작합니다. 규칙이나 장비처럼 바뀌는 정보는 공식 출처를 확인하도록 안내하고, Picklary 내부에서는 이해와 적용에 필요한 설명을 더합니다.</p>
+    <ul><li>먼저 개념을 읽고, 다음에 체크리스트를 따라 해 보세요.</li><li>레벨이 맞지 않는 글은 한 단계 낮은 글부터 읽는 편이 좋습니다.</li><li>최신 규정과 가격은 각 글의 공식 링크에서 다시 확인하세요.</li></ul><h2>편집 품질 메모</h2><p>대회·리그 카테고리 읽는 순서 페이지는 방문자가 다음 행동을 바로 정할 수 있도록 구성했습니다. 단순히 외부 정보를 모아 놓는 대신, 어떤 순서로 읽고 무엇을 확인해야 하는지 설명합니다. 바뀔 수 있는 사실은 공식 출처 확인을 권하고, Picklary 내부 문단은 레벨업, 장비 선택, 경기 이해에 도움이 되는 해석과 적용 방법에 집중합니다.</p><p>이 문단은 페이지의 목적을 분명히 하기 위한 보강입니다. 짧은 링크 목록처럼 보이지 않도록 운영 기준, 검수 기준, 저작권 주의, 사용자 안전, 관련 도구 안내를 함께 설명합니다. 이후 실제 글이 늘어나면 이 영역은 최신 내부 글과 도구를 연결하는 안내문으로 계속 업데이트할 수 있습니다.</p><p>또한 같은 내용을 여러 페이지에 무의미하게 반복하지 않고, 각 페이지가 맡은 역할에 맞추어 설명을 확장합니다. 독자가 이 페이지에서 멈추지 않고 관련 도구, 상세 가이드, 공식 확인 링크로 이동하도록 연결하는 것이 목표입니다. 필요할 때는 관련 글 읽기, 도구 사용, 공식 출처 확인, 다음 방문 때 새 예시 확인 중 하나로 바로 이어지도록 구성합니다.</p>
+  </div></section>
   </main>
   <footer class="site-foot">
   <div class="wrap site-foot__inner">
     <div class="site-foot__brand">
-      <span class="brand__name">Picklary</span>
+      <span class="site-foot__lockup"><span class="brand__mark" aria-hidden="true"><svg class="brand__logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="15" y="11" width="11" height="42" rx="5.5" fill="#f4f7f6"/><circle cx="37.5" cy="25.5" r="16" fill="#F4B400"/><circle cx="37.5" cy="25.5" r="2.16" fill="#155446"/><circle cx="45.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="41.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="33.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="29.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="33.50" cy="18.57" r="2.16" fill="#155446"/><circle cx="41.50" cy="18.57" r="2.16" fill="#155446"/></svg></span><span class="brand__name">Picklary</span></span>
       <p>독립적으로 운영되는, 독자 중심의 피클볼 정보 사이트입니다.</p>
       <p class="site-foot__editor">작성
-        <a href="/ko/author/">Picklary 에디터</a> ·
-        <a href="mailto:hello@picklary.com">hello@picklary.com</a></p>
+        <a href="/ko/author/">Shawn</a> ·
+        <a href="mailto:iam4na2@gmail.com">iam4na2@gmail.com</a></p>
+      <p class="site-foot__blogs">다른 블로그:
+        <a href="https://picklary.blogspot.com" rel="me noopener" target="_blank">Blogspot</a> ·
+        <a href="https://blog.naver.com/arctic" rel="me noopener" target="_blank">Naver</a></p>
     </div>
     <nav class="site-foot__links" aria-label="Footer"><a href="/ko/about/">소개</a><a href="/ko/editorial-policy/">편집 정책</a><a href="/ko/corrections-policy/">정정 정책</a><a href="/ko/advertising-disclosure/">광고·제휴 고지</a><a href="/ko/community-guidelines/">커뮤니티 가이드라인</a><a href="/ko/privacy/">개인정보처리방침</a><a href="/ko/cookie-policy/">쿠키 정책</a><a href="/ko/terms/">이용약관</a><a href="/ko/disclaimer/">면책고지</a><a href="/ko/contact/">문의</a><a href="/ko/sitemap/">사이트맵</a></nav>
   </div>
-  <div class="wrap site-foot__legal">© 2026 Picklary. All rights reserved. <span class="site-foot__build" title="site build time">build 2026-06-22 00:12 UTC</span></div>
+  <div class="wrap site-foot__legal">© 2026 Picklary. 무단 전재 및 재배포 금지. <span class="site-foot__build" title="site build time">build 2026-07-01 05:10 UTC</span></div>
 </footer>
   <script src="/assets/js/site.js" defer></script>
 </body>

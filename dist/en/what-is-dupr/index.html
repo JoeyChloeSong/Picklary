@@ -1,6 +1,6 @@
 <!doctype html>
-<!-- Picklary build: 2026-06-22 00:12 UTC (brand=Picklary) -->
-<html lang="en" dir="ltr">
+<!-- Picklary build: 2026-07-01 05:10 UTC (brand=Picklary) -->
+<html lang="en" dir="ltr" data-theme="compete">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,22 +11,31 @@
   <link rel="alternate" hreflang="ko" href="https://picklary.com/ko/what-is-dupr/">
   <link rel="alternate" hreflang="en" href="https://picklary.com/en/what-is-dupr/">
   <link rel="alternate" hreflang="x-default" href="https://picklary.com/en/what-is-dupr/">
+  <link rel="alternate" type="application/rss+xml" title="Picklary" href="https://picklary.com/en/feed.xml">
   <meta property="og:site_name" content="Picklary">
   <meta property="og:type" content="article">
   <meta property="og:title" content="What is DUPR? How the rating system works and how to use it">
   <meta property="og:description" content="What DUPR measures, how it differs from self-rating, and how players use it to find fair matches and tournament divisions.">
   <meta property="og:url" content="https://picklary.com/en/what-is-dupr/">
   <meta property="og:locale" content="en">
+  <meta property="og:image" content="https://picklary.com/assets/icons/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="What is DUPR? How the rating system works and how to use it">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="What is DUPR? How the rating system works and how to use it">
   <meta name="twitter:description" content="What DUPR measures, how it differs from self-rating, and how players use it to find fair matches and tournament divisions.">
+  <meta name="twitter:image" content="https://picklary.com/assets/icons/og-default.png">
   <meta name="theme-color" content="#1E6F5C">
+  
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <link rel="mask-icon" href="/assets/icons/favicon.svg" color="#1E6F5C">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What is DUPR? How the rating system works and how to use it","description":"What DUPR measures, how it differs from self-rating, and how players use it to find fair matches and tournament divisions.","inLanguage":"en","datePublished":"2026-05-11","dateModified":"2026-06-21","author":{"@type":"Person","name":"The Picklary Editor"},"publisher":{"@type":"Organization","name":"Picklary"},"mainEntityOfPage":"https://picklary.com/en/what-is-dupr/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What is DUPR? How the rating system works and how to use it","description":"What DUPR measures, how it differs from self-rating, and how players use it to find fair matches and tournament divisions.","inLanguage":"en","datePublished":"2026-05-11","dateModified":"2026-06-21","author":{"@type":"Person","name":"Shawn"},"publisher":{"@type":"Organization","name":"Picklary"},"mainEntityOfPage":"https://picklary.com/en/what-is-dupr/"}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is DUPR free?","acceptedAnswer":{"@type":"Answer","text":"Yes, creating an account and getting a rating is free. You build your rating by logging match results."}},{"@type":"Question","name":"How many matches do I need before my rating is meaningful?","acceptedAnswer":{"@type":"Answer","text":"There is no fixed number, but the more matches you log against varied opponents, the more reliable and stable your rating becomes. Early ratings swing more."}},{"@type":"Question","name":"Why is my doubles rating different from my singles rating?","acceptedAnswer":{"@type":"Answer","text":"They are separate because the games reward different skills. Soft hands and positioning matter more in doubles; court coverage and power matter more in singles."}},{"@type":"Question","name":"Can I raise my DUPR by only playing weaker opponents?","acceptedAnswer":{"@type":"Answer","text":"Not really. Beating much lower-rated players does little for your number, and the system weighs the strength of your opponents and the closeness of scores."}}]}</script>
   
 </head>
@@ -35,11 +44,11 @@
 <header class="masthead">
   <div class="wrap masthead__inner">
     <a class="brand" href="/en/" aria-label="Picklary — home">
-      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__mark" aria-hidden="true"><svg class="brand__logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="15" y="11" width="11" height="42" rx="5.5" fill="#1E6F5C"/><circle cx="37.5" cy="25.5" r="16" fill="#F4B400"/><circle cx="37.5" cy="25.5" r="2.16" fill="#155446"/><circle cx="45.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="41.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="33.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="29.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="33.50" cy="18.57" r="2.16" fill="#155446"/><circle cx="41.50" cy="18.57" r="2.16" fill="#155446"/></svg></span>
       <span class="brand__name">Picklary</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
-    <nav id="primary-nav" class="nav" aria-label="Primary"><a href="/en/level/">Levels</a><a href="/en/paddles/">Paddles</a><a href="/en/players/">Pro Players</a><a href="/en/tournaments/">Tournaments</a><a href="/en/updates/">Update Center</a><a href="/en/boards/">Boards</a><a href="/en/highlights/">Highlights</a><a href="/en/what-is-dupr/" class="is-active" aria-current="page">DUPR</a><a href="/en/categories/">Guides</a></nav>
+    <nav id="primary-nav" class="nav" aria-label="Primary"><a href="/en/">Home</a><a href="/en/level/" class="is-active" aria-current="page">Level Up</a><a href="/en/gear/">Gear Lab</a><a href="/en/pro-scene/">Pro Scene</a><a href="/en/boards/">Play Hub</a><a href="/en/categories/">Insights</a></nav>
     <form class="lang" aria-label="Language">
       <span class="lang__icon" aria-hidden="true">🌐</span>
       <label class="visually-hidden" for="lang-select">Choose a language</label>
@@ -47,10 +56,12 @@
     </form>
   </div>
 </header>
-  <nav class="side-rail" aria-label="Quick section navigation">
-    <span class="side-rail__title">Quick pick</span>
-    <div class="side-rail__levels"><a href="/en/level/2-0/">2.0</a><a href="/en/level/2-5/">2.5</a><a href="/en/level/3-0/">3.0</a><a href="/en/level/3-5/">3.5</a><a href="/en/level/4-0/">4.0</a><a href="/en/level/4-5/">4.5</a><a href="/en/level/5-0/">5.0</a></div>
-    <div class="side-rail__main"><a href="/en/category/rules-and-getting-started/">Rules</a><a href="/en/category/skills-and-drills/">Skills</a><a href="/en/paddles/">Paddles</a><a href="/en/players/">Players</a><a href="/en/tournaments/">Tournaments</a><a href="/en/updates/">Update Center</a><a href="/en/boards/dupr-faq/">Level FAQ</a><a href="/en/boards/qna/">Q&amp;A Board</a><a href="/en/highlights/">Highlights</a></div>
+  <nav class="side-rail" aria-label="Quick navigation">
+    <span class="side-rail__title">Quick Moves</span>
+    <div class="side-rail__group side-rail__group--levels"><span class="side-rail__group-title">Level</span><div class="side-rail__levels"><a href="/en/level/2-0/">2.0</a><a href="/en/level/2-5/">2.5</a><a href="/en/level/3-0/">3.0</a><a href="/en/level/3-5/">3.5</a><a href="/en/level/4-0/">4.0</a><a href="/en/level/4-5/">4.5</a><a href="/en/level/5-0/">5.0</a></div></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">Start</span><a href="/en/dupr-self-check/">Self-check</a><a href="/en/what-is-dupr/">DUPR</a></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">Play</span><a href="/en/boards/friends/">Find Friends</a><a href="/en/boards/partners/">Find Partners</a><a href="/en/boards/tournaments/">Find Tournaments</a><a href="/en/boards/coaches/">Find Coaches</a></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">Explore</span><a href="/en/gear/">Gear Lab</a><a href="/en/pro-scene/">Pro Scene</a><a href="/en/categories/">Insights</a></div>
   </nav>
   <main id="main">
 
@@ -59,7 +70,7 @@
     <p class="post__cat"><a href="/en/category/tournaments-and-leagues/">Tournaments &amp; Leagues</a> · <span class="tag">Editor's pick</span></p>
     <h1 class="post__title">What is DUPR? How the rating system works and how to use it</h1>
     <p class="post__subtitle">A plain explanation of the rating you will keep hearing about.</p>
-    <p class="post__byline">By <a href="/en/author/">The Picklary Editor</a>
+    <p class="post__byline">By <a href="/en/author/">Shawn</a>
       · Published May 11, 2026
       · Updated Jun 21, 2026</p>
   </header>
@@ -68,7 +79,7 @@
       
       
       <aside class="takeaways"><h2>Key takeaways</h2><ul><li>DUPR (Dynamic Universal Pickleball Rating) is an algorithmic rating built from your real match scores.</li><li>It runs on one continuous scale (roughly 2.0–8.0) for all ages, genders, singles and doubles.</li><li>Your rating moves with every logged match and becomes more reliable as you log more.</li><li>Singles and doubles ratings are separate because they are different games.</li><li>A true DUPR only comes from logged matches; a self-check is just a rough estimate.</li></ul></aside>
-      <figure class="visual-card visual-card--article"><img src="/assets/img/dupr-ladder.svg" alt="Level ladder from 2.0 through 5.0." loading="lazy"><figcaption>Level ladder from 2.0 through 5.0.</figcaption></figure>
+      <figure class="visual-card visual-card--article visual-card--dupr-live"><img src="/assets/img/dupr-level-up-dashboard-cropped.webp" width="1448" height="980" alt="DUPR level-up dashboard" loading="lazy" decoding="async"><figcaption>DUPR level-up dashboard</figcaption><p class="visual-card__live-cta"><a class="btn btn--dupr btn--dupr-wide" href="/en/dupr-self-check/">Start DUPR Self-Check →</a></p></figure>
       <div class="prose">
 <p>DUPR — the Dynamic Universal Pickleball Rating — is the rating system you will hear about constantly once you start playing competitively. It is a single number that estimates your playing strength from the actual results of your matches. This guide explains what DUPR is, how the number moves, how to get one, and what it can and cannot tell you.</p>
 
@@ -109,27 +120,36 @@
     <details><summary>Is DUPR free?</summary><p>Yes, creating an account and getting a rating is free. You build your rating by logging match results.</p></details><details><summary>How many matches do I need before my rating is meaningful?</summary><p>There is no fixed number, but the more matches you log against varied opponents, the more reliable and stable your rating becomes. Early ratings swing more.</p></details><details><summary>Why is my doubles rating different from my singles rating?</summary><p>They are separate because the games reward different skills. Soft hands and positioning matter more in doubles; court coverage and power matter more in singles.</p></details><details><summary>Can I raise my DUPR by only playing weaker opponents?</summary><p>Not really. Beating much lower-rated players does little for your number, and the system weighs the strength of your opponents and the closeness of scores.</p></details>
   </section>
       <aside class="editor-box">
-    <span class="editor-box__avatar" aria-hidden="true">T</span>
+    <span class="editor-box__avatar" aria-hidden="true">S</span>
     <div>
-      <p class="editor-box__name"><a href="/en/author/">The Picklary Editor</a></p>
-      <p class="editor-box__bio">I build practical pickleball guides for players who want level-based improvement, smarter paddle choices, and clear ways to study pro patterns. For live ratings, rankings, prices, and rules, Picklary points readers back to official sources.</p>
+      <p class="editor-box__name"><a href="/en/author/">Shawn</a></p>
+      <p class="editor-box__role">Pickleball player of 2 years and the person who built Picklary</p>
+      <p class="editor-box__bio">I'm Shawn. I moved from tennis to pickleball in 2024 and now play doubles about three times a week around Atlanta, at Lifetime Fitness and ACE Pickleball Club. I have no tournament experience, but I enjoy helping newer players, and I buy and test gear myself and write up what I learn. I built Picklary because clear, well-organized information on levels, rules, and gear was hard to find in both Korean and English — so I'm gathering what I study in one place anyone can use. For anything that changes — ratings, prices, rules — Picklary points readers back to official sources.</p>
     </div>
   </aside>
+      <section class="block next-steps next-steps--post"><h2>What to do next</h2><p>Do not stop on this page — move into the next tool, guide, or feedback step.</p><div class="next-step-grid"><a class="next-step-card" href="/en/pickleball-complete-beginner-guide/"><span>Start here</span><h3>Open the Beginner Guide</h3><p>Give first-time readers a single path through rules, level, shots, and gear.</p><strong>Continue →</strong></a><a class="next-step-card" href="/en/dupr-self-check/"><span>Level</span><h3>Check your level</h3><p>Turn this page into action by comparing it with your self-check result.</p><strong>Continue →</strong></a><a class="next-step-card" href="/en/boards/skill-review/"><span>Community</span><h3>Get video feedback</h3><p>Use a short rally video link to check shot choice and positioning.</p><strong>Continue →</strong></a></div></section>
       <section class="block related">
     <h2>Related reading</h2>
-    <div class="cards cards--two"><article class="card">
+    <div class="cards cards--two"><article class="card card--compete">
     <a class="card__link" href="/en/how-a-pickleball-tournament-works/">
       <span class="card__cat">Tournaments &amp; Leagues</span>
       <h3 class="card__title">How a pickleball tournament works: formats and brackets</h3>
       <p class="card__summary">A newcomer-friendly explainer of tournament divisions, common formats, and how brackets decide medals.</p>
       <span class="card__meta">Updated Jun 21, 2026</span>
     </a>
-  </article><article class="card">
+  </article><article class="card card--skills">
     <a class="card__link" href="/en/first-30-days-practice-routine/">
       <span class="card__cat">Skills &amp; Drills</span>
       <h3 class="card__title">Your first 30 days: a practice routine for 2.0–3.0 players</h3>
       <p class="card__summary">A four-week practice framework for new players, focused on the few skills that raise your level fastest.</p>
       <span class="card__meta">Updated Jun 21, 2026 · Level 2.0–3.0</span>
+    </a>
+  </article><article class="card card--compete">
+    <a class="card__link" href="/en/how-to-use-dupr-without-overreacting-to-one-number/">
+      <span class="card__cat">Tournaments &amp; Leagues</span>
+      <h3 class="card__title">How to use DUPR without overreacting to one number</h3>
+      <p class="card__summary">A balanced guide to using DUPR and community DUPR식 estimates without overreacting to one match, one video, or one rating number.</p>
+      <span class="card__meta">Updated Jun 28, 2026</span>
     </a>
   </article></div>
   </section>
@@ -143,15 +163,18 @@
   <footer class="site-foot">
   <div class="wrap site-foot__inner">
     <div class="site-foot__brand">
-      <span class="brand__name">Picklary</span>
+      <span class="site-foot__lockup"><span class="brand__mark" aria-hidden="true"><svg class="brand__logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="15" y="11" width="11" height="42" rx="5.5" fill="#f4f7f6"/><circle cx="37.5" cy="25.5" r="16" fill="#F4B400"/><circle cx="37.5" cy="25.5" r="2.16" fill="#155446"/><circle cx="45.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="41.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="33.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="29.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="33.50" cy="18.57" r="2.16" fill="#155446"/><circle cx="41.50" cy="18.57" r="2.16" fill="#155446"/></svg></span><span class="brand__name">Picklary</span></span>
       <p>An independent, reader-focused pickleball information site.</p>
       <p class="site-foot__editor">By
-        <a href="/en/author/">The Picklary Editor</a> ·
-        <a href="mailto:hello@picklary.com">hello@picklary.com</a></p>
+        <a href="/en/author/">Shawn</a> ·
+        <a href="mailto:iam4na2@gmail.com">iam4na2@gmail.com</a></p>
+      <p class="site-foot__blogs">More blogs:
+        <a href="https://picklary.blogspot.com" rel="me noopener" target="_blank">Blogspot</a> ·
+        <a href="https://blog.naver.com/arctic" rel="me noopener" target="_blank">Naver</a></p>
     </div>
     <nav class="site-foot__links" aria-label="Footer"><a href="/en/about/">About</a><a href="/en/editorial-policy/">Editorial Policy</a><a href="/en/corrections-policy/">Corrections Policy</a><a href="/en/advertising-disclosure/">Advertising Disclosure</a><a href="/en/community-guidelines/">Community Guidelines</a><a href="/en/privacy/">Privacy Policy</a><a href="/en/cookie-policy/">Cookie Policy</a><a href="/en/terms/">Terms</a><a href="/en/disclaimer/">Disclaimer</a><a href="/en/contact/">Contact</a><a href="/en/sitemap/">Sitemap</a></nav>
   </div>
-  <div class="wrap site-foot__legal">© 2026 Picklary. All rights reserved. <span class="site-foot__build" title="site build time">build 2026-06-22 00:12 UTC</span></div>
+  <div class="wrap site-foot__legal">© 2026 Picklary. All rights reserved. <span class="site-foot__build" title="site build time">build 2026-07-01 05:10 UTC</span></div>
 </footer>
   <script src="/assets/js/site.js" defer></script>
 </body>

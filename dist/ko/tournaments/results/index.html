@@ -1,27 +1,36 @@
 <!doctype html>
-<!-- Picklary build: 2026-06-22 00:12 UTC (brand=Picklary) -->
-<html lang="ko" dir="ltr">
+<!-- Picklary build: 2026-07-01 05:10 UTC (brand=Picklary) -->
+<html lang="ko" dir="ltr" data-theme="compete">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>경기 결과 · 피클볼 대회정보 · Picklary</title>
+  <title>경기 결과 · 피클볼 프로투어·결과 · Picklary</title>
   <meta name="description" content="올해 실제 개최된 주요 대회의 경기 결과, 메달리스트, 브래킷 확인 경로와 현재 종목별 선두 현황을 정리합니다.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://picklary.com/ko/tournaments/results/">
   <link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/results/">
   <link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/results/">
   <link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/results/">
+  <link rel="alternate" type="application/rss+xml" title="Picklary" href="https://picklary.com/ko/feed.xml">
   <meta property="og:site_name" content="Picklary">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="경기 결과 · 피클볼 대회정보">
+  <meta property="og:title" content="경기 결과 · 피클볼 프로투어·결과">
   <meta property="og:description" content="올해 실제 개최된 주요 대회의 경기 결과, 메달리스트, 브래킷 확인 경로와 현재 종목별 선두 현황을 정리합니다.">
   <meta property="og:url" content="https://picklary.com/ko/tournaments/results/">
   <meta property="og:locale" content="ko">
+  <meta property="og:image" content="https://picklary.com/assets/icons/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="경기 결과 · 피클볼 프로투어·결과">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="경기 결과 · 피클볼 대회정보">
+  <meta name="twitter:title" content="경기 결과 · 피클볼 프로투어·결과">
   <meta name="twitter:description" content="올해 실제 개최된 주요 대회의 경기 결과, 메달리스트, 브래킷 확인 경로와 현재 종목별 선두 현황을 정리합니다.">
+  <meta name="twitter:image" content="https://picklary.com/assets/icons/og-default.png">
   <meta name="theme-color" content="#1E6F5C">
+  
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <link rel="mask-icon" href="/assets/icons/favicon.svg" color="#1E6F5C">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -34,11 +43,11 @@
 <header class="masthead">
   <div class="wrap masthead__inner">
     <a class="brand" href="/ko/" aria-label="Picklary — home">
-      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__mark" aria-hidden="true"><svg class="brand__logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="15" y="11" width="11" height="42" rx="5.5" fill="#1E6F5C"/><circle cx="37.5" cy="25.5" r="16" fill="#F4B400"/><circle cx="37.5" cy="25.5" r="2.16" fill="#155446"/><circle cx="45.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="41.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="33.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="29.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="33.50" cy="18.57" r="2.16" fill="#155446"/><circle cx="41.50" cy="18.57" r="2.16" fill="#155446"/></svg></span>
       <span class="brand__name">Picklary</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">메뉴</button>
-    <nav id="primary-nav" class="nav" aria-label="Primary"><a href="/ko/level/">레벨별 성장</a><a href="/ko/paddles/">패들 랭킹</a><a href="/ko/players/">프로 선수</a><a href="/ko/tournaments/" class="is-active" aria-current="page">대회정보</a><a href="/ko/updates/">업데이트센터</a><a href="/ko/boards/">게시판</a><a href="/ko/highlights/">하이라이트 배틀</a><a href="/ko/what-is-dupr/">DUPR란?</a><a href="/ko/categories/">가이드</a></nav>
+    <nav id="primary-nav" class="nav" aria-label="Primary"><a href="/ko/">홈</a><a href="/ko/level/">레벨업</a><a href="/ko/gear/">패들/장비</a><a href="/ko/pro-scene/" class="is-active" aria-current="page">선수·투어</a><a href="/ko/boards/">커뮤니티</a><a href="/ko/categories/">가이드</a></nav>
     <form class="lang" aria-label="언어">
       <span class="lang__icon" aria-hidden="true">🌐</span>
       <label class="visually-hidden" for="lang-select">언어 선택</label>
@@ -46,16 +55,18 @@
     </form>
   </div>
 </header>
-  <nav class="side-rail" aria-label="빠른 섹션 이동">
-    <span class="side-rail__title">빠른 선택</span>
-    <div class="side-rail__levels"><a href="/ko/level/2-0/">2.0</a><a href="/ko/level/2-5/">2.5</a><a href="/ko/level/3-0/">3.0</a><a href="/ko/level/3-5/">3.5</a><a href="/ko/level/4-0/">4.0</a><a href="/ko/level/4-5/">4.5</a><a href="/ko/level/5-0/">5.0</a></div>
-    <div class="side-rail__main"><a href="/ko/category/rules-and-getting-started/">규칙</a><a href="/ko/category/skills-and-drills/">스킬</a><a href="/ko/paddles/">패들</a><a href="/ko/players/">선수</a><a href="/ko/tournaments/">대회정보</a><a href="/ko/updates/">업데이트센터</a><a href="/ko/boards/dupr-faq/">레벨별 FAQ</a><a href="/ko/boards/qna/">상황별 Q&amp;A</a><a href="/ko/highlights/">영상</a></div>
+  <nav class="side-rail" aria-label="빠른 이동">
+    <span class="side-rail__title">빠른 메뉴</span>
+    <div class="side-rail__group side-rail__group--levels"><span class="side-rail__group-title">레벨</span><div class="side-rail__levels"><a href="/ko/level/2-0/">2.0</a><a href="/ko/level/2-5/">2.5</a><a href="/ko/level/3-0/">3.0</a><a href="/ko/level/3-5/">3.5</a><a href="/ko/level/4-0/">4.0</a><a href="/ko/level/4-5/">4.5</a><a href="/ko/level/5-0/">5.0</a></div></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">시작하기</span><a href="/ko/dupr-self-check/">자가진단</a><a href="/ko/what-is-dupr/">DUPR</a></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">커뮤니티</span><a href="/ko/boards/friends/">친구찾기</a><a href="/ko/boards/partners/">파트너찾기</a><a href="/ko/boards/tournaments/">대회찾기</a><a href="/ko/boards/coaches/">코치찾기</a></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">둘러보기</span><a href="/ko/gear/">패들/장비</a><a href="/ko/pro-scene/">선수·투어</a><a href="/ko/categories/">가이드</a></div>
   </nav>
   <main id="main">
-<nav class="crumbs" aria-label="Breadcrumb"><ol class="wrap"><li aria-current="page">홈</li><li><a href="/ko/tournaments/">피클볼 대회정보</a></li><li aria-current="page">경기 결과</li></ol></nav>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://picklary.com/ko/"},{"@type":"ListItem","position":2,"name":"피클볼 대회정보","item":"https://picklary.com/ko/tournaments/"},{"@type":"ListItem","position":3,"name":"경기 결과"}]}</script>
-<section class="page-head"><div class="wrap"><p class="page-head__eyebrow">대회정보</p><h1>경기 결과</h1><p class="page-head__intro">올해 실제 개최된 주요 대회의 경기 결과, 메달리스트, 브래킷 확인 경로와 현재 종목별 선두 현황을 정리합니다.</p></div></section>
-<section class="band"><div class="wrap"><nav class="update-tabs" aria-label="피클볼 대회정보"><a class="" href="/ko/tournaments/">전체 대회정보</a><a class="" href="/ko/tournaments/us/">미국 대회</a><a class="" href="/ko/tournaments/international/">미국 외 대회</a><a class="is-active" href="/ko/tournaments/results/">경기 결과</a></nav><h2 class="band__title">현재 종목별 선두</h2><div class="rankings-board">
+<nav class="crumbs" aria-label="Breadcrumb"><ol class="wrap"><li aria-current="page">홈</li><li><a href="/ko/tournaments/">피클볼 프로투어·결과</a></li><li aria-current="page">경기 결과</li></ol></nav>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://picklary.com/ko/"},{"@type":"ListItem","position":2,"name":"피클볼 프로투어·결과","item":"https://picklary.com/ko/tournaments/"},{"@type":"ListItem","position":3,"name":"경기 결과"}]}</script>
+<section class="page-head"><div class="wrap"><p class="page-head__eyebrow">프로투어</p><h1>경기 결과</h1><p class="page-head__intro">올해 실제 개최된 주요 대회의 경기 결과, 메달리스트, 브래킷 확인 경로와 현재 종목별 선두 현황을 정리합니다.</p></div></section>
+<section class="band"><div class="wrap"><nav class="update-tabs" aria-label="피클볼 프로투어·결과"><a class="" href="/ko/tournaments/">전체 프로투어 정보</a><a class="" href="/ko/tournaments/us/">미국 투어</a><a class="" href="/ko/tournaments/international/">미국 외 투어</a><a class="is-active" href="/ko/tournaments/results/">경기 결과</a></nav><h2 class="band__title">현재 종목별 선두</h2><div class="rankings-board">
     <p class="rankings-board__note">2025–26 PPA 투어 시즌을 마친 시점에서 각 프로 종목을 이끄는 선수 스냅샷입니다. 순위와 DUPR은 경기 결과에 따라 계속 바뀌므로, 실시간 순서는 공식 랭킹에서 확인하세요. <span class="muted">(기준일 2026-06-19)</span></p>
     <div class="rank-grid"><article class="rank-card">
       <h3 class="rank-card__disc">남자 단식</h3>
@@ -64,22 +75,22 @@
       <p class="rank-card__note">해워스가 세계 1위를 지켜 왔고, 스탁스루드 등 두꺼운 선수층이 추격합니다.</p>
     </article><article class="rank-card">
       <h3 class="rank-card__disc">여자 단식</h3>
-      <div class="rank-card__leaders"><a class="rank-person" href="/ko/players/anna-leigh-waters/"><span class="rank-avatar"><img class="rank-avatar__img" src="/assets/img/players/anna-leigh-waters.svg" alt="Anna Leigh Waters — illustration" loading="lazy"></span><span class="rank-name">Anna Leigh Waters</span></a></div>
+      <div class="rank-card__leaders"><a class="rank-person" href="/ko/players/anna-leigh-waters/"><span class="rank-avatar"><img class="rank-avatar__img" src="/assets/img/players/anna-leigh-waters.svg" width="400" height="500" alt="Anna Leigh Waters — illustration" loading="lazy"></span><span class="rank-name">Anna Leigh Waters</span></a></div>
       <p class="rank-card__chasers"><span class="rank-card__chasers-label">추격:</span> <span>Kate Fahey</span><span class="rank-sep">·</span><a href="/ko/players/catherine-parenteau/">Catherine Parenteau</a></p>
       <p class="rank-card__note">워터스가 여자 단식을 지배해 왔고, 페이히가 확실한 2인자입니다.</p>
     </article><article class="rank-card">
       <h3 class="rank-card__disc">남자 복식</h3>
-      <div class="rank-card__leaders"><a class="rank-person" href="/ko/players/ben-johns/"><span class="rank-avatar"><img class="rank-avatar__img" src="/assets/img/players/ben-johns.svg" alt="Ben Johns — illustration" loading="lazy"></span><span class="rank-name">Ben Johns</span></a><span class="rank-amp">&amp;</span><span class="rank-person"><span class="rank-avatar rank-avatar--ini"><span class="rank-avatar__ini" aria-hidden="true">GT</span></span><span class="rank-name">Gabe Tardio</span></span></div>
+      <div class="rank-card__leaders"><a class="rank-person" href="/ko/players/ben-johns/"><span class="rank-avatar"><img class="rank-avatar__img" src="/assets/img/players/ben-johns.svg" width="400" height="500" alt="Ben Johns — illustration" loading="lazy"></span><span class="rank-name">Ben Johns</span></a><span class="rank-amp">&amp;</span><span class="rank-person"><span class="rank-avatar rank-avatar--ini"><span class="rank-avatar__ini" aria-hidden="true">GT</span></span><span class="rank-name">Gabe Tardio</span></span></div>
       <p class="rank-card__chasers"><span class="rank-card__chasers-label">추격:</span> <a href="/ko/players/federico-staksrud/">Federico Staksrud</a><span class="rank-sep">·</span><span>Andrei Daescu</span><span class="rank-sep">·</span><a href="/ko/players/christian-alshon/">Christian Alshon</a></p>
       <p class="rank-card__note">존스/타르디오가 2026 남자 복식 시즌을 압도적으로 보냈습니다.</p>
     </article><article class="rank-card">
       <h3 class="rank-card__disc">여자 복식</h3>
-      <div class="rank-card__leaders"><a class="rank-person" href="/ko/players/anna-bright/"><span class="rank-avatar"><img class="rank-avatar__img" src="/assets/img/players/anna-bright.svg" alt="Anna Bright — illustration" loading="lazy"></span><span class="rank-name">Anna Bright</span></a><span class="rank-amp">&amp;</span><a class="rank-person" href="/ko/players/anna-leigh-waters/"><span class="rank-avatar"><img class="rank-avatar__img" src="/assets/img/players/anna-leigh-waters.svg" alt="Anna Leigh Waters — illustration" loading="lazy"></span><span class="rank-name">Anna Leigh Waters</span></a></div>
+      <div class="rank-card__leaders"><a class="rank-person" href="/ko/players/anna-bright/"><span class="rank-avatar"><img class="rank-avatar__img" src="/assets/img/players/anna-bright.svg" width="400" height="500" alt="Anna Bright — illustration" loading="lazy"></span><span class="rank-name">Anna Bright</span></a><span class="rank-amp">&amp;</span><a class="rank-person" href="/ko/players/anna-leigh-waters/"><span class="rank-avatar"><img class="rank-avatar__img" src="/assets/img/players/anna-leigh-waters.svg" width="400" height="500" alt="Anna Leigh Waters — illustration" loading="lazy"></span><span class="rank-name">Anna Leigh Waters</span></a></div>
       <p class="rank-card__chasers"><span class="rank-card__chasers-label">추격:</span> <span>Jorja Johnson</span><span class="rank-sep">·</span><span>Jade Kawamoto</span></p>
       <p class="rank-card__note">“두 명의 애나”가 여자 복식에서 가장 강한 팀이었습니다.</p>
     </article><article class="rank-card">
       <h3 class="rank-card__disc">혼합 복식</h3>
-      <div class="rank-card__leaders"><a class="rank-person" href="/ko/players/anna-leigh-waters/"><span class="rank-avatar"><img class="rank-avatar__img" src="/assets/img/players/anna-leigh-waters.svg" alt="Anna Leigh Waters — illustration" loading="lazy"></span><span class="rank-name">Anna Leigh Waters</span></a><span class="rank-amp">&amp;</span><a class="rank-person" href="/ko/players/ben-johns/"><span class="rank-avatar"><img class="rank-avatar__img" src="/assets/img/players/ben-johns.svg" alt="Ben Johns — illustration" loading="lazy"></span><span class="rank-name">Ben Johns</span></a></div>
+      <div class="rank-card__leaders"><a class="rank-person" href="/ko/players/anna-leigh-waters/"><span class="rank-avatar"><img class="rank-avatar__img" src="/assets/img/players/anna-leigh-waters.svg" width="400" height="500" alt="Anna Leigh Waters — illustration" loading="lazy"></span><span class="rank-name">Anna Leigh Waters</span></a><span class="rank-amp">&amp;</span><a class="rank-person" href="/ko/players/ben-johns/"><span class="rank-avatar"><img class="rank-avatar__img" src="/assets/img/players/ben-johns.svg" width="400" height="500" alt="Ben Johns — illustration" loading="lazy"></span><span class="rank-name">Ben Johns</span></a></div>
       <p class="rank-card__chasers"><span class="rank-card__chasers-label">추격:</span> <a href="/ko/players/anna-bright/">Anna Bright</a><span class="rank-sep">·</span><span>Hayden Patriquin</span></p>
       <p class="rank-card__note">워터스/존스가 시즌 내내 최고의 혼합 복식 팀이었습니다.</p>
     </article></div>
@@ -91,13 +102,14 @@
     <header class="recap__head">
       <p class="recap__tier">팀 리그</p>
       <h2 class="recap__title">메이저 리그 피클볼 2026 (진행 중)</h2>
-      <p class="recap__meta">2026 시즌 — 진행 중 · 미국 여러 개최 도시</p>
+      <p class="recap__meta">2026 시즌 — 5~8월 · 미국 여러 개최 도시</p>
     </header>
-    <p class="recap__summary">MLP 팀 시즌은 여름 내내 여러 이벤트로 진행되며, standings 포인트가 누적되어 플레이오프로 이어집니다. 초반 이벤트들은 “전력 평준화”가 특징으로, 여러 팀이 번갈아 이벤트 우승을 차지했습니다.</p>
-    <div class="recap__winners"><h3>종목별 우승</h3><ul class="recap-win"><li><span class="recap-win__div">최근 이벤트 — MLP 오스틴</span><span class="recap-win__champ">New Jersey 5s</span></li><li><span class="recap-win__div">시즌 초반 standings 선두</span><span class="recap-win__champ">New Jersey 5s</span></li><li><span class="recap-win__div">1주차 — MLP 댈러스</span><span class="recap-win__champ">Los Angeles Mad Drops</span></li></ul></div>
-    <div class="recap__story"><h3>관전 포인트</h3><p>뉴저지 5s는 부진했던 개막 이벤트를 딛고 MLP 오스틴에서 우승하며 다시 standings 선두로 올라섰고, 최근 두 이벤트를 무패로 마쳤습니다. 팀들이 승리를 주고받으며 플레이오프 시드 경쟁이 치열합니다.</p></div>
-    <div class="source-buttons"><a class="btn btn--ghost" href="https://majorleaguepickleball.co/league-standings/" rel="nofollow noopener" target="_blank">MLP</a></div>
-    <p class="notice">결과는 2026-06-19 확인 기준이며 사후 정정될 수 있습니다. 전체 브래킷·스코어는 공식 출처에서 확인하세요.</p>
+    <p class="recap__summary">MLP는 20개 코에드 팀이 5~8월 9개 정규 이벤트를 치르며, 단일 이벤트 우승이 아니라 standings 포인트로 12팀 플레이오프 진출이 정해집니다. 5개 대회가 끝나고 뉴욕 대회가 진행 중이며, St. Louis와 New Jersey가 선두권을 형성했습니다.</p>
+    <div class="recap__winners"><h3>이벤트별 결과 (정규 9개 중 5개 완료)</h3><ul class="recap-win-list"><li class="recap-win"><span class="recap-win__div">댈러스 — 5/22–25 (개막)</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">LA Mad Drops</span></div></div><span class="recap-win__note">Mad Drops가 첫 Super Sunday 벨트 획득.</span></li><li class="recap-win"><span class="recap-win__div">콜럼버스 — 5/28–31</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">New Jersey 5s</span></div><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥈</span><span class="podium__name">St. Louis Shock</span></div><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥉</span><span class="podium__name">Columbus Sliders</span></div></div><span class="recap-win__note">5s가 Shock를 3-0(11-3, 11-8, 11-9)으로 완파; 홈팀 Sliders 3위.</span></li><li class="recap-win"><span class="recap-win__div">세인트루이스 — 6/4–7</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">St. Louis Shock</span></div><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥈</span><span class="podium__name">LA Mad Drops</span></div></div><span class="recap-win__note">Shock가 3-0(합산 33-9)으로 우승.</span></li><li class="recap-win"><span class="recap-win__div">오스틴 — 6/11–14</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">New Jersey 5s</span></div></div><span class="recap-win__note">5s가 두 번째 우승; 이 대회에는 Shock·Mad Drops 불참.</span></li><li class="recap-win"><span class="recap-win__div">세인트피터스버그 — 6/17–21</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">St. Louis Shock</span></div><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥈</span><span class="podium__name">LA Mad Drops</span></div><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥉</span><span class="podium__name">Brooklyn Pickleball Team</span></div></div><span class="recap-win__note">Shock가 결승서 Mad Drops를 3-0(33-15)으로; Palm Beach 4위.</span></li></ul></div>
+    <div class="recap__race"><h3>현재 타이틀 레이스</h3><ol class="race-list"><li class="race"><span class="race__rank">1</span><span class="race__body"><span class="race__team">St. Louis Shock</span><span class="race__note">St. Louis·St. Pete 우승; 5월 말 이후 경기 무패로 톱2 시드 유력.</span></span></li><li class="race"><span class="race__rank">2</span><span class="race__body"><span class="race__team">New Jersey 5s</span><span class="race__note">개막 4위에서 반등해 Columbus·Austin 우승, 애나 리 워터스가 견인.</span></span></li><li class="race"><span class="race__rank">3</span><span class="race__body"><span class="race__team">LA Mad Drops</span><span class="race__note">Dallas 우승 후 St. Louis·St. Pete 준우승 — 두 번 모두 Shock에 스윕.</span></span></li><li class="race"><span class="race__rank">4</span><span class="race__body"><span class="race__team">Columbus Sliders</span><span class="race__note">2025 챔피언; 트레이드로 Tyra Black을 더해 톱10 복식 4인 라인업 구성.</span></span></li><li class="race"><span class="race__rank">5</span><span class="race__body"><span class="race__team">Palm Beach Royals</span><span class="race__note">신생팀이지만 타이슨 맥거핀·소피아 슈잉을 앞세워 호조의 데뷔.</span></span></li></ol></div>
+    <div class="recap__story"><h3>관전 포인트 — Shock의 질주</h3><p>St. Louis Shock가 여름의 주인공입니다. St. Louis·St. Pete를 연달아 제패하고 5월 말 이후 경기 무패 행진을 이어가고 있죠(애나 브라이트·케이트 페이히·게이브 타르디오·헤이든 파트리퀸). New Jersey는 초반 부진을 Columbus·Austin 우승으로 만회했고, Mad Drops는 결승마다 Shock에 막혔습니다. 다음은 Mid-Season 토너먼트(7/8–12, Beer City Open 병행, 20개 팀+게스트 국가대표팀)이며, 확대된 플레이오프 시드는 아직 활짝 열려 있습니다.</p></div>
+    <div class="source-buttons"><a class="btn btn--primary" href="https://majorleaguepickleball.co/standings/" rel="nofollow noopener" target="_blank">라이브 순위·뉴욕 스코어 →</a><a class="btn btn--ghost" href="https://majorleaguepickleball.co/standings/" rel="nofollow noopener" target="_blank">MLP</a></div>
+    <p class="notice">결과는 2026-06-26 확인 기준이며 사후 정정될 수 있습니다. 전체 브래킷·스코어는 공식 출처에서 확인하세요.</p>
   </article><article class="recap">
     <header class="recap__head">
       <p class="recap__tier">시즌 파이널</p>
@@ -105,7 +117,8 @@
       <p class="recap__meta">2026년 5월 4–10일 · 미국 캘리포니아 산클레멘테 (Life Time Rancho San Clemente)</p>
     </header>
     <p class="recap__summary">상위 시드 위주로 마무리된 2025–26 PPA 투어의 시즌 결승전입니다. 벤 존스와 게이브 타르디오가 무패의 남자 복식 시즌을 완성했고, 애나 리 워터스는 단식을 건너뛰고도 복식·혼합에서 우승을 더했습니다.</p>
-    <div class="recap__winners"><h3>종목별 우승</h3><ul class="recap-win"><li><span class="recap-win__div">남자 단식</span><span class="recap-win__champ">Christopher Haworth</span></li><li><span class="recap-win__div">여자 단식</span><span class="recap-win__champ">Kate Fahey</span></li><li><span class="recap-win__div">남자 복식</span><span class="recap-win__champ">Ben Johns / Gabe Tardio</span></li><li><span class="recap-win__div">여자 복식</span><span class="recap-win__champ">Anna Bright / Anna Leigh Waters</span></li><li><span class="recap-win__div">혼합 복식</span><span class="recap-win__champ">Anna Leigh Waters / Ben Johns</span></li></ul></div>
+    <div class="recap__winners"><h3>종목별 우승</h3><ul class="recap-win-list"><li class="recap-win"><span class="recap-win__div">남자 단식</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">Christopher Haworth</span></div></div></li><li class="recap-win"><span class="recap-win__div">여자 단식</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">Kate Fahey</span></div></div></li><li class="recap-win"><span class="recap-win__div">남자 복식</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">Ben Johns / Gabe Tardio</span></div></div></li><li class="recap-win"><span class="recap-win__div">여자 복식</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">Anna Bright / Anna Leigh Waters</span></div></div></li><li class="recap-win"><span class="recap-win__div">혼합 복식</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">Anna Leigh Waters / Ben Johns</span></div></div></li></ul></div>
+    
     <div class="recap__story"><h3>관전 포인트 · 업셋</h3><p>가장 큰 이변은 남자 단식 풀 플레이에서 나왔습니다. 코너 가넷이 세계 1위 크리스토퍼 해워스를 잡고 풀 플레이를 무패로 마쳤죠(다만 해워스가 회복해 우승). 애나 리 워터스는 무릎 문제로 단식을 기권했고, 그 틈을 케이트 페이히가 한 게임도 내주지 않고 여자 단식 우승으로 메웠습니다.</p></div>
     <div class="source-buttons"><a class="btn btn--ghost" href="https://ppatour.com/championship-sunday-standout-stats-from-the-toys-r-us-ppa-finals/" rel="nofollow noopener" target="_blank">PPA Tour</a></div>
     <p class="notice">결과는 2026-06-19 확인 기준이며 사후 정정될 수 있습니다. 전체 브래킷·스코어는 공식 출처에서 확인하세요.</p>
@@ -116,7 +129,8 @@
       <p class="recap__meta">2026년 4월 27일 – 5월 3일 · 미국 조지아 피치트리코너스 (Life Time Peachtree Corners)</p>
     </header>
     <p class="recap__summary">정규 시즌 마지막 슬램으로, 랭킹 포인트가 2배(2,000점)이고 CBS 전국 중계까지 걸린 대회였습니다. 동시에 파이널스 진출권이 걸린 마지막 관문이었죠. 애나 리 워터스가 출전 세 종목을 모두 휩쓸어 또 한 번의 트리플 크라운을 달성했고, 벤 존스·게이브 타르디오는 남자 복식 연승을 이어갔습니다.</p>
-    <div class="recap__winners"><h3>종목별 우승</h3><ul class="recap-win"><li><span class="recap-win__div">남자 단식</span><span class="recap-win__champ">Christopher Haworth</span></li><li><span class="recap-win__div">여자 단식</span><span class="recap-win__champ">Anna Leigh Waters</span></li><li><span class="recap-win__div">남자 복식</span><span class="recap-win__champ">Ben Johns / Gabe Tardio</span></li><li><span class="recap-win__div">여자 복식</span><span class="recap-win__champ">Anna Leigh Waters / Anna Bright</span></li><li><span class="recap-win__div">혼합 복식</span><span class="recap-win__champ">Anna Leigh Waters / Ben Johns</span></li></ul></div>
+    <div class="recap__winners"><h3>종목별 우승</h3><ul class="recap-win-list"><li class="recap-win"><span class="recap-win__div">남자 단식</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">Christopher Haworth</span></div></div></li><li class="recap-win"><span class="recap-win__div">여자 단식</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">Anna Leigh Waters</span></div></div></li><li class="recap-win"><span class="recap-win__div">남자 복식</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">Ben Johns / Gabe Tardio</span></div></div></li><li class="recap-win"><span class="recap-win__div">여자 복식</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">Anna Leigh Waters / Anna Bright</span></div></div></li><li class="recap-win"><span class="recap-win__div">혼합 복식</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">Anna Leigh Waters / Ben Johns</span></div></div></li></ul></div>
+    
     <div class="recap__story"><h3>관전 포인트 · 업셋</h3><p>이 주의 주인공은 하와이 출신 15세 타마 시마부쿠로였습니다. 22번 시드였던 그는 상위 시드들과 헌터 존슨을 꺾고 남자 단식 결승까지 올라간 뒤 세계 1위 해워스에게 패했지만, 차세대 선수에 대한 화제를 만들어낸 돌풍이었습니다.</p></div>
     <div class="source-buttons"><a class="btn btn--ghost" href="https://ppatour.com/championship-sunday-standout-stats-from-the-veolia-atlanta-pickleball-championships-2/" rel="nofollow noopener" target="_blank">PPA Tour</a></div>
     <p class="notice">결과는 2026-06-19 확인 기준이며 사후 정정될 수 있습니다. 전체 브래킷·스코어는 공식 출처에서 확인하세요.</p>
@@ -127,7 +141,8 @@
       <p class="recap__meta">2026년 4월 1–5일 · 베트남 하노이 (My Dinh Indoor Arena)</p>
     </header>
     <p class="recap__summary">2026년 PPA 투어 아시아의 첫 대회로, 베트남 수도에서 더 느린 공식 공(JOOLA HC-40)으로 치러졌으며 애나 리 워터스의 국제무대 데뷔전이기도 했습니다. 남자 단식 결승은 역사를 썼습니다.</p>
-    <div class="recap__winners"><h3>종목별 우승</h3><ul class="recap-win"><li><span class="recap-win__div">남자 단식</span><span class="recap-win__champ">Ly Hoang Nam</span></li><li><span class="recap-win__div">여자 단식</span><span class="recap-win__champ">Kaitlyn Christian</span></li><li><span class="recap-win__div">남자 복식</span><span class="recap-win__champ">Ben Johns / Gabe Tardio</span></li><li><span class="recap-win__div">여자 복식</span><span class="recap-win__champ">Anna Leigh Waters / Anna Bright</span></li><li><span class="recap-win__div">혼합 복식</span><span class="recap-win__champ">Anna Leigh Waters / Ben Johns</span></li></ul></div>
+    <div class="recap__winners"><h3>종목별 우승</h3><ul class="recap-win-list"><li class="recap-win"><span class="recap-win__div">남자 단식</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">Ly Hoang Nam</span></div></div></li><li class="recap-win"><span class="recap-win__div">여자 단식</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">Kaitlyn Christian</span></div></div></li><li class="recap-win"><span class="recap-win__div">남자 복식</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">Ben Johns / Gabe Tardio</span></div></div></li><li class="recap-win"><span class="recap-win__div">여자 복식</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">Anna Leigh Waters / Anna Bright</span></div></div></li><li class="recap-win"><span class="recap-win__div">혼합 복식</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">Anna Leigh Waters / Ben Johns</span></div></div></li></ul></div>
+    
     <div class="recap__story"><h3>관전 포인트 · 업셋</h3><p>PPA 1000급 대회 사상 처음으로 개최국 선수 두 명이 남자 단식 결승에서 맞붙었습니다 — 리 호앙 남이 홈에서 같은 베트남의 쯔엉 빈 히엔을 꺾었죠. 리는 2번 시드 크리스티안 알숀을, 쯔엉은 1번 시드를 각각 잡아냈습니다. 여자 단식에서는 케이틀린 크리스티안이 2세트 2–8 열세에서 매치포인트를 막아내며 짜릿한 역전 우승을 거뒀습니다.</p></div>
     <div class="source-buttons"><a class="btn btn--ghost" href="https://www.ppatour-asia.com/tournament/2026/hanoi-cup/" rel="nofollow noopener" target="_blank">PPA Tour Asia</a></div>
     <p class="notice">결과는 2026-06-19 확인 기준이며 사후 정정될 수 있습니다. 전체 브래킷·스코어는 공식 출처에서 확인하세요.</p>
@@ -138,12 +153,26 @@
       <p class="recap__meta">2026년 1월 12–18일 · 미국 캘리포니아 랜초미라지/팜스프링스 (Mission Hills Country Club)</p>
     </header>
     <p class="recap__summary">시즌을 여는 1월의 대형 슬램으로, 팜스프링스에서 프로 피클볼 사상 최고 수준의 중계 시청률을 기록했습니다. 애나 리 워터스가 또 한 번 마스터스 트리플 크라운으로 시즌을 열었고, 벤 존스·게이브 타르디오가 남자 복식 우승으로 출발했습니다.</p>
-    <div class="recap__winners"><h3>종목별 우승</h3><ul class="recap-win"><li><span class="recap-win__div">남자 단식</span><span class="recap-win__champ">Christopher Haworth</span></li><li><span class="recap-win__div">여자 단식</span><span class="recap-win__champ">Anna Leigh Waters</span></li><li><span class="recap-win__div">남자 복식</span><span class="recap-win__champ">Ben Johns / Gabe Tardio</span></li><li><span class="recap-win__div">여자 복식</span><span class="recap-win__champ">Anna Leigh Waters / Anna Bright</span></li><li><span class="recap-win__div">혼합 복식</span><span class="recap-win__champ">Anna Leigh Waters / Ben Johns</span></li></ul></div>
+    <div class="recap__winners"><h3>종목별 우승</h3><ul class="recap-win-list"><li class="recap-win"><span class="recap-win__div">남자 단식</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">Christopher Haworth</span></div></div></li><li class="recap-win"><span class="recap-win__div">여자 단식</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">Anna Leigh Waters</span></div></div></li><li class="recap-win"><span class="recap-win__div">남자 복식</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">Ben Johns / Gabe Tardio</span></div></div></li><li class="recap-win"><span class="recap-win__div">여자 복식</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">Anna Leigh Waters / Anna Bright</span></div></div></li><li class="recap-win"><span class="recap-win__div">혼합 복식</span><div class="podium"><div class="podium__row"><span class="podium__medal" aria-hidden="true">🥇</span><span class="podium__name">Anna Leigh Waters / Ben Johns</span></div></div></li></ul></div>
+    
     <div class="recap__story"><h3>관전 포인트 · 업셋</h3><p>남자 단식에서는 크리스토퍼 해워스가 결승에서 잭 삭을 꺾었습니다. 다만 더 큰 화제는 점수판 밖에 있었는데, 마스터스는 최고 100만 명 이상의 시청자를 모은 것으로 전해져 프로 피클볼 중계의 기록적인 수치를 남겼습니다.</p></div>
     <div class="source-buttons"><a class="btn btn--ghost" href="https://ppatour.com/tournament/2026/the-ppa-masters-powered-by-invited/" rel="nofollow noopener" target="_blank">PPA Tour</a></div>
     <p class="notice">결과는 2026-06-19 확인 기준이며 사후 정정될 수 있습니다. 전체 브래킷·스코어는 공식 출처에서 확인하세요.</p>
   </article></div></div></section>
-<section class="band band--alt"><div class="wrap"><h2 class="band__title">대회 확인 출처</h2><div class="source-watch-grid"><article class="source-watch">
+<section class="band"><div class="wrap">
+  <div class="section-head"><div><h2 class="band__title">Picklary에서 더 깊이 보기</h2><p class="band__intro">결과에 등장한 선수들을 살펴보고, 같은 아이디어를 내 게임에 적용해 보세요.</p></div></div>
+  <div class="explore-grid">
+    <a class="explore-card" href="/ko/players/anna-leigh-waters/"><span class="explore-card__k">선수</span><span class="explore-card__t">Anna Leigh Waters</span><span class="explore-card__d">NJ 5s — 콜럼버스·오스틴 우승을 견인</span></a>
+    <a class="explore-card" href="/ko/players/anna-bright/"><span class="explore-card__k">선수</span><span class="explore-card__t">Anna Bright</span><span class="explore-card__d">St. Louis Shock 연승의 주역</span></a>
+    <a class="explore-card" href="/ko/players/ben-johns/"><span class="explore-card__k">선수</span><span class="explore-card__t">Ben Johns</span><span class="explore-card__d">LA Mad Drops 라인업의 핵심</span></a>
+    <a class="explore-card" href="/ko/players/tyson-mcguffin/"><span class="explore-card__k">선수</span><span class="explore-card__t">Tyson McGuffin</span><span class="explore-card__d">신생 Palm Beach Royals를 이끈다</span></a>
+    <a class="explore-card" href="/ko/level/"><span class="explore-card__k">레벨</span><span class="explore-card__t">내 레벨 알아보기</span><span class="explore-card__d">2.0–5.0 레벨별 기술과 성장법</span></a>
+    <a class="explore-card" href="/ko/tools/paddle-finder/"><span class="explore-card__k">도구</span><span class="explore-card__t">패들 파인더</span><span class="explore-card__d">플레이 스타일에 맞는 패들 추천</span></a>
+  </div></div></section><section class="band "><div class="wrap narrow prose adsense-depth">
+    <h2>미국 프로투어 정보를 활용하는 법</h2>
+    <p>미국 프로투어 페이지는 단순 일정표가 아니라 경기 관전과 학습을 연결하는 페이지입니다. 어느 도시에서 열리는지만 보는 것보다 어떤 종목이 열리는지, 상위 선수가 어떤 조합으로 출전하는지, 결과가 랭킹과 팀 리그 흐름에 어떤 영향을 주는지를 함께 보면 더 유용합니다.</p><p>Picklary는 실시간 스코어를 자체적으로 확정 발표하지 않습니다. 대회 일정, 브래킷, 참가자, 결과는 사후 변경될 수 있으므로 공식 대회 페이지와 랭킹 페이지를 다시 확인하도록 안내합니다.</p><p>동호인에게 가장 유용한 사용법은 결과를 보고 끝내는 것이 아니라, 우승 조합의 패턴을 자신의 복식 경기로 가져오는 것입니다. 리턴 후 전진 타이밍, 3구 선택, 중앙 수비, 파트너 간 역할 분담을 중심으로 보면 프로 경기가 훨씬 실용적인 자료가 됩니다.</p>
+    <ul><li>일정과 결과는 공식 출처에서 재확인합니다.</li><li>대회 결과는 선수 페이지와 연결해 학습합니다.</li><li>관전 포인트는 화려한 샷보다 반복되는 패턴입니다.</li></ul><h2>편집 품질 메모</h2><p>미국 프로투어 정보를 활용하는 법 페이지는 방문자가 다음 행동을 바로 정할 수 있도록 구성했습니다. 단순히 외부 정보를 모아 놓는 대신, 어떤 순서로 읽고 무엇을 확인해야 하는지 설명합니다. 바뀔 수 있는 사실은 공식 출처 확인을 권하고, Picklary 내부 문단은 레벨업, 장비 선택, 경기 이해에 도움이 되는 해석과 적용 방법에 집중합니다.</p><p>이 문단은 페이지의 목적을 분명히 하기 위한 보강입니다. 짧은 링크 목록처럼 보이지 않도록 운영 기준, 검수 기준, 저작권 주의, 사용자 안전, 관련 도구 안내를 함께 설명합니다. 이후 실제 글이 늘어나면 이 영역은 최신 내부 글과 도구를 연결하는 안내문으로 계속 업데이트할 수 있습니다.</p><p>또한 같은 내용을 여러 페이지에 무의미하게 반복하지 않고, 각 페이지가 맡은 역할에 맞추어 설명을 확장합니다. 독자가 이 페이지에서 멈추지 않고 관련 도구, 상세 가이드, 공식 확인 링크로 이동하도록 연결하는 것이 목표입니다. 필요할 때는 관련 글 읽기, 도구 사용, 공식 출처 확인, 다음 방문 때 새 예시 확인 중 하나로 바로 이어지도록 구성합니다.</p>
+  </div></section><section class="band band--alt"><div class="wrap"><h2 class="band__title">프로투어 확인 출처</h2><div class="source-watch-grid"><article class="source-watch">
       <span class="source-watch__status">확인 출처</span>
       <h3>Major League Pickleball standings</h3>
       <p><strong>확인 항목:</strong> standings · season records · playoff race · team results</p>
@@ -153,15 +182,18 @@
   <footer class="site-foot">
   <div class="wrap site-foot__inner">
     <div class="site-foot__brand">
-      <span class="brand__name">Picklary</span>
+      <span class="site-foot__lockup"><span class="brand__mark" aria-hidden="true"><svg class="brand__logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="15" y="11" width="11" height="42" rx="5.5" fill="#f4f7f6"/><circle cx="37.5" cy="25.5" r="16" fill="#F4B400"/><circle cx="37.5" cy="25.5" r="2.16" fill="#155446"/><circle cx="45.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="41.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="33.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="29.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="33.50" cy="18.57" r="2.16" fill="#155446"/><circle cx="41.50" cy="18.57" r="2.16" fill="#155446"/></svg></span><span class="brand__name">Picklary</span></span>
       <p>독립적으로 운영되는, 독자 중심의 피클볼 정보 사이트입니다.</p>
       <p class="site-foot__editor">작성
-        <a href="/ko/author/">Picklary 에디터</a> ·
-        <a href="mailto:hello@picklary.com">hello@picklary.com</a></p>
+        <a href="/ko/author/">Shawn</a> ·
+        <a href="mailto:iam4na2@gmail.com">iam4na2@gmail.com</a></p>
+      <p class="site-foot__blogs">다른 블로그:
+        <a href="https://picklary.blogspot.com" rel="me noopener" target="_blank">Blogspot</a> ·
+        <a href="https://blog.naver.com/arctic" rel="me noopener" target="_blank">Naver</a></p>
     </div>
     <nav class="site-foot__links" aria-label="Footer"><a href="/ko/about/">소개</a><a href="/ko/editorial-policy/">편집 정책</a><a href="/ko/corrections-policy/">정정 정책</a><a href="/ko/advertising-disclosure/">광고·제휴 고지</a><a href="/ko/community-guidelines/">커뮤니티 가이드라인</a><a href="/ko/privacy/">개인정보처리방침</a><a href="/ko/cookie-policy/">쿠키 정책</a><a href="/ko/terms/">이용약관</a><a href="/ko/disclaimer/">면책고지</a><a href="/ko/contact/">문의</a><a href="/ko/sitemap/">사이트맵</a></nav>
   </div>
-  <div class="wrap site-foot__legal">© 2026 Picklary. All rights reserved. <span class="site-foot__build" title="site build time">build 2026-06-22 00:12 UTC</span></div>
+  <div class="wrap site-foot__legal">© 2026 Picklary. 무단 전재 및 재배포 금지. <span class="site-foot__build" title="site build time">build 2026-07-01 05:10 UTC</span></div>
 </footer>
   <script src="/assets/js/site.js" defer></script>
 </body>

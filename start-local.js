@@ -138,7 +138,7 @@ function tryPort(index) {
     log("");
     log("Picklary is running.");
     log("Open this URL: " + url + "  (auto language routing)");
-    log("Direct links: " + url + "ko/ · " + url + "es/ · " + url + "en/");
+    log("Direct links: " + url + "ko/ · " + url + "en/");
     log("To stop the server, press Ctrl + C in this window.");
     log("");
     openBrowser(url);

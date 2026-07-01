@@ -1,6 +1,6 @@
 <!doctype html>
-<!-- Picklary build: 2026-06-22 00:12 UTC (brand=Picklary) -->
-<html lang="en" dir="ltr">
+<!-- Picklary build: 2026-07-01 05:10 UTC (brand=Picklary) -->
+<html lang="en" dir="ltr" data-theme="levels">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,17 +11,26 @@
   <link rel="alternate" hreflang="ko" href="https://picklary.com/ko/level/">
   <link rel="alternate" hreflang="en" href="https://picklary.com/en/level/">
   <link rel="alternate" hreflang="x-default" href="https://picklary.com/en/level/">
+  <link rel="alternate" type="application/rss+xml" title="Picklary" href="https://picklary.com/en/feed.xml">
   <meta property="og:site_name" content="Picklary">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Choose your pickleball level">
   <meta property="og:description" content="Select from 2.0 to 5.0 to get level-matched skills, drills, paddle profile, and recommended guides.">
   <meta property="og:url" content="https://picklary.com/en/level/">
   <meta property="og:locale" content="en">
+  <meta property="og:image" content="https://picklary.com/assets/icons/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Choose your pickleball level">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Choose your pickleball level">
   <meta name="twitter:description" content="Select from 2.0 to 5.0 to get level-matched skills, drills, paddle profile, and recommended guides.">
+  <meta name="twitter:image" content="https://picklary.com/assets/icons/og-default.png">
   <meta name="theme-color" content="#1E6F5C">
+  
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <link rel="mask-icon" href="/assets/icons/favicon.svg" color="#1E6F5C">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -34,11 +43,11 @@
 <header class="masthead">
   <div class="wrap masthead__inner">
     <a class="brand" href="/en/" aria-label="Picklary — home">
-      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__mark" aria-hidden="true"><svg class="brand__logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="15" y="11" width="11" height="42" rx="5.5" fill="#1E6F5C"/><circle cx="37.5" cy="25.5" r="16" fill="#F4B400"/><circle cx="37.5" cy="25.5" r="2.16" fill="#155446"/><circle cx="45.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="41.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="33.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="29.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="33.50" cy="18.57" r="2.16" fill="#155446"/><circle cx="41.50" cy="18.57" r="2.16" fill="#155446"/></svg></span>
       <span class="brand__name">Picklary</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
-    <nav id="primary-nav" class="nav" aria-label="Primary"><a href="/en/level/" class="is-active" aria-current="page">Levels</a><a href="/en/paddles/">Paddles</a><a href="/en/players/">Pro Players</a><a href="/en/tournaments/">Tournaments</a><a href="/en/updates/">Update Center</a><a href="/en/boards/">Boards</a><a href="/en/highlights/">Highlights</a><a href="/en/what-is-dupr/">DUPR</a><a href="/en/categories/">Guides</a></nav>
+    <nav id="primary-nav" class="nav" aria-label="Primary"><a href="/en/">Home</a><a href="/en/level/" class="is-active" aria-current="page">Level Up</a><a href="/en/gear/">Gear Lab</a><a href="/en/pro-scene/">Pro Scene</a><a href="/en/boards/">Play Hub</a><a href="/en/categories/">Insights</a></nav>
     <form class="lang" aria-label="Language">
       <span class="lang__icon" aria-hidden="true">🌐</span>
       <label class="visually-hidden" for="lang-select">Choose a language</label>
@@ -46,61 +55,71 @@
     </form>
   </div>
 </header>
-  <nav class="side-rail" aria-label="Quick section navigation">
-    <span class="side-rail__title">Quick pick</span>
-    <div class="side-rail__levels"><a href="/en/level/2-0/">2.0</a><a href="/en/level/2-5/">2.5</a><a href="/en/level/3-0/">3.0</a><a href="/en/level/3-5/">3.5</a><a href="/en/level/4-0/">4.0</a><a href="/en/level/4-5/">4.5</a><a href="/en/level/5-0/">5.0</a></div>
-    <div class="side-rail__main"><a href="/en/category/rules-and-getting-started/">Rules</a><a href="/en/category/skills-and-drills/">Skills</a><a href="/en/paddles/">Paddles</a><a href="/en/players/">Players</a><a href="/en/tournaments/">Tournaments</a><a href="/en/updates/">Update Center</a><a href="/en/boards/dupr-faq/">Level FAQ</a><a href="/en/boards/qna/">Q&amp;A Board</a><a href="/en/highlights/">Highlights</a></div>
+  <nav class="side-rail" aria-label="Quick navigation">
+    <span class="side-rail__title">Quick Moves</span>
+    <div class="side-rail__group side-rail__group--levels"><span class="side-rail__group-title">Level</span><div class="side-rail__levels"><a href="/en/level/2-0/">2.0</a><a href="/en/level/2-5/">2.5</a><a href="/en/level/3-0/">3.0</a><a href="/en/level/3-5/">3.5</a><a href="/en/level/4-0/">4.0</a><a href="/en/level/4-5/">4.5</a><a href="/en/level/5-0/">5.0</a></div></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">Start</span><a href="/en/dupr-self-check/">Self-check</a><a href="/en/what-is-dupr/">DUPR</a></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">Play</span><a href="/en/boards/friends/">Find Friends</a><a href="/en/boards/partners/">Find Partners</a><a href="/en/boards/tournaments/">Find Tournaments</a><a href="/en/boards/coaches/">Find Coaches</a></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">Explore</span><a href="/en/gear/">Gear Lab</a><a href="/en/pro-scene/">Pro Scene</a><a href="/en/categories/">Insights</a></div>
   </nav>
   <main id="main">
 <nav class="crumbs" aria-label="Breadcrumb"><ol class="wrap"><li aria-current="page">Home</li><li aria-current="page">Choose your pickleball level</li></ol></nav>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://picklary.com/en/"},{"@type":"ListItem","position":2,"name":"Choose your pickleball level"}]}</script>
 <section class="page-head page-head--visual"><div class="wrap two-col two-col--wide">
-  <div><p class="page-head__eyebrow">DUPR pathway 2.0–5.0</p><h1>Choose your pickleball level</h1><p class="page-head__intro">Select from 2.0 to 5.0 to get level-matched skills, drills, paddle profile, and recommended guides.</p><p class="level-index-cta"><a class="btn btn--primary" href="/en/dupr-self-check/">Try the DUPR self-check →</a></p></div>
-  <figure class="visual-card "><img src="/assets/img/dupr-ladder.svg" alt="Level ladder from 2.0 through 5.0." loading="lazy"><figcaption>Level ladder from 2.0 through 5.0.</figcaption></figure>
+  <div><p class="page-head__eyebrow">DUPR pathway 2.0–5.0</p><h1>Choose your pickleball level</h1><p class="page-head__intro">Select from 2.0 to 5.0 to get level-matched skills, drills, paddle profile, and recommended guides.</p><p class="level-index-cta"><a class="btn btn--dupr" href="/en/dupr-self-check/">DUPR self-check →</a></p><div class="dupr-teaser" aria-label="Why try it?">
+    <div class="dupr-teaser__icon" aria-hidden="true">◎</div>
+    <div>
+      <p class="dupr-teaser__eyebrow">Why try it?</p>
+      <h3>10 court scenarios reveal your shot-decision habits.</h3>
+      <p>It is not an official rating, but it shows what you tend to choose under pressure and what to practice next.</p>
+      <p class="dupr-teaser__chips"><span>10 scenarios</span><span>3D court</span><span>Practice focus</span></p>
+    </div>
+  </div></div>
+  <figure class="visual-card "><img src="/assets/img/level-up-ladder-simple.webp" width="1581" height="966" alt="Level ladder from 2.0 through 5.0." loading="lazy"><figcaption>Level ladder from 2.0 through 5.0.</figcaption></figure>
 </div></section>
-<section class="band"><div class="wrap"><div class="level-grid"><article class="level-card">
+<section class="band"><div class="wrap"><div class="level-grid"><article class="level-card" style="--lvl:#1E6F5C;--lvl-on:#ffffff;--lvl-tint:#e8f1ee;">
     <a href="/en/level/2-0/" class="level-card__link">
       <span class="level-card__badge">2.0</span>
       <h3>Level 2.0: New Player Foundation</h3>
       <p>A starter path for players who are still learning the rules, the kitchen, and basic ball control.</p>
       <div class="pills pills--compact"><span class="pill">Serve and return basics</span><span class="pill">Ready position</span><span class="pill">Two-bounce rule</span></div>
     </a>
-  </article><article class="level-card">
+  </article><article class="level-card" style="--lvl:#2E9E8C;--lvl-on:#ffffff;--lvl-tint:#e4f4f0;">
     <a href="/en/level/2-5/" class="level-card__link">
       <span class="level-card__badge">2.5</span>
       <h3>Level 2.5: Consistency Builder</h3>
       <p>A bridge from beginner rules knowledge to reliable rally construction.</p>
       <div class="pills pills--compact"><span class="pill">Deep returns</span><span class="pill">Basic dinks</span><span class="pill">Early split step</span></div>
     </a>
-  </article><article class="level-card">
+  </article><article class="level-card" style="--lvl:#F4B400;--lvl-on:#1d2421;--lvl-tint:#fdf3d4;">
     <a href="/en/level/3-0/" class="level-card__link">
       <span class="level-card__badge">3.0</span>
       <h3>Level 3.0: Reliable Rally Player</h3>
       <p>For players who can rally but need structure to win more points instead of just keeping the ball alive.</p>
       <div class="pills pills--compact"><span class="pill">Third-shot drop introduction</span><span class="pill">Cross-court dinking</span><span class="pill">Transition resets</span></div>
     </a>
-  </article><article class="level-card">
+  </article><article class="level-card" style="--lvl:#E0822E;--lvl-on:#ffffff;--lvl-tint:#fcefe2;">
     <a href="/en/level/3-5/" class="level-card__link">
       <span class="level-card__badge">3.5</span>
       <h3>Level 3.5: Pattern and Pressure</h3>
       <p>For players ready to convert neutral rallies into advantages with smarter patterns.</p>
       <div class="pills pills--compact"><span class="pill">Dink patterns</span><span class="pill">Speed-up selection</span><span class="pill">Counter blocks</span></div>
     </a>
-  </article><article class="level-card">
+  </article><article class="level-card" style="--lvl:#0ea5e9;--lvl-on:#ffffff;--lvl-tint:#e0f2fe;">
     <a href="/en/level/4-0/" class="level-card__link">
       <span class="level-card__badge">4.0</span>
       <h3>Level 4.0: Advanced Doubles Strategy</h3>
       <p>A competitive level where shot quality, recovery, and tactical discipline matter on every rally.</p>
       <div class="pills pills--compact"><span class="pill">Pressure resets</span><span class="pill">Counter exchanges</span><span class="pill">Drive-plus-drop patterns</span></div>
     </a>
-  </article><article class="level-card">
+  </article><article class="level-card" style="--lvl:#2563eb;--lvl-on:#ffffff;--lvl-tint:#dbeafe;">
     <a href="/en/level/4-5/" class="level-card__link">
       <span class="level-card__badge">4.5</span>
       <h3>Level 4.5: Tournament Pressure</h3>
       <p>For advanced players who need fewer loose points and better opponent-specific plans.</p>
       <div class="pills pills--compact"><span class="pill">Scouting notes</span><span class="pill">Serve-return placement</span><span class="pill">Low-error pressure</span></div>
     </a>
-  </article><article class="level-card">
+  </article><article class="level-card" style="--lvl:#7c3aed;--lvl-on:#ffffff;--lvl-tint:#ede9fe;">
     <a href="/en/level/5-0/" class="level-card__link">
       <span class="level-card__badge">5.0</span>
       <h3>Level 5.0: Pro-Pattern Study</h3>
@@ -108,7 +127,7 @@
       <div class="pills pills--compact"><span class="pill">Pro pattern study</span><span class="pill">Counter-disguise</span><span class="pill">Advanced partner systems</span></div>
     </a>
   </article></div></div></section>
-<section class="band band--alt"><div class="wrap two-col two-col--wide"><div><h2>DUPR</h2><p>Understanding DUPR first makes level selection and goal setting easier.</p><a class="btn btn--primary" href="/en/what-is-dupr/">DUPR</a></div><figure class="visual-card "><img src="/assets/img/court-zones.svg" alt="Court zones: serve boxes, net, and kitchen line." loading="lazy"><figcaption>Court zones: serve boxes, net, and kitchen line.</figcaption></figure></div></section>
+<section class="band band--alt"><div class="wrap two-col two-col--wide"><div><h2>DUPR</h2><p>Understanding DUPR first makes level selection and goal setting easier.</p><a class="btn btn--dupr btn--dupr-wide" href="/en/what-is-dupr/">DUPR</a></div><figure class="visual-card "><img src="/assets/img/dupr-level-up-dashboard.webp" width="1448" height="1086" alt="DUPR level-up dashboard" loading="lazy"><figcaption>DUPR level-up dashboard</figcaption></figure></div></section>
 
 <section class="band"><div class="wrap narrow">
   <h2>Pickleball levels 2.0 to 5.0: an overview</h2>
@@ -143,21 +162,24 @@
     <li>4.0: refine targeting, shot selection, and team strategy.</li>
   </ul>
 
-  <p class="level-index-cta"><a class="btn btn--primary" href="/en/dupr-self-check/">Not sure where you fit? Take the DUPR self-check →</a></p>
+  <p class="level-index-cta"><a class="btn btn--dupr" href="/en/dupr-self-check/">Not sure where you fit? DUPR self-check →</a></p>
 </div></section>
   </main>
   <footer class="site-foot">
   <div class="wrap site-foot__inner">
     <div class="site-foot__brand">
-      <span class="brand__name">Picklary</span>
+      <span class="site-foot__lockup"><span class="brand__mark" aria-hidden="true"><svg class="brand__logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="15" y="11" width="11" height="42" rx="5.5" fill="#f4f7f6"/><circle cx="37.5" cy="25.5" r="16" fill="#F4B400"/><circle cx="37.5" cy="25.5" r="2.16" fill="#155446"/><circle cx="45.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="41.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="33.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="29.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="33.50" cy="18.57" r="2.16" fill="#155446"/><circle cx="41.50" cy="18.57" r="2.16" fill="#155446"/></svg></span><span class="brand__name">Picklary</span></span>
       <p>An independent, reader-focused pickleball information site.</p>
       <p class="site-foot__editor">By
-        <a href="/en/author/">The Picklary Editor</a> ·
-        <a href="mailto:hello@picklary.com">hello@picklary.com</a></p>
+        <a href="/en/author/">Shawn</a> ·
+        <a href="mailto:iam4na2@gmail.com">iam4na2@gmail.com</a></p>
+      <p class="site-foot__blogs">More blogs:
+        <a href="https://picklary.blogspot.com" rel="me noopener" target="_blank">Blogspot</a> ·
+        <a href="https://blog.naver.com/arctic" rel="me noopener" target="_blank">Naver</a></p>
     </div>
     <nav class="site-foot__links" aria-label="Footer"><a href="/en/about/">About</a><a href="/en/editorial-policy/">Editorial Policy</a><a href="/en/corrections-policy/">Corrections Policy</a><a href="/en/advertising-disclosure/">Advertising Disclosure</a><a href="/en/community-guidelines/">Community Guidelines</a><a href="/en/privacy/">Privacy Policy</a><a href="/en/cookie-policy/">Cookie Policy</a><a href="/en/terms/">Terms</a><a href="/en/disclaimer/">Disclaimer</a><a href="/en/contact/">Contact</a><a href="/en/sitemap/">Sitemap</a></nav>
   </div>
-  <div class="wrap site-foot__legal">© 2026 Picklary. All rights reserved. <span class="site-foot__build" title="site build time">build 2026-06-22 00:12 UTC</span></div>
+  <div class="wrap site-foot__legal">© 2026 Picklary. All rights reserved. <span class="site-foot__build" title="site build time">build 2026-07-01 05:10 UTC</span></div>
 </footer>
   <script src="/assets/js/site.js" defer></script>
 </body>

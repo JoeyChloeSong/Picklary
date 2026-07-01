@@ -5,8 +5,12 @@
 
 [build]
   # Netlify runs this, then publishes the folder below.
-  command = "node build.js"
+  command = "npm run build"
   publish = "dist"
+
+# AdSense review mode: no Edge Function language redirect.
+# Keep / as a static language-choice landing page and publish only dist.
+# If you re-enable a country-based redirect after approval, update Privacy Policy.
 
 [build.environment]
   # Pin a modern LTS Node. The build is plain Node (no packages), so this is just for stability.

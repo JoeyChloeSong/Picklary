@@ -4,18 +4,25 @@
   },
   "nav": {
     "home": "Inicio",
-    "guides": "Guías",
+    "guides": "Insights",
     "columns": "Columnas",
     "brief": "The Brief",
     "about": "Acerca de",
     "contact": "Contacto",
     "menu": "Menú",
-    "levelPathway": "Niveles",
-    "paddles": "Palas",
-    "players": "Pros",
+    "levelPathway": "Level Up",
+    "paddles": "Gear Lab",
+    "players": "Pro Scene",
     "highlights": "Highlights",
     "dupr": "DUPR",
-    "rulesSkills": "Reglas y técnica"
+    "rulesSkills": "Reglas y técnica",
+    "blogs": "Off-court",
+    "boards": "Play Hub",
+    "levelUp": "Level Up",
+    "gearLab": "Gear Lab",
+    "proScene": "Pro Scene",
+    "playHub": "Play Hub",
+    "insights": "Insights"
   },
   "lang": {
     "label": "Idioma",
@@ -25,9 +32,9 @@
     "kicker": "Mapa de mejora",
     "title": "Elige tu nivel, aprende la técnica, compara palas y comparte highlights.",
     "lead": "Picklary reúne una ruta 2.0–5.0, reglas y técnica, comparación de palas, perfiles pro y una batalla de highlights con feedback.",
-    "ctaPrimary": "Elegir mi nivel",
-    "ctaSecondary": "Comparar palas",
-    "ctaTertiary": "Subir highlight"
+    "ctaPrimary": "Encontrar mi nivel",
+    "ctaSecondary": "Abrir Gear Lab",
+    "ctaTertiary": "Ir a Play Hub"
   },
   "pathway": {
     "label": "Ruta DUPR 2.0–5.0",
@@ -149,13 +156,21 @@
   },
   "side": {
     "label": "Navegación rápida",
-    "title": "Accesos",
-    "levels": "Niveles",
-    "rules": "Reglas",
-    "skills": "Técnica",
-    "paddles": "Palas",
+    "title": "Quick Moves",
+    "levels": "Nivel",
+    "rules": "Aprender",
+    "skills": "Skills",
+    "paddles": "Gear Lab",
     "players": "Pros",
-    "highlights": "Vídeo"
+    "highlights": "Highlights",
+    "start": "Inicio",
+    "play": "Jugar",
+    "explore": "Explorar",
+    "selfCheck": "Autocheck",
+    "dupr": "DUPR",
+    "gearLab": "Gear Lab",
+    "proScene": "Pro Scene",
+    "insights": "Insights"
   },
   "level": {
     "indexTitle": "Elige tu nivel de pickleball",
@@ -184,7 +199,7 @@
     "usedBy": "Usada por / línea",
     "reviewSignal": "Señal de reseñas",
     "approvalNote": "Precios, especificaciones y aprobación cambian; verifica fuentes oficiales antes de comprar.",
-    "openFinder": "Usar buscador",
+    "openFinder": "Buscador de palas",
     "viewDetails": "Ver detalles"
   },
   "players": {

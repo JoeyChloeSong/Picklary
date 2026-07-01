@@ -23,9 +23,4 @@
   <path d="M183 304 h34 M183 326 h34 M183 348 h34 M183 370 h34" stroke="#eaf4f1" stroke-opacity=".28" stroke-width="3"/>
 </g>
 <text x="200" y="112" class="brand">DIADEM</text>
-<text x="200" y="170" class="model">Warrior Edge</text>
-<text x="200" y="262" class="small">ALL COURT · TRADITIONAL</text>
-<rect x="105" y="405" width="190" height="48" rx="24" fill="#f2b84b"/>
-<text x="200" y="437" class="price">$199.95</text>
-<text x="200" y="382" class="small" fill="#1e6f5c">BALANCE · CONTROL · FORGIVENESS</text>
 </svg>

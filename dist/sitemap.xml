@@ -38,6 +38,758 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://picklary.com/ko/level/2-0/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/level/2-0/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/level/2-0/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/level/2-0/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/level/2-0/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/level/2-0/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/level/2-0/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/level/2-0/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/level/2-5/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/level/2-5/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/level/2-5/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/level/2-5/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/level/2-5/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/level/2-5/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/level/2-5/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/level/2-5/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/level/3-0/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/level/3-0/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/level/3-0/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/level/3-0/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/level/3-0/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/level/3-0/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/level/3-0/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/level/3-0/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/level/3-5/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/level/3-5/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/level/3-5/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/level/3-5/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/level/3-5/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/level/3-5/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/level/3-5/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/level/3-5/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/level/4-0/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/level/4-0/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/level/4-0/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/level/4-0/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/level/4-0/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/level/4-0/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/level/4-0/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/level/4-0/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/level/4-5/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/level/4-5/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/level/4-5/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/level/4-5/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/level/4-5/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/level/4-5/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/level/4-5/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/level/4-5/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/level/5-0/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/level/5-0/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/level/5-0/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/level/5-0/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/level/5-0/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/level/5-0/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/level/5-0/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/level/5-0/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/joola-ben-johns-perseus/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/joola-ben-johns-perseus/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/joola-ben-johns-perseus/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/joola-ben-johns-perseus/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/joola-ben-johns-perseus/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/joola-ben-johns-perseus/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/joola-ben-johns-perseus/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/joola-ben-johns-perseus/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/joola-scorpeus/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/joola-scorpeus/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/joola-scorpeus/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/joola-scorpeus/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/joola-scorpeus/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/joola-scorpeus/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/joola-scorpeus/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/joola-scorpeus/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/selkirk-luxx-control-air/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/selkirk-luxx-control-air/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/selkirk-luxx-control-air/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/selkirk-luxx-control-air/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/selkirk-luxx-control-air/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/selkirk-luxx-control-air/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/selkirk-luxx-control-air/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/selkirk-luxx-control-air/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/selkirk-power-air/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/selkirk-power-air/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/selkirk-power-air/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/selkirk-power-air/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/selkirk-power-air/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/selkirk-power-air/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/selkirk-power-air/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/selkirk-power-air/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/crbn-1x-power-series/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/crbn-1x-power-series/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/crbn-1x-power-series/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/crbn-1x-power-series/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/crbn-1x-power-series/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/crbn-1x-power-series/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/crbn-1x-power-series/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/crbn-1x-power-series/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/crbn-2x-power-series/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/crbn-2x-power-series/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/crbn-2x-power-series/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/crbn-2x-power-series/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/crbn-2x-power-series/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/crbn-2x-power-series/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/crbn-2x-power-series/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/crbn-2x-power-series/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/six-zero-double-black-diamond-control/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/six-zero-double-black-diamond-control/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/six-zero-double-black-diamond-control/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/six-zero-double-black-diamond-control/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/six-zero-double-black-diamond-control/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/six-zero-double-black-diamond-control/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/six-zero-double-black-diamond-control/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/six-zero-double-black-diamond-control/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/six-zero-ruby/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/six-zero-ruby/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/six-zero-ruby/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/six-zero-ruby/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/six-zero-ruby/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/six-zero-ruby/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/six-zero-ruby/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/six-zero-ruby/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/paddletek-bantam-tko-c/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/paddletek-bantam-tko-c/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/paddletek-bantam-tko-c/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/paddletek-bantam-tko-c/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/paddletek-bantam-tko-c/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/paddletek-bantam-tko-c/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/paddletek-bantam-tko-c/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/paddletek-bantam-tko-c/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/paddletek-tempest-wave-pro/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/paddletek-tempest-wave-pro/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/paddletek-tempest-wave-pro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/paddletek-tempest-wave-pro/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/paddletek-tempest-wave-pro/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/paddletek-tempest-wave-pro/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/paddletek-tempest-wave-pro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/paddletek-tempest-wave-pro/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/engage-pursuit-pro1/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/engage-pursuit-pro1/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/engage-pursuit-pro1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/engage-pursuit-pro1/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/engage-pursuit-pro1/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/engage-pursuit-pro1/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/engage-pursuit-pro1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/engage-pursuit-pro1/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/gearbox-pro-power-elongated/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/gearbox-pro-power-elongated/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/gearbox-pro-power-elongated/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/gearbox-pro-power-elongated/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/gearbox-pro-power-elongated/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/gearbox-pro-power-elongated/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/gearbox-pro-power-elongated/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/gearbox-pro-power-elongated/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/gearbox-cx14/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/gearbox-cx14/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/gearbox-cx14/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/gearbox-cx14/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/gearbox-cx14/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/gearbox-cx14/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/gearbox-cx14/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/gearbox-cx14/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/diadem-edge-18k/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/diadem-edge-18k/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/diadem-edge-18k/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/diadem-edge-18k/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/diadem-edge-18k/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/diadem-edge-18k/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/diadem-edge-18k/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/diadem-edge-18k/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/diadem-warrior-edge/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/diadem-warrior-edge/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/diadem-warrior-edge/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/diadem-warrior-edge/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/diadem-warrior-edge/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/diadem-warrior-edge/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/diadem-warrior-edge/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/diadem-warrior-edge/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/vatic-pro-prism-flash/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/vatic-pro-prism-flash/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/vatic-pro-prism-flash/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/vatic-pro-prism-flash/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/vatic-pro-prism-flash/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/vatic-pro-prism-flash/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/vatic-pro-prism-flash/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/vatic-pro-prism-flash/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/vatic-pro-saga/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/vatic-pro-saga/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/vatic-pro-saga/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/vatic-pro-saga/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/vatic-pro-saga/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/vatic-pro-saga/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/vatic-pro-saga/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/vatic-pro-saga/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/prokennex-black-ace-pro/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/prokennex-black-ace-pro/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/prokennex-black-ace-pro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/prokennex-black-ace-pro/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/prokennex-black-ace-pro/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/prokennex-black-ace-pro/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/prokennex-black-ace-pro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/prokennex-black-ace-pro/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/franklin-c45/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/franklin-c45/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/franklin-c45/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/franklin-c45/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/franklin-c45/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/franklin-c45/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/franklin-c45/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/franklin-c45/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/head-radical-tour/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/head-radical-tour/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/head-radical-tour/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/head-radical-tour/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/head-radical-tour/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/head-radical-tour/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/head-radical-tour/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/head-radical-tour/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/volair-mach-2-forza/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/volair-mach-2-forza/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/volair-mach-2-forza/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/volair-mach-2-forza/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/volair-mach-2-forza/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/volair-mach-2-forza/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/volair-mach-2-forza/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/volair-mach-2-forza/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/bread-and-butter-filth/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/bread-and-butter-filth/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/bread-and-butter-filth/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/bread-and-butter-filth/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/bread-and-butter-filth/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/bread-and-butter-filth/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/bread-and-butter-filth/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/bread-and-butter-filth/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/friday-original/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/friday-original/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/friday-original/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/friday-original/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/friday-original/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/friday-original/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/friday-original/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/friday-original/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/onix-evoke-premier/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/onix-evoke-premier/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/onix-evoke-premier/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/onix-evoke-premier/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/onix-evoke-premier/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/onix-evoke-premier/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/onix-evoke-premier/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/onix-evoke-premier/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/joola-perseus-pro-v/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/joola-perseus-pro-v/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/joola-perseus-pro-v/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/joola-perseus-pro-v/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/joola-perseus-pro-v/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/joola-perseus-pro-v/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/joola-perseus-pro-v/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/joola-perseus-pro-v/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/selkirk-project-boomstik/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/selkirk-project-boomstik/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/selkirk-project-boomstik/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/selkirk-project-boomstik/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/selkirk-project-boomstik/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/selkirk-project-boomstik/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/selkirk-project-boomstik/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/selkirk-project-boomstik/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/selkirk-omni/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/selkirk-omni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/selkirk-omni/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/selkirk-omni/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/selkirk-omni/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/selkirk-omni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/selkirk-omni/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/selkirk-omni/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/paddles/crbn-trufoam-genesis/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/crbn-trufoam-genesis/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/crbn-trufoam-genesis/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/crbn-trufoam-genesis/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/paddles/crbn-trufoam-genesis/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/crbn-trufoam-genesis/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/crbn-trufoam-genesis/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/crbn-trufoam-genesis/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/players/ben-johns/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/ben-johns/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/ben-johns/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/ben-johns/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/players/ben-johns/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/ben-johns/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/ben-johns/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/ben-johns/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/players/anna-leigh-waters/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/anna-leigh-waters/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/anna-leigh-waters/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/anna-leigh-waters/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/players/anna-leigh-waters/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/anna-leigh-waters/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/anna-leigh-waters/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/anna-leigh-waters/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/players/federico-staksrud/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/federico-staksrud/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/federico-staksrud/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/federico-staksrud/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/players/federico-staksrud/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/federico-staksrud/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/federico-staksrud/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/federico-staksrud/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/players/jw-johnson/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/jw-johnson/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/jw-johnson/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/jw-johnson/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/players/jw-johnson/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/jw-johnson/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/jw-johnson/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/jw-johnson/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/players/catherine-parenteau/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/catherine-parenteau/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/catherine-parenteau/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/catherine-parenteau/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/players/catherine-parenteau/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/catherine-parenteau/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/catherine-parenteau/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/catherine-parenteau/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/players/anna-bright/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/anna-bright/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/anna-bright/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/anna-bright/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/players/anna-bright/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/anna-bright/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/anna-bright/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/anna-bright/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/players/tyson-mcguffin/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/tyson-mcguffin/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/tyson-mcguffin/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/tyson-mcguffin/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/players/tyson-mcguffin/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/tyson-mcguffin/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/tyson-mcguffin/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/tyson-mcguffin/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/players/riley-newman/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/riley-newman/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/riley-newman/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/riley-newman/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/players/riley-newman/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/riley-newman/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/riley-newman/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/riley-newman/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/players/james-ignatowich/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/james-ignatowich/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/james-ignatowich/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/james-ignatowich/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/players/james-ignatowich/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/james-ignatowich/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/james-ignatowich/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/james-ignatowich/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/players/christian-alshon/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/christian-alshon/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/christian-alshon/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/christian-alshon/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/players/christian-alshon/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/christian-alshon/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/christian-alshon/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/christian-alshon/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/players/lea-jansen/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/lea-jansen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/lea-jansen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/lea-jansen/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/players/lea-jansen/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/lea-jansen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/lea-jansen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/lea-jansen/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/players/lucy-kovalova/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/lucy-kovalova/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/lucy-kovalova/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/lucy-kovalova/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/players/lucy-kovalova/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/lucy-kovalova/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/lucy-kovalova/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/lucy-kovalova/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
     <loc>https://picklary.com/ko/dupr-self-check/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/dupr-self-check/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/dupr-self-check/"/>
@@ -54,12 +806,76 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://picklary.com/ko/gear/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/gear/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/gear/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/gear/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/gear/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/gear/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/gear/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/gear/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/gear/shoes/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/gear/shoes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/gear/shoes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/gear/shoes/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.68</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/gear/shoes/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/gear/shoes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/gear/shoes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/gear/shoes/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.68</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/gear/apparel/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/gear/apparel/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/gear/apparel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/gear/apparel/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.68</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/gear/apparel/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/gear/apparel/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/gear/apparel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/gear/apparel/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.68</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/gear/accessories/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/gear/accessories/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/gear/accessories/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/gear/accessories/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.68</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/gear/accessories/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/gear/accessories/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/gear/accessories/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/gear/accessories/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.68</priority>
+  </url>
+  <url>
     <loc>https://picklary.com/ko/paddles/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/"/>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.86</priority>
   </url>
   <url>
     <loc>https://picklary.com/en/paddles/</loc>
@@ -67,7 +883,23 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/"/>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.86</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/tools/paddle-finder/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tools/paddle-finder/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tools/paddle-finder/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tools/paddle-finder/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/tools/paddle-finder/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tools/paddle-finder/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tools/paddle-finder/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tools/paddle-finder/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://picklary.com/ko/players/</loc>
@@ -84,6 +916,70 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/"/>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/pro-scene/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/pro-scene/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/pro-scene/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/pro-scene/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.86</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/pro-scene/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/pro-scene/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/pro-scene/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/pro-scene/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.86</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/pro-scene/players/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/pro-scene/players/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/pro-scene/players/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/pro-scene/players/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/pro-scene/players/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/pro-scene/players/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/pro-scene/players/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/pro-scene/players/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/pro-scene/results/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/pro-scene/results/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/pro-scene/results/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/pro-scene/results/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/pro-scene/results/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/pro-scene/results/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/pro-scene/results/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/pro-scene/results/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/pro-scene/rules/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/pro-scene/rules/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/pro-scene/rules/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/pro-scene/rules/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/pro-scene/rules/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/pro-scene/rules/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/pro-scene/rules/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/pro-scene/rules/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
   </url>
   <url>
     <loc>https://picklary.com/ko/tournaments/</loc>
@@ -150,6 +1046,22 @@
     <priority>0.72</priority>
   </url>
   <url>
+    <loc>https://picklary.com/ko/updates/rules/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/updates/rules/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/updates/rules/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/updates/rules/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/updates/rules/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/updates/rules/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/updates/rules/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/updates/rules/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://picklary.com/ko/boards/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/boards/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/boards/"/>
@@ -198,6 +1110,86 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://picklary.com/ko/boards/friends/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/boards/friends/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/boards/friends/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/boards/friends/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/boards/friends/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/boards/friends/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/boards/friends/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/boards/friends/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/boards/coaches/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/boards/coaches/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/boards/coaches/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/boards/coaches/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/boards/coaches/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/boards/coaches/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/boards/coaches/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/boards/coaches/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/boards/skill-review/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/boards/skill-review/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/boards/skill-review/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/boards/skill-review/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/boards/skill-review/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/boards/skill-review/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/boards/skill-review/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/boards/skill-review/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/boards/tournaments/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/boards/tournaments/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/boards/tournaments/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/boards/tournaments/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/boards/tournaments/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/boards/tournaments/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/boards/tournaments/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/boards/tournaments/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/boards/partners/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/boards/partners/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/boards/partners/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/boards/partners/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/boards/partners/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/boards/partners/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/boards/partners/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/boards/partners/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
     <loc>https://picklary.com/ko/highlights/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/highlights/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/highlights/"/>
@@ -212,6 +1204,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/highlights/"/>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/blogs/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/blogs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/blogs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/blogs/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.45</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/blogs/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/blogs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/blogs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/blogs/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.45</priority>
   </url>
   <url>
     <loc>https://picklary.com/ko/categories/</loc>
@@ -436,22 +1444,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/community-guidelines/"/>
     <changefreq>yearly</changefreq>
     <priority>0.35</priority>
-  </url>
-  <url>
-    <loc>https://picklary.com/ko/sitemap/</loc>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/sitemap/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/sitemap/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/sitemap/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://picklary.com/en/sitemap/</loc>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/sitemap/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/sitemap/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/sitemap/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://picklary.com/ko/category/paddles-and-gear/</loc>
@@ -946,6 +1938,182 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/what-to-know-before-buying-an-expensive-pickleball-paddle/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/what-to-know-before-buying-an-expensive-pickleball-paddle/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/what-to-know-before-buying-an-expensive-pickleball-paddle/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/how-to-move-from-25-to-30-in-pickleball/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/how-to-move-from-25-to-30-in-pickleball/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/how-to-move-from-25-to-30-in-pickleball/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/how-to-move-from-25-to-30-in-pickleball/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/how-to-move-from-25-to-30-in-pickleball/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/how-to-move-from-25-to-30-in-pickleball/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/how-to-move-from-25-to-30-in-pickleball/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/how-to-move-from-25-to-30-in-pickleball/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/pickleball-30-vs-35-what-actually-changes/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/pickleball-30-vs-35-what-actually-changes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/pickleball-30-vs-35-what-actually-changes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/pickleball-30-vs-35-what-actually-changes/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/pickleball-30-vs-35-what-actually-changes/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/pickleball-30-vs-35-what-actually-changes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/pickleball-30-vs-35-what-actually-changes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/pickleball-30-vs-35-what-actually-changes/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/who-takes-the-middle-ball-in-doubles-pickleball/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/who-takes-the-middle-ball-in-doubles-pickleball/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/who-takes-the-middle-ball-in-doubles-pickleball/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/who-takes-the-middle-ball-in-doubles-pickleball/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/who-takes-the-middle-ball-in-doubles-pickleball/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/who-takes-the-middle-ball-in-doubles-pickleball/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/who-takes-the-middle-ball-in-doubles-pickleball/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/who-takes-the-middle-ball-in-doubles-pickleball/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/third-shot-drop-or-drive-how-to-choose/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/third-shot-drop-or-drive-how-to-choose/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/third-shot-drop-or-drive-how-to-choose/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/third-shot-drop-or-drive-how-to-choose/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/third-shot-drop-or-drive-how-to-choose/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/third-shot-drop-or-drive-how-to-choose/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/third-shot-drop-or-drive-how-to-choose/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/third-shot-drop-or-drive-how-to-choose/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/how-to-stop-missing-first-in-dink-rallies/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/how-to-stop-missing-first-in-dink-rallies/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/how-to-stop-missing-first-in-dink-rallies/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/how-to-stop-missing-first-in-dink-rallies/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/how-to-stop-missing-first-in-dink-rallies/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/how-to-stop-missing-first-in-dink-rallies/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/how-to-stop-missing-first-in-dink-rallies/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/how-to-stop-missing-first-in-dink-rallies/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/backhand-resets-why-they-are-hard/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/backhand-resets-why-they-are-hard/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/backhand-resets-why-they-are-hard/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/backhand-resets-why-they-are-hard/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/backhand-resets-why-they-are-hard/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/backhand-resets-why-they-are-hard/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/backhand-resets-why-they-are-hard/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/backhand-resets-why-they-are-hard/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/how-to-find-pickleball-friends-after-moving-to-a-new-city/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/how-to-find-pickleball-friends-after-moving-to-a-new-city/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/how-to-find-pickleball-friends-after-moving-to-a-new-city/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/how-to-find-pickleball-friends-after-moving-to-a-new-city/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/how-to-find-pickleball-friends-after-moving-to-a-new-city/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/how-to-find-pickleball-friends-after-moving-to-a-new-city/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/how-to-find-pickleball-friends-after-moving-to-a-new-city/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/how-to-find-pickleball-friends-after-moving-to-a-new-city/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/how-to-choose-a-pickleball-coach-for-your-level/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/how-to-choose-a-pickleball-coach-for-your-level/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/how-to-choose-a-pickleball-coach-for-your-level/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/how-to-choose-a-pickleball-coach-for-your-level/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/how-to-choose-a-pickleball-coach-for-your-level/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/how-to-choose-a-pickleball-coach-for-your-level/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/how-to-choose-a-pickleball-coach-for-your-level/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/how-to-choose-a-pickleball-coach-for-your-level/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/how-to-play-pickleball-while-traveling-for-work-or-vacation/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/how-to-play-pickleball-while-traveling-for-work-or-vacation/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/how-to-play-pickleball-while-traveling-for-work-or-vacation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/how-to-play-pickleball-while-traveling-for-work-or-vacation/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/how-to-play-pickleball-while-traveling-for-work-or-vacation/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/how-to-play-pickleball-while-traveling-for-work-or-vacation/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/how-to-play-pickleball-while-traveling-for-work-or-vacation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/how-to-play-pickleball-while-traveling-for-work-or-vacation/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/how-to-use-dupr-without-overreacting-to-one-number/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/how-to-use-dupr-without-overreacting-to-one-number/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/how-to-use-dupr-without-overreacting-to-one-number/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/how-to-use-dupr-without-overreacting-to-one-number/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/how-to-use-dupr-without-overreacting-to-one-number/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/how-to-use-dupr-without-overreacting-to-one-number/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/how-to-use-dupr-without-overreacting-to-one-number/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/how-to-use-dupr-without-overreacting-to-one-number/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/pickleball-complete-beginner-guide/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/pickleball-complete-beginner-guide/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/pickleball-complete-beginner-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/pickleball-complete-beginner-guide/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/pickleball-complete-beginner-guide/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/pickleball-complete-beginner-guide/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/pickleball-complete-beginner-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/pickleball-complete-beginner-guide/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

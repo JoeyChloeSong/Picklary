@@ -18,22 +18,34 @@
     url: 'https://picklary.com',
 
     // ★ Your contact email. Replace this with a working inbox before AdSense review.
-    email: 'hello@picklary.com',
+    email: 'iam4na2@gmail.com',
+
+    // ★ Google Search Console "HTML tag" verification token (the content="..." value).
+    //    Leave empty to emit nothing. Easiest method is a DNS-TXT "Domain" property
+    //    (no code needed); use this only if you prefer the URL-prefix meta-tag method.
+    googleSiteVerification: '',
 
     // ★ Operator identity. Use a real name or a consistent pen name.
     //    State experience honestly; never invent credentials.
     owner: {
-      name: 'The Picklary Editor',
-      bio: 'I build practical pickleball guides for players who want level-based improvement, smarter paddle choices, and clear ways to study pro patterns. For live ratings, rankings, prices, and rules, Picklary points readers back to official sources.',
+      name: 'Shawn',
+      role: 'Pickleball player of 2 years and the person who built Picklary',
+      bio: "I'm Shawn. I moved from tennis to pickleball in 2024 and now play doubles about three times a week around Atlanta, at Lifetime Fitness and ACE Pickleball Club. I have no tournament experience, but I enjoy helping newer players, and I buy and test gear myself and write up what I learn. I built Picklary because clear, well-organized information on levels, rules, and gear was hard to find in both Korean and English — so I'm gathering what I study in one place anyone can use. For anything that changes — ratings, prices, rules — Picklary points readers back to official sources.",
+      location: 'Atlanta, GA, USA',
+      address: { locality: 'Atlanta', region: 'GA', country: 'US' },
+      social: [{ name: 'Naver Blog', url: 'https://blog.naver.com/arctic' }],
       handle: 'author',
       translations: {
         ko: {
-          name: 'Picklary 에디터',
-          bio: '레벨별 성장, 패들 선택, 프로 패턴 분석을 실전 플레이어 관점에서 정리합니다. DUPR, 랭킹, 가격, 규칙처럼 자주 바뀌는 정보는 공식 출처를 함께 확인하도록 안내합니다.'
+          name: 'Shawn',
+          role: '피클볼 2년차 동호인이자 Picklary를 만든 사람',
+          bio: '안녕하세요, Shawn입니다. 2024년 테니스에서 피클볼로 전향해 지금은 애틀랜타 지역의 Lifetime Fitness와 ACE Pickleball Club에서 주 3회가량 복식을 칩니다. 공식 대회 경험은 없지만 입문자 강습을 돕고, 장비를 직접 사서 써보며 배운 것을 정리하는 걸 좋아합니다. 레벨·규칙·장비를 한국어와 영어로 깔끔하게 정리한 정보가 부족해서, 제가 공부하며 모은 내용을 누구나 보기 쉽게 한곳에 모으려고 Picklary를 만들었습니다. 레이팅·가격·규칙처럼 자주 바뀌는 정보는 공식 출처를 함께 안내합니다.',
+          location: '미국 조지아주 애틀랜타'
         },
         es: {
-          name: 'Editor de Picklary',
-          bio: 'Publica guías prácticas sobre mejora por nivel, elección de palas y patrones profesionales. Para DUPR, rankings, precios y reglas, dirige a fuentes oficiales actualizadas.'
+          name: 'Shawn',
+          role: 'Jugador de pickleball desde hace 2 años y creador de Picklary',
+          bio: 'Soy Shawn. Pasé del tenis al pickleball en 2024 y juego dobles unas tres veces por semana en Atlanta. Creé Picklary para reunir información clara sobre niveles, palas y reglas. Para lo que cambia —ratings, precios, reglas— remito a las fuentes oficiales.'
         }
       }
     },
@@ -76,23 +88,19 @@
 
 
     // --- Entry language routing ---------------------------------------------
-    // The root page (/) detects an approximate visitor country and redirects to:
-    //   KR -> /ko/, Latin America -> /es/, all other countries -> /en/.
-    // Static hosting cannot read IP addresses directly in JavaScript, so the root
-    // page first tries Cloudflare's same-origin country trace when available, then
-    // falls back to a public GeoIP JSON endpoint, and finally to browser language.
+    // AdSense review mode: keep automatic IP/GeoIP language routing disabled.
+    // Visitors land on the root language-choice page and can select Korean or
+    // English manually. This avoids unnecessary location lookups before review.
+    // After approval, you may enable a privacy-reviewed server-side redirect,
+    // but do not use public GeoIP endpoints unless the Privacy Policy is updated.
     languageDetection: {
-      enabled: true,
+      enabled: false,
       fallbackLocale: 'en',
       countryLocaleMap: {
-        ko: ['KR'],
-        es: ['MX','GT','BZ','SV','HN','NI','CR','PA','AR','BO','BR','CL','CO','EC','FK','GF','GY','PY','PE','SR','UY','VE','CU','DO','PR']
+        ko: ['KR']
       },
-      geoEndpoints: [
-        { type: 'cloudflareTrace', url: '/cdn-cgi/trace' },
-        { type: 'json', url: 'https://ipapi.co/json/', countryFields: ['country_code','country','countryCode'] }
-      ],
-      timeoutMs: 1600
+      geoEndpoints: [],
+      timeoutMs: 0
     },
 
     // The DUPR pathway used as a recurring UI device on skill articles.

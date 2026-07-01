@@ -1,0 +1,10 @@
+<svg viewBox="0 0 660 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pickleball shoes visual">
+  <rect x="24" y="34" width="612" height="344" rx="28" fill="#eaf7fb" stroke="#0EA5E9" stroke-width="3"/>
+  <rect x="82" y="92" width="496" height="230" rx="18" fill="#d9f1f8" stroke="#0b7fb4" opacity=".92"/>
+  <path d="M98 214h464M330 92v230M190 92v230M470 92v230" stroke="#0b7fb4" stroke-width="2" opacity=".34"/>
+  <path d="M172 230c55 9 104-16 136-76l38 44c17 19 55 20 78 54 18 27-5 48-34 48H158c-30 0-36-46 14-70z" fill="#0EA5E9"/>
+  <path d="M186 281h218" stroke="#fff" stroke-width="9" stroke-linecap="round" opacity=".95"/>
+  <path d="M270 190l34 18M238 218l34 18M304 164l30 20" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".82"/>
+  <path d="M174 330c30-24 70-24 100 0M320 330c30-24 70-24 100 0M468 330c30-24 70-24 100 0" fill="none" stroke="#0b7fb4" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+  <text x="330" y="370" text-anchor="middle" font-family="ui-sans-serif,system-ui" font-size="20" font-weight="800" fill="#075985">Traction · Lateral support · Fit</text>
+</svg>

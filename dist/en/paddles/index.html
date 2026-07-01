@@ -1,6 +1,6 @@
 <!doctype html>
-<!-- Picklary build: 2026-06-22 00:12 UTC (brand=Picklary) -->
-<html lang="en" dir="ltr">
+<!-- Picklary build: 2026-07-01 05:10 UTC (brand=Picklary) -->
+<html lang="en" dir="ltr" data-theme="gear">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,17 +11,26 @@
   <link rel="alternate" hreflang="ko" href="https://picklary.com/ko/paddles/">
   <link rel="alternate" hreflang="en" href="https://picklary.com/en/paddles/">
   <link rel="alternate" hreflang="x-default" href="https://picklary.com/en/paddles/">
+  <link rel="alternate" type="application/rss+xml" title="Picklary" href="https://picklary.com/en/feed.xml">
   <meta property="og:site_name" content="Picklary">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Paddle rankings and finder">
   <meta property="og:description" content="Browse popular paddles by brand, type, shape, price band, level fit, traits, and review signals. Verify current price and approval status before buying.">
   <meta property="og:url" content="https://picklary.com/en/paddles/">
   <meta property="og:locale" content="en">
+  <meta property="og:image" content="https://picklary.com/assets/icons/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Paddle rankings and finder">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Paddle rankings and finder">
   <meta name="twitter:description" content="Browse popular paddles by brand, type, shape, price band, level fit, traits, and review signals. Verify current price and approval status before buying.">
+  <meta name="twitter:image" content="https://picklary.com/assets/icons/og-default.png">
   <meta name="theme-color" content="#1E6F5C">
+  
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <link rel="mask-icon" href="/assets/icons/favicon.svg" color="#1E6F5C">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -34,11 +43,11 @@
 <header class="masthead">
   <div class="wrap masthead__inner">
     <a class="brand" href="/en/" aria-label="Picklary — home">
-      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__mark" aria-hidden="true"><svg class="brand__logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="15" y="11" width="11" height="42" rx="5.5" fill="#1E6F5C"/><circle cx="37.5" cy="25.5" r="16" fill="#F4B400"/><circle cx="37.5" cy="25.5" r="2.16" fill="#155446"/><circle cx="45.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="41.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="33.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="29.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="33.50" cy="18.57" r="2.16" fill="#155446"/><circle cx="41.50" cy="18.57" r="2.16" fill="#155446"/></svg></span>
       <span class="brand__name">Picklary</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
-    <nav id="primary-nav" class="nav" aria-label="Primary"><a href="/en/level/">Levels</a><a href="/en/paddles/" class="is-active" aria-current="page">Paddles</a><a href="/en/players/">Pro Players</a><a href="/en/tournaments/">Tournaments</a><a href="/en/updates/">Update Center</a><a href="/en/boards/">Boards</a><a href="/en/highlights/">Highlights</a><a href="/en/what-is-dupr/">DUPR</a><a href="/en/categories/">Guides</a></nav>
+    <nav id="primary-nav" class="nav" aria-label="Primary"><a href="/en/">Home</a><a href="/en/level/">Level Up</a><a href="/en/gear/" class="is-active" aria-current="page">Gear Lab</a><a href="/en/pro-scene/">Pro Scene</a><a href="/en/boards/">Play Hub</a><a href="/en/categories/">Insights</a></nav>
     <form class="lang" aria-label="Language">
       <span class="lang__icon" aria-hidden="true">🌐</span>
       <label class="visually-hidden" for="lang-select">Choose a language</label>
@@ -46,29 +55,38 @@
     </form>
   </div>
 </header>
-  <nav class="side-rail" aria-label="Quick section navigation">
-    <span class="side-rail__title">Quick pick</span>
-    <div class="side-rail__levels"><a href="/en/level/2-0/">2.0</a><a href="/en/level/2-5/">2.5</a><a href="/en/level/3-0/">3.0</a><a href="/en/level/3-5/">3.5</a><a href="/en/level/4-0/">4.0</a><a href="/en/level/4-5/">4.5</a><a href="/en/level/5-0/">5.0</a></div>
-    <div class="side-rail__main"><a href="/en/category/rules-and-getting-started/">Rules</a><a href="/en/category/skills-and-drills/">Skills</a><a href="/en/paddles/">Paddles</a><a href="/en/players/">Players</a><a href="/en/tournaments/">Tournaments</a><a href="/en/updates/">Update Center</a><a href="/en/boards/dupr-faq/">Level FAQ</a><a href="/en/boards/qna/">Q&amp;A Board</a><a href="/en/highlights/">Highlights</a></div>
+  <nav class="side-rail" aria-label="Quick navigation">
+    <span class="side-rail__title">Quick Moves</span>
+    <div class="side-rail__group side-rail__group--levels"><span class="side-rail__group-title">Level</span><div class="side-rail__levels"><a href="/en/level/2-0/">2.0</a><a href="/en/level/2-5/">2.5</a><a href="/en/level/3-0/">3.0</a><a href="/en/level/3-5/">3.5</a><a href="/en/level/4-0/">4.0</a><a href="/en/level/4-5/">4.5</a><a href="/en/level/5-0/">5.0</a></div></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">Start</span><a href="/en/dupr-self-check/">Self-check</a><a href="/en/what-is-dupr/">DUPR</a></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">Play</span><a href="/en/boards/friends/">Find Friends</a><a href="/en/boards/partners/">Find Partners</a><a href="/en/boards/tournaments/">Find Tournaments</a><a href="/en/boards/coaches/">Find Coaches</a></div>
+    <div class="side-rail__group"><span class="side-rail__group-title">Explore</span><a href="/en/pro-scene/">Pro Scene</a><a href="/en/categories/">Insights</a></div>
   </nav>
   <main id="main">
-<nav class="crumbs" aria-label="Breadcrumb"><ol class="wrap"><li aria-current="page">Home</li><li aria-current="page">Paddle rankings and finder</li></ol></nav>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://picklary.com/en/"},{"@type":"ListItem","position":2,"name":"Paddle rankings and finder"}]}</script>
+<nav class="crumbs" aria-label="Breadcrumb"><ol class="wrap"><li aria-current="page">Home</li><li><a href="/en/gear/">Gear Lab</a></li><li aria-current="page">Paddle rankings and finder</li></ol></nav>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://picklary.com/en/"},{"@type":"ListItem","position":2,"name":"Gear Lab","item":"https://picklary.com/en/gear/"},{"@type":"ListItem","position":3,"name":"Paddle rankings and finder"}]}</script>
 <section class="page-head page-head--visual"><div class="wrap two-col two-col--wide">
-  <div><p class="page-head__eyebrow">Paddles</p><h1>Paddle rankings and finder</h1><p class="page-head__intro">Browse popular paddles by brand, type, shape, price band, level fit, traits, and review signals. Verify current price and approval status before buying.</p><a class="btn btn--primary" href="/en/tools/paddle-finder/">Use paddle finder</a></div>
-  <figure class="visual-card "><img src="/assets/img/paddle-ratings.svg" alt="Browse popular paddles by brand, type, shape, price band, level fit, traits, and review signals. Verify current price and approval status before buying." loading="lazy"><figcaption>Browse popular paddles by brand, type, shape, price band, level fit, traits, and review signals. Verify current price and approval status before buying.</figcaption></figure>
+  <div><p class="page-head__eyebrow">Paddles</p><h1>Paddle rankings and finder</h1><p class="page-head__intro">Browse popular paddles by brand, type, shape, price band, level fit, traits, and review signals. Verify current price and approval status before buying.</p><div class="hero-actions"><a class="btn btn--primary" href="/en/tools/paddle-finder/">Paddle Finder</a><a class="btn btn--tier" href="#paddle-tier-list">View tier list</a></div></div>
+  <figure class="visual-card "><img src="/assets/img/paddle-ratings.svg" width="720" height="420" alt="Browse popular paddles by brand, type, shape, price band, level fit, traits, and review signals. Verify current price and approval status before buying." loading="lazy"><figcaption>Browse popular paddles by brand, type, shape, price band, level fit, traits, and review signals. Verify current price and approval status before buying.</figcaption></figure>
 </div></section>
-<section class="band"><div class="wrap">
-  <div class="filter-panel" data-paddle-filters>
-    <strong>Filter paddles</strong>
-    <label><span>All brands</span><select data-filter-brand><option value="">All brands</option><option value="Bread &amp; Butter">Bread &amp; Butter</option><option value="CRBN">CRBN</option><option value="Diadem">Diadem</option><option value="Engage">Engage</option><option value="Franklin">Franklin</option><option value="Friday">Friday</option><option value="Gearbox">Gearbox</option><option value="HEAD">HEAD</option><option value="JOOLA">JOOLA</option><option value="ONIX">ONIX</option><option value="Paddletek">Paddletek</option><option value="ProKennex">ProKennex</option><option value="Selkirk">Selkirk</option><option value="Six Zero">Six Zero</option><option value="Vatic Pro">Vatic Pro</option><option value="Volair">Volair</option></select></label>
-    <label><span>Type</span><select data-filter-style><option value="">All styles</option><option value="all-court">All-court</option><option value="control">Control</option><option value="hands">Hands-speed</option><option value="power">Power</option><option value="spin">Spin</option><option value="value">Value</option></select></label>
-    <label><span>Level</span><select data-filter-level><option value="">All levels</option><option value="2.0">2.0</option><option value="2.5">2.5</option><option value="3.0">3.0</option><option value="3.5">3.5</option><option value="4.0">4.0</option><option value="4.5">4.5</option><option value="5.0">5.0</option></select></label>
-  </div>
-  <p class="notice">Prices, specs, and approved-equipment status can change. Treat this as a research dashboard and verify official retailer and equipment-list pages before purchase.</p>
-  <div class="paddle-grid" data-paddle-list><article class="paddle-card" data-paddle-card data-brand="JOOLA" data-style="all-court" data-levels="3.5 4.0 4.5 5.0">
+<section class="band band--tier-list" id="paddle-tier-list"><div class="wrap">
+    <div class="section-head"><div><p class="section-kicker">Tier list</p><h2 class="band__title">Picklary Paddle Tier List</h2><p class="band__intro">This tier list is not an ad or an absolute ranking. It is an editorial guide inside the Picklary database, combining comparison scores, play-style fit, price band, beginner forgiveness, and benchmark-model signals. Even inside S tier, a power pick, control pick, and value pick mean different things, so use Paddle Finder and the detail pages before deciding.</p></div><a class="btn btn--tier" href="/en/tools/paddle-finder/">Find my fit</a></div>
+    <div class="tier-board"><div class="tier-row tier-row--s"><div class="tier-rank"><span>S</span><small>Top benchmark picks with strong performance, reputation, and broad fit</small></div><div class="tier-paddles"><a class="tier-paddle" href="/en/paddles/crbn-2x-power-series/"><strong>CRBN 2X Power Series</strong><span>All-court · $229.99</span><small>Benchmark pick with high fit, performance, and reputation. Strengths: Spin / Power.</small></a><a class="tier-paddle" href="/en/paddles/joola-ben-johns-perseus/"><strong>JOOLA Ben Johns Perseus Pro IV</strong><span>All-court · $279.95</span><small>Benchmark pick with high fit, performance, and reputation. Strengths: Spin / Control.</small></a><a class="tier-paddle" href="/en/paddles/joola-scorpeus/"><strong>JOOLA Collin Johns Scorpeus Pro IV</strong><span>Hands-speed · $279.95</span><small>Benchmark pick with high fit, performance, and reputation. Strengths: Control / Forgiveness.</small></a><a class="tier-paddle" href="/en/paddles/six-zero-double-black-diamond-control/"><strong>Six Zero Double Black Diamond Control</strong><span>All-court · $180.00</span><small>Benchmark pick with high fit, performance, and reputation. Strengths: Control / Spin.</small></a><a class="tier-paddle" href="/en/paddles/six-zero-ruby/"><strong>Six Zero Ruby</strong><span>Spin · $200.00</span><small>Benchmark pick with high fit, performance, and reputation. Strengths: Spin / Control.</small></a><a class="tier-paddle" href="/en/paddles/vatic-pro-prism-flash/"><strong>Vatic Pro Prism Flash</strong><span>Control · $99.99</span><small>Benchmark pick with high fit, performance, and reputation. Strengths: Control / Spin.</small></a><a class="tier-paddle" href="/en/paddles/volair-mach-2-forza/"><strong>Volair Mach 2 Forza</strong><span>Control · $119.99</span><small>Benchmark pick with high fit, performance, and reputation. Strengths: Forgiveness / Control.</small></a></div></div><div class="tier-row tier-row--a"><div class="tier-rank"><span>A</span><small>Strong picks for many players when the use case matches</small></div><div class="tier-paddles"><a class="tier-paddle" href="/en/paddles/crbn-trufoam-genesis/"><strong>CRBN 1 TruFoam Genesis</strong><span>Control · $279.99</span><small>Strong recommendation for the right use case. It works best when its $279.99 price tier fits the player's goal.</small></a><a class="tier-paddle" href="/en/paddles/crbn-1x-power-series/"><strong>CRBN 1X Power Series</strong><span>Power · $229.99</span><small>Strong recommendation for the right use case. It works best when its $229.99 price tier fits the player's goal.</small></a><a class="tier-paddle" href="/en/paddles/diadem-edge-18k/"><strong>Diadem Edge 18K</strong><span>Spin · $229.95</span><small>Strong recommendation for the right use case. It works best when its $229.95 price tier fits the player's goal.</small></a><a class="tier-paddle" href="/en/paddles/engage-pursuit-pro1/"><strong>Engage Pursuit Pro1 Power Series</strong><span>All-court · $259.99</span><small>Strong recommendation for the right use case. It works best when its $259.99 price tier fits the player's goal.</small></a><a class="tier-paddle" href="/en/paddles/gearbox-pro-power-elongated/"><strong>Gearbox Pro Ultimate Elongated</strong><span>Power · $274.99</span><small>Strong recommendation for the right use case. It works best when its $274.99 price tier fits the player's goal.</small></a><a class="tier-paddle" href="/en/paddles/joola-perseus-pro-v/"><strong>JOOLA Ben Johns Perseus Pro V</strong><span>All-court · $299.95</span><small>Strong recommendation for the right use case. It works best when its $299.95 price tier fits the player's goal.</small></a><a class="tier-paddle" href="/en/paddles/paddletek-bantam-tko-c/"><strong>Paddletek Bantam TKO-C</strong><span>Power · $199.99</span><small>Strong recommendation for the right use case. It works best when its $199.99 price tier fits the player's goal.</small></a><a class="tier-paddle" href="/en/paddles/paddletek-tempest-wave-pro/"><strong>Paddletek Tempest Wave Pro v3</strong><span>Control · $179.99</span><small>Strong recommendation for the right use case. It works best when its $179.99 price tier fits the player's goal.</small></a><a class="tier-paddle" href="/en/paddles/selkirk-project-boomstik/"><strong>Selkirk LABS Project Boomstik Elongated</strong><span>Power · $332.99</span><small>Strong recommendation for the right use case. It works best when its $332.99 price tier fits the player's goal.</small></a><a class="tier-paddle" href="/en/paddles/selkirk-luxx-control-air/"><strong>Selkirk LUXX Control Air with InfiniGrit</strong><span>Control · $280.00</span><small>Strong recommendation for the right use case. It works best when its $280.00 price tier fits the player's goal.</small></a><a class="tier-paddle" href="/en/paddles/selkirk-omni/"><strong>Selkirk OMNI Elongated</strong><span>All-court · $299.99</span><small>Strong recommendation for the right use case. It works best when its $299.99 price tier fits the player's goal.</small></a><a class="tier-paddle" href="/en/paddles/vatic-pro-saga/"><strong>Vatic Pro Saga</strong><span>All-court · $99.99</span><small>Strong recommendation for the right use case. It works best when its $99.99 price tier fits the player's goal.</small></a></div></div><div class="tier-row tier-row--b"><div class="tier-rank"><span>B</span><small>Good fit for specific styles, budgets, or levels</small></div><div class="tier-paddles"><a class="tier-paddle" href="/en/paddles/bread-and-butter-filth/"><strong>Bread &amp; Butter The Filth 16mm</strong><span>Power · $165.00</span><small>Good when the style, budget, and level match. Use Paddle Finder before shortlisting it.</small></a><a class="tier-paddle" href="/en/paddles/diadem-warrior-edge/"><strong>Diadem Warrior Edge</strong><span>All-court · $199.95</span><small>Good when the style, budget, and level match. Use Paddle Finder before shortlisting it.</small></a><a class="tier-paddle" href="/en/paddles/franklin-c45/"><strong>Franklin C45 Carbon Fiber Series</strong><span>All-court · $179.99</span><small>Good when the style, budget, and level match. Use Paddle Finder before shortlisting it.</small></a><a class="tier-paddle" href="/en/paddles/friday-original/"><strong>Friday Original Paddle</strong><span>Value · $69.00</span><small>Good when the style, budget, and level match. Use Paddle Finder before shortlisting it.</small></a><a class="tier-paddle" href="/en/paddles/gearbox-cx14/"><strong>Gearbox CX14</strong><span>Control · $199.99</span><small>Good when the style, budget, and level match. Use Paddle Finder before shortlisting it.</small></a><a class="tier-paddle" href="/en/paddles/head-radical-tour/"><strong>HEAD Radical TOUR15 / TOUR EX15</strong><span>All-court · $169.95</span><small>Good when the style, budget, and level match. Use Paddle Finder before shortlisting it.</small></a><a class="tier-paddle" href="/en/paddles/prokennex-black-ace-pro/"><strong>ProKennex Black Ace Pro</strong><span>Power · $250.00</span><small>Good when the style, budget, and level match. Use Paddle Finder before shortlisting it.</small></a><a class="tier-paddle" href="/en/paddles/selkirk-power-air/"><strong>Selkirk VANGUARD Power Air Invikta</strong><span>Power · $250.00</span><small>Good when the style, budget, and level match. Use Paddle Finder before shortlisting it.</small></a></div></div><div class="tier-row tier-row--c"><div class="tier-rank"><span>C</span><small>Limited-fit picks to compare carefully against alternatives</small></div><div class="tier-paddles"><a class="tier-paddle" href="/en/paddles/onix-evoke-premier/"><strong>ONIX Evoke Premier</strong><span>Power · $149.99</span><small>Limited-fit pick. It can work, but compare alternatives before choosing.</small></a></div></div><div class="tier-row tier-row--d"><div class="tier-rank"><span>D</span><small>No current database model is placed in D tier</small></div><div class="tier-paddles"><p class="tier-empty">No current database model is placed in D tier</p></div></div></div>
+    <div class="tier-picks"><div><h3>Quick benchmark picks by purpose</h3><p>Do not read only S/A/B. Start with the benchmark closest to your on-court problem.</p></div><div class="tier-pick-grid"><a class="tier-pick" href="/en/paddles/six-zero-double-black-diamond-control/"><span>All-court</span><strong>Six Zero Double Black Diamond Control</strong><p>A useful reference point for balanced players.</p></a><a class="tier-pick" href="/en/paddles/selkirk-luxx-control-air/"><span>Control</span><strong>Selkirk LUXX Control Air with InfiniGrit</strong><p>Compare when resets, drops, and dinks matter most.</p></a><a class="tier-pick" href="/en/paddles/crbn-1x-power-series/"><span>Power</span><strong>CRBN 1X Power Series</strong><p>Useful for players who drive and speed up often.</p></a><a class="tier-pick" href="/en/paddles/vatic-pro-prism-flash/"><span>Value</span><strong>Vatic Pro Prism Flash</strong><p>Check when you want control and spin without jumping to premium pricing.</p></a><a class="tier-pick" href="/en/paddles/friday-original/"><span>Beginner-friendly</span><strong>Friday Original Paddle</strong><p>A lower-pressure starting point for new players.</p></a></div></div>
+    <div class="tier-method"><strong>Methodology</strong><p>We combine control, power, spin, forgiveness, hand speed, level fit, price band, use case, and review signals. Price and approval status can change, so verify official sources before buying.</p></div>
+  </div></section>
+<section class="band"><div class="wrap gear-page-layout gear-page-layout--paddles">
+  <div>
+    <div class="filter-panel" data-paddle-filters>
+      <strong>Filter paddles</strong>
+      <label><span>All brands</span><select data-filter-brand><option value="">All brands</option><option value="Bread &amp; Butter">Bread &amp; Butter</option><option value="CRBN">CRBN</option><option value="Diadem">Diadem</option><option value="Engage">Engage</option><option value="Franklin">Franklin</option><option value="Friday">Friday</option><option value="Gearbox">Gearbox</option><option value="HEAD">HEAD</option><option value="JOOLA">JOOLA</option><option value="ONIX">ONIX</option><option value="Paddletek">Paddletek</option><option value="ProKennex">ProKennex</option><option value="Selkirk">Selkirk</option><option value="Six Zero">Six Zero</option><option value="Vatic Pro">Vatic Pro</option><option value="Volair">Volair</option></select></label>
+      <label><span>Type</span><select data-filter-style><option value="">All styles</option><option value="all-court">All-court</option><option value="control">Control</option><option value="hands">Hands-speed</option><option value="power">Power</option><option value="spin">Spin</option><option value="value">Value</option></select></label>
+      <label><span>Level</span><select data-filter-level><option value="">All levels</option><option value="2.0">2.0</option><option value="2.5">2.5</option><option value="3.0">3.0</option><option value="3.5">3.5</option><option value="4.0">4.0</option><option value="4.5">4.5</option><option value="5.0">5.0</option></select></label>
+    </div>
+    <p class="notice">Prices, specs, and approved-equipment status can change. Treat this as a research dashboard and verify official retailer and equipment-list pages before purchase.</p>
+    <div class="paddle-grid" data-paddle-list><article class="paddle-card" data-paddle-card data-brand="JOOLA" data-style="all-court" data-levels="3.5 4.0 4.5 5.0">
     <a class="paddle-card__link" href="/en/paddles/joola-ben-johns-perseus/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/joola-ben-johns-perseus.svg" alt="Illustrated product card for JOOLA Ben Johns Perseus Pro IV" loading="lazy"><span class="price-chip">$279.95</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/joola-ben-johns-perseus.svg" width="400" height="500" alt="Illustrated product card for JOOLA Ben Johns Perseus Pro IV" loading="lazy"><span class="price-chip">$279.95</span></div>
       <span class="paddle-card__brand">JOOLA</span>
       <h3>Ben Johns Perseus Pro IV</h3>
       <p class="paddle-card__meta">All-court · elongated · $279.95</p>
@@ -78,7 +96,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="JOOLA" data-style="hands" data-levels="3.0 3.5 4.0 4.5">
     <a class="paddle-card__link" href="/en/paddles/joola-scorpeus/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/joola-scorpeus.svg" alt="Illustrated product card for JOOLA Collin Johns Scorpeus Pro IV" loading="lazy"><span class="price-chip">$279.95</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/joola-scorpeus.svg" width="400" height="500" alt="Illustrated product card for JOOLA Collin Johns Scorpeus Pro IV" loading="lazy"><span class="price-chip">$279.95</span></div>
       <span class="paddle-card__brand">JOOLA</span>
       <h3>Collin Johns Scorpeus Pro IV</h3>
       <p class="paddle-card__meta">Hands-speed · widebody · $279.95</p>
@@ -88,7 +106,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="Selkirk" data-style="control" data-levels="3.0 3.5 4.0 4.5">
     <a class="paddle-card__link" href="/en/paddles/selkirk-luxx-control-air/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/selkirk-luxx-control-air.svg" alt="Illustrated product card for Selkirk LUXX Control Air with InfiniGrit" loading="lazy"><span class="price-chip">$280.00</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/selkirk-luxx-control-air.svg" width="400" height="500" alt="Illustrated product card for Selkirk LUXX Control Air with InfiniGrit" loading="lazy"><span class="price-chip">$280.00</span></div>
       <span class="paddle-card__brand">Selkirk</span>
       <h3>LUXX Control Air with InfiniGrit</h3>
       <p class="paddle-card__meta">Control · elongated / invikta · $280.00</p>
@@ -98,7 +116,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="Selkirk" data-style="power" data-levels="3.5 4.0 4.5 5.0">
     <a class="paddle-card__link" href="/en/paddles/selkirk-power-air/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/selkirk-power-air.svg" alt="Illustrated product card for Selkirk VANGUARD Power Air Invikta" loading="lazy"><span class="price-chip">$250.00</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/selkirk-power-air.svg" width="400" height="500" alt="Illustrated product card for Selkirk VANGUARD Power Air Invikta" loading="lazy"><span class="price-chip">$250.00</span></div>
       <span class="paddle-card__brand">Selkirk</span>
       <h3>VANGUARD Power Air Invikta</h3>
       <p class="paddle-card__meta">Power · elongated / invikta · $250.00</p>
@@ -108,7 +126,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="CRBN" data-style="power" data-levels="3.5 4.0 4.5 5.0">
     <a class="paddle-card__link" href="/en/paddles/crbn-1x-power-series/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/crbn-1x-power-series.svg" alt="Illustrated product card for CRBN 1X Power Series" loading="lazy"><span class="price-chip">$229.99</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/crbn-1x-power-series.svg" width="400" height="500" alt="Illustrated product card for CRBN 1X Power Series" loading="lazy"><span class="price-chip">$229.99</span></div>
       <span class="paddle-card__brand">CRBN</span>
       <h3>1X Power Series</h3>
       <p class="paddle-card__meta">Power · elongated · $229.99</p>
@@ -118,7 +136,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="CRBN" data-style="all-court" data-levels="3.0 3.5 4.0 4.5">
     <a class="paddle-card__link" href="/en/paddles/crbn-2x-power-series/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/crbn-2x-power-series.svg" alt="Illustrated product card for CRBN 2X Power Series" loading="lazy"><span class="price-chip">$229.99</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/crbn-2x-power-series.svg" width="400" height="500" alt="Illustrated product card for CRBN 2X Power Series" loading="lazy"><span class="price-chip">$229.99</span></div>
       <span class="paddle-card__brand">CRBN</span>
       <h3>2X Power Series</h3>
       <p class="paddle-card__meta">All-court · widebody · $229.99</p>
@@ -128,7 +146,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="Six Zero" data-style="all-court" data-levels="3.0 3.5 4.0 4.5">
     <a class="paddle-card__link" href="/en/paddles/six-zero-double-black-diamond-control/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/six-zero-double-black-diamond-control.svg" alt="Illustrated product card for Six Zero Double Black Diamond Control" loading="lazy"><span class="price-chip">$180.00</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/six-zero-double-black-diamond-control.svg" width="400" height="500" alt="Illustrated product card for Six Zero Double Black Diamond Control" loading="lazy"><span class="price-chip">$180.00</span></div>
       <span class="paddle-card__brand">Six Zero</span>
       <h3>Double Black Diamond Control</h3>
       <p class="paddle-card__meta">All-court · hybrid · $180.00</p>
@@ -138,7 +156,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="Six Zero" data-style="spin" data-levels="3.5 4.0 4.5 5.0">
     <a class="paddle-card__link" href="/en/paddles/six-zero-ruby/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/six-zero-ruby.svg" alt="Illustrated product card for Six Zero Ruby" loading="lazy"><span class="price-chip">$200.00</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/six-zero-ruby.svg" width="400" height="500" alt="Illustrated product card for Six Zero Ruby" loading="lazy"><span class="price-chip">$200.00</span></div>
       <span class="paddle-card__brand">Six Zero</span>
       <h3>Ruby</h3>
       <p class="paddle-card__meta">Spin · hybrid · $200.00</p>
@@ -148,7 +166,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="Paddletek" data-style="power" data-levels="3.5 4.0 4.5 5.0">
     <a class="paddle-card__link" href="/en/paddles/paddletek-bantam-tko-c/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/paddletek-bantam-tko-c.svg" alt="Illustrated product card for Paddletek Bantam TKO-C" loading="lazy"><span class="price-chip">$199.99</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/paddletek-bantam-tko-c.svg" width="400" height="500" alt="Illustrated product card for Paddletek Bantam TKO-C" loading="lazy"><span class="price-chip">$199.99</span></div>
       <span class="paddle-card__brand">Paddletek</span>
       <h3>Bantam TKO-C</h3>
       <p class="paddle-card__meta">Power · elongated · $199.99</p>
@@ -158,7 +176,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="Paddletek" data-style="control" data-levels="2.5 3.0 3.5 4.0">
     <a class="paddle-card__link" href="/en/paddles/paddletek-tempest-wave-pro/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/paddletek-tempest-wave-pro.svg" alt="Illustrated product card for Paddletek Tempest Wave Pro v3" loading="lazy"><span class="price-chip">$179.99</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/paddletek-tempest-wave-pro.svg" width="400" height="500" alt="Illustrated product card for Paddletek Tempest Wave Pro v3" loading="lazy"><span class="price-chip">$179.99</span></div>
       <span class="paddle-card__brand">Paddletek</span>
       <h3>Tempest Wave Pro v3</h3>
       <p class="paddle-card__meta">Control · traditional · $179.99</p>
@@ -168,7 +186,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="Engage" data-style="all-court" data-levels="3.0 3.5 4.0 4.5">
     <a class="paddle-card__link" href="/en/paddles/engage-pursuit-pro1/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/engage-pursuit-pro1.svg" alt="Illustrated product card for Engage Pursuit Pro1 Power Series" loading="lazy"><span class="price-chip">$259.99</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/engage-pursuit-pro1.svg" width="400" height="500" alt="Illustrated product card for Engage Pursuit Pro1 Power Series" loading="lazy"><span class="price-chip">$259.99</span></div>
       <span class="paddle-card__brand">Engage</span>
       <h3>Pursuit Pro1 Power Series</h3>
       <p class="paddle-card__meta">All-court · elongated / hybrid / widebody options · $259.99</p>
@@ -178,7 +196,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="Gearbox" data-style="power" data-levels="4.0 4.5 5.0">
     <a class="paddle-card__link" href="/en/paddles/gearbox-pro-power-elongated/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/gearbox-pro-power-elongated.svg" alt="Illustrated product card for Gearbox Pro Ultimate Elongated" loading="lazy"><span class="price-chip">$274.99</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/gearbox-pro-power-elongated.svg" width="400" height="500" alt="Illustrated product card for Gearbox Pro Ultimate Elongated" loading="lazy"><span class="price-chip">$274.99</span></div>
       <span class="paddle-card__brand">Gearbox</span>
       <h3>Pro Ultimate Elongated</h3>
       <p class="paddle-card__meta">Power · elongated · $274.99</p>
@@ -188,7 +206,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="Gearbox" data-style="control" data-levels="3.0 3.5 4.0">
     <a class="paddle-card__link" href="/en/paddles/gearbox-cx14/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/gearbox-cx14.svg" alt="Illustrated product card for Gearbox CX14" loading="lazy"><span class="price-chip">$199.99</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/gearbox-cx14.svg" width="400" height="500" alt="Illustrated product card for Gearbox CX14" loading="lazy"><span class="price-chip">$199.99</span></div>
       <span class="paddle-card__brand">Gearbox</span>
       <h3>CX14</h3>
       <p class="paddle-card__meta">Control · elongated / quad · $199.99</p>
@@ -198,7 +216,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="Diadem" data-style="spin" data-levels="3.0 3.5 4.0 4.5">
     <a class="paddle-card__link" href="/en/paddles/diadem-edge-18k/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/diadem-edge-18k.svg" alt="Illustrated product card for Diadem Edge 18K" loading="lazy"><span class="price-chip">$229.95</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/diadem-edge-18k.svg" width="400" height="500" alt="Illustrated product card for Diadem Edge 18K" loading="lazy"><span class="price-chip">$229.95</span></div>
       <span class="paddle-card__brand">Diadem</span>
       <h3>Edge 18K</h3>
       <p class="paddle-card__meta">Spin · hybrid · $229.95</p>
@@ -208,7 +226,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="Diadem" data-style="all-court" data-levels="2.5 3.0 3.5 4.0">
     <a class="paddle-card__link" href="/en/paddles/diadem-warrior-edge/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/diadem-warrior-edge.svg" alt="Illustrated product card for Diadem Warrior Edge" loading="lazy"><span class="price-chip">$199.95</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/diadem-warrior-edge.svg" width="400" height="500" alt="Illustrated product card for Diadem Warrior Edge" loading="lazy"><span class="price-chip">$199.95</span></div>
       <span class="paddle-card__brand">Diadem</span>
       <h3>Warrior Edge</h3>
       <p class="paddle-card__meta">All-court · traditional / hybrid · $199.95</p>
@@ -218,7 +236,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="Vatic Pro" data-style="control" data-levels="2.5 3.0 3.5 4.0">
     <a class="paddle-card__link" href="/en/paddles/vatic-pro-prism-flash/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/vatic-pro-prism-flash.svg" alt="Illustrated product card for Vatic Pro Prism Flash" loading="lazy"><span class="price-chip">$99.99</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/vatic-pro-prism-flash.svg" width="400" height="500" alt="Illustrated product card for Vatic Pro Prism Flash" loading="lazy"><span class="price-chip">$99.99</span></div>
       <span class="paddle-card__brand">Vatic Pro</span>
       <h3>Prism Flash</h3>
       <p class="paddle-card__meta">Control · hybrid · $99.99</p>
@@ -228,7 +246,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="Vatic Pro" data-style="all-court" data-levels="3.0 3.5 4.0 4.5">
     <a class="paddle-card__link" href="/en/paddles/vatic-pro-saga/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/vatic-pro-saga.svg" alt="Illustrated product card for Vatic Pro Saga" loading="lazy"><span class="price-chip">$99.99</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/vatic-pro-saga.svg" width="400" height="500" alt="Illustrated product card for Vatic Pro Saga" loading="lazy"><span class="price-chip">$99.99</span></div>
       <span class="paddle-card__brand">Vatic Pro</span>
       <h3>Saga</h3>
       <p class="paddle-card__meta">All-court · hybrid · $99.99</p>
@@ -238,7 +256,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="ProKennex" data-style="power" data-levels="3.5 4.0 4.5 5.0">
     <a class="paddle-card__link" href="/en/paddles/prokennex-black-ace-pro/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/prokennex-black-ace-pro.svg" alt="Illustrated product card for ProKennex Black Ace Pro" loading="lazy"><span class="price-chip">$250.00</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/prokennex-black-ace-pro.svg" width="400" height="500" alt="Illustrated product card for ProKennex Black Ace Pro" loading="lazy"><span class="price-chip">$250.00</span></div>
       <span class="paddle-card__brand">ProKennex</span>
       <h3>Black Ace Pro</h3>
       <p class="paddle-card__meta">Power · traditional · $250.00</p>
@@ -248,7 +266,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="Franklin" data-style="all-court" data-levels="3.0 3.5 4.0 4.5">
     <a class="paddle-card__link" href="/en/paddles/franklin-c45/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/franklin-c45.svg" alt="Illustrated product card for Franklin C45 Carbon Fiber Series" loading="lazy"><span class="price-chip">$179.99</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/franklin-c45.svg" width="400" height="500" alt="Illustrated product card for Franklin C45 Carbon Fiber Series" loading="lazy"><span class="price-chip">$179.99</span></div>
       <span class="paddle-card__brand">Franklin</span>
       <h3>C45 Carbon Fiber Series</h3>
       <p class="paddle-card__meta">All-court · hybrid / elongated options · $179.99</p>
@@ -258,7 +276,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="HEAD" data-style="all-court" data-levels="2.5 3.0 3.5 4.0">
     <a class="paddle-card__link" href="/en/paddles/head-radical-tour/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/head-radical-tour.svg" alt="Illustrated product card for HEAD Radical TOUR15 / TOUR EX15" loading="lazy"><span class="price-chip">$169.95</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/head-radical-tour.svg" width="400" height="500" alt="Illustrated product card for HEAD Radical TOUR15 / TOUR EX15" loading="lazy"><span class="price-chip">$169.95</span></div>
       <span class="paddle-card__brand">HEAD</span>
       <h3>Radical TOUR15 / TOUR EX15</h3>
       <p class="paddle-card__meta">All-court · traditional / elongated EX · $169.95</p>
@@ -268,7 +286,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="Volair" data-style="control" data-levels="3.0 3.5 4.0 4.5">
     <a class="paddle-card__link" href="/en/paddles/volair-mach-2-forza/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/volair-mach-2-forza.svg" alt="Illustrated product card for Volair Mach 2 Forza" loading="lazy"><span class="price-chip">$119.99</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/volair-mach-2-forza.svg" width="400" height="500" alt="Illustrated product card for Volair Mach 2 Forza" loading="lazy"><span class="price-chip">$119.99</span></div>
       <span class="paddle-card__brand">Volair</span>
       <h3>Mach 2 Forza</h3>
       <p class="paddle-card__meta">Control · widebody · $119.99</p>
@@ -278,7 +296,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="Bread &amp; Butter" data-style="power" data-levels="3.0 3.5 4.0 4.5">
     <a class="paddle-card__link" href="/en/paddles/bread-and-butter-filth/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/bread-and-butter-filth.svg" alt="Illustrated product card for Bread &amp; Butter The Filth 16mm" loading="lazy"><span class="price-chip">$165.00</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/bread-and-butter-filth.svg" width="400" height="500" alt="Illustrated product card for Bread &amp; Butter The Filth 16mm" loading="lazy"><span class="price-chip">$165.00</span></div>
       <span class="paddle-card__brand">Bread &amp; Butter</span>
       <h3>The Filth 16mm</h3>
       <p class="paddle-card__meta">Power · elongated · $165.00</p>
@@ -288,7 +306,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="Friday" data-style="value" data-levels="2.0 2.5 3.0 3.5">
     <a class="paddle-card__link" href="/en/paddles/friday-original/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/friday-original.svg" alt="Illustrated product card for Friday Original Paddle" loading="lazy"><span class="price-chip">$69.00</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/friday-original.svg" width="400" height="500" alt="Illustrated product card for Friday Original Paddle" loading="lazy"><span class="price-chip">$69.00</span></div>
       <span class="paddle-card__brand">Friday</span>
       <h3>Original Paddle</h3>
       <p class="paddle-card__meta">Value · hybrid · $69.00</p>
@@ -298,7 +316,7 @@
     </a>
   </article><article class="paddle-card" data-paddle-card data-brand="ONIX" data-style="power" data-levels="3.0 3.5 4.0">
     <a class="paddle-card__link" href="/en/paddles/onix-evoke-premier/">
-      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/onix-evoke-premier.svg" alt="Illustrated product card for ONIX Evoke Premier" loading="lazy"><span class="price-chip">$149.99</span></div>
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/onix-evoke-premier.svg" width="400" height="500" alt="Illustrated product card for ONIX Evoke Premier" loading="lazy"><span class="price-chip">$149.99</span></div>
       <span class="paddle-card__brand">ONIX</span>
       <h3>Evoke Premier</h3>
       <p class="paddle-card__meta">Power · elongated / impact shape · $149.99</p>
@@ -306,7 +324,49 @@
       <p class="paddle-card__note">Long-running power paddle with reach-oriented shape and tournament approval positioning.</p>
       <span class="card__meta">View details</span>
     </a>
+  </article><article class="paddle-card" data-paddle-card data-brand="JOOLA" data-style="all-court" data-levels="3.5 4.0 4.5 5.0">
+    <a class="paddle-card__link" href="/en/paddles/joola-perseus-pro-v/">
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/joola-perseus-pro-v.svg" width="400" height="500" alt="Illustrated product card for JOOLA Ben Johns Perseus Pro V" loading="lazy"><span class="price-chip">$299.95</span></div>
+      <span class="paddle-card__brand">JOOLA</span>
+      <h3>Ben Johns Perseus Pro V</h3>
+      <p class="paddle-card__meta">All-court · elongated · $299.95</p>
+      <div class="pills pills--compact"><span class="pill">Power</span><span class="pill">Spin</span><span class="pill">Reach</span><span class="pill">Control</span></div>
+      <p class="paddle-card__note">The latest Ben Johns Perseus: an elongated all-court paddle with a flexing KineticFrame for controlled power, reach, and spin for aggressive advanced players.</p>
+      <span class="card__meta">View details</span>
+    </a>
+  </article><article class="paddle-card" data-paddle-card data-brand="Selkirk" data-style="power" data-levels="4.0 4.5 5.0">
+    <a class="paddle-card__link" href="/en/paddles/selkirk-project-boomstik/">
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/selkirk-project-boomstik.svg" width="400" height="500" alt="Illustrated product card for Selkirk LABS Project Boomstik Elongated" loading="lazy"><span class="price-chip">$332.99</span></div>
+      <span class="paddle-card__brand">Selkirk</span>
+      <h3>LABS Project Boomstik Elongated</h3>
+      <p class="paddle-card__meta">Power · elongated · $332.99</p>
+      <div class="pills pills--compact"><span class="pill">Power</span><span class="pill">Spin</span><span class="pill">Stability</span><span class="pill">Reach</span></div>
+      <p class="paddle-card__note">A 100% foam-core power paddle: explosive, durable, and surprisingly stable, with an MOI tuning system and long-lasting InfiniGrit spin for demanding advanced players.</p>
+      <span class="card__meta">View details</span>
+    </a>
+  </article><article class="paddle-card" data-paddle-card data-brand="Selkirk" data-style="all-court" data-levels="3.5 4.0 4.5 5.0">
+    <a class="paddle-card__link" href="/en/paddles/selkirk-omni/">
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/selkirk-omni.svg" width="400" height="500" alt="Illustrated product card for Selkirk OMNI Elongated" loading="lazy"><span class="price-chip">$299.99</span></div>
+      <span class="paddle-card__brand">Selkirk</span>
+      <h3>OMNI Elongated</h3>
+      <p class="paddle-card__meta">All-court · elongated · $299.99</p>
+      <div class="pills pills--compact"><span class="pill">Control</span><span class="pill">Spin</span><span class="pill">Reach</span><span class="pill">Stability</span></div>
+      <p class="paddle-card__note">The all-court alternative to the Boomstik: a foam paddle that plays soft on resets and crisp on drives, with an adjustable MOI tuning system you can move by hand.</p>
+      <span class="card__meta">View details</span>
+    </a>
+  </article><article class="paddle-card" data-paddle-card data-brand="CRBN" data-style="control" data-levels="4.0 4.5 5.0">
+    <a class="paddle-card__link" href="/en/paddles/crbn-trufoam-genesis/">
+      <div class="entity-card__media entity-card__media--paddle"><img class="entity-card__img" src="/assets/img/paddles/crbn-trufoam-genesis.svg" width="400" height="500" alt="Illustrated product card for CRBN 1 TruFoam Genesis" loading="lazy"><span class="price-chip">$279.99</span></div>
+      <span class="paddle-card__brand">CRBN</span>
+      <h3>1 TruFoam Genesis</h3>
+      <p class="paddle-card__meta">Control · elongated · $279.99</p>
+      <div class="pills pills--compact"><span class="pill">Control</span><span class="pill">Touch</span><span class="pill">Spin</span><span class="pill">Reach</span></div>
+      <p class="paddle-card__note">A Gen-4, 100% foam-core paddle with a tennis-like dwell and feel: exceptional on dinks and resets with strong spin, leaning control over raw pop for advanced players.</p>
+      <span class="card__meta">View details</span>
+    </a>
   </article></div>
+  </div>
+  <aside class="gear-related" aria-label="Other gear guides"><h2>Other gear guides</h2><p>Read this page first, then jump to the related gear guide you need.</p><div class="gear-related__links"><a class="gear-related__link gear-related__link--shoes" href="/en/gear/shoes/"><span class="gear-related__icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 30c5 1 10-1 14-6l5-7c3 4 7 8 13 10 3 1 5 4 4 8H7c-2 0-3-3-1-5z" fill="currentColor" opacity=".94"/><path d="M11 34h29M25 25l6 3M21 29l6 3" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".82"/></svg></span><span><strong>Shoes</strong><small>Check traction, lateral support, width, cushioning, and durability.</small></span></a><a class="gear-related__link gear-related__link--apparel" href="/en/gear/apparel/"><span class="gear-related__icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M17 7l7 4 7-4 10 7-6 8-3-2v21H16V20l-3 2-6-8z" fill="currentColor" opacity=".94"/><path d="M18 8c1 5 11 5 12 0" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".75"/></svg></span><span><strong>Apparel</strong><small>Plan for sweat, movement, heat, indoor courts, and tournament waits.</small></span></a><a class="gear-related__link gear-related__link--accessories" href="/en/gear/accessories/"><span class="gear-related__icon"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="10" width="32" height="9" rx="4.5" fill="currentColor" opacity=".92"/><rect x="13" y="24" width="22" height="14" rx="5" fill="currentColor" opacity=".72"/><path d="M16 31h16M20 16h8" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".82"/></svg></span><span><strong>Accessories</strong><small>Dial in feel with grips, lead tape, bands, cleaners, and small extras.</small></span></a></div></aside>
 </div></section>
 <section class="band band--alt"><div class="wrap">
   <div class="section-head"><div><h2 class="band__title">Paddle launch &amp; review updates</h2><p class="band__intro">New paddle launches, price changes, market reaction, and reviewer-score notes inside the paddle section. Always verify price, legality, and review sources before buying.</p></div><a class="link-more" href="/en/paddles/updates/">View paddle updates</a></div>
@@ -323,15 +383,18 @@
   <footer class="site-foot">
   <div class="wrap site-foot__inner">
     <div class="site-foot__brand">
-      <span class="brand__name">Picklary</span>
+      <span class="site-foot__lockup"><span class="brand__mark" aria-hidden="true"><svg class="brand__logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="15" y="11" width="11" height="42" rx="5.5" fill="#f4f7f6"/><circle cx="37.5" cy="25.5" r="16" fill="#F4B400"/><circle cx="37.5" cy="25.5" r="2.16" fill="#155446"/><circle cx="45.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="41.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="33.50" cy="32.43" r="2.16" fill="#155446"/><circle cx="29.50" cy="25.50" r="2.16" fill="#155446"/><circle cx="33.50" cy="18.57" r="2.16" fill="#155446"/><circle cx="41.50" cy="18.57" r="2.16" fill="#155446"/></svg></span><span class="brand__name">Picklary</span></span>
       <p>An independent, reader-focused pickleball information site.</p>
       <p class="site-foot__editor">By
-        <a href="/en/author/">The Picklary Editor</a> ·
-        <a href="mailto:hello@picklary.com">hello@picklary.com</a></p>
+        <a href="/en/author/">Shawn</a> ·
+        <a href="mailto:iam4na2@gmail.com">iam4na2@gmail.com</a></p>
+      <p class="site-foot__blogs">More blogs:
+        <a href="https://picklary.blogspot.com" rel="me noopener" target="_blank">Blogspot</a> ·
+        <a href="https://blog.naver.com/arctic" rel="me noopener" target="_blank">Naver</a></p>
     </div>
     <nav class="site-foot__links" aria-label="Footer"><a href="/en/about/">About</a><a href="/en/editorial-policy/">Editorial Policy</a><a href="/en/corrections-policy/">Corrections Policy</a><a href="/en/advertising-disclosure/">Advertising Disclosure</a><a href="/en/community-guidelines/">Community Guidelines</a><a href="/en/privacy/">Privacy Policy</a><a href="/en/cookie-policy/">Cookie Policy</a><a href="/en/terms/">Terms</a><a href="/en/disclaimer/">Disclaimer</a><a href="/en/contact/">Contact</a><a href="/en/sitemap/">Sitemap</a></nav>
   </div>
-  <div class="wrap site-foot__legal">© 2026 Picklary. All rights reserved. <span class="site-foot__build" title="site build time">build 2026-06-22 00:12 UTC</span></div>
+  <div class="wrap site-foot__legal">© 2026 Picklary. All rights reserved. <span class="site-foot__build" title="site build time">build 2026-07-01 05:10 UTC</span></div>
 </footer>
   <script src="/assets/js/site.js" defer></script>
 </body>

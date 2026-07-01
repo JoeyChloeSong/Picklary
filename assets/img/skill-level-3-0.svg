@@ -1,0 +1,9 @@
+<svg viewBox="0 0 660 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pickleball skill illustration">
+<text x="30" y="34" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="21" font-weight="700" fill="#1d2421">Level 3.0</text><text x="30" y="50" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13" font-weight="500" fill="#5f6b66">Third-shot drop · patient dinks · resets</text>
+  <rect x="26" y="56" width="608" height="280" rx="16" fill="#eef3f0" stroke="#1E6F5C" stroke-width="3"/>
+  <line x1="330" y1="56" x2="330" y2="336" stroke="#14513f" stroke-width="3.2"/>
+  <line x1="270" y1="56" x2="270" y2="336" stroke="#1E6F5C" stroke-width="2" opacity="0.32"/>
+  <line x1="390" y1="56" x2="390" y2="336" stroke="#1E6F5C" stroke-width="2" opacity="0.32"/>
+  <line x1="26" y1="196" x2="270" y2="196" stroke="#1E6F5C" stroke-width="1.4" opacity="0.16"/>
+  <line x1="390" y1="196" x2="634" y2="196" stroke="#1E6F5C" stroke-width="1.4" opacity="0.16"/><path d="M 74 286 Q 215 0 356 150" fill="none" stroke="#F4B400" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 10"/><circle cx="356" cy="150" r="7" fill="#F4B400" stroke="#14513f" stroke-width="1.6"/><path d="M 300 150 Q 336 124 372 150" fill="none" stroke="#1E6F5C" stroke-width="4" stroke-linecap="round"/><circle cx="372" cy="150" r="7" fill="#F4B400" stroke="#14513f" stroke-width="1.6"/><circle cx="74" cy="300" r="9" fill="#1E6F5C" stroke="#fff" stroke-width="2.4"/><text x="96" y="250" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="14.5" font-weight="700" fill="#1d2421" text-anchor="start">3rd-shot drop</text><text x="396" y="138" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="14.5" font-weight="700" fill="#1E6F5C" text-anchor="start">Dink</text>
+</svg>

@@ -1319,6 +1319,25 @@
         extra: extra
       });
       write(key, items.slice(0, 8));
+      var status = form.querySelector("[data-community-submit-status]");
+      var lang = document.documentElement.lang || "en";
+      var ko = lang.indexOf("ko") === 0;
+      var formName = form.getAttribute("name") || fd.get("form-name") || "picklary-community";
+      fd.set("form-name", formName);
+      if (status) { status.hidden = false; status.textContent = ko ? "미리보기를 저장하고 제출을 처리 중입니다." : "Preview saved. Submitting for review..."; }
+      try {
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(fd).toString()
+        }).then(function () {
+          if (status) status.textContent = ko ? "제출되었습니다. 공개 반영은 운영자 검수 후 진행됩니다." : "Submitted. Public listing requires editor review.";
+        }).catch(function () {
+          if (status) status.textContent = ko ? "브라우저 미리보기는 저장되었습니다. 온라인 제출은 배포 환경에서 다시 시도됩니다." : "Browser preview saved. Online submission will work in the deployed site.";
+        });
+      } catch (err) {
+        if (status) status.textContent = ko ? "브라우저 미리보기는 저장되었습니다." : "Browser preview saved.";
+      }
       var root = document.querySelector("[data-community-directory]");
       var localList = root && root.querySelector("[data-community-local-list]");
       if (localList) {
@@ -1340,6 +1359,11 @@
     var ko = lang.indexOf("ko") === 0;
     var RKEY = "picklary.skillreview.reviews." + lang;
     var VKEY = "picklary.skillreview.request." + lang;
+    var requestPanel = skill.querySelector("[data-skill-request-panel]");
+    var requestOpen = skill.querySelector("[data-open-skill-request]");
+    var requestClose = skill.querySelector("[data-close-skill-request]");
+    var requestStatus = skill.querySelector("[data-skill-request-status]");
+    var requestLocalList = skill.querySelector("[data-skill-local-list]");
     var weights = { general: 1.0, email: 1.1, dupr: 1.25, coach: 1.6 };
     var feedbackLabels = {
       helpful: ko ? "도움됨" : "Helpful",
@@ -1350,6 +1374,24 @@
     function labelType(t) {
       return t === "dupr" ? "DUPR-linked" : t === "coach" ? "Coach/editor" : t === "email" ? "Email-checked" : "General";
     }
+    function renderSkillRequestSaved(r) {
+      return '<article class="skill-request-card skill-request-card--local"><div class="skill-request-card__top"><span class="pill">' + esc(ko ? "내 미리보기" : "My preview") + '</span><span class="skill-request-status">' + esc(ko ? "검수 대기" : "Pending review") + '</span></div><h3>' + esc(r.focus || (ko ? "스킬 리뷰 요청" : "Skill review request")) + '</h3><div class="skill-request-card__meta"><span>' + esc(r.level || "") + '</span>' + (r.city ? '<span>' + esc(r.city) + '</span>' : '') + '<span>' + esc(ko ? "방금 저장" : "saved locally") + '</span></div><p class="skill-request-card__focus">' + esc(r.url || "") + '</p><p>' + esc(r.note || "") + '</p></article>';
+    }
+    function renderSkillRequests() {
+      if (!requestLocalList) return;
+      requestLocalList.innerHTML = read(VKEY).map(renderSkillRequestSaved).join("");
+    }
+    function setRequestPanel(open) {
+      if (!requestPanel) return;
+      requestPanel.hidden = !open;
+      if (requestOpen) requestOpen.setAttribute("aria-expanded", open ? "true" : "false");
+      if (open) {
+        var first = requestPanel.querySelector("input, select, textarea, button");
+        if (first && first.focus) setTimeout(function () { first.focus(); }, 30);
+      }
+    }
+    if (requestOpen) requestOpen.addEventListener("click", function () { setRequestPanel(!requestPanel || requestPanel.hidden); });
+    if (requestClose) requestClose.addEventListener("click", function () { setRequestPanel(false); });
     function clampRating(n) { return Math.max(2, Math.min(5.5, Number(n || 0))); }
     function criteriaInputs() { return Array.prototype.slice.call(skill.querySelectorAll("[data-criterion-input]")); }
     function calculateCriteriaScore(scope) {
@@ -1424,10 +1466,32 @@
       reqForm.addEventListener("submit", function (e) {
         e.preventDefault();
         var fd = new FormData(reqForm);
-        write(VKEY, [{ url: fd.get("url"), level: fd.get("level"), focus: fd.get("focus"), note: fd.get("note"), t: Date.now() }]);
+        var item = { url: fd.get("url"), level: fd.get("level"), focus: fd.get("focus"), city: fd.get("city"), note: fd.get("note"), contact: fd.get("contact"), t: Date.now() };
+        var rows = read(VKEY);
+        rows.unshift(item);
+        write(VKEY, rows.slice(0, 12));
+        var formName = reqForm.getAttribute("name") || fd.get("form-name") || "picklary-skill-review";
+        fd.set("form-name", formName);
+        if (requestStatus) { requestStatus.hidden = false; requestStatus.textContent = ko ? "미리보기를 저장하고 제출을 처리 중입니다." : "Preview saved. Submitting for review..."; }
+        try {
+          fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(fd).toString()
+          }).then(function () {
+            if (requestStatus) requestStatus.textContent = ko ? "제출되었습니다. 공개 반영은 운영자 검수 후 진행됩니다." : "Submitted. Public listing requires editor review.";
+          }).catch(function () {
+            if (requestStatus) requestStatus.textContent = ko ? "브라우저 미리보기는 저장되었습니다. 온라인 제출은 배포 환경에서 다시 시도됩니다." : "Browser preview saved. Online submission will work on the deployed site.";
+          });
+        } catch (err) {
+          if (requestStatus) requestStatus.textContent = ko ? "브라우저 미리보기는 저장되었습니다." : "Browser preview saved.";
+        }
+        renderSkillRequests();
         reqForm.reset();
+        setRequestPanel(false);
       });
     }
+    renderSkillRequests();
     if (reviewForm) {
       criteriaInputs().forEach(function (input) { input.addEventListener("input", updatePreview); });
       updatePreview();

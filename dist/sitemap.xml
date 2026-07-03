@@ -822,12 +822,28 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://picklary.com/ko/gear/balls/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/gear/balls/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/gear/balls/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/gear/balls/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/gear/balls/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/gear/balls/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/gear/balls/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/gear/balls/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
     <loc>https://picklary.com/ko/gear/shoes/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/gear/shoes/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/gear/shoes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/gear/shoes/"/>
     <changefreq>monthly</changefreq>
-    <priority>0.68</priority>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://picklary.com/en/gear/shoes/</loc>
@@ -835,7 +851,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/gear/shoes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/gear/shoes/"/>
     <changefreq>monthly</changefreq>
-    <priority>0.68</priority>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://picklary.com/ko/gear/apparel/</loc>
@@ -843,7 +859,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/gear/apparel/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/gear/apparel/"/>
     <changefreq>monthly</changefreq>
-    <priority>0.68</priority>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://picklary.com/en/gear/apparel/</loc>
@@ -851,7 +867,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/gear/apparel/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/gear/apparel/"/>
     <changefreq>monthly</changefreq>
-    <priority>0.68</priority>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://picklary.com/ko/gear/accessories/</loc>
@@ -859,7 +875,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/gear/accessories/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/gear/accessories/"/>
     <changefreq>monthly</changefreq>
-    <priority>0.68</priority>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://picklary.com/en/gear/accessories/</loc>
@@ -867,7 +883,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/gear/accessories/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/gear/accessories/"/>
     <changefreq>monthly</changefreq>
-    <priority>0.68</priority>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://picklary.com/ko/paddles/</loc>

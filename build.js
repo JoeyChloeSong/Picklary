@@ -309,12 +309,7 @@ function footer(loc) {
 }
 
 function breadcrumbs(loc, trail) {
-  // trail: [{name, rel|null}]
-  const items = trail.map((t, i) => {
-    const last = i === trail.length - 1;
-    if (last || !t.rel) return `<li aria-current="page">${esc(t.name)}</li>`;
-    return `<li><a href="${link(loc, t.rel)}">${esc(t.name)}</a></li>`;
-  }).join('');
+  // Breadcrumb data is kept for search engines, but the visible current-location bar is not rendered.
   const ld = {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: trail.map((t, i) => ({
@@ -322,8 +317,7 @@ function breadcrumbs(loc, trail) {
       item: t.rel != null ? `${config.url}${link(loc, t.rel)}` : undefined,
     })),
   };
-  return `<nav class="crumbs" aria-label="Breadcrumb"><ol class="wrap">${items}</ol></nav>
-  <script type="application/ld+json">${JSON.stringify(ld)}</script>`;
+  return `<script type="application/ld+json">${JSON.stringify(ld)}</script>`;
 }
 
 function themeForRel(rel) {
@@ -393,7 +387,7 @@ function layout(opts) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css?v=mobile-interface-parity-20260701">
+  <link rel="stylesheet" href="/assets/css/style.css?v=skill-review-board-mvp-20260703">
   ${jsonldTags}
   ${adsenseTags}
 </head>
@@ -404,7 +398,7 @@ function layout(opts) {
 ${opts.bodyHtml}
   </main>
   ${footer(loc)}
-  <script src="/assets/js/site.js?v=mobile-interface-parity-20260701" defer></script>
+  <script src="/assets/js/site.js?v=skill-review-board-mvp-20260703" defer></script>
 </body>
 </html>`;
 }
@@ -1736,11 +1730,14 @@ function gearLabel(loc, key) {
       hubIntro: '패들, 신발, 의류, 액세서리를 한눈에 비교하는 Picklary 장비 가이드입니다. 제품을 바로 사게 만드는 페이지가 아니라, 내 레벨·코트 환경·몸 상태에 맞춰 무엇을 확인해야 하는지 정리합니다.',
       hubCta: '패들 기준부터 보기',
       policyNote: 'Picklary의 장비 페이지는 쇼핑몰이 아니라 선택 기준을 정리한 가이드입니다. 가격, 재고, 승인 장비 여부는 바뀔 수 있으므로 제조사·공식 판매처·승인 장비 목록에서 다시 확인하세요.',
-      paddles: '패들', shoes: '신발', apparel: '의류', accessories: '액세서리',
+      paddles: '패들', balls: '공', shoes: '신발', apparel: '의류', accessories: '액세서리',
       paddlesDesc: '파워보다 먼저 컨트롤, 스위트스폿, 손목 부담을 비교합니다.',
+      ballsDesc: '실내·실외 공, Franklin X-40, Dura Fast 40, Selkirk Pro S1, 클럽용 공을 비교합니다.',
       shoesDesc: '미끄러짐, 옆 움직임, 발볼, 쿠션 균형을 먼저 확인합니다.',
       apparelDesc: '땀, 온도, 움직임, 장시간 대기 상황까지 고려합니다.',
       accessoriesDesc: '그립, 리드테이프, 밴드, 클리너처럼 체감이 큰 작은 장비를 봅니다.',
+      ballsTitle: '피클볼 공 가이드: 실내·실외와 대표 모델',
+      ballsIntro: '공은 랠리 속도, 바운스, 내구성, 소음, 클럽 적응에 바로 영향을 줍니다. 실외용과 실내용 차이, Franklin X-40, Dura Fast 40, Selkirk Pro S1, ONIX Fuse Indoor, 라이프타임 같은 클럽 환경에서 확인할 점을 정리합니다.',
       chooseTitle: '무엇부터 바꾸면 좋을까요?',
       chooseIntro: '장비는 비싼 것부터 사는 것보다, 지금 코트에서 반복되는 문제를 먼저 해결하는 순서가 좋습니다. 미끄러지면 신발, 패들이 돌아가면 그립, 공이 밀리면 패들 밸런스부터 확인하세요.',
       adsenseTitle: '편집 기준',
@@ -1760,11 +1757,14 @@ function gearLabel(loc, key) {
       hubIntro: 'A smarter way to choose pickleball gear. Compare paddles, shoes, apparel, and accessories by fit, court conditions, level, and real on-court needs—not by hype alone.',
       hubCta: 'Start with paddle criteria',
       policyNote: 'Picklary is not a store. These pages explain selection criteria. Prices, stock, and approved-equipment status can change, so verify manufacturer pages, official retailers, and approved-equipment lists before buying or competing.',
-      paddles: 'Paddles', shoes: 'Shoes', apparel: 'Apparel', accessories: 'Accessories',
+      paddles: 'Paddles', balls: 'Balls', shoes: 'Shoes', apparel: 'Apparel', accessories: 'Accessories',
       paddlesDesc: 'Compare control, sweet spot, arm comfort, spin, and power fit.',
+      ballsDesc: 'Compare indoor/outdoor balls, Franklin X-40, Dura Fast 40, Selkirk Pro S1, and club-use balls.',
       shoesDesc: 'Check traction, lateral support, width, cushioning, and durability.',
       apparelDesc: 'Plan for sweat, movement, heat, indoor courts, and tournament waits.',
       accessoriesDesc: 'Dial in feel with grips, lead tape, bands, cleaners, and small extras.',
+      ballsTitle: 'Pickleball ball guide: indoor, outdoor, and popular models',
+      ballsIntro: 'The ball changes rally speed, bounce, durability, noise, and how well practice transfers to club play. Compare outdoor and indoor balls, Franklin X-40, Dura Fast 40, Selkirk Pro S1, ONIX Fuse Indoor, and what to check at clubs such as Life Time.',
       chooseTitle: 'What should you change first?',
       chooseIntro: 'Start with the problem you actually feel on court. If you slip, look at shoes. If the paddle twists, check grip. If shots float or feel unstable, review paddle balance before chasing a new purchase.',
       adsenseTitle: 'Editorial standard',
@@ -1779,7 +1779,7 @@ function gearLabel(loc, key) {
       nextLinks: 'Related gear pages'
     },
     es: {
-      nav: 'Gear Lab', hubTitle: 'Gear Lab', hubIntro: 'Una guía práctica para palas, zapatillas, ropa y accesorios de pickleball.', hubCta: 'Comparar palas', policyNote: 'Picklary no es una tienda. Verifica fuentes oficiales antes de comprar.', paddles: 'Palas', shoes: 'Zapatillas', apparel: 'Ropa', accessories: 'Accesorios', paddlesDesc: 'Compara material, forma y control.', shoesDesc: 'Tracción, soporte lateral y comodidad.', apparelDesc: 'Movimiento, calor y capas.', accessoriesDesc: 'Cinta de plomo, grips, bandas y limpiadores.', chooseTitle: 'Qué elegir primero', chooseIntro: 'Primero seguridad y ajuste; después rendimiento.', adsenseTitle: 'Criterio editorial', adsenseText: 'Estas páginas explican criterios, no son una tienda.', shoesTitle: 'Cómo elegir zapatillas de pickleball', shoesIntro: 'Evalúa tracción, soporte lateral, amortiguación y durabilidad.', apparelTitle: 'Guía de ropa para pickleball', apparelIntro: 'La ropa debe ayudar al movimiento y al control de temperatura.', accessoriesTitle: 'Guía de accesorios de pickleball', accessoriesIntro: 'Los accesorios pequeños cambian el tacto, la comodidad y el mantenimiento.', checklist: 'Lista antes de comprar', nextLinks: 'Páginas relacionadas'
+      nav: 'Gear Lab', hubTitle: 'Gear Lab', hubIntro: 'Una guía práctica para palas, zapatillas, ropa y accesorios de pickleball.', hubCta: 'Comparar palas', policyNote: 'Picklary no es una tienda. Verifica fuentes oficiales antes de comprar.', paddles: 'Palas', balls: 'Pelotas', shoes: 'Zapatillas', apparel: 'Ropa', accessories: 'Accesorios', paddlesDesc: 'Compara material, forma y control.', ballsDesc: 'Compara pelotas indoor/outdoor y modelos populares.', shoesDesc: 'Tracción, soporte lateral y comodidad.', apparelDesc: 'Movimiento, calor y capas.', accessoriesDesc: 'Cinta de plomo, grips, bandas y limpiadores.', ballsTitle: 'Guía de pelotas de pickleball', ballsIntro: 'Compara pelotas indoor/outdoor y modelos populares antes de comprar.', chooseTitle: 'Qué elegir primero', chooseIntro: 'Primero seguridad y ajuste; después rendimiento.', adsenseTitle: 'Criterio editorial', adsenseText: 'Estas páginas explican criterios, no son una tienda.', shoesTitle: 'Cómo elegir zapatillas de pickleball', shoesIntro: 'Evalúa tracción, soporte lateral, amortiguación y durabilidad.', apparelTitle: 'Guía de ropa para pickleball', apparelIntro: 'La ropa debe ayudar al movimiento y al control de temperatura.', accessoriesTitle: 'Guía de accesorios de pickleball', accessoriesIntro: 'Los accesorios pequeños cambian el tacto, la comodidad y el mantenimiento.', checklist: 'Lista antes de comprar', nextLinks: 'Páginas relacionadas'
     }
   };
   return (dict[loc] || dict.en)[key] || key;
@@ -1787,6 +1787,7 @@ function gearLabel(loc, key) {
 
 const GEAR_ITEMS = [
   { key: 'paddles', href: 'paddles/' },
+  { key: 'balls', href: 'gear/balls/' },
   { key: 'shoes', href: 'gear/shoes/' },
   { key: 'apparel', href: 'gear/apparel/' },
   { key: 'accessories', href: 'gear/accessories/' },
@@ -1794,6 +1795,7 @@ const GEAR_ITEMS = [
 function gearIcon(key) {
   const icons = {
     paddles: '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M15 6c6-4 16 6 13 13L16 42c-1 2-4 1-5-1s-1-4 1-5l13-21c1-3-5-9-8-7L7 14c-2 1-4-1-3-3z" fill="currentColor" opacity=".92"/><circle cx="34" cy="13" r="6" fill="none" stroke="currentColor" stroke-width="3"/></svg>',
+    balls: '<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17" fill="currentColor" opacity=".94"/><circle cx="16" cy="18" r="2.2" fill="#fff" opacity=".86"/><circle cx="25" cy="14" r="2" fill="#fff" opacity=".72"/><circle cx="33" cy="21" r="2.2" fill="#fff" opacity=".82"/><circle cx="19" cy="29" r="2" fill="#fff" opacity=".78"/><circle cx="29" cy="32" r="2.1" fill="#fff" opacity=".8"/></svg>',
     shoes: '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 30c5 1 10-1 14-6l5-7c3 4 7 8 13 10 3 1 5 4 4 8H7c-2 0-3-3-1-5z" fill="currentColor" opacity=".94"/><path d="M11 34h29M25 25l6 3M21 29l6 3" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".82"/></svg>',
     apparel: '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M17 7l7 4 7-4 10 7-6 8-3-2v21H16V20l-3 2-6-8z" fill="currentColor" opacity=".94"/><path d="M18 8c1 5 11 5 12 0" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".75"/></svg>',
     accessories: '<svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="10" width="32" height="9" rx="4.5" fill="currentColor" opacity=".92"/><rect x="13" y="24" width="22" height="14" rx="5" fill="currentColor" opacity=".72"/><path d="M16 31h16M20 16h8" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".82"/></svg>'
@@ -1802,7 +1804,7 @@ function gearIcon(key) {
 }
 function gearItemDesc(loc, key) { return gearLabel(loc, key + 'Desc'); }
 function gearVisualFigure(loc, topic) {
-  const srcMap = { paddles: 'paddle-ratings.svg', shoes: 'gear-shoes.svg', apparel: 'gear-apparel.svg', accessories: 'gear-accessories.svg', lab: 'gear-lab-dashboard-design.webp' };
+  const srcMap = { paddles: 'paddle-ratings.svg', balls: 'gear-balls.svg', shoes: 'gear-shoes.svg', apparel: 'gear-apparel.svg', accessories: 'gear-accessories.svg', lab: 'gear-lab-dashboard-design.webp' };
   const src = srcMap[topic] || srcMap.lab;
   const title = topic === 'lab' ? gearLabel(loc, 'hubTitle') : gearLabel(loc, topic);
   const caption = loc === 'ko'
@@ -1833,6 +1835,91 @@ function gearRelatedNav(loc, currentKey) {
   return `<aside class="gear-related" aria-label="${escAttr(label)}"><h2>${esc(label)}</h2><p>${esc(note)}</p><div class="gear-related__links">${links}</div></aside>`;
 }
 
+
+
+function gearRealExamples(loc, topic) {
+  const L = (ko, en) => (loc === 'ko' ? ko : en);
+  const examples = {
+    balls: [
+      {
+        name: 'Franklin X-40',
+        tag: L('대표 실외공', 'Outdoor benchmark'),
+        body: L('야외 오픈플레이와 대회 준비에서 가장 자주 비교되는 공입니다. 속도·바운스 기준을 잡기 좋습니다.', 'A common outdoor benchmark for open play and event preparation. Useful for learning the speed and bounce many players expect.')
+      },
+      {
+        name: 'Dura Fast 40',
+        tag: L('빠른 실외공', 'Fast outdoor feel'),
+        body: L('더 단단하고 빠른 느낌을 선호하는 경쟁 플레이어가 비교할 만합니다. 초보자에게는 빠르게 느껴질 수 있습니다.', 'A firmer, faster outdoor comparison point. It can feel quick for beginners, but it is useful for competitive-speed practice.')
+      },
+      {
+        name: 'Selkirk Pro S1',
+        tag: L('프리미엄 실외공', 'Premium outdoor candidate'),
+        body: L('내구성·일관성·38홀 설계로 알려진 후보입니다. 가격과 현재 승인 상태는 구매 전 확인하세요.', 'A premium outdoor candidate associated with durability, consistency, and a 38-hole design. Verify current price and eligibility before buying.')
+      },
+      {
+        name: 'ONIX Fuse Indoor',
+        tag: L('실내용 후보', 'Indoor candidate'),
+        body: L('실내 체육관·스포츠코트에서 부드러운 바운스와 컨트롤을 비교할 때 확인할 만한 공입니다.', 'A useful indoor candidate when comparing softer bounce and controlled feel on gym or sport-court surfaces.')
+      },
+      {
+        name: L('클럽 제공 공', 'Club-provided ball'),
+        tag: L('라이프타임·로컬클럽', 'Life Time / local clubs'),
+        body: L('클럽 지점마다 제공 공이 다를 수 있습니다. 자주 치는 장소에서 실제 쓰는 공을 확인하고 같은 공으로 연습하세요.', 'Club locations can vary. Check the exact ball your location uses and practise with that model when possible.')
+      }
+    ],
+    shoes: [
+      {
+        name: 'Wilson Pickle Pro',
+        tag: L('피클볼 전용 후보', 'Pickleball-specific candidate'),
+        body: L('측면 지지력과 코트 움직임을 기준으로 비교할 만한 피클볼화 후보입니다.', 'A pickleball-specific option to compare for lateral support and court movement.')
+      },
+      {
+        name: 'Babolat Jet Mach 4',
+        tag: L('빠른 움직임', 'Fast movement'),
+        body: L('가벼운 코트 움직임과 반응성을 중요하게 보는 플레이어가 비교할 만합니다.', 'A court-shoe candidate for players who value lighter movement and responsiveness.')
+      },
+      {
+        name: 'ASICS Solution Speed FF',
+        tag: L('테니스화 기반', 'Tennis-court base'),
+        body: L('테니스화 기반의 빠른 방향 전환과 접지력을 비교할 때 참고하기 좋습니다.', 'A tennis-court reference point for quick cuts and traction.')
+      },
+      {
+        name: 'ON Roger Clubhouse Pro',
+        tag: L('클럽용 편안함', 'Club comfort'),
+        body: L('긴 클럽 세션에서 편안함과 코트 안정성을 함께 확인할 후보입니다.', 'A candidate to compare when comfort across long club sessions matters.')
+      }
+    ],
+    apparel: [
+      { name: L('땀 배출 셔츠', 'Moisture-wicking shirt'), tag: L('기본', 'Core'), body: L('면 티셔츠보다 땀이 빨리 마르는 소재가 후반 집중력에 유리합니다.', 'Fabric that dries faster than cotton helps maintain comfort and focus late in play.') },
+      { name: L('주머니 있는 쇼츠·스커트', 'Shorts or skirt with pockets'), tag: L('실전 편의', 'Practical'), body: L('공을 보관하거나 교대 중 빠르게 움직일 수 있어 오픈플레이에서 편합니다.', 'Useful for holding balls and moving quickly during open play.') },
+      { name: L('UPF 긴팔·모자·바이저', 'UPF layer, hat, or visor'), tag: L('야외', 'Outdoor'), body: L('야외 코트에서는 자외선, 눈부심, 열 관리를 장비처럼 생각하세요.', 'For outdoor courts, treat sun, glare, and heat management as part of your gear system.') },
+      { name: L('여벌 양말·셔츠', 'Extra socks and shirts'), tag: L('대회·장시간', 'Tournament / long session'), body: L('젖은 옷으로 오래 대기하면 몸이 식고 집중력이 떨어질 수 있습니다.', 'Waiting in wet clothing can cool you down and hurt concentration.') }
+    ],
+    accessories: [
+      { name: L('오버그립', 'Overgrips'), tag: L('가성비 체감', 'High-value feel'), body: L('땀, 손 크기, 패들 회전을 가장 저렴하게 개선할 수 있는 후보입니다.', 'Often the cheapest way to improve sweat control, grip size, and paddle twisting.') },
+      { name: L('보호안경', 'Eye protection'), tag: L('안전', 'Safety'), body: L('키친 앞 핸드배틀과 파트너 디플렉션이 많은 환경에서는 우선순위가 높습니다.', 'High priority around kitchen hand battles, partner deflections, and crowded club play.') },
+      { name: L('손목밴드·타월', 'Wristbands and towel'), tag: L('땀 관리', 'Sweat control'), body: L('그립 젖음과 눈에 들어가는 땀을 줄이는 작은 장비입니다.', 'Small items that reduce grip moisture and sweat in the eyes.') },
+      { name: L('패들·신발 분리 가방', 'Bag with shoe/paddle separation'), tag: L('클럽 이동', 'Club carry'), body: L('패들 보호, 신발 분리, 물병, 수건, 여벌 의류를 한 번에 넣을 수 있는지 확인하세요.', 'Check whether it actually carries paddles, shoes, water, towel, and spare clothing.') }
+    ]
+  };
+  const items = examples[topic] || [];
+  if (!items.length) return '';
+  const titleMap = {
+    balls: L('대표 공 후보와 실제 사용 기준', 'Popular ball candidates and real-use criteria'),
+    shoes: L('실제 비교해 볼 만한 신발 후보', 'Shoe candidates worth comparing'),
+    apparel: L('사용자가 자주 찾는 의류군', 'Apparel categories players actually use'),
+    accessories: L('체감이 큰 액세서리 후보', 'Accessories with noticeable impact')
+  };
+  const noteMap = {
+    balls: L('공은 “가장 좋은 공”보다 내가 치는 코트와 클럽에서 실제 쓰는 공에 맞추는 것이 중요합니다.', 'For balls, matching the court and club you actually play at matters more than finding one universal best ball.'),
+    shoes: L('신발은 제품명보다 발볼, 뒤꿈치 고정, 코트 표면, 측면 지지력이 우선입니다.', 'For shoes, width, heel lockdown, court surface, and lateral support matter more than the model name.'),
+    apparel: L('의류는 브랜드보다 땀·열·움직임·대기 시간을 해결하는지가 핵심입니다.', 'For apparel, solve sweat, heat, movement, and waiting time before focusing on brand.'),
+    accessories: L('액세서리는 저렴하지만 경기 감각을 크게 바꿀 수 있으므로 작은 단위로 테스트하세요.', 'Accessories are inexpensive but can change feel a lot, so test them in small steps.')
+  };
+  const cards = items.map((x) => `<article class="gear-example-card"><span>${esc(x.tag)}</span><h3>${esc(x.name)}</h3><p>${esc(x.body)}</p></article>`).join('');
+  return `<section class="gear-examples"><h2>${esc(titleMap[topic] || L('실제 제품군 예시', 'Real product examples'))}</h2><p>${esc(noteMap[topic] || '')}</p><div class="gear-example-grid">${cards}</div><p class="notice">${esc(L('제품 가격, 승인 상태, 재고, 클럽 제공 모델은 바뀔 수 있으므로 구매·대회 사용 전 공식 출처에서 다시 확인하세요.', 'Prices, approval status, stock, and club-provided models can change, so verify at official sources before buying or using in competition.'))}</p></section>`;
+}
+
 function renderGearIndex(loc) {
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: gearLabel(loc, 'hubTitle') }])}
 <section class="page-head page-head--visual"><div class="wrap two-col two-col--wide">
@@ -1852,6 +1939,38 @@ function gearTopicData(loc, topic) {
     ? '이 페이지는 특정 상품 구매를 유도하지 않고, 코트 환경과 플레이 스타일에 맞춰 확인할 기준을 정리합니다. 실제 가격, 재고, 사이즈, 승인 여부는 판매처와 공식 출처에서 다시 확인하세요.'
     : 'This page focuses on fit and verification criteria rather than pushing a product. Verify price, stock, sizing, and eligibility at the original source before purchasing.';
   const data = {
+    balls: {
+      title: gearLabel(loc, 'ballsTitle'), intro: gearLabel(loc, 'ballsIntro'), visual: 'balls',
+      checklist: ko ? [
+        '실외 야외 코트에서는 바람과 거친 표면을 고려해 더 단단하고 구멍이 작은 공을 우선 확인합니다.',
+        '실내 체육관이나 목재/스포츠 코트에서는 바운스가 부드럽고 컨트롤이 쉬운 실내용 공이 더 편할 수 있습니다.',
+        '대회나 리그를 준비한다면 실제 사용하는 공과 같은 모델로 연습해야 속도와 바운스 적응이 빠릅니다.',
+        'Franklin X-40은 야외 경기와 클럽에서 가장 자주 언급되는 대표 실외공 후보입니다.',
+        'Dura Fast 40은 빠르고 단단한 느낌을 선호하는 경쟁 플레이어가 비교할 만한 실외공입니다.',
+        'Selkirk Pro S1은 내구성, 일관성, 38홀 설계로 알려진 프리미엄 실외공 후보입니다.',
+        'ONIX Fuse Indoor는 실내용 공 후보로, 실내 코트에서 부드러운 감각과 컨트롤을 비교할 때 확인할 만합니다.',
+        '라이프타임 같은 클럽에서는 지점마다 제공 공이 다를 수 있으므로, 실제 플레이하는 클럽에서 쓰는 공을 확인한 뒤 같은 공으로 연습하는 것이 가장 현실적입니다.'
+      ] : [
+        'For outdoor hard courts, prioritize a firmer ball that handles wind and rougher surfaces.',
+        'For indoor gyms or sport courts, an indoor ball can feel softer, easier to control, and less harsh off the paddle.',
+        'If you are preparing for league or tournament play, practise with the same ball the event or club actually uses.',
+        'Franklin X-40 is one of the most commonly referenced outdoor balls and a practical benchmark for many players.',
+        'Dura Fast 40 is a firmer, faster outdoor comparison point for players who like a quicker ball.',
+        'Selkirk Pro S1 is a premium outdoor candidate known for durability, consistency, and a 38-hole design.',
+        'ONIX Fuse Indoor is a useful indoor candidate when comparing softer feel and controlled bounce.',
+        'For clubs such as Life Time, the most useful answer is local: check what your location provides, then practise with that exact ball when possible.'
+      ],
+      questions: ko ? [
+        ['실내공과 실외공은 꼭 다르게 써야 하나요?', '자주 치는 코트가 다르면 다르게 쓰는 편이 좋습니다. 실외공은 바람과 거친 표면, 실내공은 부드러운 바운스와 컨트롤을 기준으로 비교하세요.'],
+        ['초보자는 어떤 공을 사면 좋나요?', '주로 치는 장소에서 쓰는 공을 기준으로 시작하세요. 야외 오픈플레이가 많다면 Franklin X-40 같은 대표 실외공, 실내 클럽이 많다면 ONIX Fuse Indoor 같은 실내용 후보를 비교하면 됩니다.'],
+        ['라이프타임에서 쓰는 공을 꼭 따라 사야 하나요?', '항상 그럴 필요는 없지만, 해당 클럽에서 자주 친다면 같은 공으로 연습하는 것이 바운스와 속도 적응에 가장 빠릅니다. 지점마다 다를 수 있으니 현장 제공 공을 확인하세요.']
+      ] : [
+        ['Do indoor and outdoor balls really matter?', 'Yes, if you play both surfaces often. Outdoor balls are selected for wind and rough courts; indoor balls usually emphasize softer bounce and control.'],
+        ['What ball should a beginner buy first?', 'Start with the ball used where you actually play. Outdoor open play often points to a benchmark like Franklin X-40; indoor club play points to an indoor option such as ONIX Fuse Indoor.'],
+        ['Should I copy the ball used at Life Time or another club?', 'If you play there often, yes. The fastest way to adapt is to practise with the same ball your local club provides, but confirm the model at your location.']
+      ],
+      note: commonNotice
+    },
     shoes: {
       title: gearLabel(loc, 'shoesTitle'), intro: gearLabel(loc, 'shoesIntro'), visual: 'shoes',
       checklist: ko ? [
@@ -1956,7 +2075,7 @@ function renderGearTopicPage(loc, topic) {
   const data = gearTopicData(loc, topic);
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: gearLabel(loc, 'hubTitle'), rel: 'gear/' }, { name: data.title }])}
 <section class="page-head page-head--visual"><div class="wrap two-col two-col--wide"><div><p class="page-head__eyebrow">${esc(topic === 'paddles' ? (loc === 'ko' ? '패들' : 'Paddles') : gearLabel(loc, topic))}</p><h1>${esc(data.title)}</h1><p class="page-head__intro">${esc(data.intro)}</p></div>${gearVisualFigure(loc, data.visual)}</div></section>
-<section class="band"><div class="wrap gear-page-layout"><div class="prose"><h2>${esc(gearLabel(loc, 'checklist'))}</h2><ul>${data.checklist.map((p) => `<li>${esc(p)}</li>`).join('')}</ul><p>${esc(data.note)}</p><h2>${esc(loc === 'ko' ? '사용자가 자주 궁금해하는 점' : 'Common questions players ask')}</h2>${data.questions.map(([q,a]) => `<h3>${esc(q)}</h3><p>${esc(a)}</p>`).join('')}<h2>${esc(loc === 'ko' ? '어떤 순서로 확인할까요?' : 'How to use this guide')}</h2><p>${esc(loc === 'ko' ? '장비는 한 번에 모두 바꾸기보다 현재 가장 자주 발생하는 문제와 연결해서 확인하는 것이 좋습니다. 미끄러짐이 문제라면 신발, 손에서 패들이 돌아간다면 그립, 공이 밀리거나 뜬다면 패들 무게와 스윙 밸런스, 땀 때문에 집중이 떨어진다면 의류와 밴드류를 먼저 봅니다. 이렇게 원인과 장비를 연결하면 불필요한 구매를 줄이고 실제 경기 개선에 가까워집니다.' : 'Use gear decisions to solve a real on-court problem. If you slip, start with shoes. If the paddle twists in your hand, check grip size and overgrips. If shots float or feel unstable, review weight and balance. If sweat breaks concentration, apparel and bands may matter more than a new paddle. Connecting the issue to the gear keeps the page useful rather than promotional.')}</p><p>${esc(loc === 'ko' ? '또한 같은 제품도 실내와 야외, 싱글과 복식, 입문자와 상급자에게 다르게 느껴질 수 있습니다. Picklary는 특정 제품을 무조건 추천하지 않고, 독자가 자신의 코트 환경과 레벨에 맞춰 확인할 수 있는 기준을 제공합니다.' : 'The same product can feel different indoors versus outdoors, in singles versus doubles, and for beginners versus advanced players. Picklary does not treat one item as a universal answer; it gives criteria readers can test against their own court, level, and goals.')}</p></div>${gearRelatedNav(loc, topic)}</div></section>`;
+<section class="band"><div class="wrap gear-page-layout"><div class="prose"><h2>${esc(gearLabel(loc, 'checklist'))}</h2><ul>${data.checklist.map((p) => `<li>${esc(p)}</li>`).join('')}</ul><p>${esc(data.note)}</p>${gearRealExamples(loc, topic)}<h2>${esc(loc === 'ko' ? '사용자가 자주 궁금해하는 점' : 'Common questions players ask')}</h2>${data.questions.map(([q,a]) => `<h3>${esc(q)}</h3><p>${esc(a)}</p>`).join('')}<h2>${esc(loc === 'ko' ? '어떤 순서로 확인할까요?' : 'How to use this guide')}</h2><p>${esc(loc === 'ko' ? '장비는 한 번에 모두 바꾸기보다 현재 가장 자주 발생하는 문제와 연결해서 확인하는 것이 좋습니다. 미끄러짐이 문제라면 신발, 손에서 패들이 돌아간다면 그립, 공이 밀리거나 뜬다면 패들 무게와 스윙 밸런스, 땀 때문에 집중이 떨어진다면 의류와 밴드류를 먼저 봅니다. 이렇게 원인과 장비를 연결하면 불필요한 구매를 줄이고 실제 경기 개선에 가까워집니다.' : 'Use gear decisions to solve a real on-court problem. If you slip, start with shoes. If the paddle twists in your hand, check grip size and overgrips. If shots float or feel unstable, review weight and balance. If sweat breaks concentration, apparel and bands may matter more than a new paddle. Connecting the issue to the gear keeps the page useful rather than promotional.')}</p><p>${esc(loc === 'ko' ? '또한 같은 제품도 실내와 야외, 싱글과 복식, 입문자와 상급자에게 다르게 느껴질 수 있습니다. Picklary는 특정 제품을 무조건 추천하지 않고, 독자가 자신의 코트 환경과 레벨에 맞춰 확인할 수 있는 기준을 제공합니다.' : 'The same product can feel different indoors versus outdoors, in singles versus doubles, and for beginners versus advanced players. Picklary does not treat one item as a universal answer; it gives criteria readers can test against their own court, level, and goals.')}</p></div>${gearRelatedNav(loc, topic)}</div></section>`;
   return layout({ loc, rel: 'gear/' + topic + '/', title: data.title, description: data.intro, bodyHtml: body });
 }
 
@@ -2461,6 +2580,7 @@ function renderBoardsIndex(loc) {
   ${visualFigure(loc, 'boards')}
 </div></section>
 <section class="band band--compact"><div class="wrap"><p class="notice">${esc(communityLabel(loc, 'prelaunchNotice'))}</p></div></section>
+${communityDashboard(loc)}
 <section class="band"><div class="wrap">
   <div class="play-hub-actions">${playHubActions}</div>
   <p class="hub-subintro">${esc(L('스킬 리뷰, 질의응답, 자주 묻는 질문은 Insight 메뉴로 이동하고, 커뮤니티는 실제 매칭 중심으로 정리했습니다.', 'Skill Review, Q&A, and FAQ have moved to Insights, while Play Hub is now focused on real-world matching.', 'Skill Review, Q&A y FAQ se movieron a Insights; Play Hub ahora se enfoca en conexiones reales.'))}</p>
@@ -2555,7 +2675,7 @@ function communityLabel(loc, key) {
   const labels = {
     ko: {
       boardsIntro: '레벨별 학습 게시판을 넘어, 지역 커뮤니티·코치·대회·파트너·영상 기반 스킬평가를 연결하는 검수형 피클볼 커뮤니티 허브입니다. 한국어 페이지는 한국 지역을 우선하고, 영어 페이지는 글로벌 도시와 ZIP/Postal Code 검색을 기준으로 설계했습니다.',
-      prelaunchNotice: '승인 전 버전에서는 친구찾기·파트너찾기·코치찾기·대회찾기·스킬평가 입력값이 공개 서버에 저장되지 않습니다. 실제 공개 목록은 AdSense 승인 이후 신청폼과 운영자 검수를 거쳐 단계적으로 열 예정입니다.',
+      prelaunchNotice: 'MVP에서는 입력 후 브라우저 미리보기를 바로 확인하고, Netlify Forms 수신 데이터는 운영자 검수 후 공개 목록에 반영하는 구조로 설계했습니다.',
       marketplaceTitle: '지역 기반 커뮤니티 매칭', marketplaceIntro: '친구찾기, 코치찾기, 대회찾기, 파트너찾기는 같은 지역 안의 수요와 공급을 분리해서 보여줍니다. 새로 이사 온 플레이어, 출장·여행 중 방문한 플레이어, 대회 참가자, 대회 개최자, 복식 파트너를 찾는 플레이어가 서로 다른 목적을 명확히 표현할 수 있습니다.',
       learningTitle: '레벨 학습 게시판', learningIntro: '기존 자주 묻는 질문과 질의응답은 레벨별 의사결정과 경기 상황 해설을 담당합니다. 커뮤니티 기능이 커져도 학습 콘텐츠와 검수 기준은 별도로 유지합니다.',
       friendsTitle: '친구찾기·지역 커뮤니티', friendsShort: '친구찾기', friendsIntro: '지역 커뮤니티를 홍보하려는 사람, 새 지역·새 레벨의 파트너를 찾는 사람, 출장·여행 중 방문 플레이를 원하는 사람을 분리해 연결합니다.', friendsMetric: 'City + ZIP + Visit',
@@ -2564,7 +2684,7 @@ function communityLabel(loc, key) {
       tournamentsTitle: '대회찾기·참가자 모집', tournamentsShort: '대회찾기', tournamentsIntro: '대회 참가 희망자와 참가자를 모집하는 대회 개최자를 지역·일정·종목·레벨 기준으로 연결합니다.', tournamentsMetric: 'Events + Players',
       partnersTitle: '복식 파트너 찾기', partnersShort: '파트너찾기', partnersIntro: '남자복식, 여자복식, 혼합복식, 지역 클럽활동, 대회 참가 목적에 맞는 파트너 후보를 자기소개 기반으로 정리합니다.', partnersMetric: 'MD + WD + Mixed',
       reviewPolicy: '친구찾기, 코치찾기, 대회찾기, 파트너찾기, 영상평가는 모두 검수형 커뮤니티로 설계했습니다. 현재 정적 사이트에서는 입력값이 서버에 공개 저장되지 않으며, 실제 공개 운영 시에는 관리자 승인, 신고, 삭제 요청, 스팸 차단, 개인정보 차단, 미성년자 보호 기준이 필요합니다.',
-      filterTitle: '지역·목적 필터', type: '목적', allTypes: '전체 목적', cityZip: 'City 또는 ZIP', level: '레벨', allLevels: '전체 레벨', focus: '관심 스킬', allFocus: '전체 스킬', submit: '신청 내용 저장', localOnly: '현재 정적 MVP에서는 서버에 저장되지 않고 이 브라우저에만 표시됩니다. 공개 목록 반영은 운영자 검수 후 진행하는 구조가 안전합니다.',
+      filterTitle: '지역·목적 필터', type: '목적', allTypes: '전체 목적', cityZip: 'City 또는 ZIP', level: '레벨', allLevels: '전체 레벨', focus: '관심 스킬', allFocus: '전체 스킬', submit: '신청 내용 저장', localOnly: '입력 후 이 브라우저에 미리보기가 표시됩니다. Netlify Forms로 수신된 내용은 운영자 검수 후 공개 목록에 반영하는 구조가 안전합니다.',
       friendsHero: '지역 커뮤니티를 키우는 사람, 새로운 파트너를 찾는 사람, 방문 일정에 맞춰 게임을 찾는 사람을 따로 받습니다.', organizer: '커뮤니티 홍보·멤버 모집', playerSeeking: '플레이 파트너·상위 레벨 그룹 찾기', visitorSeeking: '출장·여행 방문 플레이어', organizerDesc: '정기 오픈플레이, 카카오/밴드/Meetup 그룹, 클럽 모임처럼 지역 참여를 확장하려는 운영자를 위한 카테고리입니다.', playerDesc: '새로 이사 왔거나, 피클볼을 막 시작했거나, 3.0에서 3.5처럼 더 경쟁적인 커뮤니티를 찾는 플레이어를 위한 카테고리입니다.', visitorDesc: '출장이나 여행으로 다른 도시를 방문하면서 일정이 맞는 오픈플레이, 드릴, 친선 게임을 찾는 플레이어를 위한 카테고리입니다.',
       travelTitle: '출장·여행 방문자 매칭', travelBody: '방문 플레이어 기능은 지역 커뮤니티의 활용도를 크게 높입니다. 평소에는 로컬 플레이어를 연결하고, 특정 기간에는 방문 도시·ZIP·가능 시간을 기준으로 단기 오픈플레이 수요를 모을 수 있습니다. 지역 운영자는 새로운 참여자를 얻고, 방문자는 낯선 도시에서도 안전하게 피클볼 네트워크를 찾을 수 있습니다.', visitWindow: '방문 가능 기간·시간', homeCity: '평소 플레이 지역',
       coachesHero: '코치를 찾는 수강생과 그룹 수업을 만들려는 코치를 같은 지역에서 연결합니다.', studentSeeking: '수강생: 특정 스킬을 배울 코치 찾기', coachSeeking: '코치: 지역 수강생 모집하기', studentDesc: '3구 드롭, 리턴 깊이, 딩크 안정성, 복식 포지셔닝처럼 특정 레벨에서 막히는 스킬을 배우고 싶은 수강생을 위한 입력입니다.', coachDesc: '특정 도시·ZIP에서 초보반, 3.0 진입반, 3.5+ 경쟁반 수강생을 모집하고 싶은 코치용 입력입니다.', poolTitle: '지역별 코치·수강생 모집 현황', poolIntro: '같은 지역에 코치와 수강생 카드가 함께 쌓이면 레슨 수요 확인, 클리닉 개설, 그룹반 모집이 쉬워집니다.',
@@ -2578,7 +2698,7 @@ function communityLabel(loc, key) {
     },
     en: {
       boardsIntro: 'A reviewed pickleball community hub for local groups, coaches, tournaments, partners, and external-video skill review. Korean pages prioritize Korea. English pages are designed for global city and ZIP/Postal Code discovery.',
-      prelaunchNotice: 'In this pre-approval version, Find Friends, Partners, Coaches, Tournaments, and Skill Review submissions are not saved to a public server. Public listings should open later through forms and editor review after AdSense approval.',
+      prelaunchNotice: 'In this MVP, users can preview submissions in the browser, while Netlify Forms submissions can be reviewed by an editor before appearing in public listings.',
       marketplaceTitle: 'Local community matching', marketplaceIntro: 'Friends, coaches, tournaments, and partners are organized as two-sided pools: local groups, visiting players, tournament hosts, tournament participants, doubles partners, students, and coaches can state their intent clearly by region.',
       learningTitle: 'Level learning boards', learningIntro: 'The existing FAQ and Q&A boards stay focused on level decisions and match situations while the community tools grow under a separate moderation model.',
       friendsTitle: 'Find Friends & Local Groups', friendsShort: 'Find Friends', friendsIntro: 'Separate community promoters, players looking for a new or stronger group, and visiting players seeking games during work trips or travel.', friendsMetric: 'City + ZIP + Visit',
@@ -2587,7 +2707,7 @@ function communityLabel(loc, key) {
       tournamentsTitle: 'Find Tournaments & Participants', tournamentsShort: 'Find Tournaments', tournamentsIntro: 'Connect tournament hosts recruiting players with players searching by region, date, division, and level.', tournamentsMetric: 'Events + Players',
       partnersTitle: 'Find Doubles Partners', partnersShort: 'Find Partners', partnersIntro: 'Organize men’s doubles, women’s doubles, mixed doubles, club, league, and tournament partner searches around intro profiles and matching goals.', partnersMetric: 'MD + WD + Mixed',
       reviewPolicy: 'Friends, coaches, tournaments, partners, and skill reviews are designed as reviewed community areas. In this static MVP, submissions are not publicly uploaded to a server. A public launch should add approval, reporting, removal requests, spam controls, personal-data safeguards, and youth-safety rules.',
-      filterTitle: 'Region and intent filters', type: 'Intent', allTypes: 'All intents', cityZip: 'City or ZIP', level: 'Level', allLevels: 'All levels', focus: 'Skill focus', allFocus: 'All skills', submit: 'Save request', localOnly: 'In this static MVP, submissions are not uploaded to a server and appear only in this browser. Public directory listings should be editor-reviewed before publication.',
+      filterTitle: 'Region and intent filters', type: 'Intent', allTypes: 'All intents', cityZip: 'City or ZIP', level: 'Level', allLevels: 'All levels', focus: 'Skill focus', allFocus: 'All skills', submit: 'Save request', localOnly: 'After submission, a preview appears in this browser. Netlify Forms entries should be editor-reviewed before becoming public directory listings.',
       friendsHero: 'Separate people growing local communities, players looking for a group, and visiting players trying to find games while traveling.', organizer: 'Promote a community / recruit members', playerSeeking: 'Find partners / find a stronger group', visitorSeeking: 'Visiting player / travel games', organizerDesc: 'For organizers growing open play, chat groups, clubs, ladders, or Meetup-style sessions in a city or ZIP area.', playerDesc: 'For players who moved to a new area, just started pickleball, or leveled up and want a more competitive group.', visitorDesc: 'For players visiting another city for work or travel who want to find open play, drills, or friendly games during a specific window.',
       travelTitle: 'Travel and visiting-player matching', travelBody: 'The visiting-player flow increases the utility of a local directory. Local communities can keep serving regular players while also capturing short-window demand from business trips and travel. Organizers get new participants, and visitors get a safer way to find pickleball connections in an unfamiliar city.', visitWindow: 'Visit window / available time', homeCity: 'Home playing area',
       coachesHero: 'Connect students seeking a specific skill with coaches building a local student pool.', studentSeeking: 'Student: find a coach for a specific skill', coachSeeking: 'Coach: build a local student pool', studentDesc: 'For students stuck on third-shot drops, return depth, dink consistency, resets, transition-zone defense, or doubles positioning.', coachDesc: 'For coaches building beginner, 3.0 bridge, 3.5+ competitive, clinic, or private-lesson demand in a specific city or ZIP area.', poolTitle: 'Local coach and student pools', poolIntro: 'When coach supply and student demand collect in the same region, it becomes easier to validate lesson demand, launch clinics, and form group classes.',
@@ -2608,6 +2728,68 @@ function communityCardText(x, loc, field) {
   const v = x[field];
   if (v && typeof v === 'object') return v[loc] || v.en || v.ko || '';
   return v || '';
+}
+
+function communityBoardGroups(loc) {
+  return [
+    { key:'partners', href: link(loc, 'boards/partners/'), label: communityLabel(loc, 'partnersShort'), intro: communityLabel(loc, 'partnersIntro'), icon: uiIcon('partners'), tone:'partners', items: partnerSeeds() },
+    { key:'friends', href: link(loc, 'boards/friends/'), label: communityLabel(loc, 'friendsShort'), intro: communityLabel(loc, 'friendsIntro'), icon: uiIcon('community'), tone:'community', items: friendSeeds() },
+    { key:'coaches', href: link(loc, 'boards/coaches/'), label: communityLabel(loc, 'coachesShort'), intro: communityLabel(loc, 'coachesIntro'), icon: uiIcon('coach'), tone:'coaches', items: coachSeeds() },
+    { key:'tournaments', href: link(loc, 'boards/tournaments/'), label: communityLabel(loc, 'tournamentsShort'), intro: communityLabel(loc, 'tournamentsIntro'), icon: uiIcon('tournaments'), tone:'tournaments', items: tournamentSeeds() }
+  ];
+}
+function communityAllEntries(loc) {
+  return communityBoardGroups(loc).flatMap((g) => g.items.map((it) => ({ ...it, boardKey:g.key, boardLabel:g.label, boardHref:g.href, boardTone:g.tone })));
+}
+function countBy(arr, fn) {
+  const out = new Map();
+  arr.forEach((x) => { const k = fn(x); if (!k) return; out.set(k, (out.get(k) || 0) + 1); });
+  return Array.from(out.entries()).sort((a,b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0])));
+}
+function communityDashboard(loc) {
+  const L = (ko, en) => (loc === 'ko' ? ko : en);
+  const groups = communityBoardGroups(loc);
+  const entries = communityAllEntries(loc);
+  const regions = countBy(entries, (it) => `${communityCardText(it, loc, 'city')} ${it.zip || ''}`.trim());
+  const levels = countBy(entries, (it) => it.level);
+  const total = entries.length;
+  const topRegion = regions[0] ? regions[0][0] : '—';
+  const topLevel = levels[0] ? levels[0][0] : '—';
+  const recent = entries.slice(0, 5).map((it) => {
+    const title = communityCardText(it, loc, 'title');
+    const city = communityCardText(it, loc, 'city');
+    return `<a class="community-recent" href="${escAttr(it.boardHref)}"><span>${esc(it.boardLabel)}</span><strong>${esc(title)}</strong><small>${esc(city)} · ${esc(it.level)} · ${esc(it.focus)}</small></a>`;
+  }).join('');
+  const tiles = [
+    [L('샘플 공개 카드', 'Sample listings'), total, L('검수형 게시판 구조', 'Reviewed board structure')],
+    [L('목적별 게시판', 'Purpose boards'), groups.length, L('파트너·커뮤니티·코치·대회', 'Partner, community, coach, event')],
+    [L('활성 지역', 'Active regions'), regions.length, topRegion],
+    [L('가장 많은 레벨', 'Top level range'), topLevel, L('필터로 바로 좁히기', 'Filter down by level')]
+  ].map(([k,v,n]) => `<article class="community-dash-tile"><span>${esc(k)}</span><strong>${esc(v)}</strong><small>${esc(n)}</small></article>`).join('');
+  const bars = groups.map((g) => `<a class="community-dash-board community-dash-board--${escAttr(g.tone)}" href="${escAttr(g.href)}"><span class="community-dash-board__icon" aria-hidden="true">${g.icon}</span><span><strong>${esc(g.label)}</strong><small>${esc(g.intro)}</small></span><em>${g.items.length}</em></a>`).join('');
+  return `<section class="band band--alt"><div class="wrap community-dashboard" data-community-dashboard>
+    <div class="section-head"><div><p class="section-eyebrow">${esc(L('Play Hub Dashboard', 'Play Hub Dashboard'))}</p><h2>${esc(L('게시판 현황 한눈에 보기', 'Community board snapshot'))}</h2><p>${esc(L('초기 MVP에서는 샘플 카드와 브라우저 저장 미리보기를 기준으로 현황을 보여주고, 공개 운영 시 Netlify Forms 또는 DB 승인 데이터를 연결합니다.', 'The MVP shows sample cards and browser-saved previews first. A public launch can connect approved Netlify Forms or database entries later.'))}</p></div><a class="btn btn--ghost" href="${link(loc, 'community-guidelines/')}">${esc(trustLabel(loc, 'community'))}</a></div>
+    <div class="community-dash-grid">${tiles}</div>
+    <div class="community-dash-layout"><div class="community-dash-boards">${bars}</div><div class="community-dash-recent"><h3>${esc(L('최근 샘플 등록글', 'Recent sample listings'))}</h3>${recent}</div></div>
+  </div></section>`;
+}
+function communityMiniDashboard(loc, kind, items) {
+  const L = (ko, en) => (loc === 'ko' ? ko : en);
+  const regions = countBy(items, (it) => `${communityCardText(it, loc, 'city')} ${it.zip || ''}`.trim());
+  const types = countBy(items, (it) => it.type);
+  const levelsHit = countBy(items, (it) => it.level);
+  const typeText = types.slice(0, 2).map(([k,v]) => `${communityLabel(loc, {friends:{organizer:'organizer',player:'playerSeeking',visitor:'visitorSeeking'},coaches:{coach:'coachSeeking',student:'studentSeeking'},tournaments:{host:'tournamentHost',participant:'tournamentParticipant'},partners:{seeking:'partnerSeeking',candidate:'partnerOffering'}}[kind]?.[k] || k)} ${v}`).join(' · ');
+  const rows = [
+    [L('등록 카드', 'Listings'), String(items.length), L('샘플 + 내 브라우저 미리보기', 'Samples + browser preview')],
+    [L('지역 수', 'Regions'), String(regions.length), regions[0] ? regions[0][0] : '—'],
+    [L('목적 분포', 'Intent mix'), typeText || '—', L('필터로 구분', 'Filterable')],
+    [L('레벨 분포', 'Level mix'), levelsHit[0] ? levelsHit[0][0] : '—', L('레벨별 검색 가능', 'Level-search ready')]
+  ];
+  return `<div class="community-mini-dashboard">${rows.map(([a,b,c]) => `<article><span>${esc(a)}</span><strong>${esc(b)}</strong><small>${esc(c)}</small></article>`).join('')}</div>`;
+}
+function communityBoardSubnav(loc, active) {
+  const boards = communityBoardGroups(loc);
+  return `<nav class="community-board-tabs" aria-label="${escAttr(boardLabel(loc, 'title'))}">${boards.map((g) => `<a class="${g.key === active ? 'is-active' : ''}" href="${escAttr(g.href)}">${esc(g.label)}</a>`).join('')}</nav>`;
 }
 
 function friendSeeds() {
@@ -2706,7 +2888,9 @@ function communityForm(loc, kind, typeKey) {
       </div>
       <span class="community-entry-card__toggle">${esc(toggleLabel)}</span>
     </summary>
-    <form class="community-submit community-entry-card__form" data-community-submit data-kind="${escAttr(kind)}" data-type="${escAttr(typeKey)}">
+    <form name="picklary-${escAttr(kind)}-${escAttr(typeKey)}" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="community-submit community-entry-card__form" data-community-submit data-kind="${escAttr(kind)}" data-type="${escAttr(typeKey)}">
+      <input type="hidden" name="form-name" value="picklary-${escAttr(kind)}-${escAttr(typeKey)}">
+      <p class="netlify-honeypot"><label>Do not fill this out <input name="bot-field"></label></p>
       <label>${esc(communityLabel(loc, 'name'))}<input name="name" required placeholder="${escAttr(loc === 'ko' ? '예: Shawn / 강남3.0모임' : 'Example: Shawn / Suwanee 3.0 Group')}"></label>
       <label>${esc(communityLabel(loc, 'country'))}<input name="country" value="${escAttr(defaultCountry)}" required></label>
       <label>${esc(communityLabel(loc, 'city'))}<input name="city" required placeholder="${escAttr(loc === 'ko' ? '서울 강남 / Suwanee, GA' : 'Suwanee, GA / Seoul')}"></label>
@@ -2719,6 +2903,7 @@ function communityForm(loc, kind, typeKey) {
       <label>${esc(communityLabel(loc, 'note'))}<textarea name="note" rows="4" required></textarea></label>
       <label>${esc(communityLabel(loc, 'contact'))}<input name="contact" placeholder="${escAttr(loc === 'ko' ? '공개하지 않을 이메일/카카오/연락 메모' : 'Private email, phone, or contact note')}"></label>
       <button class="btn btn--primary" type="submit">${esc(communityLabel(loc, 'savePreview'))}</button>
+      <p class="community-submit-status" data-community-submit-status hidden></p>
       <p class="notice">${esc(communityLabel(loc, 'localOnly'))}</p>
     </form>
   </details>`;
@@ -2747,6 +2932,7 @@ function renderFriendsBoard(loc) {
   <div><p class="page-head__eyebrow">${esc(communityLabel(loc, 'friendsShort'))}</p><h1>${esc(communityLabel(loc, 'friendsTitle'))}</h1><p class="page-head__intro">${esc(communityLabel(loc, 'friendsHero'))}</p></div>
   ${visualFigure(loc, 'boards')}
 </div></section>
+<section class="band band--compact"><div class="wrap">${communityBoardSubnav(loc, 'friends')}${communityMiniDashboard(loc, 'friends', seeds)}</div></section>
 <section class="band"><div class="wrap narrow prose"><h2>${esc(communityLabel(loc, 'whySplitTitle'))}</h2><p>${esc(communityLabel(loc, 'whySplitBody'))}</p><h2>${esc(communityLabel(loc, 'travelTitle'))}</h2><p>${esc(communityLabel(loc, 'travelBody'))}</p></div></section>
 <section class="band band--alt"><div class="wrap cards cards--two">
   ${communityForm(loc, 'friends', 'organizer')}
@@ -2771,6 +2957,7 @@ function renderCoachesBoard(loc) {
   <div><p class="page-head__eyebrow">${esc(communityLabel(loc, 'coachesShort'))}</p><h1>${esc(communityLabel(loc, 'coachesTitle'))}</h1><p class="page-head__intro">${esc(communityLabel(loc, 'coachesHero'))}</p></div>
   ${visualFigure(loc, 'boards')}
 </div></section>
+<section class="band band--compact"><div class="wrap">${communityBoardSubnav(loc, 'coaches')}${communityMiniDashboard(loc, 'coaches', seeds)}</div></section>
 <section class="band"><div class="wrap narrow prose"><h2>${esc(communityLabel(loc, 'poolTitle'))}</h2><p>${esc(communityLabel(loc, 'poolIntro'))}</p><p>${esc(communityLabel(loc, 'whySplitBody'))}</p></div></section>
 <section class="band"><div class="wrap community-directory" data-community-directory data-no-match="${escAttr(communityLabel(loc, 'noMatch'))}">
   <div class="section-head"><div><h2>${esc(communityLabel(loc, 'directory'))}</h2><p>${esc(communityLabel(loc, 'coachesIntro'))}</p></div></div>
@@ -2798,6 +2985,7 @@ function renderTournamentsBoard(loc) {
   <div><p class="page-head__eyebrow">${esc(communityLabel(loc, 'tournamentsShort'))}</p><h1>${esc(communityLabel(loc, 'tournamentsTitle'))}</h1><p class="page-head__intro">${esc(communityLabel(loc, 'tournamentsHero'))}</p></div>
   ${visualFigure(loc, 'boards')}
 </div></section>
+<section class="band band--compact"><div class="wrap">${communityBoardSubnav(loc, 'tournaments')}${communityMiniDashboard(loc, 'tournaments', seeds)}</div></section>
 <section class="band"><div class="wrap narrow prose"><h2>${esc(communityLabel(loc, 'tournamentWhyTitle'))}</h2><p>${esc(communityLabel(loc, 'tournamentWhyBody'))}</p><p class="notice">${esc(communityLabel(loc, 'tournamentDisclaimer'))}</p></div></section>
 <section class="band"><div class="wrap community-directory" data-community-directory data-no-match="${escAttr(communityLabel(loc, 'noMatch'))}">
   <div class="section-head"><div><h2>${esc(communityLabel(loc, 'directory'))}</h2><p>${esc(communityLabel(loc, 'tournamentsIntro'))}</p></div></div>
@@ -2824,6 +3012,7 @@ function renderPartnersBoard(loc) {
   <div><p class="page-head__eyebrow">${esc(communityLabel(loc, 'partnersShort'))}</p><h1>${esc(communityLabel(loc, 'partnersTitle'))}</h1><p class="page-head__intro">${esc(communityLabel(loc, 'partnersHero'))}</p></div>
   ${visualFigure(loc, 'boards')}
 </div></section>
+<section class="band band--compact"><div class="wrap">${communityBoardSubnav(loc, 'partners')}${communityMiniDashboard(loc, 'partners', seeds)}</div></section>
 <section class="band"><div class="wrap narrow prose"><h2>${esc(communityLabel(loc, 'partnerWhyTitle'))}</h2><p>${esc(communityLabel(loc, 'partnerWhyBody'))}</p><p>${esc(communityLabel(loc, 'reviewPolicy'))}</p></div></section>
 <section class="band"><div class="wrap community-directory" data-community-directory data-no-match="${escAttr(communityLabel(loc, 'noMatch'))}">
   <div class="section-head"><div><h2>${esc(communityLabel(loc, 'directory'))}</h2><p>${esc(communityLabel(loc, 'partnersIntro'))}</p></div></div>
@@ -2858,23 +3047,66 @@ function skillCriteria(loc) {
 
 function renderSkillReviewBoard(loc) {
   const criteria = skillCriteria(loc);
+  const L = (ko, en) => (loc === 'ko' ? ko : en);
   const criteriaInputs = criteria.map((c) => `<label class="criterion-input"><span>${esc(c.label)} <small>w ${esc(c.weight)}</small></span><input name="crit_${escAttr(c.id)}" data-criterion-input data-weight="${escAttr(c.weight)}" type="number" min="2" max="5.5" step="0.1" value="3.0"></label>`).join('');
+  const sampleRequests = [
+    { tag: L('샘플', 'Sample'), status: L('리뷰 대기', 'Awaiting review'), title: L('3.0 전환구역 백핸드 리셋', '3.0 transition-zone backhand reset'), level: '3.0', city: L('Suwanee / 30024', 'Suwanee / 30024'), focus: L('백핸드 리셋 · 발 멈춤 · 팝업 방지', 'Backhand reset · split step · pop-up control'), note: L('상대가 발밑으로 빠르게 밀어 넣을 때 공이 자주 뜨는 장면을 평가받고 싶습니다.', 'I want feedback on why my reset pops up when opponents attack my feet.'), reviews: 0 },
+    { tag: L('샘플', 'Sample'), status: L('검토 중', 'In review'), title: L('2.5 서브 리턴 깊이와 전진 타이밍', '2.5 return depth and move-in timing'), level: '2.5', city: L('서울 강남', 'Gangnam, Seoul'), focus: L('리턴 깊이 · 키친 진입 · 첫 4구 안정성', 'Return depth · kitchen entry · first-four-shot consistency'), note: L('리턴 후 앞으로 올라가는 타이밍이 늦는지 확인하고 싶습니다.', 'I want to know whether I move forward too late after the return.'), reviews: 2 },
+    { tag: L('샘플', 'Sample'), status: L('리뷰 완료', 'Reviewed'), title: L('3.5 혼복 스피드업 판단', '3.5 mixed doubles speed-up decision'), level: '3.5', city: 'Atlanta / 30328', focus: L('스피드업 선택 · 몸쪽 공격 · 카운터 대비', 'Speed-up choice · body attack · counter readiness'), note: L('공격 가능한 공과 기다려야 하는 공을 구분하고 싶습니다.', 'I want help separating attackable balls from balls I should keep neutral.'), reviews: 5 }
+  ];
+  const sampleCards = sampleRequests.map((r) => `
+    <article class="skill-request-card">
+      <div class="skill-request-card__top"><span class="pill">${esc(r.tag)}</span><span class="skill-request-status">${esc(r.status)}</span></div>
+      <h3>${esc(r.title)}</h3>
+      <div class="skill-request-card__meta"><span>${esc(r.level)}</span><span>${esc(r.city)}</span><span>${esc(r.reviews)} ${esc(L('평가', 'reviews'))}</span></div>
+      <p class="skill-request-card__focus">${esc(r.focus)}</p>
+      <p>${esc(r.note)}</p>
+    </article>`).join('');
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: boardLabel(loc, 'title'), rel: 'boards/' }, { name: communityLabel(loc, 'skillShort') }])}
 <section class="page-head page-head--visual"><div class="wrap two-col two-col--wide">
   <div><p class="page-head__eyebrow">${esc(communityLabel(loc, 'skillShort'))}</p><h1>${esc(communityLabel(loc, 'skillTitle'))}</h1><p class="page-head__intro">${esc(communityLabel(loc, 'skillIntro'))}</p></div>
   ${visualFigure(loc, 'dupr')}
 </div></section>
 <section class="band"><div class="wrap narrow prose"><h2>${esc(loc === 'ko' ? '외부 영상 URL 방식' : 'External-video workflow')}</h2><p>${esc(loc === 'ko' ? '사이트에 영상을 직접 업로드하지 않고 YouTube, Instagram, TikTok, Facebook Reels 등 외부 영상 URL만 공유하도록 설계했습니다. 이렇게 하면 서버 용량, 저작권, 개인정보, 삭제 요청 관리 부담을 줄이면서도 Picklary 안에서는 평가 기준, 평균, 신뢰도, 훈련 추천을 콘텐츠화할 수 있습니다.' : 'Instead of uploading video files to Picklary, players share a YouTube, Instagram, TikTok, Facebook Reels, or similar external URL. This lowers storage, copyright, privacy, and takedown risk while Picklary adds value through criteria, estimates, confidence, and training recommendations.')}</p><p class="notice">${esc(communityLabel(loc, 'officialDisclaimer'))}</p></div></section>
-<section class="band band--alt"><div class="wrap two-col two-col--wide skill-review-demo" data-skill-review-demo>
-  <form class="upload-card" data-video-request-form>
-    <h2>${esc(loc === 'ko' ? '평가 요청 등록' : 'Submit a review request')}</h2>
-    <label>${esc(communityLabel(loc, 'videoUrl'))}<input name="url" type="url" required placeholder="https://youtube.com/..."></label>
-    <label>${esc(communityLabel(loc, 'selfLevel'))}<select name="level">${levels.map((l) => `<option value="${escAttr(l.id)}">${esc(l.id)}</option>`).join('')}</select></label>
-    <label>${esc(communityLabel(loc, 'requestFocus'))}<input name="focus" required placeholder="dink, reset, third-shot, positioning"></label>
-    <label>${esc(communityLabel(loc, 'note'))}<textarea name="note" rows="4" required></textarea></label>
-    <button class="btn btn--primary" type="submit">${esc(communityLabel(loc, 'savePreview'))}</button>
-    <p class="notice">${esc(communityLabel(loc, 'localOnly'))}</p>
-  </form>
+<section class="band band--alt"><div class="wrap skill-review-demo" data-skill-review-demo>
+  <div class="skill-board-head">
+    <div>
+      <p class="section-eyebrow">${esc(L('게시판', 'Board'))}</p>
+      <h2>${esc(L('리뷰 요청 리스트', 'Review request board'))}</h2>
+      <p>${esc(L('먼저 현재 올라온 요청을 확인하고, 내 영상을 평가받고 싶을 때만 Review Request 버튼으로 입력 폼을 여세요.', 'Browse current requests first, then open the Review Request form only when you want to submit your own video.'))}</p>
+    </div>
+    <button type="button" class="btn btn--primary" data-open-skill-request>${esc(L('Review Request 열기', 'Open Review Request'))}</button>
+  </div>
+  <div class="skill-board-stats" aria-label="${escAttr(L('스킬 리뷰 현황', 'Skill review stats'))}">
+    <div><strong>3</strong><span>${esc(L('샘플 요청', 'sample requests'))}</span></div>
+    <div><strong>7</strong><span>${esc(L('기준별 평가', 'criteria reviews'))}</span></div>
+    <div><strong>3.0</strong><span>${esc(L('최다 레벨', 'most common level'))}</span></div>
+    <div><strong>${esc(L('리셋', 'Reset'))}</strong><span>${esc(L('인기 주제', 'top focus'))}</span></div>
+  </div>
+  <div class="skill-request-list" data-skill-request-list>${sampleCards}<div data-skill-local-list></div></div>
+  <div class="skill-request-panel" data-skill-request-panel hidden>
+    <form class="upload-card skill-request-form" name="picklary-skill-review" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-video-request-form>
+      <input type="hidden" name="form-name" value="picklary-skill-review">
+      <p class="hidden"><label>Do not fill this out <input name="bot-field"></label></p>
+      <div class="skill-form-head"><h2>${esc(loc === 'ko' ? '평가 요청 등록' : 'Submit a review request')}</h2><button type="button" class="btn btn--ghost" data-close-skill-request>${esc(L('닫기', 'Close'))}</button></div>
+      <label>${esc(communityLabel(loc, 'videoUrl'))}<input name="url" type="url" required placeholder="https://youtube.com/..."></label>
+      <div class="form-grid form-grid--two">
+        <label>${esc(communityLabel(loc, 'selfLevel'))}<select name="level">${levels.map((l) => `<option value="${escAttr(l.id)}">${esc(l.id)}</option>`).join('')}</select></label>
+        <label>${esc(communityLabel(loc, 'requestFocus'))}<input name="focus" required placeholder="dink, reset, third-shot, positioning"></label>
+      </div>
+      <div class="form-grid form-grid--two">
+        <label>${esc(communityLabel(loc, 'city'))}<input name="city" placeholder="Suwanee / Seoul / Atlanta"></label>
+        <label>${esc(communityLabel(loc, 'contact'))}<input name="contact" placeholder="${escAttr(L('공개되지 않는 연락 메모', 'Private contact note'))}"></label>
+      </div>
+      <label>${esc(communityLabel(loc, 'note'))}<textarea name="note" rows="4" required placeholder="${escAttr(L('어떤 장면을 평가받고 싶은지 적어 주세요.', 'Describe what you want reviewers to look at.'))}"></textarea></label>
+      <label class="checkbox-line"><input name="consent" type="checkbox" required> <span>${esc(L('영상 공유 권한과 개인정보 노출 여부를 확인했습니다.', 'I confirm I have permission to share the video and checked personal information exposure.'))}</span></label>
+      <button class="btn btn--primary" type="submit">${esc(communityLabel(loc, 'savePreview'))}</button>
+      <p class="notice" data-skill-request-status hidden></p>
+      <p class="notice">${esc(communityLabel(loc, 'localOnly'))}</p>
+    </form>
+  </div>
+</div></section>
+<section class="band"><div class="wrap two-col two-col--wide skill-review-analysis" data-skill-review-analysis>
   <div>
     <div class="result-card skill-estimate" data-skill-estimate>
       <p class="result-card__eyebrow">${esc(communityLabel(loc, 'communityEstimate'))}</p>
@@ -2882,18 +3114,18 @@ function renderSkillReviewBoard(loc) {
       <p class="result-card__desc" data-estimate-meta>${esc(loc === 'ko' ? '기준별 평가를 추가하면 가중 평균, 평가자 신뢰도, 교차검증 신호가 표시됩니다.' : 'Add criteria reviews to show weighted average, reviewer trust, and cross-check signals.')}</p>
       <p class="notice">${esc(communityLabel(loc, 'officialDisclaimer'))}</p>
     </div>
-    <form class="upload-card" data-review-form>
-      <h2>${esc(loc === 'ko' ? '커뮤니티 기준별 평가 추가' : 'Add a criteria-based review')}</h2>
-      <p class="notice">${esc(communityLabel(loc, 'criteriaIntro'))}</p>
-      <label>${esc(communityLabel(loc, 'reviewerType'))}<select name="reviewer"><option value="general">General player</option><option value="email">Email-checked player</option><option value="dupr">DUPR public-profile reviewer</option><option value="coach">Coach / editor reviewed</option></select></label>
-      <fieldset class="criteria-grid"><legend>${esc(communityLabel(loc, 'criterionScores'))}</legend>${criteriaInputs}</fieldset>
-      <p class="notice" data-criteria-preview>${esc(communityLabel(loc, 'computedFromCriteria'))}: 3.00</p>
-      <label>${esc(communityLabel(loc, 'reviewOpinion'))}<textarea name="note" rows="3" placeholder="Why this estimate?"></textarea></label>
-      <label>${esc(communityLabel(loc, 'evidenceNote'))}<input name="evidence" placeholder="Example: 0:42 return short, 1:10 reset miss"></label>
-      <button class="btn btn--primary" type="submit">${esc(communityLabel(loc, 'addReview'))}</button>
-    </form>
     <div class="qna-board" data-review-list></div>
   </div>
+  <form class="upload-card" data-review-form>
+    <h2>${esc(loc === 'ko' ? '커뮤니티 기준별 평가 추가' : 'Add a criteria-based review')}</h2>
+    <p class="notice">${esc(communityLabel(loc, 'criteriaIntro'))}</p>
+    <label>${esc(communityLabel(loc, 'reviewerType'))}<select name="reviewer"><option value="general">General player</option><option value="email">Email-checked player</option><option value="dupr">DUPR public-profile reviewer</option><option value="coach">Coach / editor reviewed</option></select></label>
+    <fieldset class="criteria-grid"><legend>${esc(communityLabel(loc, 'criterionScores'))}</legend>${criteriaInputs}</fieldset>
+    <p class="notice" data-criteria-preview>${esc(communityLabel(loc, 'computedFromCriteria'))}: 3.00</p>
+    <label>${esc(communityLabel(loc, 'reviewOpinion'))}<textarea name="note" rows="3" placeholder="Why this estimate?"></textarea></label>
+    <label>${esc(communityLabel(loc, 'evidenceNote'))}<input name="evidence" placeholder="Example: 0:42 return short, 1:10 reset miss"></label>
+    <button class="btn btn--primary" type="submit">${esc(communityLabel(loc, 'addReview'))}</button>
+  </form>
 </div></section>
 <section class="band"><div class="wrap narrow prose"><h2>${esc(communityLabel(loc, 'criteriaTitle'))}</h2><p>${esc(communityLabel(loc, 'criteriaIntro'))}</p><h2>${esc(communityLabel(loc, 'crosscheckTitle'))}</h2><p>${esc(communityLabel(loc, 'crosscheckDesc'))}</p></div></section>`;
   return layout({ loc, rel: 'boards/skill-review/', title: communityLabel(loc, 'skillTitle'), description: communityLabel(loc, 'skillIntro'), bodyHtml: body, noAds: true });
@@ -4261,7 +4493,7 @@ function buildSitemapXml() {
   players.forEach((pl) => add('players/' + pl.slug + '/', 'monthly', '0.65'));
   add('dupr-self-check/', 'weekly', '0.8');
   add('gear/', 'weekly', '0.9');
-  ['shoes','apparel','accessories'].forEach((type) => add('gear/' + type + '/', 'monthly', '0.68'));
+  ['balls','shoes','apparel','accessories'].forEach((type) => add('gear/' + type + '/', 'monthly', '0.70'));
   add('paddles/', 'weekly', '0.86');
   add('tools/paddle-finder/', 'weekly', '0.75');
   add('players/', 'weekly', '0.8');
@@ -4311,7 +4543,7 @@ function build() {
     levels.forEach((l) => writePage(loc, 'level/' + l.slug, renderLevelPage(l, loc)));
     writePage(loc, 'dupr-self-check', renderDuprCheck(loc));
     writePage(loc, 'gear', renderGearIndex(loc));
-    ['shoes','apparel','accessories'].forEach((type) => writePage(loc, 'gear/' + type, renderGearTopicPage(loc, type)));
+    ['balls','shoes','apparel','accessories'].forEach((type) => writePage(loc, 'gear/' + type, renderGearTopicPage(loc, type)));
     writePage(loc, 'paddles', renderPaddlesIndex(loc));
     writePage(loc, 'paddles/updates', renderPaddleUpdatesPage(loc));
     paddles.forEach((p) => writePage(loc, 'paddles/' + p.slug, renderPaddlePage(p, loc)));

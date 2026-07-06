@@ -1,2 +1,1 @@
-# Set adsense.clientId in data/site.config.js to auto-generate this line, e.g.:
-# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+google.com, pub-3524565373895748, DIRECT, f08c47fec0942fa0

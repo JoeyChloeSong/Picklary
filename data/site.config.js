@@ -61,7 +61,7 @@
     // No ads appear until Google approves the site; after approval you add ad units
     // yourself (see README). Never invent or guess an ID.
     adsense: {
-      clientId: '' // e.g. 'ca-pub-0000000000000000'
+      clientId: 'ca-pub-3524565373895748' // e.g. 'ca-pub-0000000000000000'
     },
 
     // --- Internationalisation -------------------------------------------------

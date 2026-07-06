@@ -4291,6 +4291,10 @@ function renderRootLanding() {
   const altTags = locales.map((l) =>
     `<link rel="alternate" hreflang="${l}" href="${config.url}/${l}/">`
   ).join('\n  ');
+  const rootAdsenseId = ((config.adsense && config.adsense.clientId) || '').trim();
+  const rootAdsenseTags = rootAdsenseId
+    ? `<meta name="google-adsense-account" content="${escAttr(rootAdsenseId)}">\n  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${encodeURIComponent(rootAdsenseId)}" crossorigin="anonymous"></script>`
+    : '';
   const sections = [
     { en:'Levels & DUPR pathway', ko:'레벨 & DUPR 로드맵', href:'level/', be:'Find your level from 2.0 to 5.0 and the skills that move you up.', bk:'2.0~5.0 레벨과 다음 단계로 올라가는 데 필요한 기술을 확인하세요.' },
     { en:'DUPR self-check', ko:'DUPR 자가진단', href:'dupr-self-check/', be:'Answer ten on-court situations and get a level estimate.', bk:'코트 위 10가지 상황에 답하고 레벨을 추정해 보세요.' },
@@ -4324,6 +4328,7 @@ function renderRootLanding() {
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="${config.url}/assets/icons/og-default.png">
+  ${rootAdsenseTags}
   <style>
     :root{--teal:#1E6F5C;--ink:#16332b;--cream:#f7faf8;--line:#e2ebe6}
     *{box-sizing:border-box}

@@ -1,0 +1,3 @@
+Picklary Clip Lite v0.5.12
+공개 경로: /clip-lite/
+핵심 수정: 웹 우측 단계 패널 고정 / Windows 제목 표시줄 화면 이탈 방지

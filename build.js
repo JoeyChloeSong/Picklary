@@ -13,6 +13,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const DIST = path.join(ROOT, 'dist');
+const CLIP_LITE_SOURCE = path.join(ROOT, 'clip-lite');
 
 const config = require('./data/site.config.js');
 const categories = require('./data/categories.js');
@@ -288,7 +289,7 @@ function footer(loc) {
     ['disclaimer/', tt(loc, 'footer.disclaimer')],
     ['contact/', tt(loc, 'footer.contact')],
     ['sitemap/', tt(loc, 'footer.sitemap')],
-  ].map(([r, label]) => `<a href="${link(loc, r)}">${esc(label)}</a>`).join('');
+  ].map(([r, label]) => `<a href="${link(loc, r)}">${esc(label)}</a>`).join('') + `<a href="/clip-lite/">${esc(loc === 'ko' ? '무료 영상 자르기' : loc === 'es' ? 'Recortar video gratis' : 'Free video cutter')}</a>`;
   const year = new Date().getFullYear();
   return `<footer class="site-foot">
   <div class="wrap site-foot__inner">
@@ -1314,6 +1315,56 @@ function toolsFeature(loc) {
 }
 
 
+function clipLiteFeature(loc) {
+  const copy = loc === 'ko'
+    ? {
+        eyebrow: 'NEW · 무료 웹 도구',
+        title: '원하는 장면만 찍고, 바로 잘라내세요',
+        body: '설치도 업로드도 필요 없습니다. 영상 아래에서 시작과 끝을 지정한 뒤 하나의 영상, 개별 클립, 또는 둘 다로 저장하세요.',
+        primary: '무료 영상 자르기',
+        secondary: '브라우저 안에서만 처리',
+        points: ['피클볼 외 모든 영상 지원', '여러 구간을 한 영상으로 연결', '개별 클립 ZIP 저장']
+      }
+    : loc === 'es'
+      ? {
+          eyebrow: 'NUEVO · HERRAMIENTA GRATIS',
+          title: 'Marca el inicio y el final. Recorta en segundos.',
+          body: 'Sin instalación ni subida al servidor. Elige tus segmentos y guárdalos como un solo video, clips separados o ambos.',
+          primary: 'Abrir Clip Lite',
+          secondary: 'Procesamiento en tu navegador',
+          points: ['Funciona con cualquier video', 'Une varios segmentos', 'Descarga clips por separado']
+        }
+      : {
+          eyebrow: 'NEW · FREE WEB TOOL',
+          title: 'Mark the moments. Cut the video.',
+          body: 'No install and no server upload. Set IN and OUT points, then export one combined video, separate clips, or both.',
+          primary: 'Open Clip Lite',
+          secondary: 'Processed in your browser',
+          points: ['Works with any video', 'Combine multiple segments', 'Download separate clips']
+        };
+  const icon = '<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="12" width="48" height="34" rx="8" stroke="currentColor" stroke-width="3"/><path d="M26 23.5 41 29l-15 5.5v-11Z" fill="currentColor"/><path d="M18 53h28" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="18" cy="53" r="4" fill="currentColor"/><circle cx="46" cy="53" r="4" fill="currentColor"/></svg>';
+  return `<section class="clip-lite-promo" aria-labelledby="clip-lite-title-${loc}">
+    <div class="wrap clip-lite-promo__inner">
+      <div class="clip-lite-promo__copy">
+        <p class="clip-lite-promo__eyebrow">${esc(copy.eyebrow)}</p>
+        <h2 id="clip-lite-title-${loc}">${esc(copy.title)}</h2>
+        <p class="clip-lite-promo__body">${esc(copy.body)}</p>
+        <div class="clip-lite-promo__points">${copy.points.map((item) => `<span>${esc(item)}</span>`).join('')}</div>
+        <div class="clip-lite-promo__actions">
+          <a class="btn clip-lite-promo__button" href="/clip-lite/">${esc(copy.primary)} <span aria-hidden="true">→</span></a>
+          <span class="clip-lite-promo__privacy">${esc(copy.secondary)}</span>
+        </div>
+      </div>
+      <a class="clip-lite-promo__visual" href="/clip-lite/" aria-label="${escAttr(copy.primary)}">
+        <span class="clip-lite-promo__icon" aria-hidden="true">${icon}</span>
+        <span class="clip-lite-promo__timeline"><i></i><b></b><i></i></span>
+        <strong>IN</strong><em>00:18</em><strong>OUT</strong><em>00:42</em>
+      </a>
+    </div>
+  </section>`;
+}
+
+
 function growthLoopSection(loc) {
   const L = (ko, en) => (loc === 'ko' ? ko : en);
   const items = [
@@ -1421,6 +1472,7 @@ function renderHome(loc) {
 </section>
 
 ${toolsFeature(loc)}
+${clipLiteFeature(loc)}
 ${growthLoopSection(loc)}
 
 <section class="band band--alt">
@@ -4485,6 +4537,7 @@ function buildSitemapXml() {
   const urls = [];
   // Root global landing page (indexable, language-neutral)
   urls.push(`  <url>\n    <loc>${config.url}/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>`);
+  urls.push(`  <url>\n    <loc>${config.url}/clip-lite/</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.85</priority>\n  </url>`);
   const add = (rel, changefreq, priority) => {
     const alts = locales.map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${config.url}${link(l, rel)}"/>`).join('\n');
     for (const loc of locales) {
@@ -4598,6 +4651,19 @@ function build() {
   // Public assets only. The source package still contains /admin and /data for editing,
   // but the AdSense-ready public build does not expose demo/admin JSON endpoints.
   copyDir(path.join(ROOT, 'assets'), path.join(DIST, 'assets'));
+
+  // Picklary Clip Lite is maintained as a self-contained browser editor.
+  // Build output must include it because Netlify publishes only ./dist.
+  const requiredClipFiles = [
+    path.join(CLIP_LITE_SOURCE, 'index.html'),
+    path.join(CLIP_LITE_SOURCE, 'ffmpeg', 'ffmpeg-core.js'),
+    path.join(CLIP_LITE_SOURCE, 'ffmpeg', 'ffmpeg-core.wasm')
+  ];
+  const missingClipFiles = requiredClipFiles.filter((file) => !fs.existsSync(file));
+  if (missingClipFiles.length) {
+    throw new Error('Clip Lite build files are missing: ' + missingClipFiles.join(', '));
+  }
+  copyDir(CLIP_LITE_SOURCE, path.join(DIST, 'clip-lite'));
 
   // root files
   writeFile('404.html', render404());

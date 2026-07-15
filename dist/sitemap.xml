@@ -6,6 +6,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://picklary.com/clip-lite/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://picklary.com/ko/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/"/>

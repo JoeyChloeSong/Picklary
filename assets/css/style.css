@@ -5008,3 +5008,56 @@ main, section, article, aside, header, footer, nav, .wrap, .narrow,
   .form-grid--two { grid-template-columns: 1fr; }
   .skill-review-analysis { grid-template-columns: 1fr !important; }
 }
+
+
+/* Picklary Clip Lite homepage feature */
+.clip-lite-promo {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2.4rem, 5vw, 4.5rem) 0;
+  background:
+    radial-gradient(70% 130% at 88% 8%, rgba(67, 226, 191, .24), transparent 62%),
+    radial-gradient(55% 100% at 8% 100%, rgba(61, 132, 255, .22), transparent 64%),
+    linear-gradient(135deg, #071326 0%, #0b1c32 52%, #0a2630 100%);
+  color: #f5fbff;
+}
+.clip-lite-promo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,.9), transparent 88%);
+}
+.clip-lite-promo__inner { position: relative; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(300px, .75fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+.clip-lite-promo__eyebrow { margin: 0 0 .8rem; color: #6ff0cf; font-family: var(--font-mono); font-size: .78rem; font-weight: 800; letter-spacing: .15em; }
+.clip-lite-promo h2 { margin: 0; max-width: 15ch; color: #fff; font-size: clamp(2rem, 4.3vw, 4.2rem); line-height: 1.03; letter-spacing: -.055em; }
+.clip-lite-promo__body { max-width: 63ch; margin: 1.2rem 0 0; color: #c8d8e8; font-size: clamp(1rem, 1.3vw, 1.14rem); line-height: 1.75; }
+.clip-lite-promo__points { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1.25rem; }
+.clip-lite-promo__points span { padding: .48rem .75rem; border: 1px solid rgba(153, 246, 221, .22); border-radius: 999px; background: rgba(255,255,255,.055); color: #e4f8f3; font-size: .84rem; font-weight: 650; }
+.clip-lite-promo__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 1.5rem; }
+.clip-lite-promo__button { border: 0 !important; background: linear-gradient(135deg, #6ff0cf, #75b9ff) !important; color: #071526 !important; box-shadow: 0 14px 36px rgba(32, 207, 166, .22); }
+.clip-lite-promo__button:hover { transform: translateY(-2px); box-shadow: 0 18px 44px rgba(32, 207, 166, .3); }
+.clip-lite-promo__privacy { color: #9fb3c8; font-size: .86rem; }
+.clip-lite-promo__visual { display: grid; grid-template-columns: auto 1fr auto 1fr; gap: .55rem .7rem; align-items: center; padding: 1.45rem; border: 1px solid rgba(146, 244, 218, .22); border-radius: 28px; background: linear-gradient(160deg, rgba(255,255,255,.12), rgba(255,255,255,.035)); box-shadow: 0 28px 70px rgba(0,0,0,.28); color: #fff; text-decoration: none; backdrop-filter: blur(14px); }
+.clip-lite-promo__icon { grid-column: 1 / -1; display: grid; place-items: center; width: 76px; height: 76px; margin: 0 auto 1.2rem; border-radius: 22px; background: linear-gradient(135deg, #6ff0cf, #67a9ff); color: #071526; box-shadow: 0 18px 48px rgba(75, 210, 181, .24); }
+.clip-lite-promo__icon svg { width: 48px; height: 48px; }
+.clip-lite-promo__timeline { grid-column: 1 / -1; position: relative; height: 14px; margin: .25rem 0 1.15rem; border-radius: 999px; background: rgba(255,255,255,.12); }
+.clip-lite-promo__timeline::before { content: ''; position: absolute; left: 17%; right: 24%; top: 3px; bottom: 3px; border-radius: inherit; background: linear-gradient(90deg, #6ff0cf, #75b9ff); }
+.clip-lite-promo__timeline i, .clip-lite-promo__timeline b { position: absolute; top: 50%; width: 18px; height: 18px; border: 3px solid #071526; border-radius: 50%; background: #fff; transform: translate(-50%, -50%); }
+.clip-lite-promo__timeline i:first-child { left: 17%; }
+.clip-lite-promo__timeline b { left: 76%; }
+.clip-lite-promo__timeline i:last-child { display: none; }
+.clip-lite-promo__visual strong { color: #6ff0cf; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .12em; }
+.clip-lite-promo__visual em { padding: .52rem .7rem; border-radius: 10px; background: rgba(255,255,255,.08); color: #fff; font-family: var(--font-mono); font-size: .9rem; font-style: normal; text-align: center; }
+@media (max-width: 860px) {
+  .clip-lite-promo__inner { grid-template-columns: 1fr; }
+  .clip-lite-promo h2 { max-width: 18ch; }
+  .clip-lite-promo__visual { max-width: 520px; }
+}
+@media (max-width: 560px) {
+  .clip-lite-promo { padding: 2.5rem 0; }
+  .clip-lite-promo__visual { padding: 1.1rem; border-radius: 22px; }
+  .clip-lite-promo__actions { align-items: flex-start; flex-direction: column; }
+}

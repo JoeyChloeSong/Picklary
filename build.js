@@ -219,19 +219,22 @@ function brandMark(stem, hole) {
 
 function header(loc, rel) {
   const cur = rel || '';
+  const clipLiteHref = loc === 'ko' ? '/clip-lite/' : '/clip-lite/en/';
   const groupedNav = [
     { href: '', label: tt(loc, 'nav.home'), home: true },
     { href: 'level/', label: tt(loc, 'nav.levelUp'), match: ['level/', 'dupr-self-check/', 'what-is-dupr/', 'category/rules-and-getting-started/', 'category/skills-and-drills/'] },
     { href: 'gear/', label: tt(loc, 'nav.gearLab'), match: ['gear/', 'paddles/', 'tools/paddle-finder/', 'category/paddles-and-gear/'] },
     { href: 'pro-scene/', label: tt(loc, 'nav.proScene'), match: ['pro-scene/', 'players/', 'tournaments/', 'updates/players/', 'updates/rules/', 'highlights/', 'category/players-and-global-scene/', 'category/tournaments-and-leagues/'] },
     { href: 'boards/', label: tt(loc, 'nav.playHub'), match: ['boards/'] },
+    { absolute: clipLiteHref, label: 'Clip Lite', match: [] },
     { href: 'categories/', label: tt(loc, 'nav.insights'), match: ['categories/', 'columns/', 'the-brief/', 'blogs/'] },
   ];
   const navItems = groupedNav.map((item) => {
-    let active = item.home ? cur === '' : item.match.some((m) => cur === m || cur.indexOf(m) === 0);
+    let active = item.home ? cur === '' : (item.match || []).some((m) => cur === m || cur.indexOf(m) === 0);
     if (cur === 'pro-scene/rules/' && item.href === 'pro-scene/') active = false;
     if (cur === 'pro-scene/rules/' && item.href === 'categories/') active = true;
-    return `<a href="${link(loc, item.href)}"${active ? ' class="is-active" aria-current="page"' : ''}>${esc(item.label)}</a>`;
+    const href = item.absolute || link(loc, item.href);
+    return `<a href="${href}"${active ? ' class="is-active" aria-current="page"' : ''}>${esc(item.label)}</a>`;
   }).join('');
   return `<a class="skip-link" href="#main">${esc(tt(loc, 'site.skip'))}</a>
 <header class="masthead">
@@ -289,7 +292,7 @@ function footer(loc) {
     ['disclaimer/', tt(loc, 'footer.disclaimer')],
     ['contact/', tt(loc, 'footer.contact')],
     ['sitemap/', tt(loc, 'footer.sitemap')],
-  ].map(([r, label]) => `<a href="${link(loc, r)}">${esc(label)}</a>`).join('') + `<a href="/clip-lite/">${esc(loc === 'ko' ? '무료 영상 자르기' : loc === 'es' ? 'Recortar video gratis' : 'Free video cutter')}</a>`;
+  ].map(([r, label]) => `<a href="${link(loc, r)}">${esc(label)}</a>`).join('') + `<a href="${loc === 'ko' ? '/clip-lite/' : '/clip-lite/en/'}">${esc(loc === 'ko' ? '무료 영상 자르기' : 'Free video cutter')}</a>`;
   const year = new Date().getFullYear();
   return `<footer class="site-foot">
   <div class="wrap site-foot__inner">
@@ -1351,11 +1354,11 @@ function clipLiteFeature(loc) {
         <p class="clip-lite-promo__body">${esc(copy.body)}</p>
         <div class="clip-lite-promo__points">${copy.points.map((item) => `<span>${esc(item)}</span>`).join('')}</div>
         <div class="clip-lite-promo__actions">
-          <a class="btn clip-lite-promo__button" href="/clip-lite/">${esc(copy.primary)} <span aria-hidden="true">→</span></a>
+          <a class="btn clip-lite-promo__button" href="${loc === 'ko' ? '/clip-lite/' : '/clip-lite/en/'}">${esc(copy.primary)} <span aria-hidden="true">→</span></a>
           <span class="clip-lite-promo__privacy">${esc(copy.secondary)}</span>
         </div>
       </div>
-      <a class="clip-lite-promo__visual" href="/clip-lite/" aria-label="${escAttr(copy.primary)}">
+      <a class="clip-lite-promo__visual" href="${loc === 'ko' ? '/clip-lite/' : '/clip-lite/en/'}" aria-label="${escAttr(copy.primary)}">
         <span class="clip-lite-promo__icon" aria-hidden="true">${icon}</span>
         <span class="clip-lite-promo__timeline"><i></i><b></b><i></i></span>
         <strong>IN</strong><em>00:18</em><strong>OUT</strong><em>00:42</em>
@@ -1453,7 +1456,7 @@ function renderHome(loc) {
       <div class="hero__cta">
         <a class="btn btn--beginner" href="${link(loc, 'pickleball-complete-beginner-guide/')}">${esc(loc === 'ko' ? '초보 가이드 보기' : 'Beginner Guide')}</a>
         <a class="btn btn--primary" href="${link(loc, 'level/')}">${esc(tt(loc, 'hero.ctaPrimary'))}</a>
-        <a class="btn btn--ghost" href="${link(loc, 'gear/')}">${esc(tt(loc, 'hero.ctaSecondary'))}</a>
+        <a class="btn btn--ghost btn--clip-lite" href="${loc === 'ko' ? '/clip-lite/' : '/clip-lite/en/'}">${esc(loc === 'ko' ? 'Clip Lite 열기' : 'Open Clip Lite')}</a>
         <a class="btn btn--ghost" href="${link(loc, 'boards/')}">${esc(tt(loc, 'hero.ctaTertiary'))}</a>
       </div>
     </div>
@@ -4537,7 +4540,8 @@ function buildSitemapXml() {
   const urls = [];
   // Root global landing page (indexable, language-neutral)
   urls.push(`  <url>\n    <loc>${config.url}/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>`);
-  urls.push(`  <url>\n    <loc>${config.url}/clip-lite/</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.85</priority>\n  </url>`);
+  urls.push(`  <url>\n    <loc>${config.url}/clip-lite/</loc>\n    <xhtml:link rel="alternate" hreflang="ko" href="${config.url}/clip-lite/"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${config.url}/clip-lite/en/"/>\n    <changefreq>monthly</changefreq>\n    <priority>0.85</priority>\n  </url>`);
+  urls.push(`  <url>\n    <loc>${config.url}/clip-lite/en/</loc>\n    <xhtml:link rel="alternate" hreflang="ko" href="${config.url}/clip-lite/"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${config.url}/clip-lite/en/"/>\n    <changefreq>monthly</changefreq>\n    <priority>0.85</priority>\n  </url>`);
   const add = (rel, changefreq, priority) => {
     const alts = locales.map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${config.url}${link(l, rel)}"/>`).join('\n');
     for (const loc of locales) {

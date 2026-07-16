@@ -391,7 +391,7 @@ function layout(opts) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css?v=skill-review-board-mvp-20260703">
+  <link rel="stylesheet" href="/assets/css/style.css?v=picklary-0.5.12.5-20260716">
   ${jsonldTags}
   ${adsenseTags}
 </head>
@@ -1457,7 +1457,7 @@ function renderHome(loc) {
         <a class="btn btn--beginner" href="${link(loc, 'pickleball-complete-beginner-guide/')}">${esc(loc === 'ko' ? '초보 가이드 보기' : 'Beginner Guide')}</a>
         <a class="btn btn--primary" href="${link(loc, 'level/')}">${esc(tt(loc, 'hero.ctaPrimary'))}</a>
         <a class="btn btn--ghost btn--clip-lite" href="${loc === 'ko' ? '/clip-lite/' : '/clip-lite/en/'}">${esc(loc === 'ko' ? 'Clip Lite 열기→' : 'Open Clip Lite→')}</a>
-        <a class="btn btn--people" href="${link(loc, 'boards/')}">${esc(tt(loc, 'hero.ctaTertiary'))}<span aria-hidden="true"> →</span></a>
+        <a class="btn btn--people" href="${link(loc, 'boards/friends/')}">${esc(tt(loc, 'hero.ctaTertiary'))}<span aria-hidden="true"> →</span></a>
       </div>
     </div>
     ${heroLevels(loc)}
@@ -1749,7 +1749,7 @@ function renderLevelPage(level, loc) {
     <h2>${esc(tt(loc, 'level.skills'))}</h2>${pills(localArray(level, loc, 'skills'))}
     <h2>${esc(tt(loc, 'level.drills'))}</h2><ul>${localArray(level, loc, 'drills').map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
     <h2>${esc(tt(loc, 'level.paddle'))}</h2><p>${esc(loc1(level, loc, 'paddleProfile'))}</p>
-    <div class="level-actions"><a class="btn btn--dupr" href="${link(loc, 'dupr-self-check/')}">${esc(loc === 'ko' ? 'DUPR 자가진단 →' : 'DUPR self-check →')}</a><a class="btn btn--ghost" href="${link(loc, 'boards/')}">${esc(tt(loc, 'hero.ctaTertiary'))}</a>${next ? `<a class="btn btn--ghost" href="${levelUrl(loc, next)}">${esc(tt(loc, 'level.next'))}: ${esc(next.id)}</a>` : ''}</div>
+    <div class="level-actions"><a class="btn btn--dupr" href="${link(loc, 'dupr-self-check/')}">${esc(loc === 'ko' ? 'DUPR 자가진단 →' : 'DUPR self-check →')}</a><a class="btn btn--ghost" href="${link(loc, 'boards/friends/')}">${esc(tt(loc, 'hero.ctaTertiary'))}</a>${next ? `<a class="btn btn--ghost" href="${levelUrl(loc, next)}">${esc(tt(loc, 'level.next'))}: ${esc(next.id)}</a>` : ''}</div>
     ${duprTeaser(loc)}
   </div>
   ${levelVisual(loc, level)}

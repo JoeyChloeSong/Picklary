@@ -5057,24 +5057,43 @@ main, section, article, aside, header, footer, nav, .wrap, .narrow,
   outline-offset:2px;
 }
 
-.btn--people{
-  border:0 !important;
+.hero__cta .btn.btn--people{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:.28rem !important;
+  min-height:52px !important;
+  border:1.5px solid rgba(188,106,52,.28) !important;
   border-radius:999px !important;
-  padding:.92rem 1.7rem !important;
-  background:linear-gradient(95deg,#ffe07a 0%,#ffbd6f 48%,#ff9e91 100%) !important;
-  color:#203029 !important;
+  padding:.88rem 1.65rem !important;
+  background:linear-gradient(100deg,#ffe06d 0%,#ffbd61 48%,#ff9395 100%) !important;
+  color:#173f36 !important;
   font-weight:800 !important;
-  box-shadow:0 12px 28px rgba(220,132,70,.20) !important;
+  line-height:1.1 !important;
+  text-decoration:none !important;
+  white-space:nowrap !important;
+  box-shadow:0 14px 28px -14px rgba(192,94,50,.72),0 5px 14px rgba(255,151,115,.18) !important;
 }
-.btn--people:hover{
-  color:#15241f !important;
-  transform:translateY(-1px);
-  filter:saturate(1.03) brightness(1.01);
-  box-shadow:0 16px 34px rgba(220,132,70,.28) !important;
+.hero__cta .btn.btn--people span{
+  color:inherit !important;
+  font-size:1.08em !important;
+  transform:translateX(1px);
 }
-.btn--people:focus-visible{
-  outline:3px solid rgba(255,181,106,.40);
-  outline-offset:2px;
+.hero__cta .btn.btn--people:hover{
+  color:#102f29 !important;
+  background:linear-gradient(100deg,#ffe681 0%,#ffc66f 48%,#ff9fa0 100%) !important;
+  transform:translateY(-2px) !important;
+  box-shadow:0 18px 34px -15px rgba(192,94,50,.78),0 8px 18px rgba(255,151,115,.22) !important;
+}
+.hero__cta .btn.btn--people:focus-visible{
+  outline:3px solid rgba(255,160,103,.42) !important;
+  outline-offset:3px !important;
+}
+@media (max-width:760px){
+  .hero__cta .btn.btn--people{
+    width:100% !important;
+    white-space:normal !important;
+  }
 }
 .clip-lite-promo__button { border: 0 !important; background: linear-gradient(135deg, #6ff0cf, #75b9ff) !important; color: #071526 !important; box-shadow: 0 14px 36px rgba(32, 207, 166, .22); }
 .clip-lite-promo__button:hover { transform: translateY(-2px); box-shadow: 0 18px 44px rgba(32, 207, 166, .3); }

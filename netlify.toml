@@ -30,6 +30,13 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "SAMEORIGIN"
 
+
+# CSS uses a stable filename, so it must revalidate after each deployment.
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
 # Long-cache static assets (they have stable paths); HTML stays fresh by default.
 [[headers]]
   for = "/assets/*"

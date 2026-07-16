@@ -16,6 +16,12 @@
   # Pin a modern LTS Node. The build is plain Node (no packages), so this is just for stability.
   NODE_VERSION = "20"
 
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+  force = true
+
 # Security / good-practice headers for every page.
 [[headers]]
   for = "/*"

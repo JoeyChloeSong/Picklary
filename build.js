@@ -1456,8 +1456,8 @@ function renderHome(loc) {
       <div class="hero__cta">
         <a class="btn btn--beginner" href="${link(loc, 'pickleball-complete-beginner-guide/')}">${esc(loc === 'ko' ? '초보 가이드 보기' : 'Beginner Guide')}</a>
         <a class="btn btn--primary" href="${link(loc, 'level/')}">${esc(tt(loc, 'hero.ctaPrimary'))}</a>
-        <a class="btn btn--ghost btn--clip-lite" href="${loc === 'ko' ? '/clip-lite/' : '/clip-lite/en/'}">${esc(loc === 'ko' ? 'Clip Lite 열기' : 'Open Clip Lite')}</a>
-        <a class="btn btn--ghost" href="${link(loc, 'boards/')}">${esc(tt(loc, 'hero.ctaTertiary'))}</a>
+        <a class="btn btn--ghost btn--clip-lite" href="${loc === 'ko' ? '/clip-lite/' : '/clip-lite/en/'}">${esc(loc === 'ko' ? 'Clip Lite 열기→' : 'Open Clip Lite→')}</a>
+        <a class="btn btn--people" href="${link(loc, 'boards/')}">${esc(tt(loc, 'hero.ctaTertiary'))}<span aria-hidden="true"> →</span></a>
       </div>
     </div>
     ${heroLevels(loc)}
@@ -4339,89 +4339,36 @@ function render410() {
 
 
 function renderRootLanding() {
-  const labels = { ko: '한국어', en: 'English', es: 'Español' };
-  const langButtons = locales.map((l) =>
-    `<a class="lang-btn" href="/${l}/">${esc(labels[l] || (config.languageNames && config.languageNames[l]) || l)}</a>`
-  ).join('');
-  const altTags = locales.map((l) =>
-    `<link rel="alternate" hreflang="${l}" href="${config.url}/${l}/">`
-  ).join('\n  ');
-  const rootAdsenseId = ((config.adsense && config.adsense.clientId) || '').trim();
-  const rootAdsenseTags = rootAdsenseId
-    ? `<meta name="google-adsense-account" content="${escAttr(rootAdsenseId)}">\n  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${encodeURIComponent(rootAdsenseId)}" crossorigin="anonymous"></script>`
-    : '';
-  const sections = [
-    { en:'Levels & DUPR pathway', ko:'레벨 & DUPR 로드맵', href:'level/', be:'Find your level from 2.0 to 5.0 and the skills that move you up.', bk:'2.0~5.0 레벨과 다음 단계로 올라가는 데 필요한 기술을 확인하세요.' },
-    { en:'DUPR self-check', ko:'DUPR 자가진단', href:'dupr-self-check/', be:'Answer ten on-court situations and get a level estimate.', bk:'코트 위 10가지 상황에 답하고 레벨을 추정해 보세요.' },
-    { en:'Paddles', ko:'패들', href:'paddles/', be:'Compare paddle types, materials, and what suits your game.', bk:'패들 종류와 소재, 내게 맞는 선택을 비교하세요.' },
-    { en:'Pro players', ko:'프로 선수', href:'players/', be:'Study the styles and patterns of top players.', bk:'정상급 선수들의 스타일과 패턴을 살펴보세요.' },
-    { en:'Pro Tour', ko:'프로투어', href:'tournaments/', be:'See current pro-tour events, results, and the wider scene.', bk:'프로투어 일정, 결과, 최신 흐름을 확인하세요.' },
-    { en:'Guides', ko:'가이드', href:'categories/', be:'Rules, skills, gear, and getting started, all explained.', bk:'규칙·기술·장비·입문까지 차근차근 설명합니다.' }
-  ];
-  const cards = sections.map((s) =>
-    `<a class="card" href="/${DEFAULT}/${s.href}"><span class="card__title">${esc(s.en)}</span><span class="card__title-ko">${esc(s.ko)}</span><span class="card__blurb">${esc(s.be)}</span><span class="card__blurb">${esc(s.bk)}</span></a>`
-  ).join('');
-  const desc = 'Picklary is a bilingual pickleball learning hub: DUPR levels and a self-check, paddle comparisons, pro players, pro-tour coverage, and step-by-step guides.';
+  const desc = 'Picklary default route — redirecting to the English main page.';
   return `<!doctype html>
-<html lang="${DEFAULT}">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${esc(config.siteName)} — Pickleball levels, DUPR, paddles, players & pro tour</title>
+  <title>${esc(config.siteName)} — Redirecting to English</title>
   <meta name="description" content="${esc(desc)}">
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="${config.url}/">
-  ${altTags}
-  <link rel="alternate" hreflang="x-default" href="${config.url}/${DEFAULT}/">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="${esc(config.siteName)}">
-  <meta property="og:title" content="${esc(config.siteName)} — Pickleball levels, DUPR, paddles, players & pro tour">
-  <meta property="og:description" content="${esc(desc)}">
-  <meta property="og:url" content="${config.url}/">
-  <meta property="og:image" content="${config.url}/assets/icons/og-default.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="${config.url}/assets/icons/og-default.png">
-  ${rootAdsenseTags}
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="${config.url}/en/">
+  <link rel="alternate" hreflang="en" href="${config.url}/en/">
+  <link rel="alternate" hreflang="ko" href="${config.url}/ko/">
+  <link rel="alternate" hreflang="x-default" href="${config.url}/en/">
+  <meta http-equiv="refresh" content="0; url=/en/">
+  <script>window.location.replace('/en/');</script>
   <style>
-    :root{--teal:#1E6F5C;--ink:#16332b;--cream:#f7faf8;--line:#e2ebe6}
-    *{box-sizing:border-box}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0;background:var(--cream);color:var(--ink);line-height:1.6}
-    .wrap{max-width:960px;margin:0 auto;padding:0 20px}
-    header.top{padding:28px 0 8px}
-    .brand{font-weight:800;font-size:1.5rem;letter-spacing:-.02em;color:var(--teal)}
-    .hero{padding:24px 0 8px}
-    .hero h1{font-size:1.85rem;line-height:1.25;margin:.2em 0 .45em}
-    .hero p{margin:.35em 0;color:#33473f}
-    .langs{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 8px}
-    .lang-btn{display:inline-block;padding:12px 22px;border-radius:999px;background:var(--teal);color:#fff;font-weight:700;text-decoration:none}
-    .lang-btn+.lang-btn{background:#fff;color:var(--teal);border:2px solid var(--teal)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:28px 0 48px}
-    .card{display:flex;flex-direction:column;gap:4px;padding:20px;border:1px solid var(--line);border-radius:18px;background:#fff;text-decoration:none;color:inherit;transition:box-shadow .15s,transform .15s}
-    .card:hover{box-shadow:0 12px 30px rgba(0,0,0,.07);transform:translateY(-2px)}
-    .card__title{font-weight:800;color:var(--teal)}
-    .card__title-ko{font-weight:700;font-size:.92rem;color:#2c5e51}
-    .card__blurb{font-size:.9rem;color:#4a5b54}
-    footer.foot{padding:20px 0 40px;color:#6b776f;font-size:.85rem}
-    footer.foot a{color:var(--teal)}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0;min-height:100vh;display:grid;place-items:center;background:#f4f7f6;color:#16201c}
+    .card{max-width:560px;margin:24px;padding:24px 28px;border:1px solid #dbe5df;border-radius:20px;background:#fff;box-shadow:0 18px 40px rgba(16,40,32,.08)}
+    h1{margin:0 0 10px;font-size:1.55rem;color:#1E6F5C}
+    p{margin:.55rem 0;line-height:1.65}
+    a{color:#1E6F5C;font-weight:700}
   </style>
 </head>
 <body>
-  <header class="top"><div class="wrap"><span class="brand">${esc(config.siteName)}</span></div></header>
-  <main>
-    <section class="hero"><div class="wrap">
-      <h1>Pickleball levels, DUPR, paddles, players &amp; tournaments — in one place</h1>
-      <p>Picklary is a bilingual pickleball learning hub. Find your level, take the DUPR self-check, compare paddles, study pro players, and follow the pro tour and the wider scene.</p>
-      <p>Picklary는 피클볼 학습 허브입니다. 내 레벨 찾기, DUPR 자가진단, 패들 비교, 프로 선수 분석, 프로투어 정보까지 한곳에서 만나보세요.</p>
-      <div class="langs">${langButtons}</div>
-    </div></section>
-    <section><div class="wrap">
-      <div class="grid">${cards}</div>
-      <section class="root-more"><h2>How Picklary is organized / Picklary 구성 방식</h2><p>Picklary combines structured guides, original diagrams, interactive tools, and curated source links so that visitors can learn without depending on copied feeds or unreviewed user posts. The English and Korean sections point to the same core learning paths while keeping each language easy to browse.</p><p>Picklary는 단순 링크 모음이 아니라 레벨, 패들, 선수, 프로투어, 커뮤니티 학습을 연결하는 피클볼 학습 허브입니다. 방문자는 자신의 레벨을 먼저 확인하고, 필요한 스킬 가이드와 패들 비교, 프로 선수 분석으로 이동할 수 있습니다.</p><p>Current facts such as rankings, event schedules, product availability, and equipment approval can change. Picklary therefore adds plain-language explanation while linking readers to official sources for final verification.</p><p>The site also keeps advertising and interactive demo areas separate from editorial content. User-generated board posts and highlight submissions are not automatically published in this static version, which reduces moderation, privacy, and copyright risk before a full public community launch.</p><p>For new visitors, the recommended path is simple: choose a language, open the level pathway, try the DUPR self-check, then continue to skills, paddles, players, and pro-tour pages based on the result.</p></section>
-    </div></section>
+  <main class="card">
+    <h1>Redirecting to Picklary English</h1>
+    <p>You are being redirected to the English main page.</p>
+    <p>영문 메인 페이지로 자동 이동합니다. 한국어 페이지는 <a href="/ko/">/ko/</a> 에서 바로 이용하실 수 있습니다.</p>
+    <p>If nothing happens, <a href="/en/">open the English home page</a>.</p>
   </main>
-  <footer class="foot"><div class="wrap">© ${new Date().getFullYear()} ${esc(config.siteName)} · <a href="/${DEFAULT}/about/">About</a> · <a href="/${DEFAULT}/privacy/">Privacy</a> · <a href="/sitemap.xml">Sitemap</a></div></footer>
 </body>
 </html>`;
 }

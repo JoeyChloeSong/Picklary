@@ -3,7 +3,7 @@ var e=Object.create,t=Object.defineProperty,n=Object.getOwnPropertyDescriptor,r=
   <div class="ambient ambient-one"></div>
   <div class="ambient ambient-two"></div>
   <header class="site-header">
-    <a class="brand" href="https://picklary.com" aria-label="Picklary 홈으로">
+    <a class="brand" href="/ko/" aria-label="Picklary 홈으로">
       <span class="brand-mark">${C.logo}</span>
       <span class="brand-copy"><b>Picklary</b><small>Clip Lite · Web</small></span>
     </a>

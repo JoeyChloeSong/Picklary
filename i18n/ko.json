@@ -12,7 +12,7 @@
     "menu": "메뉴",
     "levelPathway": "레벨업",
     "paddles": "패들/장비",
-    "players": "선수·투어",
+    "players": "투어 보드",
     "highlights": "하이라이트 배틀",
     "dupr": "DUPR란?",
     "rulesSkills": "규칙 & 스킬",
@@ -20,9 +20,10 @@
     "blogs": "다른 블로그",
     "levelUp": "레벨업",
     "gearLab": "패들/장비",
-    "proScene": "선수·투어",
+    "proScene": "투어 보드",
     "playHub": "커뮤니티",
-    "insights": "가이드"
+    "insights": "가이드",
+    "clipLite": "클립 라이트"
   },
   "lang": {
     "label": "언어",
@@ -31,7 +32,7 @@
   "hero": {
     "kicker": "피클볼 성장 지도",
     "title": "피클볼을 배우고, 장비를 고르고, 함께 칠 사람을 찾는 Picklary.",
-    "lead": "레벨 가이드, DUPR 자가진단, 패들/장비 선택 기준, 프로 무대, 지역 기반 커뮤니티 기능을 한곳에 모은 피클볼 허브입니다.",
+    "lead": "레벨 가이드, DUPR 자가진단, 패들/장비 선택 기준, 투어 결과와 선수 스토리, 지역 기반 커뮤니티 기능을 한곳에 모은 피클볼 허브입니다.",
     "ctaPrimary": "내 레벨 고르기",
     "ctaSecondary": "패들/장비 살펴보기",
     "ctaTertiary": "함께할 사람 찾기"
@@ -174,7 +175,7 @@
     "selfCheck": "자가진단",
     "dupr": "DUPR",
     "gearLab": "패들/장비",
-    "proScene": "선수·투어",
+    "proScene": "투어 보드",
     "insights": "가이드"
   },
   "level": {

@@ -6,11 +6,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://picklary.com/clip-lite/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://picklary.com/ko/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/"/>
@@ -943,16 +938,16 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/pro-scene/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/pro-scene/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/pro-scene/"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.86</priority>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://picklary.com/en/pro-scene/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/pro-scene/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/pro-scene/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/pro-scene/"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.86</priority>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://picklary.com/ko/pro-scene/players/</loc>
@@ -987,6 +982,22 @@
     <priority>0.74</priority>
   </url>
   <url>
+    <loc>https://picklary.com/ko/pro-scene/storylines/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/pro-scene/storylines/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/pro-scene/storylines/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/pro-scene/storylines/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/pro-scene/storylines/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/pro-scene/storylines/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/pro-scene/storylines/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/pro-scene/storylines/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+  <url>
     <loc>https://picklary.com/ko/pro-scene/rules/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/pro-scene/rules/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/pro-scene/rules/"/>
@@ -1003,6 +1014,22 @@
     <priority>0.74</priority>
   </url>
   <url>
+    <loc>https://picklary.com/clip-lite/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/clip-lite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/clip-lite/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/clip-lite/en/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/clip-lite/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/clip-lite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/clip-lite/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/clip-lite/en/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
     <loc>https://picklary.com/ko/tournaments/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/"/>
@@ -1017,6 +1044,134 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/"/>
     <changefreq>daily</changefreq>
     <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/tournaments/mlp-san-diego-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/mlp-san-diego-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/mlp-san-diego-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/mlp-san-diego-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/tournaments/mlp-san-diego-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/mlp-san-diego-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/mlp-san-diego-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/mlp-san-diego-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/tournaments/ppa-australia-melbourne-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/ppa-australia-melbourne-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/ppa-australia-melbourne-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/ppa-australia-melbourne-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/tournaments/ppa-australia-melbourne-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/ppa-australia-melbourne-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/ppa-australia-melbourne-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/ppa-australia-melbourne-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/tournaments/macon-ppa-challenger-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/macon-ppa-challenger-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/macon-ppa-challenger-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/macon-ppa-challenger-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/tournaments/macon-ppa-challenger-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/macon-ppa-challenger-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/macon-ppa-challenger-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/macon-ppa-challenger-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/tournaments/mlp-chicago-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/mlp-chicago-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/mlp-chicago-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/mlp-chicago-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/tournaments/mlp-chicago-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/mlp-chicago-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/mlp-chicago-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/mlp-chicago-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/tournaments/ppa-asia-singapore-open-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/ppa-asia-singapore-open-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/ppa-asia-singapore-open-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/ppa-asia-singapore-open-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/tournaments/ppa-asia-singapore-open-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/ppa-asia-singapore-open-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/ppa-asia-singapore-open-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/ppa-asia-singapore-open-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/tournaments/mlp-orlando-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/mlp-orlando-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/mlp-orlando-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/mlp-orlando-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/tournaments/mlp-orlando-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/mlp-orlando-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/mlp-orlando-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/mlp-orlando-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/tournaments/ppa-finals-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/ppa-finals-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/ppa-finals-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/ppa-finals-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/tournaments/ppa-finals-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/ppa-finals-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/ppa-finals-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/ppa-finals-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/tournaments/veolia-atlanta-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/veolia-atlanta-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/veolia-atlanta-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/veolia-atlanta-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/tournaments/veolia-atlanta-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/veolia-atlanta-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/veolia-atlanta-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/veolia-atlanta-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
   </url>
   <url>
     <loc>https://picklary.com/ko/tournaments/us/</loc>

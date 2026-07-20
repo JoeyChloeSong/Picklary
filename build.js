@@ -13,7 +13,6 @@ const path = require('path');
 
 const ROOT = __dirname;
 const DIST = path.join(ROOT, 'dist');
-const CLIP_LITE_SOURCE = path.join(ROOT, 'clip-lite');
 
 const config = require('./data/site.config.js');
 const categories = require('./data/categories.js');
@@ -28,6 +27,8 @@ const highlightSeeds = require('./data/highlights.js');
 const boards = require('./data/boards.js');
 let autoUpdates = [];
 try { autoUpdates = require('./data/auto-updates.js'); } catch (e) { autoUpdates = []; }
+let tourBoard = { updated: '', editorialNote: {}, statusEvents: [], posts: [], storylines: [], insights: [], tournaments: [] };
+try { tourBoard = require('./data/tour-board.js'); } catch (e) { /* optional curated tour data */ }
 const BUILD_STAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 let tourResults = [];
 try { tourResults = require('./data/results.js'); } catch (e) { tourResults = []; }
@@ -219,22 +220,21 @@ function brandMark(stem, hole) {
 
 function header(loc, rel) {
   const cur = rel || '';
-  const clipLiteHref = loc === 'ko' ? '/clip-lite/' : '/clip-lite/en/';
   const groupedNav = [
     { href: '', label: tt(loc, 'nav.home'), home: true },
     { href: 'level/', label: tt(loc, 'nav.levelUp'), match: ['level/', 'dupr-self-check/', 'what-is-dupr/', 'category/rules-and-getting-started/', 'category/skills-and-drills/'] },
     { href: 'gear/', label: tt(loc, 'nav.gearLab'), match: ['gear/', 'paddles/', 'tools/paddle-finder/', 'category/paddles-and-gear/'] },
     { href: 'pro-scene/', label: tt(loc, 'nav.proScene'), match: ['pro-scene/', 'players/', 'tournaments/', 'updates/players/', 'updates/rules/', 'highlights/', 'category/players-and-global-scene/', 'category/tournaments-and-leagues/'] },
+    { href: 'clip-lite/', label: tt(loc, 'nav.clipLite'), match: ['clip-lite/'] },
     { href: 'boards/', label: tt(loc, 'nav.playHub'), match: ['boards/'] },
-    { absolute: clipLiteHref, label: 'Clip Lite', match: [] },
     { href: 'categories/', label: tt(loc, 'nav.insights'), match: ['categories/', 'columns/', 'the-brief/', 'blogs/'] },
   ];
   const navItems = groupedNav.map((item) => {
-    let active = item.home ? cur === '' : (item.match || []).some((m) => cur === m || cur.indexOf(m) === 0);
+    let active = item.home ? cur === '' : item.match.some((m) => cur === m || cur.indexOf(m) === 0);
     if (cur === 'pro-scene/rules/' && item.href === 'pro-scene/') active = false;
     if (cur === 'pro-scene/rules/' && item.href === 'categories/') active = true;
-    const href = item.absolute || link(loc, item.href);
-    return `<a href="${href}"${active ? ' class="is-active" aria-current="page"' : ''}>${esc(item.label)}</a>`;
+    const itemHref = item.href === 'clip-lite/' ? (loc === 'ko' ? '/clip-lite/' : '/clip-lite/en/') : link(loc, item.href);
+    return `<a href="${itemHref}"${active ? ' class="is-active" aria-current="page"' : ''}>${esc(item.label)}</a>`;
   }).join('');
   return `<a class="skip-link" href="#main">${esc(tt(loc, 'site.skip'))}</a>
 <header class="masthead">
@@ -251,7 +251,7 @@ function header(loc, rel) {
 }
 
 function sideRail(loc, rel) {
-  const group = (title, items) => items.length ? `<div class="side-rail__group"><span class="side-rail__group-title">${esc(title)}</span>${items.map(([r, label]) => `<a href="${link(loc, r)}">${esc(label)}</a>`).join('')}</div>` : '';
+  const group = (title, items) => items.length ? `<div class="side-rail__group"><span class="side-rail__group-title">${esc(title)}</span>${items.map(([r, label]) => `<a href="${String(r).startsWith('/') ? r : link(loc, r)}">${esc(label)}</a>`).join('')}</div>` : '';
   const lvlLinks = levels.map((l) => `<a href="${link(loc, 'level/' + l.slug + '/')}">${esc(l.id)}</a>`).join('');
   const activeTheme = themeForRel(rel);
   const start = [
@@ -267,6 +267,7 @@ function sideRail(loc, rel) {
   const explore = [
     ['gear/', tt(loc, 'side.gearLab'), 'gear'],
     ['pro-scene/', tt(loc, 'side.proScene'), 'players'],
+    [loc === 'ko' ? '/clip-lite/' : '/clip-lite/en/', tt(loc, 'nav.clipLite'), 'clip'],
     ['categories/', tt(loc, 'side.insights'), 'guides'],
   ].filter(([, , theme]) => theme !== activeTheme).map(([r, label]) => [r, label]);
   return `<nav class="side-rail" aria-label="${escAttr(tt(loc, 'side.label'))}">
@@ -292,7 +293,7 @@ function footer(loc) {
     ['disclaimer/', tt(loc, 'footer.disclaimer')],
     ['contact/', tt(loc, 'footer.contact')],
     ['sitemap/', tt(loc, 'footer.sitemap')],
-  ].map(([r, label]) => `<a href="${link(loc, r)}">${esc(label)}</a>`).join('') + `<a href="${loc === 'ko' ? '/clip-lite/' : '/clip-lite/en/'}">${esc(loc === 'ko' ? '무료 영상 자르기' : 'Free video cutter')}</a>`;
+  ].map(([r, label]) => `<a href="${link(loc, r)}">${esc(label)}</a>`).join('');
   const year = new Date().getFullYear();
   return `<footer class="site-foot">
   <div class="wrap site-foot__inner">
@@ -331,6 +332,7 @@ function themeForRel(rel) {
   if (seg === 'level' || rel.indexOf('what-is-dupr') === 0 || rel.indexOf('dupr-self-check') === 0) return 'levels';
   if (seg === 'gear' || seg === 'paddles' || rel.indexOf('tools/paddle-finder') === 0) return 'gear';
   if (seg === 'players' || seg === 'pro-scene') return 'players';
+  if (seg === 'clip-lite') return 'clip';
   if (seg === 'tournaments') return 'compete';
   if (seg === 'highlights') return 'highlights';
   if (seg === 'categories' || seg === 'columns' || rel.indexOf('the-brief') === 0 || seg === 'updates' || seg === 'boards' || seg === 'sitemap') return 'guides';
@@ -391,7 +393,7 @@ function layout(opts) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css?v=picklary-0.5.12.5-20260716">
+  <link rel="stylesheet" href="/assets/css/style.css?v=skill-review-board-mvp-20260703">
   ${jsonldTags}
   ${adsenseTags}
 </head>
@@ -1318,56 +1320,6 @@ function toolsFeature(loc) {
 }
 
 
-function clipLiteFeature(loc) {
-  const copy = loc === 'ko'
-    ? {
-        eyebrow: 'NEW · 무료 웹 도구',
-        title: '원하는 장면만 찍고, 바로 잘라내세요',
-        body: '설치도 업로드도 필요 없습니다. 영상 아래에서 시작과 끝을 지정한 뒤 하나의 영상, 개별 클립, 또는 둘 다로 저장하세요.',
-        primary: '무료 영상 자르기',
-        secondary: '브라우저 안에서만 처리',
-        points: ['피클볼 외 모든 영상 지원', '여러 구간을 한 영상으로 연결', '개별 클립 ZIP 저장']
-      }
-    : loc === 'es'
-      ? {
-          eyebrow: 'NUEVO · HERRAMIENTA GRATIS',
-          title: 'Marca el inicio y el final. Recorta en segundos.',
-          body: 'Sin instalación ni subida al servidor. Elige tus segmentos y guárdalos como un solo video, clips separados o ambos.',
-          primary: 'Abrir Clip Lite',
-          secondary: 'Procesamiento en tu navegador',
-          points: ['Funciona con cualquier video', 'Une varios segmentos', 'Descarga clips por separado']
-        }
-      : {
-          eyebrow: 'NEW · FREE WEB TOOL',
-          title: 'Mark the moments. Cut the video.',
-          body: 'No install and no server upload. Set IN and OUT points, then export one combined video, separate clips, or both.',
-          primary: 'Open Clip Lite',
-          secondary: 'Processed in your browser',
-          points: ['Works with any video', 'Combine multiple segments', 'Download separate clips']
-        };
-  const icon = '<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="12" width="48" height="34" rx="8" stroke="currentColor" stroke-width="3"/><path d="M26 23.5 41 29l-15 5.5v-11Z" fill="currentColor"/><path d="M18 53h28" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="18" cy="53" r="4" fill="currentColor"/><circle cx="46" cy="53" r="4" fill="currentColor"/></svg>';
-  return `<section class="clip-lite-promo" aria-labelledby="clip-lite-title-${loc}">
-    <div class="wrap clip-lite-promo__inner">
-      <div class="clip-lite-promo__copy">
-        <p class="clip-lite-promo__eyebrow">${esc(copy.eyebrow)}</p>
-        <h2 id="clip-lite-title-${loc}">${esc(copy.title)}</h2>
-        <p class="clip-lite-promo__body">${esc(copy.body)}</p>
-        <div class="clip-lite-promo__points">${copy.points.map((item) => `<span>${esc(item)}</span>`).join('')}</div>
-        <div class="clip-lite-promo__actions">
-          <a class="btn clip-lite-promo__button" href="${loc === 'ko' ? '/clip-lite/' : '/clip-lite/en/'}">${esc(copy.primary)} <span aria-hidden="true">→</span></a>
-          <span class="clip-lite-promo__privacy">${esc(copy.secondary)}</span>
-        </div>
-      </div>
-      <a class="clip-lite-promo__visual" href="${loc === 'ko' ? '/clip-lite/' : '/clip-lite/en/'}" aria-label="${escAttr(copy.primary)}">
-        <span class="clip-lite-promo__icon" aria-hidden="true">${icon}</span>
-        <span class="clip-lite-promo__timeline"><i></i><b></b><i></i></span>
-        <strong>IN</strong><em>00:18</em><strong>OUT</strong><em>00:42</em>
-      </a>
-    </div>
-  </section>`;
-}
-
-
 function growthLoopSection(loc) {
   const L = (ko, en) => (loc === 'ko' ? ko : en);
   const items = [
@@ -1433,11 +1385,13 @@ function renderHome(loc) {
     paddles: '<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="11" y="5" width="19" height="25" rx="9.5" stroke="currentColor" stroke-width="2.4"/><rect x="17.5" y="28" width="6" height="12" rx="3" fill="currentColor"/><circle cx="35" cy="33" r="6.2" stroke="currentColor" stroke-width="2.2"/><circle cx="33" cy="31" r="1" fill="currentColor"/><circle cx="37" cy="31.5" r="1" fill="currentColor"/><circle cx="34.6" cy="35" r="1" fill="currentColor"/></svg>',
     players: '<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="16" r="7.2" stroke="currentColor" stroke-width="2.4"/><path d="M10 41 C10 31 16 26.5 24 26.5 C32 26.5 38 31 38 41" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>',
     highlights: '<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="7" y="11" width="34" height="26" rx="5" stroke="currentColor" stroke-width="2.4"/><path d="M20.5 19 L31.5 24 L20.5 29 Z" fill="currentColor"/></svg>',
+    clip: '<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5.5" y="10" width="37" height="25" rx="4" stroke="currentColor" stroke-width="2.4"/><path d="M19 18 L30 23 L19 28 Z" fill="currentColor"/><path d="M11 40 H37" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="17" cy="40" r="2.5" fill="currentColor"/></svg>',
   };
   const experienceCards = [
     { key: 'court', title: tt(loc, 'nav.rulesSkills'), body: loc === 'ko' ? '규칙, 키친, 서브, 딩크, 3구 드롭, 포지셔닝을 레벨별로 학습합니다.' : 'Learn rules, kitchen play, serve, dinks, third-shot drops, and positioning by level.', href: link(loc, 'category/rules-and-getting-started/') },
     { key: 'paddles', title: tt(loc, 'nav.paddles'), body: loc === 'ko' ? '브랜드별 인기 패들의 타입, 가격대, 특성, 사용 선수/라인, 리뷰 신호를 비교합니다.' : 'Compare popular paddles by brand, style, price band, traits, player line, and review signals.', href: link(loc, 'gear/') },
-    { key: 'players', title: tt(loc, 'nav.players'), body: loc === 'ko' ? '프로 선수, 메이저 결과, PPA·MLP 규정을 한 곳에서 봅니다.' : 'Browse players, major results, and PPA/MLP rules in one place.', href: link(loc, 'pro-scene/') },
+    { key: 'players', title: tt(loc, 'nav.players'), body: loc === 'ko' ? '대회 일정, 경기 결과, 선수 변화와 스토리라인을 한 흐름으로 확인합니다.' : 'Follow schedules, results, player changes, and storylines in one continuous tour view.', href: link(loc, 'pro-scene/') },
+    { key: 'clip', title: tt(loc, 'nav.clipLite'), body: loc === 'ko' ? 'Clip Editor와 DualCam, 사운드 자동 정렬, 4K 내보내기를 사용하는 Windows 영상 도구입니다.' : 'Use the Windows Clip Editor and DualCam tool with audio auto-sync and 4K export.', href: (loc === 'ko' ? '/clip-lite/' : '/clip-lite/en/') },
     { key: 'highlights', title: loc === 'ko' ? '스킬 리뷰' : 'Skill Review', body: loc === 'ko' ? '영상 링크를 기준으로 샷 선택, 포지셔닝, 반복 실수에 대한 피드백을 받습니다.' : 'Share a video link and get feedback on shot choice, positioning, and repeatable mistakes.', href: link(loc, 'boards/skill-review/') },
   ].map((x) => `<a class="experience experience--${x.key}" href="${x.href}">
       <span class="experience__icon experience__icon--${x.key}" aria-hidden="true">${experienceIcons[x.key] || ''}</span>
@@ -1456,8 +1410,8 @@ function renderHome(loc) {
       <div class="hero__cta">
         <a class="btn btn--beginner" href="${link(loc, 'pickleball-complete-beginner-guide/')}">${esc(loc === 'ko' ? '초보 가이드 보기' : 'Beginner Guide')}</a>
         <a class="btn btn--primary" href="${link(loc, 'level/')}">${esc(tt(loc, 'hero.ctaPrimary'))}</a>
-        <a class="btn btn--ghost btn--clip-lite" href="${loc === 'ko' ? '/clip-lite/' : '/clip-lite/en/'}">${esc(loc === 'ko' ? 'Clip Lite 열기→' : 'Open Clip Lite→')}</a>
-        <a class="btn btn--people" href="${link(loc, 'boards/friends/')}">${esc(tt(loc, 'hero.ctaTertiary'))}<span aria-hidden="true"> →</span></a>
+        <a class="btn btn--ghost" href="${link(loc, 'gear/')}">${esc(tt(loc, 'hero.ctaSecondary'))}</a>
+        <a class="btn btn--community" href="${link(loc, 'boards/')}">${esc(tt(loc, 'hero.ctaTertiary'))}</a>
       </div>
     </div>
     ${heroLevels(loc)}
@@ -1475,7 +1429,6 @@ function renderHome(loc) {
 </section>
 
 ${toolsFeature(loc)}
-${clipLiteFeature(loc)}
 ${growthLoopSection(loc)}
 
 <section class="band band--alt">
@@ -1749,7 +1702,7 @@ function renderLevelPage(level, loc) {
     <h2>${esc(tt(loc, 'level.skills'))}</h2>${pills(localArray(level, loc, 'skills'))}
     <h2>${esc(tt(loc, 'level.drills'))}</h2><ul>${localArray(level, loc, 'drills').map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
     <h2>${esc(tt(loc, 'level.paddle'))}</h2><p>${esc(loc1(level, loc, 'paddleProfile'))}</p>
-    <div class="level-actions"><a class="btn btn--dupr" href="${link(loc, 'dupr-self-check/')}">${esc(loc === 'ko' ? 'DUPR 자가진단 →' : 'DUPR self-check →')}</a><a class="btn btn--ghost" href="${link(loc, 'boards/friends/')}">${esc(tt(loc, 'hero.ctaTertiary'))}</a>${next ? `<a class="btn btn--ghost" href="${levelUrl(loc, next)}">${esc(tt(loc, 'level.next'))}: ${esc(next.id)}</a>` : ''}</div>
+    <div class="level-actions"><a class="btn btn--dupr" href="${link(loc, 'dupr-self-check/')}">${esc(loc === 'ko' ? 'DUPR 자가진단 →' : 'DUPR self-check →')}</a><a class="btn btn--ghost" href="${link(loc, 'boards/')}">${esc(tt(loc, 'hero.ctaTertiary'))}</a>${next ? `<a class="btn btn--ghost" href="${levelUrl(loc, next)}">${esc(tt(loc, 'level.next'))}: ${esc(next.id)}</a>` : ''}</div>
     ${duprTeaser(loc)}
   </div>
   ${levelVisual(loc, level)}
@@ -3579,22 +3532,30 @@ function tournamentTabs(loc, active) {
 function proSceneLabel(loc, key) {
   const labels = {
     ko: {
-      hub: '프로 무대', players: '프로 선수 정보', results: '메이저 대회 결과', rules: 'PPA·MLP 규정',
-      title: '프로 무대 허브', intro: '프로 선수 프로필, 주요 메이저 대회 결과, PPA·MLP 규정과 규정 변화를 한 곳에서 확인하는 프로 피클볼 허브입니다.',
+      hub: '투어 보드', tournaments: '대회·일정', players: '프로 선수', results: '경기 결과·랭킹', storylines: '선수 스토리라인', insights: 'Picklary 분석',
+      title: 'Picklary 투어 보드', intro: '진행 중·예정 대회, 주요 경기 결과, 선수와 파트너 변화, 랭킹, 경기 밖 스토리와 관련 Picklary 글을 한 흐름으로 추적하는 게시판형 허브입니다.',
+      tournamentsDesc: 'PPA, MLP 등 주요 투어의 일정, 접수·장소·대진 확인 경로와 최근 업데이트를 정리합니다.',
       playersDesc: '정상급 선수들의 스타일, 주요 기술, DUPR·랭킹 확인 링크와 어떤 점을 배울 수 있는지 정리합니다.',
-      resultsDesc: 'PPA, MLP, 국제 대회 중 주요 결과를 요약하고 공식 브래킷·순위 확인 경로를 연결합니다.',
-      rulesDesc: 'PPA 토너먼트 운영, MLP 팀 리그 방식, DreamBreaker, 랭킹·포인트·경기 포맷의 변화 포인트를 설명합니다.',
-      sources: '공식 확인 링크', updated: '변동 정보 확인 기준', sourceNote: '프로 대회 일정, 랭킹, 규정, 경기 결과는 수시로 바뀔 수 있습니다. Picklary는 이해를 돕는 요약을 제공하고, 최종 판단은 공식 출처에서 다시 확인하도록 연결합니다.',
+      resultsDesc: 'PPA, MLP, 국제 대회 중 주요 결과와 종목별 선두를 요약하고 공식 브래킷·순위 확인 경로를 연결합니다.',
+      storylinesDesc: '파트너 변경, 팀 이동, 복귀·부상, 상승세와 라이벌 구도처럼 경기 결과 밖의 흐름을 공식 출처 기준으로 모읍니다.',
+      insightsDesc: '대회와 선수 데이터를 Picklary 가이드 및 네이버 블로그의 전술·장비·관전 포인트 글로 연결합니다.',
+      sources: '공식 확인 링크', updated: '정보 확인 기준', sourceNote: '프로 대회 일정, 랭킹, 규정, 경기 결과와 선수 소식은 수시로 바뀔 수 있습니다. Picklary는 이해를 돕는 요약을 제공하고, 최종 판단은 공식 출처에서 다시 확인하도록 연결합니다.',
+      latestTour: '최근 대회·일정 업데이트', latestStories: '최근 선수·스토리 업데이트', readInsights: '관련 Picklary 글 보기',
+      rules: 'PPA·MLP 규정', rulesDesc: 'PPA 토너먼트 운영, MLP 팀 리그 방식, DreamBreaker, 랭킹·포인트·경기 포맷의 변화 포인트를 설명합니다.',
       ruleWatch: '규정 변화에서 무엇을 봐야 할까?', whyRules: 'PPA와 MLP는 모두 프로 피클볼이지만 운영 목적이 다릅니다. PPA는 개인·복식 투어와 랭킹 포인트 중심이고, MLP는 팀 매치·혼합복식·DreamBreaker 같은 팀 리그 요소가 강합니다.',
       ppaCard: 'PPA Tour 규정·운영', mlpCard: 'MLP 팀 리그 규정', changeCard: '규정 변화 체크포인트'
     },
     en: {
-      hub: 'Pro Scene', players: 'Pro Players', results: 'Major Results', rules: 'PPA & MLP Rules',
-      title: 'Pro Scene Hub', intro: 'A structured hub for pro player profiles, major event results, and PPA/MLP rules and rule-change notes.',
+      hub: 'Tour Board', tournaments: 'Events & Schedule', players: 'Pro Players', results: 'Results & Rankings', storylines: 'Player Storylines', insights: 'Picklary Insights',
+      title: 'Picklary Tour Board', intro: 'A board-style hub for ongoing and upcoming events, major results, player and partner changes, rankings, off-court storylines, and connected Picklary analysis.',
+      tournamentsDesc: 'Track PPA, MLP, and other major-tour schedules with official links for registration, locations, draws, and updates.',
       playersDesc: 'Study top players by style, key skills, live DUPR/ranking source links, and practical takeaways for club players.',
-      resultsDesc: 'Follow major PPA, MLP, and international results with official bracket, standings, and source links.',
-      rulesDesc: 'Understand PPA tournament structure, MLP team format, DreamBreakers, ranking points, and the rule changes worth watching.',
-      sources: 'Official source links', updated: 'How current information is checked', sourceNote: 'Pro schedules, rankings, rules, and results can change quickly. Picklary adds plain-language explanation and links back to official sources for final verification.',
+      resultsDesc: 'Follow major PPA, MLP, and international results, discipline leaders, official brackets, and standings.',
+      storylinesDesc: 'Follow partner changes, roster moves, returns, injuries, momentum, and rivalries using source-verified updates.',
+      insightsDesc: 'Connect event and player data with Picklary guides and blog posts on tactics, gear, and viewing context.',
+      sources: 'Official source links', updated: 'How current information is checked', sourceNote: 'Pro schedules, rankings, rules, results, and player news can change quickly. Picklary adds plain-language explanation and links back to official sources for final verification.',
+      latestTour: 'Latest event and schedule updates', latestStories: 'Latest player and storyline updates', readInsights: 'Read connected Picklary posts',
+      rules: 'PPA & MLP Rules', rulesDesc: 'Understand PPA tournament structure, MLP team format, DreamBreakers, ranking points, and the rule changes worth watching.',
       ruleWatch: 'What to watch in rule changes', whyRules: 'PPA and MLP are both pro pickleball, but they reward different things. PPA is tour-and-ranking driven; MLP adds team matches, mixed doubles, DreamBreakers, and season standings.',
       ppaCard: 'PPA Tour rules & operations', mlpCard: 'MLP team-league rules', changeCard: 'Rule-change watchlist'
     }
@@ -3603,7 +3564,10 @@ function proSceneLabel(loc, key) {
   return l[key] || labels.en[key] || key;
 }
 function proSceneTabs(loc, active) {
-  const items = [['pro-scene/', 'hub'], ['pro-scene/players/', 'players'], ['pro-scene/results/', 'results']];
+  const items = [
+    ['pro-scene/', 'hub'], ['tournaments/', 'tournaments'], ['pro-scene/players/', 'players'],
+    ['pro-scene/results/', 'results'], ['pro-scene/storylines/', 'storylines']
+  ];
   return `<nav class="update-tabs" aria-label="${escAttr(proSceneLabel(loc, 'hub'))}">${items.map(([rel, key]) => `<a class="${active === key ? 'is-active' : ''}" href="${link(loc, rel)}">${esc(proSceneLabel(loc, key))}</a>`).join('')}</nav>`;
 }
 function proSceneSourceButtons(loc) {
@@ -3618,20 +3582,117 @@ function proSceneSourceButtons(loc) {
   ];
   return `<div class="source-buttons source-buttons--wrap">${items.map(([name, url]) => `<a class="btn btn--ghost" href="${escAttr(url)}" rel="nofollow noopener" target="_blank">${esc(name)}</a>`).join('')}</div>`;
 }
+function tourText(loc, item, key) {
+  const koKey = key + 'Ko';
+  return loc === 'ko' && item && item[koKey] ? item[koKey] : ((item && item[key]) || '');
+}
+function tourStatusLabel(loc, status) {
+  const labels = {
+    live: loc === 'ko' ? '진행 중' : 'Live now',
+    upcoming: loc === 'ko' ? '예정' : 'Upcoming',
+    completed: loc === 'ko' ? '완료' : 'Completed'
+  };
+  return labels[status] || status;
+}
+function tourKindLabel(loc, kind) {
+  const labels = {
+    all: loc === 'ko' ? '전체' : 'All',
+    result: loc === 'ko' ? '경기 결과' : 'Match result',
+    tournament: loc === 'ko' ? '대회 브리핑' : 'Event briefing',
+    player: loc === 'ko' ? '선수 뉴스' : 'Player news',
+    storyline: loc === 'ko' ? '스토리라인' : 'Storyline',
+    ranking: loc === 'ko' ? '랭킹 변화' : 'Ranking watch',
+    insight: loc === 'ko' ? 'Picklary 분석' : 'Picklary analysis'
+  };
+  return labels[kind] || kind;
+}
+function tourConfidenceLabel(loc, confidence) {
+  const labels = {
+    official: loc === 'ko' ? 'Official · 공식 출처' : 'Official source',
+    confirmed: loc === 'ko' ? 'Confirmed · 직접 확인' : 'Confirmed',
+    reported: loc === 'ko' ? 'Reported · 신뢰 보도' : 'Reported',
+    analysis: loc === 'ko' ? 'Picklary Analysis' : 'Picklary Analysis',
+    unconfirmed: loc === 'ko' ? 'Unconfirmed · 미확인' : 'Unconfirmed'
+  };
+  return labels[confidence] || confidence;
+}
+function tourResultStatusLabel(loc, status) {
+  const labels = {
+    confirmed: loc === 'ko' ? '결과 확정' : 'Results confirmed',
+    pending: loc === 'ko' ? '공식 결과 대기' : 'Official results pending',
+    live: loc === 'ko' ? '라이브 집계 중' : 'Live scoring',
+    upcoming: loc === 'ko' ? '대회 후 업데이트' : 'Updates after event'
+  };
+  return labels[status] || status || '';
+}
+function tourStatusCard(loc, item) {
+  const title = tourText(loc, item, 'title');
+  const summary = tourText(loc, item, 'summary');
+  const location = tourText(loc, item, 'location');
+  const resultHint = tourText(loc, item, 'resultHint');
+  const dates = `${fmtDate(loc, item.start)} – ${fmtDate(loc, item.end)}`;
+  const target = item.detail ? link(loc, 'tournaments/' + item.slug + '/') : item.sourceUrl;
+  const external = item.detail ? '' : ' rel="nofollow noopener" target="_blank"';
+  const statusIcon = item.status === 'completed' ? '✓' : (item.status === 'live' ? '●' : '→');
+  return `<article class="tour-status-card tour-status-card--${escAttr(item.status)}">
+    <div class="tour-status-card__glow" aria-hidden="true"></div>
+    <div class="tour-status-card__top"><span class="tour-status-dot" aria-hidden="true"></span><span class="tour-status-label">${esc(tourStatusLabel(loc, item.status))}</span><span class="tour-chip">${esc(item.tour)}</span></div>
+    <h3><a href="${escAttr(target)}"${external}>${esc(title)}</a></h3>
+    <p class="tour-status-card__meta">${esc(dates)} · ${esc(location)}</p>
+    <p>${esc(summary)}</p>
+    ${resultHint ? `<div class="tour-status-card__result"><span>${esc(statusIcon)}</span><strong>${esc(resultHint)}</strong></div>` : ''}
+    <a class="tour-card-cta" href="${escAttr(target)}"${external}><span>${esc(loc === 'ko' ? '대회 페이지 보기' : 'Explore event')}</span><b aria-hidden="true">↗</b></a>
+  </article>`;
+}
+function tourPostCard(loc, item) {
+  const title = tourText(loc, item, 'title');
+  const summary = tourText(loc, item, 'summary');
+  const sourceUrl = loc === 'ko' && item.sourceUrlKo ? item.sourceUrlKo : item.sourceUrl;
+  const internalUrl = item.internalUrl ? link(loc, item.internalUrl) : sourceUrl;
+  const sourceExternal = /^https?:/i.test(sourceUrl || '');
+  return `<article class="tour-post-card" data-kind="${escAttr(item.kind)}" data-tour="${escAttr(String(item.tour || 'all').toLowerCase())}" data-discipline="${escAttr(item.discipline || 'all')}">
+    <div class="tour-post-card__head"><span class="tour-kind tour-kind--${escAttr(item.kind)}">${esc(tourKindLabel(loc, item.kind))}</span><span class="tour-confidence tour-confidence--${escAttr(item.confidence)}">${esc(tourConfidenceLabel(loc, item.confidence))}</span></div>
+    <p class="tour-post-card__meta">${esc(item.date)} · ${esc(item.tour || '')}</p>
+    <h3><a href="${escAttr(internalUrl)}">${esc(title)}</a></h3>
+    <p>${esc(summary)}</p>
+    <div class="tour-post-card__actions"><a href="${escAttr(internalUrl)}">${esc(loc === 'ko' ? '연결 페이지' : 'Connected page')} →</a>${sourceUrl ? `<a href="${escAttr(sourceUrl)}"${sourceExternal ? ' rel="nofollow noopener" target="_blank"' : ''}>${esc(item.sourceName || (loc === 'ko' ? '출처' : 'Source'))} ↗</a>` : ''}${item.secondaryUrl ? `<a href="${escAttr(item.secondaryUrl)}" rel="nofollow noopener" target="_blank">${esc(item.secondaryName || 'More')} ↗</a>` : ''}</div>
+  </article>`;
+}
+function tourStoryCard(loc, item) {
+  return `<article class="tour-story-item"><div class="tour-story-item__rail" aria-hidden="true"><span></span></div><div class="tour-story-item__body"><div class="tour-story-item__meta"><time>${esc(item.date)}</time><span class="tour-chip">${esc(item.tour)}</span><span class="tour-confidence tour-confidence--${escAttr(item.confidence)}">${esc(tourConfidenceLabel(loc, item.confidence))}</span></div><h3>${esc(tourText(loc, item, 'title'))}</h3><p>${esc(tourText(loc, item, 'body'))}</p><a class="tour-text-link" href="${escAttr(item.sourceUrl)}" rel="nofollow noopener" target="_blank">${esc(item.sourceName)} ↗</a></div></article>`;
+}
 function renderProSceneHub(loc) {
-  const card = (key, href, title, desc, icon) => `<a class="explore-card pro-scene-card pro-scene-card--${escAttr(key)}" href="${link(loc, href)}"><span class="explore-card__k">${esc(proSceneLabel(loc, key))}</span><span class="pro-scene-card__icon" aria-hidden="true">${icon}</span><span class="explore-card__t">${esc(title)}</span><span class="explore-card__d">${esc(desc)}</span></a>`;
-  const latest = tourResults.filter((r) => r.status === 'published').slice(0, 1).map((r) => resultRecap(loc, r)).join('');
+  const L = (ko, en) => loc === 'ko' ? ko : en;
+  const card = (key, href, desc, icon) => `<a class="explore-card pro-scene-card pro-scene-card--${escAttr(key)}" href="${link(loc, href)}"><span class="pro-scene-card__icon" aria-hidden="true">${icon}</span><span class="explore-card__t">${esc(proSceneLabel(loc, key))}</span><span class="explore-card__d">${esc(desc)}</span><strong>${esc(L('열기', 'Open'))} →</strong></a>`;
+  const statusHtml = (tourBoard.statusEvents || []).map((item) => tourStatusCard(loc, item)).join('');
+  const postsHtml = (tourBoard.posts || []).map((item) => tourPostCard(loc, item)).join('');
+  const storyHtml = (tourBoard.storylines || []).slice(0, 4).map((item) => tourStoryCard(loc, item)).join('');
+  const insightHtml = (tourBoard.insights || []).map((item) => `<a class="tour-insight-card" href="${link(loc, item.url)}"><span>${esc(L('Picklary 연결 글', 'Picklary insight'))}</span><h3>${esc(tourText(loc, item, 'title'))}</h3><p>${esc(tourText(loc, item, 'body'))}</p><strong>${esc(L('읽기', 'Read'))} →</strong></a>`).join('');
+  const editorialNote = loc === 'ko' ? tourBoard.editorialNote.ko : tourBoard.editorialNote.en;
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: proSceneLabel(loc, 'hub') }])}
-<section class="page-head page-head--visual"><div class="wrap two-col two-col--wide">
-  <div><p class="page-head__eyebrow">${esc(tt(loc, 'nav.proScene'))}</p><h1>${esc(proSceneLabel(loc, 'title'))}</h1><p class="page-head__intro">${esc(proSceneLabel(loc, 'intro'))}</p></div>
-  ${visualFigure(loc, 'players')}
-</div></section>
-<section class="band"><div class="wrap">${proSceneTabs(loc, 'hub')}<div class="explore-grid">
-  ${card('players', 'pro-scene/players/', proSceneLabel(loc, 'players'), proSceneLabel(loc, 'playersDesc'), '👤')}
-  ${card('results', 'pro-scene/results/', proSceneLabel(loc, 'results'), proSceneLabel(loc, 'resultsDesc'), '🏆')}
+<section class="tour-board-hero"><div class="wrap tour-board-hero__grid"><div><p class="tour-board-hero__eyebrow">PICKLARY TOUR MEDIA HUB</p><h1>${esc(proSceneLabel(loc, 'title'))}</h1><p>${esc(L('공식 경기 데이터에서 출발해 대회, 선수, 파트너, 랭킹, 경기 밖 이야기를 연결하고 관련 Picklary 분석 글로 이어지는 지속 업데이트형 허브입니다.', 'A continuously updated media hub connecting official competition data with events, players, partners, rankings, off-court context, and deeper Picklary analysis.'))}</p><div class="tour-board-hero__actions"><a class="btn btn--primary" href="#tour-feed">${esc(L('최신 업데이트 보기', 'See latest updates'))}</a><a class="btn btn--ghost" href="${link(loc, 'tournaments/')}">${esc(proSceneLabel(loc, 'tournaments'))}</a></div><p class="tour-board-meta"><strong>${esc(L('업데이트 기준', 'Updated'))}:</strong> ${esc(tourBoard.updated || '')} · ${esc(editorialNote || '')}</p></div><nav class="tour-board-hero__nav" aria-label="${escAttr(L('Tour Board 주요 페이지', 'Tour Board primary pages'))}">
+<a class="tour-portal tour-portal--events" href="${link(loc, 'tournaments/')}"><span class="tour-portal__icon" aria-hidden="true">◫</span><span class="tour-portal__copy"><small>${esc(L('대회 게시판', 'Event board'))}</small><strong>${esc(proSceneLabel(loc, 'tournaments'))}</strong><em>${esc(L('일정·장소·대진 확인', 'Dates, venues and draws'))}</em></span><b aria-hidden="true">→</b></a>
+<a class="tour-portal tour-portal--players" href="${link(loc, 'pro-scene/players/')}"><span class="tour-portal__icon" aria-hidden="true">◎</span><span class="tour-portal__copy"><small>${esc(L('선수 데이터', 'Player database'))}</small><strong>${esc(proSceneLabel(loc, 'players'))}</strong><em>${esc(L('스타일·기술·프로필', 'Styles, skills and profiles'))}</em></span><b aria-hidden="true">→</b></a>
+<a class="tour-portal tour-portal--results" href="${link(loc, 'pro-scene/results/')}"><span class="tour-portal__icon" aria-hidden="true">◆</span><span class="tour-portal__copy"><small>${esc(L('공식 경기 데이터', 'Official competition data'))}</small><strong>${esc(proSceneLabel(loc, 'results'))}</strong><em>${esc(L('결과·브래킷·현재 순위', 'Results, brackets and standings'))}</em></span><b aria-hidden="true">→</b></a>
+<a class="tour-portal tour-portal--stories" href="${link(loc, 'pro-scene/storylines/')}"><span class="tour-portal__icon" aria-hidden="true">↗</span><span class="tour-portal__copy"><small>${esc(L('심층 분석', 'Story graph'))}</small><strong>${esc(proSceneLabel(loc, 'storylines'))}</strong><em>${esc(L('파트너·팀·라이벌 흐름', 'Partners, teams and rivalries'))}</em></span><b aria-hidden="true">→</b></a>
+</nav></div></section>
+<section class="band band--tour-live"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">${esc(L('NOW & NEXT', 'NOW & NEXT'))}</p><h2 class="band__title">${esc(L('현재 피클볼계에서 일어나는 일', 'What is happening across the tours'))}</h2></div><a href="${link(loc, 'tournaments/')}">${esc(L('전체 대회', 'All events'))} →</a></div><div class="tour-live-grid">${statusHtml}</div></div></section>
+<section class="band"><div class="wrap">${proSceneTabs(loc, 'hub')}<div class="explore-grid tour-board-grid">
+  ${card('tournaments', 'tournaments/', proSceneLabel(loc, 'tournamentsDesc'), '🗓️')}
+  ${card('players', 'pro-scene/players/', proSceneLabel(loc, 'playersDesc'), '👤')}
+  ${card('results', 'pro-scene/results/', proSceneLabel(loc, 'resultsDesc'), '🏆')}
+  ${card('storylines', 'pro-scene/storylines/', proSceneLabel(loc, 'storylinesDesc'), '🔄')}
+  ${card('insights', 'blogs/', proSceneLabel(loc, 'insightsDesc'), '📝')}
 </div></div></section>
-${latest ? `<section class="band band--alt"><div class="wrap"><h2 class="band__title">${esc(loc === 'ko' ? '최근 주요 결과' : 'Latest major result')}</h2><div class="recaps">${latest}</div><p><a class="btn btn--primary" href="${link(loc, 'pro-scene/results/')}">${esc(proSceneLabel(loc, 'results'))} →</a></p></div></section>` : ''}
-<section class="band"><div class="wrap narrow prose"><h2>${esc(proSceneLabel(loc, 'updated'))}</h2><p>${esc(proSceneLabel(loc, 'sourceNote'))}</p>${proSceneSourceButtons(loc)}</div></section>`;
+<section class="band band--alt" id="tour-feed"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">${esc(L('LIVE EDITORIAL BOARD', 'LIVE EDITORIAL BOARD'))}</p><h2 class="band__title">${esc(L('대회·결과·선수·스토리를 한 게시판에서', 'Events, results, players, and storylines in one board'))}</h2></div><strong id="tour-result-count">${esc(String((tourBoard.posts || []).length))}</strong></div>
+<div class="tour-board-filter" data-tour-controls>
+  <div class="tour-filter-buttons" role="group" aria-label="${escAttr(L('콘텐츠 유형', 'Content type'))}">${['all','result','tournament','player','storyline','ranking','insight'].map((kind) => `<button type="button" class="${kind === 'all' ? 'is-active' : ''}" data-kind-filter="${kind}">${esc(tourKindLabel(loc, kind))}</button>`).join('')}</div>
+  <label>${esc(L('투어', 'Tour'))}<select data-tour-filter><option value="all">${esc(L('전체 투어', 'All tours'))}</option><option value="ppa">PPA</option><option value="mlp">MLP</option><option value="app">APP</option><option value="usa pickleball">USA Pickleball</option><option value="milp">MiLP</option><option value="college">${esc(L('대학', 'College'))}</option><option value="international">${esc(L('국제대회', 'International'))}</option></select></label>
+  <label>${esc(L('종목', 'Discipline'))}<select data-discipline-filter><option value="all">${esc(L('전체 종목', 'All disciplines'))}</option><option value="singles">${esc(L('단식', 'Singles'))}</option><option value="doubles">${esc(L('복식', 'Doubles'))}</option><option value="mixed">${esc(L('혼합복식', 'Mixed doubles'))}</option><option value="team">${esc(L('팀 경기', 'Team'))}</option></select></label>
+</div><div class="tour-board-feed" data-tour-feed>${postsHtml}</div><p class="notice tour-empty" data-tour-empty hidden>${esc(L('선택한 조건에 맞는 업데이트가 없습니다.', 'No updates match the selected filters.'))}</p></div></section>
+<section class="band"><div class="wrap two-col two-col--wide"><div><div class="section-heading-row"><div><p class="section-kicker">STORY GRAPH</p><h2 class="band__title">${esc(L('이어지는 선수·투어 스토리라인', 'Connected player and tour storylines'))}</h2></div><a href="${link(loc, 'pro-scene/storylines/')}">${esc(L('전체 타임라인', 'Full timeline'))} →</a></div><div class="tour-storyline-timeline">${storyHtml}</div></div><div><p class="section-kicker">PICKLARY INSIGHTS</p><h2 class="band__title">${esc(L('경기 데이터에서 심층 글로', 'From tour data to deeper reading'))}</h2><div class="tour-insight-grid">${insightHtml}</div></div></div></section>
+<section class="band band--alt"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">EDITORIAL TRUST</p><h2 class="band__title">${esc(L('정보 신뢰도 표시', 'Source confidence labels'))}</h2></div></div><div class="tour-source-legend">${['official','confirmed','reported','analysis','unconfirmed'].map((x) => `<div><span class="tour-confidence tour-confidence--${x}">${esc(tourConfidenceLabel(loc, x))}</span><p>${esc(x === 'official' ? L('투어·대회 공식 발표 또는 공식 결과', 'Tour or event primary source') : x === 'confirmed' ? L('선수·팀이 직접 확인한 내용', 'Directly confirmed by player or team') : x === 'reported' ? L('신뢰할 수 있는 보도에 근거', 'Based on credible reporting') : x === 'analysis' ? L('공식 데이터에 기반한 Picklary 해석', 'Picklary interpretation of sourced data') : L('확인 전 정보이며 원칙적으로 공개 보류', 'Unverified; normally held from publication'))}</p></div>`).join('')}</div><div class="tour-official-links"><h3>${esc(proSceneLabel(loc, 'sources'))}</h3>${proSceneSourceButtons(loc)}</div></div></section>
+<script>(function(){var root=document.querySelector('[data-tour-controls]');if(!root)return;var feed=document.querySelector('[data-tour-feed]');var cards=[].slice.call(feed.querySelectorAll('.tour-post-card'));var kind='all';var tour='all';var discipline='all';var count=document.getElementById('tour-result-count');var empty=document.querySelector('[data-tour-empty]');function apply(){var n=0;cards.forEach(function(card){var show=(kind==='all'||card.dataset.kind===kind)&&(tour==='all'||card.dataset.tour===tour)&&(discipline==='all'||card.dataset.discipline===discipline||card.dataset.discipline==='all');card.classList.toggle('is-hidden',!show);if(show)n++;});if(count)count.textContent=String(n);if(empty)empty.hidden=n!==0;}root.querySelectorAll('[data-kind-filter]').forEach(function(btn){btn.addEventListener('click',function(){kind=btn.dataset.kindFilter;root.querySelectorAll('[data-kind-filter]').forEach(function(x){x.classList.toggle('is-active',x===btn);});apply();});});root.querySelector('[data-tour-filter]').addEventListener('change',function(e){tour=e.target.value;apply();});root.querySelector('[data-discipline-filter]').addEventListener('change',function(e){discipline=e.target.value;apply();});})();</script>`;
   return layout({ loc, rel: 'pro-scene/', title: proSceneLabel(loc, 'title'), description: proSceneLabel(loc, 'intro'), bodyHtml: body });
 }
 function renderProScenePlayers(loc) {
@@ -3656,6 +3717,20 @@ function renderProSceneResults(loc) {
 <section class="band band--alt"><div class="wrap narrow prose"><h2>${esc(proSceneLabel(loc, 'sources'))}</h2><p>${esc(proSceneLabel(loc, 'sourceNote'))}</p>${proSceneSourceButtons(loc)}</div></section>`;
   return layout({ loc, rel: 'pro-scene/results/', title: title + ' · ' + proSceneLabel(loc, 'hub'), description: proSceneLabel(loc, 'resultsDesc'), bodyHtml: body });
 }
+function renderProSceneStorylines(loc) {
+  const title = proSceneLabel(loc, 'storylines');
+  const L = (ko, en) => loc === 'ko' ? ko : en;
+  const curated = (tourBoard.storylines || []).map((item) => tourStoryCard(loc, item)).join('');
+  const approved = [...updateCenterItems()].filter((u) => u.type === 'players').sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
+  const approvedCards = approved.map((u) => updateCard(u, loc)).join('');
+  const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: proSceneLabel(loc, 'hub'), rel: 'pro-scene/' }, { name: title }])}
+<section class="page-head page-head--visual"><div class="wrap two-col two-col--wide"><div><p class="page-head__eyebrow">STORY GRAPH</p><h1>${esc(title)}</h1><p class="page-head__intro">${esc(L('선수, 파트너, 팀, 대회, 결과와 랭킹 변화를 하나의 시간축에 연결합니다. 확인된 사실과 Picklary 분석을 명확히 구분합니다.', 'A timeline connecting players, partners, teams, events, results, and ranking movement while clearly separating sourced facts from Picklary analysis.'))}</p></div>${visualFigure(loc, 'players')}</div></section>
+<section class="band"><div class="wrap">${proSceneTabs(loc, 'storylines')}<div class="storyline-board-intro"><p>${esc(L('단독 뉴스로 끝내지 않고 관련 선수 페이지, 대회 상세 페이지, 결과와 분석 글로 계속 연결되는 구조입니다.', 'Each item connects onward to relevant player pages, event details, results, and analysis instead of ending as isolated news.'))}</p></div><div class="tour-storyline-timeline tour-storyline-timeline--full">${curated || `<p class="notice">${esc(L('아직 승인된 스토리라인이 없습니다.', 'No storylines have been approved yet.'))}</p>`}</div></div></section>
+${approvedCards ? `<section class="band band--alt"><div class="wrap"><h2 class="band__title">${esc(L('선수 업데이트 아카이브', 'Player update archive'))}</h2><div class="update-grid">${approvedCards}</div></div></section>` : ''}
+<section class="band"><div class="wrap two-col two-col--wide"><div class="prose"><h2>${esc(L('스토리 그래프의 연결 단위', 'What the story graph connects'))}</h2><p>${esc(L('선수 ↔ 파트너 ↔ 팀 ↔ 대회 ↔ 경기 결과 ↔ 랭킹 변화 ↔ 패들·장비 ↔ Picklary 분석의 흐름으로 축적합니다.', 'Player ↔ partner ↔ team ↔ event ↔ result ↔ ranking movement ↔ gear ↔ Picklary analysis.'))}</p><a class="btn btn--primary" href="${link(loc, 'pro-scene/players/')}">${esc(proSceneLabel(loc, 'players'))} →</a></div><div class="prose"><h2>${esc(proSceneLabel(loc, 'updated'))}</h2><p>${esc(loc === 'ko' ? tourBoard.editorialNote.ko : tourBoard.editorialNote.en)}</p>${proSceneSourceButtons(loc)}</div></div></section>`;
+  return layout({ loc, rel: 'pro-scene/storylines/', title: title + ' · ' + proSceneLabel(loc, 'hub'), description: proSceneLabel(loc, 'storylinesDesc'), bodyHtml: body });
+}
+
 function renderProSceneRules(loc) {
   const title = proSceneLabel(loc, 'rules');
   const L = (en, ko) => loc === 'ko' ? ko : en;
@@ -3705,31 +3780,64 @@ function renderProSceneRules(loc) {
 }
 
 function renderTournamentsIndex(loc) {
-  const items = [...tournamentItems('all')].sort((a, b) => String(b.date || '').localeCompare(String(a.date || ''))).slice(0, 12);
+  const L = (ko, en) => loc === 'ko' ? ko : en;
+  const items = [...tournamentItems('all')].sort((a, b) => String(b.date || '').localeCompare(String(a.date || ''))).slice(0, 9);
+  const tracked = (tourBoard.statusEvents || []).filter((x) => x.detail);
+  const archives = (tourBoard.tournaments || []).filter((x) => x.archive && x.resultStatus === 'confirmed');
+  const completedCount = tracked.filter((x) => x.status === 'completed').length;
+  const liveCount = tracked.filter((x) => x.status === 'live').length;
+  const upcomingCount = tracked.filter((x) => x.status === 'upcoming').length;
+  const archiveCards = archives.map((event) => {
+    const results = (event.results || []).slice(0, 3);
+    const resultRows = results.map((r) => `<li><span>${esc(tourText(loc, r, 'division'))}</span><strong>${esc(r.champ || '')}</strong></li>`).join('');
+    return `<article class="tour-archive-card">
+      <div class="tour-archive-card__top"><span>${esc(event.tour)}</span><span>${esc(tourResultStatusLabel(loc, event.resultStatus))}</span></div>
+      <h3><a href="${link(loc, 'tournaments/' + event.slug + '/')}">${esc(tourText(loc, event, 'title'))}</a></h3>
+      <p>${esc(tourText(loc, event, 'dates'))} · ${esc(tourText(loc, event, 'location'))}</p>
+      <ul>${resultRows}</ul>
+      <a class="tour-card-cta" href="${link(loc, 'tournaments/' + event.slug + '/')}"><span>${esc(L('전체 결승 결과와 이야기', 'Full finals and storylines'))}</span><b aria-hidden="true">→</b></a>
+    </article>`;
+  }).join('');
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: tournamentLabel(loc, 'title') }])}
-<section class="page-head page-head--visual"><div class="wrap two-col two-col--wide">
-  <div><p class="page-head__eyebrow">${esc(tournamentLabel(loc, 'nav'))}</p><h1>${esc(tournamentLabel(loc, 'title'))}</h1><p class="page-head__intro">${esc(tournamentLabel(loc, 'intro'))}</p></div>
-  ${visualFigure(loc, 'players')}
-</div></section>
-${tourResults.length ? `<section class="band"><div class="wrap">
-  ${tournamentTabs(loc, 'all')}
-  <h2 class="band__title">${esc(loc === 'ko' ? '최근 대회 결과' : 'Recent results')}</h2>
-  <div class="recaps">${resultRecap(loc, tourResults[0])}</div>
-  <p><a class="btn btn--ghost" href="${link(loc, 'tournaments/results/')}">${esc(loc === 'ko' ? '전체 대회 결과 보기' : 'See all results')} →</a></p>
-</div></section>` : `<section class="band"><div class="wrap">${tournamentTabs(loc, 'all')}</div></section>`}
-<section class="band band--alt"><div class="wrap">
-  ${tourResults.length ? '' : tournamentTabs(loc, 'all')}
-  <h2 class="band__title">${esc(tournamentLabel(loc, 'latest'))}</h2>
-  <div class="update-grid">${items.length ? items.map((u) => updateCard(u, loc)).join('') : `<p class="notice">${esc(tournamentLabel(loc, 'noItems'))}</p>`}</div>
-</div></section>
-<section class="band"><div class="wrap"><div class="cross-note">
-  <h2 class="band__title">${esc(loc === 'ko' ? '규정 변경·선수 동향이 궁금하세요?' : 'Looking for rule changes or player news?')}</h2>
-  <p>${esc(loc === 'ko' ? '규정 변경, 선수 동향, 대회 외 피클볼 뉴스는 업데이트 센터에서 정리합니다.' : 'Rule changes, player news, and non-tournament pickleball news are curated in the Update Center.')}</p>
-  <p><a class="btn btn--ghost" href="${link(loc, 'updates/')}">${esc(loc === 'ko' ? '업데이트 센터로 가기' : 'Go to the Update Center')} →</a></p>
-</div></div></section>
-<section class="band band--alt"><div class="wrap"><h2 class="band__title">${esc(tournamentLabel(loc, 'sources'))}</h2>${updateSourceCards(loc, ['tournaments','international','results'])}</div></section>`;
+<section class="tour-index-hero"><div class="wrap tour-index-hero__grid">
+  <div><p class="page-head__eyebrow">${esc(tournamentLabel(loc, 'nav'))}</p><h1>${esc(tournamentLabel(loc, 'title'))}</h1><p class="tour-index-hero__intro">${esc(L('일정만 나열하지 않습니다. 각 대회의 결과 공개 상태, 우승자·준우승자, 시즌 맥락과 다음 이야기까지 한 페이지에서 연결합니다.', 'More than a schedule: each event connects result-publication status, champions and finalists, season context, and the next storyline.'))}</p><div class="tour-index-hero__actions"><a class="btn btn--primary" href="#tracked-events">${esc(L('현재 대회 보기', 'See current events'))}</a><a class="btn btn--ghost" href="${link(loc, 'pro-scene/')}">${esc(proSceneLabel(loc, 'hub'))} →</a></div></div>
+  <div class="tour-index-hero__visual">${visualFigure(loc, 'players')}<div class="tour-index-badge"><span>${esc(L('확인 기준', 'Verified'))}</span><strong>${esc(tourBoard.updated || '')}</strong></div></div>
+</div><div class="wrap tour-index-stats"><div><strong>${tracked.length}</strong><span>${esc(L('추적 중인 대회', 'Tracked events'))}</span></div><div><strong>${liveCount}</strong><span>${esc(L('진행 중', 'Live now'))}</span></div><div><strong>${completedCount}</strong><span>${esc(L('완료·결과 확인 중', 'Completed / checking'))}</span></div><div><strong>${upcomingCount}</strong><span>${esc(L('예정 대회', 'Upcoming'))}</span></div></div></section>
+<section class="band tour-current-band" id="tracked-events"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">TOUR BOARD</p><h2 class="band__title">${esc(L('지금 따라가야 할 주요 이벤트', 'Events worth following now'))}</h2><p class="band__intro">${esc(L('카드를 클릭하면 결과 상태, 공식 링크, 참가 구성, 관전 포인트와 이벤트별 스토리를 확인할 수 있습니다.', 'Open any card for result status, official sources, field details, viewing angles, and event-specific storylines.'))}</p></div><a class="tour-board-inline-link" href="${link(loc, 'pro-scene/')}">${esc(proSceneLabel(loc, 'hub'))} →</a></div><div class="tour-live-grid tour-live-grid--index">${tracked.map((x) => tourStatusCard(loc, x)).join('')}</div></div></section>
+<section class="tour-method-band"><div class="wrap"><div class="tour-method-band__lead"><p class="section-kicker">PICKLARY METHOD</p><h2>${esc(L('한 대회를 네 겹으로 읽습니다', 'Four layers for every tournament'))}</h2><p>${esc(L('공식 결과를 출발점으로 선수, 파트너, 시즌 순위와 관련 분석 글까지 연결해 단순 스코어 이상의 맥락을 제공합니다.', 'Official results are the starting point; player, partner, season, and analysis layers turn scores into useful context.'))}</p></div><div class="tour-method-grid"><article><span>01</span><strong>${esc(L('공식 결과', 'Official result'))}</strong><p>${esc(L('우승·준우승·결승 스코어와 공개 상태', 'Champion, finalist, final score, and publication status'))}</p></article><article><span>02</span><strong>${esc(L('대회 맥락', 'Event context'))}</strong><p>${esc(L('포맷, 장소, 참가 규모와 시즌 내 의미', 'Format, venue, field size, and season meaning'))}</p></article><article><span>03</span><strong>${esc(L('선수 이야기', 'Player stories'))}</strong><p>${esc(L('돌풍, 파트너십, 부상·복귀와 라이벌 구도', 'Breakouts, partnerships, injuries, returns, and rivalries'))}</p></article><article><span>04</span><strong>${esc(L('다음 행동', 'What next'))}</strong><p>${esc(L('관련 선수·랭킹·Picklary 심층 글로 이동', 'Continue to players, rankings, and deeper Picklary analysis'))}</p></article></div></div></section>
+<section class="band band--alt"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">CONFIRMED RESULTS</p><h2 class="band__title">${esc(L('우승자·준우승자·스코어가 확인된 대회', 'Events with confirmed champions, finalists, and scores'))}</h2><p class="band__intro">${esc(L('공식 리캡에서 결승 결과가 확인된 대회만 이름과 스코어를 게시합니다.', 'Names and scores appear only when an official recap has published the finals.'))}</p></div></div><div class="tour-archive-grid">${archiveCards || `<p class="notice">${esc(tournamentLabel(loc, 'noItems'))}</p>`}</div></div></section>
+<section class="band"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">LATEST CONTEXT</p><h2 class="band__title">${esc(tournamentLabel(loc, 'latest'))}</h2></div></div><div class="update-grid">${items.length ? items.map((u) => updateCard(u, loc)).join('') : `<p class="notice">${esc(tournamentLabel(loc, 'noItems'))}</p>`}</div></div></section>
+<section class="band band--alt"><div class="wrap"><div class="tour-source-panel"><div><p class="section-kicker">SOURCE POLICY</p><h2>${esc(L('결과를 추정하지 않습니다', 'No guessed results'))}</h2><p>${esc(L('대회가 완료로 표시되더라도 공식 Winners Circle 또는 결과표가 공개되지 않았다면 “공식 결과 대기”로 표시합니다. 확인된 이름만 상세 페이지에 반영합니다.', 'A completed event remains “official results pending” until its Winners Circle or result table is visible. Only verified names are added to event pages.'))}</p></div>${updateSourceCards(loc, ['tournaments','international','results'])}</div></div></section>`;
   return layout({ loc, rel: 'tournaments/', title: tournamentLabel(loc, 'title'), description: tournamentLabel(loc, 'intro'), bodyHtml: body });
 }
+function renderTournamentDetail(loc, event) {
+  const L = (ko, en) => loc === 'ko' ? ko : en;
+  const participants = (loc === 'ko' && event.participantsKo ? event.participantsKo : event.participants) || [];
+  const watch = (loc === 'ko' && event.watchKo ? event.watchKo : event.watch) || [];
+  const notableFacts = (loc === 'ko' && event.notableFactsKo ? event.notableFactsKo : event.notableFacts) || [];
+  const stories = event.stories || [];
+  const title = tourText(loc, event, 'title');
+  const location = tourText(loc, event, 'location');
+  const overview = tourText(loc, event, 'overview');
+  const dates = tourText(loc, event, 'dates');
+  const storyline = tourText(loc, event, 'storyline');
+  const resultNote = tourText(loc, event, 'resultNote');
+  const resultStatus = event.resultStatus || (event.status === 'completed' ? 'pending' : event.status);
+  const results = event.results || [];
+  const resultLinks = event.resultLinks || [];
+  const resultRows = results.map((r) => `<article class="event-result-card"><div class="event-result-card__division">${esc(tourText(loc, r, 'division'))}</div><div class="event-result-card__podium"><div><span class="event-result-card__place"><b aria-hidden="true">🥇</b>${esc(L('우승', 'Champion'))}</span><strong>${esc(r.champ || '—')}</strong></div>${r.silver ? `<div><span class="event-result-card__place"><b aria-hidden="true">🥈</b>${esc(L('준우승', 'Runner-up'))}</span><strong>${esc(r.silver)}</strong></div>` : ''}${r.bronze ? `<div><span class="event-result-card__place"><b aria-hidden="true">🥉</b>${esc(L('3위', 'Bronze'))}</span><strong>${esc(r.bronze)}</strong></div>` : ''}</div>${r.score ? `<p class="event-result-card__score"><span>${esc(L('결승 스코어', 'Final score'))}</span><strong>${esc(r.score)}</strong></p>` : ''}</article>`).join('');
+  const resultLinkHtml = resultLinks.map((x) => `<a class="btn btn--ghost" href="${escAttr(x.url)}" rel="nofollow noopener" target="_blank">${esc(loc === 'ko' && x.labelKo ? x.labelKo : x.label)} ↗</a>`).join('');
+  const storyHtml = stories.map((story, index) => `<article class="event-story-card event-story-card--${(index % 4) + 1}"><span>${esc(loc === 'ko' && story.kickerKo ? story.kickerKo : story.kicker)}</span><h3>${esc(loc === 'ko' && story.titleKo ? story.titleKo : story.title)}</h3><p>${esc(loc === 'ko' && story.bodyKo ? story.bodyKo : story.body)}</p></article>`).join('');
+  const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: proSceneLabel(loc, 'hub'), rel: 'pro-scene/' }, { name: tournamentLabel(loc, 'title'), rel: 'tournaments/' }, { name: title }])}
+<section class="tournament-detail-hero tournament-detail-hero--${escAttr(event.tour.toLowerCase())}"><div class="wrap tournament-detail-hero__grid"><div><div class="tournament-detail-hero__top"><span class="tour-status-label tour-status-label--${escAttr(event.status)}">${esc(tourStatusLabel(loc, event.status))}</span><span class="tour-chip">${esc(event.tour)}</span><span class="result-state result-state--${escAttr(resultStatus)}">${esc(tourResultStatusLabel(loc, resultStatus))}</span></div><h1>${esc(title)}</h1><p>${esc(dates)} · ${esc(location)}</p><div class="source-buttons"><a class="btn btn--primary" href="${escAttr(event.sourceUrl)}" rel="nofollow noopener" target="_blank">${esc(event.sourceName)} ↗</a>${event.secondaryUrl ? `<a class="btn btn--ghost" href="${escAttr(event.secondaryUrl)}" rel="nofollow noopener" target="_blank">${esc(event.secondaryName)} ↗</a>` : ''}</div></div><div class="tournament-detail-hero__score"><span>${esc(L('결과 확인 기준', 'Results checked'))}</span><strong>${esc(event.resultChecked || tourBoard.updated || '')}</strong><p>${esc(resultNote || L('공식 결과 페이지를 기준으로 업데이트합니다.', 'Updated from the official result page.'))}</p></div></div></section>
+<section class="band event-result-section"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">RESULTS</p><h2 class="band__title">${esc(L('우승자·입상자와 공식 결과 상태', 'Champions, finalists, and result status'))}</h2><p class="band__intro">${esc(results.length ? L('공식 리캡에서 확인된 결승 결과입니다.', 'Finals verified from the official recap.') : L('공식 결과표가 공개되는 즉시 이름과 스코어를 반영합니다.', 'Names and scores will appear as soon as the official table is published.'))}</p></div><span class="result-state result-state--${escAttr(resultStatus)}">${esc(tourResultStatusLabel(loc, resultStatus))}</span></div>${results.length ? `<div class="event-results-grid">${resultRows}</div>` : `<div class="result-pending-panel result-pending-panel--${escAttr(resultStatus)}"><div class="result-pending-panel__icon" aria-hidden="true">${resultStatus === 'upcoming' ? '◷' : (resultStatus === 'live' ? '●' : '⌛')}</div><div><h3>${esc(tourResultStatusLabel(loc, resultStatus))}</h3><p>${esc(resultNote)}</p><div class="source-buttons">${resultLinkHtml || `<a class="btn btn--ghost" href="${escAttr(event.sourceUrl)}" rel="nofollow noopener" target="_blank">${esc(L('공식 대회 페이지 확인', 'Check official event page'))} ↗</a>`}</div></div></div>`}</div></section>
+<section class="band band--alt"><div class="wrap tournament-detail-grid"><article class="body-card tournament-detail-main"><p class="section-kicker">${esc(L('대회 브리핑', 'Event briefing'))}</p><h2>${esc(L('기본 정보와 현재 맥락', 'Event context'))}</h2><p>${esc(overview)}</p><div class="tournament-facts"><div><span>${esc(L('상태', 'Status'))}</span><strong>${esc(tourStatusLabel(loc, event.status))}</strong></div><div><span>${esc(L('투어', 'Tour'))}</span><strong>${esc(event.tour)}</strong></div><div><span>${esc(L('기간', 'Dates'))}</span><strong>${esc(dates)}</strong></div><div><span>${esc(L('장소', 'Location'))}</span><strong>${esc(location)}</strong></div></div></article><aside class="body-card tournament-detail-side tournament-detail-side--facts"><p class="section-kicker">${esc(L('숫자와 특이사항', 'Facts & notable details'))}</p><h2>${esc(L('이벤트를 이해하는 핵심 정보', 'What makes this event distinct'))}</h2><ul class="tour-detail-list">${notableFacts.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></aside></div></section>
+${storyHtml ? `<section class="event-stories-band"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">STORYLINES</p><h2 class="band__title">${esc(L('스코어 밖에서 봐야 할 이야기', 'The stories beyond the score'))}</h2><p class="band__intro">${esc(L('대회 포맷, 선수 성장, 일정과 시즌 경쟁이 결과에 어떤 의미를 더하는지 정리합니다.', 'Format, player development, scheduling, and season pressure explain what the result means.'))}</p></div></div><div class="event-story-grid">${storyHtml}</div></div></section>` : ''}
+<section class="band"><div class="wrap tournament-detail-columns"><article><p class="section-kicker">${esc(L('주요 출전·구성', 'Field & format'))}</p><h2>${esc(L('참가 선수·팀', 'Players and teams'))}</h2><ul class="tour-detail-list">${participants.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></article><article><p class="section-kicker">${esc(L('관전 포인트', 'What to watch'))}</p><h2>${esc(L('이번 대회의 핵심 질문', 'Key questions'))}</h2><ul class="tour-detail-list">${watch.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></article><article><p class="section-kicker">SEASON CONTEXT</p><h2>${esc(L('전체 시즌에서 갖는 의미', 'Why this event matters'))}</h2><p>${esc(storyline)}</p></article></div></section>
+<section class="band band--alt"><div class="wrap"><h2 class="band__title">${esc(L('다음으로 이어 보기', 'Continue following'))}</h2><div class="tour-related-grid"><a href="${link(loc, 'pro-scene/')}"><strong>${esc(proSceneLabel(loc, 'hub'))}</strong><span>${esc(L('최신 게시판으로 돌아가기', 'Back to the live board'))} →</span></a><a href="${link(loc, 'pro-scene/players/')}"><strong>${esc(proSceneLabel(loc, 'players'))}</strong><span>${esc(L('선수 프로필과 스타일 보기', 'Player profiles and styles'))} →</span></a><a href="${link(loc, 'pro-scene/results/')}"><strong>${esc(proSceneLabel(loc, 'results'))}</strong><span>${esc(L('결과와 랭킹 연결', 'Results and rankings'))} →</span></a><a href="${link(loc, 'blogs/')}"><strong>${esc(proSceneLabel(loc, 'insights'))}</strong><span>${esc(L('전술·장비·스토리 심층 글', 'Tactics, gear, and long-form stories'))} →</span></a></div></div></section>`;
+  return layout({ loc, rel: 'tournaments/' + event.slug + '/', title, description: overview, bodyHtml: body });
+}
+
 function resultRecap(loc, r) {
   const pick = (b) => (loc === 'ko' && r[b + 'Ko']) ? r[b + 'Ko'] : r[b];
   const medals = ['🥇', '🥈', '🥉'];
@@ -4339,38 +4447,7 @@ function render410() {
 
 
 function renderRootLanding() {
-  const desc = 'Picklary default route — redirecting to the English main page.';
-  return `<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${esc(config.siteName)} — Redirecting to English</title>
-  <meta name="description" content="${esc(desc)}">
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="${config.url}/en/">
-  <link rel="alternate" hreflang="en" href="${config.url}/en/">
-  <link rel="alternate" hreflang="ko" href="${config.url}/ko/">
-  <link rel="alternate" hreflang="x-default" href="${config.url}/en/">
-  <meta http-equiv="refresh" content="0; url=/en/">
-  <script>window.location.replace('/en/');</script>
-  <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0;min-height:100vh;display:grid;place-items:center;background:#f4f7f6;color:#16201c}
-    .card{max-width:560px;margin:24px;padding:24px 28px;border:1px solid #dbe5df;border-radius:20px;background:#fff;box-shadow:0 18px 40px rgba(16,40,32,.08)}
-    h1{margin:0 0 10px;font-size:1.55rem;color:#1E6F5C}
-    p{margin:.55rem 0;line-height:1.65}
-    a{color:#1E6F5C;font-weight:700}
-  </style>
-</head>
-<body>
-  <main class="card">
-    <h1>Redirecting to Picklary English</h1>
-    <p>You are being redirected to the English main page.</p>
-    <p>영문 메인 페이지로 자동 이동합니다. 한국어 페이지는 <a href="/ko/">/ko/</a> 에서 바로 이용하실 수 있습니다.</p>
-    <p>If nothing happens, <a href="/en/">open the English home page</a>.</p>
-  </main>
-</body>
-</html>`;
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url=/en/"><title>Picklary</title><link rel="canonical" href="${config.url}/en/"><link rel="alternate" hreflang="en" href="${config.url}/en/"><link rel="alternate" hreflang="ko" href="${config.url}/ko/"><link rel="alternate" hreflang="x-default" href="${config.url}/en/"><script>location.replace('/en/');</script></head><body><a href="/en/">Open Picklary</a></body></html>`;
 }
 
 // ===========================================================================
@@ -4401,6 +4478,44 @@ function copyDir(src, dest) {
   }
 }
 
+
+
+function clipLiteLabel(loc, key) {
+  const labels = {
+    ko: {
+      eyebrow: 'Windows 영상 도구 · v0.7.5', title: 'Picklary Clip Lite', intro: 'Clip Editor와 DualCam Composer를 하나의 Windows 프로그램에서 사용합니다. 두 영상의 공통 소리 구간을 찾아 시작점을 맞추고, 결과를 확인한 뒤 좌우 또는 상하 화면으로 합성할 수 있습니다.',
+      download: '한글판 다운로드', english: '영문판 다운로드', landing: '전체 다운로드 안내', guide: '설치 안내', report: '검증 보고서',
+      local: '원본 영상은 PC에서 로컬 처리', sync: '사운드 자동 정렬 후 적용 전 확인', output: 'FHD·4K 및 좌우·상하 DualCam', gpu: 'NVIDIA NVENC 우선, 실패 시 CPU 전환', controls: '재생 버튼과 타임라인이 가려지지 않는 v0.7.5 UI', labels: '1번 영상 좌측/상단 · 2번 영상 우측/하단',
+      howTitle: '사용 흐름', howBody: 'ZIP을 새 폴더에 압축 해제하고 00_RUN_PICKLARY_LITE_WINDOWS.bat을 실행하세요. DualCam에서는 두 영상을 불러온 뒤 자동 정렬 결과를 검토하고 합성합니다.',
+      privacyTitle: '업로드 없이 로컬 처리', privacyBody: '웹페이지는 프로그램과 문서를 내려받는 역할만 합니다. 실제 영상 편집과 합성은 사용자의 Windows PC에서 실행됩니다.'
+    },
+    en: {
+      eyebrow: 'Windows video tool · v0.7.5', title: 'Picklary Clip Lite', intro: 'Use the Clip Editor and DualCam Composer in one Windows application. Find a shared audio section, review the suggested start points, and compose the videos horizontally or vertically.',
+      download: 'Download Korean edition', english: 'Download English edition', landing: 'All download options', guide: 'Setup notes', report: 'Acceptance report',
+      local: 'Source videos are processed locally', sync: 'Audio auto-sync with review before apply', output: 'FHD or 4K, horizontal or vertical DualCam', gpu: 'NVIDIA NVENC first with CPU fallback', controls: 'v0.7.5 keeps playback controls and timelines visible', labels: 'Video 1 left/top · Video 2 right/bottom',
+      howTitle: 'Workflow', howBody: 'Extract the ZIP to a new folder and run 00_RUN_PICKLARY_LITE_WINDOWS.bat. In DualCam, load both videos, review the auto-sync result, and then compose.',
+      privacyTitle: 'Local processing without source upload', privacyBody: 'The webpage only provides the application and documentation. Video editing and composition run on your Windows PC.'
+    }
+  };
+  const l = labels[loc] || labels.en;
+  return l[key] || labels.en[key] || key;
+}
+function renderClipLite(loc) {
+  const L = (key) => clipLiteLabel(loc, key);
+  const isKo = loc === 'ko';
+  const primaryZip = isKo ? 'Picklary_Lite_v0.7.5_KO_Windows.zip' : 'Picklary_Lite_v0.7.5_EN_Windows.zip';
+  const primaryReadme = isKo ? '00_READ_ME_FIRST_KO.txt' : '00_READ_ME_FIRST_EN.txt';
+  const primaryReport = isKo ? 'ACCEPTANCE_REPORT_KO.md' : 'ACCEPTANCE_REPORT_EN.md';
+  const featureKeys = ['local','sync','output','gpu','controls','labels'];
+  const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: L('title') }])}
+<section class="page-head clip-lite-hero"><div class="wrap two-col two-col--wide">
+  <div><p class="page-head__eyebrow">${esc(L('eyebrow'))}</p><h1>${esc(L('title'))}</h1><p class="page-head__intro">${esc(L('intro'))}</p><div class="source-buttons"><a class="btn btn--primary" href="/picklary-lite/downloads/${escAttr(primaryZip)}">${esc(isKo ? L('download') : L('english'))}</a><a class="btn btn--ghost" href="/picklary-lite/">${esc(L('landing'))}</a></div></div>
+  <div class="clip-lite-preview" aria-label="DualCam preview"><div class="clip-lite-preview__top"><span>DualCam</span><span>Horizontal</span><span>4K</span></div><div class="clip-lite-preview__screens"><div>${esc(isKo ? '1번 영상\n좌측 / 상단' : 'Video 1\nLeft / Top')}</div><div>${esc(isKo ? '2번 영상\n우측 / 하단' : 'Video 2\nRight / Bottom')}</div></div><div class="clip-lite-preview__timeline"><b>▶</b><i></i><span>00:12.300</span></div></div>
+</div></section>
+<section class="band"><div class="wrap"><h2 class="band__title">${esc(isKo ? 'v0.7.5 주요 기능' : 'Key features in v0.7.5')}</h2><div class="cards clip-lite-features">${featureKeys.map((key, i) => `<article class="card"><p class="card__eyebrow">0${i + 1}</p><h3 class="card__title">${esc(L(key))}</h3></article>`).join('')}</div></div></section>
+<section class="band band--alt"><div class="wrap two-col two-col--wide"><article class="prose"><h2>${esc(L('howTitle'))}</h2><p>${esc(L('howBody'))}</p><div class="source-buttons"><a class="btn btn--primary" href="/picklary-lite/downloads/${escAttr(primaryZip)}">${esc(isKo ? L('download') : L('english'))}</a><a class="btn btn--ghost" href="/picklary-lite/docs/${escAttr(primaryReadme)}">${esc(L('guide'))}</a><a class="btn btn--ghost" href="/picklary-lite/docs/${escAttr(primaryReport)}">${esc(L('report'))}</a></div></article><article class="prose"><h2>${esc(L('privacyTitle'))}</h2><p>${esc(L('privacyBody'))}</p><p><a href="/picklary-lite/${isKo ? 'ko' : 'en'}/">${esc(isKo ? '전용 다운로드 페이지 열기' : 'Open dedicated download page')} →</a></p></article></div></section>`;
+  return layout({ loc, rel: 'clip-lite/', title: L('title') + ' v0.7.5', description: L('intro'), bodyHtml: body, noAds: true });
+}
 
 function renderBlogsPage(loc) {
   const t = {
@@ -4487,8 +4602,6 @@ function buildSitemapXml() {
   const urls = [];
   // Root global landing page (indexable, language-neutral)
   urls.push(`  <url>\n    <loc>${config.url}/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>`);
-  urls.push(`  <url>\n    <loc>${config.url}/clip-lite/</loc>\n    <xhtml:link rel="alternate" hreflang="ko" href="${config.url}/clip-lite/"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${config.url}/clip-lite/en/"/>\n    <changefreq>monthly</changefreq>\n    <priority>0.85</priority>\n  </url>`);
-  urls.push(`  <url>\n    <loc>${config.url}/clip-lite/en/</loc>\n    <xhtml:link rel="alternate" hreflang="ko" href="${config.url}/clip-lite/"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${config.url}/clip-lite/en/"/>\n    <changefreq>monthly</changefreq>\n    <priority>0.85</priority>\n  </url>`);
   const add = (rel, changefreq, priority) => {
     const alts = locales.map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${config.url}${link(l, rel)}"/>`).join('\n');
     for (const loc of locales) {
@@ -4506,9 +4619,12 @@ function buildSitemapXml() {
   add('paddles/', 'weekly', '0.86');
   add('tools/paddle-finder/', 'weekly', '0.75');
   add('players/', 'weekly', '0.8');
-  add('pro-scene/', 'weekly', '0.86');
-  ['players','results','rules'].forEach((type) => add('pro-scene/' + type + '/', 'weekly', '0.74'));
+  add('pro-scene/', 'daily', '0.90');
+  ['players','results','storylines','rules'].forEach((type) => add('pro-scene/' + type + '/', 'weekly', '0.74'));
+  urls.push(`  <url>\n    <loc>${config.url}/clip-lite/</loc>\n    <xhtml:link rel="alternate" hreflang="ko" href="${config.url}/clip-lite/"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${config.url}/clip-lite/en/"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${config.url}/clip-lite/en/"/>\n    <changefreq>monthly</changefreq>\n    <priority>0.78</priority>\n  </url>`);
+  urls.push(`  <url>\n    <loc>${config.url}/clip-lite/en/</loc>\n    <xhtml:link rel="alternate" hreflang="ko" href="${config.url}/clip-lite/"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${config.url}/clip-lite/en/"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${config.url}/clip-lite/en/"/>\n    <changefreq>monthly</changefreq>\n    <priority>0.78</priority>\n  </url>`);
   add('tournaments/', 'daily', '0.84');
+  (tourBoard.tournaments || []).forEach((event) => add('tournaments/' + event.slug + '/', 'daily', '0.76'));
   ['us','international','results'].forEach((type) => add('tournaments/' + type + '/', 'daily', '0.72'));
   add('updates/rules/', 'weekly', '0.7');
   add('boards/', 'weekly', '0.8');
@@ -4561,8 +4677,11 @@ function build() {
     writePage(loc, 'pro-scene', renderProSceneHub(loc));
     writePage(loc, 'pro-scene/players', renderProScenePlayers(loc));
     writePage(loc, 'pro-scene/results', renderProSceneResults(loc));
+    writePage(loc, 'pro-scene/storylines', renderProSceneStorylines(loc));
     writePage(loc, 'pro-scene/rules', renderProSceneRules(loc));
+    writePage(loc, 'clip-lite', renderClipLite(loc));
     writePage(loc, 'tournaments', renderTournamentsIndex(loc));
+    (tourBoard.tournaments || []).forEach((event) => writePage(loc, 'tournaments/' + event.slug, renderTournamentDetail(loc, event)));
     writePage(loc, 'tournaments/us', renderTournamentsCategory(loc, 'tournaments'));
     writePage(loc, 'tournaments/international', renderTournamentsCategory(loc, 'international'));
     writePage(loc, 'tournaments/results', renderTournamentsCategory(loc, 'results'));
@@ -4602,24 +4721,47 @@ function build() {
   // Public assets only. The source package still contains /admin and /data for editing,
   // but the AdSense-ready public build does not expose demo/admin JSON endpoints.
   copyDir(path.join(ROOT, 'assets'), path.join(DIST, 'assets'));
-
-  // Picklary Clip Lite is maintained as a self-contained browser editor.
-  // Build output must include it because Netlify publishes only ./dist.
-  const requiredClipFiles = [
-    path.join(CLIP_LITE_SOURCE, 'index.html'),
-    path.join(CLIP_LITE_SOURCE, 'ffmpeg', 'ffmpeg-core.js'),
-    path.join(CLIP_LITE_SOURCE, 'ffmpeg', 'ffmpeg-core.wasm')
-  ];
-  const missingClipFiles = requiredClipFiles.filter((file) => !fs.existsSync(file));
-  if (missingClipFiles.length) {
-    throw new Error('Clip Lite build files are missing: ' + missingClipFiles.join(', '));
-  }
-  copyDir(CLIP_LITE_SOURCE, path.join(DIST, 'clip-lite'));
+  const liteDeploy = path.join(ROOT, 'lite-deploy');
+  if (fs.existsSync(liteDeploy)) copyDir(liteDeploy, path.join(DIST, 'picklary-lite'));
+  const clipLiteWeb = path.join(ROOT, 'clip-lite-web');
+  if (fs.existsSync(clipLiteWeb)) copyDir(clipLiteWeb, path.join(DIST, 'clip-lite'));
 
   // root files
   writeFile('404.html', render404());
   writeFile('410.html', render410());
   writeFile('robots.txt', `User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /data/\nDisallow: /i18n/\n\nSitemap: ${config.url}/sitemap.xml\n`);
+  writeFile('_redirects', `/ /en/ 302!
+/ko/tour /ko/pro-scene/ 301!
+/en/tour /en/pro-scene/ 301!
+/tour /en/pro-scene/ 301!
+/en/clip-lite/* /clip-lite/en/:splat 301!
+/ko/clip-lite/* /clip-lite/:splat 301!
+/lite /clip-lite/en/ 301!
+/download /picklary-lite/en/ 302!
+/download/ko /picklary-lite/downloads/Picklary_Lite_v0.7.5_KO_Windows.zip 302!
+/download/en /picklary-lite/downloads/Picklary_Lite_v0.7.5_EN_Windows.zip 302!
+/product/* /410.html 410!
+/product-category/* /410.html 410!
+/shop/* /410.html 410!
+/cart/* /410.html 410!
+/checkout/* /410.html 410!
+/my-account/* /410.html 410!
+`);
+  writeFile('_headers', `/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/clip-lite/assets/*
+  Cache-Control: public, max-age=86400
+
+/picklary-lite/downloads/*
+  Cache-Control: public, max-age=86400
+  Content-Disposition: attachment
+`);
   const adsensePubId = (((config.adsense && config.adsense.clientId) || '').trim()).replace(/^ca-/, '');
   writeFile('ads.txt', adsensePubId
     ? `google.com, ${adsensePubId}, DIRECT, f08c47fec0942fa0\n`

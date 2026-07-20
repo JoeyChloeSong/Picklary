@@ -12,9 +12,6 @@ const { spawn } = require("child_process");
 
 const ROOT = path.join(__dirname, "dist");
 const HOST = "127.0.0.1";
-const OPEN_PATH = String(process.env.OPEN_PATH || "/").startsWith("/")
-  ? String(process.env.OPEN_PATH || "/")
-  : "/" + String(process.env.OPEN_PATH || "/");
 const requestedPort = Number(process.env.PORT || process.argv[2] || 0);
 const PORTS = requestedPort
   ? [requestedPort, 8787, 8080, 5500, 5173, 8888, 4321, 5000, 3000]
@@ -33,9 +30,7 @@ const TYPES = {
   ".jpg": "image/jpeg",
   ".jpeg": "image/jpeg",
   ".webp": "image/webp",
-  ".ico": "image/x-icon",
-  ".wasm": "application/wasm",
-  ".map": "application/json; charset=utf-8"
+  ".ico": "image/x-icon"
 };
 
 function log(line) {
@@ -139,12 +134,11 @@ function tryPort(index) {
   });
 
   server.listen(port, HOST, () => {
-    const baseUrl = "http://" + HOST + ":" + port + "/";
-    const url = "http://" + HOST + ":" + port + OPEN_PATH;
+    const url = "http://" + HOST + ":" + port + "/";
     log("");
     log("Picklary is running.");
-    log("Open this URL: " + url);
-    log("Site home: " + baseUrl + "  · Clip Lite: " + baseUrl + "clip-lite/");
+    log("Open this URL: " + url + "  (auto language routing)");
+    log("Direct links: " + url + "ko/ · " + url + "en/");
     log("To stop the server, press Ctrl + C in this window.");
     log("");
     openBrowser(url);

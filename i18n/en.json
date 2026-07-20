@@ -12,7 +12,7 @@
     "menu": "Menu",
     "levelPathway": "Level Up",
     "paddles": "Gear Lab",
-    "players": "Pro Scene",
+    "players": "Tour Board",
     "highlights": "Highlights",
     "dupr": "DUPR",
     "rulesSkills": "Rules & Skills",
@@ -20,9 +20,10 @@
     "blogs": "Off-court",
     "levelUp": "Level Up",
     "gearLab": "Gear Lab",
-    "proScene": "Pro Scene",
+    "proScene": "Tour Board",
     "playHub": "Play Hub",
-    "insights": "Insights"
+    "insights": "Insights",
+    "clipLite": "Clip Lite"
   },
   "lang": {
     "label": "Language",
@@ -31,7 +32,7 @@
   "hero": {
     "kicker": "Pickleball growth map",
     "title": "Level up your pickleball game, choose smarter gear, and find people to play with.",
-    "lead": "Picklary brings together level guides, DUPR self-checks, gear criteria, pro-scene context, and review-first community tools in one pickleball hub.",
+    "lead": "Picklary brings together level guides, DUPR self-checks, gear criteria, tour results and storylines, and review-first community tools in one pickleball hub.",
     "ctaPrimary": "Pick my level",
     "ctaSecondary": "Explore Gear Lab",
     "ctaTertiary": "Find people to play with"
@@ -174,7 +175,7 @@
     "selfCheck": "Self-check",
     "dupr": "DUPR",
     "gearLab": "Gear Lab",
-    "proScene": "Pro Scene",
+    "proScene": "Tour Board",
     "insights": "Insights"
   },
   "level": {

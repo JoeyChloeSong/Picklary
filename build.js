@@ -393,7 +393,7 @@ function layout(opts) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css?v=skill-review-board-mvp-20260703">
+  <link rel="stylesheet" href="/assets/css/style-picklary-v053-20260721.css">
   ${jsonldTags}
   ${adsenseTags}
 </head>
@@ -404,7 +404,7 @@ function layout(opts) {
 ${opts.bodyHtml}
   </main>
   ${footer(loc)}
-  <script src="/assets/js/site.js?v=skill-review-board-mvp-20260703" defer></script>
+  <script src="/assets/js/site-tour-mobile-v051-20260720.js" defer></script>
 </body>
 </html>`;
 }
@@ -758,6 +758,17 @@ function visualFigure(loc, key, cls) {
       : tt(loc, v.key);
   const dims = svgDims(v.src) || (v.width && v.height ? ` width="${v.width}" height="${v.height}"` : '');
   return `<figure class="visual-card ${cls || ''}"><img src="/assets/img/${escAttr(v.src)}"${dims} alt="${escAttr(caption)}" loading="lazy"><figcaption>${esc(caption)}</figcaption></figure>`;
+}
+function linkedVisualFigure(loc, key, items, cls) {
+  const v = visuals[key] || visuals.court;
+  const caption = tt(loc, v.key);
+  const dims = svgDims(v.src) || (v.width && v.height ? ` width="${v.width}" height="${v.height}"` : '');
+  const hotspots = (items || []).map((item) => {
+    const label = item.label || item.title || '';
+    const style = `left:${item.left}%;top:${item.top}%;width:${item.width}%;height:${item.height}%;`;
+    return `<a class="visual-card__hotspot visual-card__hotspot--${escAttr(item.tone || 'default')}" href="${escAttr(item.href)}" style="${escAttr(style)}" aria-label="${escAttr(label)}" title="${escAttr(label)}"><span class="visually-hidden">${esc(label)}</span></a>`;
+  }).join('');
+  return `<figure class="visual-card visual-card--linked ${cls || ''}"><div class="visual-card__media"><img src="/assets/img/${escAttr(v.src)}"${dims} alt="${escAttr(caption)}" loading="lazy">${hotspots}</div><figcaption>${esc(caption)} · ${esc(loc === 'ko' ? '카드를 눌러 바로 이동' : loc === 'es' ? 'Selecciona una tarjeta para abrirla' : 'Select a card to open it')}</figcaption></figure>`;
 }
 function contentVisual(loc, categoryId) { return visualFigure(loc, categoryVisualKey[categoryId] || 'court', 'visual-card--article'); }
 function levelVisual(loc, level) {
@@ -2585,7 +2596,12 @@ function renderBoardsIndex(loc) {
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: boardLabel(loc, 'title') }])}
 <section class="page-head page-head--visual"><div class="wrap two-col two-col--wide">
   <div><p class="page-head__eyebrow">${esc(boardLabel(loc, 'nav'))}</p><h1>${esc(boardLabel(loc, 'title'))}</h1><p class="page-head__intro">${esc(L('파트너, 대회, 코치, 지역 커뮤니티를 빠르게 찾는 실전형 플레이 허브입니다. 자주 쓰는 네 가지 경로만 남기고 첫 화면을 단순화했습니다.', 'A focused play hub for partners, tournaments, coaches, and local communities. The first screen now keeps just the four most-used paths.', 'Un play hub más limpio para compañeros, torneos, entrenadores y comunidad local. La primera pantalla ahora muestra solo las cuatro rutas principales.'))}</p></div>
-  ${visualFigure(loc, 'boards')}
+  ${linkedVisualFigure(loc, 'boards', [
+    { href: link(loc, 'boards/friends/'), label: L('커뮤니티 열기', 'Open Community', 'Abrir comunidad'), left: 2.7, top: 11.4, width: 46.3, height: 38.2, tone: 'community' },
+    { href: link(loc, 'boards/partners/'), label: L('파트너 찾기 열기', 'Open Find Partners', 'Abrir búsqueda de compañeros'), left: 51.2, top: 11.4, width: 46.4, height: 38.2, tone: 'partners' },
+    { href: link(loc, 'boards/tournaments/'), label: L('대회 게시판 열기', 'Open Tournaments', 'Abrir torneos'), left: 2.7, top: 52.9, width: 46.3, height: 38.0, tone: 'tournaments' },
+    { href: link(loc, 'boards/coaches/'), label: L('코치 찾기 열기', 'Open Find Coach', 'Abrir entrenadores'), left: 51.2, top: 52.9, width: 46.4, height: 38.0, tone: 'coaches' }
+  ])}
 </div></section>
 <section class="band band--compact"><div class="wrap"><p class="notice">${esc(communityLabel(loc, 'prelaunchNotice'))}</p></div></section>
 ${communityDashboard(loc)}
@@ -3174,7 +3190,11 @@ function renderCategoriesIndex(loc) {
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: tt(loc, 'categories.title') }])}
 <section class="page-head page-head--visual"><div class="wrap two-col two-col--wide">
   <div><p class="page-head__eyebrow">${esc(tt(loc, 'categories.title'))}</p><h1>${esc(tt(loc, 'categories.title'))}</h1><p class="page-head__intro">${esc(L('중복되는 메뉴를 줄이고, 규정·블로그·학습형 커뮤니티 기능을 한곳에 묶은 인사이트 허브입니다.', 'An Insights hub that trims overlap and groups rules, blog gateways, and learning-oriented community tools in one place.', 'Un hub de Insights que reduce solapamientos y reúne reglas, blogs y herramientas de aprendizaje en un solo lugar.'))}</p></div>
-  ${visualFigure(loc, 'insights')}
+  ${linkedVisualFigure(loc, 'insights', [
+    { href: link(loc, 'pro-scene/rules/'), label: L('PPA·MLP 규정 열기', 'Open PPA & MLP Rules', 'Abrir reglas PPA y MLP'), left: 2.7, top: 20.0, width: 30.4, height: 60.0, tone: 'rules' },
+    { href: link(loc, 'boards/skill-review/'), label: L('스킬 리뷰 열기', 'Open Skill Review', 'Abrir Skill Review'), left: 35.0, top: 20.0, width: 30.4, height: 60.0, tone: 'skill' },
+    { href: link(loc, 'blogs/'), label: L('블로그 게이트웨이 열기', 'Open Blog Gateways', 'Abrir portales de blogs'), left: 67.5, top: 20.0, width: 29.8, height: 60.0, tone: 'gateways' }
+  ])}
 </div></section>
 <section class="band"><div class="wrap"><div class="hub-chooser hub-chooser--insights">${rulesCard}${boardsCard}${blogsCard}</div></div></section>
 <section class="band"><div class="wrap narrow prose source-panel source-panel--hub"><h2>${esc(L('구성 원칙', 'Why this layout', 'Por qué este diseño'))}</h2><p>${esc(L('Play Hub는 실제 사람과 연결되는 경로에 집중하고, Insights는 규정·콘텐츠·학습형 게시판을 모아 탐색성을 높였습니다.', 'Play Hub now focuses on real-world connections, while Insights gathers rules, content, and learning boards to improve findability.', 'Play Hub se enfoca ahora en conexiones reales, mientras Insights reúne reglas, contenido y tableros de aprendizaje para mejorar la navegación.'))}</p></div></section>

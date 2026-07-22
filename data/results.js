@@ -130,3 +130,44 @@ module.exports = [
     storylineKo: '남자 단식에서는 크리스토퍼 해워스가 결승에서 잭 삭을 꺾었습니다. 다만 더 큰 화제는 점수판 밖에 있었는데, 마스터스는 최고 100만 명 이상의 시청자를 모은 것으로 전해져 프로 피클볼 중계의 기록적인 수치를 남겼습니다.'
   }
 ];
+
+// Results-page refresh through 2026-07-20.
+;(() => {
+  const rows = module.exports;
+  const mlp = rows.find((r) => r.id === 'r-2026-mlp');
+  if (!mlp) return;
+  Object.assign(mlp, {
+    event: 'Major League Pickleball 2026 (through San Diego)',
+    eventKo: '메이저 리그 피클볼 2026 (샌디에이고 종료 기준)',
+    checked: '2026-07-20',
+    liveLabel: 'Live standings & next-event scores',
+    liveLabelKo: '라이브 순위·다음 대회 스코어',
+    summary: 'Seven of nine regular-season stops are complete, along with the Mid-Season Tournament. New Jersey and St. Louis remain the central season-long rivalry, while Dallas used an undefeated San Diego run to add 25 points before Chicago.',
+    summaryKo: '정규 시즌 9개 대회 중 7개와 미드시즌 토너먼트가 완료됐습니다. New Jersey와 St. Louis가 시즌 선두 경쟁의 중심이며, Dallas는 샌디에이고 무패 우승으로 시카고를 앞두고 25점을 추가했습니다.',
+    winnersLabel: 'Completed 2026 MLP event results through July 20',
+    winnersLabelKo: '2026년 7월 20일 기준 완료된 MLP 이벤트 결과',
+    winners: [
+      { division: 'Dallas — May 22–25', divisionKo: '댈러스 — 5/22–25', champ: 'LA Mad Drops', silver: 'Columbus Sliders', note: 'Mad Drops won the opener 3-1.', noteKo: 'Mad Drops가 개막 대회를 3-1로 우승.' },
+      { division: 'Columbus — May 28–31', divisionKo: '콜럼버스 — 5/28–31', champ: 'New Jersey 5s', silver: 'St. Louis Shock', bronze: 'Columbus Sliders', note: 'New Jersey swept St. Louis 3-0.', noteKo: 'New Jersey가 St. Louis를 3-0으로 완파.' },
+      { division: 'St. Louis — June 4–7', divisionKo: '세인트루이스 — 6/4–7', champ: 'St. Louis Shock', silver: 'LA Mad Drops', note: 'Shock won the final 3-0.', noteKo: 'Shock가 결승을 3-0으로 우승.' },
+      { division: 'Austin — June 11–14', divisionKo: '오스틴 — 6/11–14', champ: 'New Jersey 5s', note: 'New Jersey added its second event title.', noteKo: 'New Jersey가 시즌 두 번째 이벤트 우승.' },
+      { division: 'St. Petersburg — June 17–21', divisionKo: '세인트피터스버그 — 6/17–21', champ: 'St. Louis Shock', silver: 'LA Mad Drops', bronze: 'Brooklyn Pickleball Team', note: 'Shock won the title match 3-0.', noteKo: 'Shock가 타이틀 매치를 3-0으로 우승.' },
+      { division: 'New York — June 25–28', divisionKo: '뉴욕 — 6/25–28', champ: 'New Jersey 5s', silver: 'Brooklyn Pickleball Team', note: 'New Jersey won the Super Sunday final 3-0.', noteKo: 'New Jersey가 Super Sunday 결승을 3-0으로 우승.' },
+      { division: 'Mid-Season Tournament — July 8–12', divisionKo: '미드시즌 토너먼트 — 7/8–12', champ: 'St. Louis Shock', silver: 'New Jersey 5s', bronze: 'Columbus Sliders', note: 'St. Louis swept the final 3-0; Columbus won bronze 3-1.', noteKo: 'St. Louis가 결승을 3-0으로 스윕; Columbus가 3-1로 동메달.' },
+      { division: 'San Diego — July 16–19', divisionKo: '샌디에이고 — 7/16–19', champ: 'Dallas Flash', silver: 'Columbus Sliders', bronze: 'Atlanta Bouncers', note: 'Dallas won the final 3-1 and earned 25 event points.', noteKo: 'Dallas가 결승을 3-1로 이기고 이벤트 포인트 25점 획득.' }
+    ],
+    standingsLabel: 'Playoff race after San Diego',
+    standingsLabelKo: '샌디에이고 종료 후 플레이오프 경쟁',
+    standings: [
+      { team: 'St. Louis Shock', note: 'Mid-Season champions; the bonus points secured a playoff berth and kept the Shock at the top of the title race.', noteKo: '미드시즌 우승과 보너스 포인트로 플레이오프 진출 확정, 타이틀 경쟁 최상단 유지.' },
+      { team: 'New Jersey 5s', note: 'New York champions and Mid-Season runners-up; still locked with St. Louis in the season’s defining rivalry.', noteKo: '뉴욕 우승·미드시즌 준우승으로 St. Louis와 시즌 핵심 경쟁 지속.' },
+      { team: 'Dallas Flash', note: 'An undefeated San Diego title added 25 points; Chicago is their final regular-season opportunity.', noteKo: '샌디에이고 무패 우승으로 25점 추가; 시카고가 마지막 정규 시즌 기회.' },
+      { team: 'Columbus Sliders', note: 'Bronze at the Mid-Season Tournament and runner-up in San Diego; their regular season is complete.', noteKo: '미드시즌 3위·샌디에이고 준우승; 정규 시즌 일정 완료.' },
+      { team: 'Atlanta Bouncers', note: 'Third in San Diego with 15 points, a timely lift in the playoff-positioning race.', noteKo: '샌디에이고 3위와 15점으로 플레이오프 순위 경쟁에 중요한 상승.' }
+    ],
+    storylineTitle: 'Storyline — three different winners in three recent windows',
+    storylineTitleKo: '관전 포인트 — 최근 세 구간에서 나온 세 우승팀',
+    storyline: 'New Jersey won New York, St. Louis controlled the Mid-Season Tournament, and Dallas answered with an undefeated San Diego title. The sequence shows why the MLP race cannot be reduced to one dominant roster: format, availability, matchup plans, and the timing of each team’s final regular-season stop all matter before the playoffs.',
+    storylineKo: 'New Jersey가 뉴욕, St. Louis가 미드시즌 토너먼트, Dallas가 샌디에이고를 우승했습니다. 한 팀의 절대 우위만으로 시즌을 설명하기 어렵고, 포맷·출전 가능 여부·매치업 계획·각 팀의 마지막 정규 시즌 일정이 플레이오프 전까지 모두 중요하다는 흐름입니다.'
+  });
+})();

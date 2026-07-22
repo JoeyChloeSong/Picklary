@@ -1174,6 +1174,22 @@
     <priority>0.76</priority>
   </url>
   <url>
+    <loc>https://picklary.com/ko/tournaments/mlp-mid-season-grand-rapids-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/mlp-mid-season-grand-rapids-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/mlp-mid-season-grand-rapids-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/mlp-mid-season-grand-rapids-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/tournaments/mlp-mid-season-grand-rapids-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/mlp-mid-season-grand-rapids-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/mlp-mid-season-grand-rapids-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/mlp-mid-season-grand-rapids-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
     <loc>https://picklary.com/ko/tournaments/us/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/us/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/us/"/>

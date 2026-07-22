@@ -523,3 +523,224 @@ module.exports = {
     resultHint: 'Official results pending', resultHintKo: '공식 결과 공개 대기'
   });
 })();
+
+// Curated update: verified results and junior storyline through 2026-07-20.
+;(() => {
+  const board = module.exports;
+  board.updated = '2026-07-20';
+
+  const bySlug = (slug) => (board.tournaments || []).find((x) => x.slug === slug);
+  const statusBySlug = (slug) => (board.statusEvents || []).find((x) => x.slug === slug);
+  const removeById = (arr, ids) => (arr || []).filter((x) => !ids.includes(x.id));
+
+  // Replace the live San Diego state with the confirmed event finish.
+  const sanDiegoStatus = statusBySlug('mlp-san-diego-2026');
+  if (sanDiegoStatus) Object.assign(sanDiegoStatus, {
+    status: 'completed',
+    start: '2026-07-16', end: '2026-07-19',
+    summary: 'Dallas Flash completed an undefeated San Diego run by beating Columbus Sliders 3–1 for the Super Sunday Belt. Atlanta Bouncers finished third.',
+    summaryKo: 'Dallas Flash가 무패로 샌디에이고 일정을 마치며 Columbus Sliders를 3–1로 꺾고 Super Sunday Belt를 차지했습니다. Atlanta Bouncers는 3위에 올랐습니다.',
+    sourceName: 'Pickleball.com San Diego result recap',
+    sourceUrl: 'https://pickleball.com/news/demons-conquered-dallas-takes-down-red-hot-columbus-for-first-super-sunday-belt',
+    resultHint: 'Dallas 1st · Columbus 2nd · Atlanta 3rd',
+    resultHintKo: 'Dallas 1위 · Columbus 2위 · Atlanta 3위'
+  });
+
+  const sanDiego = bySlug('mlp-san-diego-2026');
+  if (sanDiego) Object.assign(sanDiego, {
+    archive: true,
+    status: 'completed',
+    resultStatus: 'confirmed',
+    resultChecked: '2026-07-20',
+    overview: 'Dallas Flash went unbeaten in San Diego and defeated Columbus Sliders 3–1 in the Super Sunday final. The event awarded 25 standings points to Dallas, 18 to Columbus, and 15 to third-place Atlanta.',
+    overviewKo: 'Dallas Flash가 샌디에이고에서 무패를 기록하고 Super Sunday 결승에서 Columbus Sliders를 3–1로 꺾었습니다. Dallas는 standings 25점, Columbus는 18점, 3위 Atlanta는 15점을 얻었습니다.',
+    storyline: 'San Diego turned a 2025 playoff wound into Dallas redemption. The final also carried a trade subplot as Danni-Elle Townsend helped Dallas close the title against the Columbus team that acquired Tyra Black.',
+    storylineKo: '샌디에이고는 2025년 플레이오프 패배를 Dallas가 되갚은 무대였습니다. Danni-Elle Townsend가 Tyra Black을 영입한 Columbus를 상대로 우승을 마무리해 최근 트레이드까지 결승 스토리로 연결됐습니다.',
+    sourceUrl: 'https://pickleball.com/news/demons-conquered-dallas-takes-down-red-hot-columbus-for-first-super-sunday-belt',
+    sourceName: 'Pickleball.com verified result recap',
+    secondaryUrl: 'https://majorleaguepickleball.co/events-2026/mlp-san-diego-2026/',
+    secondaryName: 'MLP official event page',
+    resultNote: 'The July 19 result recap confirms Dallas Flash defeated Columbus Sliders 3–1. It also lists the complete San Diego finish and standings points.',
+    resultNoteKo: '7월 19일 결과 리캡에서 Dallas Flash가 Columbus Sliders를 3–1로 꺾은 사실과 샌디에이고 전체 순위·standings 포인트가 확인됐습니다.',
+    results: [
+      { division: 'Super Sunday team final', divisionKo: 'Super Sunday 팀 결승', champ: 'Dallas Flash', silver: 'Columbus Sliders', bronze: 'Atlanta Bouncers', score: 'Dallas 3–1 Columbus' }
+    ],
+    resultLinks: [
+      { label: 'Verified result recap', labelKo: '확인된 결과 리캡', url: 'https://pickleball.com/news/demons-conquered-dallas-takes-down-red-hot-columbus-for-first-super-sunday-belt' },
+      { label: 'MLP official event page', labelKo: 'MLP 공식 이벤트 페이지', url: 'https://majorleaguepickleball.co/events-2026/mlp-san-diego-2026/' }
+    ],
+    notableFacts: [
+      'Dallas Flash finished the event undefeated and earned 25 standings points.',
+      'Columbus entered the final after a perfect 20-0 game record in group play, but Dallas won the title match 3–1.',
+      'Atlanta Bouncers placed third with 15 event points; SoCal Hard Eights and LA Mad Drops rounded out the top five.',
+      'Danni-Elle Townsend and Augie Ge won the closing mixed doubles game 11-4.'
+    ],
+    notableFactsKo: [
+      'Dallas Flash는 대회 무패 우승과 standings 25점을 기록했습니다.',
+      'Columbus는 그룹 경기에서 게임 전적 20승 0패를 기록했지만 결승에서는 Dallas에 1–3으로 패했습니다.',
+      'Atlanta Bouncers가 이벤트 포인트 15점으로 3위, SoCal Hard Eights와 LA Mad Drops가 Top 5를 완성했습니다.',
+      'Danni-Elle Townsend와 Augie Ge가 마지막 혼합복식 경기를 11-4로 끝냈습니다.'
+    ],
+    stories: [
+      { kicker: 'REDEMPTION', kickerKo: '설욕', title: 'Dallas answered its 2025 San Diego playoff loss', titleKo: 'Dallas, 2025년 샌디에이고 플레이오프 패배 설욕', body: 'Columbus ended Dallas’ 2025 title defense at the same venue. Eleven months later, Dallas won the rematch and its first Super Sunday Belt of 2026.', bodyKo: 'Columbus는 같은 장소에서 Dallas의 2025년 타이틀 방어를 끝냈습니다. 11개월 뒤 Dallas가 재대결에서 승리하며 2026년 첫 Super Sunday Belt를 얻었습니다.' },
+      { kicker: 'TRADE SUBPLOT', kickerKo: '트레이드 서사', title: 'Townsend and Black met on opposite sides of the deciding game', titleKo: '결정 경기에서 적으로 만난 Townsend와 Black', body: 'Townsend and Tyra Black had been exchanged between Dallas and Columbus. Townsend/Ge then closed the final against Black/Klinger.', bodyKo: 'Townsend와 Tyra Black은 Dallas와 Columbus 사이의 트레이드 당사자였습니다. 결승 마지막 경기에서 Townsend/Ge가 Black/Klinger를 상대로 우승을 확정했습니다.' },
+      { kicker: 'GROUP PLAY', kickerKo: '그룹 경기', title: 'A perfect group record did not guarantee the belt', titleKo: '완벽한 그룹 전적도 우승을 보장하지 못했다', body: 'Columbus reached Sunday without dropping a group-play game, yet Dallas changed the matchup on championship day.', bodyKo: 'Columbus는 그룹 경기에서 한 게임도 내주지 않았지만 챔피언십 데이에는 Dallas가 매치업의 흐름을 바꿨습니다.' }
+    ]
+  });
+
+  // Keep completed PPA events honest while moving the verification date forward.
+  const melbourneStatus = statusBySlug('ppa-australia-melbourne-2026');
+  if (melbourneStatus) Object.assign(melbourneStatus, {
+    status: 'completed',
+    summary: 'The event is complete with 398 registered players. Picklary rechecked the official listing on July 20; a stable medal table was still not available in the public view.',
+    summaryKo: '398명이 등록한 대회는 완료됐습니다. Picklary가 7월 20일 공식 페이지를 다시 확인했지만 공개 화면에서 안정적으로 확인 가능한 메달 표는 아직 없었습니다.',
+    resultHint: 'Completed · official medals pending', resultHintKo: '완료 · 공식 메달 표 대기'
+  });
+  const melbourne = bySlug('ppa-australia-melbourne-2026');
+  if (melbourne) Object.assign(melbourne, {
+    resultChecked: '2026-07-20',
+    resultNote: 'The event is marked completed with 398 players. Picklary rechecked the official Winners Circle and results links on July 20, but did not publish names without a stable official medal table.',
+    resultNoteKo: '공식 페이지는 398명 참가·완료 상태입니다. Picklary가 7월 20일 Winners Circle과 결과 링크를 재확인했지만 안정적인 공식 메달 표가 없어 이름을 게시하지 않았습니다.'
+  });
+
+  const maconStatus = statusBySlug('macon-ppa-challenger-2026');
+  if (maconStatus) Object.assign(maconStatus, {
+    status: 'completed',
+    summary: 'The Georgia Challenger is complete with 514 registered players. Medal names remain withheld until the official Winners Circle publishes a stable table.',
+    summaryKo: '등록 선수 514명의 조지아 챌린저는 완료됐습니다. 공식 Winners Circle에 안정적인 표가 공개될 때까지 메달리스트 이름은 보류합니다.',
+    resultHint: 'Completed · official medals pending', resultHintKo: '완료 · 공식 메달 표 대기'
+  });
+  const macon = bySlug('macon-ppa-challenger-2026');
+  if (macon) Object.assign(macon, {
+    resultChecked: '2026-07-20',
+    resultNote: 'Macon is marked completed with 514 players. The July 20 verification still did not provide a stable official Winners Circle table, so no champion names are inferred.',
+    resultNoteKo: '메이컨은 514명 참가·완료 상태입니다. 7월 20일 재확인에서도 안정적인 공식 Winners Circle 표를 확인하지 못해 우승자 이름을 추정하지 않았습니다.'
+  });
+
+  // Add the completed Mid-Season Tournament as a full result archive page.
+  const midSeasonSlug = 'mlp-mid-season-grand-rapids-2026';
+  const midSeasonEvent = {
+    slug: midSeasonSlug, archive: true, tour: 'MLP', status: 'completed', resultStatus: 'confirmed', resultChecked: '2026-07-20',
+    dates: 'July 8–12, 2026', datesKo: '2026년 7월 8–12일',
+    title: 'Edward Jones MLP Mid-Season Tournament 2026', titleKo: 'Edward Jones MLP 미드시즌 토너먼트 2026',
+    location: 'Belknap Park, Grand Rapids, Michigan', locationKo: '미국 미시간주 그랜드래피즈 Belknap Park',
+    overview: 'St. Louis Shock completed an unbeaten tournament run with a 3–0 championship sweep of the top-seeded New Jersey 5s. Columbus Sliders beat the LA Mad Drops 3–1 for third place.',
+    overviewKo: 'St. Louis Shock가 무패로 대회를 통과하고 1번 시드 New Jersey 5s를 결승에서 3–0으로 완파했습니다. Columbus Sliders는 LA Mad Drops를 3–1로 꺾고 3위를 차지했습니다.',
+    participants: ['All 20 MLP teams', 'Team Australia, Team Canada, Team Europe, and College All-Stars', '24-team double-elimination field'],
+    participantsKo: ['MLP 20개 전체 팀', 'Team Australia·Team Canada·Team Europe·College All-Stars', '24팀 더블 엘리미네이션 대진'],
+    watch: ['St. Louis’ unbeaten run through four matches', 'How the Shock neutralized Anna Leigh Waters in the final', 'Bonus standings points and playoff qualification'],
+    watchKo: ['St. Louis의 4경기 무패 우승', '결승에서 Shock가 Anna Leigh Waters의 영향력을 줄인 방식', '보너스 standings 포인트와 플레이오프 진출'],
+    storyline: 'The final was a tactical statement: St. Louis committed to a disciplined pattern in women’s doubles, then used its men’s and mixed depth to complete a national-TV sweep.',
+    storylineKo: '결승은 전술적 선언에 가까웠습니다. St. Louis는 여자복식에서 규율 있는 공략을 유지하고 남자복식과 혼합복식 뎁스로 전국 중계 3–0 스윕을 완성했습니다.',
+    sourceUrl: 'https://pickleball.com/news/shock-sweep-5s-for-first-mid-season-tournament-title-in-franchise-history', sourceName: 'Pickleball.com verified championship recap',
+    secondaryUrl: 'https://majorleaguepickleball.co/news/edward-jones-mlp-mid-season-tournament-bracket/', secondaryName: 'MLP official bracket overview',
+    resultNote: 'The championship recap confirms St. Louis defeated New Jersey 3–0, while Columbus defeated Los Angeles 3–1 in the third-place match.',
+    resultNoteKo: '결과 리캡에서 St. Louis의 New Jersey전 3–0 결승 승리와 Columbus의 Los Angeles전 3–1 3위 결정전 승리가 확인됐습니다.',
+    results: [
+      { division: 'Premier team championship', divisionKo: 'Premier 팀 챔피언십', champ: 'St. Louis Shock', silver: 'New Jersey 5s', bronze: 'Columbus Sliders', score: 'St. Louis 3–0 New Jersey' }
+    ],
+    resultLinks: [
+      { label: 'Championship result recap', labelKo: '챔피언십 결과 리캡', url: 'https://pickleball.com/news/shock-sweep-5s-for-first-mid-season-tournament-title-in-franchise-history' },
+      { label: 'MLP official bracket', labelKo: 'MLP 공식 브래킷', url: 'https://majorleaguepickleball.co/news/edward-jones-mlp-mid-season-tournament-bracket/' }
+    ],
+    notableFacts: [
+      'St. Louis went 4-0 in matches and lost only one game across the tournament.',
+      'Anna Bright/Kate Fahey beat the previously unbeaten Anna Leigh Waters/Jorja Johnson pairing 11-6 in the final.',
+      'Gabe Tardio/Hayden Patriquin won men’s doubles 11-3, and Bright/Patriquin closed mixed doubles 11-8.',
+      'The title delivered ten bonus standings points and clinched a playoff berth for St. Louis.',
+      'Columbus defeated the LA Mad Drops 3-1 for bronze and four standings points.'
+    ],
+    notableFactsKo: [
+      'St. Louis는 팀 매치 4전 전승을 기록했고 대회 전체에서 단 한 게임만 내줬습니다.',
+      'Anna Bright/Kate Fahey는 결승에서 무패였던 Anna Leigh Waters/Jorja Johnson 조를 11-6으로 꺾었습니다.',
+      'Gabe Tardio/Hayden Patriquin이 남자복식 11-3, Bright/Patriquin이 혼합복식 11-8로 승리했습니다.',
+      '우승으로 보너스 standings 10점을 얻고 St. Louis의 플레이오프 진출이 확정됐습니다.',
+      'Columbus가 LA Mad Drops를 3–1로 꺾고 동메달과 standings 4점을 얻었습니다.'
+    ],
+    stories: [
+      { kicker: 'TACTICAL UPSET', kickerKo: '전술적 업셋', title: 'Bright and Fahey ended a 25-0 women’s doubles run', titleKo: 'Bright와 Fahey, 여자복식 25연승 조합을 멈추다', body: 'Their 11-6 win over Waters/Johnson established the final’s direction and showed how disciplined target selection can reshape an MLP match.', bodyKo: 'Waters/Johnson을 상대로 한 11-6 승리는 결승의 방향을 정했고, 규율 있는 타깃 선택이 MLP 매치를 어떻게 바꾸는지 보여줬습니다.' },
+      { kicker: 'DEPTH', kickerKo: '뎁스', title: 'St. Louis won through every part of the lineup', titleKo: '라인업 전 구간에서 우위를 만든 St. Louis', body: 'Women’s, men’s, and mixed doubles each supplied a point, making the 3-0 final a complete team performance.', bodyKo: '여자복식·남자복식·혼합복식이 각각 한 점씩 만들며 3–0 결승을 완전한 팀 승리로 만들었습니다.' },
+      { kicker: 'PLAYOFF SIGNAL', kickerKo: '플레이오프 신호', title: 'A trophy, first place, and a secured postseason spot', titleKo: '우승컵·선두·플레이오프 티켓을 한 번에', body: 'The bonus points moved the Shock to the top tier of the standings and removed uncertainty about postseason qualification.', bodyKo: '보너스 포인트로 Shock는 standings 최상위권에 올라섰고 포스트시즌 진출 불확실성도 없앴습니다.' }
+    ]
+  };
+  if (!(board.tournaments || []).some((x) => x.slug === midSeasonSlug)) board.tournaments.push(midSeasonEvent);
+
+  if (!(board.statusEvents || []).some((x) => x.slug === midSeasonSlug)) {
+    board.statusEvents.splice(3, 0, {
+      slug: midSeasonSlug, status: 'completed', tour: 'MLP', start: '2026-07-08', end: '2026-07-12',
+      title: 'MLP Mid-Season Tournament', titleKo: 'MLP 미드시즌 토너먼트',
+      location: 'Belknap Park, Grand Rapids, MI', locationKo: '미국 미시간주 그랜드래피즈 Belknap Park',
+      summary: 'St. Louis Shock swept New Jersey 5s 3–0 for the title; Columbus Sliders beat LA Mad Drops 3–1 for third.',
+      summaryKo: 'St. Louis Shock가 New Jersey 5s를 3–0으로 꺾고 우승했으며, Columbus Sliders는 LA Mad Drops를 3–1로 꺾고 3위를 차지했습니다.',
+      sourceName: 'Verified championship recap', sourceUrl: 'https://pickleball.com/news/shock-sweep-5s-for-first-mid-season-tournament-title-in-franchise-history',
+      resultHint: 'St. Louis 1st · New Jersey 2nd · Columbus 3rd', resultHintKo: 'St. Louis 1위 · New Jersey 2위 · Columbus 3위',
+      detail: true
+    });
+  }
+
+  // Replace stale posts with the July 20 verified board.
+  board.posts = removeById(board.posts, ['live-mlp-san-diego-final-day', 'melbourne-completed', 'macon-final-day']);
+  const newPosts = [
+    {
+      id: 'ella-oh-us-open-18u-champion', date: '2026-07-20', kind: 'player', tour: 'USA Pickleball', discipline: 'doubles', confidence: 'confirmed',
+      title: 'Ella Oh’s 18U US Open title adds a new junior storyline', titleKo: 'Ella Oh, 11세에 US Open 18U 복식 우승',
+      summary: 'Ella Oh’s official milestone page lists her as the 2026 US Open Girls’ 18U Doubles champion at age 11, following a 2026 PPA Masters 14U singles title and a 2025 Worlds 12U singles title. Her July signature-paddle launch also sold out its first drop in 48 hours.',
+      summaryKo: 'Ella Oh의 공식 기록에는 11세에 2026 US Open 여자 18U 복식 우승, 2026 PPA Masters 14U 단식 우승, 2025 Worlds 12U 단식 우승이 기재돼 있습니다. 7월 출시한 시그니처 패들의 첫 물량도 48시간 만에 품절됐습니다.',
+      sourceName: 'Ella Oh official milestones', sourceUrl: 'https://ellaoh.com/',
+      internalUrl: 'pro-scene/storylines/'
+    },
+    {
+      id: 'mlp-san-diego-dallas-title', date: '2026-07-20', kind: 'result', tour: 'MLP', discipline: 'team', confidence: 'official',
+      title: 'Dallas Flash win MLP San Diego over Columbus, 3–1', titleKo: 'Dallas Flash, Columbus를 3–1로 꺾고 MLP 샌디에이고 우승',
+      summary: 'Dallas completed an undefeated event, earned 25 standings points, and turned last year’s San Diego playoff loss to Columbus into a Super Sunday title. Atlanta finished third.',
+      summaryKo: 'Dallas가 대회 무패와 standings 25점을 기록하며 지난해 샌디에이고 플레이오프의 Columbus전 패배를 Super Sunday 우승으로 되갚았습니다. Atlanta는 3위였습니다.',
+      sourceName: 'Pickleball.com result recap', sourceUrl: 'https://pickleball.com/news/demons-conquered-dallas-takes-down-red-hot-columbus-for-first-super-sunday-belt',
+      internalUrl: 'tournaments/mlp-san-diego-2026/'
+    },
+    {
+      id: 'mlp-mid-season-st-louis-title', date: '2026-07-20', kind: 'result', tour: 'MLP', discipline: 'team', confidence: 'official',
+      title: 'St. Louis Shock sweep New Jersey for the Mid-Season title', titleKo: 'St. Louis Shock, New Jersey를 스윕하고 미드시즌 우승',
+      summary: 'The Shock went unbeaten and won the final 3–0. Columbus took third by beating the LA Mad Drops 3–1, while St. Louis collected bonus standings points and a playoff berth.',
+      summaryKo: 'Shock는 대회 무패와 결승 3–0 승리를 기록했습니다. Columbus는 LA Mad Drops를 3–1로 꺾고 3위, St. Louis는 보너스 standings 포인트와 플레이오프 티켓을 얻었습니다.',
+      sourceName: 'Pickleball.com championship recap', sourceUrl: 'https://pickleball.com/news/shock-sweep-5s-for-first-mid-season-tournament-title-in-franchise-history',
+      internalUrl: 'tournaments/mlp-mid-season-grand-rapids-2026/'
+    },
+    {
+      id: 'melbourne-completed-20260720', date: '2026-07-20', kind: 'result', tour: 'PPA', discipline: 'all', confidence: 'official',
+      title: 'Melbourne completed; official medal table still pending', titleKo: '멜버른 대회 완료, 공식 메달 표는 계속 확인 중',
+      summary: 'The official listing confirms 398 registered players and completed status. Picklary rechecked on July 20 and continues to withhold medal names until a stable Winners Circle table is visible.',
+      summaryKo: '공식 페이지에서 등록 선수 398명과 대회 완료 상태가 확인됩니다. Picklary는 7월 20일 재확인했으며 안정적인 Winners Circle 표가 공개될 때까지 메달리스트 이름을 보류합니다.',
+      sourceName: 'Official tournament listing', sourceUrl: 'https://pickleballtournaments.com/tournaments/ppa-tour-australia-ppa250-melbourne',
+      internalUrl: 'tournaments/ppa-australia-melbourne-2026/'
+    },
+    {
+      id: 'macon-completed-20260720', date: '2026-07-20', kind: 'result', tour: 'PPA', discipline: 'all', confidence: 'official',
+      title: 'Macon Challenger completed; medal names await official table', titleKo: '메이컨 챌린저 완료, 메달리스트는 공식 표 대기',
+      summary: 'The official event is marked complete with 514 registered players. No champion names are inferred until the public Winners Circle provides a stable result table.',
+      summaryKo: '공식 이벤트는 등록 선수 514명과 완료 상태로 표시됩니다. 공개 Winners Circle에 안정적인 결과 표가 나타날 때까지 우승자 이름을 추정하지 않습니다.',
+      sourceName: 'PPA Tour event page', sourceUrl: 'https://ppatour.com/tournament/2026/2026-macon-ga/',
+      internalUrl: 'tournaments/macon-ppa-challenger-2026/'
+    }
+  ];
+  board.posts.unshift(...newPosts.filter((x) => !board.posts.some((y) => y.id === x.id)));
+
+  const ellaStory = {
+    date: '2026-07-20', confidence: 'confirmed', tour: 'USA Pickleball',
+    title: 'Ella Oh is playing above her age bracket—and winning', titleKo: '나이보다 높은 부문에서 우승한 Ella Oh',
+    body: 'At 11, Ella Oh is listed as the 2026 US Open Girls’ 18U Doubles champion. Combined with her PPA Masters 14U singles and 2025 Worlds 12U singles titles, the progression is a story about junior players moving rapidly across age and competition levels—not simply one isolated medal.',
+    bodyKo: '11세 Ella Oh는 2026 US Open 여자 18U 복식 우승자로 기록돼 있습니다. PPA Masters 14U 단식과 2025 Worlds 12U 단식 우승까지 연결하면, 이는 단일 메달보다 주니어 선수가 연령·경쟁 단계를 빠르게 넘어가는 성장 스토리입니다.',
+    sourceName: 'Ella Oh official milestones', sourceUrl: 'https://ellaoh.com/'
+  };
+  board.storylines = (board.storylines || []).filter((x) => x.title !== ellaStory.title && x.titleKo !== ellaStory.titleKo);
+  board.storylines.unshift(ellaStory);
+
+  const stLouisStory = {
+    date: '2026-07-20', confidence: 'official', tour: 'MLP',
+    title: 'St. Louis turned a matchup plan into a 3–0 final', titleKo: 'St. Louis, 매치업 계획을 결승 3–0으로 완성',
+    body: 'The Shock ended Waters/Johnson’s unbeaten women’s doubles run, then added men’s and mixed points. The result links tactical targeting, lineup depth, and playoff positioning in one tournament story.',
+    bodyKo: 'Shock는 Waters/Johnson의 여자복식 무패 행진을 멈추고 남자복식과 혼합복식까지 가져갔습니다. 전술적 타깃 선택, 라인업 뎁스, 플레이오프 순위가 하나의 대회 스토리로 연결됐습니다.',
+    sourceName: 'Pickleball.com championship recap', sourceUrl: 'https://pickleball.com/news/shock-sweep-5s-for-first-mid-season-tournament-title-in-franchise-history'
+  };
+  board.storylines = board.storylines.filter((x) => x.title !== stLouisStory.title);
+  board.storylines.splice(1, 0, stLouisStory);
+})();

@@ -1,0 +1,47 @@
+{
+  "id": "2026-07-24-pickleball-review-score-template-11a216a0",
+  "status": "draft",
+  "type": "paddles",
+  "priority": "medium",
+  "sourceId": "pickleball-review-score-template",
+  "sourceName": "Manual reviewer score template",
+  "sourceUrl": "manual://automation/reviewer-score-template.csv",
+  "fetchedAt": "2026-07-24T03:43:04.377Z",
+  "detectedAt": "2026-07-24",
+  "change": "first-scan-baseline",
+  "title": "[Baseline saved] Manual reviewer score template monitoring started",
+  "titleKo": "[기준 저장] Manual reviewer score template 모니터링 시작",
+  "summary": "Manual reviewer score template has been registered as an automation source. Future changes will create review drafts.",
+  "summaryKo": "Manual reviewer score template 페이지를 자동 업데이트 소스로 등록했습니다. 이후 페이지 변경이 감지되면 검수용 초안이 생성됩니다.",
+  "action": "Open the source, verify the exact facts, rewrite in your own words, then approve.",
+  "actionKo": "원문을 열어 정확한 사실을 확인하고, 직접 쓴 문장으로 수정한 뒤 승인하세요.",
+  "tags": [
+    "reviewer scores",
+    "market reaction",
+    "review roundup"
+  ],
+  "tagsKo": [
+    "reviewer scores",
+    "market reaction",
+    "review roundup"
+  ],
+  "verificationQuestions": [
+    "What exactly changed compared with the previous scan?",
+    "Is this an official source or a third-party listing?",
+    "Does the update affect players immediately, or is it only an announcement?",
+    "Do we need to update an existing PickleLevel page?"
+  ],
+  "verificationQuestionsKo": [
+    "이전 스캔과 비교해 실제로 무엇이 바뀌었나요?",
+    "공식 출처인가요, 제3자 안내 페이지인가요?",
+    "선수/대회 참가자에게 즉시 영향을 주는 변경인가요, 단순 공지인가요?",
+    "PickleLevel의 기존 페이지를 수정해야 하나요?"
+  ],
+  "rawSnapshot": {
+    "title": "Manual reviewer score template",
+    "h1": "",
+    "description": "[manual source] manual://automation/reviewer-score-template.csv",
+    "hash": "53273f32e390a02b1db98879a404ee4ef9128b99e966bbd7254377e67a9b5597",
+    "previousHash": null
+  }
+}

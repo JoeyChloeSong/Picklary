@@ -744,3 +744,193 @@ module.exports = {
   board.storylines = board.storylines.filter((x) => x.title !== stLouisStory.title);
   board.storylines.splice(1, 0, stLouisStory);
 })();
+
+
+// v0.5.7 current pro-result refresh through 2026-07-28.
+// Verified from the linked MLP/Pickleball.com and PPA Tour Asia recaps.
+;(() => {
+  const board = module.exports;
+  const bySlug = (slug) => (board.tournaments || []).find((event) => event.slug === slug);
+  const statusBySlug = (slug) => (board.statusEvents || []).find((event) => event.slug === slug);
+  const removePosts = new Set(['mlp-chicago-preview', 'mlp-playoff-race', 'international-corridor']);
+
+  board.updated = '2026-07-28';
+
+  const chicagoStatus = statusBySlug('mlp-chicago-2026');
+  if (chicagoStatus) Object.assign(chicagoStatus, {
+    status: 'completed',
+    summary: 'Dallas Flash defeated Brooklyn in a 21–10 DreamBreaker after the team match finished 2–2, earning a second straight Super Sunday Belt and 25 event points. California finished third.',
+    summaryKo: 'Dallas Flash가 팀 매치 2–2 뒤 DreamBreaker를 21–10으로 이겨 Brooklyn을 꺾고 2주 연속 Super Sunday Belt와 이벤트 포인트 25점을 획득했습니다. California가 3위를 차지했습니다.',
+    sourceName: 'Verified MLP Chicago championship recap',
+    sourceUrl: 'https://pickleball.com/news/dallas-outduels-brooklyn-in-dreambreaker-for-11th-straight-win-2nd-straight-super-sunday-belt',
+    resultHint: 'Dallas 1st · Brooklyn 2nd · California 3rd',
+    resultHintKo: 'Dallas 1위 · Brooklyn 2위 · California 3위'
+  });
+
+  const chicago = bySlug('mlp-chicago-2026');
+  if (chicago) Object.assign(chicago, {
+    status: 'completed',
+    resultStatus: 'confirmed',
+    resultChecked: '2026-07-28',
+    overview: 'Dallas closed its regular season with an 11th straight match win and a second consecutive event championship. The final against Brooklyn finished 2–2 before Dallas controlled the DreamBreaker 21–10.',
+    overviewKo: 'Dallas는 정규 시즌 마지막 경기에서 11연승과 2개 대회 연속 우승을 완성했습니다. Brooklyn과의 결승은 2–2 뒤 DreamBreaker로 이어졌고 Dallas가 21–10으로 승리했습니다.',
+    resultNote: 'The championship recap confirms Dallas first, Brooklyn second, California third, and the 21–10 DreamBreaker that decided the final.',
+    resultNoteKo: '공식 챔피언십 리캡에서 Dallas 1위, Brooklyn 2위, California 3위와 결승을 결정한 DreamBreaker 21–10 결과가 확인됩니다.',
+    results: [
+      { division: 'MLP Chicago team championship', divisionKo: 'MLP 시카고 팀 챔피언십', champ: 'Dallas Flash', silver: 'Brooklyn Pickleball Team', bronze: 'California Black Bears', score: 'Team match 2–2 · Dallas won DreamBreaker 21–10' }
+    ],
+    resultLinks: [
+      { label: 'Championship recap', labelKo: '챔피언십 결과 리캡', url: 'https://pickleball.com/news/dallas-outduels-brooklyn-in-dreambreaker-for-11th-straight-win-2nd-straight-super-sunday-belt' },
+      { label: 'MLP Chicago event page', labelKo: 'MLP 시카고 공식 페이지', url: 'https://majorleaguepickleball.co/events-2026/mlp-chicago-2026/' },
+      { label: 'MLP standings', labelKo: 'MLP 순위', url: 'https://majorleaguepickleball.co/standings/' }
+    ],
+    notableFacts: [
+      'Dallas earned 25 event points, Brooklyn 18, California 15, and Chicago Slice 12.',
+      'JW Johnson opened the DreamBreaker with a 4–0 rotation against Chris Haworth.',
+      'Danni-Elle Townsend won both doubles games and scored the final DreamBreaker point.',
+      'Dallas ended its regular season at 72 standings points after back-to-back titles in San Diego and Chicago.',
+      'California’s third-place finish continued a surge after adding Dylan Frazier and Zoey Weil.'
+    ],
+    notableFactsKo: [
+      'Dallas는 이벤트 포인트 25점, Brooklyn 18점, California 15점, Chicago Slice 12점을 획득했습니다.',
+      'JW Johnson은 DreamBreaker 첫 로테이션에서 Chris Haworth를 상대로 4–0을 만들었습니다.',
+      'Danni-Elle Townsend는 두 복식 경기를 모두 이기고 DreamBreaker의 마지막 포인트까지 기록했습니다.',
+      'Dallas는 샌디에이고와 시카고 2연속 우승 뒤 정규 시즌을 standings 72점으로 마쳤습니다.',
+      'California는 Dylan Frazier와 Zoey Weil 합류 이후 상승세를 이어가며 3위를 차지했습니다.'
+    ],
+    stories: [
+      { kicker: 'BACK-TO-BACK', kickerKo: '2연속 우승', title: 'Dallas turned late-season momentum into a real playoff threat', titleKo: 'Dallas, 시즌 막판 상승세를 실제 플레이오프 위협으로 전환', body: 'Dallas beat Columbus, Los Angeles, and Brooklyn across consecutive weeks, then finished Chicago with a dominant DreamBreaker. The question is no longer whether Dallas belongs in the postseason field, but how far its singles depth can carry it.', bodyKo: 'Dallas는 연속된 일정에서 Columbus, Los Angeles, Brooklyn을 꺾고 시카고 결승 DreamBreaker까지 압도했습니다. 이제 질문은 플레이오프 진출 여부가 아니라 단식 뎁스가 팀을 어디까지 끌고 갈 수 있느냐입니다.' },
+      { kicker: 'MOST IMPROVED', kickerKo: '성장 스토리', title: 'Danni-Elle Townsend became the final’s hinge player', titleKo: '결승의 중심축이 된 Danni-Elle Townsend', body: 'Townsend contributed in women’s doubles, mixed doubles, and the closing DreamBreaker point, turning a team result into a clear individual growth storyline.', bodyKo: 'Townsend는 여자복식, 혼합복식, 마지막 DreamBreaker 포인트에 모두 기여하며 팀 결과를 분명한 개인 성장 스토리로 바꿨습니다.' },
+      { kicker: 'PLAYOFF BUBBLE', kickerKo: '플레이오프 버블', title: 'California rose while SoCal was forced to scoreboard-watch', titleKo: '상승한 California, 결과를 지켜봐야 하는 SoCal', body: 'California’s rebuilt lineup finished third, while Atlanta moved to 36 points and SoCal remained vulnerable at 34. Orlando now decides the final shape of the twelve-team playoff field.', bodyKo: '재구성된 California 라인업은 3위를 기록했고 Atlanta는 36점으로 올라선 반면 SoCal은 34점에서 불안한 위치에 남았습니다. 이제 올랜도가 12팀 플레이오프의 최종 구도를 결정합니다.' }
+    ],
+    storyline: 'Chicago transformed Dallas from a late-season curiosity into the league’s hottest team while keeping the lower playoff seeds unsettled heading into Orlando.',
+    storylineKo: '시카고는 Dallas를 시즌 막판의 흥미로운 팀에서 리그 최고 상승세 팀으로 바꿨고, 동시에 올랜도를 앞두고 하위 플레이오프 시드 경쟁을 미완성 상태로 남겼습니다.'
+  });
+
+  const singaporeStatus = statusBySlug('ppa-asia-singapore-open-2026');
+  if (singaporeStatus) Object.assign(singaporeStatus, {
+    status: 'completed',
+    summary: 'Hong Kit Wong won a record third straight PPA Tour Asia men’s singles gold. Yufei Long captured women’s singles and women’s doubles, while Len Yang/Collin Johns and Jaeda Minniefield/Luc Pham won the other doubles titles.',
+    summaryKo: 'Hong Kit Wong이 PPA Tour Asia 남자 단식 사상 첫 3개 대회 연속 금메달을 차지했습니다. Yufei Long은 여자 단식·여자복식 2관왕, Len Yang/Collin Johns와 Jaeda Minniefield/Luc Pham이 나머지 복식 우승을 차지했습니다.',
+    sourceName: 'PPA Tour Asia championship recap',
+    sourceUrl: 'https://www.ppatour-asia.com/wong-makes-history-in-singapore-with-third-straight-singles-gold/',
+    resultHint: 'Wong historic 3rd straight · Long double gold',
+    resultHintKo: 'Wong 3연속 금메달 · Long 2관왕'
+  });
+
+  const singapore = bySlug('ppa-asia-singapore-open-2026');
+  if (singapore) Object.assign(singapore, {
+    status: 'completed',
+    resultStatus: 'confirmed',
+    resultChecked: '2026-07-28',
+    sourceUrl: 'https://www.ppatour-asia.com/tournament/2026/singapore-open/',
+    sourceName: 'PPA Tour Asia event page',
+    secondaryUrl: 'https://www.ppatour-asia.com/wong-makes-history-in-singapore-with-third-straight-singles-gold/',
+    secondaryName: 'Official championship recap',
+    overview: 'The first PPA Tour Asia 500 in Singapore produced a record men’s singles streak, a Yufei Long double, and two notable doubles partnerships. The event drew 656 registered players and awarded 500 ranking points at a US$70,000 stop.',
+    overviewKo: '싱가포르에서 처음 열린 PPA Tour Asia 500은 남자 단식 기록, Yufei Long의 2관왕, 두 개의 주목할 복식 조합을 만들었습니다. 등록 선수 656명, 랭킹 포인트 500점, 총상금 US$70,000 규모였습니다.',
+    resultNote: 'All five pro championship results below are confirmed in the official PPA Tour Asia recap published July 26.',
+    resultNoteKo: '아래 프로 5개 종목 결승 결과는 7월 26일 공개된 PPA Tour Asia 공식 리캡에서 모두 확인됐습니다.',
+    results: [
+      { division: 'Men’s singles', divisionKo: '남자 단식', champ: 'Hong Kit Wong', silver: 'Adam Harvey', score: '6–11, 11–7, 11–3' },
+      { division: 'Women’s singles', divisionKo: '여자 단식', champ: 'Yufei Long', silver: 'Anni Xie', score: '11–4, 11–0' },
+      { division: 'Men’s doubles', divisionKo: '남자 복식', champ: 'Len Yang / Collin Johns', silver: 'Hien Truong / Kenta Miyoshi', score: '11–4, 4–11, 11–7' },
+      { division: 'Women’s doubles', divisionKo: '여자 복식', champ: 'Yufei Long / Kara Wheatley', silver: 'Jamie Haas / Lingwei Kong', score: '11–7, 12–10' },
+      { division: 'Mixed doubles', divisionKo: '혼합복식', champ: 'Jaeda Minniefield / Luc Pham', silver: 'Xiao Yi Wang-Beckvall / Robert Stirling', score: '11–9, 7–11, 11–5' }
+    ],
+    resultLinks: [
+      { label: 'Official championship recap', labelKo: '공식 챔피언십 리캡', url: 'https://www.ppatour-asia.com/wong-makes-history-in-singapore-with-third-straight-singles-gold/' },
+      { label: 'Official results', labelKo: '공식 결과', url: 'https://www.ppatour-asia.com/results/' },
+      { label: 'Event page', labelKo: '대회 페이지', url: 'https://www.ppatour-asia.com/tournament/2026/singapore-open/' }
+    ],
+    notableFacts: [
+      'Hong Kit Wong became the first PPA Tour Asia player to win three consecutive singles titles.',
+      'Adam Harvey took the opening game in the men’s singles final before Wong changed strategy and won in three.',
+      'Yufei Long moved to the top of both the women’s singles and women’s doubles medal ladders with two golds.',
+      'Jaeda Minniefield won mixed doubles gold in her PPA Tour Asia debut and first event with Luc Pham.',
+      'Len Yang extended his lead on the men’s doubles medal ladder alongside Collin Johns.'
+    ],
+    notableFactsKo: [
+      'Hong Kit Wong은 PPA Tour Asia 최초로 단식 3개 대회 연속 우승을 달성했습니다.',
+      'Adam Harvey가 남자 단식 결승 1세트를 가져갔지만 Wong은 전략을 바꿔 3세트 역전승을 완성했습니다.',
+      'Yufei Long은 2관왕으로 여자 단식과 여자복식 메달 래더 모두 선두에 올랐습니다.',
+      'Jaeda Minniefield는 PPA Tour Asia 데뷔전이자 Luc Pham과 첫 대회에서 혼합복식 금메달을 차지했습니다.',
+      'Len Yang은 Collin Johns와 우승하며 남자복식 메달 래더 선두를 강화했습니다.'
+    ],
+    stories: [
+      { kicker: 'HISTORY', kickerKo: '역사', title: 'Wong changed the match and completed a three-city streak', titleKo: '경기 흐름을 바꾸고 3개 도시 연속 우승을 완성한 Wong', body: 'After losing the first game, Wong adjusted his plan and beat a debut finalist who had upset his way through the draw. Beijing, Tokyo, and Singapore now form the first three-title singles streak in tour history.', bodyKo: 'Wong은 1세트를 내준 뒤 계획을 조정해 돌풍을 일으킨 데뷔 결승 진출자를 꺾었습니다. 베이징·도쿄·싱가포르는 투어 역사상 첫 단식 3연속 우승 기록으로 연결됐습니다.' },
+      { kicker: 'DOUBLE GOLD', kickerKo: '2관왕', title: 'Yufei Long won with both individual control and partnership chemistry', titleKo: '개인 경기 운영과 파트너 호흡을 모두 증명한 Yufei Long', body: 'Long dominated the singles final, then paired with Kara Wheatley to survive a tighter women’s doubles championship. Two different win patterns explain why she leads both medal ladders.', bodyKo: 'Long은 단식 결승을 압도한 뒤 Kara Wheatley와 더 접전이었던 여자복식 결승을 이겼습니다. 서로 다른 승리 방식이 두 메달 래더 선두의 이유를 보여줍니다.' },
+      { kicker: 'NEW PAIRINGS', kickerKo: '새 파트너십', title: 'Singapore rewarded partnerships that adapted quickly', titleKo: '빠르게 적응한 새 조합에 보상한 싱가포르', body: 'Minniefield and Pham won in their first tournament together, while Yang and Johns recovered from Tokyo silver to return to gold. Partnership learning speed became a central tournament theme.', bodyKo: 'Minniefield와 Pham은 첫 대회에서 우승했고 Yang과 Johns는 도쿄 은메달 뒤 다시 금메달로 돌아왔습니다. 파트너십의 학습 속도가 대회의 핵심 주제가 됐습니다.' }
+    ],
+    storyline: 'Singapore showed the dual identity of PPA Asia: established regional leaders can build records, while first-time and cross-border partnerships can immediately reshape doubles draws.',
+    storylineKo: '싱가포르는 PPA Asia의 두 얼굴을 보여줬습니다. 기존 지역 강자는 기록을 쌓고, 데뷔 선수와 국경을 넘는 새 파트너십은 복식 대진을 즉시 바꿀 수 있습니다.'
+  });
+
+  const orlando = bySlug('mlp-orlando-2026');
+  if (orlando) Object.assign(orlando, {
+    resultChecked: '2026-07-28',
+    overview: 'The final regular-season stop begins July 30 with the No. 1 playoff seed, the last postseason berths, and several likely playoff matchups still unresolved. St. Louis and New Jersey headline separate pools, while Los Angeles, Brooklyn, California, Miami, Chicago, Orlando, and Las Vegas all have meaningful positioning stakes.',
+    overviewKo: '7월 30일 시작하는 정규 시즌 최종전에는 플레이오프 1번 시드, 마지막 진출권, 주요 예상 대진이 모두 걸려 있습니다. St. Louis와 New Jersey가 서로 다른 풀을 이끌고, Los Angeles·Brooklyn·California·Miami·Chicago·Orlando·Las Vegas가 중요한 순위 경쟁을 벌입니다.',
+    notableFacts: [
+      'St. Louis and New Jersey play in separate pools and can shape the No. 1 seed race.',
+      'Los Angeles can challenge Columbus for third, while Brooklyn can still rise with a strong event.',
+      'California’s improved lineup needs another productive finish to secure its playoff place.',
+      'Miami, Orlando, Las Vegas, Chicago, and SoCal remain connected through the final bubble scenarios.'
+    ],
+    notableFactsKo: [
+      'St. Louis와 New Jersey는 서로 다른 풀에 속해 1번 시드 경쟁의 흐름을 결정합니다.',
+      'Los Angeles는 3위 Columbus를 추격하고, Brooklyn도 좋은 성적으로 순위를 더 끌어올릴 수 있습니다.',
+      '상승한 California 라인업은 플레이오프 자리를 확정하기 위해 다시 생산적인 결과가 필요합니다.',
+      'Miami·Orlando·Las Vegas·Chicago·SoCal은 마지막 버블 시나리오로 서로 연결돼 있습니다.'
+    ]
+  });
+
+  board.posts = (board.posts || []).filter((post) => !removePosts.has(post.id));
+  const freshPosts = [
+    {
+      id: 'mlp-chicago-dallas-back-to-back', date: '2026-07-28', kind: 'result', tour: 'MLP', discipline: 'team', confidence: 'official',
+      title: 'Dallas wins MLP Chicago in a 21–10 DreamBreaker', titleKo: 'Dallas, DreamBreaker 21–10으로 MLP 시카고 우승',
+      summary: 'Dallas and Brooklyn split the four doubles games before JW Johnson sparked a decisive DreamBreaker. Dallas earned 25 points, its 11th straight win, and a second consecutive event title.',
+      summaryKo: 'Dallas와 Brooklyn은 복식 4경기를 2–2로 나눠 가졌고 JW Johnson이 결정적인 DreamBreaker 출발을 만들었습니다. Dallas는 25점, 11연승, 2개 대회 연속 우승을 기록했습니다.',
+      sourceName: 'MLP Chicago championship recap', sourceUrl: 'https://pickleball.com/news/dallas-outduels-brooklyn-in-dreambreaker-for-11th-straight-win-2nd-straight-super-sunday-belt',
+      internalUrl: 'tournaments/mlp-chicago-2026/'
+    },
+    {
+      id: 'singapore-open-five-champions', date: '2026-07-27', kind: 'result', tour: 'PPA', discipline: 'all', confidence: 'official',
+      title: 'Singapore Open: Wong makes history and Long wins twice', titleKo: '싱가포르 오픈: Wong 신기록, Long 2관왕',
+      summary: 'Hong Kit Wong won a third straight men’s singles gold, Yufei Long swept women’s singles and doubles, and new or renewed partnerships took the men’s and mixed doubles titles.',
+      summaryKo: 'Hong Kit Wong이 남자 단식 3연속 금메달, Yufei Long이 여자 단식·복식 2관왕을 기록했고 새 조합과 재결성 조합이 남자·혼합복식 우승을 차지했습니다.',
+      sourceName: 'PPA Tour Asia championship recap', sourceUrl: 'https://www.ppatour-asia.com/wong-makes-history-in-singapore-with-third-straight-singles-gold/',
+      internalUrl: 'tournaments/ppa-asia-singapore-open-2026/'
+    },
+    {
+      id: 'mlp-orlando-final-cut', date: '2026-07-28', kind: 'storyline', tour: 'MLP', discipline: 'team', confidence: 'analysis',
+      title: 'Orlando will set the No. 1 seed and the final playoff cut', titleKo: '올랜도에서 결정될 1번 시드와 마지막 플레이오프 컷',
+      summary: 'Dallas has finished with 72 points, while St. Louis, New Jersey, Los Angeles, Brooklyn and the bubble teams still have meaningful work. The final stop doubles as a preview of likely playoff matchups.',
+      summaryKo: 'Dallas는 72점으로 일정을 마쳤지만 St. Louis, New Jersey, Los Angeles, Brooklyn과 버블 팀들의 경쟁은 남아 있습니다. 최종전은 유력 플레이오프 대진의 미리보기이기도 합니다.',
+      sourceName: 'MLP Chicago analysis and Orlando schedule', sourceUrl: 'https://pickleball.com/news/dallas-goes-back-to-back-with-victory-at-mlp-chicago',
+      internalUrl: 'tournaments/mlp-orlando-2026/'
+    }
+  ];
+  board.posts.unshift(...freshPosts);
+
+  const newStories = [
+    {
+      date: '2026-07-28', confidence: 'official', tour: 'MLP',
+      title: 'Dallas finished the regular season as the hottest team in MLP', titleKo: 'MLP 최고 상승세 팀으로 정규 시즌을 마친 Dallas',
+      body: 'Back-to-back San Diego and Chicago titles, 11 straight wins, and DreamBreaker strength gave Dallas a new postseason identity. JW Johnson’s singles value and Danni-Elle Townsend’s growth are now central playoff storylines.',
+      bodyKo: '샌디에이고·시카고 2연속 우승, 11연승, DreamBreaker 경쟁력으로 Dallas의 포스트시즌 정체성이 달라졌습니다. JW Johnson의 단식 가치와 Danni-Elle Townsend의 성장은 핵심 플레이오프 스토리입니다.',
+      sourceName: 'MLP Chicago championship recap', sourceUrl: 'https://pickleball.com/news/dallas-outduels-brooklyn-in-dreambreaker-for-11th-straight-win-2nd-straight-super-sunday-belt'
+    },
+    {
+      date: '2026-07-27', confidence: 'official', tour: 'PPA Asia',
+      title: 'Wong’s three-title streak meets Long’s two-discipline rise', titleKo: 'Wong의 3연속 우승과 Long의 두 종목 동시 상승',
+      body: 'Singapore connected two different forms of dominance: Wong’s strategic adjustment preserved a singles streak, while Long’s singles-and-doubles golds placed her atop both women’s medal ladders.',
+      bodyKo: '싱가포르는 두 종류의 지배력을 연결했습니다. Wong은 전략 조정으로 단식 연승 기록을 지켰고, Long은 단식·복식 금메달로 여자 두 종목 메달 래더 선두에 올랐습니다.',
+      sourceName: 'PPA Tour Asia Singapore recap', sourceUrl: 'https://www.ppatour-asia.com/wong-makes-history-in-singapore-with-third-straight-singles-gold/'
+    }
+  ];
+  const existingTitles = new Set(newStories.flatMap((story) => [story.title, story.titleKo]));
+  board.storylines = (board.storylines || []).filter((story) => !existingTitles.has(story.title) && !existingTitles.has(story.titleKo));
+  board.storylines.unshift(...newStories);
+})();

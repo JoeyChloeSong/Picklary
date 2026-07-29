@@ -21,6 +21,12 @@ const columns = require('./data/columns.js');
 const levels = require('./data/levels.js');
 const paddles = require('./data/paddles.js');
 const players = require('./data/players.js');
+try {
+  const extraPlayers = require('./data/players-extra.js');
+  for (const player of extraPlayers || []) if (!players.some((x) => x.slug === player.slug)) players.push(player);
+} catch (e) { /* optional expanded player catalog */ }
+let playerStories = {};
+try { playerStories = require('./data/player-stories.js'); } catch (e) { playerStories = {}; }
 let duprSnapshot = { updated: '', sourceUrl: 'https://www.dupr.com/rankings', ratings: {} };
 try { duprSnapshot = require('./data/dupr-snapshot.js'); } catch (e) { duprSnapshot = { updated: '', sourceUrl: 'https://www.dupr.com/rankings', ratings: {} }; }
 const highlightSeeds = require('./data/highlights.js');
@@ -29,6 +35,7 @@ let autoUpdates = [];
 try { autoUpdates = require('./data/auto-updates.js'); } catch (e) { autoUpdates = []; }
 let tourBoard = { updated: '', editorialNote: {}, statusEvents: [], posts: [], storylines: [], insights: [], tournaments: [] };
 try { tourBoard = require('./data/tour-board.js'); } catch (e) { /* optional curated tour data */ }
+try { tourBoard = require('./data/tour-enrichment.js')(tourBoard) || tourBoard; } catch (e) { console.warn('Tour enrichment skipped:', e.message); }
 const BUILD_STAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 let tourResults = [];
 try { tourResults = require('./data/results.js'); } catch (e) { tourResults = []; }
@@ -393,7 +400,7 @@ function layout(opts) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style-picklary-v053-20260721.css">
+  <link rel="stylesheet" href="/assets/css/style-picklary-v056-20260723.css">
   ${jsonldTags}
   ${adsenseTags}
 </head>
@@ -404,7 +411,7 @@ function layout(opts) {
 ${opts.bodyHtml}
   </main>
   ${footer(loc)}
-  <script src="/assets/js/site-tour-mobile-v051-20260720.js" defer></script>
+  <script src="/assets/js/site-tour-depth-v055-20260722.js" defer></script>
 </body>
 </html>`;
 }
@@ -560,6 +567,7 @@ const visuals = {
   players: { src: 'pro-scene-dashboard-design.webp', key: 'visual.players', width: 1400, height: 1050 },
   majorResults: { src: 'pro-scene-major-results-dashboard.webp', key: 'visual.players', width: 1400, height: 1050 },
   insights: { src: 'insights-dashboard-design.webp', key: 'categories.title', width: 1400, height: 1050 },
+  gear: { src: 'gear-lab-dashboard-design.webp', key: 'visual.gear', width: 1400, height: 1050 },
   highlights: { src: 'highlight-battle.svg', key: 'visual.highlights' },
   boards: { src: 'play-hub-dashboard-design.webp', key: 'visual.boards', width: 1400, height: 1050 },
   ratings: { src: 'paddle-ratings.svg', key: 'paddles.intro' },
@@ -603,6 +611,12 @@ function renderDuprCheck(loc) {
     mL: ['Their court — mid left', '상대 미드코트 · 왼쪽'], mM: ['Their court — mid middle', '상대 미드코트 · 가운데'], mR: ['Their court — mid right', '상대 미드코트 · 오른쪽'],
     dL: ['Their court — deep left', '상대 백코트 먼쪽 · 왼쪽'], dM: ['Their court — deep middle', '상대 백코트 먼쪽 · 가운데'], dR: ['Their court — deep right', '상대 백코트 먼쪽 · 오른쪽']
   };
+  const TARGETS = [
+    ['kL','Kitchen L','키친 왼쪽'],['kM','Kitchen M','키친 중앙'],['kR','Kitchen R','키친 오른쪽'],
+    ['nL','Short L','짧게 왼쪽'],['nM','Short M','짧게 중앙'],['nR','Short R','짧게 오른쪽'],
+    ['mL','Mid L','미드 왼쪽'],['mM','Mid M','미드 중앙'],['mR','Mid R','미드 오른쪽'],
+    ['dL','Deep L','깊게 왼쪽'],['dM','Deep M','깊게 중앙'],['dR','Deep R','깊게 오른쪽']
+  ];
   const t = (en, ko) => (loc === 'ko' ? ko : en);
   const bands = [
     { max: 2.50, slug: '2-0', desc: t('Building the basics — keep the ball in play, learn the two-bounce rule, and get to the kitchen.', '기초 단계 — 공을 계속 살리고, 투바운스 규칙을 익히고, 키친으로 전진하세요.') },
@@ -724,10 +738,10 @@ function renderDuprCheck(loc) {
         <p class="court-view-hint">${esc(labels.isoHint)}</p>
       </div>
       <div class="quiz__controls">
-        <div class="quiz__group" data-player-group hidden><h3>${esc(labels.whoPlays)}</h3><div class="opts opts--player" data-opts="player"><button type="button" class="opt" data-val="p1">${esc(labels.player1)}</button><button type="button" class="opt" data-val="p2">${esc(labels.player2)}</button></div></div>
-        <div class="quiz__group"><h3>${esc(labels.yourShot)}</h3><div class="opts" data-opts="shot">${SHOTS.map((s) => `<button type="button" class="opt" data-val="${s[0]}">${esc(loc === 'ko' ? s[2] : s[1])}</button>`).join('')}</div></div>
-        <div class="quiz__group"><h3>${esc(labels.power)}</h3><div class="opts opts--power" data-opts="power">${POWERS.map((p) => `<button type="button" class="opt" data-val="${p[0]}">${esc(loc === 'ko' ? p[2] : p[1])}</button>`).join('')}</div></div>
-        <div class="quiz__group"><h3>${esc(labels.target)}</h3><p class="quiz__hint">${esc(labels.tapZone)}</p><p class="quiz__zone-label" data-zone-label>—</p></div>
+        <div class="quiz__group quiz__group--player" data-player-group hidden><h3><span class="quiz__step-num">0</span>${esc(labels.whoPlays)}</h3><div class="opts opts--player" data-opts="player"><button type="button" class="opt" data-val="p1">${esc(labels.player1)}</button><button type="button" class="opt" data-val="p2">${esc(labels.player2)}</button></div></div>
+        <div class="quiz__group quiz__group--step is-active" data-answer-step="shot"><h3><span class="quiz__step-num">1</span>${esc(labels.yourShot)}</h3><div class="opts opts--shot" data-opts="shot">${SHOTS.map((s) => `<button type="button" class="opt" data-val="${s[0]}">${esc(loc === 'ko' ? s[2] : s[1])}</button>`).join('')}</div></div>
+        <div class="quiz__group quiz__group--step is-locked" data-answer-step="power"><h3><span class="quiz__step-num">2</span>${esc(labels.power)}</h3><div class="opts opts--power" data-opts="power">${POWERS.map((p) => `<button type="button" class="opt" data-val="${p[0]}">${esc(loc === 'ko' ? p[2] : p[1])}</button>`).join('')}</div></div>
+        <div class="quiz__group quiz__group--step quiz__group--target is-locked" data-answer-step="target"><h3><span class="quiz__step-num">3</span>${esc(labels.target)}</h3><div class="opts opts--target" data-opts="target">${TARGETS.map((z) => `<button type="button" class="opt opt--target" data-val="${z[0]}">${esc(loc === 'ko' ? z[2] : z[1])}</button>`).join('')}</div><p class="quiz__zone-label"><span>${esc(labels.chosen)}:</span> <strong data-zone-label>—</strong></p></div>
         <div class="quiz__nav"><button type="button" class="btn btn--ghost quiz__back" data-q-back hidden>${esc(labels.back)}</button><button type="button" class="btn btn--primary quiz__next" data-q-next disabled>${esc(labels.next)}</button></div>
       </div>
     </div>
@@ -761,7 +775,7 @@ function visualFigure(loc, key, cls) {
 }
 function linkedVisualFigure(loc, key, items, cls) {
   const v = visuals[key] || visuals.court;
-  const caption = tt(loc, v.key);
+  const caption = key === 'gear' ? gearLabel(loc, 'hubTitle') : tt(loc, v.key);
   const dims = svgDims(v.src) || (v.width && v.height ? ` width="${v.width}" height="${v.height}"` : '');
   const hotspots = (items || []).map((item) => {
     const label = item.label || item.title || '';
@@ -1081,6 +1095,42 @@ function playerDeepTakeaways(player, loc) {
 <p>Finally, study ${esc(s3)}. In pressure points, elite players often choose repeatable pressure over low-percentage winners. Read the profile with that lens and it becomes a practical training guide rather than just a player page.</p>
 <ul><li>Copy: ready position, court spacing, low resets.</li><li>Avoid copying: pro-level attacks that your current consistency cannot support.</li><li>Practice link: choose one pattern and repeat it with a partner for ten minutes.</li></ul>`;
 }
+
+function playerStorySections(player, loc) {
+  const story = playerStories[player.slug] || {};
+  const L = (en, ko) => loc === 'ko' ? (ko || en) : en;
+  const snapshot = story.snapshot || [];
+  const analysis = story.analysis || [
+    ['Primary identity', loc1(player, loc, 'style'), '핵심 정체성', loc1(player, loc, 'style')],
+    ['Decision pattern', loc1(player, loc, 'watch'), '판단 패턴', loc1(player, loc, 'watch')],
+    ['Club-player bridge', playerLearn(player, loc), '동호인 연결', playerLearn(player, loc)]
+  ];
+  const timeline = story.timeline || [
+    [player.turnedPro || 'Career', player.achievements && player.achievements[0] ? player.achievements[0] : player.bio, player.achievements && player.achievements[0] ? player.achievements[0] : player.bio],
+    ['Current focus', loc1(player, loc, 'watch'), loc1(player, loc, 'watch')]
+  ];
+  const partners = story.partners || [];
+  const whyNow = loc === 'ko' ? (story.whyNowKo || loc1(player, loc, 'bio')) : (story.whyNow || player.bio);
+  const nextWatch = loc === 'ko' ? (story.nextWatchKo || loc1(player, loc, 'watch')) : (story.nextWatch || player.watch);
+  const drill = story.drill || ['One-pattern study', 'Choose one skill from the profile and repeat it for ten minutes with a partner.', '한 패턴 연구', '프로필의 기술 하나를 골라 파트너와 10분 반복합니다.'];
+  const sourceUrl = story.sourceUrl || player.officialProfile;
+  const sourceName = story.sourceName || 'Official profile';
+  const snapshots = snapshot.map((r) => `<div class="player-snapshot__item"><span>${esc(loc === 'ko' ? (r[2] || r[0]) : r[0])}</span><strong>${esc(loc === 'ko' ? (r[3] || r[1]) : r[1])}</strong></div>`).join('');
+  const cards = analysis.map((r, i) => `<article class="player-analysis-card player-analysis-card--${(i % 3) + 1}"><span>${esc(L(r[0], r[2]))}</span><p>${esc(L(r[1], r[3]))}</p></article>`).join('');
+  const timelineHtml = timeline.map((r) => `<li><time>${esc(r[0])}</time><div><strong>${esc(loc === 'ko' ? (r[2] || r[1]) : r[1])}</strong></div></li>`).join('');
+  const partnersHtml = partners.length ? partners.map((r) => `<li><strong>${esc(r[0])}</strong><span>${esc(loc === 'ko' ? (r[2] || r[1]) : r[1])}</span></li>`).join('') : `<li><strong>${esc(L('Role evolution','역할 진화'))}</strong><span>${esc(L('Follow how event pairings change the player’s responsibilities.','대회별 조합 변화가 선수 역할을 어떻게 바꾸는지 추적하세요.'))}</span></li>`;
+  return `<section class="player-story-room"><div class="wrap">
+    <div class="player-story-room__head"><div><p class="section-kicker">PLAYER STORYLINE</p><h2>${esc(L('Why this player matters now','지금 이 선수를 봐야 하는 이유'))}</h2><p>${esc(whyNow)}</p></div>${sourceUrl ? `<a class="btn btn--ghost" href="${escAttr(sourceUrl)}" rel="nofollow noopener" target="_blank">${esc(sourceName)} ↗</a>` : ''}</div>
+    ${snapshots ? `<div class="player-snapshot"><div class="player-snapshot__label"><span>${esc(L('Verified snapshot','확인된 스냅샷'))}</span><small>${esc(story.checked || tourBoard.updated || '')}</small></div>${snapshots}</div>` : ''}
+    <div class="player-analysis-grid">${cards}</div>
+  </div></section>
+  <section class="band band--alt"><div class="wrap player-story-columns">
+    <article class="player-timeline"><p class="section-kicker">TIMELINE</p><h2>${esc(L('Career and storyline timeline','커리어·스토리 타임라인'))}</h2><ol>${timelineHtml}</ol></article>
+    <article class="player-partnership-map"><p class="section-kicker">PARTNERSHIPS</p><h2>${esc(L('Roles and chemistry','역할과 호흡'))}</h2><ul>${partnersHtml}</ul></article>
+    <article class="player-next-watch"><p class="section-kicker">NEXT WATCH</p><h2>${esc(L('What to follow next','다음 관전 포인트'))}</h2><p>${esc(nextWatch)}</p><div class="player-drill"><strong>${esc(loc === 'ko' ? (drill[2] || drill[0]) : drill[0])}</strong><span>${esc(loc === 'ko' ? (drill[3] || drill[1]) : drill[1])}</span></div></article>
+  </div></section>`;
+}
+
 function tournamentDepthBlock(loc, type) {
   const isInternational = type === 'international';
   const data = loc === 'ko' ? {
@@ -1165,6 +1215,46 @@ function ratingBars(ratings, loc) {
     const val = Math.max(0, Math.min(10, Number(ratings[key] || 0)));
     return `<div class="rating-row"><span>${esc(l[key])}</span><b style="--score:${val * 10}%"><i></i></b><em>${esc(val.toFixed(1))}</em></div>`;
   }).join('')}</div>`;
+}
+
+function ratingRadar(ratings, loc) {
+  if (!ratings) return '';
+  const labelMap = {
+    en: { power:'Power', control:'Control', spin:'Spin', forgiveness:'Forgiveness', speed:'Hand speed', overall:'Overall' },
+    ko: { power:'파워', control:'컨트롤', spin:'스핀', forgiveness:'관용성', speed:'손속도', overall:'종합' },
+    es: { power:'Potencia', control:'Control', spin:'Efecto', forgiveness:'Perdón', speed:'Velocidad', overall:'General' }
+  };
+  const labels = labelMap[loc] || labelMap.en;
+  const baseKeys = ['power','control','spin','forgiveness','speed'];
+  const average = baseKeys.reduce((sum, key) => sum + Math.max(0, Math.min(10, Number(ratings[key] || 0))), 0) / baseKeys.length;
+  const values = baseKeys.map((key) => Math.max(0, Math.min(10, Number(ratings[key] || 0))));
+  values.push(average);
+  const keys = baseKeys.concat('overall');
+  const cx = 180, cy = 164, radius = 112;
+  const point = (index, scale) => {
+    const angle = (-90 + index * 60) * Math.PI / 180;
+    return [cx + Math.cos(angle) * radius * scale, cy + Math.sin(angle) * radius * scale];
+  };
+  const points = (scale) => keys.map((_, i) => point(i, scale).map((n) => n.toFixed(1)).join(',')).join(' ');
+  const axes = keys.map((_, i) => { const p = point(i, 1); return `<line x1="${cx}" y1="${cy}" x2="${p[0].toFixed(1)}" y2="${p[1].toFixed(1)}"></line>`; }).join('');
+  const grids = [0.2,0.4,0.6,0.8,1].map((scale) => `<polygon points="${points(scale)}"></polygon>`).join('');
+  const scorePoints = values.map((value, i) => point(i, value / 10).map((n) => n.toFixed(1)).join(',')).join(' ');
+  const labelPos = [
+    {x:180,y:24,anchor:'middle'}, {x:276,y:92,anchor:'start'}, {x:276,y:250,anchor:'start'},
+    {x:180,y:314,anchor:'middle'}, {x:84,y:250,anchor:'end'}, {x:84,y:92,anchor:'end'}
+  ];
+  const labelText = keys.map((key, i) => `<text x="${labelPos[i].x}" y="${labelPos[i].y}" text-anchor="${labelPos[i].anchor}"><tspan>${esc(labels[key])}</tspan><tspan x="${labelPos[i].x}" dy="17" class="radar-chart__score">${esc(values[i].toFixed(1))}</tspan></text>`).join('');
+  const dots = values.map((value, i) => { const p = point(i, value / 10); return `<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="4.5"></circle>`; }).join('');
+  const note = loc === 'ko' ? '종합 점수는 5개 항목의 단순 평균입니다.' : loc === 'es' ? 'La puntuación general es el promedio simple de las cinco categorías.' : 'Overall is the simple average of the five core categories.';
+  return `<div class="radar-profile" role="img" aria-label="${escAttr(ui(loc, 'ratings'))}">
+    <svg class="radar-chart" viewBox="0 0 360 330" aria-hidden="true">
+      <g class="radar-chart__grid">${grids}${axes}</g>
+      <polygon class="radar-chart__area" points="${scorePoints}"></polygon>
+      <g class="radar-chart__dots">${dots}</g>
+      <g class="radar-chart__labels">${labelText}</g>
+    </svg>
+    <p class="radar-profile__note">${esc(note)}</p>
+  </div>`;
 }
 
 function duprMini(player, loc) {
@@ -1943,7 +2033,12 @@ function renderGearIndex(loc) {
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: gearLabel(loc, 'hubTitle') }])}
 <section class="page-head page-head--visual"><div class="wrap two-col two-col--wide">
   <div><p class="page-head__eyebrow">${esc(gearLabel(loc, 'nav'))}</p><h1>${esc(gearLabel(loc, 'hubTitle'))}</h1><p class="page-head__intro">${esc(gearLabel(loc, 'hubIntro'))}</p><div class="hero-actions"><a class="btn btn--primary" href="${link(loc, 'tools/paddle-finder/')}">${esc(loc === 'ko' ? '패들 파인더' : 'Paddle Finder')}</a><a class="btn btn--ghost" href="${link(loc, 'paddles/')}">${esc(gearLabel(loc, 'hubCta'))}</a></div></div>
-  ${gearVisualFigure(loc, 'lab')}
+  ${linkedVisualFigure(loc, 'gear', [
+    { href: link(loc, 'paddles/'), label: loc === 'ko' ? '패들 가이드 열기' : loc === 'es' ? 'Abrir guía de palas' : 'Open Paddles guide', left: 29.3, top: 3.8, width: 32.2, height: 44.9, tone: 'paddles' },
+    { href: link(loc, 'gear/shoes/'), label: loc === 'ko' ? '신발 가이드 열기' : loc === 'es' ? 'Abrir guía de calzado' : 'Open Shoes guide', left: 62.5, top: 3.8, width: 33.6, height: 44.9, tone: 'shoes' },
+    { href: link(loc, 'gear/apparel/'), label: loc === 'ko' ? '의류 가이드 열기' : loc === 'es' ? 'Abrir guía de ropa' : 'Open Apparel guide', left: 29.3, top: 51.0, width: 32.2, height: 44.7, tone: 'apparel' },
+    { href: link(loc, 'gear/accessories/'), label: loc === 'ko' ? '액세서리 가이드 열기' : loc === 'es' ? 'Abrir guía de accesorios' : 'Open Accessories guide', left: 62.5, top: 51.0, width: 33.6, height: 44.7, tone: 'accessories' }
+  ], 'gear-visual gear-visual--lab')}
 </div></section>
 <section class="band"><div class="wrap"><div class="cards gear-cards">${gearCards(loc)}</div><p class="notice">${esc(gearLabel(loc, 'policyNote'))}</p></div></section>
 ${gearSeoBridge(loc)}
@@ -2151,6 +2246,21 @@ function paddleTierIntro(loc) {
     : 'This tier list is not an ad or an absolute ranking. It is an editorial guide inside the Picklary database, combining comparison scores, play-style fit, price band, beginner forgiveness, and benchmark-model signals. Even inside S tier, a power pick, control pick, and value pick mean different things, so use Paddle Finder and the detail pages before deciding.';
 }
 
+
+function paddleTierSnapshot(loc, groups, tierCopy) {
+  const L = (ko, en) => (loc === 'ko' ? ko : en);
+  const tierOrder = ['S','A','B','C','D'];
+  const rows = tierOrder.map((tier) => {
+    const items = groups[tier] || [];
+    const cells = items.length ? items.map((p) => {
+      const image = assetImage(p.image, paddleTitle(p), 'tier-snapshot__img');
+      return `<a class="tier-snapshot__item" href="${link(loc, 'paddles/' + p.slug + '/')}">${image || ''}<span><strong>${esc(p.brand)}</strong><small>${esc(p.model)}</small></span></a>`;
+    }).join('') : `<div class="tier-snapshot__empty">${esc(tierCopy[tier])}</div>`;
+    return `<div class="tier-snapshot__row tier-snapshot__row--${tier.toLowerCase()}"><div class="tier-snapshot__rank"><strong>${esc(tier)}</strong><span>${esc(tierCopy[tier])}</span></div><div class="tier-snapshot__items">${cells}</div></div>`;
+  }).join('');
+  return `<div class="tier-snapshot-wrap"><div class="tier-snapshot-head"><div><span>${esc(L('한눈에 보기', 'At-a-glance'))}</span><h3>${esc(L('전체 패들 티어표', 'Complete paddle tier chart'))}</h3></div><p>${esc(L('먼저 전체 배치를 확인한 뒤 아래의 상세 해설과 목적별 추천을 읽어 보세요.', 'Start with the full chart, then use the detailed notes and purpose-based picks below.'))}</p></div><div class="tier-snapshot" role="table" aria-label="${escAttr(L('전체 패들 티어표', 'Complete paddle tier chart'))}">${rows}</div></div>`;
+}
+
 function renderPaddleTierList(loc) {
   const L = (ko, en) => (loc === 'ko' ? ko : en);
   const tierCopy = {
@@ -2181,6 +2291,8 @@ function renderPaddleTierList(loc) {
   }).join('');
   return `<section class="band band--tier-list" id="paddle-tier-list"><div class="wrap">
     <div class="section-head"><div><p class="section-kicker">${esc(L('티어표', 'Tier list'))}</p><h2 class="band__title">${esc(L('Picklary 패들 티어표', 'Picklary Paddle Tier List'))}</h2><p class="band__intro">${esc(paddleTierIntro(loc))}</p></div><a class="btn btn--tier" href="${link(loc, 'tools/paddle-finder/')}">${esc(L('내 스타일로 다시 찾기', 'Find my fit'))}</a></div>
+    ${paddleTierSnapshot(loc, groups, tierCopy)}
+    <div class="tier-detail-head"><span>${esc(L('상세 해설', 'Detailed notes'))}</span><h3>${esc(L('각 티어의 이유와 플레이 적합도', 'Why each paddle sits in its tier'))}</h3></div>
     <div class="tier-board">${rows}</div>
     <div class="tier-picks"><div><h3>${esc(L('목적별 빠른 기준 모델', 'Quick benchmark picks by purpose'))}</h3><p>${esc(L('S/A/B만 보지 말고, 내 플레이 문제와 가장 가까운 기준 모델부터 비교하세요.', 'Do not read only S/A/B. Start with the benchmark closest to your on-court problem.'))}</p></div><div class="tier-pick-grid">${stylePicks}</div></div>
     <div class="tier-method"><strong>${esc(L('산정 기준', 'Methodology'))}</strong><p>${esc(L('컨트롤·파워·스핀·관용성·핸드 스피드 점수, 레벨 적합도, 가격대, 사용 목적, 리뷰 신호를 함께 봅니다. 가격과 승인 상태는 변동될 수 있으므로 구매 전 공식 출처를 확인하세요.', 'We combine control, power, spin, forgiveness, hand speed, level fit, price band, use case, and review signals. Price and approval status can change, so verify official sources before buying.'))}</p></div>
@@ -2281,8 +2393,8 @@ function renderPaddlePage(paddle, loc) {
   <p class="page-head__intro page-head__intro--small">${esc(loc1(paddle, loc, 'summary'))}</p></div>
   ${entityIllus('paddles', paddle.slug, paddle.image, (paddle.imageAlt || title) + ' — illustration', loc === 'ko' ? '양식화된 패들 일러스트' : 'Stylised paddle illustration')}
 </div></section>
-<section class="band"><div class="wrap two-col two-col--wide">
-  <div class="spec-card"><table class="spec-table"><tbody>
+<section class="band"><div class="wrap two-col two-col--wide paddle-detail-grid">
+  <div class="spec-card spec-card--details"><table class="spec-table"><tbody>
     ${fieldRow(tt(loc, 'paddles.type'), styleLabel(loc, paddle.style))}
     ${fieldRow(tt(loc, 'paddles.shape'), shapeLabel(loc, paddle.shape))}
     ${fieldRow(tt(loc, 'paddles.core'), paddle.core)}
@@ -2293,7 +2405,7 @@ function renderPaddlePage(paddle, loc) {
     ${fieldRow(tt(loc, 'paddles.traits'), (paddle.traits || []).map((t) => traitLabel(loc, t)))}
     ${fieldRow(tt(loc, 'paddles.usedBy'), paddle.usedBy)}
   </tbody></table><div class="source-buttons">${externalButton(ui(loc, 'officialProduct'), paddle.sourceUrl)}</div><p class="notice">${esc(ui(loc, 'sourceNote'))}</p><p class="notice">${esc(tt(loc, 'paddles.approvalNote'))}</p></div>
-  <div class="spec-card"><h2>${esc(ui(loc, 'ratings'))}</h2>${ratingBars(paddle.ratings, loc)}<p class="notice">${esc(loc === 'ko' ? '점수는 제품 설명과 일반 리뷰 신호를 바탕으로 한 편집용 비교 점수입니다. 실측 데이터가 아닙니다.' : 'Scores are editorial comparison notes based on product positioning and common review signals; they are not lab measurements.')}</p></div>
+  <div class="spec-card spec-card--radar"><h2>${esc(ui(loc, 'ratings'))}</h2>${ratingRadar(paddle.ratings, loc)}<p class="notice">${esc(loc === 'ko' ? '점수는 제품 설명과 일반 리뷰 신호를 바탕으로 한 편집용 비교 점수입니다. 실측 데이터가 아닙니다.' : 'Scores are editorial comparison notes based on product positioning and common review signals; they are not lab measurements.')}</p></div>
 </div></section>
 <section class="band"><div class="wrap narrow"><div class="prose">${paddleProse(paddle, loc)}</div></div></section>
 <section class="band band--alt"><div class="wrap two-col two-col--wide">${reviewerRoundup(paddle, loc)}${paddleEngagement(paddle, loc)}</div></section>
@@ -2316,7 +2428,9 @@ function renderPlayersIndex(loc) {
   <div><p class="page-head__eyebrow">${esc(tt(loc, 'nav.players'))}</p><h1>${esc(tt(loc, 'players.title'))}</h1><p class="page-head__intro">${esc(tt(loc, 'players.intro'))}</p></div>
   ${visualFigure(loc, 'players')}
 </div></section>
-<section class="band"><div class="wrap"><p class="notice">${esc(tt(loc, 'players.sourceNote'))}</p><div class="player-grid">${players.map((pl) => playerCard(pl, loc)).join('')}</div></div></section>`;
+<section class="band"><div class="wrap"><p class="notice">${esc(tt(loc, 'players.sourceNote'))}</p>
+  <div class="player-index-spotlight"><div><p class="section-kicker">STORYLINE WATCH</p><h2>${esc(loc === 'ko' ? '스타·차세대·파트너십을 함께 추적하세요' : 'Follow stars, challengers, and partnership arcs')}</h2><p>${esc(loc === 'ko' ? '각 선수 페이지에는 현재 스냅샷, 플레이 정체성, 타임라인, 파트너 관계와 다음 관전 포인트가 연결됩니다.' : 'Each profile connects a current snapshot, tactical identity, career timeline, partnership map, and next-watch question.')}</p></div><div class="player-index-spotlight__links">${['ella-oh','gabriel-tardio','hayden-patriquin','kate-fahey','hurricane-tyra-black'].map((slug) => { const x = players.find((p) => p.slug === slug); return x ? `<a href="${link(loc, 'players/' + slug + '/')}">${esc(x.name)} <span>→</span></a>` : ''; }).join('')}</div></div>
+  <div class="player-grid">${players.map((pl) => playerCard(pl, loc)).join('')}</div></div></section>`;
   return layout({ loc, rel: 'players/', title: tt(loc, 'players.title'), description: tt(loc, 'players.intro'), bodyHtml: body });
 }
 
@@ -2349,6 +2463,7 @@ function renderPlayerPage(player, loc) {
   <div><p class="page-head__eyebrow">${esc(player.country)}</p><h1>${esc(title)}</h1><p class="page-head__intro">${esc(loc1(player, loc, 'style'))}</p></div>
   ${entityIllus('players', player.slug, player.image, (player.imageAlt || player.name) + ' — illustration', loc === 'ko' ? '양식화된 일러스트 (실제 사진 아님)' : 'Stylised illustration (not a photo)')}
 </div></section>
+${playerStorySections(player, loc)}
 <section class="band"><div class="wrap two-col two-col--wide">
   <div class="prose">
     <h2>${esc(ui(loc, 'biography'))}</h2><p>${esc(loc1(player, loc, 'bio'))}</p>
@@ -3807,6 +3922,10 @@ function renderTournamentsIndex(loc) {
   const completedCount = tracked.filter((x) => x.status === 'completed').length;
   const liveCount = tracked.filter((x) => x.status === 'live').length;
   const upcomingCount = tracked.filter((x) => x.status === 'upcoming').length;
+  const seasonThreads = (tourBoard.seasonThreads || []).map((thread, index) => {
+    const links = (thread.links || []).map((rel) => { const slug = String(rel).split('/').filter(Boolean).pop(); const pl = players.find((x) => x.slug === slug); return `<a href="${link(loc, rel)}">${esc(pl ? pl.name : (loc === 'ko' ? '관련 페이지' : 'Related page'))} →</a>`; }).join('');
+    return `<article class="tour-reading-card tour-reading-card--${(index % 4) + 1}"><span>${String(index + 1).padStart(2, '0')}</span><h3>${esc(loc === 'ko' ? (thread.titleKo || thread.title) : thread.title)}</h3><p>${esc(loc === 'ko' ? (thread.bodyKo || thread.body) : thread.body)}</p><div>${links}</div></article>`;
+  }).join('');
   const archiveCards = archives.map((event) => {
     const results = (event.results || []).slice(0, 3);
     const resultRows = results.map((r) => `<li><span>${esc(tourText(loc, r, 'division'))}</span><strong>${esc(r.champ || '')}</strong></li>`).join('');
@@ -3826,10 +3945,26 @@ function renderTournamentsIndex(loc) {
 <section class="band tour-current-band" id="tracked-events"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">TOUR BOARD</p><h2 class="band__title">${esc(L('지금 따라가야 할 주요 이벤트', 'Events worth following now'))}</h2><p class="band__intro">${esc(L('카드를 클릭하면 결과 상태, 공식 링크, 참가 구성, 관전 포인트와 이벤트별 스토리를 확인할 수 있습니다.', 'Open any card for result status, official sources, field details, viewing angles, and event-specific storylines.'))}</p></div><a class="tour-board-inline-link" href="${link(loc, 'pro-scene/')}">${esc(proSceneLabel(loc, 'hub'))} →</a></div><div class="tour-live-grid tour-live-grid--index">${tracked.map((x) => tourStatusCard(loc, x)).join('')}</div></div></section>
 <section class="tour-method-band"><div class="wrap"><div class="tour-method-band__lead"><p class="section-kicker">PICKLARY METHOD</p><h2>${esc(L('한 대회를 네 겹으로 읽습니다', 'Four layers for every tournament'))}</h2><p>${esc(L('공식 결과를 출발점으로 선수, 파트너, 시즌 순위와 관련 분석 글까지 연결해 단순 스코어 이상의 맥락을 제공합니다.', 'Official results are the starting point; player, partner, season, and analysis layers turn scores into useful context.'))}</p></div><div class="tour-method-grid"><article><span>01</span><strong>${esc(L('공식 결과', 'Official result'))}</strong><p>${esc(L('우승·준우승·결승 스코어와 공개 상태', 'Champion, finalist, final score, and publication status'))}</p></article><article><span>02</span><strong>${esc(L('대회 맥락', 'Event context'))}</strong><p>${esc(L('포맷, 장소, 참가 규모와 시즌 내 의미', 'Format, venue, field size, and season meaning'))}</p></article><article><span>03</span><strong>${esc(L('선수 이야기', 'Player stories'))}</strong><p>${esc(L('돌풍, 파트너십, 부상·복귀와 라이벌 구도', 'Breakouts, partnerships, injuries, returns, and rivalries'))}</p></article><article><span>04</span><strong>${esc(L('다음 행동', 'What next'))}</strong><p>${esc(L('관련 선수·랭킹·Picklary 심층 글로 이동', 'Continue to players, rankings, and deeper Picklary analysis'))}</p></article></div></div></section>
 <section class="band band--alt"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">CONFIRMED RESULTS</p><h2 class="band__title">${esc(L('우승자·준우승자·스코어가 확인된 대회', 'Events with confirmed champions, finalists, and scores'))}</h2><p class="band__intro">${esc(L('공식 리캡에서 결승 결과가 확인된 대회만 이름과 스코어를 게시합니다.', 'Names and scores appear only when an official recap has published the finals.'))}</p></div></div><div class="tour-archive-grid">${archiveCards || `<p class="notice">${esc(tournamentLabel(loc, 'noItems'))}</p>`}</div></div></section>
-<section class="band"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">LATEST CONTEXT</p><h2 class="band__title">${esc(tournamentLabel(loc, 'latest'))}</h2></div></div><div class="update-grid">${items.length ? items.map((u) => updateCard(u, loc)).join('') : `<p class="notice">${esc(tournamentLabel(loc, 'noItems'))}</p>`}</div></div></section>
-<section class="band band--alt"><div class="wrap"><div class="tour-source-panel"><div><p class="section-kicker">SOURCE POLICY</p><h2>${esc(L('결과를 추정하지 않습니다', 'No guessed results'))}</h2><p>${esc(L('대회가 완료로 표시되더라도 공식 Winners Circle 또는 결과표가 공개되지 않았다면 “공식 결과 대기”로 표시합니다. 확인된 이름만 상세 페이지에 반영합니다.', 'A completed event remains “official results pending” until its Winners Circle or result table is visible. Only verified names are added to event pages.'))}</p></div>${updateSourceCards(loc, ['tournaments','international','results'])}</div></div></section>`;
+<section class="band"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">TOURNAMENT READING ROOM</p><h2 class="band__title">${esc(L('이번 시즌을 관통하는 읽을거리', 'Long-form threads across the season'))}</h2><p class="band__intro">${esc(L('대회 하나를 보고 끝내지 않고 선수 역할, 파트너십, 싱글 성장, 주니어 경로를 여러 이벤트에 걸쳐 연결합니다.', 'Move beyond one event by connecting player roles, partnerships, singles development, and junior pathways across the calendar.'))}</p></div></div><div class="tour-reading-grid">${seasonThreads}</div></div></section>
+<section class="band band--alt"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">LATEST CONTEXT</p><h2 class="band__title">${esc(tournamentLabel(loc, 'latest'))}</h2></div></div><div class="update-grid">${items.length ? items.map((u) => updateCard(u, loc)).join('') : `<p class="notice">${esc(tournamentLabel(loc, 'noItems'))}</p>`}</div></div></section>
+<section class="band"><div class="wrap"><div class="tour-source-panel"><div><p class="section-kicker">SOURCE POLICY</p><h2>${esc(L('결과를 추정하지 않습니다', 'No guessed results'))}</h2><p>${esc(L('대회가 완료로 표시되더라도 공식 Winners Circle 또는 결과표가 공개되지 않았다면 “공식 결과 대기”로 표시합니다. 확인된 이름만 상세 페이지에 반영합니다.', 'A completed event remains “official results pending” until its Winners Circle or result table is visible. Only verified names are added to event pages.'))}</p></div>${updateSourceCards(loc, ['tournaments','international','results'])}</div></div></section>`;
   return layout({ loc, rel: 'tournaments/', title: tournamentLabel(loc, 'title'), description: tournamentLabel(loc, 'intro'), bodyHtml: body });
 }
+
+function tournamentReadingSections(loc, event) {
+  const L = (ko, en) => loc === 'ko' ? ko : en;
+  const deepReads = event.deepReads || [];
+  const timeline = event.timeline || [];
+  const clubLessons = (loc === 'ko' && event.clubLessonsKo ? event.clubLessonsKo : event.clubLessons) || [];
+  const related = (event.relatedPlayers || []).map((slug) => players.find((p) => p.slug === slug)).filter(Boolean);
+  const readsHtml = deepReads.map((x, i) => `<article class="event-deep-read event-deep-read--${(i % 3) + 1}"><span>${String(i + 1).padStart(2, '0')}</span><h3>${esc(loc === 'ko' ? (x.titleKo || x.title) : x.title)}</h3><p>${esc(loc === 'ko' ? (x.bodyKo || x.body) : x.body)}</p></article>`).join('');
+  const timelineHtml = timeline.map((x) => `<li><time>${esc(x[0])}</time><span>${esc(loc === 'ko' ? (x[2] || x[1]) : x[1])}</span></li>`).join('');
+  const lessonsHtml = clubLessons.map((x, i) => `<li><b>${String(i + 1).padStart(2, '0')}</b><span>${esc(x)}</span></li>`).join('');
+  const playerHtml = related.map((p) => `<a class="event-related-player" href="${link(loc, 'players/' + p.slug + '/')}"><img src="${escAttr(p.image)}" alt="" loading="lazy"><span><strong>${esc(p.name)}</strong><small>${esc(loc1(p, loc, 'style'))}</small></span><b aria-hidden="true">→</b></a>`).join('');
+  return `<section class="event-reading-room"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">DEEP READ</p><h2 class="band__title">${esc(L('결과를 넘어 대회를 읽는 세 가지 관점', 'Three ways to read beyond the result'))}</h2><p class="band__intro">${esc(L('점수, 파트너 역할, 선수 성장과 동호인 적용까지 연결한 Picklary 편집 분석입니다.', 'Picklary editorial analysis connecting scores, partner roles, player development, and club-player application.'))}</p></div></div><div class="event-deep-read-grid">${readsHtml}</div></div></section>
+  <section class="band band--alt"><div class="wrap event-follow-grid"><article class="event-timeline-card"><p class="section-kicker">EVENT TIMELINE</p><h2>${esc(L('대회 흐름', 'Event flow'))}</h2><ol>${timelineHtml}</ol></article><article class="event-club-card"><p class="section-kicker">CLUB LESSONS</p><h2>${esc(L('내 경기로 가져갈 것', 'Take it to your court'))}</h2><ul>${lessonsHtml}</ul></article><article class="event-related-players"><p class="section-kicker">PLAYER CONNECTIONS</p><h2>${esc(L('이 대회와 연결된 선수', 'Players connected to this event'))}</h2>${playerHtml || `<p>${esc(L('결과가 확정되면 관련 선수 페이지가 연결됩니다.', 'Related player profiles appear as results are confirmed.'))}</p>`}</article></div></section>`;
+}
+
 function renderTournamentDetail(loc, event) {
   const L = (ko, en) => loc === 'ko' ? ko : en;
   const participants = (loc === 'ko' && event.participantsKo ? event.participantsKo : event.participants) || [];
@@ -3854,6 +3989,7 @@ function renderTournamentDetail(loc, event) {
 <section class="band band--alt"><div class="wrap tournament-detail-grid"><article class="body-card tournament-detail-main"><p class="section-kicker">${esc(L('대회 브리핑', 'Event briefing'))}</p><h2>${esc(L('기본 정보와 현재 맥락', 'Event context'))}</h2><p>${esc(overview)}</p><div class="tournament-facts"><div><span>${esc(L('상태', 'Status'))}</span><strong>${esc(tourStatusLabel(loc, event.status))}</strong></div><div><span>${esc(L('투어', 'Tour'))}</span><strong>${esc(event.tour)}</strong></div><div><span>${esc(L('기간', 'Dates'))}</span><strong>${esc(dates)}</strong></div><div><span>${esc(L('장소', 'Location'))}</span><strong>${esc(location)}</strong></div></div></article><aside class="body-card tournament-detail-side tournament-detail-side--facts"><p class="section-kicker">${esc(L('숫자와 특이사항', 'Facts & notable details'))}</p><h2>${esc(L('이벤트를 이해하는 핵심 정보', 'What makes this event distinct'))}</h2><ul class="tour-detail-list">${notableFacts.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></aside></div></section>
 ${storyHtml ? `<section class="event-stories-band"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">STORYLINES</p><h2 class="band__title">${esc(L('스코어 밖에서 봐야 할 이야기', 'The stories beyond the score'))}</h2><p class="band__intro">${esc(L('대회 포맷, 선수 성장, 일정과 시즌 경쟁이 결과에 어떤 의미를 더하는지 정리합니다.', 'Format, player development, scheduling, and season pressure explain what the result means.'))}</p></div></div><div class="event-story-grid">${storyHtml}</div></div></section>` : ''}
 <section class="band"><div class="wrap tournament-detail-columns"><article><p class="section-kicker">${esc(L('주요 출전·구성', 'Field & format'))}</p><h2>${esc(L('참가 선수·팀', 'Players and teams'))}</h2><ul class="tour-detail-list">${participants.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></article><article><p class="section-kicker">${esc(L('관전 포인트', 'What to watch'))}</p><h2>${esc(L('이번 대회의 핵심 질문', 'Key questions'))}</h2><ul class="tour-detail-list">${watch.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></article><article><p class="section-kicker">SEASON CONTEXT</p><h2>${esc(L('전체 시즌에서 갖는 의미', 'Why this event matters'))}</h2><p>${esc(storyline)}</p></article></div></section>
+${tournamentReadingSections(loc, event)}
 <section class="band band--alt"><div class="wrap"><h2 class="band__title">${esc(L('다음으로 이어 보기', 'Continue following'))}</h2><div class="tour-related-grid"><a href="${link(loc, 'pro-scene/')}"><strong>${esc(proSceneLabel(loc, 'hub'))}</strong><span>${esc(L('최신 게시판으로 돌아가기', 'Back to the live board'))} →</span></a><a href="${link(loc, 'pro-scene/players/')}"><strong>${esc(proSceneLabel(loc, 'players'))}</strong><span>${esc(L('선수 프로필과 스타일 보기', 'Player profiles and styles'))} →</span></a><a href="${link(loc, 'pro-scene/results/')}"><strong>${esc(proSceneLabel(loc, 'results'))}</strong><span>${esc(L('결과와 랭킹 연결', 'Results and rankings'))} →</span></a><a href="${link(loc, 'blogs/')}"><strong>${esc(proSceneLabel(loc, 'insights'))}</strong><span>${esc(L('전술·장비·스토리 심층 글', 'Tactics, gear, and long-form stories'))} →</span></a></div></div></section>`;
   return layout({ loc, rel: 'tournaments/' + event.slug + '/', title, description: overview, bodyHtml: body });
 }
@@ -4621,7 +4757,6 @@ ${rows}
 function buildSitemapXml() {
   const urls = [];
   // Root global landing page (indexable, language-neutral)
-  urls.push(`  <url>\n    <loc>${config.url}/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>`);
   const add = (rel, changefreq, priority) => {
     const alts = locales.map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${config.url}${link(l, rel)}"/>`).join('\n');
     for (const loc of locales) {
@@ -4750,7 +4885,7 @@ function build() {
   writeFile('404.html', render404());
   writeFile('410.html', render410());
   writeFile('robots.txt', `User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /data/\nDisallow: /i18n/\n\nSitemap: ${config.url}/sitemap.xml\n`);
-  writeFile('_redirects', `/ /en/ 302!
+  writeFile('_redirects', `/ /en/ 301!
 /ko/tour /ko/pro-scene/ 301!
 /en/tour /en/pro-scene/ 301!
 /tour /en/pro-scene/ 301!

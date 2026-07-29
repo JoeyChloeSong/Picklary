@@ -1,10 +1,10 @@
 {
   "name": "picklelevel",
-  "version": "1.0.0",
+  "version": "0.5.7",
   "private": true,
   "description": "Picklary — a level-based pickleball hub with skills, paddles, pro profiles, highlights, and AdSense-safe static pages.",
   "scripts": {
-    "build": "node build.js",
+    "build": "node build.js && node scripts/check-seo-redirects.js",
     "start": "node build.js && node start-local.js",
     "serve": "node start-local.js",
     "dev": "node build.js && node start-local.js",

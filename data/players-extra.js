@@ -1,0 +1,108 @@
+'use strict';
+module.exports = [
+  {
+    name:'Ella Oh', slug:'ella-oh', country:'United States', countryCode:'USA',
+    style:'Precocious all-court junior with compact technique and fearless point construction',
+    skills:['Early ball recognition','Compact counters','Directional control','Transition footwork','Competitive composure'],
+    achievements:['2026 US Open women’s 18U doubles champion at age 11.','2026 PPA Masters girls’ 14U singles champion.','2025 PPA World Championships girls’ 12U singles champion.'],
+    events:['Junior singles','Junior doubles','Development events'],
+    paddle:'Ella Oh signature paddle line',
+    watch:'Watch how early preparation lets a smaller athlete redirect pace without overswinging.',
+    bio:'Ella Oh is one of the most visible young prospects in American pickleball. Her story matters not only because she wins age-group titles, but because she is already competing above her age bracket and building a public identity around disciplined development. Picklary tracks her as a case study in how junior pathways, family support, coaching, equipment partnerships, and careful event selection can shape the next generation of the sport.',
+    hometown:'United States', age:'11 (2026)', height:'Developing junior athlete', turnedPro:'Junior development pathway', plays:'Right-handed', resides:'United States',
+    officialProfile:'https://ellaoh.com/', secondaryProfile:'https://www.instagram.com/ellaohpickleball/',
+    translations:{ko:{style:'간결한 기술과 대담한 포인트 설계를 갖춘 차세대 올라운드 주니어',bio:'Ella Oh는 미국 피클볼에서 가장 주목받는 어린 유망주 가운데 한 명입니다. 단순히 연령별 타이틀을 따는 데 그치지 않고, 자신보다 높은 연령 부문에 도전하며 성장 경로를 만들고 있다는 점이 중요합니다. Picklary는 그녀를 주니어 대회 구조, 가족 지원, 코칭, 장비 파트너십, 대회 선택이 차세대 선수의 성장에 어떤 영향을 주는지 보여 주는 사례로 추적합니다.',watch:'작은 체격에서도 큰 스윙 없이 빠른 공을 방향 전환하는 조기 준비를 관찰하세요.'}},
+    image:'/assets/img/players/ella-oh.svg', imageAlt:'Illustrated profile card for Ella Oh', photoNote:'Original illustrated profile card. Not a photograph.'
+  },
+  {
+    name:'Gabriel Tardio', slug:'gabriel-tardio', country:'Bolivia / United States tour scene', countryCode:'BOL',
+    style:'Explosive right-side pressure, fast hands, and fearless transition attacks',
+    skills:['Right-side speed-ups','Two-handed backhand counters','Transition aggression','Middle pressure','Partner role clarity'],
+    achievements:['PPA men’s doubles No. 1 level profile in 2026.','Multiple men’s doubles titles with Ben Johns.','Known for converting defense into offense unusually early in the transition zone.'],
+    events:['Men’s doubles','Mixed doubles','Singles'], paddle:'Sponsored paddle line varies by season',
+    watch:'Track how he protects the middle, then attacks the first ball that rises above net height.',
+    bio:'Gabriel Tardio’s rise is one of the clearest examples of the modern right-side doubles role becoming an attacking position rather than a passive support role. His compact two-handed backhand, willingness to counter through the middle, and ability to accelerate from the transition zone make him a valuable study for ambitious doubles players. His partnership with Ben Johns also creates a useful contrast: Johns organizes the point while Tardio compresses time and space.',
+    hometown:'Bolivia / U.S. professional circuit', age:'—', height:'—', turnedPro:'Early 2020s', plays:'Right-handed', resides:'United States tour scene',
+    officialProfile:'https://ppatour.com/athlete/gabriel-tardio/', secondaryProfile:'https://www.pickleball.com/players/gabriel-tardio',
+    translations:{ko:{style:'폭발적인 오른쪽 압박, 빠른 손, 과감한 전환 공격이 특징인 선수',bio:'Gabriel Tardio의 성장은 현대 복식에서 오른쪽 선수가 수동적인 보조 역할이 아니라 적극적인 공격 역할로 바뀌고 있음을 보여 줍니다. 짧은 투핸드 백핸드, 중앙을 향한 카운터, 전환 구역에서 수비를 빠르게 공격으로 바꾸는 능력이 강점입니다. Ben Johns와의 조합에서는 Johns가 포인트를 설계하고 Tardio가 상대의 시간과 공간을 압축하는 대비가 선명합니다.',watch:'중앙을 지킨 뒤 네트보다 조금이라도 뜬 첫 공을 어떻게 공격하는지 추적하세요.'}},
+    image:'/assets/img/players/gabriel-tardio.svg', imageAlt:'Illustrated profile card for Gabriel Tardio', photoNote:'Original illustrated profile card. Not a photograph.'
+  },
+  {
+    name:'Hayden Patriquin', slug:'hayden-patriquin', country:'United States', countryCode:'USA',
+    style:'High-energy athletic pressure with elite speed, coverage, and countering',
+    skills:['Court coverage','Explosive counters','Right-side poaching','Mixed-doubles pressure','Scramble defense'],
+    achievements:['PPA mixed doubles No. 2 level profile in 2026.','Won the 2026 Mesa Cup mixed doubles title with Anna Bright.','A central figure in the younger generation challenging established partnerships.'],
+    events:['Men’s doubles','Mixed doubles'], paddle:'Franklin C45 Raw Carbon',
+    watch:'Study how he turns recovery speed into offensive court position instead of merely surviving the rally.',
+    bio:'Hayden Patriquin brings visible energy, athletic range, and emotional momentum to the court. The deeper story is tactical: his speed allows partners to hold more aggressive positions, while his backhand counters and middle pressure shorten opponents’ decision time. He is especially useful for studying how a younger right-side player can become a primary creator in mixed and men’s doubles.',
+    hometown:'United States', age:'—', height:'—', turnedPro:'Teen professional era', plays:'Right-handed', resides:'United States',
+    officialProfile:'https://ppatour.com/athlete/hayden-patriquin/', secondaryProfile:'https://www.pickleball.com/players/hayden-patriquin',
+    translations:{ko:{style:'엘리트 스피드·코트 커버·카운터를 앞세운 고에너지 압박형 선수',bio:'Hayden Patriquin은 에너지와 운동 능력이 먼저 눈에 띄지만, 더 중요한 것은 그 스피드가 전술을 바꾼다는 점입니다. 넓은 수비 범위 덕분에 파트너가 더 공격적인 위치를 유지할 수 있고, 백핸드 카운터와 중앙 압박으로 상대의 판단 시간을 줄입니다. 젊은 오른쪽 선수가 혼합복식과 남자복식에서 어떻게 주도적인 창조자가 되는지 공부하기 좋은 선수입니다.',watch:'단순히 공을 살리는 데 그치지 않고 회복 속도를 공격 위치로 바꾸는 과정을 보세요.'}},
+    image:'/assets/img/players/hayden-patriquin.svg', imageAlt:'Illustrated profile card for Hayden Patriquin', photoNote:'Original illustrated profile card. Not a photograph.'
+  },
+  {
+    name:'Kate Fahey', slug:'kate-fahey', country:'United States', countryCode:'USA',
+    style:'Relentless singles pressure with disciplined depth and competitive edge',
+    skills:['Singles movement','Deep returns','Passing-shot discipline','Two-handed backhand','Scoreboard resilience'],
+    achievements:['PPA women’s singles No. 2 level profile in 2026.','Seven singles golds and repeated finals appearances on her official profile.','Transitioned from elite college tennis into top-tier professional pickleball.'],
+    events:['Women’s singles','Women’s doubles','Mixed doubles'], paddle:'Sponsored equipment varies by season',
+    watch:'Watch how she keeps depth through fatigue and uses repeated pressure instead of searching for one spectacular winner.',
+    bio:'Kate Fahey’s profile is valuable because it shows how a high-level tennis athlete can adapt without simply playing “small-court tennis.” Her singles success comes from movement discipline, repeatable depth, and the ability to accept long physical exchanges. As her doubles game develops, the storyline is whether those baseline strengths can be translated into softer transition decisions and faster kitchen patterns.',
+    hometown:'United States', age:'—', height:'—', turnedPro:'Mid-2020s', plays:'Right-handed', resides:'United States',
+    officialProfile:'https://ppatour.com/athlete/kate-fahey/', secondaryProfile:'https://www.pickleball.com/players/kate-fahey',
+    translations:{ko:{style:'깊이와 규율을 유지하며 끈질기게 압박하는 싱글 강자',bio:'Kate Fahey는 높은 수준의 테니스 선수가 단순히 작은 코트에서 테니스를 하는 데 그치지 않고 피클볼에 맞게 적응한 사례입니다. 싱글 성공의 바탕은 이동 규율, 반복 가능한 깊이, 긴 체력전을 받아들이는 능력입니다. 앞으로의 핵심 스토리는 이러한 베이스라인 강점이 더 부드러운 전환 판단과 빠른 키친 패턴으로 얼마나 잘 연결되는가입니다.',watch:'피로가 쌓여도 깊이를 유지하고 한 번의 화려한 위너보다 반복 압박을 선택하는 방식을 보세요.'}},
+    image:'/assets/img/players/kate-fahey.svg', imageAlt:'Illustrated profile card for Kate Fahey', photoNote:'Original illustrated profile card. Not a photograph.'
+  },
+  {
+    name:'Jorja Johnson', slug:'jorja-johnson', country:'United States', countryCode:'USA',
+    style:'Natural pickleball instincts, soft-hands creativity, and mixed-doubles balance',
+    skills:['Dink variation','Backhand counters','Mixed-doubles spacing','Lob disguise','Partner chemistry'],
+    achievements:['PPA women’s doubles top-five and mixed doubles top-three level profile in 2026.','Multiple mixed doubles titles.','Built an elite career without a traditional tennis background.'],
+    events:['Women’s doubles','Mixed doubles','Singles'], paddle:'Sponsored equipment varies by season',
+    watch:'Study her patience at the kitchen and how she changes direction without telegraphing the ball.',
+    bio:'Jorja Johnson is a particularly interesting development story because her game was formed inside pickleball rather than through a long tennis pathway. Her feel, disguise, and ability to play through family or long-term chemistry make her a useful counterpoint to the wave of tennis converts. She demonstrates that elite performance can come from native pattern recognition and soft-game creativity as much as raw racquet-sport power.',
+    hometown:'Kansas / Naples, Florida', age:'—', height:'—', turnedPro:'Teen professional era', plays:'Right-handed', resides:'Florida',
+    officialProfile:'https://ppatour.com/athlete/jorja-johnson/', secondaryProfile:'https://www.pickleball.com/players/jorja-johnson',
+    translations:{ko:{style:'타고난 피클볼 감각, 소프트 게임 창의성, 혼합복식 균형이 강점인 선수',bio:'Jorja Johnson은 긴 테니스 경력보다 피클볼 안에서 게임이 형성된 선수라는 점에서 흥미롭습니다. 감각, 방향 위장, 가족 또는 장기 파트너와의 호흡은 테니스 전향 선수들의 파워와 다른 성장 모델을 보여 줍니다. 정상급 경기력은 강한 라켓 스포츠 배경뿐 아니라 피클볼 고유의 패턴 인식과 소프트 게임 창의성에서도 나올 수 있다는 사례입니다.',watch:'키친에서 기다리는 시간과 공의 방향을 숨긴 채 바꾸는 방식을 관찰하세요.'}},
+    image:'/assets/img/players/jorja-johnson.svg', imageAlt:'Illustrated profile card for Jorja Johnson', photoNote:'Original illustrated profile card. Not a photograph.'
+  },
+  {
+    name:'Hurricane Tyra Black', slug:'hurricane-tyra-black', country:'United States', countryCode:'USA',
+    style:'Elastic defense, explosive counters, and fast-rising doubles pressure',
+    skills:['Scramble defense','Backhand acceleration','Transition resets','Women’s doubles coverage','Mixed-doubles counters'],
+    achievements:['PPA women’s doubles No. 3 level profile in 2026.','Won the 2026 Indoor Nationals mixed doubles title with Christian Alshon.','A former tennis prospect who has rapidly built elite pickleball results.'],
+    events:['Women’s doubles','Mixed doubles','Singles'], paddle:'PIKKL Hurricane Pro',
+    watch:'Watch the moment she changes from absorbing pace to striking through the next ball.',
+    bio:'Hurricane Tyra Black combines a tennis athlete’s reach with increasingly mature pickleball decisions. Early in her rise, the athletic saves drew attention; the more important development is her growing ability to reset, wait, and then counter at the correct height. Her partnerships with Jorja Johnson and Christian Alshon provide two different laboratories: patient women’s doubles construction and high-speed mixed doubles pressure.',
+    hometown:'United States', age:'—', height:'—', turnedPro:'Mid-2020s', plays:'Right-handed', resides:'United States',
+    officialProfile:'https://ppatour.com/athlete/hurricane-tyra-black/', secondaryProfile:'https://www.pickleball.com/players/hurricane-tyra-black',
+    translations:{ko:{style:'탄력적인 수비, 폭발적인 카운터, 빠르게 성장하는 복식 압박이 특징인 선수',bio:'Hurricane Tyra Black은 테니스 선수의 긴 리치와 점점 성숙해지는 피클볼 판단을 결합합니다. 초기에는 운동 능력으로 공을 살리는 장면이 주목받았지만, 더 중요한 발전은 리셋하고 기다린 뒤 올바른 높이에서 카운터하는 능력입니다. Jorja Johnson과의 여자복식, Christian Alshon과의 혼합복식은 각각 인내심 있는 포인트 구성과 고속 압박을 보여 주는 서로 다른 실험실입니다.',watch:'상대 속도를 받아내는 단계에서 다음 공을 강하게 치는 단계로 바뀌는 순간을 보세요.'}},
+    image:'/assets/img/players/hurricane-tyra-black.svg', imageAlt:'Illustrated profile card for Hurricane Tyra Black', photoNote:'Original illustrated profile card. Not a photograph.'
+  },
+  {
+    name:'Hunter Johnson', slug:'hunter-johnson', country:'United States', countryCode:'USA',
+    style:'Direct singles offense, heavy first-ball pressure, and confident finishing',
+    skills:['Serve-plus-one pressure','Forehand passing','Singles court coverage','Return depth','Closing at the net'],
+    achievements:['2026 Indoor National Championships men’s singles champion.','2026 Cape Coral Open men’s singles silver medalist.','Established singles threat across professional tours.'],
+    events:['Men’s singles','Men’s doubles','Mixed doubles'], paddle:'Sponsored equipment varies by season',
+    watch:'Study how his serve and first forehand create a shorter point before he approaches the net.',
+    bio:'Hunter Johnson’s game is built around making singles points feel urgent. He uses the serve, deep return pressure, and a strong first forehand to reduce the number of neutral exchanges. The development question is how that direct offense holds up against opponents who absorb pace and force him to build a second or third pattern.',
+    hometown:'United States', age:'—', height:'—', turnedPro:'Professional tour era', plays:'Right-handed', resides:'United States',
+    officialProfile:'https://ppatour.com/athlete/hunter-johnson/', secondaryProfile:'https://www.pickleball.com/players/hunter-johnson',
+    translations:{ko:{style:'서브 이후 첫 공격과 강한 마무리로 포인트를 짧게 만드는 싱글 공격수',bio:'Hunter Johnson은 싱글 포인트를 빠르게 긴장 상태로 만드는 선수입니다. 서브, 깊은 리턴 압박, 강한 첫 포핸드로 중립 랠리 횟수를 줄입니다. 앞으로의 관전 포인트는 상대가 속도를 흡수하고 두 번째·세 번째 패턴을 요구할 때도 직접적인 공격이 유지되는지입니다.',watch:'서브와 첫 포핸드가 네트 전진 전 포인트를 어떻게 짧게 만드는지 보세요.'}},
+    image:'/assets/img/players/hunter-johnson.svg', imageAlt:'Illustrated profile card for Hunter Johnson', photoNote:'Original illustrated profile card. Not a photograph.'
+  },
+  {
+    name:'Rachel Rohrabacher', slug:'rachel-rohrabacher', country:'United States', countryCode:'USA',
+    style:'Fast-hands women’s doubles specialist with relentless middle pressure',
+    skills:['Backhand counters','Middle compression','Partner switching','Transition defense','Speed-up recognition'],
+    achievements:['PPA women’s doubles top-ten profile in 2026.','Nine women’s doubles golds on her official profile.','Built a major partnership storyline with Anna Bright.'],
+    events:['Women’s doubles','Mixed doubles'], paddle:'Selkirk sponsored line',
+    watch:'Watch how she crowds the middle while still recovering to the sideline ball.',
+    bio:'Rachel Rohrabacher’s emergence helped create one of the defining women’s doubles storylines of the modern tour. Her compact counters and willingness to occupy the middle give her partners permission to attack more aggressively. The key analytical question is not merely hand speed, but how early recognition and court geometry make the hands appear even faster.',
+    hometown:'United States', age:'—', height:'—', turnedPro:'Mid-2020s', plays:'Right-handed', resides:'United States',
+    officialProfile:'https://ppatour.com/athlete/rachel-rohrabacher/', secondaryProfile:'https://www.pickleball.com/players/rachel-rohrabacher',
+    translations:{ko:{style:'빠른 손과 끈질긴 중앙 압박을 갖춘 여자복식 전문 선수',bio:'Rachel Rohrabacher의 성장은 현대 여자복식에서 가장 중요한 파트너십 스토리 가운데 하나를 만들었습니다. 짧은 카운터와 중앙을 차지하려는 의지가 파트너에게 더 공격적인 선택을 허용합니다. 핵심은 단순한 손 속도가 아니라, 조기 인식과 코트 기하가 손을 더 빠르게 보이게 만든다는 점입니다.',watch:'중앙을 압박하면서도 사이드라인 공으로 회복하는 방식을 보세요.'}},
+    image:'/assets/img/players/rachel-rohrabacher.svg', imageAlt:'Illustrated profile card for Rachel Rohrabacher', photoNote:'Original illustrated profile card. Not a photograph.'
+  }
+];

@@ -171,3 +171,69 @@ module.exports = [
     storylineKo: 'New Jersey가 뉴욕, St. Louis가 미드시즌 토너먼트, Dallas가 샌디에이고를 우승했습니다. 한 팀의 절대 우위만으로 시즌을 설명하기 어렵고, 포맷·출전 가능 여부·매치업 계획·각 팀의 마지막 정규 시즌 일정이 플레이오프 전까지 모두 중요하다는 흐름입니다.'
   });
 })();
+
+
+// v0.5.7 results-page refresh through 2026-07-28.
+;(() => {
+  const rows = module.exports;
+  const mlp = rows.find((r) => r.id === 'r-2026-mlp');
+  if (mlp) Object.assign(mlp, {
+    event: 'Major League Pickleball 2026 (through Chicago)',
+    eventKo: '메이저 리그 피클볼 2026 (시카고 종료 기준)',
+    checked: '2026-07-28',
+    summary: 'Eight of nine regular-season stops are complete, plus the Mid-Season Tournament. Dallas ended with back-to-back titles and 72 points, while Orlando will decide the No. 1 seed, final playoff qualifiers, and several first-round matchups.',
+    summaryKo: '정규 시즌 9개 대회 중 8개와 미드시즌 토너먼트가 완료됐습니다. Dallas는 2연속 우승과 72점으로 일정을 마쳤고, 올랜도에서 1번 시드·마지막 플레이오프 진출팀·일부 1라운드 대진이 결정됩니다.',
+    winnersLabel: 'Completed 2026 MLP event results through July 28',
+    winnersLabelKo: '2026년 7월 28일 기준 완료된 MLP 이벤트 결과',
+    winners: [
+      { division: 'Dallas — May 22–25', divisionKo: '댈러스 — 5/22–25', champ: 'LA Mad Drops', silver: 'Columbus Sliders', note: 'Mad Drops won the opener 3-1.', noteKo: 'Mad Drops가 개막 대회를 3-1로 우승.' },
+      { division: 'Columbus — May 28–31', divisionKo: '콜럼버스 — 5/28–31', champ: 'New Jersey 5s', silver: 'St. Louis Shock', bronze: 'Columbus Sliders', note: 'New Jersey swept St. Louis 3-0.', noteKo: 'New Jersey가 St. Louis를 3-0으로 완파.' },
+      { division: 'St. Louis — June 4–7', divisionKo: '세인트루이스 — 6/4–7', champ: 'St. Louis Shock', silver: 'LA Mad Drops', note: 'Shock won the final 3-0.', noteKo: 'Shock가 결승을 3-0으로 우승.' },
+      { division: 'Austin — June 11–14', divisionKo: '오스틴 — 6/11–14', champ: 'New Jersey 5s', note: 'New Jersey added its second event title.', noteKo: 'New Jersey가 시즌 두 번째 이벤트 우승.' },
+      { division: 'St. Petersburg — June 17–21', divisionKo: '세인트피터스버그 — 6/17–21', champ: 'St. Louis Shock', silver: 'LA Mad Drops', bronze: 'Brooklyn Pickleball Team', note: 'Shock won the title match 3-0.', noteKo: 'Shock가 타이틀 매치를 3-0으로 우승.' },
+      { division: 'New York — June 25–28', divisionKo: '뉴욕 — 6/25–28', champ: 'New Jersey 5s', silver: 'Brooklyn Pickleball Team', note: 'New Jersey won the Super Sunday final 3-0.', noteKo: 'New Jersey가 Super Sunday 결승을 3-0으로 우승.' },
+      { division: 'Mid-Season Tournament — July 8–12', divisionKo: '미드시즌 토너먼트 — 7/8–12', champ: 'St. Louis Shock', silver: 'New Jersey 5s', bronze: 'Columbus Sliders', note: 'St. Louis swept the final 3-0; Columbus won bronze 3-1.', noteKo: 'St. Louis가 결승을 3-0으로 스윕; Columbus가 3-1로 동메달.' },
+      { division: 'San Diego — July 16–19', divisionKo: '샌디에이고 — 7/16–19', champ: 'Dallas Flash', silver: 'Columbus Sliders', bronze: 'Atlanta Bouncers', note: 'Dallas won the final 3-1 and earned 25 event points.', noteKo: 'Dallas가 결승을 3-1로 이기고 이벤트 포인트 25점 획득.' },
+      { division: 'Chicago — July 23–26', divisionKo: '시카고 — 7/23–26', champ: 'Dallas Flash', silver: 'Brooklyn Pickleball Team', bronze: 'California Black Bears', note: 'The match ended 2-2; Dallas won the DreamBreaker 21-10 and earned 25 points.', noteKo: '팀 매치 2-2 뒤 Dallas가 DreamBreaker를 21-10으로 이기고 25점을 획득.' }
+    ],
+    standingsLabel: 'Playoff race entering Orlando',
+    standingsLabelKo: '올랜도 진입 전 플레이오프 경쟁',
+    standings: [
+      { team: 'Dallas Flash — 72 points', note: 'Back-to-back champions in San Diego and Chicago; regular season complete.', noteKo: '샌디에이고·시카고 2연속 우승; 정규 시즌 일정 완료.' },
+      { team: 'LA Mad Drops — 71 points', note: 'Still active in Orlando and able to move above Dallas and challenge Columbus for third.', noteKo: '올랜도 출전 예정으로 Dallas를 넘고 Columbus의 3위를 추격할 수 있음.' },
+      { team: 'Brooklyn Pickleball Team — 66 points', note: 'Chicago runner-up with a path to climb further in Orlando.', noteKo: '시카고 준우승, 올랜도에서 추가 순위 상승 가능.' },
+      { team: 'Atlanta Bouncers — 36 points', note: 'Sixth in Chicago and ninth overall; not scheduled for Orlando, so qualification depends on the final event.', noteKo: '시카고 6위·전체 9위; 올랜도에 출전하지 않아 최종 결과를 지켜봐야 함.' },
+      { team: 'SoCal Hard Eights — 34 points', note: 'Only one Chicago point left them exposed to multiple Orlando bubble scenarios.', noteKo: '시카고에서 1점에 그치며 여러 올랜도 버블 시나리오에 노출됨.' },
+      { team: 'California / Miami / Orlando / Las Vegas / Chicago', note: 'The final regular-season stop will settle the remaining qualification and seeding combinations.', noteKo: '정규 시즌 최종전에서 남은 진출권과 시드 조합이 결정됨.' }
+    ],
+    storylineTitle: 'Storyline — Dallas is finished, but the playoff bracket is not',
+    storylineTitleKo: '관전 포인트 — Dallas 일정은 끝났지만 대진표는 미완성',
+    storyline: 'Dallas transformed two late stops into 50 event points and an 11-match winning streak. Orlando now shifts attention to the St. Louis-New Jersey No. 1 seed race, Los Angeles and Brooklyn’s climb, and the crowded final playoff bubble.',
+    storylineKo: 'Dallas는 시즌 막판 두 대회를 이벤트 포인트 50점과 11연승으로 바꿨습니다. 이제 올랜도에서는 St. Louis-New Jersey의 1번 시드 경쟁, Los Angeles와 Brooklyn의 상승, 혼전인 마지막 플레이오프 버블이 중심입니다.'
+  });
+
+  const singapore = {
+    id: 'r-2026-singapore-open', slug: '2026-ppa-asia-singapore-open', status: 'published',
+    event: 'Leapmotor Singapore Open — PPA Tour Asia 500', eventKo: 'Leapmotor 싱가포르 오픈 — PPA Tour Asia 500',
+    tier: 'PPA Tour Asia 500', tierKo: 'PPA Tour Asia 500',
+    dates: 'July 23–26, 2026', datesKo: '2026년 7월 23–26일',
+    location: 'The Sports Arena @ Singapore Expo, Singapore', locationKo: '싱가포르 엑스포 The Sports Arena',
+    sourceName: 'PPA Tour Asia official championship recap', sourceUrl: 'https://www.ppatour-asia.com/wong-makes-history-in-singapore-with-third-straight-singles-gold/',
+    checked: '2026-07-28',
+    summary: 'Hong Kit Wong became the first PPA Tour Asia player to win three consecutive singles titles. Yufei Long earned women’s singles and women’s doubles gold, while Len Yang/Collin Johns and Jaeda Minniefield/Luc Pham completed the five-title card.',
+    summaryKo: 'Hong Kit Wong이 PPA Tour Asia 최초의 단식 3연속 우승자가 됐습니다. Yufei Long은 여자 단식·여자복식 2관왕, Len Yang/Collin Johns와 Jaeda Minniefield/Luc Pham이 나머지 우승을 차지했습니다.',
+    winners: [
+      { division: 'Men’s singles', divisionKo: '남자 단식', champ: 'Hong Kit Wong', silver: 'Adam Harvey', note: '6-11, 11-7, 11-3', noteKo: '6-11, 11-7, 11-3' },
+      { division: 'Women’s singles', divisionKo: '여자 단식', champ: 'Yufei Long', silver: 'Anni Xie', note: '11-4, 11-0', noteKo: '11-4, 11-0' },
+      { division: 'Men’s doubles', divisionKo: '남자 복식', champ: 'Len Yang / Collin Johns', silver: 'Hien Truong / Kenta Miyoshi', note: '11-4, 4-11, 11-7', noteKo: '11-4, 4-11, 11-7' },
+      { division: 'Women’s doubles', divisionKo: '여자 복식', champ: 'Yufei Long / Kara Wheatley', silver: 'Jamie Haas / Lingwei Kong', note: '11-7, 12-10', noteKo: '11-7, 12-10' },
+      { division: 'Mixed doubles', divisionKo: '혼합복식', champ: 'Jaeda Minniefield / Luc Pham', silver: 'Xiao Yi Wang-Beckvall / Robert Stirling', note: '11-9, 7-11, 11-5', noteKo: '11-9, 7-11, 11-5' }
+    ],
+    storylineTitle: 'Storyline — records, a double, and partnerships that clicked quickly',
+    storylineTitleKo: '관전 포인트 — 신기록, 2관왕, 빠르게 맞아든 파트너십',
+    storyline: 'Wong’s mid-final adjustment protected a historic streak; Long showed dominance across singles and doubles; and Minniefield/Pham won their first event together. Singapore rewarded both established excellence and rapid partnership adaptation.',
+    storylineKo: 'Wong은 결승 도중 전략을 바꿔 역사적인 연승을 지켰고, Long은 단식과 복식 모두에서 우위를 증명했으며, Minniefield/Pham은 첫 대회에서 우승했습니다. 싱가포르는 기존 강자의 완성도와 새 조합의 빠른 적응을 모두 보상했습니다.'
+  };
+  const index = rows.findIndex((r) => r.id === singapore.id);
+  if (index >= 0) rows[index] = singapore; else rows.unshift(singapore);
+})();

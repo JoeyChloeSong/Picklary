@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://picklary.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://picklary.com/ko/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/"/>
@@ -790,6 +785,134 @@
     <priority>0.65</priority>
   </url>
   <url>
+    <loc>https://picklary.com/ko/players/ella-oh/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/ella-oh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/ella-oh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/ella-oh/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/players/ella-oh/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/ella-oh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/ella-oh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/ella-oh/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/players/gabriel-tardio/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/gabriel-tardio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/gabriel-tardio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/gabriel-tardio/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/players/gabriel-tardio/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/gabriel-tardio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/gabriel-tardio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/gabriel-tardio/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/players/hayden-patriquin/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/hayden-patriquin/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/hayden-patriquin/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/hayden-patriquin/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/players/hayden-patriquin/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/hayden-patriquin/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/hayden-patriquin/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/hayden-patriquin/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/players/kate-fahey/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/kate-fahey/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/kate-fahey/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/kate-fahey/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/players/kate-fahey/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/kate-fahey/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/kate-fahey/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/kate-fahey/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/players/jorja-johnson/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/jorja-johnson/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/jorja-johnson/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/jorja-johnson/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/players/jorja-johnson/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/jorja-johnson/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/jorja-johnson/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/jorja-johnson/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/players/hurricane-tyra-black/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/hurricane-tyra-black/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/hurricane-tyra-black/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/hurricane-tyra-black/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/players/hurricane-tyra-black/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/hurricane-tyra-black/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/hurricane-tyra-black/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/hurricane-tyra-black/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/players/hunter-johnson/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/hunter-johnson/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/hunter-johnson/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/hunter-johnson/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/players/hunter-johnson/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/hunter-johnson/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/hunter-johnson/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/hunter-johnson/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/players/rachel-rohrabacher/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/rachel-rohrabacher/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/rachel-rohrabacher/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/rachel-rohrabacher/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/players/rachel-rohrabacher/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/players/rachel-rohrabacher/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/players/rachel-rohrabacher/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/players/rachel-rohrabacher/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
     <loc>https://picklary.com/ko/dupr-self-check/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/dupr-self-check/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/dupr-self-check/"/>
@@ -1186,6 +1309,70 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/mlp-mid-season-grand-rapids-2026/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/mlp-mid-season-grand-rapids-2026/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/mlp-mid-season-grand-rapids-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/tournaments/ppa-indoor-national-championships-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/ppa-indoor-national-championships-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/ppa-indoor-national-championships-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/ppa-indoor-national-championships-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/tournaments/ppa-indoor-national-championships-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/ppa-indoor-national-championships-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/ppa-indoor-national-championships-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/ppa-indoor-national-championships-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/tournaments/carvana-mesa-cup-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/carvana-mesa-cup-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/carvana-mesa-cup-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/carvana-mesa-cup-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/tournaments/carvana-mesa-cup-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/carvana-mesa-cup-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/carvana-mesa-cup-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/carvana-mesa-cup-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/tournaments/zimmer-biomet-cape-coral-open-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/zimmer-biomet-cape-coral-open-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/zimmer-biomet-cape-coral-open-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/zimmer-biomet-cape-coral-open-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/tournaments/zimmer-biomet-cape-coral-open-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/zimmer-biomet-cape-coral-open-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/zimmer-biomet-cape-coral-open-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/zimmer-biomet-cape-coral-open-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/ko/tournaments/ppa-italy-portoroz-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/ppa-italy-portoroz-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/ppa-italy-portoroz-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/ppa-italy-portoroz-2026/"/>
+    <changefreq>daily</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://picklary.com/en/tournaments/ppa-italy-portoroz-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://picklary.com/ko/tournaments/ppa-italy-portoroz-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://picklary.com/en/tournaments/ppa-italy-portoroz-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://picklary.com/en/tournaments/ppa-italy-portoroz-2026/"/>
     <changefreq>daily</changefreq>
     <priority>0.76</priority>
   </url>

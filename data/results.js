@@ -237,3 +237,47 @@ module.exports = [
   const index = rows.findIndex((r) => r.id === singapore.id);
   if (index >= 0) rows[index] = singapore; else rows.unshift(singapore);
 })();
+
+
+// v0.5.8 — MLP Orlando live checkpoint, official scoreboard checked 2026-07-31 4:07 PM ET.
+;(() => {
+  const rows = module.exports;
+  const id='r-2026-mlp-orlando-live';
+  const live={
+    id, slug:'2026-mlp-orlando-live', status:'published',
+    event:'Amway MLP Orlando — Friday live checkpoint', eventKo:'Amway MLP 올랜도 — 금요일 라이브 체크포인트',
+    tier:'MLP Regular Season #9 · Live', tierKo:'MLP 정규 시즌 9차전 · 진행 중',
+    dates:'July 30–August 2, 2026', datesKo:'2026년 7월 30일–8월 2일',
+    location:'ESPN Wide World of Sports Complex, Kissimmee, Florida', locationKo:'미국 플로리다 키시미 ESPN Wide World of Sports Complex',
+    checked:'2026-07-31 4:07 PM ET',
+    summary:'Five Friday matches were complete at the checkpoint. LA Mad Drops had two wins, St. Louis opened with a sweep, New Jersey won in regulation, and Las Vegas survived Brooklyn in a DreamBreaker. The event and playoff standings remain live.',
+    summaryKo:'확인 시점에 금요일 5경기가 완료됐습니다. LA Mad Drops가 2승, St. Louis가 스윕, New Jersey가 정규 승리, Las Vegas가 Brooklyn과의 DreamBreaker 승리를 기록했습니다. 대회와 플레이오프 순위는 계속 변동 중입니다.',
+    winnersLabel:'Completed Friday matches at 4:07 PM ET', winnersLabelKo:'오후 4:07 ET 기준 완료된 금요일 경기',
+    winners:[
+      { division:'Phoenix vs St. Louis', divisionKo:'Phoenix vs St. Louis', champ:'St. Louis Shock', silver:'Phoenix Flames', note:'4-0 · 11-2, 11-5, 11-2, 11-2', noteKo:'4-0 · 11-2, 11-5, 11-2, 11-2' },
+      { division:'Palm Beach vs LA', divisionKo:'Palm Beach vs LA', champ:'LA Mad Drops', silver:'Palm Beach Royals', note:'3-1 · LA secured the team win through mixed doubles.', noteKo:'3-1 · LA가 혼합복식까지 팀 승리를 확정.' },
+      { division:'Las Vegas vs Brooklyn', divisionKo:'Las Vegas vs Brooklyn', champ:'Las Vegas Night Owls', silver:'Brooklyn Pickleball Team', note:'2-2 · DreamBreaker 21-16', noteKo:'2-2 · DreamBreaker 21-16' },
+      { division:'New Jersey vs Chicago', divisionKo:'New Jersey vs Chicago', champ:'New Jersey 5s', silver:'Chicago Slice', note:'3-1 · 11-2, 6-11, 11-5, 11-2', noteKo:'3-1 · 11-2, 6-11, 11-5, 11-2' },
+      { division:'LA vs California', divisionKo:'LA vs California', champ:'LA Mad Drops', silver:'California Black Bears', note:'4-0 · 13-11, 11-1, 11-9, 11-3', noteKo:'4-0 · 13-11, 11-1, 11-9, 11-3' }
+    ],
+    standingsLabel:'Live implications', standingsLabelKo:'라이브 관전 포인트',
+    standings:[
+      { team:'LA Mad Drops', note:'Two Friday wins increased pressure on the teams above and around them in the seeding race.', noteKo:'금요일 2승으로 시드 경쟁의 상·인접 팀에 압박을 높임.' },
+      { team:'St. Louis Shock', note:'A 4-0 sweep protected the No. 1 seed push.', noteKo:'4-0 스윕으로 1번 시드 경쟁을 지킴.' },
+      { team:'New Jersey 5s', note:'A 3-1 win answered St. Louis from the other pool.', noteKo:'다른 풀에서 3-1 승리로 St. Louis에 응답.' },
+      { team:'Las Vegas Night Owls', note:'The 21-16 DreamBreaker win kept the bubble path alive.', noteKo:'DreamBreaker 21-16 승리로 버블 가능성을 유지.' }
+    ],
+    liveUrl:'https://majorleaguepickleball.co/events-2026/mlp-orlando-2026/', liveLabel:'Official live scores', liveLabelKo:'공식 라이브 스코어',
+    source:'Major League Pickleball', sourceUrl:'https://majorleaguepickleball.co/events-2026/mlp-orlando-2026/'
+  };
+  const index=rows.findIndex((x)=>x.id===id);
+  if(index>=0) rows[index]=live; else rows.unshift(live);
+  const season=rows.find((x)=>x.id==='r-2026-mlp');
+  if(season){
+    season.event='Major League Pickleball 2026 (Orlando live)';
+    season.eventKo='메이저 리그 피클볼 2026 (올랜도 진행 중)';
+    season.checked='2026-07-31 4:07 PM ET';
+    season.summary='The ninth and final regular-season stop is live in Orlando. Friday’s early completed matches strengthened St. Louis and New Jersey, produced two LA wins, and kept Las Vegas alive through a DreamBreaker.';
+    season.summaryKo='9번째이자 마지막 정규 시즌 대회가 올랜도에서 진행 중입니다. 금요일 초반 완료 경기로 St. Louis와 New Jersey가 힘을 보탰고 LA는 2승, Las Vegas는 DreamBreaker 승리로 경쟁을 이어갔습니다.';
+  }
+})();

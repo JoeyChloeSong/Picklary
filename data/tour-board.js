@@ -934,3 +934,74 @@ module.exports = {
   board.storylines = (board.storylines || []).filter((story) => !existingTitles.has(story.title) && !existingTitles.has(story.titleKo));
   board.storylines.unshift(...newStories);
 })();
+
+
+// v0.5.8 live MLP Orlando checkpoint — verified from the official event scoreboard at 2026-07-31 4:07 PM ET.
+;(() => {
+  const board = module.exports;
+  board.updated = '2026-07-31 4:07 PM ET';
+  board.editorialNote = {
+    en: 'MLP Orlando is live. Completed matches below were checked against the official event scoreboard at 4:07 PM ET on July 31; later matches and standings can change during the day.',
+    ko: 'MLP 올랜도 대회가 진행 중입니다. 아래 완료 경기는 7월 31일 오후 4시 7분(미 동부시간) 공식 이벤트 스코어보드 기준이며 이후 경기와 순위는 당일에도 바뀔 수 있습니다.'
+  };
+  const matches = [
+    { division:'Friday · Phoenix Flames vs St. Louis Shock', divisionKo:'금요일 · Phoenix Flames vs St. Louis Shock', champ:'St. Louis Shock', silver:'Phoenix Flames', score:'4–0 · 11–2, 11–5, 11–2, 11–2' },
+    { division:'Friday · Palm Beach Royals vs LA Mad Drops', divisionKo:'금요일 · Palm Beach Royals vs LA Mad Drops', champ:'LA Mad Drops', silver:'Palm Beach Royals', score:'3–1 · 11–3, 11–1, 11–5, 8–11' },
+    { division:'Friday · Las Vegas Night Owls vs Brooklyn Pickleball Team', divisionKo:'금요일 · Las Vegas Night Owls vs Brooklyn Pickleball Team', champ:'Las Vegas Night Owls', silver:'Brooklyn Pickleball Team', score:'2–2 · DreamBreaker 21–16' },
+    { division:'Friday · New Jersey 5s vs Chicago Slice', divisionKo:'금요일 · New Jersey 5s vs Chicago Slice', champ:'New Jersey 5s', silver:'Chicago Slice', score:'3–1 · 11–2, 6–11, 11–5, 11–2' },
+    { division:'Friday · LA Mad Drops vs California Black Bears', divisionKo:'금요일 · LA Mad Drops vs California Black Bears', champ:'LA Mad Drops', silver:'California Black Bears', score:'4–0 · 13–11, 11–1, 11–9, 11–3' }
+  ];
+  const status = (board.statusEvents || []).find((x) => x.slug === 'mlp-orlando-2026');
+  if (status) Object.assign(status, {
+    status:'live', start:'2026-07-30', end:'2026-08-02',
+    summary:'The final regular-season event is underway at Walt Disney World. Friday’s first five completed matches included two LA wins, a St. Louis sweep, a New Jersey regulation win, and a Las Vegas DreamBreaker victory.',
+    summaryKo:'Walt Disney World에서 정규 시즌 최종전이 진행 중입니다. 금요일 첫 5개 완료 경기에서는 LA의 2승, St. Louis의 스윕, New Jersey의 정규 승리, Las Vegas의 DreamBreaker 승리가 나왔습니다.',
+    resultHint:'Live · 5 Friday matches verified at 4:07 PM ET',
+    resultHintKo:'진행 중 · 금요일 완료 경기 5개 확인 (오후 4:07 ET)'
+  });
+  const event = (board.tournaments || []).find((x) => x.slug === 'mlp-orlando-2026');
+  if (event) Object.assign(event, {
+    status:'live', resultStatus:'live', resultCardMode:'matches', resultChecked:'2026-07-31 4:07 PM ET',
+    resultNote:'Friday is still in progress. These five completed matches were verified from the official MLP event scoreboard; Orlando–Phoenix and later matches were not final at the checkpoint.',
+    resultNoteKo:'금요일 경기가 진행 중입니다. 아래 5경기는 공식 MLP 이벤트 스코어보드에서 완료를 확인했으며, 확인 시점의 Orlando–Phoenix 및 이후 경기는 최종 결과가 아니었습니다.',
+    results:matches,
+    overview:'The final regular-season stop is live at ESPN Wide World of Sports. Early Friday results strengthened St. Louis and New Jersey in the top-seed conversation, kept Los Angeles moving upward, and showed again that the DreamBreaker can decide playoff-positioning points.',
+    overviewKo:'ESPN Wide World of Sports에서 정규 시즌 최종전이 진행 중입니다. 금요일 초반 결과로 St. Louis와 New Jersey는 1번 시드 경쟁에서 힘을 보탰고, Los Angeles는 상승세를 이어갔으며 DreamBreaker가 플레이오프 순위 포인트를 좌우할 수 있음을 다시 보여줬습니다.',
+    notableFacts:[
+      'St. Louis opened Friday with a four-game sweep of Phoenix.',
+      'LA Mad Drops won its first two Friday matches, including a 4-0 result over California.',
+      'Las Vegas and Brooklyn split doubles before the Night Owls won the DreamBreaker 21-16.',
+      'New Jersey beat Chicago 3-1 as the No. 1 seed race remained active.',
+      'The event is still live; Sunday placement matches will determine the event podium and final regular-season points.'
+    ],
+    notableFactsKo:[
+      'St. Louis는 Phoenix를 4경기 스윕하며 금요일을 시작했습니다.',
+      'LA Mad Drops는 California전 4-0을 포함해 금요일 첫 두 경기를 모두 이겼습니다.',
+      'Las Vegas와 Brooklyn은 복식을 2-2로 나눈 뒤 Night Owls가 DreamBreaker를 21-16으로 이겼습니다.',
+      'New Jersey는 Chicago를 3-1로 꺾으며 1번 시드 경쟁을 이어갔습니다.',
+      '대회는 진행 중이며 일요일 순위 결정전에서 최종 포디엄과 정규 시즌 포인트가 확정됩니다.'
+    ],
+    stories:[
+      { kicker:'FRIDAY SIGNAL', kickerKo:'금요일 신호', title:'Los Angeles turned the opening window into two regulation wins', titleKo:'Los Angeles, 금요일 초반을 정규 승리 2개로 전환', body:'Palm Beach took the fourth game in the first meeting, but LA had already secured the team win; the Mad Drops then swept California 4-0. That is the kind of efficient point collection that can reshape playoff seeding.', bodyKo:'첫 경기에서 Palm Beach가 4번째 게임을 가져갔지만 LA는 이미 팀 승리를 확정했고, 이어 California를 4-0으로 스윕했습니다. 이런 효율적인 포인트 수집은 플레이오프 시드를 바꿀 수 있습니다.' },
+      { kicker:'DREAMBREAKER', kickerKo:'드림브레이커', title:'Las Vegas kept its bubble story alive under singles pressure', titleKo:'Las Vegas, 단식 압박 속에서 버블 경쟁 유지', body:'Brooklyn forced a 2-2 split, but Las Vegas won the deciding DreamBreaker 21-16. For bubble teams, one singles rotation can now carry the value of an entire weekend.', bodyKo:'Brooklyn이 복식을 2-2로 맞췄지만 Las Vegas가 DreamBreaker를 21-16으로 이겼습니다. 버블 팀에는 한 번의 단식 로테이션이 대회 전체만큼 큰 가치를 가질 수 있습니다.' },
+      { kicker:'TOP-SEED RACE', kickerKo:'1번 시드 경쟁', title:'St. Louis and New Jersey both answered early', titleKo:'St. Louis와 New Jersey, 나란히 초반 승리', body:'St. Louis swept Phoenix and New Jersey beat Chicago 3-1. They are in separate groups, so every regulation win changes the pressure on the other side of the bracket.', bodyKo:'St. Louis는 Phoenix를 스윕했고 New Jersey는 Chicago를 3-1로 이겼습니다. 서로 다른 그룹에 있어 한쪽의 정규 승리가 다른 쪽의 부담을 곧바로 키웁니다.' }
+    ]
+  });
+  const ids = new Set((board.posts || []).map((x)=>x.id));
+  if (!ids.has('mlp-orlando-friday-live-0731')) board.posts.unshift({
+    id:'mlp-orlando-friday-live-0731', date:'2026-07-31', kind:'result', tour:'MLP', discipline:'team', confidence:'official',
+    title:'MLP Orlando live: St. Louis, LA, Las Vegas, and New Jersey bank Friday wins',
+    titleKo:'MLP 올랜도 라이브: St. Louis·LA·Las Vegas·New Jersey 금요일 승리',
+    summary:'At the 4:07 PM ET checkpoint, five Friday matches were complete: St. Louis swept Phoenix, LA beat Palm Beach and California, Las Vegas won a DreamBreaker over Brooklyn, and New Jersey beat Chicago 3-1.',
+    summaryKo:'오후 4시 7분(ET) 확인 시점에 금요일 5경기가 완료됐습니다. St. Louis는 Phoenix를 스윕했고, LA는 Palm Beach와 California를 이겼으며, Las Vegas는 Brooklyn과의 DreamBreaker 승리, New Jersey는 Chicago전 3-1 승리를 기록했습니다.',
+    sourceName:'Official MLP Orlando scoreboard', sourceUrl:'https://majorleaguepickleball.co/events-2026/mlp-orlando-2026/', internalUrl:'tournaments/mlp-orlando-2026/'
+  });
+  const storyTitles = new Set((board.storylines || []).map((x)=>x.title));
+  if (!storyTitles.has('Orlando Friday: regulation efficiency and DreamBreaker survival')) board.storylines.unshift({
+    date:'2026-07-31', confidence:'official', tour:'MLP',
+    title:'Orlando Friday: regulation efficiency and DreamBreaker survival', titleKo:'올랜도 금요일: 정규 승리 효율과 DreamBreaker 생존',
+    body:'LA collected two early wins, St. Louis and New Jersey protected top-seed ambitions, and Las Vegas survived Brooklyn in singles. The final regular-season event is already separating teams that close in regulation from teams forced to live on the DreamBreaker margin.',
+    bodyKo:'LA는 초반 2승을 쌓았고 St. Louis와 New Jersey는 1번 시드 목표를 지켰으며 Las Vegas는 단식에서 Brooklyn을 넘었습니다. 정규 시즌 최종전은 정규 승리를 끝내는 팀과 DreamBreaker 마진에 의존하는 팀을 벌써 구분하고 있습니다.',
+    sourceName:'Official MLP Orlando scoreboard', sourceUrl:'https://majorleaguepickleball.co/events-2026/mlp-orlando-2026/'
+  });
+})();

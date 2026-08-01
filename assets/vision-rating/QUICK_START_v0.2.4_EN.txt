@@ -1,0 +1,12 @@
+Picklary Vision Rating v0.2.4 Quick Start
+
+1. Extract the ZIP completely into a new folder.
+2. Run Picklary_Vision_Rating.cmd.
+3. Select the match video.
+4. Mark 8 court floor points and 4 player positions.
+5. Enter player names, DUPR anchors, first server, and final score.
+6. Start analysis.
+7. Review the hexagonal performance profile and the full shot, tactical, and movement analysis.
+
+Default address: http://127.0.0.1:8865/?lang=en
+Data folder: Documents\PicklaryVisionLocal_EN

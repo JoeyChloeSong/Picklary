@@ -36,9 +36,11 @@ try { autoUpdates = require('./data/auto-updates.js'); } catch (e) { autoUpdates
 let tourBoard = { updated: '', editorialNote: {}, statusEvents: [], posts: [], storylines: [], insights: [], tournaments: [] };
 try { tourBoard = require('./data/tour-board.js'); } catch (e) { /* optional curated tour data */ }
 try { tourBoard = require('./data/tour-enrichment.js')(tourBoard) || tourBoard; } catch (e) { console.warn('Tour enrichment skipped:', e.message); }
+try { tourBoard = require('./data/tour-live-v059.js')(tourBoard) || tourBoard; } catch (e) { console.warn('Tour live override skipped:', e.message); }
 const BUILD_STAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 let tourResults = [];
 try { tourResults = require('./data/results.js'); } catch (e) { tourResults = []; }
+try { tourResults = require('./data/results-live-v059.js')(tourResults) || tourResults; } catch (e) { console.warn('Tour result override skipped:', e.message); }
 let rulesLegality; try { rulesLegality = require('./data/rules-legality.js'); } catch (e) { rulesLegality = { paddleStatus: [], ruleChanges: [] }; }
 let levelShotsData; try { levelShotsData = require('./data/level-shots.js'); } catch (e) { levelShotsData = {}; }
 let duprQuiz = [];
@@ -233,6 +235,7 @@ function header(loc, rel) {
     { href: 'gear/', label: tt(loc, 'nav.gearLab'), match: ['gear/', 'paddles/', 'tools/paddle-finder/', 'category/paddles-and-gear/'] },
     { href: 'pro-scene/', label: tt(loc, 'nav.proScene'), match: ['pro-scene/', 'players/', 'tournaments/', 'updates/players/', 'updates/rules/', 'highlights/', 'category/players-and-global-scene/', 'category/tournaments-and-leagues/'] },
     { href: 'clip-lite/', label: tt(loc, 'nav.clipLite'), match: ['clip-lite/'] },
+    { href: 'vision-rating/', label: tt(loc, 'nav.visionRating'), match: ['vision-rating/'] },
     { href: 'boards/', label: tt(loc, 'nav.playHub'), match: ['boards/'] },
     { href: 'categories/', label: tt(loc, 'nav.insights'), match: ['categories/', 'columns/', 'the-brief/', 'blogs/'] },
   ];
@@ -275,6 +278,7 @@ function sideRail(loc, rel) {
     ['gear/', tt(loc, 'side.gearLab'), 'gear'],
     ['pro-scene/', tt(loc, 'side.proScene'), 'players'],
     [loc === 'ko' ? '/clip-lite/' : '/clip-lite/en/', tt(loc, 'nav.clipLite'), 'clip'],
+    ['vision-rating/', tt(loc, 'nav.visionRating'), 'vision'],
     ['categories/', tt(loc, 'side.insights'), 'guides'],
   ].filter(([, , theme]) => theme !== activeTheme).map(([r, label]) => [r, label]);
   return `<nav class="side-rail" aria-label="${escAttr(tt(loc, 'side.label'))}">
@@ -340,6 +344,7 @@ function themeForRel(rel) {
   if (seg === 'gear' || seg === 'paddles' || rel.indexOf('tools/paddle-finder') === 0) return 'gear';
   if (seg === 'players' || seg === 'pro-scene') return 'players';
   if (seg === 'clip-lite') return 'clip';
+  if (seg === 'vision-rating') return 'vision';
   if (seg === 'tournaments') return 'compete';
   if (seg === 'highlights') return 'highlights';
   if (seg === 'categories' || seg === 'columns' || rel.indexOf('the-brief') === 0 || seg === 'updates' || seg === 'boards' || seg === 'sitemap') return 'guides';
@@ -400,7 +405,7 @@ function layout(opts) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style-picklary-v056-20260723.css">
+  <link rel="stylesheet" href="/assets/css/style-picklary-v061-20260731.css">
   ${jsonldTags}
   ${adsenseTags}
 </head>
@@ -3787,7 +3792,7 @@ function tourPostCard(loc, item) {
   const sourceExternal = /^https?:/i.test(sourceUrl || '');
   return `<article class="tour-post-card" data-kind="${escAttr(item.kind)}" data-tour="${escAttr(String(item.tour || 'all').toLowerCase())}" data-discipline="${escAttr(item.discipline || 'all')}">
     <div class="tour-post-card__head"><span class="tour-kind tour-kind--${escAttr(item.kind)}">${esc(tourKindLabel(loc, item.kind))}</span><span class="tour-confidence tour-confidence--${escAttr(item.confidence)}">${esc(tourConfidenceLabel(loc, item.confidence))}</span></div>
-    <p class="tour-post-card__meta">${esc(item.date)} · ${esc(item.tour || '')}</p>
+    <p class="tour-post-card__meta">${esc(item.updatedAtLabel || item.date)} · ${esc(item.tour || '')}</p>
     <h3><a href="${escAttr(internalUrl)}">${esc(title)}</a></h3>
     <p>${esc(summary)}</p>
     <div class="tour-post-card__actions"><a href="${escAttr(internalUrl)}">${esc(loc === 'ko' ? '연결 페이지' : 'Connected page')} →</a>${sourceUrl ? `<a href="${escAttr(sourceUrl)}"${sourceExternal ? ' rel="nofollow noopener" target="_blank"' : ''}>${esc(item.sourceName || (loc === 'ko' ? '출처' : 'Source'))} ↗</a>` : ''}${item.secondaryUrl ? `<a href="${escAttr(item.secondaryUrl)}" rel="nofollow noopener" target="_blank">${esc(item.secondaryName || 'More')} ↗</a>` : ''}</div>
@@ -3796,12 +3801,44 @@ function tourPostCard(loc, item) {
 function tourStoryCard(loc, item) {
   return `<article class="tour-story-item"><div class="tour-story-item__rail" aria-hidden="true"><span></span></div><div class="tour-story-item__body"><div class="tour-story-item__meta"><time>${esc(item.date)}</time><span class="tour-chip">${esc(item.tour)}</span><span class="tour-confidence tour-confidence--${escAttr(item.confidence)}">${esc(tourConfidenceLabel(loc, item.confidence))}</span></div><h3>${esc(tourText(loc, item, 'title'))}</h3><p>${esc(tourText(loc, item, 'body'))}</p><a class="tour-text-link" href="${escAttr(item.sourceUrl)}" rel="nofollow noopener" target="_blank">${esc(item.sourceName)} ↗</a></div></article>`;
 }
+
+function tourDateValue(item) {
+  const raw = item && (item.updatedAt || item.date || item.end || item.start || item.resultChecked || '');
+  const parsed = Date.parse(raw);
+  if (Number.isFinite(parsed)) return parsed;
+  const compact = String(raw || '').match(/\d{4}-\d{2}-\d{2}/);
+  return compact ? Date.parse(compact[0] + 'T12:00:00Z') : 0;
+}
+function sortedTourEvents(items) {
+  return [...(items || [])].sort((a, b) => {
+    const delta = tourDateValue(b) - tourDateValue(a);
+    if (delta) return delta;
+    const rank = { live:3, upcoming:2, completed:1 };
+    return (rank[b.status] || 0) - (rank[a.status] || 0);
+  });
+}
+function sortedTourPosts(items) {
+  return [...(items || [])].sort((a, b) => tourDateValue(b) - tourDateValue(a));
+}
+function tourLeadDesk(loc, status) {
+  if (!status) return '';
+  const L = (ko, en) => loc === 'ko' ? ko : en;
+  const event = (tourBoard.tournaments || []).find((x) => x.slug === status.slug) || status;
+  const results = (event.results || []).slice(0, 8);
+  const rows = results.map((r, i) => `<li><span class="tour-live-desk__number">${String(i + 1).padStart(2,'0')}</span><span class="tour-live-desk__match"><small>${esc(tourText(loc, r, 'division'))}</small><strong>${esc(r.champ || '')}</strong><em>${esc(r.score || '')}</em></span></li>`).join('');
+  const when = status.updatedAtLabel || event.resultChecked || tourBoard.updated || '';
+  return `<section class="tour-live-desk"><div class="wrap tour-live-desk__grid"><div class="tour-live-desk__intro"><div class="tour-live-desk__flag"><span></span>${esc(L('LATEST MLP LIVE DESK','LATEST MLP LIVE DESK'))}</div><p class="tour-live-desk__time">${esc(when)}</p><h2>${esc(tourText(loc, status, 'title'))}</h2><p>${esc(tourText(loc, status, 'summary'))}</p><div class="tour-live-desk__actions"><a class="btn btn--primary" href="${link(loc, 'tournaments/' + status.slug + '/')}">${esc(L('전체 경기·스토리 보기','Open scores & storylines'))}</a><a class="btn btn--ghost" href="${escAttr(status.sourceUrl)}" rel="nofollow noopener" target="_blank">${esc(L('공식 라이브 스코어','Official live scores'))} ↗</a></div></div><div class="tour-live-desk__results"><div class="tour-live-desk__results-head"><span>${esc(L('완료 확인 경기','Verified finals'))}</span><strong>${results.length}</strong></div><ol>${rows}</ol><p>${esc(L('진행 중이거나 일부 스코어만 표시된 경기는 최종 결과에 포함하지 않습니다.','Matches still in progress or showing partial scores are not published as final.'))}</p></div></div></section>`;
+}
+
 function renderProSceneHub(loc) {
   const L = (ko, en) => loc === 'ko' ? ko : en;
   const card = (key, href, desc, icon) => `<a class="explore-card pro-scene-card pro-scene-card--${escAttr(key)}" href="${link(loc, href)}"><span class="pro-scene-card__icon" aria-hidden="true">${icon}</span><span class="explore-card__t">${esc(proSceneLabel(loc, key))}</span><span class="explore-card__d">${esc(desc)}</span><strong>${esc(L('열기', 'Open'))} →</strong></a>`;
-  const statusHtml = (tourBoard.statusEvents || []).map((item) => tourStatusCard(loc, item)).join('');
-  const postsHtml = (tourBoard.posts || []).map((item) => tourPostCard(loc, item)).join('');
-  const storyHtml = (tourBoard.storylines || []).slice(0, 4).map((item) => tourStoryCard(loc, item)).join('');
+  const orderedEvents = sortedTourEvents(tourBoard.statusEvents || []);
+  const leadEvent = orderedEvents.find((item) => item.status === 'live' && String(item.tour || '').toUpperCase() === 'MLP') || orderedEvents[0];
+  const statusHtml = orderedEvents.filter((item) => !leadEvent || item.slug !== leadEvent.slug).map((item) => tourStatusCard(loc, item)).join('');
+  const orderedPosts = sortedTourPosts(tourBoard.posts || []);
+  const postsHtml = orderedPosts.map((item) => tourPostCard(loc, item)).join('');
+  const storyHtml = sortedTourPosts(tourBoard.storylines || []).slice(0, 4).map((item) => tourStoryCard(loc, item)).join('');
   const insightHtml = (tourBoard.insights || []).map((item) => `<a class="tour-insight-card" href="${link(loc, item.url)}"><span>${esc(L('Picklary 연결 글', 'Picklary insight'))}</span><h3>${esc(tourText(loc, item, 'title'))}</h3><p>${esc(tourText(loc, item, 'body'))}</p><strong>${esc(L('읽기', 'Read'))} →</strong></a>`).join('');
   const editorialNote = loc === 'ko' ? tourBoard.editorialNote.ko : tourBoard.editorialNote.en;
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: proSceneLabel(loc, 'hub') }])}
@@ -3811,6 +3848,7 @@ function renderProSceneHub(loc) {
 <a class="tour-portal tour-portal--results" href="${link(loc, 'pro-scene/results/')}"><span class="tour-portal__icon" aria-hidden="true">◆</span><span class="tour-portal__copy"><small>${esc(L('공식 경기 데이터', 'Official competition data'))}</small><strong>${esc(proSceneLabel(loc, 'results'))}</strong><em>${esc(L('결과·브래킷·현재 순위', 'Results, brackets and standings'))}</em></span><b aria-hidden="true">→</b></a>
 <a class="tour-portal tour-portal--stories" href="${link(loc, 'pro-scene/storylines/')}"><span class="tour-portal__icon" aria-hidden="true">↗</span><span class="tour-portal__copy"><small>${esc(L('심층 분석', 'Story graph'))}</small><strong>${esc(proSceneLabel(loc, 'storylines'))}</strong><em>${esc(L('파트너·팀·라이벌 흐름', 'Partners, teams and rivalries'))}</em></span><b aria-hidden="true">→</b></a>
 </nav></div></section>
+${tourLeadDesk(loc, leadEvent)}
 <section class="band band--tour-live"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">${esc(L('NOW & NEXT', 'NOW & NEXT'))}</p><h2 class="band__title">${esc(L('현재 피클볼계에서 일어나는 일', 'What is happening across the tours'))}</h2></div><a href="${link(loc, 'tournaments/')}">${esc(L('전체 대회', 'All events'))} →</a></div><div class="tour-live-grid">${statusHtml}</div></div></section>
 <section class="band"><div class="wrap">${proSceneTabs(loc, 'hub')}<div class="explore-grid tour-board-grid">
   ${card('tournaments', 'tournaments/', proSceneLabel(loc, 'tournamentsDesc'), '🗓️')}
@@ -3819,7 +3857,7 @@ function renderProSceneHub(loc) {
   ${card('storylines', 'pro-scene/storylines/', proSceneLabel(loc, 'storylinesDesc'), '🔄')}
   ${card('insights', 'blogs/', proSceneLabel(loc, 'insightsDesc'), '📝')}
 </div></div></section>
-<section class="band band--alt" id="tour-feed"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">${esc(L('LIVE EDITORIAL BOARD', 'LIVE EDITORIAL BOARD'))}</p><h2 class="band__title">${esc(L('대회·결과·선수·스토리를 한 게시판에서', 'Events, results, players, and storylines in one board'))}</h2></div><strong id="tour-result-count">${esc(String((tourBoard.posts || []).length))}</strong></div>
+<section class="band band--alt" id="tour-feed"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">${esc(L('LIVE EDITORIAL BOARD', 'LIVE EDITORIAL BOARD'))}</p><h2 class="band__title">${esc(L('대회·결과·선수·스토리를 한 게시판에서', 'Events, results, players, and storylines in one board'))}</h2></div><strong id="tour-result-count">${esc(String(orderedPosts.length))}</strong></div>
 <div class="tour-board-filter" data-tour-controls>
   <div class="tour-filter-buttons" role="group" aria-label="${escAttr(L('콘텐츠 유형', 'Content type'))}">${['all','result','tournament','player','storyline','ranking','insight'].map((kind) => `<button type="button" class="${kind === 'all' ? 'is-active' : ''}" data-kind-filter="${kind}">${esc(tourKindLabel(loc, kind))}</button>`).join('')}</div>
   <label>${esc(L('투어', 'Tour'))}<select data-tour-filter><option value="all">${esc(L('전체 투어', 'All tours'))}</option><option value="ppa">PPA</option><option value="mlp">MLP</option><option value="app">APP</option><option value="usa pickleball">USA Pickleball</option><option value="milp">MiLP</option><option value="college">${esc(L('대학', 'College'))}</option><option value="international">${esc(L('국제대회', 'International'))}</option></select></label>
@@ -3917,7 +3955,7 @@ function renderProSceneRules(loc) {
 function renderTournamentsIndex(loc) {
   const L = (ko, en) => loc === 'ko' ? ko : en;
   const items = [...tournamentItems('all')].sort((a, b) => String(b.date || '').localeCompare(String(a.date || ''))).slice(0, 9);
-  const tracked = (tourBoard.statusEvents || []).filter((x) => x.detail);
+  const tracked = sortedTourEvents((tourBoard.statusEvents || []).filter((x) => x.detail));
   const archives = (tourBoard.tournaments || []).filter((x) => x.archive && x.resultStatus === 'confirmed');
   const completedCount = tracked.filter((x) => x.status === 'completed').length;
   const liveCount = tracked.filter((x) => x.status === 'live').length;
@@ -3980,12 +4018,13 @@ function renderTournamentDetail(loc, event) {
   const resultStatus = event.resultStatus || (event.status === 'completed' ? 'pending' : event.status);
   const results = event.results || [];
   const resultLinks = event.resultLinks || [];
-  const resultRows = results.map((r) => `<article class="event-result-card"><div class="event-result-card__division">${esc(tourText(loc, r, 'division'))}</div><div class="event-result-card__podium"><div><span class="event-result-card__place"><b aria-hidden="true">🥇</b>${esc(L('우승', 'Champion'))}</span><strong>${esc(r.champ || '—')}</strong></div>${r.silver ? `<div><span class="event-result-card__place"><b aria-hidden="true">🥈</b>${esc(L('준우승', 'Runner-up'))}</span><strong>${esc(r.silver)}</strong></div>` : ''}${r.bronze ? `<div><span class="event-result-card__place"><b aria-hidden="true">🥉</b>${esc(L('3위', 'Bronze'))}</span><strong>${esc(r.bronze)}</strong></div>` : ''}</div>${r.score ? `<p class="event-result-card__score"><span>${esc(L('결승 스코어', 'Final score'))}</span><strong>${esc(r.score)}</strong></p>` : ''}</article>`).join('');
+  const liveMatches = event.resultCardMode === 'matches';
+  const resultRows = results.map((r) => `<article class="event-result-card${liveMatches ? ' event-result-card--match' : ''}"><div class="event-result-card__division">${esc(tourText(loc, r, 'division'))}</div><div class="event-result-card__podium"><div><span class="event-result-card__place"><b aria-hidden="true">${liveMatches ? '✓' : '🥇'}</b>${esc(liveMatches ? L('승리 팀', 'Winner') : L('우승', 'Champion'))}</span><strong>${esc(r.champ || '—')}</strong></div>${r.silver ? `<div><span class="event-result-card__place"><b aria-hidden="true">${liveMatches ? '•' : '🥈'}</b>${esc(liveMatches ? L('상대 팀', 'Opponent') : L('준우승', 'Runner-up'))}</span><strong>${esc(r.silver)}</strong></div>` : ''}${r.bronze ? `<div><span class="event-result-card__place"><b aria-hidden="true">🥉</b>${esc(L('3위', 'Bronze'))}</span><strong>${esc(r.bronze)}</strong></div>` : ''}</div>${r.score ? `<p class="event-result-card__score"><span>${esc(liveMatches ? L('매치 결과', 'Match result') : L('결승 스코어', 'Final score'))}</span><strong>${esc(r.score)}</strong></p>` : ''}</article>`).join('');
   const resultLinkHtml = resultLinks.map((x) => `<a class="btn btn--ghost" href="${escAttr(x.url)}" rel="nofollow noopener" target="_blank">${esc(loc === 'ko' && x.labelKo ? x.labelKo : x.label)} ↗</a>`).join('');
   const storyHtml = stories.map((story, index) => `<article class="event-story-card event-story-card--${(index % 4) + 1}"><span>${esc(loc === 'ko' && story.kickerKo ? story.kickerKo : story.kicker)}</span><h3>${esc(loc === 'ko' && story.titleKo ? story.titleKo : story.title)}</h3><p>${esc(loc === 'ko' && story.bodyKo ? story.bodyKo : story.body)}</p></article>`).join('');
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: proSceneLabel(loc, 'hub'), rel: 'pro-scene/' }, { name: tournamentLabel(loc, 'title'), rel: 'tournaments/' }, { name: title }])}
 <section class="tournament-detail-hero tournament-detail-hero--${escAttr(event.tour.toLowerCase())}"><div class="wrap tournament-detail-hero__grid"><div><div class="tournament-detail-hero__top"><span class="tour-status-label tour-status-label--${escAttr(event.status)}">${esc(tourStatusLabel(loc, event.status))}</span><span class="tour-chip">${esc(event.tour)}</span><span class="result-state result-state--${escAttr(resultStatus)}">${esc(tourResultStatusLabel(loc, resultStatus))}</span></div><h1>${esc(title)}</h1><p>${esc(dates)} · ${esc(location)}</p><div class="source-buttons"><a class="btn btn--primary" href="${escAttr(event.sourceUrl)}" rel="nofollow noopener" target="_blank">${esc(event.sourceName)} ↗</a>${event.secondaryUrl ? `<a class="btn btn--ghost" href="${escAttr(event.secondaryUrl)}" rel="nofollow noopener" target="_blank">${esc(event.secondaryName)} ↗</a>` : ''}</div></div><div class="tournament-detail-hero__score"><span>${esc(L('결과 확인 기준', 'Results checked'))}</span><strong>${esc(event.resultChecked || tourBoard.updated || '')}</strong><p>${esc(resultNote || L('공식 결과 페이지를 기준으로 업데이트합니다.', 'Updated from the official result page.'))}</p></div></div></section>
-<section class="band event-result-section"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">RESULTS</p><h2 class="band__title">${esc(L('우승자·입상자와 공식 결과 상태', 'Champions, finalists, and result status'))}</h2><p class="band__intro">${esc(results.length ? L('공식 리캡에서 확인된 결승 결과입니다.', 'Finals verified from the official recap.') : L('공식 결과표가 공개되는 즉시 이름과 스코어를 반영합니다.', 'Names and scores will appear as soon as the official table is published.'))}</p></div><span class="result-state result-state--${escAttr(resultStatus)}">${esc(tourResultStatusLabel(loc, resultStatus))}</span></div>${results.length ? `<div class="event-results-grid">${resultRows}</div>` : `<div class="result-pending-panel result-pending-panel--${escAttr(resultStatus)}"><div class="result-pending-panel__icon" aria-hidden="true">${resultStatus === 'upcoming' ? '◷' : (resultStatus === 'live' ? '●' : '⌛')}</div><div><h3>${esc(tourResultStatusLabel(loc, resultStatus))}</h3><p>${esc(resultNote)}</p><div class="source-buttons">${resultLinkHtml || `<a class="btn btn--ghost" href="${escAttr(event.sourceUrl)}" rel="nofollow noopener" target="_blank">${esc(L('공식 대회 페이지 확인', 'Check official event page'))} ↗</a>`}</div></div></div>`}</div></section>
+<section class="band event-result-section"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">RESULTS</p><h2 class="band__title">${esc(liveMatches ? L('완료된 경기와 라이브 결과 상태', 'Completed matches and live result status') : L('우승자·입상자와 공식 결과 상태', 'Champions, finalists, and result status'))}</h2><p class="band__intro">${esc(results.length ? (liveMatches ? L('확인 시점까지 공식 스코어보드에서 완료된 경기입니다.', 'Matches completed on the official scoreboard at the stated checkpoint.') : L('공식 리캡에서 확인된 결승 결과입니다.', 'Finals verified from the official recap.')) : L('공식 결과표가 공개되는 즉시 이름과 스코어를 반영합니다.', 'Names and scores will appear as soon as the official table is published.'))}</p></div><span class="result-state result-state--${escAttr(resultStatus)}">${esc(tourResultStatusLabel(loc, resultStatus))}</span></div>${results.length ? `<div class="event-results-grid">${resultRows}</div>` : `<div class="result-pending-panel result-pending-panel--${escAttr(resultStatus)}"><div class="result-pending-panel__icon" aria-hidden="true">${resultStatus === 'upcoming' ? '◷' : (resultStatus === 'live' ? '●' : '⌛')}</div><div><h3>${esc(tourResultStatusLabel(loc, resultStatus))}</h3><p>${esc(resultNote)}</p><div class="source-buttons">${resultLinkHtml || `<a class="btn btn--ghost" href="${escAttr(event.sourceUrl)}" rel="nofollow noopener" target="_blank">${esc(L('공식 대회 페이지 확인', 'Check official event page'))} ↗</a>`}</div></div></div>`}</div></section>
 <section class="band band--alt"><div class="wrap tournament-detail-grid"><article class="body-card tournament-detail-main"><p class="section-kicker">${esc(L('대회 브리핑', 'Event briefing'))}</p><h2>${esc(L('기본 정보와 현재 맥락', 'Event context'))}</h2><p>${esc(overview)}</p><div class="tournament-facts"><div><span>${esc(L('상태', 'Status'))}</span><strong>${esc(tourStatusLabel(loc, event.status))}</strong></div><div><span>${esc(L('투어', 'Tour'))}</span><strong>${esc(event.tour)}</strong></div><div><span>${esc(L('기간', 'Dates'))}</span><strong>${esc(dates)}</strong></div><div><span>${esc(L('장소', 'Location'))}</span><strong>${esc(location)}</strong></div></div></article><aside class="body-card tournament-detail-side tournament-detail-side--facts"><p class="section-kicker">${esc(L('숫자와 특이사항', 'Facts & notable details'))}</p><h2>${esc(L('이벤트를 이해하는 핵심 정보', 'What makes this event distinct'))}</h2><ul class="tour-detail-list">${notableFacts.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></aside></div></section>
 ${storyHtml ? `<section class="event-stories-band"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">STORYLINES</p><h2 class="band__title">${esc(L('스코어 밖에서 봐야 할 이야기', 'The stories beyond the score'))}</h2><p class="band__intro">${esc(L('대회 포맷, 선수 성장, 일정과 시즌 경쟁이 결과에 어떤 의미를 더하는지 정리합니다.', 'Format, player development, scheduling, and season pressure explain what the result means.'))}</p></div></div><div class="event-story-grid">${storyHtml}</div></div></section>` : ''}
 <section class="band"><div class="wrap tournament-detail-columns"><article><p class="section-kicker">${esc(L('주요 출전·구성', 'Field & format'))}</p><h2>${esc(L('참가 선수·팀', 'Players and teams'))}</h2><ul class="tour-detail-list">${participants.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></article><article><p class="section-kicker">${esc(L('관전 포인트', 'What to watch'))}</p><h2>${esc(L('이번 대회의 핵심 질문', 'Key questions'))}</h2><ul class="tour-detail-list">${watch.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></article><article><p class="section-kicker">SEASON CONTEXT</p><h2>${esc(L('전체 시즌에서 갖는 의미', 'Why this event matters'))}</h2><p>${esc(storyline)}</p></article></div></section>
@@ -4581,6 +4620,44 @@ function renderTrustPage(loc, key, rel) {
 }
 
 
+
+function renderVisionRating(loc) {
+  const ko = loc === 'ko';
+  const L = (koText, enText) => ko ? koText : enText;
+  const title = L('Picklary 비전 레이팅', 'Picklary Vision Rating');
+  const intro = L(
+    '내 경기 영상을 로컬 PC에서 분석해 Picklary DUPR 근사치와 6축 경기 프로필, 샷·전술·이동 분석을 한글 보고서로 확인하는 Windows 프로그램입니다.',
+    'Analyze your own match video on a local Windows PC and receive Picklary DUPR estimates, a six-axis performance profile, and detailed shot, tactical, and movement analysis in English.'
+  );
+  const download = '/assets/downloads/Picklary_Vision_Rating_Local_Web_v0.2.4_Bilingual_Full_OneLauncher.zip';
+  const quick = ko ? '/assets/vision-rating/QUICK_START_v0.2.4_KO.txt' : '/assets/vision-rating/QUICK_START_v0.2.4_EN.txt';
+  const sample = ko ? '/assets/vision-rating/sample-report-v0.2.4-ko.html' : '/assets/vision-rating/sample-report-v0.2.4-en.html';
+  const otherSample = ko ? '/assets/vision-rating/sample-report-v0.2.4-en.html' : '/assets/vision-rating/sample-report-v0.2.4-ko.html';
+  const changelog = ko ? '/assets/vision-rating/CHANGELOG_v0.2.4_KO.md' : '/assets/vision-rating/CHANGELOG_v0.2.4_EN.md';
+  const axes = ko
+    ? ['서브', '리턴', '공격', '수비', '민첩성', '일관성']
+    : ['Serve', 'Return', 'Offense', 'Defense', 'Agility', 'Consistency'];
+  const values = [4.56, 4.72, 4.70, 4.55, 4.49, 4.61];
+  const cx = 210, cy = 190, radius = 116;
+  const point = (index, factor) => {
+    const angle = (-90 + index * 60) * Math.PI / 180;
+    return `${(cx + Math.cos(angle) * radius * factor).toFixed(1)},${(cy + Math.sin(angle) * radius * factor).toFixed(1)}`;
+  };
+  const grid = [0.2,0.4,0.6,0.8,1].map((level) => `<polygon points="${axes.map((_, i) => point(i, level)).join(' ')}" fill="none" stroke="rgba(159,203,231,${0.09 + level * 0.16})" stroke-width="1"/>`).join('');
+  const spokes = axes.map((_, i) => `<line x1="${cx}" y1="${cy}" x2="${point(i,1).split(',')[0]}" y2="${point(i,1).split(',')[1]}" stroke="rgba(159,203,231,.22)"/>`).join('');
+  const radarPoints = values.map((v, i) => point(i, v / 5)).join(' ');
+  const dots = values.map((v, i) => { const [x,y] = point(i, v/5).split(','); return `<circle cx="${x}" cy="${y}" r="5" fill="#75efca" stroke="#effffa" stroke-width="2"/>`; }).join('');
+  const labelPositions = [[210,31,'middle'],[349,111,'start'],[349,270,'start'],[210,353,'middle'],[71,270,'end'],[71,111,'end']];
+  const labels = axes.map((label, i) => { const [x,y,a] = labelPositions[i]; return `<text x="${x}" y="${y}" text-anchor="${a}" dominant-baseline="middle"><tspan class="vision-radar-label">${esc(label)}</tspan><tspan class="vision-radar-value" x="${x}" dy="18">${values[i].toFixed(2)}</tspan></text>`; }).join('');
+  const radarSvg = `<svg class="vision-demo-radar" viewBox="0 0 420 380" role="img" aria-label="${escAttr(L('육각형 경기 능력 예시', 'Example six-axis performance profile'))}"><defs><linearGradient id="visionRadarFill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#53e6bc" stop-opacity=".72"/><stop offset=".55" stop-color="#53c9ee" stop-opacity=".48"/><stop offset="1" stop-color="#8a79ff" stop-opacity=".38"/></linearGradient><filter id="visionRadarGlow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>${grid}${spokes}<polygon points="${radarPoints}" fill="url(#visionRadarFill)" stroke="#6ce9c5" stroke-width="3" filter="url(#visionRadarGlow)"/>${dots}${labels}</svg>`;
+  const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: title }])}
+<section class="vision-hero vision-hero--v061"><div class="wrap vision-hero__grid"><div><p class="page-head__eyebrow">LOCAL AI VIDEO ANALYSIS · v0.2.4 · KO + EN</p><h1>${esc(title)}</h1><p class="vision-hero__intro">${esc(intro)}</p><div class="vision-hero__actions"><a class="btn btn--primary" href="${download}" download>${esc(L('한글·영문 통합판 다운로드', 'Download bilingual package'))}</a><a class="btn btn--ghost" href="${sample}" target="_blank" rel="noopener">${esc(L('한글 결과 예시 보기', 'View English result example'))} ↗</a></div><div class="vision-trust-row"><span>🔒 ${esc(L('서버 업로드 없음', 'No server upload'))}</span><span>⚡ GPU ${esc(L('우선', 'first'))}</span><span>🧠 CPU ${esc(L('자동 대체', 'fallback'))}</span><span>🌐 KO / EN</span></div><p class="vision-hero__fine">${esc(L('공식 DUPR가 아닌 Picklary 독립 근사치입니다. 결과는 영상 품질, 카메라 각도와 검출 신뢰도에 영향을 받습니다.', 'This is an independent Picklary estimate, not an official DUPR rating. Results depend on video quality, camera angle, and detection confidence.'))}</p></div><div class="vision-hero-preview"><div class="vision-hero-preview__top"><span>${esc(L('결과 미리보기', 'RESULT PREVIEW'))}</span><strong>4.61</strong><small>Picklary DUPR</small></div>${radarSvg}<div class="vision-hero-preview__caption"><strong>${esc(L('내 플레이는 어떤 모양일까요?', 'What shape is your game?'))}</strong><span>${esc(L('영상 한 편으로 강점과 보완점을 6축 프로필로 확인합니다.', 'Turn one match video into a six-axis picture of strengths and priorities.'))}</span></div></div></div></section>
+<nav class="vision-section-nav" aria-label="${escAttr(L('비전 레이팅 페이지 메뉴', 'Vision Rating page menu'))}"><div class="wrap"><a href="#how"><span>1</span><strong>${esc(L('사용방법', 'How it works'))}</strong><small>${esc(L('영상 준비부터 보고서까지', 'From video to report'))}</small></a><a href="#logic"><span>2</span><strong>${esc(L('평가 로직', 'Rating logic'))}</strong><small>${esc(L('무엇을 보고 점수화하나요?', 'What is measured?'))}</small></a><a href="#result"><span>3</span><strong>${esc(L('결과 예시', 'Result example'))}</strong><small>${esc(L('육각형 프로필과 분석', 'Radar profile and insights'))}</small></a></div></nav>
+<section id="how" class="band vision-story-section"><div class="wrap"><div class="vision-section-heading"><div><p class="section-kicker">01 · ${esc(L('사용방법', 'HOW IT WORKS'))}</p><h2>${esc(L('내 영상이 분석 보고서가 되는 과정', 'From your video to a performance report'))}</h2><p>${esc(L('설치 후 영상과 최소한의 경기 정보를 입력하면 프로그램이 로컬 GPU 또는 CPU에서 분석합니다.', 'After installation, select a match video and enter a small amount of match context. Analysis runs on your local GPU or CPU.'))}</p></div><a class="btn btn--primary" href="${download}" download>${esc(L('지금 다운로드', 'Download now'))}</a></div><div class="vision-step-grid"><article><span>01</span><div class="vision-step-icon">🎥</div><h3>${esc(L('경기 영상 선택', 'Choose a match video'))}</h3><p>${esc(L('고정 카메라로 촬영한 MP4 영상을 불러옵니다. 전체 코트와 4명의 선수가 보일수록 좋습니다.', 'Load an MP4 recorded from a stable camera. Full-court visibility and all four players improve analysis.'))}</p></article><article><span>02</span><div class="vision-step-icon">📐</div><h3>${esc(L('코트·선수 확인', 'Confirm court and players'))}</h3><p>${esc(L('자동 인식을 확인하고 필요한 경우 코트 8점과 선수 위치를 직접 지정합니다.', 'Review automatic detection and manually mark eight court points or player positions only when needed.'))}</p></article><article><span>03</span><div class="vision-step-icon">⚙️</div><h3>${esc(L('로컬 분석 실행', 'Run local analysis'))}</h3><p>${esc(L('DirectML GPU를 우선 사용하고 사용할 수 없으면 CPU로 자동 전환합니다. 영상은 외부 서버로 전송되지 않습니다.', 'The app prefers a DirectML GPU and automatically falls back to CPU. Your video is not sent to an external server.'))}</p></article><article><span>04</span><div class="vision-step-icon">📊</div><h3>${esc(L('언어별 결과 확인', 'Open the language report'))}</h3><p>${esc(L('KO 프로그램은 한글 보고서, EN 프로그램은 영문 보고서를 생성합니다. 육각형 능력치와 세부 근거를 함께 확인합니다.', 'The KO app creates Korean reports and the EN app creates English reports, each with a radar profile and supporting evidence.'))}</p></article></div><div class="vision-package-callout"><div><p class="section-kicker">ONE DOWNLOAD · TWO PROGRAMS</p><h3>${esc(L('압축 파일 하나에 한글판과 영문판이 각각 포함됩니다', 'One ZIP contains separate Korean and English programs'))}</h3><p>${esc(L('압축 해제 후 v0.2.4_KO 또는 v0.2.4_EN 폴더에서 Picklary_Vision_Rating.cmd를 실행하세요. 각 프로그램은 해당 언어의 UI와 결과 보고서를 사용합니다.', 'After extraction, open the v0.2.4_KO or v0.2.4_EN folder and run Picklary_Vision_Rating.cmd. Each program uses its own UI and report language.'))}</p></div><div class="source-buttons"><a class="btn btn--primary" href="${download}" download>${esc(L('통합 ZIP 다운로드', 'Download combined ZIP'))}</a><a class="btn btn--ghost" href="${quick}" download>${esc(L('빠른 시작 안내', 'Quick-start guide'))}</a></div></div></div></section>
+<section id="logic" class="band band--alt vision-story-section"><div class="wrap"><div class="vision-section-heading"><div><p class="section-kicker">02 · ${esc(L('평가 로직', 'RATING LOGIC'))}</p><h2>${esc(L('단순 승패가 아니라 플레이의 증거를 조합합니다', 'The score combines evidence, not just wins and losses'))}</h2><p>${esc(L('공·선수·코트 움직임, 샷 성공과 깊이, 공격·수비 선택, 이동량과 반복성을 함께 분석해 6개 영역의 Picklary 점수를 구성합니다.', 'Ball, player, and court movement are combined with shot success, depth, tactical choices, movement coverage, and repeatability to build six Picklary dimensions.'))}</p></div></div><div class="vision-logic-layout"><div class="vision-logic-stack"><article><span>1</span><div><h3>${esc(L('관측 증거', 'Observed evidence'))}</h3><p>${esc(L('영상 프레임, 오디오 임팩트 후보, 선수 추적, 코트 위치와 공 궤적에서 신뢰도 높은 증거를 수집합니다.', 'Collects high-confidence evidence from video frames, audio impact candidates, player tracking, court positions, and ball trajectories.'))}</p></div></article><article><span>2</span><div><h3>${esc(L('경기 맥락', 'Match context'))}</h3><p>${esc(L('서브·리턴·공격·수비 상황과 선수별 역할을 분리해 같은 움직임도 맥락에 맞게 해석합니다.', 'Separates serve, return, offense, defense, and player roles so similar movements are interpreted in context.'))}</p></div></article><article><span>3</span><div><h3>${esc(L('신뢰도 가중치', 'Confidence weighting'))}</h3><p>${esc(L('실측, 추정, 보정 데이터를 구분하고 검출 신뢰도가 낮은 항목은 점수 영향력을 낮춥니다.', 'Distinguishes measured, estimated, and adjusted data, reducing the impact of low-confidence detections.'))}</p></div></article><article><span>4</span><div><h3>${esc(L('앵커 기반 근사치', 'Anchored estimate'))}</h3><p>${esc(L('입력된 선수 DUPR, 경기 결과와 영상 성과를 함께 사용해 공식 DUPR가 아닌 Picklary 근사 범위를 계산합니다.', 'Combines player DUPR anchors, match outcome, and video performance to estimate a Picklary range—not an official DUPR rating.'))}</p></div></article></div><div class="vision-axis-panel"><h3>${esc(L('6개 평가 축', 'Six performance axes'))}</h3><div class="vision-axis-grid">${axes.map((axis,i)=>`<div><span>${String(i+1).padStart(2,'0')}</span><strong>${esc(axis)}</strong><small>${esc([L('서브 성공·깊이·첫 공 안정성','Success, depth, and first-ball stability'),L('리턴 성공·깊이·방향 대응','Success, depth, and directional response'),L('드라이브·3구·공격 효율','Drives, third shots, and attack efficiency'),L('소프트게임·리셋·오류 억제','Soft game, resets, and error control'),L('좌우·앞뒤 커버와 반응성','Lateral/depth coverage and responsiveness'),L('샷 성공·접촉 안정·반복성','Shot success, contact stability, and repeatability')][i])}</small></div>`).join('')}</div><div class="vision-logic-note">${esc(L('영상이 불완전하면 분석 범위와 신뢰도가 함께 낮아집니다. 프로그램은 확인되지 않은 수치를 확정값처럼 표시하지 않도록 설계되었습니다.', 'When video evidence is incomplete, scope and confidence are reduced. The app is designed not to present unsupported values as confirmed facts.'))}</div></div></div></div></section>
+<section id="result" class="band vision-result-showcase"><div class="wrap"><div class="vision-section-heading"><div><p class="section-kicker">03 · ${esc(L('결과 예시', 'RESULT EXAMPLE'))}</p><h2>${esc(L('점수 하나가 아니라 내 경기의 모양을 확인하세요', 'See the shape of your game—not just one number'))}</h2><p>${esc(L('육각형의 바깥쪽으로 뻗은 축은 상대적 강점, 안쪽으로 들어온 축은 다음 훈련의 우선순위를 보여줍니다.', 'Axes extending outward indicate relative strengths; recessed axes reveal the next training priorities.'))}</p></div><div class="source-buttons"><a class="btn btn--primary" href="${sample}" target="_blank" rel="noopener">${esc(L('전체 한글 보고서', 'Full English report'))} ↗</a><a class="btn btn--ghost" href="${otherSample}" target="_blank" rel="noopener">${esc(L('영문 결과도 보기', 'View Korean result'))} ↗</a></div></div><div class="vision-result-grid"><article class="vision-radar-card"><div class="vision-radar-card__head"><div><span>${esc(L('예시 선수 A', 'Example Player A'))}</span><h3>Picklary DUPR 4.61</h3></div><em>${esc(L('신뢰도 78%', '78% confidence'))}</em></div>${radarSvg}</article><div class="vision-result-insights"><article class="is-strength"><span>${esc(L('가장 강한 영역', 'TOP STRENGTH'))}</span><h3>${esc(L('리턴 4.72', 'Return 4.72'))}</h3><p>${esc(L('리턴 성공률, 깊이와 크로스코트 방향 선택이 안정적으로 관측된 예시입니다.', 'An example where return success, depth, and cross-court direction are consistently observed.'))}</p></article><article><span>${esc(L('공격 패턴', 'ATTACK PATTERN'))}</span><h3>${esc(L('공격 4.70', 'Offense 4.70'))}</h3><p>${esc(L('드라이브 속도와 3구 전개, 공격 선택 비율을 함께 보여줍니다.', 'Combines drive speed, third-shot development, and attack selection rate.'))}</p></article><article class="is-focus"><span>${esc(L('우선 보완점', 'PRIORITY FOCUS'))}</span><h3>${esc(L('민첩성 4.49', 'Agility 4.49'))}</h3><p>${esc(L('좌우 커버와 전후 이동 반응이 다른 축보다 낮아 다음 훈련 과제로 제시된 예시입니다.', 'Lateral coverage and depth response trail the other axes, making movement the next training priority.'))}</p></article><article><span>${esc(L('보고서 추가 항목', 'MORE IN THE REPORT'))}</span><h3>${esc(L('샷·코트·전술 분석', 'Shots, court, and tactics'))}</h3><p>${esc(L('샷 종류, 속도, 깊이, 코트 맵, 위치 선정, 강점과 개선 제안을 세부 근거와 함께 제공합니다.', 'Includes shot types, speed, depth, court maps, positioning, strengths, and improvement suggestions with supporting evidence.'))}</p></article></div></div><div class="vision-final-cta"><div><p class="section-kicker">YOUR VIDEO · YOUR PROFILE</p><h2>${esc(L('다음 육각형은 당신의 경기일 수 있습니다', 'The next radar could be your match'))}</h2><p>${esc(L('영상은 내 컴퓨터에 그대로 두고, 한글 또는 영문 프로그램에서 직접 분석해 보세요.', 'Keep your video on your own computer and analyze it with the Korean or English program.'))}</p></div><a class="btn btn--primary" href="${download}" download>${esc(L('v0.2.4 통합판 다운로드', 'Download v0.2.4 bilingual package'))}</a></div><p class="vision-changelog-link"><a href="${changelog}" target="_blank" rel="noopener">${esc(L('v0.2.4 변경사항 보기', 'View v0.2.4 changelog'))} ↗</a></p></div></section>`;
+  return layout({ loc, rel: 'vision-rating/', title, description: intro, bodyHtml: body, theme: 'vision' });
+}
 function render404() {
   const loc = DEFAULT;
   const body = `<section class="page-head"><div class="wrap">
@@ -4778,6 +4855,7 @@ function buildSitemapXml() {
   ['players','results','storylines','rules'].forEach((type) => add('pro-scene/' + type + '/', 'weekly', '0.74'));
   urls.push(`  <url>\n    <loc>${config.url}/clip-lite/</loc>\n    <xhtml:link rel="alternate" hreflang="ko" href="${config.url}/clip-lite/"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${config.url}/clip-lite/en/"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${config.url}/clip-lite/en/"/>\n    <changefreq>monthly</changefreq>\n    <priority>0.78</priority>\n  </url>`);
   urls.push(`  <url>\n    <loc>${config.url}/clip-lite/en/</loc>\n    <xhtml:link rel="alternate" hreflang="ko" href="${config.url}/clip-lite/"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${config.url}/clip-lite/en/"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${config.url}/clip-lite/en/"/>\n    <changefreq>monthly</changefreq>\n    <priority>0.78</priority>\n  </url>`);
+  add('vision-rating/', 'monthly', '0.82');
   add('tournaments/', 'daily', '0.84');
   (tourBoard.tournaments || []).forEach((event) => add('tournaments/' + event.slug + '/', 'daily', '0.76'));
   ['us','international','results'].forEach((type) => add('tournaments/' + type + '/', 'daily', '0.72'));
@@ -4835,6 +4913,7 @@ function build() {
     writePage(loc, 'pro-scene/storylines', renderProSceneStorylines(loc));
     writePage(loc, 'pro-scene/rules', renderProSceneRules(loc));
     writePage(loc, 'clip-lite', renderClipLite(loc));
+    writePage(loc, 'vision-rating', renderVisionRating(loc));
     writePage(loc, 'tournaments', renderTournamentsIndex(loc));
     (tourBoard.tournaments || []).forEach((event) => writePage(loc, 'tournaments/' + event.slug, renderTournamentDetail(loc, event)));
     writePage(loc, 'tournaments/us', renderTournamentsCategory(loc, 'tournaments'));

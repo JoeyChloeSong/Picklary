@@ -1,8 +1,8 @@
 {
   "name": "picklelevel",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "private": true,
-  "description": "Picklary v0.6.1 — bilingual Vision Rating v0.2.4 package with Korean and English landing pages, usage guide, rating logic, radar result preview, Tour Board, Clip Lite, player and gear guides.",
+  "description": "Picklary v0.6.2 — language-specific Korean and English Vision Rating v0.2.4 downloads with high-contrast 7-point radar result previews, Tour Board, Clip Lite, player and gear guides.",
   "scripts": {
     "build": "node build.js && node scripts/check-seo-redirects.js",
     "start": "node build.js && node start-local.js",

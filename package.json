@@ -1,8 +1,8 @@
 {
   "name": "picklelevel",
-  "version": "0.6.4",
+  "version": "0.6.7",
   "private": true,
-  "description": "Picklary v0.6.4 — Korean navigation uses the global product names Clip Lite and Vision Rating while preserving Korean page content, bilingual Vision Rating downloads, Tour Board, player and gear guides.",
+  "description": "Picklary v0.6.7 — adds the completed 2026 MLP regular-season table, Dallas playoff series and rolling schedule, projected Newport Beach paths, current team rosters, and bilingual matchup analysis.",
   "scripts": {
     "build": "node build.js && node scripts/check-seo-redirects.js",
     "start": "node build.js && node start-local.js",

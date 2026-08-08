@@ -41,6 +41,7 @@ try { tourBoard = require('./data/tour-board.js'); } catch (e) { /* optional cur
 try { tourBoard = require('./data/tour-enrichment.js')(tourBoard) || tourBoard; } catch (e) { console.warn('Tour enrichment skipped:', e.message); }
 try { tourBoard = require('./data/tour-live-v059.js')(tourBoard) || tourBoard; } catch (e) { console.warn('Tour live override skipped:', e.message); }
 try { tourBoard = require('./data/tour-mlp-playoffs-v067.js')(tourBoard) || tourBoard; } catch (e) { console.warn('MLP playoff override skipped:', e.message); }
+try { tourBoard = require('./data/tour-mlp-playoffs-v068.js')(tourBoard) || tourBoard; } catch (e) { console.warn('MLP Friday-results override skipped:', e.message); }
 const BUILD_STAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 let tourResults = [];
 try { tourResults = require('./data/results.js'); } catch (e) { tourResults = []; }
@@ -84,9 +85,9 @@ const briefEditions = [
     edition: 1,
     date: '2026-06-12',
     title: 'What to actually pay attention to right now',
-    titleKo: '지금 피클볼 플레이어가 실제로 확인할 것',
+    titleKo: '지금 피클볼 선수들이 확인할 것',
     items: [
-      { take: 'Raw carbon-fibre faces keep showing up across new releases. For a 2.0–3.5 player the practical effect is spin-friendly texture and a controlled feel — useful, but not a reason to replace a paddle you still play well with.', takeKo: '로 카본 계열 표면은 새 패들에서 계속 많이 보입니다. 2.0~3.5 플레이어에게는 스핀과 컨트롤에 도움이 될 수 있지만, 아직 잘 맞는 패들을 무리하게 바꿀 이유는 아닙니다.', sourceName: 'Picklary — paddle face materials', sourceNameKo: 'Picklary — 패들 표면 소재 비교', sourceUrl: '/ko/paddle-face-materials-compared/' },
+      { take: 'Raw carbon-fibre faces keep showing up across new releases. For a 2.0–3.5 player the practical effect is spin-friendly texture and a controlled feel — useful, but not a reason to replace a paddle you still play well with.', takeKo: '로 카본 계열 표면은 새 패들에서 계속 많이 보입니다. 2.0~3.5 동호인에게는 스핀과 컨트롤에 도움이 될 수 있지만, 아직 잘 맞는 패들을 무리하게 바꿀 이유는 아닙니다.', sourceName: 'Picklary — paddle face materials', sourceNameKo: 'Picklary — 패들 표면 소재 비교', sourceUrl: '/ko/paddle-face-materials-compared/' },
       { take: 'If you compete, check the official approved-equipment list before buying, since tournament eligibility is decided there, not by marketing copy.', takeKo: '대회에 나갈 계획이라면 구매 전 승인 장비 목록을 확인하세요. 대회 사용 가능 여부는 마케팅 문구가 아니라 공식 승인 목록으로 판단됩니다.', sourceName: 'USA Pickleball', sourceNameKo: 'USA Pickleball', sourceUrl: 'https://usapickleball.org' },
       { take: "Confused about ratings? Read what a results-based system actually measures before you let the number bother you — it's feedback, not a verdict.", takeKo: '레이팅이 헷갈린다면 숫자를 평가가 아니라 피드백으로 읽으세요. 경기 결과 기반 시스템이 무엇을 측정하는지 먼저 이해하는 편이 좋습니다.', sourceName: 'DUPR', sourceNameKo: 'DUPR', sourceUrl: 'https://dupr.com' }
     ]
@@ -164,7 +165,7 @@ function ownerName(loc) { const tr = config.owner.translations && config.owner.t
 function ownerBio(loc) { const tr = config.owner.translations && config.owner.translations[loc]; return (tr && tr.bio) || config.owner.bio; }
 function editorialPrinciplesFor(loc) {
   if (loc === 'ko') return [
-    '검색엔진보다 플레이어를 먼저 생각합니다. 모든 페이지는 레벨 선택, 스킬 학습, 패들 비교, 선수 분석, 피드백 중 하나에 실제 도움을 주어야 합니다.',
+    '검색엔진보다 실제 이용자를 먼저 생각합니다. 모든 페이지는 레벨 선택, 기술 연습, 패들 비교, 선수 분석, 피드백 중 하나에 실제로 도움이 되어야 합니다.',
     '직접 경험한 내용과 공개 스펙을 바탕으로 비교한 내용을 구분해 적습니다.',
     '랭킹, 가격, 대회 일정, 규칙처럼 바뀌는 정보는 공식 출처 확인 경로를 함께 제공합니다.',
     '가짜 리뷰, 과장된 자격, 확인되지 않은 통계는 사용하지 않습니다.',
@@ -254,7 +255,7 @@ function header(loc, rel) {
 <header class="masthead">
   <div class="wrap masthead__inner">
     <a class="brand" href="${link(loc, '')}" aria-label="${escAttr(config.siteName)} — home">
-      <span class="brand__mark" aria-hidden="true">${brandMark('#1E6F5C')}</span>
+      <span class="brand__mark" aria-hidden="true">${brandMark('#6FEACF', '#0A2A38')}</span>
       <span class="brand__name">${esc(config.siteName)}</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">${esc(tt(loc, 'nav.menu'))}</button>
@@ -409,7 +410,7 @@ function layout(opts) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style-picklary-v067-20260805.css">
+  <link rel="stylesheet" href="/assets/css/style-picklary-v070-20260808.css">
   ${jsonldTags}
   ${adsenseTags}
 </head>
@@ -486,7 +487,7 @@ function duprRail(loc, opts) {
       const focusArr = loc1(lv, loc, 'focus');
       const focus = Array.isArray(focusArr) ? focusArr.slice(0, 4).join('||') : '';
       const href = levelUrl(loc, lv);
-      const cta = loc === 'ko' ? (id + ' 단계 가이드 열기') : (loc === 'es' ? ('Abrir la guía ' + id) : ('Open the ' + id + ' guide'));
+      const cta = loc === 'ko' ? (id + ' 레벨 가이드 보기') : (loc === 'es' ? ('Abrir la guía ' + id) : ('Open the ' + id + ' guide'));
       const lc = levelColors(id);
       return `<button type="button" class="rail__ms rail__ms--m${i}" style="left:${pct}%;--lvl:${lc.c};--lvl-on:${lc.on};--lvl-tint:${lc.t};" data-ms data-ms-id="${escAttr(id)}" data-ms-title="${escAttr(title)}" data-ms-summary="${escAttr(summary)}" data-ms-focus="${escAttr(focus)}" data-ms-href="${escAttr(href)}" data-ms-cta="${escAttr(cta)}" aria-haspopup="dialog" aria-label="${escAttr(title)}"><span class="rail__ms-badge">${esc(id)}</span></button>`;
     }).join('');
@@ -507,10 +508,10 @@ function duprRail(loc, opts) {
 function duprTeaser(loc) {
   const copy = loc === 'ko'
     ? {
-        eyebrow: '왜 해볼 만할까요?',
-        title: '10개 코트 상황으로 내 판단 습관을 확인합니다.',
-        body: '공식 점수는 아니지만, 3D 코트 상황에서 어떤 샷을 고르는지 보고 다음 연습 포인트를 바로 잡을 수 있습니다.',
-        chips: ['10문항', '3D 코트', '연습 포인트']
+        eyebrow: '이런 분께 유용해요',
+        title: '10가지 코트 상황으로 내 경기 판단을 점검해 보세요.',
+        body: '공식 DUPR는 아니지만, 실제 코트 상황에서 어떤 샷을 선택하는지 보고 다음 연습 과제를 찾을 수 있습니다.',
+        chips: ['10문항', '3D 코트', '추천 연습']
       }
     : (loc === 'es'
       ? {
@@ -613,12 +614,12 @@ function renderDuprCheck(loc) {
     shot: q.shot || {}, power: q.power || {}, zone: q.zone || {}, player: q.player || null
   }));
   const SHOTS = [['dink', 'Dink', '딩크'], ['drop', 'Drop', '드롭'], ['drive', 'Drive', '드라이브'], ['reset', 'Reset', '리셋'], ['roll', 'Roll', '롤'], ['flick', 'Flick', '플릭'], ['block', 'Block', '블록'], ['smash', 'Smash', '스매시'], ['speedup', 'Speed-up', '스피드업'], ['lob', 'Lob', '로브']];
-  const POWERS = [['soft', 'Soft', '약하게'], ['medium', 'Medium', '중간'], ['hard', 'Hard', '강하게']];
+  const POWERS = [['soft', 'Soft', '부드럽게'], ['medium', 'Medium', '보통'], ['hard', 'Hard', '강하게']];
   const ZONES = {
     kL: ['Their kitchen — left', '상대 키친 · 왼쪽'], kM: ['Their kitchen — middle', '상대 키친 · 가운데'], kR: ['Their kitchen — right', '상대 키친 · 오른쪽'],
-    nL: ['Their court — short left', '상대 백코트 가까운 쪽 · 왼쪽'], nM: ['Their court — short middle', '상대 백코트 가까운 쪽 · 가운데'], nR: ['Their court — short right', '상대 백코트 가까운 쪽 · 오른쪽'],
-    mL: ['Their court — mid left', '상대 미드코트 · 왼쪽'], mM: ['Their court — mid middle', '상대 미드코트 · 가운데'], mR: ['Their court — mid right', '상대 미드코트 · 오른쪽'],
-    dL: ['Their court — deep left', '상대 백코트 먼쪽 · 왼쪽'], dM: ['Their court — deep middle', '상대 백코트 먼쪽 · 가운데'], dR: ['Their court — deep right', '상대 백코트 먼쪽 · 오른쪽']
+    nL: ['Their court — short left', '상대 코트 앞쪽 · 왼쪽'], nM: ['Their court — short middle', '상대 코트 앞쪽 · 가운데'], nR: ['Their court — short right', '상대 코트 앞쪽 · 오른쪽'],
+    mL: ['Their court — mid left', '상대 코트 중간 · 왼쪽'], mM: ['Their court — mid middle', '상대 코트 중간 · 가운데'], mR: ['Their court — mid right', '상대 코트 중간 · 오른쪽'],
+    dL: ['Their court — deep left', '상대 코트 깊숙이 · 왼쪽'], dM: ['Their court — deep middle', '상대 코트 깊숙이 · 가운데'], dR: ['Their court — deep right', '상대 코트 깊숙이 · 오른쪽']
   };
   const TARGETS = [
     ['kL','Kitchen L','키친 왼쪽'],['kM','Kitchen M','키친 중앙'],['kR','Kitchen R','키친 오른쪽'],
@@ -629,30 +630,30 @@ function renderDuprCheck(loc) {
   const t = (en, ko) => (loc === 'ko' ? ko : en);
   const bands = [
     { max: 2.50, slug: '2-0', desc: t('Building the basics — keep the ball in play, learn the two-bounce rule, and get to the kitchen.', '기초 단계 — 공을 계속 살리고, 투바운스 규칙을 익히고, 키친으로 전진하세요.') },
-    { max: 3.00, slug: '2-5', desc: t('You know the shots — build consistency and move up behind your return.', '샷은 압니다 — 일관성을 키우고 리턴 뒤 전진을 익히세요.') },
-    { max: 3.50, slug: '3-0', desc: t('Solid fundamentals — sharpen your third-shot drop, resets, and patience in dinks.', '기본기가 탄탄 — 서드샷 드롭, 리셋, 딩크에서의 인내를 다듬으세요.') },
-    { max: 4.00, slug: '3-5', desc: t('Strong shot selection — tighten decisions under pace and on big points.', '샷 선택이 좋음 — 빠른 공과 중요한 포인트의 판단을 정교하게 다듬으세요.') },
-    { max: 9.99, slug: '4-0', desc: t('Advanced decision-making — refine patterns, hands battles, and avoiding low-percentage attacks.', '고급 의사결정 — 패턴, 핸즈 배틀, 저확률 공격 줄이기를 다듬으세요.') }
+    { max: 3.00, slug: '2-5', desc: t('You know the shots — build consistency and move up behind your return.', '기본 샷은 알고 있습니다 — 일관성을 높이고 리턴 뒤 키친으로 전진하는 습관을 익히세요.') },
+    { max: 3.50, slug: '3-0', desc: t('Solid fundamentals — sharpen your third-shot drop, resets, and patience in dinks.', '기본기가 자리 잡은 단계 — 3구 드롭, 리셋, 딩크에서의 인내를 다듬으세요.') },
+    { max: 4.00, slug: '3-5', desc: t('Strong shot selection — tighten decisions under pace and on big points.', '샷 선택이 안정적인 단계 — 빠른 템포와 중요한 포인트에서의 판단을 더 정교하게 다듬으세요.') },
+    { max: 9.99, slug: '4-0', desc: t('Advanced decision-making — refine patterns, hands battles, and avoiding low-percentage attacks.', '상급 단계 — 패턴 플레이, 빠른 손싸움, 무리한 공격을 줄이는 판단을 다듬으세요.') }
   ];
   const labels = {
     yourShot: t('Your shot', '사용할 샷'), power: t('Power', '강도'),
     target: t('Target', '보낼 곳'), tapZone: t('Tap a zone on the opponent’s court', '상대 코트에서 보낼 구역을 탭하세요'),
-    chosen: t('Selected', '선택됨'), next: t('Next', '다음'), back: t('Back', '이전'), see: t('See result', '결과 보기'), done10: t('Finish 10 →', '10문항 완료 →'), choiceTitle: t('Nice — 10 questions done!', '좋아요 — 10문항 완료!'), choiceIntro: t('See your estimate now, or answer 10 more for a more accurate read.', '지금 결과를 보거나, 10문항을 더 풀어 더 정확하게 측정할 수 있어요.'), seeResultBtn: t('See my result', '측정 결과 보기'), more10Btn: t('Answer 10 more for accuracy', '10문항 더 풀어 정확도 높이기'), moreHint: t('The more you answer, the more reliable the estimate.', '더 많이 답할수록 추정이 더 믿을 만해집니다.'),
+    chosen: t('Selected', '선택됨'), next: t('Next', '다음'), back: t('Back', '이전'), see: t('See result', '결과 보기'), done10: t('Finish 10 →', '10문항 완료 →'), choiceTitle: t('Nice — 10 questions done!', '좋아요 — 10문항 완료!'), choiceIntro: t('See your estimate now, or answer 10 more for a more accurate read.', '지금 결과를 보거나, 10문항을 더 풀어 더 정확하게 측정할 수 있어요.'), seeResultBtn: t('See my result', '측정 결과 보기'), more10Btn: t('Answer 10 more for accuracy', '10문항 더 풀어 정확도 높이기'), moreHint: t('The more you answer, the more reliable the estimate.', '문항을 더 풀수록 추정 결과의 신뢰도가 높아집니다.'),
     me: t('You', '나'), partner: t('Partner', '파트너'), you: t('Us', '우리'), opp: t('Opponent', '상대'), incoming: t('Incoming ball', '들어오는 공'),
-    player1: t('You (Player 1)', '나 (1번)'), player2: t('Partner (Player 2)', '파트너 (2번)'), whoPlays: t('Who should play it — you or your partner?', '누가 칠까요 — 나 vs 파트너?'), youArePos: t('You are Player 1 — the dot marked 1. Choose your shot.', '당신은 코트에 1로 표시된 1번 선수입니다. 칠 샷을 고르세요.'), youArePosChoice: t('You are Player 1 — the dot marked 1. Player 2 is your partner. If the question asks who should take the ball, choose 1 or 2 first and then choose the shot.', '당신은 코트에 1로 표시된 1번 선수이고, 2번은 파트너입니다. 누가 칠지 묻는 문항은 먼저 1번/2번을 고른 뒤 샷을 선택하세요.'),
+    player1: t('You (Player 1)', '나 (1번)'), player2: t('Partner (Player 2)', '파트너 (2번)'), whoPlays: t('Who should play it — you or your partner?', '누가 칠까요 — 나 vs 파트너?'), youArePos: t('You are Player 1 — the dot marked 1. Choose your shot.', '코트에 1로 표시된 선수가 나입니다. 어떤 샷을 칠지 고르세요.'), youArePosChoice: t('You are Player 1 — the dot marked 1. Player 2 is your partner. If the question asks who should take the ball, choose 1 or 2 first and then choose the shot.', '코트의 1번이 나이고 2번이 파트너입니다. 누가 칠지 묻는 문항에서는 먼저 1번 또는 2번을 고른 뒤 샷을 선택하세요.'),
     isoView: t('Switch to 3D view', '입체(3D)로 보기'), flatView: t('Switch to 2D view', '평면(2D)으로 보기'), isoHint: t('Tip: switch between 2D and 3D court views.', '팁: 2D·3D 코트 보기를 전환할 수 있어요.'),
     moving: t('Moving', '이동 중'),
     histTitle: t('Your self-check history', '내 자가진단 기록'),
-    histIntro: t('Re-take it every few weeks and watch your estimate move.', '몇 주마다 다시 해보며 추정치 변화를 확인하세요.'),
+    histIntro: t('Re-take it every few weeks and watch your estimate move.', '몇 주 간격으로 다시 해보며 내 판단이 어떻게 달라지는지 확인하세요.'),
     histClear: t('Clear history', '기록 지우기'),
     histNote: t('Saved only in this browser (localStorage). See the Privacy Policy.', '이 브라우저(localStorage)에만 저장됩니다. 개인정보처리방침 참고.'),
     histConfirm: t('Clear all saved self-check records?', '저장된 자가진단 기록을 모두 지울까요?'),
     histEst: t('Estimate', '추정'),
     incomingPower: t('Incoming power', '들어오는 강도'),
     of: t('of', '/'), retake: t('Retake', '다시 하기'),
-    best: t('Higher-percentage play', '더 높은 확률의 선택'), yours: t('Your choice', '내 선택'),
-    showAnswer: t('Show the higher-percentage play', '정답(고확률 선택) 보기'),
-    score: t('Decision score', '의사결정 점수'), est: t('Estimated DUPR', '추정 DUPR'),
+    best: t('Higher-percentage play', '성공 확률이 높은 선택'), yours: t('Your choice', '내 선택'),
+    showAnswer: t('Show the higher-percentage play', '추천 선택 보기'),
+    score: t('Decision score', '판단 점수'), est: t('Estimated DUPR', '추정 DUPR'),
     guide: t('Open the matching level guide', '해당 레벨 가이드 열기'),
     reviewTitle: t('Question-by-question', '문항별 리뷰')
   };
@@ -694,18 +695,18 @@ function renderDuprCheck(loc) {
   const explainer = `
 <section class="band"><div class="wrap narrow">
   <h2>${esc(t('What the DUPR self-check is','DUPR 자가진단이란?'))}</h2>
-  <p>${esc(t('The DUPR self-check is a quick, court-based quiz. In ten situations you choose a shot, a power level, and a target, and we estimate the pickleball level your decisions point to. It takes a couple of minutes and needs no account.','DUPR 자가진단은 코트 기반의 간단한 퀴즈입니다. 10가지 상황에서 샷·강도·방향을 고르면, 당신의 판단이 가리키는 피클볼 레벨을 추정해 드립니다. 몇 분이면 끝나고 계정도 필요 없습니다.'))}</p>
+  <p>${esc(t('The DUPR self-check is a quick, court-based quiz. In ten situations you choose a shot, a power level, and a target, and we estimate the pickleball level your decisions point to. It takes a couple of minutes and needs no account.','DUPR 자가진단은 코트 기반의 간단한 퀴즈입니다. 10가지 상황에서 샷·강도·방향을 고르면, 선택 패턴을 바탕으로 현재 피클볼 레벨을 추정합니다. 몇 분이면 끝나고 계정도 필요 없습니다.'))}</p>
   <p>${esc(t('It is built to test shot selection — the choices that separate levels — rather than how hard you can hit. There are no trick questions; pick what you would actually do on court.','강하게 칠 수 있는지가 아니라, 레벨을 가르는 선택인 샷 셀렉션을 테스트하도록 만들었습니다. 함정 문제는 없으니 코트에서 실제로 할 행동을 고르세요.'))}</p>
 
   <h2>${esc(t('Official DUPR vs the Picklary self-check','공식 DUPR과 Picklary 자가진단의 차이'))}</h2>
   <ul>
-    <li>${esc(t('Official DUPR is calculated from the scores of real matches you log, on one scale for all players. It is the number used to seed tournaments and build fair games.','공식 DUPR은 당신이 기록한 실제 경기 점수로, 모든 선수를 하나의 척도에 올려 산출됩니다. 대회 시드와 공정한 매칭에 쓰이는 숫자입니다.'))}</li>
+    <li>${esc(t('Official DUPR is calculated from the scores of real matches you log, on one scale for all players. It is the number used to seed tournaments and build fair games.','공식 DUPR은 실제로 기록된 경기 점수를 바탕으로 모든 선수를 하나의 척도에서 평가합니다. 대회 시드와 공정한 매칭에 쓰이는 숫자입니다.'))}</li>
     <li>${esc(t('The Picklary self-check is only an estimate from your shot choices. It does not log matches and is not affiliated with DUPR; use it to find a starting point while you learn the system.','Picklary 자가진단은 샷 선택에 기반한 추정일 뿐입니다. 경기를 기록하지 않고 DUPR과 제휴 관계도 아닙니다. 시스템을 익히는 동안 출발점을 찾는 용도로 쓰세요.'))}</li>
   </ul>
   <p>${esc(t('New to the rating itself? Read ','레이팅 자체가 처음이라면 '))}<a href="${link(loc, 'what-is-dupr/')}">${esc(t('what DUPR is','DUPR란 무엇인가'))}</a>${esc(t('.','를 읽어 보세요.'))}</p>
 
   <h2>${esc(t('What each level feels like','레벨별 특징'))}</h2>
-  <p>${esc(t('These are general skill descriptions, not official cut-offs. The self-check points you to the band that best matches your decisions.','아래는 공식 기준이 아니라 일반적인 실력 설명입니다. 자가진단은 당신의 판단에 가장 잘 맞는 구간을 알려 줍니다.'))}</p>
+  <p>${esc(t('These are general skill descriptions, not official cut-offs. The self-check points you to the band that best matches your decisions.','아래는 공식 기준이 아니라 일반적인 실력 설명입니다. 자가진단은 선택 패턴과 가장 가까운 레벨 구간을 알려 줍니다.'))}</p>
   <ul>
     <li><a href="${lp('2-5')}">${esc(t('Level 2.5','레벨 2.5'))}</a> — ${esc(t('developing consistency: you can sustain short rallies and are learning the kitchen, serve, and return.','일관성 형성기: 짧은 랠리를 이어갈 수 있고 키친·서브·리턴을 배우는 단계.'))}</li>
     <li><a href="${lp('3-0')}">${esc(t('Level 3.0','레벨 3.0'))}</a> — ${esc(t('reliable rallies: dependable serve and return, beginning to use the third-shot drop and to dink with some control.','안정적 랠리: 서브·리턴이 믿을 만하고, 세 번째 샷 드롭과 어느 정도 통제된 딩크를 쓰기 시작.'))}</li>
@@ -716,7 +717,7 @@ function renderDuprCheck(loc) {
   <h2>${esc(t('How to use your result','결과 활용법'))}</h2>
   <p>${esc(t('Use the estimate to decide what to practise next, not to label yourself. If the quiz nudged you toward soft shots or resets, that is your cue.','결과는 자신을 규정하는 라벨이 아니라 다음에 무엇을 연습할지 정하는 데 쓰세요. 퀴즈가 소프트 샷이나 리셋을 권했다면 그게 신호입니다.'))}</p>
   <ul>
-    <li>${esc(t('Open your ','당신의 '))}<a href="${link(loc, 'level/')}">${esc(t('level pathway','레벨 로드맵'))}</a>${esc(t(' and read the band just above yours.',' 을 열어 바로 윗 구간을 읽어 보세요.'))}</li>
+    <li>${esc(t('Open your ','내 '))}<a href="${link(loc, 'level/')}">${esc(t('level pathway','레벨 로드맵'))}</a>${esc(t(' and read the band just above yours.',' 을 열어 바로 윗 구간을 읽어 보세요.'))}</li>
     <li>${esc(t('Drill the fundamentals: ','기본기를 연습하세요: '))}<a href="${link(loc, 'dinking-fundamentals/')}">${esc(t('dinking','딩크'))}</a>${esc(t(' and the ',' 와 '))}<a href="${link(loc, 'the-third-shot-drop-explained/')}">${esc(t('third-shot drop','세 번째 샷 드롭'))}</a>.</li>
     <li>${esc(t('Then log real matches to build an actual DUPR rating.','그다음 실제 경기를 기록해 진짜 DUPR 점수를 쌓으세요.'))}</li>
   </ul>
@@ -729,8 +730,8 @@ function renderDuprCheck(loc) {
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: t('DUPR self-check', 'DUPR 자가진단') }])}
 <section class="page-head"><div class="wrap">
   <p class="page-head__eyebrow">${esc(tt(loc, 'pathway.label'))}</p>
-  <h1>${esc(t('DUPR self-check: what would you do?', 'DUPR 자가진단: 당신이라면?'))}</h1>
-  <p class="page-head__intro">${esc(t('Ten on-court situations. Pick your shot, power, and target — we estimate a level from your decisions.', '코트 위 10가지 상황. 샷·강도·방향을 선택하면, 당신의 판단을 바탕으로 레벨을 추정해 드립니다.'))}</p>
+  <h1>${esc(t('DUPR self-check: what would you do?', 'DUPR 자가진단: 나는 어떻게 선택할까?'))}</h1>
+  <p class="page-head__intro">${esc(t('Ten on-court situations. Pick your shot, power, and target — we estimate a level from your decisions.', '코트 위 10가지 상황에서 샷·강도·방향을 선택하면, 그 판단 패턴을 바탕으로 레벨을 추정합니다.'))}</p>
   <p class="notice">${esc(t('This is a quick self-assessment of shot selection — not an official DUPR rating. Real DUPR is calculated from logged match results at dupr.com.', '이것은 샷 선택에 대한 간단한 자가진단이며 공식 DUPR 점수가 아닙니다. 실제 DUPR은 dupr.com에서 실제 경기 기록으로 산출됩니다.'))}</p>
 </div></section>
 <section class="band"><div class="wrap">
@@ -775,9 +776,9 @@ ${explainer}`;
 function visualFigure(loc, key, cls) {
   const v = visuals[key] || visuals.court;
   const caption = key === 'majorResults'
-    ? (loc === 'ko' ? 'PPA · MLP 주요 결과 대시보드' : (loc === 'es' ? 'Panel de resultados PPA · MLP' : 'PPA · MLP major results dashboard'))
+    ? (loc === 'ko' ? 'PPA · MLP 주요 경기 결과' : (loc === 'es' ? 'Panel de resultados PPA · MLP' : 'PPA · MLP major results dashboard'))
     : key === 'duprDashboard'
-      ? (loc === 'ko' ? 'DUPR 레벨 업 대시보드' : (loc === 'es' ? 'Panel de progreso DUPR' : 'DUPR level-up dashboard'))
+      ? (loc === 'ko' ? 'DUPR 레벨업 가이드' : (loc === 'es' ? 'Panel de progreso DUPR' : 'DUPR level-up dashboard'))
       : tt(loc, v.key);
   const dims = svgDims(v.src) || (v.width && v.height ? ` width="${v.width}" height="${v.height}"` : '');
   return `<figure class="visual-card ${cls || ''}"><img src="/assets/img/${escAttr(v.src)}"${dims} alt="${escAttr(caption)}" loading="lazy"><figcaption>${esc(caption)}</figcaption></figure>`;
@@ -791,7 +792,7 @@ function linkedVisualFigure(loc, key, items, cls) {
     const style = `left:${item.left}%;top:${item.top}%;width:${item.width}%;height:${item.height}%;`;
     return `<a class="visual-card__hotspot visual-card__hotspot--${escAttr(item.tone || 'default')}" href="${escAttr(item.href)}" style="${escAttr(style)}" aria-label="${escAttr(label)}" title="${escAttr(label)}"><span class="visually-hidden">${esc(label)}</span></a>`;
   }).join('');
-  return `<figure class="visual-card visual-card--linked ${cls || ''}"><div class="visual-card__media"><img src="/assets/img/${escAttr(v.src)}"${dims} alt="${escAttr(caption)}" loading="lazy">${hotspots}</div><figcaption>${esc(caption)} · ${esc(loc === 'ko' ? '카드를 눌러 바로 이동' : loc === 'es' ? 'Selecciona una tarjeta para abrirla' : 'Select a card to open it')}</figcaption></figure>`;
+  return `<figure class="visual-card visual-card--linked ${cls || ''}"><div class="visual-card__media"><img src="/assets/img/${escAttr(v.src)}"${dims} alt="${escAttr(caption)}" loading="lazy">${hotspots}</div><figcaption>${esc(caption)} · ${esc(loc === 'ko' ? '카드를 누르면 해당 페이지로 이동합니다' : loc === 'es' ? 'Selecciona una tarjeta para abrirla' : 'Select a card to open it')}</figcaption></figure>`;
 }
 function contentVisual(loc, categoryId) { return visualFigure(loc, categoryVisualKey[categoryId] || 'court', 'visual-card--article'); }
 function levelVisual(loc, level) {
@@ -810,7 +811,7 @@ const skillPostImg = {
 function postVisual(loc, p) {
   if (p.slug === 'what-is-dupr') {
     const src = 'dupr-level-up-dashboard-cropped.webp';
-    const cap = loc === 'ko' ? 'DUPR 레벨 업 대시보드' : (loc === 'es' ? 'Panel de progreso DUPR' : 'DUPR level-up dashboard');
+    const cap = loc === 'ko' ? 'DUPR 레벨업 가이드' : (loc === 'es' ? 'Panel de progreso DUPR' : 'DUPR level-up dashboard');
     const btn = loc === 'ko' ? 'DUPR 자가진단 시작 →' : (loc === 'es' ? 'Iniciar autoevaluación DUPR →' : 'Start DUPR Self-Check →');
     return `<figure class="visual-card visual-card--article visual-card--dupr-live"><img src="/assets/img/${escAttr(src)}" width="1448" height="980" alt="${escAttr(cap)}" loading="lazy" decoding="async"><figcaption>${esc(cap)}</figcaption><p class="visual-card__live-cta"><a class="btn btn--dupr btn--dupr-wide" href="${link(loc, 'dupr-self-check/')}">${esc(btn)}</a></p></figure>`;
   }
@@ -880,7 +881,7 @@ function levelCard(level, loc) {
 }
 function levelGrid(loc) { return `<div class="level-grid">${levels.map((l) => levelCard(l, loc)).join('')}</div>`; }
 function heroLevels(loc) {
-  const label = loc === 'ko' ? '레벨 한눈에 보기' : 'Levels at a glance';
+  const label = loc === 'ko' ? '레벨별 핵심 한눈에 보기' : 'Levels at a glance';
   const foot = loc === 'ko' ? '입문 2.0 → 고급 5.0' : 'Beginner 2.0 → Advanced 5.0';
   const items = levels.map((l) => {
     const c = levelColors(l.id);
@@ -896,7 +897,7 @@ function heroLevels(loc) {
 
 function levelQuickSelect(loc, currentLevel, opts) {
   opts = opts || {};
-  const label = opts.label || (loc === 'ko' ? 'DUPR 레벨 바로 선택' : (loc === 'es' ? 'Elegir nivel DUPR' : 'Choose a DUPR level'));
+  const label = opts.label || (loc === 'ko' ? 'DUPR 레벨 선택' : (loc === 'es' ? 'Elegir nivel DUPR' : 'Choose a DUPR level'));
   const hint = opts.hint || (loc === 'ko'
     ? '2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0 중 원하는 레벨을 바로 열 수 있습니다.'
     : (loc === 'es'
@@ -949,7 +950,7 @@ function shapeLabel(loc, shape) {
 }
 const enrichLabels = {
   en: { exactPrice:'Reference price', priceSource:'Price note', officialProduct:'Official product page', ratings:'Play profile', biography:'Biography', hometown:'Hometown / base', age:'Age', height:'Height', turnedPro:'Turned pro', plays:'Plays', resides:'Resides', officialProfile:'Official profile', secondaryProfile:'More stats/profile', imageNote:'Image note', currentSources:'Live sources', sourceNote:'Prices, sponsors, rankings, DUPR, and product availability change. Verify on the linked official source before publishing buying advice.', profilePhoto:'Official photos / profile' },
-  ko: { exactPrice:'대표 가격', priceSource:'가격 기준', officialProduct:'공식 제품 페이지', ratings:'성향 점수', biography:'약력', hometown:'출신/기반', age:'나이', height:'신장', turnedPro:'프로 전향', plays:'주손', resides:'거주/활동', officialProfile:'공식 프로필', secondaryProfile:'추가 선수 DB', imageNote:'이미지 안내', currentSources:'실시간 출처', sourceNote:'가격, 스폰서, 랭킹, DUPR, 재고는 변동됩니다. 구매 조언으로 게시하기 전 연결된 공식 출처에서 다시 확인하세요.', profilePhoto:'공식 사진/프로필' },
+  ko: { exactPrice:'참고 가격', priceSource:'가격 확인 기준', officialProduct:'공식 제품 페이지', ratings:'플레이 성향', biography:'약력', hometown:'출신·활동 지역', age:'나이', height:'신장', turnedPro:'프로 전향', plays:'주로 쓰는 손', resides:'거주·활동 지역', officialProfile:'공식 프로필', secondaryProfile:'추가 선수 정보', imageNote:'이미지 출처 안내', currentSources:'최신 정보 확인', sourceNote:'가격, 스폰서, 랭킹, DUPR, 재고는 바뀔 수 있습니다. 구매나 최신 정보가 필요한 경우 연결된 공식 출처에서 다시 확인하세요.', profilePhoto:'공식 사진·프로필' },
   es: { exactPrice:'Precio de referencia', priceSource:'Nota de precio', officialProduct:'Página oficial del producto', ratings:'Perfil de juego', biography:'Biografía', hometown:'Origen / base', age:'Edad', height:'Altura', turnedPro:'Profesional desde', plays:'Mano', resides:'Residencia', officialProfile:'Perfil oficial', secondaryProfile:'Más datos/perfil', imageNote:'Nota de imagen', currentSources:'Fuentes en vivo', sourceNote:'Precios, patrocinadores, rankings, DUPR y disponibilidad cambian. Verifica la fuente oficial antes de publicar consejos de compra.', profilePhoto:'Fotos / perfil oficial' }
 };
 function ui(loc, key) { return (enrichLabels[loc] && enrichLabels[loc][key]) || enrichLabels.en[key] || key; }
@@ -985,7 +986,7 @@ function richTextSection(loc, key, data) {
   const bullets = (d.bullets || []).length ? `<ul>${d.bullets.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : '';
   const links = (d.links || []).length ? `<div class="source-buttons">${d.links.map((x) => `<a class="btn btn--ghost" href="${escAttr(x.href)}">${esc(x.label)}</a>`).join('')}</div>` : '';
   const quality = loc === 'ko'
-    ? `<h2>편집 품질 메모</h2><p>${esc(d.title)} 페이지는 방문자가 다음 행동을 바로 정할 수 있도록 구성했습니다. 단순히 외부 정보를 모아 놓는 대신, 어떤 순서로 읽고 무엇을 확인해야 하는지 설명합니다. 바뀔 수 있는 사실은 공식 출처 확인을 권하고, Picklary 내부 문단은 레벨업, 장비 선택, 경기 이해에 도움이 되는 해석과 적용 방법에 집중합니다.</p><p>이 문단은 페이지의 목적을 분명히 하기 위한 보강입니다. 짧은 링크 목록처럼 보이지 않도록 운영 기준, 검수 기준, 저작권 주의, 사용자 안전, 관련 도구 안내를 함께 설명합니다. 이후 실제 글이 늘어나면 이 영역은 최신 내부 글과 도구를 연결하는 안내문으로 계속 업데이트할 수 있습니다.</p><p>또한 같은 내용을 여러 페이지에 무의미하게 반복하지 않고, 각 페이지가 맡은 역할에 맞추어 설명을 확장합니다. 독자가 이 페이지에서 멈추지 않고 관련 도구, 상세 가이드, 공식 확인 링크로 이동하도록 연결하는 것이 목표입니다. 필요할 때는 관련 글 읽기, 도구 사용, 공식 출처 확인, 다음 방문 때 새 예시 확인 중 하나로 바로 이어지도록 구성합니다.</p>`
+    ? `<h2>이 페이지를 이렇게 구성했습니다</h2><p>${esc(d.title)} 페이지는 방문자가 다음 행동을 바로 정할 수 있도록 구성했습니다. 단순히 외부 정보를 모아 놓는 대신, 어떤 순서로 읽고 무엇을 확인해야 하는지 설명합니다. 바뀔 수 있는 사실은 공식 출처 확인을 권하고, Picklary 내부 문단은 레벨업, 장비 선택, 경기 이해에 도움이 되는 해석과 적용 방법에 집중합니다.</p><p>이 문단은 페이지의 목적을 분명히 하기 위한 보강입니다. 짧은 링크 목록처럼 보이지 않도록 운영 기준, 검수 기준, 저작권 주의, 사용자 안전, 관련 도구 안내를 함께 설명합니다. 이후 실제 글이 늘어나면 이 영역은 최신 내부 글과 도구를 연결하는 안내문으로 계속 업데이트할 수 있습니다.</p><p>또한 같은 내용을 여러 페이지에 무의미하게 반복하지 않고, 각 페이지가 맡은 역할에 맞추어 설명을 확장합니다. 독자가 이 페이지에서 멈추지 않고 관련 도구, 상세 가이드, 공식 확인 링크로 이동하도록 연결하는 것이 목표입니다. 필요할 때는 관련 글 읽기, 도구 사용, 공식 출처 확인, 다음 방문 때 새 예시 확인 중 하나로 바로 이어지도록 구성합니다.</p>`
     : `<h2>Editorial quality note</h2><p>This page is structured to help a reader decide what to do next. Instead of only collecting external information, it explains the reading order, what to verify, and how the topic connects to player improvement, gear choice, or match understanding. Facts that can change are supported with source links, while Picklary adds plain-language interpretation and practical use.</p><p>This section also clarifies the page purpose so it does not look like a thin link list. It documents editorial standards, review expectations, copyright caution, user safety, and links to related tools or guides. As the site grows, this area can keep pointing readers to the most useful internal pages.</p><p>The goal is not to repeat the same text across the site, but to explain the role of each page and connect it to the right tool, guide, or verification link. A reader should be able to move from this overview to a specific action, such as reading a related guide, trying a tool, checking a primary source, or returning later when new examples are published.</p>`
   return `<section class="band ${key && key.indexOf('alt') >= 0 ? 'band--alt' : ''}"><div class="wrap narrow prose adsense-depth">
     <h2>${esc(d.title)}</h2>
@@ -997,7 +998,7 @@ function adsenseDepthBlock(loc, key) {
   const blocks = {
     categories: {
       ko: { title:'Picklary 가이드 사용법', paras:[
-        '이 페이지는 단순한 글 목록이 아니라 피클볼을 처음 배우는 사람부터 클럽 경기와 토너먼트까지 준비하는 플레이어가 필요한 정보를 순서대로 찾도록 만든 출발점입니다. 규칙, 기본기, 패들, 선수, 대회 흐름을 한 번에 모아 두면 방문자가 검색 결과에서 들어온 뒤 다음 글로 자연스럽게 이동할 수 있습니다.',
+        '이 페이지는 단순한 글 목록이 아니라 피클볼을 처음 배우는 사람부터 클럽 경기와 토너먼트까지 준비하는 선수가 필요한 정보를 순서대로 찾도록 만든 출발점입니다. 규칙, 기본기, 패들, 선수, 대회 흐름을 한 번에 모아 두면 방문자가 검색 결과에서 들어온 뒤 다음 글로 자연스럽게 이동할 수 있습니다.',
         '처음 방문했다면 먼저 레벨과 DUPR 자가진단을 확인하고, 그 다음 본인의 약점에 맞는 스킬 가이드를 읽는 방식이 좋습니다. 패들 구매를 고민하는 독자는 장비 카테고리에서 소재와 형태를 비교한 뒤 패들 파인더를 사용하면 됩니다. 프로 선수와 대회 페이지는 실제 경기 패턴을 공부하는 확장 콘텐츠입니다.',
         'Picklary는 공식 규정이나 랭킹을 그대로 복제하지 않습니다. 바뀔 수 있는 정보는 공식 출처 링크를 함께 제공하고, 사이트 내부에서는 동호인이 이해하기 쉬운 설명과 실제 적용 방법을 중심으로 정리합니다.' ], bullets:['내 레벨을 모르면 DUPR 자가진단부터 시작하세요.','특정 샷이 어렵다면 스킬·드릴 카테고리로 이동하세요.','구매 전에는 공식 제품 페이지와 승인 장비 목록을 다시 확인하세요.','프로 선수 페이지는 따라 할 패턴과 따라 하지 말아야 할 선택을 구분해 읽으세요.'] },
       en: { title:'How to use Picklary guides', paras:[
@@ -1022,7 +1023,7 @@ function adsenseDepthBlock(loc, key) {
     },
     brief: {
       ko: { title:'더 브리프 읽는 법', paras:[
-        '더 브리프는 매일 모든 뉴스를 긁어오는 자동 뉴스 페이지가 아닙니다. 피클볼 플레이어가 실제로 행동을 바꿀 만한 변화만 골라 짧게 정리하는 편집형 브리핑입니다. 예를 들어 패들 규정, 대회 일정, 선수 이동, DUPR 관련 변화처럼 시간이 지나면 확인이 필요한 주제를 중심으로 다룹니다.',
+        '더 브리프는 매일 모든 뉴스를 긁어오는 자동 뉴스 페이지가 아닙니다. 피클볼 선수가 실제로 행동을 바꿀 만한 변화만 골라 짧게 정리하는 편집형 브리핑입니다. 예를 들어 패들 규정, 대회 일정, 선수 이동, DUPR 관련 변화처럼 시간이 지나면 확인이 필요한 주제를 중심으로 다룹니다.',
         '각 항목은 원문을 그대로 복제하지 않고 Picklary 관점에서 해석한 요약과 확인 링크를 제공합니다. 독자는 여기서 큰 흐름을 잡고, 세부 사항은 공식 출처 또는 관련 내부 가이드에서 다시 확인하는 방식으로 사용하는 것이 좋습니다.',
         '초기 운영 단계에서는 브리핑이 충분히 누적되지 않았을 수 있으므로, 이 페이지는 짧은 뉴스 모음이 아니라 업데이트 운영 원칙과 출처 확인 흐름을 함께 설명하도록 구성했습니다.' ], bullets:['중요한 변화만 선별합니다.','확정되지 않은 소문은 단정하지 않습니다.','대회 결과와 규정은 공식 링크에서 재확인하도록 안내합니다.'] },
       en: { title:'How to read The Brief', paras:[
@@ -1044,7 +1045,7 @@ function adsenseDepthBlock(loc, key) {
     },
     highlights: {
       ko: { title:'하이라이트 페이지 운영 원칙', paras:[
-        '하이라이트 기능은 단순히 재미있는 영상을 올리는 공간이 아니라, 플레이어가 자신의 판단을 되돌아보고 다른 사람의 피드백을 받는 학습 도구입니다. 좋은 클립은 화려한 한 방보다 포인트 전체의 흐름, 위치 이동, 선택한 샷, 다음에 고칠 한 가지를 보여 주는 영상입니다.',
+        '하이라이트 기능은 단순히 재미있는 영상을 올리는 공간이 아니라, 선수가 자신의 판단을 되돌아보고 다른 사람의 피드백을 받는 학습 도구입니다. 좋은 클립은 화려한 한 방보다 포인트 전체의 흐름, 위치 이동, 선택한 샷, 다음에 고칠 한 가지를 보여 주는 영상입니다.',
         '현재 정적 사이트 버전에서는 업로드가 실제 서버에 저장되지 않습니다. 이는 무단 영상, 개인정보, 저작권 문제가 있는 콘텐츠가 공개 페이지에 쌓이는 것을 막기 위한 안전 장치입니다. 공개 운영을 시작할 때는 업로드 검수, 삭제 요청, 신고, 저작권 확인, 미성년자 개인정보 보호 절차를 추가해야 합니다.',
         '방문자는 이 페이지의 템플릿을 참고해 자신의 영상을 어떻게 자르고 설명할지 배울 수 있습니다. 같은 영상이라도 레벨, 배우고 싶은 스킬, 당시 점수 상황을 함께 적으면 훨씬 좋은 피드백을 받을 수 있습니다.' ], bullets:['10~45초의 한 포인트 클립을 권장합니다.','본인 레벨과 질문을 함께 적습니다.','타인이 나온 영상은 허락을 받은 뒤 공유해야 합니다.'] },
       en: { title:'Highlight page operating principles', paras:[
@@ -1076,7 +1077,7 @@ function categoryDepthBlock(cat, loc) {
     paras: [
       `${name} 카테고리에는 현재 ${count}개의 관련 가이드가 정리되어 있습니다. 이 묶음은 검색 유입을 위한 얕은 링크 모음이 아니라, 같은 주제를 단계적으로 읽을 수 있도록 만든 학습 경로입니다.`,
       samples ? `처음 읽을 글을 고르기 어렵다면 ${samples} 같은 글부터 시작해 보세요. 핵심 개념을 이해한 뒤 관련 글로 이동하면 같은 시간을 써도 훨씬 빠르게 경기 선택이 정리됩니다.` : '새 글이 추가될 때마다 이 카테고리는 레벨, 규칙, 장비, 대회 흐름과 연결되는 방식으로 업데이트됩니다.',
-      '각 글은 가능한 한 실제 플레이어가 바로 적용할 수 있는 질문으로 시작합니다. 규칙이나 장비처럼 바뀌는 정보는 공식 출처를 확인하도록 안내하고, Picklary 내부에서는 이해와 적용에 필요한 설명을 더합니다.'
+      '각 글은 가능한 한 실제 선수가 바로 적용할 수 있는 질문으로 시작합니다. 규칙이나 장비처럼 바뀌는 정보는 공식 출처를 확인하도록 안내하고, Picklary 내부에서는 이해와 적용에 필요한 설명을 더합니다.'
     ], bullets:['먼저 개념을 읽고, 다음에 체크리스트를 따라 해 보세요.','레벨이 맞지 않는 글은 한 단계 낮은 글부터 읽는 편이 좋습니다.','최신 규정과 가격은 각 글의 공식 링크에서 다시 확인하세요.']
   } : {
     title: 'How to read the ' + name + ' category',
@@ -1146,7 +1147,7 @@ function tournamentDepthBlock(loc, type) {
     title: isInternational ? '국제 대회를 볼 때 확인할 점' : '미국 프로투어 정보를 활용하는 법',
     paras: [
       isInternational ? '국제 대회 페이지는 미국 외 지역에서 피클볼이 어떻게 확장되는지 확인하기 위한 참고 페이지입니다. 대회 이름과 장소만 보는 것보다 어떤 단체가 운영하는지, 선수 등록 방식은 무엇인지, 결과가 DUPR이나 공식 랭킹에 어떤 방식으로 연결되는지를 함께 확인하는 것이 좋습니다.' : '미국 프로투어 페이지는 단순 일정표가 아니라 경기 관전과 학습을 연결하는 페이지입니다. 어느 도시에서 열리는지만 보는 것보다 어떤 종목이 열리는지, 상위 선수가 어떤 조합으로 출전하는지, 결과가 랭킹과 팀 리그 흐름에 어떤 영향을 주는지를 함께 보면 더 유용합니다.',
-      'Picklary는 실시간 스코어를 자체적으로 확정 발표하지 않습니다. 대회 일정, 브래킷, 참가자, 결과는 사후 변경될 수 있으므로 공식 대회 페이지와 랭킹 페이지를 다시 확인하도록 안내합니다.',
+      'Picklary는 실시간 경기 결과를 자체적으로 확정하지 않습니다. 일정, 대진표, 참가자와 결과는 이후 바뀔 수 있으므로 최종 정보는 공식 대회·랭킹 페이지에서 다시 확인해 주세요.',
       '동호인에게 가장 유용한 사용법은 결과를 보고 끝내는 것이 아니라, 우승 조합의 패턴을 자신의 복식 경기로 가져오는 것입니다. 리턴 후 전진 타이밍, 3구 선택, 중앙 수비, 파트너 간 역할 분담을 중심으로 보면 프로 경기가 훨씬 실용적인 자료가 됩니다.'
     ], bullets:['일정과 결과는 공식 출처에서 재확인합니다.','대회 결과는 선수 페이지와 연결해 학습합니다.','관전 포인트는 화려한 샷보다 반복되는 패턴입니다.']
   } : {
@@ -1308,13 +1309,13 @@ function duprPanel(player, loc) {
 }
 function reviewerRoundup(paddle, loc) {
   const items = paddle.reviewerScores || [];
-  const title = loc === 'ko' ? '주요 리뷰어 리뷰 결과' : loc === 'es' ? 'Resultados de reviewers' : 'Reviewer roundup';
+  const title = loc === 'ko' ? '주요 리뷰 요약' : loc === 'es' ? 'Resultados de reviewers' : 'Reviewer roundup';
   const note = loc === 'ko'
     ? '외부 리뷰어 점수는 원문 기준이 서로 다를 수 있어 Picklary 내부 점수와 분리해 표시합니다. 구매 전 원문 리뷰와 최신 제품 버전을 확인하세요.'
     : loc === 'es'
       ? 'Las escalas externas pueden variar. Verifica la review original y la versión actual del producto.'
       : 'External reviewer scales can differ. Verify the original review and the current product version before buying.';
-  if (!items.length) return `<div class="spec-card"><h2>${esc(title)}</h2><p class="notice">${esc(loc === 'ko' ? '아직 연결된 외부 리뷰어 스코어가 없습니다. 리뷰어 링크를 추가하면 이 영역에 자동 표시됩니다.' : 'No reviewer-score links are connected yet.')}</p></div>`;
+  if (!items.length) return `<div class="spec-card"><h2>${esc(title)}</h2><p class="notice">${esc(loc === 'ko' ? '아직 연결된 외부 리뷰 점수가 없습니다. 리뷰 출처를 추가하면 이 영역에 표시됩니다.' : 'No reviewer-score links are connected yet.')}</p></div>`;
   return `<div class="spec-card reviewer-roundup"><h2>${esc(title)}</h2>${items.map((r) => `<article class="reviewer-row"><div><strong>${esc(r.reviewer)}</strong><p>${esc(loc === 'ko' && r.noteKo ? r.noteKo : r.note || '')}</p></div><div class="reviewer-score"><span>${esc(r.score || 'source')}</span><a href="${escAttr(r.url || '#')}" rel="nofollow noopener" target="_blank">${esc(loc === 'ko' ? '원문' : loc === 'es' ? 'Fuente' : 'Source')}</a></div></article>`).join('')}<p class="notice">${esc(note)}</p></div>`;
 }
 function paddleEngagement(paddle, loc) {
@@ -1511,7 +1512,7 @@ function nextStepSection(loc, context, data) {
   const base = [
     { href: link(loc, 'pickleball-complete-beginner-guide/'), tag: L('시작점', 'Start here'), title: L('초보 가이드로 돌아가기', 'Open the Beginner Guide'), body: L('처음 온 방문자나 기본기를 다시 잡는 독자가 규칙·레벨·샷·장비 순서로 이동하게 합니다.', 'Give first-time readers a single path through rules, level, shots, and gear.') },
     { href: link(loc, 'dupr-self-check/'), tag: L('레벨', 'Level'), title: L('내 레벨 다시 확인', 'Check your level'), body: L('읽은 내용을 내 경기 상황에 대입해 자가진단 결과와 비교하세요.', 'Turn this page into action by comparing it with your self-check result.') },
-    { href: link(loc, 'boards/skill-review/'), tag: L('커뮤니티', 'Community'), title: L('영상으로 피드백 받기', 'Get video feedback'), body: L('짧은 랠리 영상 URL로 샷 선택과 포지셔닝을 점검하세요.', 'Use a short rally video link to check shot choice and positioning.') }
+    { href: link(loc, 'boards/skill-review/'), tag: L('커뮤니티', 'Community'), title: L('영상으로 피드백 받기', 'Get video feedback'), body: L('짧은 랠리 영상 URL로 샷 선택과 위치 선정을 점검하세요.', 'Use a short rally video link to check shot choice and positioning.') }
   ];
   if (data.slug === 'pickleball-complete-beginner-guide') base[0] = { href: link(loc, 'tools/paddle-finder/'), tag: L('장비', 'Gear'), title: L('패들 후보 비교', 'Compare paddle fits'), body: L('기본기를 확인했다면 현재 스타일과 레벨에 맞는 패들 후보를 비교하세요.', 'After the starter path, compare paddle candidates matched to your style and level.') };
   if (context === 'level' && data.next) base[1] = { href: levelUrl(loc, data.next), tag: L('다음 레벨', 'Next level'), title: L(`${data.next.id}로 올라가기`, `Move toward ${data.next.id}`), body: L('바로 위 레벨의 기준을 읽고 현재 부족한 기술을 하나만 고르세요.', 'Read the next level and choose one gap to practise first.') };
@@ -1545,11 +1546,11 @@ function renderHome(loc) {
     clip: '<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5.5" y="10" width="37" height="25" rx="4" stroke="currentColor" stroke-width="2.4"/><path d="M19 18 L30 23 L19 28 Z" fill="currentColor"/><path d="M11 40 H37" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="17" cy="40" r="2.5" fill="currentColor"/></svg>',
   };
   const experienceCards = [
-    { key: 'court', title: tt(loc, 'nav.rulesSkills'), body: loc === 'ko' ? '규칙, 키친, 서브, 딩크, 3구 드롭, 포지셔닝을 레벨별로 학습합니다.' : 'Learn rules, kitchen play, serve, dinks, third-shot drops, and positioning by level.', href: link(loc, 'category/rules-and-getting-started/') },
-    { key: 'paddles', title: tt(loc, 'nav.paddles'), body: loc === 'ko' ? '브랜드별 인기 패들의 타입, 가격대, 특성, 사용 선수/라인, 리뷰 신호를 비교합니다.' : 'Compare popular paddles by brand, style, price band, traits, player line, and review signals.', href: link(loc, 'gear/') },
-    { key: 'players', title: tt(loc, 'nav.players'), body: loc === 'ko' ? '대회 일정, 경기 결과, 선수 변화와 스토리라인을 한 흐름으로 확인합니다.' : 'Follow schedules, results, player changes, and storylines in one continuous tour view.', href: link(loc, 'pro-scene/') },
+    { key: 'court', title: tt(loc, 'nav.rulesSkills'), body: loc === 'ko' ? '규칙, 키친, 서브, 딩크, 3구 드롭, 위치 선정을 레벨별로 학습합니다.' : 'Learn rules, kitchen play, serve, dinks, third-shot drops, and positioning by level.', href: link(loc, 'category/rules-and-getting-started/') },
+    { key: 'paddles', title: tt(loc, 'nav.paddles'), body: loc === 'ko' ? '브랜드별 인기 패들의 유형, 가격대, 주요 특성, 프로 선수 사용 정보와 리뷰 참고 내용을 비교합니다.' : 'Compare popular paddles by brand, style, price band, traits, player line, and review signals.', href: link(loc, 'gear/') },
+    { key: 'players', title: tt(loc, 'nav.players'), body: loc === 'ko' ? '대회 일정부터 경기 결과, 선수 변화와 주요 이슈까지 한곳에서 이어서 확인합니다.' : 'Follow schedules, results, player changes, and storylines in one continuous tour view.', href: link(loc, 'pro-scene/') },
     { key: 'clip', title: tt(loc, 'nav.clipLite'), body: loc === 'ko' ? 'Clip Editor와 DualCam, 사운드 자동 정렬, 4K 내보내기를 사용하는 Windows 영상 도구입니다.' : 'Use the Windows Clip Editor and DualCam tool with audio auto-sync and 4K export.', href: (loc === 'ko' ? '/clip-lite/' : '/clip-lite/en/') },
-    { key: 'highlights', title: loc === 'ko' ? '스킬 리뷰' : 'Skill Review', body: loc === 'ko' ? '영상 링크를 기준으로 샷 선택, 포지셔닝, 반복 실수에 대한 피드백을 받습니다.' : 'Share a video link and get feedback on shot choice, positioning, and repeatable mistakes.', href: link(loc, 'boards/skill-review/') },
+    { key: 'highlights', title: loc === 'ko' ? '스킬 리뷰' : 'Skill Review', body: loc === 'ko' ? '영상 링크를 기준으로 샷 선택, 위치 선정, 반복 실수에 대한 피드백을 받습니다.' : 'Share a video link and get feedback on shot choice, positioning, and repeatable mistakes.', href: link(loc, 'boards/skill-review/') },
   ].map((x) => `<a class="experience experience--${x.key}" href="${x.href}">
       <span class="experience__icon experience__icon--${x.key}" aria-hidden="true">${experienceIcons[x.key] || ''}</span>
       <h3>${esc(x.title)}</h3><p>${esc(x.body)}</p>
@@ -1691,7 +1692,7 @@ function renderLevelsIndex(loc) {
   <ul>
     <li>${esc(L('2.0\u20132.5 (beginner): learning the rules, serve, return, and kitchen; rallies are short and consistency is the main gap.', '2.0~2.5 (입문): 규칙·서브·리턴·키친을 배우는 단계; 랠리가 짧고 일관성이 주된 과제.'))}</li>
     <li>${esc(L('3.0 (advanced beginner): dependable serve and return, medium rallies, and getting to the kitchen, but the third-shot drop and dinks are inconsistent under pressure.', '3.0 (고급 입문): 서브·리턴이 믿을 만하고 중간 랠리를 이어가며 키친에 도달하지만, 세 번째 샷 드롭과 딩크가 압박 속에서 들쭉날쭉.'))}</li>
-    <li>${esc(L('3.5 (intermediate): a reliable drop, low dinks under pressure, resets, better positioning, and noticeably fewer unforced errors.', '3.5 (중급): 믿을 만한 드롭, 압박 속 낮은 딩크, 리셋, 더 나은 포지셔닝, 눈에 띄게 적은 범실.'))}</li>
+    <li>${esc(L('3.5 (intermediate): a reliable drop, low dinks under pressure, resets, better positioning, and noticeably fewer unforced errors.', '3.5 (중급): 믿을 만한 드롭, 압박 속 낮은 딩크, 리셋, 더 나은 위치 선정, 눈에 띄게 적은 범실.'))}</li>
     <li>${esc(L('4.0 (advanced): controls pace, mixes drives and drops, stays patient at the kitchen, and targets deliberately.', '4.0 (상급): 템포를 조절하고 드라이브와 드롭을 섞으며, 키친에서 인내하고 의도적으로 공략.'))}</li>
     <li>${esc(L('4.5\u20135.0 (highly skilled): precise, strategic, and consistent under real pressure, with few weaknesses to exploit.', '4.5~5.0 (고숙련): 정밀하고 전략적이며 실전 압박 속에서도 일관되고, 파고들 약점이 거의 없음.'))}</li>
   </ul>
@@ -1700,7 +1701,7 @@ function renderLevelsIndex(loc) {
   <p>${esc(L('The jump is not about hitting harder; it is about doing the right thing more often. A 3.5 player keeps dinks low under pressure, has a dependable third-shot drop, resets fast balls instead of popping them up, and simply misses less.', '도약은 더 세게 치는 게 아니라 옳은 선택을 더 자주 하는 것입니다. 3.5는 압박 속에서도 딩크를 낮게 유지하고, 믿을 만한 세 번째 샷 드롭을 갖고, 빠른 공을 띄우지 않고 리셋하며, 단지 덜 실수합니다.'))} <a href="${link(loc, 'what-does-a-dupr-3-0-player-look-like/')}">${esc(L('What a 3.0 player looks like', '3.0은 어떤 모습일까'))}</a> · <a href="${link(loc, 'pickleball-3-0-to-3-5-improvement-plan/')}">${esc(L('3.0 to 3.5 plan', '3.0→3.5 플랜'))}</a></p>
 
   <h2>${esc(L('3.5 vs 4.0: the difference', '3.5와 4.0의 차이'))}</h2>
-  <p>${esc(L('At 4.0 the shots are already there; what changes is patience, reliable resets, deliberate targeting, a drop-and-drive mix, and a team plan. The 3.5-to-4.0 jump is mostly about unlearning a few habits.', '4.0에선 샷은 이미 갖춰져 있고, 바뀌는 것은 인내·믿을 만한 리셋·의도적 타깃팅·드롭과 드라이브 혼합·팀 계획입니다. 3.5→4.0 도약은 대부분 몇 가지 습관을 버리는 것입니다.'))} <a href="${link(loc, 'pickleball-3-5-to-4-0-habits-to-fix/')}">${esc(L('3.5 to 4.0: habits to fix', '3.5→4.0: 고쳐야 할 습관'))}</a></p>
+  <p>${esc(L('At 4.0 the shots are already there; what changes is patience, reliable resets, deliberate targeting, a drop-and-drive mix, and a team plan. The 3.5-to-4.0 jump is mostly about unlearning a few habits.', '4.0에선 샷은 이미 갖춰져 있고, 바뀌는 것은 인내·믿을 만한 리셋·의도적 코스 선택·드롭과 드라이브 혼합·팀 계획입니다. 3.5→4.0 도약은 대부분 몇 가지 습관을 버리는 것입니다.'))} <a href="${link(loc, 'pickleball-3-5-to-4-0-habits-to-fix/')}">${esc(L('3.5 to 4.0: habits to fix', '3.5→4.0: 고쳐야 할 습관'))}</a></p>
 
   <h2>${esc(L('Common mistakes by level', '레벨별 자주 하는 실수'))}</h2>
   <ul>
@@ -1714,8 +1715,8 @@ function renderLevelsIndex(loc) {
   <ul>
     <li>${esc(L('2.5: groove a dependable serve and return, and a simple routine.', '2.5: 믿을 만한 서브·리턴과 단순한 루틴을 몸에 붙이기.'))} <a href="${link(loc, 'serve-and-return-basics/')}">${esc(L('Serve & return', '서브와 리턴'))}</a> · <a href="${link(loc, 'first-30-days-practice-routine/')}">${esc(L('First 30 days', '첫 30일'))}</a></li>
     <li>${esc(L('3.0: build the third-shot drop and patient dinking.', '3.0: 세 번째 샷 드롭과 인내심 있는 딩크 쌓기.'))} <a href="${link(loc, 'the-third-shot-drop-explained/')}">${esc(L('Third-shot drop', '세 번째 샷 드롭'))}</a> · <a href="${link(loc, 'dinking-fundamentals/')}">${esc(L('Dinking', '딩크'))}</a></li>
-    <li>${esc(L('3.5: drill resets under pressure and pair positioning.', '3.5: 압박 속 리셋과 한 쌍 포지셔닝 드릴.'))} <a href="${link(loc, 'doubles-positioning-basics/')}">${esc(L('Doubles positioning', '복식 포지셔닝'))}</a></li>
-    <li>${esc(L('4.0: refine targeting, shot selection, and team strategy.', '4.0: 타깃팅·샷 선택·팀 전략 다듬기.'))}</li>
+    <li>${esc(L('3.5: drill resets under pressure and pair positioning.', '3.5: 압박 속 리셋과 한 쌍 위치 선정 드릴.'))} <a href="${link(loc, 'doubles-positioning-basics/')}">${esc(L('Doubles positioning', '복식 위치 선정'))}</a></li>
+    <li>${esc(L('4.0: refine targeting, shot selection, and team strategy.', '4.0: 코스 선택·샷 선택·팀 전략 다듬기.'))}</li>
   </ul>
 
   <p class="level-index-cta"><a class="btn btn--dupr" href="${link(loc, 'dupr-self-check/')}">${esc(L('Not sure where you fit? DUPR self-check →', '내 레벨이 헷갈리나요? DUPR 자가진단 →'))}</a></p>
@@ -1726,7 +1727,7 @@ function renderLevelsIndex(loc) {
   ${visualFigure(loc, 'duprSimple')}
 </div></section>
 <section class="band"><div class="wrap">${levelGrid(loc)}</div></section>
-<section class="band band--alt"><div class="wrap two-col two-col--wide"><div><h2>DUPR</h2><p>${esc(loc === 'ko' ? 'DUPR가 무엇인지 먼저 이해하면 레벨 선택과 목표 설정이 훨씬 쉬워집니다.' : 'Understanding DUPR first makes level selection and goal setting easier.')}</p><a class="btn btn--dupr btn--dupr-wide" href="${link(loc, 'what-is-dupr/')}">${esc(tt(loc, 'nav.dupr'))}</a></div>${visualFigure(loc, 'duprDashboard')}</div></section>
+<section class="band band--alt"><div class="wrap two-col two-col--wide"><div><h2>DUPR</h2><p>${esc(loc === 'ko' ? 'DUPR가 무엇을 의미하는지 이해하면 내 레벨을 가늠하고 연습 목표를 세우기 쉬워집니다.' : 'Understanding DUPR first makes level selection and goal setting easier.')}</p><a class="btn btn--dupr btn--dupr-wide" href="${link(loc, 'what-is-dupr/')}">${esc(tt(loc, 'nav.dupr'))}</a></div>${visualFigure(loc, 'duprDashboard')}</div></section>
 ${explainer}`;
   return layout({ loc, rel: 'level/', title: tt(loc, 'level.indexTitle'), description: tt(loc, 'level.indexIntro'), bodyHtml: body });
 }
@@ -1809,7 +1810,7 @@ function levelShots(level, loc) {
   if (!data.length) return '';
   const heading = loc === 'ko' ? `레벨 ${level.id} 마스터 샷 4가지` : `Four shots to master at Level ${level.id}`;
   const intro = loc === 'ko'
-    ? '샷을 골라 보세요. 오리지널 코트 다이어그램에서 공이 어떻게 움직이는지 보고, 구사법과 효과를 확인할 수 있어요.'
+    ? '샷을 선택하면 코트 그림에서 공의 움직임을 확인하고, 치는 방법과 목적을 함께 볼 수 있습니다.'
     : 'Pick a shot to see how the ball moves in an original court diagram, plus how to hit it and what it does.';
   const chips = data.map((s, i) => `<button type="button" class="shot-chip${i === 0 ? ' is-active' : ''}" role="tab" aria-selected="${i === 0 ? 'true' : 'false'}" aria-controls="sp-${level.slug}-${i}" id="sc-${level.slug}-${i}" data-shot-idx="${i}">${esc(loc === 'ko' ? s.nameKo : s.name)}</button>`).join('');
   const panels = data.map((s, i) => {
@@ -1820,7 +1821,7 @@ function levelShots(level, loc) {
       <div class="shot-anim">${shotAnimSvg(s.anim, level.slug + '-' + i, loc)}</div>
       <div class="shot-text">
         <h3>${esc(name)}</h3>
-        <p><strong>${esc(loc === 'ko' ? '구사법' : 'How to hit it')}:</strong> ${esc(how)}</p>
+        <p><strong>${esc(loc === 'ko' ? '치는 방법' : 'How to hit it')}:</strong> ${esc(how)}</p>
         <p><strong>${esc(loc === 'ko' ? '효과' : 'What it does')}:</strong> ${esc(why)}</p>
       </div>
     </div>`;
@@ -1890,22 +1891,22 @@ ${related.length ? `<section class="band band--alt"><div class="wrap"><h2 class=
 function gearLabel(loc, key) {
   const dict = {
     ko: {
-      nav: '패들/장비',
-      hubTitle: '패들/장비 가이드',
-      hubIntro: '패들, 신발, 의류, 액세서리를 한눈에 비교하는 Picklary 장비 가이드입니다. 제품을 바로 사게 만드는 페이지가 아니라, 내 레벨·코트 환경·몸 상태에 맞춰 무엇을 확인해야 하는지 정리합니다.',
-      hubCta: '패들 기준부터 보기',
-      policyNote: 'Picklary의 장비 페이지는 쇼핑몰이 아니라 선택 기준을 정리한 가이드입니다. 가격, 재고, 승인 장비 여부는 바뀔 수 있으므로 제조사·공식 판매처·승인 장비 목록에서 다시 확인하세요.',
+      nav: '패들·장비',
+      hubTitle: '패들·장비 가이드',
+      hubIntro: '패들, 공, 신발, 의류와 액세서리를 내 레벨과 코트 환경에 맞춰 비교할 수 있도록 정리한 장비 가이드입니다. 특정 제품을 바로 추천하기보다 무엇을 먼저 확인해야 하는지 설명합니다.',
+      hubCta: '패들 선택 기준 보기',
+      policyNote: 'Picklary 장비 페이지는 쇼핑몰이 아니라 선택 기준을 설명하는 가이드입니다. 가격, 재고, 공식 승인 여부는 바뀔 수 있으므로 구매 전에 제조사와 공식 승인 장비 목록을 확인하세요.',
       paddles: '패들', balls: '공', shoes: '신발', apparel: '의류', accessories: '액세서리',
-      paddlesDesc: '파워보다 먼저 컨트롤, 스위트스폿, 손목 부담을 비교합니다.',
-      ballsDesc: '실내·실외 공, Franklin X-40, Dura Fast 40, Selkirk Pro S1, 클럽용 공을 비교합니다.',
+      paddlesDesc: '컨트롤, 스위트스폿, 파워, 손목 부담을 함께 비교합니다.',
+      ballsDesc: '실내용·실외용 공의 차이와 대표 모델, 클럽에서 쓰는 공을 비교합니다.',
       shoesDesc: '미끄러짐, 옆 움직임, 발볼, 쿠션 균형을 먼저 확인합니다.',
       apparelDesc: '땀, 온도, 움직임, 장시간 대기 상황까지 고려합니다.',
-      accessoriesDesc: '그립, 리드테이프, 밴드, 클리너처럼 체감이 큰 작은 장비를 봅니다.',
+      accessoriesDesc: '그립, 웨이트 테이프, 밴드, 클리너처럼 작은 변화로 체감이 큰 장비를 살펴봅니다.',
       ballsTitle: '피클볼 공 가이드: 실내·실외와 대표 모델',
       ballsIntro: '공은 랠리 속도, 바운스, 내구성, 소음, 클럽 적응에 바로 영향을 줍니다. 실외용과 실내용 차이, Franklin X-40, Dura Fast 40, Selkirk Pro S1, ONIX Fuse Indoor, 라이프타임 같은 클럽 환경에서 확인할 점을 정리합니다.',
-      chooseTitle: '무엇부터 바꾸면 좋을까요?',
+      chooseTitle: '무엇부터 바꾸는 게 좋을까요?',
       chooseIntro: '장비는 비싼 것부터 사는 것보다, 지금 코트에서 반복되는 문제를 먼저 해결하는 순서가 좋습니다. 미끄러지면 신발, 패들이 돌아가면 그립, 공이 밀리면 패들 밸런스부터 확인하세요.',
-      adsenseTitle: '편집 기준',
+      adsenseTitle: '장비 콘텐츠 원칙',
       adsenseText: 'Picklary의 장비 콘텐츠는 상품 나열보다 선택 기준을 우선합니다. 향후 제휴 링크가 생기더라도 편집 설명, 광고 고지, 공식 확인 안내를 분리해 유지합니다.',
       shoesTitle: '피클볼 신발 고르는 법',
       shoesIntro: '피클볼은 전후좌우 방향 전환이 잦아서 러닝화만으로는 옆 움직임을 충분히 지지하지 못할 수 있습니다. 신발 페이지는 특정 브랜드 추천보다 코트 표면, 발볼, 접지력, 쿠션, 발목 안정성, 내구성을 어떻게 확인할지 설명합니다.',
@@ -1913,8 +1914,8 @@ function gearLabel(loc, key) {
       apparelIntro: '의류는 멋보다 움직임과 온도 조절이 먼저입니다. 실내 클럽, 야외 여름 코트, 토너먼트 대기 시간처럼 환경이 달라지면 필요한 원단, 핏, 레이어링도 달라집니다.',
       accessoriesTitle: '피클볼 액세서리 가이드',
       accessoriesIntro: '작은 액세서리는 경기 감각을 크게 바꿀 수 있습니다. 리드테이프는 밸런스와 스윙웨이트, 그립은 손목 부담과 컨트롤, 클리너는 패들 표면 관리에 영향을 줍니다.',
-      checklist: '확인 체크리스트',
-      nextLinks: '관련 장비 페이지'
+      checklist: '구매 전 체크리스트',
+      nextLinks: '함께 볼 장비 가이드'
     },
     en: {
       nav: 'Gear Lab',
@@ -1994,7 +1995,7 @@ function gearCards(loc, opts) {
 function gearRelatedNav(loc, currentKey) {
   const label = loc === 'ko' ? '다른 장비 가이드' : loc === 'es' ? 'Otras guías' : 'Other gear guides';
   const note = loc === 'ko'
-    ? '현재 페이지를 먼저 읽고, 필요한 항목만 옆에서 빠르게 이동하세요.'
+    ? '현재 내용을 읽다가 다른 장비 정보가 필요하면 관련 가이드로 바로 이동하세요.'
     : 'Read this page first, then jump to the related gear guide you need.';
   const links = GEAR_ITEMS.filter((x) => x.key !== currentKey).map((x) => `<a class="gear-related__link gear-related__link--${escAttr(x.key)}" href="${link(loc, x.href)}"><span class="gear-related__icon">${gearIcon(x.key)}</span><span><strong>${esc(gearLabel(loc, x.key))}</strong><small>${esc(gearItemDesc(loc, x.key))}</small></span></a>`).join('');
   return `<aside class="gear-related" aria-label="${escAttr(label)}"><h2>${esc(label)}</h2><p>${esc(note)}</p><div class="gear-related__links">${links}</div></aside>`;
@@ -2008,44 +2009,44 @@ function gearRealExamples(loc, topic) {
     balls: [
       {
         name: 'Franklin X-40',
-        tag: L('대표 실외공', 'Outdoor benchmark'),
+        tag: L('대표적인 실외용 공', 'Outdoor benchmark'),
         body: L('야외 오픈플레이와 대회 준비에서 가장 자주 비교되는 공입니다. 속도·바운스 기준을 잡기 좋습니다.', 'A common outdoor benchmark for open play and event preparation. Useful for learning the speed and bounce many players expect.')
       },
       {
         name: 'Dura Fast 40',
-        tag: L('빠른 실외공', 'Fast outdoor feel'),
-        body: L('더 단단하고 빠른 느낌을 선호하는 경쟁 플레이어가 비교할 만합니다. 초보자에게는 빠르게 느껴질 수 있습니다.', 'A firmer, faster outdoor comparison point. It can feel quick for beginners, but it is useful for competitive-speed practice.')
+        tag: L('빠른 반발의 실외용 공', 'Fast outdoor feel'),
+        body: L('더 단단하고 빠른 느낌을 선호하는 경쟁 선수가 비교할 만합니다. 초보자에게는 빠르게 느껴질 수 있습니다.', 'A firmer, faster outdoor comparison point. It can feel quick for beginners, but it is useful for competitive-speed practice.')
       },
       {
         name: 'Selkirk Pro S1',
-        tag: L('프리미엄 실외공', 'Premium outdoor candidate'),
+        tag: L('프리미엄 실외용 공', 'Premium outdoor candidate'),
         body: L('내구성·일관성·38홀 설계로 알려진 후보입니다. 가격과 현재 승인 상태는 구매 전 확인하세요.', 'A premium outdoor candidate associated with durability, consistency, and a 38-hole design. Verify current price and eligibility before buying.')
       },
       {
         name: 'ONIX Fuse Indoor',
-        tag: L('실내용 후보', 'Indoor candidate'),
+        tag: L('실내용 공', 'Indoor candidate'),
         body: L('실내 체육관·스포츠코트에서 부드러운 바운스와 컨트롤을 비교할 때 확인할 만한 공입니다.', 'A useful indoor candidate when comparing softer bounce and controlled feel on gym or sport-court surfaces.')
       },
       {
         name: L('클럽 제공 공', 'Club-provided ball'),
-        tag: L('라이프타임·로컬클럽', 'Life Time / local clubs'),
+        tag: L('Life Time·지역 클럽', 'Life Time / local clubs'),
         body: L('클럽 지점마다 제공 공이 다를 수 있습니다. 자주 치는 장소에서 실제 쓰는 공을 확인하고 같은 공으로 연습하세요.', 'Club locations can vary. Check the exact ball your location uses and practise with that model when possible.')
       }
     ],
     shoes: [
       {
         name: 'Wilson Pickle Pro',
-        tag: L('피클볼 전용 후보', 'Pickleball-specific candidate'),
+        tag: L('피클볼 전용화', 'Pickleball-specific candidate'),
         body: L('측면 지지력과 코트 움직임을 기준으로 비교할 만한 피클볼화 후보입니다.', 'A pickleball-specific option to compare for lateral support and court movement.')
       },
       {
         name: 'Babolat Jet Mach 4',
         tag: L('빠른 움직임', 'Fast movement'),
-        body: L('가벼운 코트 움직임과 반응성을 중요하게 보는 플레이어가 비교할 만합니다.', 'A court-shoe candidate for players who value lighter movement and responsiveness.')
+        body: L('가벼운 코트 움직임과 반응성을 중요하게 보는 선수가 비교할 만합니다.', 'A court-shoe candidate for players who value lighter movement and responsiveness.')
       },
       {
         name: 'ASICS Solution Speed FF',
-        tag: L('테니스화 기반', 'Tennis-court base'),
+        tag: L('테니스 코트화', 'Tennis-court base'),
         body: L('테니스화 기반의 빠른 방향 전환과 접지력을 비교할 때 참고하기 좋습니다.', 'A tennis-court reference point for quick cuts and traction.')
       },
       {
@@ -2116,7 +2117,7 @@ function gearTopicData(loc, topic) {
         '실내 체육관이나 목재/스포츠 코트에서는 바운스가 부드럽고 컨트롤이 쉬운 실내용 공이 더 편할 수 있습니다.',
         '대회나 리그를 준비한다면 실제 사용하는 공과 같은 모델로 연습해야 속도와 바운스 적응이 빠릅니다.',
         'Franklin X-40은 야외 경기와 클럽에서 가장 자주 언급되는 대표 실외공 후보입니다.',
-        'Dura Fast 40은 빠르고 단단한 느낌을 선호하는 경쟁 플레이어가 비교할 만한 실외공입니다.',
+        'Dura Fast 40은 빠르고 단단한 느낌을 선호하는 경쟁 선수가 비교할 만한 실외공입니다.',
         'Selkirk Pro S1은 내구성, 일관성, 38홀 설계로 알려진 프리미엄 실외공 후보입니다.',
         'ONIX Fuse Indoor는 실내용 공 후보로, 실내 코트에서 부드러운 감각과 컨트롤을 비교할 때 확인할 만합니다.',
         '라이프타임 같은 클럽에서는 지점마다 제공 공이 다를 수 있으므로, 실제 플레이하는 클럽에서 쓰는 공을 확인한 뒤 같은 공으로 연습하는 것이 가장 현실적입니다.'
@@ -2298,7 +2299,7 @@ function paddleTierReason(p, loc) {
 
 function paddleTierIntro(loc) {
   return loc === 'ko'
-    ? '이 티어표는 브랜드 광고나 절대 순위가 아니라 Picklary 데이터베이스 안에서 성능 점수, 플레이 스타일 적합도, 가격대, 초보자 관용성, 시장 기준 모델 여부를 함께 본 편집형 가이드입니다. 같은 S티어라도 파워형·컨트롤형·가성비형의 의미가 다르므로, 최종 선택은 패들 파인더와 각 상세 페이지에서 다시 확인하세요.'
+    ? '이 등급표는 브랜드 광고나 절대 순위가 아니라 Picklary 데이터베이스 안에서 성능 점수, 플레이 스타일 적합도, 가격대, 초보자 관용성, 시장 기준 모델 여부를 함께 본 편집형 가이드입니다. 같은 S티어라도 파워형·컨트롤형·가성비형의 의미가 다르므로, 최종 선택은 패들 파인더와 각 상세 페이지에서 다시 확인하세요.'
     : 'This tier list is not an ad or an absolute ranking. It is an editorial guide inside the Picklary database, combining comparison scores, play-style fit, price band, beginner forgiveness, and benchmark-model signals. Even inside S tier, a power pick, control pick, and value pick mean different things, so use Paddle Finder and the detail pages before deciding.';
 }
 
@@ -2314,7 +2315,7 @@ function paddleTierSnapshot(loc, groups, tierCopy) {
     }).join('') : `<div class="tier-snapshot__empty">${esc(tierCopy[tier])}</div>`;
     return `<div class="tier-snapshot__row tier-snapshot__row--${tier.toLowerCase()}"><div class="tier-snapshot__rank"><strong>${esc(tier)}</strong><span>${esc(tierCopy[tier])}</span></div><div class="tier-snapshot__items">${cells}</div></div>`;
   }).join('');
-  return `<div class="tier-snapshot-wrap"><div class="tier-snapshot-head"><div><span>${esc(L('한눈에 보기', 'At-a-glance'))}</span><h3>${esc(L('전체 패들 티어표', 'Complete paddle tier chart'))}</h3></div><p>${esc(L('먼저 전체 배치를 확인한 뒤 아래의 상세 해설과 목적별 추천을 읽어 보세요.', 'Start with the full chart, then use the detailed notes and purpose-based picks below.'))}</p></div><div class="tier-snapshot" role="table" aria-label="${escAttr(L('전체 패들 티어표', 'Complete paddle tier chart'))}">${rows}</div></div>`;
+  return `<div class="tier-snapshot-wrap"><div class="tier-snapshot-head"><div><span>${esc(L('한눈에 보기', 'At-a-glance'))}</span><h3>${esc(L('전체 패들 등급표', 'Complete paddle tier chart'))}</h3></div><p>${esc(L('먼저 전체 배치를 확인한 뒤 아래의 상세 해설과 목적별 추천을 읽어 보세요.', 'Start with the full chart, then use the detailed notes and purpose-based picks below.'))}</p></div><div class="tier-snapshot" role="table" aria-label="${escAttr(L('전체 패들 등급표', 'Complete paddle tier chart'))}">${rows}</div></div>`;
 }
 
 function renderPaddleTierList(loc) {
@@ -2336,22 +2337,22 @@ function renderPaddleTierList(loc) {
     return `<div class="tier-row tier-row--${escAttr(tier.toLowerCase())}"><div class="tier-rank"><span>${esc(tier)}</span><small>${esc(tierCopy[tier])}</small></div><div class="tier-paddles">${cards}</div></div>`;
   }).join('');
   const stylePicks = [
-    { label: L('올코트 기준', 'All-court'), slug: 'six-zero-double-black-diamond-control', body: L('밸런스형 플레이어가 비교 기준으로 삼기 좋습니다.', 'A useful reference point for balanced players.') },
-    { label: L('컨트롤 기준', 'Control'), slug: 'selkirk-luxx-control-air', body: L('리셋·드롭·딩크 안정성을 우선할 때 비교하세요.', 'Compare when resets, drops, and dinks matter most.') },
-    { label: L('파워 기준', 'Power'), slug: 'crbn-1x-power-series', body: L('드라이브와 스피드업을 적극적으로 쓰는 플레이어에게 적합합니다.', 'Useful for players who drive and speed up often.') },
+    { label: L('올코트형 기준', 'All-court'), slug: 'six-zero-double-black-diamond-control', body: L('밸런스형 선수가 비교 기준으로 삼기 좋습니다.', 'A useful reference point for balanced players.') },
+    { label: L('컨트롤형 기준', 'Control'), slug: 'selkirk-luxx-control-air', body: L('리셋·드롭·딩크 안정성을 우선할 때 비교하세요.', 'Compare when resets, drops, and dinks matter most.') },
+    { label: L('파워형 기준', 'Power'), slug: 'crbn-1x-power-series', body: L('드라이브와 스피드업을 적극적으로 쓰는 선수에게 적합합니다.', 'Useful for players who drive and speed up often.') },
     { label: L('가성비 기준', 'Value'), slug: 'vatic-pro-prism-flash', body: L('예산을 지키면서 컨트롤과 스핀을 확보하고 싶을 때 확인하세요.', 'Check when you want control and spin without jumping to premium pricing.') },
-    { label: L('초보 친화', 'Beginner-friendly'), slug: 'friday-original', body: L('처음 시작할 때 부담 없이 비교할 수 있는 후보입니다.', 'A lower-pressure starting point for new players.') }
+    { label: L('초보자용', 'Beginner-friendly'), slug: 'friday-original', body: L('처음 시작할 때 부담 없이 비교할 수 있는 후보입니다.', 'A lower-pressure starting point for new players.') }
   ].map((x) => {
     const p = paddles.find((item) => item.slug === x.slug);
     return `<a class="tier-pick" href="${link(loc, 'paddles/' + x.slug + '/')}"><span>${esc(x.label)}</span><strong>${esc(p ? paddleTitle(p) : x.slug)}</strong><p>${esc(x.body)}</p></a>`;
   }).join('');
   return `<section class="band band--tier-list" id="paddle-tier-list"><div class="wrap">
-    <div class="section-head"><div><p class="section-kicker">${esc(L('티어표', 'Tier list'))}</p><h2 class="band__title">${esc(L('Picklary 패들 티어표', 'Picklary Paddle Tier List'))}</h2><p class="band__intro">${esc(paddleTierIntro(loc))}</p></div><a class="btn btn--tier" href="${link(loc, 'tools/paddle-finder/')}">${esc(L('내 스타일로 다시 찾기', 'Find my fit'))}</a></div>
+    <div class="section-head"><div><p class="section-kicker">${esc(L('등급표', 'Tier list'))}</p><h2 class="band__title">${esc(L('Picklary 패들 등급표', 'Picklary Paddle Tier List'))}</h2><p class="band__intro">${esc(paddleTierIntro(loc))}</p></div><a class="btn btn--tier" href="${link(loc, 'tools/paddle-finder/')}">${esc(L('내 스타일에 맞는 패들 찾기', 'Find my fit'))}</a></div>
     ${paddleTierSnapshot(loc, groups, tierCopy)}
-    <div class="tier-detail-head"><span>${esc(L('상세 해설', 'Detailed notes'))}</span><h3>${esc(L('각 티어의 이유와 플레이 적합도', 'Why each paddle sits in its tier'))}</h3></div>
+    <div class="tier-detail-head"><span>${esc(L('상세 해설', 'Detailed notes'))}</span><h3>${esc(L('각 등급의 선정 이유와 플레이 적합도', 'Why each paddle sits in its tier'))}</h3></div>
     <div class="tier-board">${rows}</div>
-    <div class="tier-picks"><div><h3>${esc(L('목적별 빠른 기준 모델', 'Quick benchmark picks by purpose'))}</h3><p>${esc(L('S/A/B만 보지 말고, 내 플레이 문제와 가장 가까운 기준 모델부터 비교하세요.', 'Do not read only S/A/B. Start with the benchmark closest to your on-court problem.'))}</p></div><div class="tier-pick-grid">${stylePicks}</div></div>
-    <div class="tier-method"><strong>${esc(L('산정 기준', 'Methodology'))}</strong><p>${esc(L('컨트롤·파워·스핀·관용성·핸드 스피드 점수, 레벨 적합도, 가격대, 사용 목적, 리뷰 신호를 함께 봅니다. 가격과 승인 상태는 변동될 수 있으므로 구매 전 공식 출처를 확인하세요.', 'We combine control, power, spin, forgiveness, hand speed, level fit, price band, use case, and review signals. Price and approval status can change, so verify official sources before buying.'))}</p></div>
+    <div class="tier-picks"><div><h3>${esc(L('목적별 비교 기준 모델', 'Quick benchmark picks by purpose'))}</h3><p>${esc(L('등급만 보지 말고, 내 플레이에서 해결하고 싶은 문제와 가장 가까운 기준 모델부터 비교하세요.', 'Do not read only S/A/B. Start with the benchmark closest to your on-court problem.'))}</p></div><div class="tier-pick-grid">${stylePicks}</div></div>
+    <div class="tier-method"><strong>${esc(L('산정 기준', 'Methodology'))}</strong><p>${esc(L('컨트롤·파워·스핀·관용성·핸드 스피드, 레벨 적합도, 가격대, 사용 목적과 리뷰 참고 정보를 함께 살펴봅니다. 가격과 승인 상태는 바뀔 수 있으므로 구매 전 공식 출처를 확인하세요.', 'We combine control, power, spin, forgiveness, hand speed, level fit, price band, use case, and review signals. Price and approval status can change, so verify official sources before buying.'))}</p></div>
   </div></section>`;
 }
 
@@ -2364,7 +2365,7 @@ function renderPaddlesIndex(loc) {
   const latestPaddleUpdates = paddleUpdateItems().sort((a, b) => String(b.date || '').localeCompare(String(a.date || ''))).slice(0, 3);
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: gearLabel(loc, 'hubTitle'), rel: 'gear/' }, { name: tt(loc, 'paddles.title') }])}
 <section class="page-head page-head--visual"><div class="wrap two-col two-col--wide">
-  <div><p class="page-head__eyebrow">${esc(loc === 'ko' ? '패들' : 'Paddles')}</p><h1>${esc(tt(loc, 'paddles.title'))}</h1><p class="page-head__intro">${esc(tt(loc, 'paddles.intro'))}</p><div class="hero-actions"><a class="btn btn--primary" href="${link(loc, 'tools/paddle-finder/')}">${esc(tt(loc, 'paddles.openFinder'))}</a><a class="btn btn--tier" href="#paddle-tier-list">${esc(loc === 'ko' ? '티어표 보기' : 'View tier list')}</a></div></div>
+  <div><p class="page-head__eyebrow">${esc(loc === 'ko' ? '패들' : 'Paddles')}</p><h1>${esc(tt(loc, 'paddles.title'))}</h1><p class="page-head__intro">${esc(tt(loc, 'paddles.intro'))}</p><div class="hero-actions"><a class="btn btn--primary" href="${link(loc, 'tools/paddle-finder/')}">${esc(tt(loc, 'paddles.openFinder'))}</a><a class="btn btn--tier" href="#paddle-tier-list">${esc(loc === 'ko' ? '등급표 보기' : 'View tier list')}</a></div></div>
   ${visualFigure(loc, 'ratings')}
 </div></section>
 ${renderPaddleTierList(loc)}
@@ -2417,7 +2418,7 @@ function paddleProse(p, loc) {
   else if (/14/.test(core)) thickLine = La(' Its 14 mm core leans toward pop and hand speed.', ' 14mm 코어라 팝·핸드 스피드 쪽입니다.');
   const lv = (p.levels || []).map((x) => parseFloat(x)).filter((x) => !isNaN(x));
   const loLv = lv.length ? Math.min.apply(null, lv) : null, hiLv = lv.length ? Math.max.apply(null, lv) : null;
-  const levelLine = loLv != null ? La(`It is aimed at ${loLv.toFixed(1)}–${hiLv.toFixed(1)} players`, `${loLv.toFixed(1)}~${hiLv.toFixed(1)} 플레이어에게 맞습니다`) : La('It suits a range of players', '다양한 레벨에 맞습니다');
+  const levelLine = loLv != null ? La(`It is aimed at ${loLv.toFixed(1)}–${hiLv.toFixed(1)} players`, `${loLv.toFixed(1)}~${hiLv.toFixed(1)} 선수에게 맞습니다`) : La('It suits a range of players', '다양한 레벨에 맞습니다');
   let begLine;
   if ((r.forgiveness || 0) >= 8 && (loLv == null || loLv <= 3.0)) begLine = La(', and it is forgiving enough for improvers still grooving their swing.', ' — 스윙을 다듬는 중급 이하에게도 관용적입니다.');
   else if (loLv != null && loLv >= 4.0) begLine = La(', and it is best in the hands of advanced players who can take advantage of it.', ' — 이를 활용할 수 있는 상급자에게 가장 잘 맞습니다.');
@@ -2462,7 +2463,7 @@ function renderPaddlePage(paddle, loc) {
     ${fieldRow(tt(loc, 'paddles.traits'), (paddle.traits || []).map((t) => traitLabel(loc, t)))}
     ${fieldRow(tt(loc, 'paddles.usedBy'), paddle.usedBy)}
   </tbody></table><div class="source-buttons">${externalButton(ui(loc, 'officialProduct'), paddle.sourceUrl)}</div><p class="notice">${esc(ui(loc, 'sourceNote'))}</p><p class="notice">${esc(tt(loc, 'paddles.approvalNote'))}</p></div>
-  <div class="spec-card spec-card--radar"><h2>${esc(ui(loc, 'ratings'))}</h2>${ratingRadar(paddle.ratings, loc)}<p class="notice">${esc(loc === 'ko' ? '점수는 제품 설명과 일반 리뷰 신호를 바탕으로 한 편집용 비교 점수입니다. 실측 데이터가 아닙니다.' : 'Scores are editorial comparison notes based on product positioning and common review signals; they are not lab measurements.')}</p></div>
+  <div class="spec-card spec-card--radar"><h2>${esc(ui(loc, 'ratings'))}</h2>${ratingRadar(paddle.ratings, loc)}<p class="notice">${esc(loc === 'ko' ? '점수는 제조사 공개 정보와 여러 리뷰의 공통 평가를 바탕으로 정리한 비교용 지표입니다. 실측 데이터는 아닙니다.' : 'Scores are editorial comparison notes based on product positioning and common review signals; they are not lab measurements.')}</p></div>
 </div></section>
 <section class="band"><div class="wrap narrow"><div class="prose">${paddleProse(paddle, loc)}</div></div></section>
 <section class="band band--alt"><div class="wrap two-col two-col--wide">${reviewerRoundup(paddle, loc)}${paddleEngagement(paddle, loc)}</div></section>
@@ -2477,7 +2478,7 @@ ${same.length ? `<section class="band band--alt"><div class="wrap"><h2 class="ba
     author: { '@type': 'Person', name: ownerName(loc) },
     publisher: { '@type': 'Organization', name: config.siteName, logo: { '@type': 'ImageObject', url: config.url + '/assets/icons/apple-touch-icon.png' } },
   }];
-  return layout({ loc, rel: 'paddles/' + paddle.slug + '/', title: title + (loc === 'ko' ? ' — 리뷰·스펙' : ' — review & specs'), description: enrichDesc(loc1(paddle, loc, 'reviewSignal'), loc, ' 스펙·평점·추천 레벨과 어떤 플레이어에게 맞는지 정리했습니다.', ' Specs, ratings, level fit, and who it is for.'), jsonld, bodyHtml: body });
+  return layout({ loc, rel: 'paddles/' + paddle.slug + '/', title: title + (loc === 'ko' ? ' — 리뷰·스펙' : ' — review & specs'), description: enrichDesc(loc1(paddle, loc, 'reviewSignal'), loc, ' 스펙·평점·추천 레벨과 어떤 선수에게 맞는지 정리했습니다.', ' Specs, ratings, level fit, and who it is for.'), jsonld, bodyHtml: body });
 }
 
 function renderPlayersIndex(loc) {
@@ -2729,7 +2730,7 @@ function boardLabel(loc, key) {
   return (labels[loc] && labels[loc][key]) || labels.en[key] || key;
 }
 function boardTagLabel(loc, tag) {
-  const ko = { rules:'규칙', serve:'서브', positioning:'포지셔닝', consistency:'안정성', 'third-shot':'3구', kitchen:'키친', drop:'드롭', defense:'수비', dink:'딩크', transition:'전환구역', attack:'공격 판단', partners:'파트너', partner:'파트너', 'speed-up':'스피드업', patterns:'패턴', strategy:'전략', mixed:'혼합복식', tournament:'대회', scouting:'상대 분석', micro:'미세 조정', role:'영상 분석', lob:'로브', return:'리턴', middle:'미들', paddle:'패들', 'video-review':'영상 리뷰' };
+  const ko = { rules:'규칙', serve:'서브', positioning:'위치 선정', consistency:'안정성', 'third-shot':'3구', kitchen:'키친', drop:'드롭', defense:'수비', dink:'딩크', transition:'전환구역', attack:'공격 판단', partners:'파트너', partner:'파트너', 'speed-up':'스피드업', patterns:'패턴', strategy:'전략', mixed:'혼합복식', tournament:'대회', scouting:'상대 분석', micro:'미세 조정', role:'영상 분석', lob:'로브', return:'리턴', middle:'미들', paddle:'패들', 'video-review':'영상 리뷰' };
   const en = { rules:'Rules', serve:'Serve', positioning:'Positioning', consistency:'Consistency', 'third-shot':'Third shot', kitchen:'Kitchen', drop:'Drop', defense:'Defense', dink:'Dink', transition:'Transition', attack:'Attack choice', partners:'Partners', partner:'Partner', 'speed-up':'Speed-up', patterns:'Patterns', strategy:'Strategy', mixed:'Mixed doubles', tournament:'Tournament', scouting:'Scouting', micro:'Micro-adjustment', role:'Video study', lob:'Lob', return:'Return', middle:'Middle', paddle:'Paddle', 'video-review':'Video review' };
   return (loc === 'ko' ? ko[tag] : en[tag]) || tag;
 }
@@ -2755,7 +2756,7 @@ function boardCard(loc, href, title, intro, metric, icon, tone, extra) {
 function renderBoardsIndex(loc) {
   const L = (ko, en, es) => (loc === 'ko' ? ko : (loc === 'es' ? (es || en) : en));
   const hubCards = [
-    boardCard(loc, link(loc, 'boards/friends/'), L('Community', 'Community', 'Comunidad'), L('지역 커뮤니티, 신규 멤버 모집, 방문 플레이어 매칭을 한 곳에서 탐색합니다.', 'Browse local groups, new-member invites, and visiting-player connections in one place.', 'Explora grupos locales, nuevos miembros y jugadores visitantes en un solo lugar.'), L('Local groups', 'Local groups', 'Grupos locales'), uiIcon('community'), 'community'),
+    boardCard(loc, link(loc, 'boards/friends/'), L('Community', 'Community', 'Comunidad'), L('지역 커뮤니티와 신규 멤버 모집, 방문 동호인 매칭 정보를 한곳에서 찾아볼 수 있습니다.', 'Browse local groups, new-member invites, and visiting-player connections in one place.', 'Explora grupos locales, nuevos miembros y jugadores visitantes en un solo lugar.'), L('Local groups', 'Local groups', 'Grupos locales'), uiIcon('community'), 'community'),
     boardCard(loc, link(loc, 'boards/partners/'), L('Find partners', 'Find partners', 'Buscar compañeros'), L('레벨, 종목, 플레이 목적에 맞는 복식·클럽·드릴 파트너 후보를 빠르게 찾습니다.', 'Find doubles, club, and drill partners by level, division, and playing goal.', 'Encuentra compañeros de dobles, club o práctica por nivel, categoría y objetivo.'), communityLabel(loc, 'partnersMetric'), uiIcon('partners'), 'partnersFeatured'),
     boardCard(loc, link(loc, 'boards/tournaments/'), L('Tournaments', 'Tournaments', 'Torneos'), L('대회 정보와 참가자 모집, 참가 희망 등록을 지역별로 확인합니다.', 'Check tournament listings, participant recruiting, and player interest by region.', 'Consulta torneos, búsqueda de participantes y jugadores interesados por región.'), communityLabel(loc, 'tournamentsMetric'), uiIcon('tournaments'), 'community'),
     boardCard(loc, link(loc, 'boards/coaches/'), L('코치 찾기', 'Find coach', 'Buscar entrenador'), L('레슨, 클리닉, 지역 코치와 수강생 모집 현황을 빠르게 탐색합니다.', 'Browse lessons, clinics, local coaches, and student pools quickly.', 'Busca clases, clínicas, entrenadores locales y grupos de alumnos rápidamente.'), communityLabel(loc, 'coachesMetric'), uiIcon('coach'), 'community')
@@ -2763,7 +2764,7 @@ function renderBoardsIndex(loc) {
   const playHubActions = [
     ['partners', link(loc, 'boards/partners/'), L('Find partners', 'Find partners', 'Buscar compañeros'), L('복식·드릴 파트너 찾기', 'Find doubles and drill partners', 'Encuentra compañeros de dobles y práctica'), uiIcon('partners')],
     ['tournaments', link(loc, 'boards/tournaments/'), L('Tournaments', 'Tournaments', 'Torneos'), L('대회 참가와 모집 확인', 'See tournament sign-ups and recruiting', 'Ver torneos e inscripciones'), uiIcon('tournaments')],
-    ['community', link(loc, 'boards/friends/'), L('Community', 'Community', 'Comunidad'), L('지역 그룹과 방문 플레이어 연결', 'Open local groups and visitor links', 'Abrir grupos locales y enlaces de visitantes'), uiIcon('community')],
+    ['community', link(loc, 'boards/friends/'), L('Community', 'Community', 'Comunidad'), L('지역 그룹과 방문 동호인 연결', 'Open local groups and visitor links', 'Abrir grupos locales y enlaces de visitantes'), uiIcon('community')],
     ['coaches', link(loc, 'boards/coaches/'), L('코치 찾기', 'Find coach', 'Buscar entrenador'), L('레슨·클리닉 코치 탐색', 'Browse coaches, lessons, and clinics', 'Buscar entrenadores, clases y clínicas'), uiIcon('coach')]
   ].map(([tone, href, title, note, icon]) => `<a class="play-hub-action play-hub-action--${escAttr(tone)}" href="${href}"><span class="play-hub-action__icon" aria-hidden="true">${icon}</span><span><strong>${esc(title)}</strong><small>${esc(note)}</small></span></a>`).join('');
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: boardLabel(loc, 'title') }])}
@@ -2873,7 +2874,7 @@ function communityLabel(loc, key) {
     ko: {
       boardsIntro: '레벨별 학습 게시판을 넘어, 지역 커뮤니티·코치·대회·파트너·영상 기반 스킬평가를 연결하는 검수형 피클볼 커뮤니티 허브입니다. 한국어 페이지는 한국 지역을 우선하고, 영어 페이지는 글로벌 도시와 ZIP/Postal Code 검색을 기준으로 설계했습니다.',
       prelaunchNotice: 'MVP에서는 입력 후 브라우저 미리보기를 바로 확인하고, Netlify Forms 수신 데이터는 운영자 검수 후 공개 목록에 반영하는 구조로 설계했습니다.',
-      marketplaceTitle: '지역 기반 커뮤니티 매칭', marketplaceIntro: '친구찾기, 코치찾기, 대회찾기, 파트너찾기는 같은 지역 안의 수요와 공급을 분리해서 보여줍니다. 새로 이사 온 플레이어, 출장·여행 중 방문한 플레이어, 대회 참가자, 대회 개최자, 복식 파트너를 찾는 플레이어가 서로 다른 목적을 명확히 표현할 수 있습니다.',
+      marketplaceTitle: '지역 기반 커뮤니티 매칭', marketplaceIntro: '친구·코치·대회·파트너 찾기는 같은 지역에서도 목적이 서로 다릅니다. 새로 이사 온 동호인, 출장이나 여행 중 잠시 방문한 동호인, 대회 참가자와 운영자, 복식 파트너를 찾는 사람이 원하는 조건을 분명하게 적을 수 있도록 구분했습니다.',
       learningTitle: '레벨 학습 게시판', learningIntro: '기존 자주 묻는 질문과 질의응답은 레벨별 의사결정과 경기 상황 해설을 담당합니다. 커뮤니티 기능이 커져도 학습 콘텐츠와 검수 기준은 별도로 유지합니다.',
       friendsTitle: '친구찾기·지역 커뮤니티', friendsShort: '친구찾기', friendsIntro: '지역 커뮤니티를 홍보하려는 사람, 새 지역·새 레벨의 파트너를 찾는 사람, 출장·여행 중 방문 플레이를 원하는 사람을 분리해 연결합니다.', friendsMetric: 'City + ZIP + Visit',
       coachesTitle: '코치찾기·수강생 찾기', coachesShort: '코치찾기', coachesIntro: '특정 스킬을 배우려는 수강생과 지역 수강생 풀을 만들려는 코치를 같은 지역 단위로 묶습니다.', coachesMetric: 'Coach + Student',
@@ -2882,16 +2883,16 @@ function communityLabel(loc, key) {
       partnersTitle: '복식 파트너 찾기', partnersShort: '파트너찾기', partnersIntro: '남자복식, 여자복식, 혼합복식, 지역 클럽활동, 대회 참가 목적에 맞는 파트너 후보를 자기소개 기반으로 정리합니다.', partnersMetric: 'MD + WD + Mixed',
       reviewPolicy: '친구찾기, 코치찾기, 대회찾기, 파트너찾기, 영상평가는 모두 검수형 커뮤니티로 설계했습니다. 현재 정적 사이트에서는 입력값이 서버에 공개 저장되지 않으며, 실제 공개 운영 시에는 관리자 승인, 신고, 삭제 요청, 스팸 차단, 개인정보 차단, 미성년자 보호 기준이 필요합니다.',
       filterTitle: '지역·목적 필터', type: '목적', allTypes: '전체 목적', cityZip: 'City 또는 ZIP', level: '레벨', allLevels: '전체 레벨', focus: '관심 스킬', allFocus: '전체 스킬', submit: '신청 내용 저장', localOnly: '입력 후 이 브라우저에 미리보기가 표시됩니다. Netlify Forms로 수신된 내용은 운영자 검수 후 공개 목록에 반영하는 구조가 안전합니다.',
-      friendsHero: '지역 커뮤니티를 키우는 사람, 새로운 파트너를 찾는 사람, 방문 일정에 맞춰 게임을 찾는 사람을 따로 받습니다.', organizer: '커뮤니티 홍보·멤버 모집', playerSeeking: '플레이 파트너·상위 레벨 그룹 찾기', visitorSeeking: '출장·여행 방문 플레이어', organizerDesc: '정기 오픈플레이, 카카오/밴드/Meetup 그룹, 클럽 모임처럼 지역 참여를 확장하려는 운영자를 위한 카테고리입니다.', playerDesc: '새로 이사 왔거나, 피클볼을 막 시작했거나, 3.0에서 3.5처럼 더 경쟁적인 커뮤니티를 찾는 플레이어를 위한 카테고리입니다.', visitorDesc: '출장이나 여행으로 다른 도시를 방문하면서 일정이 맞는 오픈플레이, 드릴, 친선 게임을 찾는 플레이어를 위한 카테고리입니다.',
-      travelTitle: '출장·여행 방문자 매칭', travelBody: '방문 플레이어 기능은 지역 커뮤니티의 활용도를 크게 높입니다. 평소에는 로컬 플레이어를 연결하고, 특정 기간에는 방문 도시·ZIP·가능 시간을 기준으로 단기 오픈플레이 수요를 모을 수 있습니다. 지역 운영자는 새로운 참여자를 얻고, 방문자는 낯선 도시에서도 안전하게 피클볼 네트워크를 찾을 수 있습니다.', visitWindow: '방문 가능 기간·시간', homeCity: '평소 플레이 지역',
-      coachesHero: '코치를 찾는 수강생과 그룹 수업을 만들려는 코치를 같은 지역에서 연결합니다.', studentSeeking: '수강생: 특정 스킬을 배울 코치 찾기', coachSeeking: '코치: 지역 수강생 모집하기', studentDesc: '3구 드롭, 리턴 깊이, 딩크 안정성, 복식 포지셔닝처럼 특정 레벨에서 막히는 스킬을 배우고 싶은 수강생을 위한 입력입니다.', coachDesc: '특정 도시·ZIP에서 초보반, 3.0 진입반, 3.5+ 경쟁반 수강생을 모집하고 싶은 코치용 입력입니다.', poolTitle: '지역별 코치·수강생 모집 현황', poolIntro: '같은 지역에 코치와 수강생 카드가 함께 쌓이면 레슨 수요 확인, 클리닉 개설, 그룹반 모집이 쉬워집니다.',
-      tournamentsHero: '대회 참가 희망자와 참가자를 모집하는 개최자를 분리해, 지역·일정·레벨·종목 기준으로 대회 정보를 정리합니다.', tournamentHost: '대회 개최자: 참가자 모집', tournamentParticipant: '참가자: 나에게 맞는 대회 찾기', tournamentHostDesc: '대회명, 장소, 일정, 종목, 레벨, 참가비, 공식 등록 링크를 정리해 참가자가 대회 개요를 빠르게 이해하도록 돕는 입력입니다.', tournamentParticipantDesc: '참가하고 싶은 지역, 가능 일정, 종목, 레벨을 남겨 적합한 대회나 팀 모집 정보를 찾기 위한 입력입니다.', tournamentWhyTitle: '대회찾기가 왜 필요한가요?', tournamentWhyBody: '대회 정보는 여러 클럽, SNS, 협회 페이지에 흩어져 있어 초보 참가자나 방문 플레이어가 찾기 어렵습니다. Picklary는 주최자 제공 정보를 검수형 카드로 정리해 참가자가 일정, 레벨, 종목, 등록 링크를 한 번에 비교할 수 있게 설계합니다. DUPR-rated 여부나 공식 등록 조건은 반드시 주최자 링크에서 최종 확인하도록 안내합니다.', tournamentDisclaimer: '대회 정보는 주최자 제공 내용을 기반으로 한 샘플 구조입니다. 날짜, 참가비, DUPR-rated 여부, 등록 마감은 공식 등록 링크에서 다시 확인해야 합니다.',
-      partnersHero: '대회와 클럽 활동에서 함께 뛸 남자복식, 여자복식, 혼합복식 파트너를 지역·레벨·목표·플레이 스타일 기준으로 찾습니다.', partnerSeeking: '파트너 찾는 플레이어', partnerOffering: '파트너 후보로 등록', partnerSeekingDesc: '특정 대회, 지역 리그, 클럽 활동에서 원하는 종목과 파트너 스타일을 설명하고 후보를 찾는 입력입니다.', partnerOfferingDesc: '본인의 레벨, 강점, 플레이 스타일, 가능 일정, 선호 종목을 소개해 파트너 후보로 등록하는 입력입니다.', partnerWhyTitle: '좋은 파트너 매칭 기준', partnerWhyBody: '복식 파트너는 레벨만 맞으면 충분하지 않습니다. 목표, 커뮤니케이션 방식, 강점 조합, 언포스드 에러 성향, 공격/수비 밸런스가 맞아야 실제 대회나 클럽 경기에서 오래 갈 수 있습니다. 그래서 Picklary는 단순 연락처 게시보다 자기소개와 희망 조건을 함께 받는 구조가 더 적합합니다.',
+      friendsHero: '지역 커뮤니티를 키우는 사람, 새로운 파트너를 찾는 사람, 방문 일정에 맞춰 게임을 찾는 사람을 따로 받습니다.', organizer: '커뮤니티 홍보·멤버 모집', playerSeeking: '플레이 파트너·상위 레벨 그룹 찾기', visitorSeeking: '출장·여행 방문 동호인', organizerDesc: '정기 오픈플레이, 카카오/밴드/Meetup 그룹, 클럽 모임처럼 지역 참여를 확장하려는 운영자를 위한 카테고리입니다.', playerDesc: '새로 이사 왔거나, 피클볼을 막 시작했거나, 3.0에서 3.5처럼 더 경쟁적인 커뮤니티를 찾는 선수를 위한 카테고리입니다.', visitorDesc: '출장이나 여행으로 다른 도시를 방문하면서 일정이 맞는 오픈플레이, 드릴, 친선 게임을 찾는 선수를 위한 카테고리입니다.',
+      travelTitle: '출장·여행 방문자 매칭', travelBody: '출장·여행 방문자 기능은 지역 커뮤니티의 활용 범위를 넓혀 줍니다. 평소에는 지역 동호인을 연결하고, 여행 기간에는 방문 도시·ZIP·가능 시간을 기준으로 단기 오픈플레이 정보를 찾을 수 있습니다. 운영자는 새로운 참가자를 만날 수 있고, 방문자는 낯선 도시에서도 함께 칠 사람을 찾기 쉬워집니다.', visitWindow: '방문 가능 기간·시간', homeCity: '평소 플레이 지역',
+      coachesHero: '코치를 찾는 수강생과 그룹 수업을 만들려는 코치를 같은 지역에서 연결합니다.', studentSeeking: '수강생: 특정 스킬을 배울 코치 찾기', coachSeeking: '코치: 지역 수강생 모집하기', studentDesc: '3구 드롭, 리턴 깊이, 딩크 안정성, 복식 위치 선정처럼 특정 레벨에서 막히는 스킬을 배우고 싶은 수강생을 위한 입력입니다.', coachDesc: '특정 도시·ZIP에서 초보반, 3.0 진입반, 3.5+ 경쟁반 수강생을 모집하고 싶은 코치용 입력입니다.', poolTitle: '지역별 코치·수강생 모집 현황', poolIntro: '같은 지역에 코치와 수강생 카드가 함께 쌓이면 레슨 수요 확인, 클리닉 개설, 그룹반 모집이 쉬워집니다.',
+      tournamentsHero: '대회 참가 희망자와 참가자를 모집하는 개최자를 분리해, 지역·일정·레벨·종목 기준으로 대회 정보를 정리합니다.', tournamentHost: '대회 개최자: 참가자 모집', tournamentParticipant: '참가자: 나에게 맞는 대회 찾기', tournamentHostDesc: '대회명, 장소, 일정, 종목, 레벨, 참가비, 공식 등록 링크를 정리해 참가자가 대회 개요를 빠르게 이해하도록 돕는 입력입니다.', tournamentParticipantDesc: '참가하고 싶은 지역, 가능 일정, 종목, 레벨을 남겨 적합한 대회나 팀 모집 정보를 찾기 위한 입력입니다.', tournamentWhyTitle: '대회찾기가 왜 필요한가요?', tournamentWhyBody: '대회 정보는 여러 클럽, SNS, 협회 페이지에 흩어져 있어 초보 참가자나 방문 선수가 찾기 어렵습니다. Picklary는 주최자 제공 정보를 검수형 카드로 정리해 참가자가 일정, 레벨, 종목, 등록 링크를 한 번에 비교할 수 있게 설계합니다. DUPR-rated 여부나 공식 등록 조건은 반드시 주최자 링크에서 최종 확인하도록 안내합니다.', tournamentDisclaimer: '대회 정보는 주최자 제공 내용을 기반으로 한 샘플 구조입니다. 날짜, 참가비, DUPR-rated 여부, 등록 마감은 공식 등록 링크에서 다시 확인해야 합니다.',
+      partnersHero: '대회와 클럽 활동에서 함께 뛸 남자복식, 여자복식, 혼합복식 파트너를 지역·레벨·목표·플레이 스타일 기준으로 찾습니다.', partnerSeeking: '파트너를 찾는 동호인', partnerOffering: '파트너 후보로 등록', partnerSeekingDesc: '특정 대회, 지역 리그, 클럽 활동에서 원하는 종목과 파트너 스타일을 설명하고 후보를 찾는 입력입니다.', partnerOfferingDesc: '본인의 레벨, 강점, 플레이 스타일, 가능 일정, 선호 종목을 소개해 파트너 후보로 등록하는 입력입니다.', partnerWhyTitle: '좋은 파트너 매칭 기준', partnerWhyBody: '복식 파트너는 레벨만 비슷하다고 잘 맞는 것은 아닙니다. 경기 목표, 소통 방식, 서로의 강점, 실수 패턴, 공격·수비 성향까지 맞아야 실제 대회나 클럽 경기에서도 호흡이 오래갑니다. 그래서 Picklary는 연락처만 올리기보다 자기소개와 원하는 조건을 함께 적도록 구성했습니다.',
       eventDate: '대회 날짜', registrationDeadline: '등록 마감일', venue: '장소명', division: '종목', format: '경기 방식', entryFee: '참가비', officialUrl: '공식 등록 링크', targetEvent: '희망 대회·클럽 활동', partnerStyle: '플레이 스타일', partnerGoal: '목표', desiredPartner: '희망 파트너 조건', experience: '대회·리그 경험',
       name: '닉네임 또는 표시명', country: '국가', city: '도시', zip: 'ZIP / Postal Code', note: '소개·목표', contact: '공개하지 않을 연락 메모', savePreview: '내 브라우저에 미리보기 저장', localPreview: '내 브라우저 저장 목록', directory: '샘플 디렉터리', noMatch: '조건에 맞는 항목이 없습니다.',
       videoUrl: '외부 영상 URL', selfLevel: '본인 예상 레벨', requestFocus: '평가받고 싶은 포인트', reviewerType: '평가자 유형', estimate: '종합 예상 DUPR', addReview: '기준별 평가 추가', communityEstimate: '커뮤니티 DUPR식 예상치', confidence: '신뢰도', reviews: '평가 수', duprLinked: 'DUPR 프로필 확인 평가자', officialDisclaimer: '이 결과는 Picklary 커뮤니티의 영상 기반 추정치이며 공식 DUPR 점수가 아닙니다. DUPR 명칭은 레벨 설명을 돕기 위한 참고 표현이며, 공식 점수는 DUPR 또는 관련 공식 플랫폼에서 확인해야 합니다.',
-      criteriaTitle: '평가 기준별 점수', criteriaIntro: '평가자는 하나의 숫자만 입력하지 않고, 리턴·드롭·딩크·리셋·발리·포지셔닝·전략 판단처럼 실제 경기력을 설명하는 기준별 점수를 입력합니다. Picklary는 기준별 가중 평균과 평가자 신뢰도 가중치를 함께 사용해 종합 예상치를 계산합니다.', criterionScores: '기준별 점수', reviewOpinion: '평가 의견', evidenceNote: '근거 또는 장면 메모', crosscheckTitle: '평가 의견 교차검증', crosscheckDesc: '다른 유저는 각 평가가 도움이 되었는지, 본인 판단과 일치하는지, 재검토가 필요한지를 표시할 수 있습니다. 이 피드백은 평가자 품질과 의견 일치도를 보는 보조 신호로 사용하고, 공식 DUPR처럼 확정 점수로 표현하지 않습니다.', helpful: '도움됨', agree: '동의', needsReview: '재검토', computedFromCriteria: '기준별 점수로 자동 계산',
-      whySplitTitle: '왜 카테고리를 나누나요?', whySplitBody: '한 지역 안에서도 “사람을 모으는 운영자”와 “들어갈 곳을 찾는 플레이어”의 목적은 다릅니다. 여기에 출장·여행 방문자를 별도로 두면 단기 참여 수요까지 잡을 수 있습니다. 입력 의도를 분리하면 스팸성 홍보와 실제 매칭 수요를 구분하기 쉽고, 나중에 지역별 뉴스레터·클리닉·리그 모집으로 확장하기도 좋습니다.'
+      criteriaTitle: '평가 기준별 점수', criteriaIntro: '평가자는 하나의 숫자만 입력하지 않고, 리턴·드롭·딩크·리셋·발리·위치 선정·전략 판단처럼 실제 경기력을 설명하는 기준별 점수를 입력합니다. Picklary는 기준별 가중 평균과 평가자 신뢰도 가중치를 함께 사용해 종합 예상치를 계산합니다.', criterionScores: '기준별 점수', reviewOpinion: '평가 의견', evidenceNote: '근거 또는 장면 메모', crosscheckTitle: '평가 의견 교차검증', crosscheckDesc: '다른 유저는 각 평가가 도움이 되었는지, 본인 판단과 일치하는지, 재검토가 필요한지를 표시할 수 있습니다. 이 피드백은 평가자 품질과 의견 일치도를 보는 보조 신호로 사용하고, 공식 DUPR처럼 확정 점수로 표현하지 않습니다.', helpful: '도움됨', agree: '동의', needsReview: '재검토', computedFromCriteria: '기준별 점수로 자동 계산',
+      whySplitTitle: '왜 카테고리를 나누나요?', whySplitBody: '같은 지역 안에서도 모임을 운영하는 사람과 참여할 곳을 찾는 동호인의 목적은 다릅니다. 출장·여행 방문자를 별도로 구분하면 단기 참여 수요도 쉽게 찾을 수 있습니다. 목적을 나눠 받으면 단순 홍보와 실제 매칭 요청을 구별하기 쉽고, 향후 지역별 뉴스레터·클리닉·리그 모집으로 확장하기도 좋습니다.'
     },
     en: {
       boardsIntro: 'A reviewed pickleball community hub for local groups, coaches, tournaments, partners, and external-video skill review. Korean pages prioritize Korea. English pages are designed for global city and ZIP/Postal Code discovery.',
@@ -2992,18 +2993,18 @@ function communityBoardSubnav(loc, active) {
 function friendSeeds() {
   return [
     { type:'organizer', country:'KR', city:{ko:'서울 강남', en:'Gangnam, Seoul'}, zip:'06164', level:'All', focus:'open-play', title:{ko:'강남 평일 저녁 오픈플레이 그룹', en:'Gangnam weeknight open-play group'}, body:{ko:'초보 환영 오픈플레이와 3.0+ 드릴 세션을 분리해 운영하려는 지역 커뮤니티 샘플입니다.', en:'A sample local community that separates beginner-friendly open play from 3.0+ drill sessions.'} },
-    { type:'player', country:'KR', city:{ko:'경기 성남', en:'Seongnam, Gyeonggi'}, zip:'13524', level:'3.5', focus:'competitive', title:{ko:'3.5 이상 주말 복식 파트너 찾기', en:'Looking for 3.5+ weekend doubles partners'}, body:{ko:'레벨이 올라가면서 더 경쟁적인 랠리와 포지셔닝 피드백을 받을 수 있는 그룹을 찾는 플레이어 샘플입니다.', en:'A sample player looking for more competitive rallies and positioning feedback after leveling up.'} },
-    { type:'visitor', country:'KR', city:{ko:'제주 제주시', en:'Jeju City'}, zip:'63122', level:'3.0', focus:'travel', title:{ko:'제주 출장 중 저녁 오픈플레이 찾기', en:'Visiting Jeju and looking for evening open play'}, body:{ko:'출장·여행 일정 중 1~2회 참여할 수 있는 로컬 오픈플레이나 드릴 파트너를 찾는 방문 플레이어 샘플입니다.', en:'A sample visiting player looking for local open play or drill partners for one or two sessions during a trip.'} },
-    { type:'organizer', country:'US', city:{ko:'Suwanee, GA', en:'Suwanee, GA'}, zip:'30024', level:'2.5-3.5', focus:'community', title:{ko:'Suwanee 신규 멤버 모집', en:'Suwanee new-member open play'}, body:{ko:'새로 이사 온 플레이어와 2.5~3.5 레벨의 정기 게임 참여자를 모으는 커뮤니티 샘플입니다.', en:'A sample group for newly relocated players and regular 2.5–3.5 open-play participants.'} },
-    { type:'player', country:'US', city:{ko:'Johns Creek, GA', en:'Johns Creek, GA'}, zip:'30097', level:'3.0', focus:'drills', title:{ko:'3.0 드릴 파트너 찾기', en:'Looking for 3.0 drill partners'}, body:{ko:'리턴 깊이, 3구 드롭, 키친 전환을 같이 연습할 파트너를 찾는 플레이어 샘플입니다.', en:'A sample player looking for partners to drill return depth, third-shot drops, and kitchen transition.'} },
-    { type:'visitor', country:'US', city:{ko:'Las Vegas, NV', en:'Las Vegas, NV'}, zip:'89109', level:'3.5', focus:'travel', title:{ko:'라스베이거스 여행 중 3.5 게임 찾기', en:'Traveling to Las Vegas and seeking 3.5 games'}, body:{ko:'컨퍼런스나 가족여행 중 비는 시간에 지역 3.5 복식 게임을 찾는 방문 플레이어 샘플입니다.', en:'A sample traveler looking for local 3.5 doubles during open windows on a conference or family trip.'} }
+    { type:'player', country:'KR', city:{ko:'경기 성남', en:'Seongnam, Gyeonggi'}, zip:'13524', level:'3.5', focus:'competitive', title:{ko:'3.5 이상 주말 복식 파트너 찾기', en:'Looking for 3.5+ weekend doubles partners'}, body:{ko:'조금 더 경쟁적인 랠리를 하고 포지셔닝 피드백도 주고받을 수 있는 그룹을 찾는 동호인 예시입니다.', en:'A sample player looking for more competitive rallies and positioning feedback after leveling up.'} },
+    { type:'visitor', country:'KR', city:{ko:'제주 제주시', en:'Jeju City'}, zip:'63122', level:'3.0', focus:'travel', title:{ko:'제주 출장 중 저녁 오픈플레이 찾기', en:'Visiting Jeju and looking for evening open play'}, body:{ko:'출장·여행 중 한두 번 참여할 수 있는 지역 오픈플레이나 연습 파트너를 찾는 방문 동호인 예시입니다.', en:'A sample visiting player looking for local open play or drill partners for one or two sessions during a trip.'} },
+    { type:'organizer', country:'US', city:{ko:'Suwanee, GA', en:'Suwanee, GA'}, zip:'30024', level:'2.5-3.5', focus:'community', title:{ko:'Suwanee 신규 멤버 모집', en:'Suwanee new-member open play'}, body:{ko:'새로 이사 온 동호인과 2.5~3.5 레벨의 정기 게임 참가자를 모집하는 커뮤니티 예시입니다.', en:'A sample group for newly relocated players and regular 2.5–3.5 open-play participants.'} },
+    { type:'player', country:'US', city:{ko:'Johns Creek, GA', en:'Johns Creek, GA'}, zip:'30097', level:'3.0', focus:'drills', title:{ko:'3.0 드릴 파트너 찾기', en:'Looking for 3.0 drill partners'}, body:{ko:'리턴 깊이, 3구 드롭, 키친 전환을 함께 연습할 파트너를 찾는 동호인 예시입니다.', en:'A sample player looking for partners to drill return depth, third-shot drops, and kitchen transition.'} },
+    { type:'visitor', country:'US', city:{ko:'Las Vegas, NV', en:'Las Vegas, NV'}, zip:'89109', level:'3.5', focus:'travel', title:{ko:'라스베이거스 여행 중 3.5 게임 찾기', en:'Traveling to Las Vegas and seeking 3.5 games'}, body:{ko:'출장 행사나 가족여행 중 빈 시간에 참여할 수 있는 지역 3.5 복식 게임을 찾는 방문 동호인 예시입니다.', en:'A sample traveler looking for local 3.5 doubles during open windows on a conference or family trip.'} }
   ];
 }
 
 function coachSeeds() {
   return [
     { type:'student', country:'KR', city:{ko:'서울 송파', en:'Songpa, Seoul'}, zip:'05510', level:'3.0', focus:'third-shot', title:{ko:'3구 드롭과 리셋 코치 찾기', en:'Seeking a coach for third-shot drops and resets'}, body:{ko:'3.0에서 3.5로 넘어가기 위해 3구 드롭, 리셋, 전환존 판단을 배우고 싶은 수강생 샘플입니다.', en:'A sample student who wants third-shot drops, resets, and transition-zone decisions to move from 3.0 to 3.5.'} },
-    { type:'coach', country:'KR', city:{ko:'부산 해운대', en:'Haeundae, Busan'}, zip:'48095', level:'Beginner-3.0', focus:'beginner', title:{ko:'입문·3.0 진입반 수강생 모집', en:'Beginner and 3.0 bridge student pool'}, body:{ko:'입문자 자세, 서브/리턴 안정성, 기본 복식 포지셔닝 그룹반을 만들려는 코치 샘플입니다.', en:'A sample coach building a beginner group around fundamentals, serve/return consistency, and basic doubles positioning.'} },
+    { type:'coach', country:'KR', city:{ko:'부산 해운대', en:'Haeundae, Busan'}, zip:'48095', level:'Beginner-3.0', focus:'beginner', title:{ko:'입문·3.0 진입반 수강생 모집', en:'Beginner and 3.0 bridge student pool'}, body:{ko:'입문자 자세, 서브/리턴 안정성, 기본 복식 위치 선정 그룹반을 만들려는 코치 샘플입니다.', en:'A sample coach building a beginner group around fundamentals, serve/return consistency, and basic doubles positioning.'} },
     { type:'student', country:'US', city:{ko:'Alpharetta, GA', en:'Alpharetta, GA'}, zip:'30005', level:'3.5', focus:'dink', title:{ko:'3.5 딩크·카운터 코치 찾기', en:'Seeking 3.5 dink and counter coaching'}, body:{ko:'빠른 손싸움보다 낮은 딩크, 리셋, 블록 안정성을 우선 배우고 싶은 수강생 샘플입니다.', en:'A sample student who wants lower dinks, resets, and blocks before speeding up hand battles.'} },
     { type:'coach', country:'US', city:{ko:'Atlanta, GA', en:'Atlanta, GA'}, zip:'30328', level:'3.0-4.0', focus:'clinic', title:{ko:'Atlanta 3.0–4.0 클리닉 수요 확인', en:'Atlanta 3.0–4.0 clinic interest pool'}, body:{ko:'복식 전략, 전환존, 공격 전환을 주제로 지역 클리닉을 열 수 있는지 수요를 확인하는 코치 샘플입니다.', en:'A sample coach testing demand for a clinic on doubles strategy, transition-zone defense, and attack conversion.'} }
   ];
@@ -3021,7 +3022,7 @@ function tournamentSeeds() {
 
 function partnerSeeds() {
   return [
-    { type:'seeking', country:'KR', city:{ko:'서울 강남', en:'Gangnam, Seoul'}, zip:'06164', level:'3.5', focus:'mixed', title:{ko:'3.5 혼합복식 파트너 찾기', en:'Seeking a 3.5 mixed doubles partner'}, body:{ko:'리턴과 리셋은 안정적이고, 전위 포칭과 커뮤니케이션을 같이 맞출 파트너를 찾는 플레이어 샘플입니다.', en:'A sample player seeking a mixed doubles partner who values stable returns, resets, poaching decisions, and clear communication.'}, details:{ko:['종목: 혼합복식','강점: 리턴·리셋','희망 파트너: 전위 판단 좋은 플레이어'], en:['Division: mixed doubles','Strengths: return and reset','Desired partner: strong net decisions']} },
+    { type:'seeking', country:'KR', city:{ko:'서울 강남', en:'Gangnam, Seoul'}, zip:'06164', level:'3.5', focus:'mixed', title:{ko:'3.5 혼합복식 파트너 찾기', en:'Seeking a 3.5 mixed doubles partner'}, body:{ko:'리턴과 리셋은 안정적이며, 전위 포칭 판단과 소통 방식이 잘 맞는 파트너를 찾는 동호인 예시입니다.', en:'A sample player seeking a mixed doubles partner who values stable returns, resets, poaching decisions, and clear communication.'}, details:{ko:['종목: 혼합복식','강점: 리턴·리셋','희망 파트너: 전위 판단이 좋은 동호인'], en:['Division: mixed doubles','Strengths: return and reset','Desired partner: strong net decisions']} },
     { type:'candidate', country:'KR', city:{ko:'부산 해운대', en:'Haeundae, Busan'}, zip:'48095', level:'3.0', focus:'womens', title:{ko:'여자복식 파트너 후보 등록', en:'Women’s doubles partner candidate'}, body:{ko:'딩크 안정성과 수비 전환을 강점으로 소개하고, 지역 클럽 리그나 친선 대회 파트너를 희망하는 샘플입니다.', en:'A sample candidate highlighting dink consistency and defensive transition for local club leagues or friendly tournaments.'}, details:{ko:['종목: 여자복식','스타일: 안정형','목표: 클럽 리그'], en:['Division: women’s doubles','Style: steady / defensive','Goal: club league']} },
     { type:'seeking', country:'US', city:{ko:'Johns Creek, GA', en:'Johns Creek, GA'}, zip:'30097', level:'4.0', focus:'mens', title:{ko:'4.0 남자복식 대회 파트너 찾기', en:'Seeking a 4.0 men’s doubles tournament partner'}, body:{ko:'드라이브 후 전진, 빠른 손싸움, 미들 콜을 명확히 맞출 4.0 파트너를 찾는 샘플입니다.', en:'A sample player seeking a 4.0 men’s doubles partner for drive-and-crash patterns, hands battles, and clear middle calls.'}, details:{ko:['종목: 남자복식','목표: 지역 대회','희망 스타일: 공격 전환 빠른 파트너'], en:['Division: men’s doubles','Goal: local tournament','Desired style: quick attack conversion']} },
     { type:'candidate', country:'US', city:{ko:'Alpharetta, GA', en:'Alpharetta, GA'}, zip:'30005', level:'3.5', focus:'mixed', title:{ko:'3.5 혼합복식 파트너 후보', en:'3.5 mixed doubles partner candidate'}, body:{ko:'낮은 딩크와 백핸드 블록을 강점으로, 주말 클럽 활동과 소규모 대회 파트너를 희망하는 샘플입니다.', en:'A sample candidate with low dinks and backhand blocks, open to weekend club play and small tournaments.'}, details:{ko:['종목: 혼합복식','강점: 딩크·블록','가능 시간: 주말'], en:['Division: mixed doubles','Strengths: dink and block','Availability: weekends']} }
@@ -3235,7 +3236,7 @@ function skillCriteria(loc) {
     { id:'dink', weight:1.1, ko:'딩크 컨트롤', en:'Dink control' },
     { id:'reset', weight:1.15, ko:'리셋·블록', en:'Reset and block quality' },
     { id:'volley', weight:1.0, ko:'발리·카운터', en:'Volley and counter' },
-    { id:'positioning', weight:1.2, ko:'복식 포지셔닝', en:'Doubles positioning' },
+    { id:'positioning', weight:1.2, ko:'복식 위치 선정', en:'Doubles positioning' },
     { id:'decision', weight:1.2, ko:'샷 선택·전략 판단', en:'Shot selection and strategy' },
     { id:'consistency', weight:1.0, ko:'언포스드 에러 관리', en:'Unforced-error control' }
   ];
@@ -3632,20 +3633,20 @@ function rulesLegalityBlock(loc) {
   const explore = (href, k, ttl, d) => `<a class="explore-card" href="${href}"><span class="explore-card__k">${esc(k)}</span><span class="explore-card__t">${esc(ttl)}</span><span class="explore-card__d">${esc(d)}</span></a>`;
   return `
 <section class="band"><div class="wrap">
-  <div class="section-head"><div><h2 class="band__title">${esc(t('합법성은 두 기구가 정합니다', 'Two bodies decide legality'))}</h2><p class="band__intro">${esc(t('한 기구의 승인이 다른 기구의 승인을 보장하지 않습니다. 어디서 경기하느냐에 따라 확인할 목록이 다릅니다.', 'Approval by one body does not guarantee approval by the other — where you play decides which list to check.'))}</p></div></div>
+  <div class="section-head"><div><h2 class="band__title">${esc(t('패들 승인 기준은 두 기관이 다릅니다', 'Two bodies decide legality'))}</h2><p class="band__intro">${esc(t('한 기구의 승인이 다른 기구의 승인을 보장하지 않습니다. 어디서 경기하느냐에 따라 확인할 목록이 다릅니다.', 'Approval by one body does not guarantee approval by the other — where you play decides which list to check.'))}</p></div></div>
   <div class="body-cards">
-    <article class="body-card"><h3>USA Pickleball (USAP)</h3><p class="body-card__tag">${esc(t('아마추어·공인 대회', 'Amateur & sanctioned play'))}</p><p>${esc(t('전국·지역·로컬 공인 대회를 관장합니다. 규격·소재·표면 그릿(스핀)과 PBCoR(반발·“트램펄린” 파워 한도)을 테스트합니다.', 'Governs Nationals, regional, and local sanctioned events. Tests dimensions, materials, surface grit (spin), and PBCoR — the rebound or “trampoline” power limit.'))}</p><p class="body-card__db">${esc(t('실시간 DB', 'Live database'))}: equipment.usapickleball.org</p></article>
+    <article class="body-card"><h3>USA Pickleball (USAP)</h3><p class="body-card__tag">${esc(t('아마추어·공인 대회', 'Amateur & sanctioned play'))}</p><p>${esc(t('전국·지역·로컬 공인 대회를 관장합니다. 규격·소재·표면 그릿(스핀)과 PBCoR(반발·“트램펄린” 파워 한도)을 테스트합니다.', 'Governs Nationals, regional, and local sanctioned events. Tests dimensions, materials, surface grit (spin), and PBCoR — the rebound or “trampoline” power limit.'))}</p><p class="body-card__db">${esc(t('공식 승인 목록', 'Live database'))}: equipment.usapickleball.org</p></article>
     <article class="body-card"><h3>UPA-A</h3><p class="body-card__tag">${esc(t('프로 투어 (PPA·MLP)', 'The pro tours (PPA & MLP)'))}</p><p>${esc(t('PPA 투어와 MLP 장비를 인증합니다. 파워·스핀·브레이크인 이후 변화를 독립적이고 더 엄격한 실험실 테스트로 검증합니다.', 'Certifies equipment for the PPA Tour and MLP with independent, stricter lab testing for power, spin, and post-break-in changes.'))}</p><p class="body-card__db">${esc(t('목록', 'List'))}: upaa.unitedpickleball.com</p></article>
   </div>
 </div></section>
 <section class="band band--alt"><div class="wrap">
-  <div class="section-head"><div><h2 class="band__title">${esc(t('패들 합법성 워치', 'Paddle legality watch'))}</h2><p class="band__intro">${esc(t('최근 승인 취소·조사·재승인 사례. 한눈에 확인하고, 출처로 바로 이동하세요.', 'Recent removals, reviews, and re-approvals — scan the status, then jump to the source.'))}</p></div></div>
+  <div class="section-head"><div><h2 class="band__title">${esc(t('패들 승인 현황', 'Paddle legality watch'))}</h2><p class="band__intro">${esc(t('최근 승인 취소·조사·재승인 사례. 한눈에 확인하고, 출처로 바로 이동하세요.', 'Recent removals, reviews, and re-approvals — scan the status, then jump to the source.'))}</p></div></div>
   <ul class="legal-list">${rows}</ul>
   <p class="notice">${verifyNote}</p>
   <div class="source-buttons"><a class="btn btn--ghost" href="https://equipment.usapickleball.org/compliance/" rel="nofollow noopener" target="_blank">USAP ${esc(t('컴플라이언스', 'Compliance'))}</a><a class="btn btn--ghost" href="https://equipment.usapickleball.org" rel="nofollow noopener" target="_blank">USAP ${esc(t('승인 DB', 'Approved DB'))}</a></div>
 </div></section>
 <section class="band"><div class="wrap">
-  <div class="section-head"><div><h2 class="band__title">${esc(t('2026 규정 변경', '2026 rule changes'))}</h2><p class="band__intro">${esc(t('2026년 1월 1일 발효. 대부분은 회색지대를 줄인 명확화이며, 우리 문장으로 요약했습니다.', 'Effective January 1, 2026 — mostly clarifications that close gray areas, summarised in our own words.'))}</p></div></div>
+  <div class="section-head"><div><h2 class="band__title">${esc(t('2026 규정 변경', '2026 rule changes'))}</h2><p class="band__intro">${esc(t('2026년 1월 1일 발효. 대부분은 기존 규정의 모호한 부분을 분명하게 다듬은 내용이며, 핵심만 이해하기 쉽게 요약했습니다.', 'Effective January 1, 2026 — mostly clarifications that close gray areas, summarised in our own words.'))}</p></div></div>
   <div class="rule-cards">${ruleCards}</div>
 </div></section>
 <section class="band band--alt"><div class="wrap">
@@ -3653,14 +3654,14 @@ function rulesLegalityBlock(loc) {
   <ol class="check-flow">
     <li class="check-step"><span class="check-step__n">1</span><div><strong>${esc(t('정확한 모델명 확인', 'Match the exact model name'))}</strong><p>${esc(t('두께·모양·버전 표기(14/16mm, 엘롱게이티드, Pro/Power 등)까지 정확히 일치해야 합니다.', 'Thickness, shape, and version letters (14/16mm, elongated, Pro/Power) all have to match exactly.'))}</p></div></li>
     <li class="check-step"><span class="check-step__n">2</span><div><strong>${esc(t('맞는 데이터베이스에서 검색', 'Search the right database'))}</strong><p>${esc(t('아마추어·공인 대회는 USAP, PPA·MLP 프로 부문은 UPA-A 목록을 확인하세요.', 'USAP for amateur and sanctioned events; UPA-A for PPA and MLP pro divisions.'))}</p></div></li>
-    <li class="check-step"><span class="check-step__n">3</span><div><strong>${esc(t('대회 직전 다시 확인', 'Re-check right before the event'))}</strong><p>${esc(t('상태는 매일 바뀔 수 있고, 승인 취소된 패들은 몰수로 이어집니다. 등재 화면을 날짜와 함께 캡처해 두세요.', 'Statuses can change daily and a removed paddle means forfeiture — screenshot the listing with the date.'))}</p></div></li>
+    <li class="check-step"><span class="check-step__n">3</span><div><strong>${esc(t('대회 직전 다시 확인', 'Re-check right before the event'))}</strong><p>${esc(t('상태는 매일 바뀔 수 있고, 승인 상태가 바뀌면 대회 참가에 영향을 줄 수 있습니다. 경기 전 공식 목록을 다시 확인하고, 필요하면 확인 화면을 날짜와 함께 저장해 두세요.', 'Statuses can change daily and a removed paddle means forfeiture — screenshot the listing with the date.'))}</p></div></li>
   </ol>
   <div class="section-head" style="margin-top:1.5rem"><div><h3 class="band__title">${esc(t('Picklary에서 이어 보기', 'Keep going on Picklary'))}</h3></div></div>
   <div class="explore-grid">
-    ${explore(link(loc, 'tools/paddle-finder/'), t('도구', 'Tool'), t('패들 파인더', 'Paddle Finder'), t('플레이 스타일에 맞는 승인 패들 추천', 'Approved paddles matched to your style'))}
-    ${explore(link(loc, 'paddles/'), t('패들', 'Paddles'), t('패들 전체 보기', 'Browse all paddles'), t('스펙·플레이 감각 비교', 'Compare specs and how they play'))}
-    ${explore(link(loc, 'paddles/selkirk-project-boomstik/'), t('리뷰', 'Review'), 'Selkirk Project Boomstik', t('MOI 클램프 관련 패들 리뷰', 'The paddle behind the MOI-clamp note'))}
-    ${explore(link(loc, 'level/'), t('레벨', 'Levels'), t('내 레벨 알아보기', 'Find your level'), t('2.0–5.0 레벨별 기술과 성장법', 'Skills and step-ups from 2.0 to 5.0'))}
+    ${explore(link(loc, 'tools/paddle-finder/'), t('도구', 'Tool'), t('패들 파인더', 'Paddle Finder'), t('내 플레이 스타일에 맞는 패들 찾기', 'Approved paddles matched to your style'))}
+    ${explore(link(loc, 'paddles/'), t('패들', 'Paddles'), t('패들 전체 보기', 'Browse all paddles'), t('사양과 플레이 성향 비교', 'Compare specs and how they play'))}
+    ${explore(link(loc, 'paddles/selkirk-project-boomstik/'), t('리뷰', 'Review'), 'Selkirk Project Boomstik', t('MOI 관련 이슈와 패들 정보', 'The paddle behind the MOI-clamp note'))}
+    ${explore(link(loc, 'level/'), t('레벨', 'Levels'), t('내 레벨 알아보기', 'Find your level'), t('2.0–5.0 레벨별 기술과 연습 방향', 'Skills and step-ups from 2.0 to 5.0'))}
   </div>
 </div></section>`;
 }
@@ -3741,7 +3742,7 @@ function tournamentGroupMeta(loc, key) {
     },
     ppa: {
       labelKo: 'PPA', labelEn: 'PPA', eyebrow: 'TOUR EVENTS', icon: 'P',
-      descKo: '미국 PPA 본투어·챌린저의 단식, 복식, 브래킷과 메달 결과를 모아 봅니다.',
+      descKo: '미국 PPA 본투어와 챌린저의 단식·복식 대진표와 메달 결과를 모아 봅니다.',
       descEn: 'U.S. PPA main-tour and Challenger singles, doubles, brackets, and medal results.'
     },
     international: {
@@ -3823,16 +3824,16 @@ function renderTournamentGroupPage(loc, groupKey) {
 function proSceneLabel(loc, key) {
   const labels = {
     ko: {
-      hub: '투어 보드', tournaments: '대회·일정', players: '프로 선수', results: '경기 결과·랭킹', storylines: '선수 스토리라인', insights: 'Picklary 분석',
+      hub: '투어 보드', tournaments: '대회·일정', players: '프로 선수', results: '경기 결과·랭킹', storylines: '선수 이야기', insights: 'Picklary 분석',
       title: 'Picklary 투어 보드', intro: '진행 중·예정 대회, 주요 경기 결과, 선수와 파트너 변화, 랭킹, 경기 밖 스토리와 관련 Picklary 글을 한 흐름으로 추적하는 게시판형 허브입니다.',
       tournamentsDesc: 'PPA, MLP 등 주요 투어의 일정, 접수·장소·대진 확인 경로와 최근 업데이트를 정리합니다.',
       playersDesc: '정상급 선수들의 스타일, 주요 기술, DUPR·랭킹 확인 링크와 어떤 점을 배울 수 있는지 정리합니다.',
-      resultsDesc: 'PPA, MLP, 국제 대회 중 주요 결과와 종목별 선두를 요약하고 공식 브래킷·순위 확인 경로를 연결합니다.',
+      resultsDesc: 'PPA·MLP·국제대회의 주요 결과와 종목별 선두를 요약하고, 공식 대진표와 순위를 확인할 수 있는 링크를 제공합니다.',
       storylinesDesc: '파트너 변경, 팀 이동, 복귀·부상, 상승세와 라이벌 구도처럼 경기 결과 밖의 흐름을 공식 출처 기준으로 모읍니다.',
       insightsDesc: '대회와 선수 데이터를 Picklary 가이드 및 네이버 블로그의 전술·장비·관전 포인트 글로 연결합니다.',
       sources: '공식 확인 링크', updated: '정보 확인 기준', sourceNote: '프로 대회 일정, 랭킹, 규정, 경기 결과와 선수 소식은 수시로 바뀔 수 있습니다. Picklary는 이해를 돕는 요약을 제공하고, 최종 판단은 공식 출처에서 다시 확인하도록 연결합니다.',
       latestTour: '최근 대회·일정 업데이트', latestStories: '최근 선수·스토리 업데이트', readInsights: '관련 Picklary 글 보기',
-      rules: 'PPA·MLP 규정', rulesDesc: 'PPA 토너먼트 운영, MLP 팀 리그 방식, DreamBreaker, 랭킹·포인트·경기 포맷의 변화 포인트를 설명합니다.',
+      rules: 'PPA·MLP 규정', rulesDesc: 'PPA 대회 운영 방식과 MLP 팀 리그·DreamBreaker, 랭킹 포인트와 경기 방식의 주요 변화를 설명합니다.',
       ruleWatch: '규정 변화에서 무엇을 봐야 할까?', whyRules: 'PPA와 MLP는 모두 프로 피클볼이지만 운영 목적이 다릅니다. PPA는 개인·복식 투어와 랭킹 포인트 중심이고, MLP는 팀 매치·혼합복식·DreamBreaker 같은 팀 리그 요소가 강합니다.',
       ppaCard: 'PPA Tour 규정·운영', mlpCard: 'MLP 팀 리그 규정', changeCard: '규정 변화 체크포인트'
     },
@@ -3863,15 +3864,15 @@ function proSceneTabs(loc, active) {
 }
 function proSceneSourceButtons(loc) {
   const items = [
-    ['PPA Tour — How it works', 'https://ppatour.com/how-it-works/'],
-    ['PPA Tournament Handbook', 'https://ppatour.com/wp-content/uploads/2026/01/PPA-Tournament-Handbook.pdf'],
-    ['PPA Player Rankings', 'https://ppatour.com/player-rankings/'],
-    ['PPA Schedule', 'https://ppatour.com/schedule/'],
-    ['MLP — How MLP Works', 'https://majorleaguepickleball.co/abcs-of-mlp/'],
-    ['MLP Standings', 'https://majorleaguepickleball.co/standings/'],
-    ['MLPlay Rules Guide', 'https://drive.google.com/file/d/1UR54-12ej87Ea7GMZcapFpbhCk2w4m8_/view']
+    ['PPA 투어 운영 방식', 'PPA Tour — How it works', 'https://ppatour.com/how-it-works/'],
+    ['PPA 대회 핸드북', 'PPA Tournament Handbook', 'https://ppatour.com/wp-content/uploads/2026/01/PPA-Tournament-Handbook.pdf'],
+    ['PPA 공식 랭킹', 'PPA Player Rankings', 'https://ppatour.com/player-rankings/'],
+    ['PPA 공식 일정', 'PPA Schedule', 'https://ppatour.com/schedule/'],
+    ['MLP 경기 방식', 'MLP — How MLP Works', 'https://majorleaguepickleball.co/abcs-of-mlp/'],
+    ['MLP 공식 순위', 'MLP Standings', 'https://majorleaguepickleball.co/standings/'],
+    ['MLPlay 규정 가이드', 'MLPlay Rules Guide', 'https://drive.google.com/file/d/1UR54-12ej87Ea7GMZcapFpbhCk2w4m8_/view']
   ];
-  return `<div class="source-buttons source-buttons--wrap">${items.map(([name, url]) => `<a class="btn btn--ghost" href="${escAttr(url)}" rel="nofollow noopener" target="_blank">${esc(name)}</a>`).join('')}</div>`;
+  return `<div class="source-buttons source-buttons--wrap">${items.map(([koName, enName, url]) => `<a class="btn btn--ghost" href="${escAttr(url)}" rel="nofollow noopener" target="_blank">${esc(loc === 'ko' ? koName : enName)}</a>`).join('')}</div>`;
 }
 function tourText(loc, item, key) {
   const koKey = key + 'Ko';
@@ -3889,29 +3890,31 @@ function tourKindLabel(loc, kind) {
   const labels = {
     all: loc === 'ko' ? '전체' : 'All',
     result: loc === 'ko' ? '경기 결과' : 'Match result',
-    tournament: loc === 'ko' ? '대회 브리핑' : 'Event briefing',
+    tournament: loc === 'ko' ? '대회 요약' : 'Event briefing',
     player: loc === 'ko' ? '선수 뉴스' : 'Player news',
-    storyline: loc === 'ko' ? '스토리라인' : 'Storyline',
-    ranking: loc === 'ko' ? '랭킹 변화' : 'Ranking watch',
+    storyline: loc === 'ko' ? '주요 흐름' : 'Storyline',
+    ranking: loc === 'ko' ? '랭킹 동향' : 'Ranking watch',
     insight: loc === 'ko' ? 'Picklary 분석' : 'Picklary analysis'
   };
   return labels[kind] || kind;
 }
 function tourConfidenceLabel(loc, confidence) {
   const labels = {
-    official: loc === 'ko' ? 'Official · 공식 출처' : 'Official source',
-    confirmed: loc === 'ko' ? 'Confirmed · 직접 확인' : 'Confirmed',
-    reported: loc === 'ko' ? 'Reported · 신뢰 보도' : 'Reported',
-    analysis: loc === 'ko' ? 'Picklary Analysis' : 'Picklary Analysis',
-    unconfirmed: loc === 'ko' ? 'Unconfirmed · 미확인' : 'Unconfirmed'
+    official: loc === 'ko' ? '공식 출처' : 'Official source',
+    confirmed: loc === 'ko' ? '확인 완료' : 'Confirmed',
+    completed: loc === 'ko' ? '결과 확정' : 'Completed',
+    reported: loc === 'ko' ? '보도 확인' : 'Reported',
+    analysis: loc === 'ko' ? 'Picklary 분석' : 'Picklary Analysis',
+    unconfirmed: loc === 'ko' ? '미확인' : 'Unconfirmed'
   };
   return labels[confidence] || confidence;
 }
 function tourResultStatusLabel(loc, status) {
   const labels = {
     confirmed: loc === 'ko' ? '결과 확정' : 'Results confirmed',
+    completed: loc === 'ko' ? '결과 확정' : 'Results confirmed',
     pending: loc === 'ko' ? '공식 결과 대기' : 'Official results pending',
-    live: loc === 'ko' ? '라이브 집계 중' : 'Live scoring',
+    live: loc === 'ko' ? '실시간 집계 중' : 'Live scoring',
     upcoming: loc === 'ko' ? '대회 후 업데이트' : 'Updates after event'
   };
   return labels[status] || status || '';
@@ -3980,7 +3983,7 @@ function tourLeadDesk(loc, status) {
   if (isPlayoffs) {
     const series = (event.playoffSeries || []).slice(0, 4);
     const rows = series.map((r, i) => `<li><span class="tour-live-desk__number">${String(i + 1).padStart(2,'0')}</span><span class="tour-live-desk__match"><small>${esc(L('1라운드 · 3전 2선승제', 'Round 1 · best-of-three'))}</small><strong>#${esc(r.higherSeed)} ${esc(r.higher)} <b>vs</b> #${esc(r.lowerSeed)} ${esc(r.lower)}</strong><em>${esc(loc === 'ko' && r.firstKo ? r.firstKo : r.first || '')}</em></span></li>`).join('');
-    return `<section class="tour-live-desk tour-live-desk--playoffs"><div class="wrap tour-live-desk__grid"><div class="tour-live-desk__intro"><div class="tour-live-desk__flag"><span></span>${esc(L('MLP 플레이오프 데스크','MLP PLAYOFF DESK'))}</div><p class="tour-live-desk__time">${esc(when)}</p><h2>${esc(tourText(loc, status, 'title'))}</h2><p>${esc(tourText(loc, status, 'summary'))}</p><div class="tour-live-desk__actions"><a class="btn btn--primary" href="${link(loc, 'tournaments/' + status.slug + '/')}">${esc(L('대진·일정·로스터 보기','Open bracket, schedule & rosters'))}</a><a class="btn btn--ghost" href="${escAttr(status.sourceUrl)}" rel="nofollow noopener" target="_blank">${esc(L('공식 일정','Official schedule'))} ↗</a></div></div><div class="tour-live-desk__results"><div class="tour-live-desk__results-head"><span>${esc(L('DALLAS 1라운드 시리즈','DALLAS ROUND 1 SERIES'))}</span><strong>${series.length}</strong></div><ol>${rows}</ol><p>${esc(L('승자 4팀은 Newport Beach에서 5–8번 시드로 재배정됩니다.','The four winners are re-seeded No. 5–8 for Newport Beach.'))}</p></div></div></section>`;
+    return `<section class="tour-live-desk tour-live-desk--playoffs"><div class="wrap tour-live-desk__grid"><div class="tour-live-desk__intro"><div class="tour-live-desk__flag"><span></span>${esc(L('MLP 플레이오프 최신 현황','MLP PLAYOFF DESK'))}</div><p class="tour-live-desk__time">${esc(when)}</p><h2>${esc(tourText(loc, status, 'title'))}</h2><p>${esc(tourText(loc, status, 'summary'))}</p><div class="tour-live-desk__actions"><a class="btn btn--primary" href="${link(loc, 'tournaments/' + status.slug + '/')}">${esc(L('대진·일정·선수 명단 보기','Open bracket, schedule & rosters'))}</a><a class="btn btn--ghost" href="${escAttr(status.sourceUrl)}" rel="nofollow noopener" target="_blank">${esc(L('공식 일정','Official schedule'))} ↗</a></div></div><div class="tour-live-desk__results"><div class="tour-live-desk__results-head"><span>${esc(L('DALLAS 1라운드','DALLAS ROUND 1 SERIES'))}</span><strong>${series.length}</strong></div><ol>${rows}</ol><p>${esc(L('승리한 4팀은 Newport Beach에서 5~8번 시드로 다시 배정됩니다.','The four winners are re-seeded No. 5–8 for Newport Beach.'))}</p></div></div></section>`;
   }
   const results = (event.results || []).slice(0, 8);
   const rows = results.map((r, i) => `<li><span class="tour-live-desk__number">${String(i + 1).padStart(2,'0')}</span><span class="tour-live-desk__match"><small>${esc(tourText(loc, r, 'division'))}</small><strong>${esc(r.champ || '')}</strong><em>${esc(r.score || '')}</em></span></li>`).join('');
@@ -3999,10 +4002,10 @@ function renderProSceneHub(loc) {
   const insightHtml = (tourBoard.insights || []).map((item) => `<a class="tour-insight-card" href="${link(loc, item.url)}"><span>${esc(L('Picklary 연결 글', 'Picklary insight'))}</span><h3>${esc(tourText(loc, item, 'title'))}</h3><p>${esc(tourText(loc, item, 'body'))}</p><strong>${esc(L('읽기', 'Read'))} →</strong></a>`).join('');
   const editorialNote = loc === 'ko' ? tourBoard.editorialNote.ko : tourBoard.editorialNote.en;
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: proSceneLabel(loc, 'hub') }])}
-<section class="tour-board-hero"><div class="wrap tour-board-hero__grid"><div><p class="tour-board-hero__eyebrow">PICKLARY TOUR MEDIA HUB</p><h1>${esc(proSceneLabel(loc, 'title'))}</h1><p>${esc(L('공식 경기 데이터에서 출발해 대회, 선수, 파트너, 랭킹, 경기 밖 이야기를 연결하고 관련 Picklary 분석 글로 이어지는 지속 업데이트형 허브입니다.', 'A continuously updated media hub connecting official competition data with events, players, partners, rankings, off-court context, and deeper Picklary analysis.'))}</p><div class="tour-board-hero__actions"><a class="btn btn--primary" href="#tour-feed">${esc(L('최신 업데이트 보기', 'See latest updates'))}</a><a class="btn btn--ghost" href="${link(loc, 'tournaments/')}">${esc(proSceneLabel(loc, 'tournaments'))}</a></div><p class="tour-board-meta"><strong>${esc(L('업데이트 기준', 'Updated'))}:</strong> ${esc(tourBoard.updated || '')} · ${esc(editorialNote || '')}</p></div><nav class="tour-board-hero__nav" aria-label="${escAttr(L('Tour Board 주요 페이지', 'Tour Board primary pages'))}">
+<section class="tour-board-hero"><div class="wrap tour-board-hero__grid"><div><p class="tour-board-hero__eyebrow">PICKLARY TOUR MEDIA HUB</p><h1>${esc(proSceneLabel(loc, 'title'))}</h1><p>${esc(L('공식 경기 정보에서 출발해 대회, 선수, 파트너, 랭킹, 경기 밖 이야기를 연결하고 관련 Picklary 분석 글로 이어지는 지속 업데이트형 허브입니다.', 'A continuously updated media hub connecting official competition data with events, players, partners, rankings, off-court context, and deeper Picklary analysis.'))}</p><div class="tour-board-hero__actions"><a class="btn btn--primary" href="#tour-feed">${esc(L('최신 업데이트 보기', 'See latest updates'))}</a><a class="btn btn--ghost" href="${link(loc, 'tournaments/')}">${esc(proSceneLabel(loc, 'tournaments'))}</a></div><p class="tour-board-meta"><strong>${esc(L('업데이트 기준', 'Updated'))}:</strong> ${esc(tourBoard.updated || '')} · ${esc(editorialNote || '')}</p></div><nav class="tour-board-hero__nav" aria-label="${escAttr(L('Tour Board 주요 페이지', 'Tour Board primary pages'))}">
 <a class="tour-portal tour-portal--events" href="${link(loc, 'tournaments/')}"><span class="tour-portal__icon" aria-hidden="true">◫</span><span class="tour-portal__copy"><small>${esc(L('대회 게시판', 'Event board'))}</small><strong>${esc(proSceneLabel(loc, 'tournaments'))}</strong><em>${esc(L('일정·장소·대진 확인', 'Dates, venues and draws'))}</em></span><b aria-hidden="true">→</b></a>
 <a class="tour-portal tour-portal--players" href="${link(loc, 'pro-scene/players/')}"><span class="tour-portal__icon" aria-hidden="true">◎</span><span class="tour-portal__copy"><small>${esc(L('선수 데이터', 'Player database'))}</small><strong>${esc(proSceneLabel(loc, 'players'))}</strong><em>${esc(L('스타일·기술·프로필', 'Styles, skills and profiles'))}</em></span><b aria-hidden="true">→</b></a>
-<a class="tour-portal tour-portal--results" href="${link(loc, 'pro-scene/results/')}"><span class="tour-portal__icon" aria-hidden="true">◆</span><span class="tour-portal__copy"><small>${esc(L('공식 경기 데이터', 'Official competition data'))}</small><strong>${esc(proSceneLabel(loc, 'results'))}</strong><em>${esc(L('결과·브래킷·현재 순위', 'Results, brackets and standings'))}</em></span><b aria-hidden="true">→</b></a>
+<a class="tour-portal tour-portal--results" href="${link(loc, 'pro-scene/results/')}"><span class="tour-portal__icon" aria-hidden="true">◆</span><span class="tour-portal__copy"><small>${esc(L('공식 경기 정보', 'Official competition data'))}</small><strong>${esc(proSceneLabel(loc, 'results'))}</strong><em>${esc(L('경기 결과·대진표·현재 순위', 'Results, brackets and standings'))}</em></span><b aria-hidden="true">→</b></a>
 <a class="tour-portal tour-portal--stories" href="${link(loc, 'pro-scene/storylines/')}"><span class="tour-portal__icon" aria-hidden="true">↗</span><span class="tour-portal__copy"><small>${esc(L('심층 분석', 'Story graph'))}</small><strong>${esc(proSceneLabel(loc, 'storylines'))}</strong><em>${esc(L('파트너·팀·라이벌 흐름', 'Partners, teams and rivalries'))}</em></span><b aria-hidden="true">→</b></a>
 </nav></div></section>
 ${tourLeadDesk(loc, leadEvent)}
@@ -4020,7 +4023,7 @@ ${tourLeadDesk(loc, leadEvent)}
   <label>${esc(L('투어', 'Tour'))}<select data-tour-filter><option value="all">${esc(L('전체 투어', 'All tours'))}</option><option value="ppa">PPA</option><option value="mlp">MLP</option><option value="app">APP</option><option value="usa pickleball">USA Pickleball</option><option value="milp">MiLP</option><option value="college">${esc(L('대학', 'College'))}</option><option value="international">${esc(L('국제대회', 'International'))}</option></select></label>
   <label>${esc(L('종목', 'Discipline'))}<select data-discipline-filter><option value="all">${esc(L('전체 종목', 'All disciplines'))}</option><option value="singles">${esc(L('단식', 'Singles'))}</option><option value="doubles">${esc(L('복식', 'Doubles'))}</option><option value="mixed">${esc(L('혼합복식', 'Mixed doubles'))}</option><option value="team">${esc(L('팀 경기', 'Team'))}</option></select></label>
 </div><div class="tour-board-feed" data-tour-feed>${postsHtml}</div><p class="notice tour-empty" data-tour-empty hidden>${esc(L('선택한 조건에 맞는 업데이트가 없습니다.', 'No updates match the selected filters.'))}</p></div></section>
-<section class="band"><div class="wrap two-col two-col--wide"><div><div class="section-heading-row"><div><p class="section-kicker">STORY GRAPH</p><h2 class="band__title">${esc(L('이어지는 선수·투어 스토리라인', 'Connected player and tour storylines'))}</h2></div><a href="${link(loc, 'pro-scene/storylines/')}">${esc(L('전체 타임라인', 'Full timeline'))} →</a></div><div class="tour-storyline-timeline">${storyHtml}</div></div><div><p class="section-kicker">PICKLARY INSIGHTS</p><h2 class="band__title">${esc(L('경기 데이터에서 심층 글로', 'From tour data to deeper reading'))}</h2><div class="tour-insight-grid">${insightHtml}</div></div></div></section>
+<section class="band"><div class="wrap two-col two-col--wide"><div><div class="section-heading-row"><div><p class="section-kicker">STORY GRAPH</p><h2 class="band__title">${esc(L('이어지는 선수·투어 이야기', 'Connected player and tour storylines'))}</h2></div><a href="${link(loc, 'pro-scene/storylines/')}">${esc(L('전체 타임라인', 'Full timeline'))} →</a></div><div class="tour-storyline-timeline">${storyHtml}</div></div><div><p class="section-kicker">PICKLARY INSIGHTS</p><h2 class="band__title">${esc(L('경기 데이터에서 심층 글로', 'From tour data to deeper reading'))}</h2><div class="tour-insight-grid">${insightHtml}</div></div></div></section>
 <section class="band band--alt"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">EDITORIAL TRUST</p><h2 class="band__title">${esc(L('정보 신뢰도 표시', 'Source confidence labels'))}</h2></div></div><div class="tour-source-legend">${['official','confirmed','reported','analysis','unconfirmed'].map((x) => `<div><span class="tour-confidence tour-confidence--${x}">${esc(tourConfidenceLabel(loc, x))}</span><p>${esc(x === 'official' ? L('투어·대회 공식 발표 또는 공식 결과', 'Tour or event primary source') : x === 'confirmed' ? L('선수·팀이 직접 확인한 내용', 'Directly confirmed by player or team') : x === 'reported' ? L('신뢰할 수 있는 보도에 근거', 'Based on credible reporting') : x === 'analysis' ? L('공식 데이터에 기반한 Picklary 해석', 'Picklary interpretation of sourced data') : L('확인 전 정보이며 원칙적으로 공개 보류', 'Unverified; normally held from publication'))}</p></div>`).join('')}</div><div class="tour-official-links"><h3>${esc(proSceneLabel(loc, 'sources'))}</h3>${proSceneSourceButtons(loc)}</div></div></section>
 <script>(function(){var root=document.querySelector('[data-tour-controls]');if(!root)return;var feed=document.querySelector('[data-tour-feed]');var cards=[].slice.call(feed.querySelectorAll('.tour-post-card'));var kind='all';var tour='all';var discipline='all';var count=document.getElementById('tour-result-count');var empty=document.querySelector('[data-tour-empty]');function apply(){var n=0;cards.forEach(function(card){var show=(kind==='all'||card.dataset.kind===kind)&&(tour==='all'||card.dataset.tour===tour)&&(discipline==='all'||card.dataset.discipline===discipline||card.dataset.discipline==='all');card.classList.toggle('is-hidden',!show);if(show)n++;});if(count)count.textContent=String(n);if(empty)empty.hidden=n!==0;}root.querySelectorAll('[data-kind-filter]').forEach(function(btn){btn.addEventListener('click',function(){kind=btn.dataset.kindFilter;root.querySelectorAll('[data-kind-filter]').forEach(function(x){x.classList.toggle('is-active',x===btn);});apply();});});root.querySelector('[data-tour-filter]').addEventListener('change',function(e){tour=e.target.value;apply();});root.querySelector('[data-discipline-filter]').addEventListener('change',function(e){discipline=e.target.value;apply();});})();</script>`;
   return layout({ loc, rel: 'pro-scene/', title: proSceneLabel(loc, 'title'), description: proSceneLabel(loc, 'intro'), bodyHtml: body });
@@ -4043,7 +4046,7 @@ function renderProSceneResults(loc) {
   <div><p class="page-head__eyebrow">${esc(proSceneLabel(loc, 'hub'))}</p><h1>${esc(title)}</h1><p class="page-head__intro">${esc(proSceneLabel(loc, 'resultsDesc'))}</p></div>
   ${visualFigure(loc, 'majorResults')}
 </div></section>
-<section class="band"><div class="wrap">${proSceneTabs(loc, 'results')}<h2 class="band__title">${esc(loc === 'ko' ? '현재 종목별 선두' : 'Current discipline leaders')}</h2>${rankingsBoard(loc)}<h2 class="band__title">${esc(loc === 'ko' ? '주요 메이저·리그 결과' : 'Major event and league results')}</h2><div class="recaps">${recapsHtml}</div></div></section>
+<section class="band"><div class="wrap">${proSceneTabs(loc, 'results')}<h2 class="band__title">${esc(loc === 'ko' ? '현재 종목별 상위 선수' : 'Current discipline leaders')}</h2>${rankingsBoard(loc)}<h2 class="band__title">${esc(loc === 'ko' ? '주요 메이저·리그 결과' : 'Major event and league results')}</h2><div class="recaps">${recapsHtml}</div></div></section>
 <section class="band band--alt"><div class="wrap narrow prose"><h2>${esc(proSceneLabel(loc, 'sources'))}</h2><p>${esc(proSceneLabel(loc, 'sourceNote'))}</p>${proSceneSourceButtons(loc)}</div></section>`;
   return layout({ loc, rel: 'pro-scene/results/', title: title + ' · ' + proSceneLabel(loc, 'hub'), description: proSceneLabel(loc, 'resultsDesc'), bodyHtml: body });
 }
@@ -4055,7 +4058,7 @@ function renderProSceneStorylines(loc) {
   const approvedCards = approved.map((u) => updateCard(u, loc)).join('');
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: proSceneLabel(loc, 'hub'), rel: 'pro-scene/' }, { name: title }])}
 <section class="page-head page-head--visual"><div class="wrap two-col two-col--wide"><div><p class="page-head__eyebrow">STORY GRAPH</p><h1>${esc(title)}</h1><p class="page-head__intro">${esc(L('선수, 파트너, 팀, 대회, 결과와 랭킹 변화를 하나의 시간축에 연결합니다. 확인된 사실과 Picklary 분석을 명확히 구분합니다.', 'A timeline connecting players, partners, teams, events, results, and ranking movement while clearly separating sourced facts from Picklary analysis.'))}</p></div>${visualFigure(loc, 'players')}</div></section>
-<section class="band"><div class="wrap">${proSceneTabs(loc, 'storylines')}<div class="storyline-board-intro"><p>${esc(L('단독 뉴스로 끝내지 않고 관련 선수 페이지, 대회 상세 페이지, 결과와 분석 글로 계속 연결되는 구조입니다.', 'Each item connects onward to relevant player pages, event details, results, and analysis instead of ending as isolated news.'))}</p></div><div class="tour-storyline-timeline tour-storyline-timeline--full">${curated || `<p class="notice">${esc(L('아직 승인된 스토리라인이 없습니다.', 'No storylines have been approved yet.'))}</p>`}</div></div></section>
+<section class="band"><div class="wrap">${proSceneTabs(loc, 'storylines')}<div class="storyline-board-intro"><p>${esc(L('단독 뉴스로 끝내지 않고 관련 선수 페이지, 대회 상세 페이지, 결과와 분석 글로 계속 연결되는 구조입니다.', 'Each item connects onward to relevant player pages, event details, results, and analysis instead of ending as isolated news.'))}</p></div><div class="tour-storyline-timeline tour-storyline-timeline--full">${curated || `<p class="notice">${esc(L('아직 게시된 선수·투어 이야기가 없습니다.', 'No storylines have been approved yet.'))}</p>`}</div></div></section>
 ${approvedCards ? `<section class="band band--alt"><div class="wrap"><h2 class="band__title">${esc(L('선수 업데이트 아카이브', 'Player update archive'))}</h2><div class="update-grid">${approvedCards}</div></div></section>` : ''}
 <section class="band"><div class="wrap two-col two-col--wide"><div class="prose"><h2>${esc(L('스토리 그래프의 연결 단위', 'What the story graph connects'))}</h2><p>${esc(L('선수 ↔ 파트너 ↔ 팀 ↔ 대회 ↔ 경기 결과 ↔ 랭킹 변화 ↔ 패들·장비 ↔ Picklary 분석의 흐름으로 축적합니다.', 'Player ↔ partner ↔ team ↔ event ↔ result ↔ ranking movement ↔ gear ↔ Picklary analysis.'))}</p><a class="btn btn--primary" href="${link(loc, 'pro-scene/players/')}">${esc(proSceneLabel(loc, 'players'))} →</a></div><div class="prose"><h2>${esc(proSceneLabel(loc, 'updated'))}</h2><p>${esc(loc === 'ko' ? tourBoard.editorialNote.ko : tourBoard.editorialNote.en)}</p>${proSceneSourceButtons(loc)}</div></div></section>`;
   return layout({ loc, rel: 'pro-scene/storylines/', title: title + ' · ' + proSceneLabel(loc, 'hub'), description: proSceneLabel(loc, 'storylinesDesc'), bodyHtml: body });
@@ -4066,19 +4069,19 @@ function renderProSceneRules(loc) {
   const L = (en, ko) => loc === 'ko' ? ko : en;
   const ppaBullets = [
     L('Event tiers such as Worlds, Slam, Cup, Open, and Challenger determine ranking-point weight.', 'Worlds, Slam, Cup, Open, Challenger 같은 대회 등급에 따라 랭킹 포인트 비중이 달라집니다.'),
-    L('PPA rankings reflect recent tournament results and are updated after events; use official rankings for current seeding context.', 'PPA 랭킹은 최근 대회 결과를 반영해 업데이트되므로, 시드·현재 순위는 공식 랭킹에서 확인해야 합니다.'),
+    L('PPA rankings reflect recent tournament results and are updated after events; use official rankings for current seeding context.', 'PPA 랭킹은 최근 경기 결과를 반영해 업데이트되므로, 시드·현재 순위는 공식 랭킹에서 확인해야 합니다.'),
     L('The tournament handbook is the deeper reference for officiating, player conduct, match procedures, and operational standards.', '토너먼트 핸드북은 심판 운영, 선수 행동, 경기 절차, 운영 기준을 확인하는 더 깊은 기준 문서입니다.')
   ];
   const mlpBullets = [
-    L('MLP uses coed team matches: women’s doubles, men’s doubles, and two mixed doubles games.', 'MLP는 여자복식, 남자복식, 두 개의 혼합복식으로 구성된 코에드 팀 매치 구조입니다.'),
+    L('MLP uses coed team matches: women’s doubles, men’s doubles, and two mixed doubles games.', 'MLP는 여자복식, 남자복식과 두 경기의 혼합복식으로 구성된 남녀 혼성 팀 경기입니다.'),
     L('If the team match is tied after four games, a DreamBreaker singles tiebreak decides the match.', '네 경기 후 팀 매치가 동률이면 DreamBreaker 단식 타이브레이크로 승부를 가릅니다.'),
-    L('Regular-season standings points, playoff seeding, and team availability matter as much as individual player form.', '정규 시즌 standings 포인트, 플레이오프 시드, 팀별 출전 구성이 개인 선수 컨디션만큼 중요합니다.')
+    L('Regular-season standings points, playoff seeding, and team availability matter as much as individual player form.', '정규시즌 순위 포인트와 플레이오프 시드, 팀별 출전 구성이 개별 선수의 경기력만큼 중요합니다.')
   ];
   const watchBullets = [
     L('Scoring format: side-out versus rally scoring changes comeback patterns and timeout value.', '스코어링 방식: 사이드아웃과 랠리 스코어링 차이는 역전 가능성과 타임아웃 가치에 영향을 줍니다.'),
     L('Ranking points and event tiers: a result at a Slam is not weighted the same as a smaller event.', '랭킹 포인트와 대회 등급: Slam 결과와 소규모 대회 결과는 같은 비중이 아닙니다.'),
-    L('Equipment and eligibility: paddle legality, roster rules, injury rules, and participation policies can affect brackets and lineups.', '장비와 출전 자격: 패들 승인, 로스터, 부상 규정, 참가 정책이 브래킷과 라인업에 영향을 줄 수 있습니다.'),
-    L('Schedule changes: weather, broadcast windows, and league format updates can change when results become official.', '일정 변경: 날씨, 중계 시간, 리그 포맷 변화에 따라 결과 확정 시점이 달라질 수 있습니다.')
+    L('Equipment and eligibility: paddle legality, roster rules, injury rules, and participation policies can affect brackets and lineups.', '장비와 출전 자격: 패들 승인, 로스터, 부상 규정, 참가 정책이 대진표와 라인업에 영향을 줄 수 있습니다.'),
+    L('Schedule changes: weather, broadcast windows, and league format updates can change when results become official.', '일정 변경: 날씨, 중계 편성이나 리그 운영 방식이 바뀌면 결과 확정 시점도 달라질 수 있습니다.')
   ];
   const sourceLinks = {
     ppa: [
@@ -4101,8 +4104,8 @@ function renderProSceneRules(loc) {
   ${visualFigure(loc, 'dupr')}
 </div></section>
 <section class="band"><div class="wrap"><div class="body-cards">
-  ${card('ppa', proSceneLabel(loc, 'ppaCard'), L('Use PPA sources when you want tournament brackets, event tiers, ranking points, draw format, and player-seeding context.', 'PPA 자료는 토너먼트 브래킷, 대회 등급, 랭킹 포인트, 드로우 방식, 선수 시드 맥락을 볼 때 사용합니다.'), ppaBullets, sourceLinks.ppa)}
-  ${card('mlp', proSceneLabel(loc, 'mlpCard'), L('Use MLP sources when the question is about team matches, roster construction, DreamBreakers, standings, and playoffs.', 'MLP 자료는 팀 매치, 로스터 구성, DreamBreaker, standings, 플레이오프 구조를 볼 때 사용합니다.'), mlpBullets, sourceLinks.mlp)}
+  ${card('ppa', proSceneLabel(loc, 'ppaCard'), L('Use PPA sources when you want tournament brackets, event tiers, ranking points, draw format, and player-seeding context.', 'PPA 자료에서는 대진표, 대회 등급, 랭킹 포인트, 드로 방식과 선수 시드 배정을 확인할 수 있습니다.'), ppaBullets, sourceLinks.ppa)}
+  ${card('mlp', proSceneLabel(loc, 'mlpCard'), L('Use MLP sources when the question is about team matches, roster construction, DreamBreakers, standings, and playoffs.', 'MLP 자료에서는 팀 매치, 로스터 구성, DreamBreaker, 정규시즌 순위와 플레이오프 구조를 확인할 수 있습니다.'), mlpBullets, sourceLinks.mlp)}
   ${card('watch', proSceneLabel(loc, 'changeCard'), proSceneLabel(loc, 'whyRules'), watchBullets, sourceLinks.watch)}
 </div></div></section>
 <section class="band band--alt"><div class="wrap narrow prose"><h2>${esc(proSceneLabel(loc, 'ruleWatch'))}</h2><p>${esc(proSceneLabel(loc, 'sourceNote'))}</p></div></section>`;
@@ -4146,7 +4149,7 @@ function renderTournamentsIndex(loc) {
 <section class="band tour-current-band" id="tracked-events"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">TOUR BOARD</p><h2 class="band__title">${esc(L('투어별로 나눠 보는 주요 이벤트', 'Events organized by tour'))}</h2><p class="band__intro">${esc(L('MLP, 미국 PPA, 국제대회를 분리해 일정과 결과 흐름을 더 빠르게 찾을 수 있습니다.', 'MLP, U.S. PPA, and international events are separated so schedules and results are easier to scan.'))}</p></div><a class="tour-board-inline-link" href="${link(loc, 'pro-scene/')}">${esc(proSceneLabel(loc, 'hub'))} →</a></div>
 <div class="tournament-group-stack">${['mlp','ppa','international'].map((key) => { const meta = tournamentGroupMeta(loc, key); const rows = groupedTracked[key]; const live = rows.filter((x) => x.status === 'live').length; const upcoming = rows.filter((x) => x.status === 'upcoming').length; const completed = rows.filter((x) => x.status === 'completed').length; return `<section class="tournament-group-preview tournament-group-preview--${key}"><header><div class="tournament-group-preview__identity"><span aria-hidden="true">${esc(meta.icon)}</span><div><small>${esc(meta.eyebrow)}</small><h3>${esc(meta.label)}</h3><p>${esc(meta.desc)}</p></div></div><div class="tournament-group-preview__meta"><span><b>${rows.length}</b>${esc(L('전체', 'all'))}</span><span class="is-live"><b>${live}</b>${esc(L('진행', 'live'))}</span><span><b>${upcoming}</b>${esc(L('예정', 'next'))}</span><span><b>${completed}</b>${esc(L('완료', 'done'))}</span><a href="${link(loc, meta.rel)}">${esc(L('전체 보기', 'View group'))} →</a></div></header><div class="tour-live-grid tour-live-grid--index">${rows.length ? rows.map((x) => tourStatusCard(loc, x)).join('') : `<p class="notice">${esc(L('현재 표시할 대회가 없습니다.', 'No events to show right now.'))}</p>`}</div></section>`; }).join('')}</div>
 </div></section>
-<section class="tour-method-band"><div class="wrap"><div class="tour-method-band__lead"><p class="section-kicker">PICKLARY METHOD</p><h2>${esc(L('한 대회를 네 겹으로 읽습니다', 'Four layers for every tournament'))}</h2><p>${esc(L('공식 결과를 출발점으로 선수, 파트너, 시즌 순위와 관련 분석 글까지 연결해 단순 스코어 이상의 맥락을 제공합니다.', 'Official results are the starting point; player, partner, season, and analysis layers turn scores into useful context.'))}</p></div><div class="tour-method-grid"><article><span>01</span><strong>${esc(L('공식 결과', 'Official result'))}</strong><p>${esc(L('우승·준우승·결승 스코어와 공개 상태', 'Champion, finalist, final score, and publication status'))}</p></article><article><span>02</span><strong>${esc(L('대회 맥락', 'Event context'))}</strong><p>${esc(L('포맷, 장소, 참가 규모와 시즌 내 의미', 'Format, venue, field size, and season meaning'))}</p></article><article><span>03</span><strong>${esc(L('선수 이야기', 'Player stories'))}</strong><p>${esc(L('돌풍, 파트너십, 부상·복귀와 라이벌 구도', 'Breakouts, partnerships, injuries, returns, and rivalries'))}</p></article><article><span>04</span><strong>${esc(L('다음 행동', 'What next'))}</strong><p>${esc(L('관련 선수·랭킹·Picklary 심층 글로 이동', 'Continue to players, rankings, and deeper Picklary analysis'))}</p></article></div></div></section>
+<section class="tour-method-band"><div class="wrap"><div class="tour-method-band__lead"><p class="section-kicker">PICKLARY METHOD</p><h2>${esc(L('한 대회를 네 겹으로 읽습니다', 'Four layers for every tournament'))}</h2><p>${esc(L('공식 결과를 출발점으로 선수, 파트너, 시즌 순위와 관련 분석 글까지 연결해 단순 스코어 이상의 맥락을 제공합니다.', 'Official results are the starting point; player, partner, season, and analysis layers turn scores into useful context.'))}</p></div><div class="tour-method-grid"><article><span>01</span><strong>${esc(L('공식 결과', 'Official result'))}</strong><p>${esc(L('우승·준우승·결승 스코어와 공개 상태', 'Champion, finalist, final score, and publication status'))}</p></article><article><span>02</span><strong>${esc(L('대회 맥락', 'Event context'))}</strong><p>${esc(L('경기 방식, 장소, 참가 규모와 시즌에서의 의미', 'Format, venue, field size, and season meaning'))}</p></article><article><span>03</span><strong>${esc(L('선수 이야기', 'Player stories'))}</strong><p>${esc(L('돌풍, 파트너십, 부상·복귀와 라이벌 구도', 'Breakouts, partnerships, injuries, returns, and rivalries'))}</p></article><article><span>04</span><strong>${esc(L('다음 행동', 'What next'))}</strong><p>${esc(L('관련 선수·랭킹·Picklary 심층 글로 이동', 'Continue to players, rankings, and deeper Picklary analysis'))}</p></article></div></div></section>
 <section class="band band--alt"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">CONFIRMED RESULTS</p><h2 class="band__title">${esc(L('우승자·준우승자·스코어가 확인된 대회', 'Events with confirmed champions, finalists, and scores'))}</h2><p class="band__intro">${esc(L('공식 리캡에서 결승 결과가 확인된 대회만 이름과 스코어를 게시합니다.', 'Names and scores appear only when an official recap has published the finals.'))}</p></div></div><div class="tour-archive-grid">${archiveCards || `<p class="notice">${esc(tournamentLabel(loc, 'noItems'))}</p>`}</div></div></section>
 <section class="band"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">TOURNAMENT READING ROOM</p><h2 class="band__title">${esc(L('이번 시즌을 관통하는 읽을거리', 'Long-form threads across the season'))}</h2><p class="band__intro">${esc(L('대회 하나를 보고 끝내지 않고 선수 역할, 파트너십, 싱글 성장, 주니어 경로를 여러 이벤트에 걸쳐 연결합니다.', 'Move beyond one event by connecting player roles, partnerships, singles development, and junior pathways across the calendar.'))}</p></div></div><div class="tour-reading-grid">${seasonThreads}</div></div></section>
 <section class="band band--alt"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">LATEST CONTEXT</p><h2 class="band__title">${esc(tournamentLabel(loc, 'latest'))}</h2></div></div><div class="update-grid">${items.length ? items.map((u) => updateCard(u, loc)).join('') : `<p class="notice">${esc(tournamentLabel(loc, 'noItems'))}</p>`}</div></div></section>
@@ -4179,13 +4182,13 @@ function mlpEventSections(loc, event) {
 
   const standingsHtml = standings.length ? `<section class="mlp-playoff-band mlp-playoff-band--standings"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">FINAL REGULAR-SEASON TABLE</p><h2 class="band__title">${esc(L('2026 MLP 최종 시드와 포스트시즌 진입점', '2026 MLP final seeds and postseason entry points'))}</h2><p class="band__intro">${esc(L('상위 4팀은 Dallas 1라운드를 건너뛰고, 5–12번 시드는 3전 2선승제 시리즈에 진입합니다.', 'The top four skip Dallas Round 1; seeds 5–12 enter best-of-three series.'))}</p></div></div><div class="mlp-standings-table" role="table" aria-label="${escAttr(L('MLP 최종 순위', 'MLP final standings'))}"><div class="mlp-standings-table__head" role="row"><span>${esc(L('시드','Seed'))}</span><span>${esc(L('팀','Team'))}</span><span>${esc(L('포인트','Points'))}</span><span>${esc(L('시작 라운드','Entry'))}</span></div>${standings.map((r) => `<div class="mlp-standings-table__row${r.rank <= 4 ? ' is-bye' : ''}" role="row"><b>#${esc(r.rank)}</b><strong>${esc(r.team)}</strong><span>${esc(r.points)}</span><em>${esc(loc === 'ko' && r.stageKo ? r.stageKo : r.stage)}</em></div>`).join('')}</div></div></section>` : '';
 
-  const seriesHtml = series.length ? `<section class="mlp-playoff-band mlp-playoff-band--series"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">DALLAS ROUND 1</p><h2 class="band__title">${esc(L('공식 1라운드 대진과 Picklary 매치업 노트', 'Official Round 1 series and Picklary matchup notes'))}</h2><p class="band__intro">${esc(L('공식 대진과 시작 순서를 먼저 보여주고, 예상 우위는 별도의 분석 라벨로 구분했습니다.', 'Official pairings and order appear first; projected edges are clearly labeled as analysis.'))}</p></div></div><div class="mlp-series-grid">${series.map((r) => `<article class="mlp-series-card"><header><span>${esc(L('시리즈','Series'))} ${esc(r.order)}</span><time>${esc(loc === 'ko' && r.firstKo ? r.firstKo : r.first)}</time></header><div class="mlp-series-card__teams"><div><b>#${esc(r.higherSeed)}</b><strong>${esc(r.higher)}</strong></div><i>VS</i><div><b>#${esc(r.lowerSeed)}</b><strong>${esc(r.lower)}</strong></div></div><div class="mlp-series-card__angle"><span>${esc(L('관전 축','Matchup axis'))}</span><p>${esc(loc === 'ko' && r.angleKo ? r.angleKo : r.angle)}</p></div><div class="mlp-series-card__pick"><span>${esc(L('PICKLARY 예상','PICKLARY PROJECTION'))}</span><p>${esc(loc === 'ko' && r.picklaryKo ? r.picklaryKo : r.picklary)}</p></div></article>`).join('')}</div></div></section>` : '';
+  const seriesHtml = series.length ? `<section class="mlp-playoff-band mlp-playoff-band--series"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">DALLAS ROUND 1</p><h2 class="band__title">${esc(L('공식 1라운드 대진과 Picklary 관전 포인트', 'Official Round 1 series and Picklary matchup notes'))}</h2><p class="band__intro">${esc(L('공식 대진과 경기 순서를 먼저 보여주고, Picklary의 예상은 별도 분석으로 분명하게 구분했습니다.', 'Official pairings and order appear first; projected edges are clearly labeled as analysis.'))}</p></div></div><div class="mlp-series-grid">${series.map((r) => `<article class="mlp-series-card"><header><span>${esc(L('시리즈','Series'))} ${esc(r.order)}</span><time>${esc(loc === 'ko' && r.firstKo ? r.firstKo : r.first)}</time></header><div class="mlp-series-card__teams"><div><b>#${esc(r.higherSeed)}</b><strong>${esc(r.higher)}</strong></div><i>VS</i><div><b>#${esc(r.lowerSeed)}</b><strong>${esc(r.lower)}</strong></div></div>${r.seriesScore ? `<div class="mlp-series-card__state${r.seriesScore === '0–0' ? ' is-pending' : ''}"><span>${esc(L('현재 시리즈','Series now'))}</span><strong>${esc(loc === 'ko' && r.seriesLeadKo ? r.seriesLeadKo : r.seriesLead)} · ${esc(r.seriesScore)}</strong>${r.match1Score && r.match1Score !== '—' ? `<small>${esc(L('1차전','Match 1'))} ${esc(r.match1Score)}</small>` : `<small>${esc(L('아직 시작 전','Not started yet'))}</small>`}</div>` : ''}<div class="mlp-series-card__angle"><span>${esc(L('핵심 대결 포인트','Matchup axis'))}</span><p>${esc(loc === 'ko' && r.angleKo ? r.angleKo : r.angle)}</p></div><div class="mlp-series-card__pick"><span>${esc(L('PICKLARY 전망','PICKLARY PROJECTION'))}</span><p>${esc(loc === 'ko' && r.picklaryKo ? r.picklaryKo : r.picklary)}</p></div></article>`).join('')}</div></div></section>` : '';
 
   const scheduleHtml = scheduleRows.length ? `<section class="mlp-playoff-band mlp-playoff-band--schedule"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">ROLLING SCHEDULE</p><h2 class="band__title">${esc(L('Dallas 경기 일정', 'Dallas match schedule'))}</h2><p class="band__intro">${esc(L('첫 경기 이후 일정은 앞 경기 종료에 따라 순차 진행되며, 3차전은 시리즈가 1-1일 때만 열립니다.', 'After the first listed start, matches roll in sequence; a third match is played only if the series is tied 1–1.'))}</p></div></div><div class="mlp-schedule-list">${scheduleRows.map((r) => `<div class="mlp-schedule-row"><time><strong>${esc(loc === 'ko' && r.dayKo ? r.dayKo : r.day)}</strong><span>${esc(loc === 'ko' && r.timeKo ? r.timeKo : r.time)}</span></time><div><strong>${esc(loc === 'ko' && r.matchKo ? r.matchKo : r.match)}</strong><small>${esc(loc === 'ko' && r.noteKo ? r.noteKo : r.note)}</small></div></div>`).join('')}</div></div></section>` : '';
 
-  const projectionHtml = projected.length ? `<section class="mlp-playoff-band mlp-playoff-band--projection"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">PROJECTED NEXT ROUND</p><h2 class="band__title">${esc(L('상위 시드 승리 가정 시 예상 8강', 'Projected quarterfinals if higher seeds advance'))}</h2><p class="band__intro">${esc(loc === 'ko' && event.projectionNoteKo ? event.projectionNoteKo : event.projectionNote || '')}</p></div><span class="analysis-badge">${esc(L('비공식 예상','UNOFFICIAL PROJECTION'))}</span></div><div class="mlp-projection-grid">${projected.map((r) => `<article><span>#${esc(r.seed)}</span><h3>${esc(r.team)}</h3><b>vs ${esc(r.opponent)}</b><p>${esc(loc === 'ko' && r.noteKo ? r.noteKo : r.note)}</p></article>`).join('')}</div></div></section>` : '';
+  const projectionHtml = projected.length ? `<section class="mlp-playoff-band mlp-playoff-band--projection"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">PROJECTED NEXT ROUND</p><h2 class="band__title">${esc(L('상위 시드가 모두 이길 경우 예상 8강', 'Projected quarterfinals if higher seeds advance'))}</h2><p class="band__intro">${esc(loc === 'ko' && event.projectionNoteKo ? event.projectionNoteKo : event.projectionNote || '')}</p></div><span class="analysis-badge">${esc(L('비공식 전망','UNOFFICIAL PROJECTION'))}</span></div><div class="mlp-projection-grid">${projected.map((r) => `<article><span>#${esc(r.seed)}</span><h3>${esc(r.team)}</h3><b>vs ${esc(r.opponent)}</b><p>${esc(loc === 'ko' && r.noteKo ? r.noteKo : r.note)}</p></article>`).join('')}</div></div></section>` : '';
 
-  const rosterHtml = rosters.length ? `<section class="mlp-playoff-band mlp-playoff-band--rosters"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">TEAM ROSTERS & IDENTITIES</p><h2 class="band__title">${esc(L('플레이오프 팀별 로스터와 스타일', 'Playoff rosters and team identities'))}</h2><p class="band__intro">${esc(L('선수 이름만 나열하지 않고 팀이 어떤 방식으로 시리즈를 풀어갈지 함께 정리했습니다.', 'Each roster is paired with the team identity and the question most likely to shape its series.'))}</p></div></div><div class="mlp-roster-grid">${rosters.map((r) => `<article class="mlp-roster-card"><header><span>#${esc(r.seed)}</span><div><h3>${esc(r.team)}</h3><small>${esc(r.points)} ${esc(L('포인트','points'))}</small></div></header><div class="mlp-roster-card__players">${(r.players || []).map((p) => `<span>${esc(p)}</span>`).join('')}</div><div class="mlp-roster-card__identity"><b>${esc(L('팀 스타일','Team identity'))}</b><p>${esc(loc === 'ko' && r.identityKo ? r.identityKo : r.identity)}</p></div><div class="mlp-roster-card__watch"><b>${esc(L('주목할 포인트','What to watch'))}</b><p>${esc(loc === 'ko' && r.watchKo ? r.watchKo : r.watch)}</p></div></article>`).join('')}</div></div></section>` : '';
+  const rosterHtml = rosters.length ? `<section class="mlp-playoff-band mlp-playoff-band--rosters"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">TEAM ROSTERS & IDENTITIES</p><h2 class="band__title">${esc(L('플레이오프 팀별 선수 명단과 경기 스타일', 'Playoff rosters and team identities'))}</h2><p class="band__intro">${esc(L('선수 명단뿐 아니라 각 팀이 어떤 방식으로 시리즈를 풀어갈지도 함께 정리했습니다.', 'Each roster is paired with the team identity and the question most likely to shape its series.'))}</p></div></div><div class="mlp-roster-grid">${rosters.map((r) => `<article class="mlp-roster-card"><header><span>#${esc(r.seed)}</span><div><h3>${esc(r.team)}</h3><small>${esc(r.points)} ${esc(L('포인트','points'))}</small></div></header><div class="mlp-roster-card__players">${(r.players || []).map((p) => `<span>${esc(p)}</span>`).join('')}</div><div class="mlp-roster-card__identity"><b>${esc(L('팀 경기 스타일','Team identity'))}</b><p>${esc(loc === 'ko' && r.identityKo ? r.identityKo : r.identity)}</p></div><div class="mlp-roster-card__watch"><b>${esc(L('주목할 포인트','What to watch'))}</b><p>${esc(loc === 'ko' && r.watchKo ? r.watchKo : r.watch)}</p></div></article>`).join('')}</div></div></section>` : '';
 
   return standingsHtml + seriesHtml + scheduleHtml + projectionHtml + rosterHtml;
 }
@@ -4206,18 +4209,21 @@ function renderTournamentDetail(loc, event) {
   const results = event.results || [];
   const resultLinks = event.resultLinks || [];
   const liveMatches = event.resultCardMode === 'matches';
-  const resultRows = results.map((r) => `<article class="event-result-card${liveMatches ? ' event-result-card--match' : ''}"><div class="event-result-card__division">${esc(tourText(loc, r, 'division'))}</div><div class="event-result-card__podium"><div><span class="event-result-card__place"><b aria-hidden="true">${liveMatches ? '✓' : '🥇'}</b>${esc(liveMatches ? L('승리 팀', 'Winner') : L('우승', 'Champion'))}</span><strong>${esc(r.champ || '—')}</strong></div>${r.silver ? `<div><span class="event-result-card__place"><b aria-hidden="true">${liveMatches ? '•' : '🥈'}</b>${esc(liveMatches ? L('상대 팀', 'Opponent') : L('준우승', 'Runner-up'))}</span><strong>${esc(r.silver)}</strong></div>` : ''}${r.bronze ? `<div><span class="event-result-card__place"><b aria-hidden="true">🥉</b>${esc(L('3위', 'Bronze'))}</span><strong>${esc(r.bronze)}</strong></div>` : ''}</div>${r.score ? `<p class="event-result-card__score"><span>${esc(liveMatches ? L('매치 결과', 'Match result') : L('결승 스코어', 'Final score'))}</span><strong>${esc(r.score)}</strong></p>` : ''}</article>`).join('');
+  const resultRows = results.map((r) => {
+    const games = (r.games || []).map((g) => `<div class="event-match-game"><span class="event-match-game__type">${esc(loc === 'ko' && g.labelKo ? g.labelKo : g.label)}</span><div class="event-match-game__teams"><span class="${g.winner === 'left' ? 'is-winner' : ''}">${esc(g.left)}</span><b>${esc(g.score)}</b><span class="${g.winner === 'right' ? 'is-winner' : ''}">${esc(g.right)}</span></div></div>`).join('');
+    return `<article class="event-result-card${liveMatches ? ' event-result-card--match' : ''}"><div class="event-result-card__division">${esc(tourText(loc, r, 'division'))}</div><div class="event-result-card__podium"><div><span class="event-result-card__place"><b aria-hidden="true">${liveMatches ? '✓' : '🥇'}</b>${esc(liveMatches ? L('승리 팀', 'Winner') : L('우승', 'Champion'))}</span><strong>${esc(r.champ || '—')}</strong></div>${r.silver ? `<div><span class="event-result-card__place"><b aria-hidden="true">${liveMatches ? '•' : '🥈'}</b>${esc(liveMatches ? L('상대 팀', 'Opponent') : L('준우승', 'Runner-up'))}</span><strong>${esc(r.silver)}</strong></div>` : ''}${r.bronze ? `<div><span class="event-result-card__place"><b aria-hidden="true">🥉</b>${esc(L('3위', 'Bronze'))}</span><strong>${esc(r.bronze)}</strong></div>` : ''}</div>${r.score ? `<p class="event-result-card__score"><span>${esc(liveMatches ? L('매치 결과', 'Match result') : L('결승 스코어', 'Final score'))}</span><strong>${esc(r.score)}</strong></p>` : ''}${games ? `<div class="event-match-games"><div class="event-match-games__head"><span>${esc(L('세부 스코어', 'Game scores'))}</span><small>${esc(L('금요일 1차전', 'Friday Match 1'))}</small></div>${games}</div>` : ''}</article>`;
+  }).join('');
   const resultLinkHtml = resultLinks.map((x) => `<a class="btn btn--ghost" href="${escAttr(x.url)}" rel="nofollow noopener" target="_blank">${esc(loc === 'ko' && x.labelKo ? x.labelKo : x.label)} ↗</a>`).join('');
   const storyHtml = stories.map((story, index) => `<article class="event-story-card event-story-card--${(index % 4) + 1}"><span>${esc(loc === 'ko' && story.kickerKo ? story.kickerKo : story.kicker)}</span><h3>${esc(loc === 'ko' && story.titleKo ? story.titleKo : story.title)}</h3><p>${esc(loc === 'ko' && story.bodyKo ? story.bodyKo : story.body)}</p></article>`).join('');
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: proSceneLabel(loc, 'hub'), rel: 'pro-scene/' }, { name: tournamentLabel(loc, 'title'), rel: 'tournaments/' }, { name: title }])}
-<section class="tournament-detail-hero tournament-detail-hero--${escAttr(event.tour.toLowerCase())}"><div class="wrap tournament-detail-hero__grid"><div><div class="tournament-detail-hero__top"><span class="tour-status-label tour-status-label--${escAttr(event.status)}">${esc(tourStatusLabel(loc, event.status))}</span><span class="tour-chip">${esc(event.tour)}</span><span class="result-state result-state--${escAttr(resultStatus)}">${esc(tourResultStatusLabel(loc, resultStatus))}</span></div><h1>${esc(title)}</h1><p>${esc(dates)} · ${esc(location)}</p><div class="source-buttons"><a class="btn btn--primary" href="${escAttr(event.sourceUrl)}" rel="nofollow noopener" target="_blank">${esc(event.sourceName)} ↗</a>${event.secondaryUrl ? `<a class="btn btn--ghost" href="${escAttr(event.secondaryUrl)}" rel="nofollow noopener" target="_blank">${esc(event.secondaryName)} ↗</a>` : ''}</div></div><div class="tournament-detail-hero__score"><span>${esc(L('결과 확인 기준', 'Results checked'))}</span><strong>${esc(event.resultChecked || tourBoard.updated || '')}</strong><p>${esc(resultNote || L('공식 결과 페이지를 기준으로 업데이트합니다.', 'Updated from the official result page.'))}</p></div></div></section>
-<section class="band event-result-section"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">RESULTS</p><h2 class="band__title">${esc(liveMatches ? L('완료된 경기와 라이브 결과 상태', 'Completed matches and live result status') : L('우승자·입상자와 공식 결과 상태', 'Champions, finalists, and result status'))}</h2><p class="band__intro">${esc(results.length ? (liveMatches ? L('확인 시점까지 공식 스코어보드에서 완료된 경기입니다.', 'Matches completed on the official scoreboard at the stated checkpoint.') : L('공식 리캡에서 확인된 결승 결과입니다.', 'Finals verified from the official recap.')) : L('공식 결과표가 공개되는 즉시 이름과 스코어를 반영합니다.', 'Names and scores will appear as soon as the official table is published.'))}</p></div><span class="result-state result-state--${escAttr(resultStatus)}">${esc(tourResultStatusLabel(loc, resultStatus))}</span></div>${results.length ? `<div class="event-results-grid">${resultRows}</div>` : `<div class="result-pending-panel result-pending-panel--${escAttr(resultStatus)}"><div class="result-pending-panel__icon" aria-hidden="true">${resultStatus === 'upcoming' ? '◷' : (resultStatus === 'live' ? '●' : '⌛')}</div><div><h3>${esc(tourResultStatusLabel(loc, resultStatus))}</h3><p>${esc(resultNote)}</p><div class="source-buttons">${resultLinkHtml || `<a class="btn btn--ghost" href="${escAttr(event.sourceUrl)}" rel="nofollow noopener" target="_blank">${esc(L('공식 대회 페이지 확인', 'Check official event page'))} ↗</a>`}</div></div></div>`}</div></section>
+<section class="tournament-detail-hero tournament-detail-hero--${escAttr(event.tour.toLowerCase())}"><div class="wrap tournament-detail-hero__grid"><div><div class="tournament-detail-hero__top"><span class="tour-status-label tour-status-label--${escAttr(event.status)}">${esc(tourStatusLabel(loc, event.status))}</span><span class="tour-chip">${esc(event.tour)}</span><span class="result-state result-state--${escAttr(resultStatus)}">${esc(tourResultStatusLabel(loc, resultStatus))}</span></div><h1>${esc(title)}</h1><p>${esc(dates)} · ${esc(location)}</p><div class="source-buttons"><a class="btn btn--primary" href="${escAttr(event.sourceUrl)}" rel="nofollow noopener" target="_blank">${esc(loc === 'ko' && event.sourceNameKo ? event.sourceNameKo : event.sourceName)} ↗</a>${event.secondaryUrl ? `<a class="btn btn--ghost" href="${escAttr(event.secondaryUrl)}" rel="nofollow noopener" target="_blank">${esc(loc === 'ko' && event.secondaryNameKo ? event.secondaryNameKo : event.secondaryName)} ↗</a>` : ''}</div></div><div class="tournament-detail-hero__score"><span>${esc(L('결과 확인 시점', 'Results checked'))}</span><strong>${esc(loc === 'ko' && event.resultCheckedKo ? event.resultCheckedKo : (event.resultChecked || tourBoard.updated || ''))}</strong><p>${esc(resultNote || L('공식 결과 페이지를 기준으로 업데이트합니다.', 'Updated from the official result page.'))}</p></div></div></section>
+<section class="band event-result-section"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">RESULTS</p><h2 class="band__title">${esc(liveMatches ? L('완료된 경기와 라이브 결과 상태', 'Completed matches and live result status') : L('우승자·입상자와 공식 결과', 'Champions, finalists, and result status'))}</h2><p class="band__intro">${esc(results.length ? (liveMatches ? L('확인 시점까지 공식 스코어보드에서 완료된 경기입니다.', 'Matches completed on the official scoreboard at the stated checkpoint.') : L('공식 리캡에서 확인된 결승 결과입니다.', 'Finals verified from the official recap.')) : L('공식 결과가 확인되는 대로 선수 이름과 경기 점수를 반영합니다.', 'Names and scores will appear as soon as the official table is published.'))}</p></div><span class="result-state result-state--${escAttr(resultStatus)}">${esc(tourResultStatusLabel(loc, resultStatus))}</span></div>${results.length ? `<div class="event-results-grid">${resultRows}</div>` : `<div class="result-pending-panel result-pending-panel--${escAttr(resultStatus)}"><div class="result-pending-panel__icon" aria-hidden="true">${resultStatus === 'upcoming' ? '◷' : (resultStatus === 'live' ? '●' : '⌛')}</div><div><h3>${esc(tourResultStatusLabel(loc, resultStatus))}</h3><p>${esc(resultNote)}</p><div class="source-buttons">${resultLinkHtml || `<a class="btn btn--ghost" href="${escAttr(event.sourceUrl)}" rel="nofollow noopener" target="_blank">${esc(L('공식 대회 페이지 확인', 'Check official event page'))} ↗</a>`}</div></div></div>`}</div></section>
 ${mlpEventSections(loc, event)}
-<section class="band band--alt"><div class="wrap tournament-detail-grid"><article class="body-card tournament-detail-main"><p class="section-kicker">${esc(L('대회 브리핑', 'Event briefing'))}</p><h2>${esc(L('기본 정보와 현재 맥락', 'Event context'))}</h2><p>${esc(overview)}</p><div class="tournament-facts"><div><span>${esc(L('상태', 'Status'))}</span><strong>${esc(tourStatusLabel(loc, event.status))}</strong></div><div><span>${esc(L('투어', 'Tour'))}</span><strong>${esc(event.tour)}</strong></div><div><span>${esc(L('기간', 'Dates'))}</span><strong>${esc(dates)}</strong></div><div><span>${esc(L('장소', 'Location'))}</span><strong>${esc(location)}</strong></div></div></article><aside class="body-card tournament-detail-side tournament-detail-side--facts"><p class="section-kicker">${esc(L('숫자와 특이사항', 'Facts & notable details'))}</p><h2>${esc(L('이벤트를 이해하는 핵심 정보', 'What makes this event distinct'))}</h2><ul class="tour-detail-list">${notableFacts.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></aside></div></section>
-${storyHtml ? `<section class="event-stories-band"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">STORYLINES</p><h2 class="band__title">${esc(L('스코어 밖에서 봐야 할 이야기', 'The stories beyond the score'))}</h2><p class="band__intro">${esc(L('대회 포맷, 선수 성장, 일정과 시즌 경쟁이 결과에 어떤 의미를 더하는지 정리합니다.', 'Format, player development, scheduling, and season pressure explain what the result means.'))}</p></div></div><div class="event-story-grid">${storyHtml}</div></div></section>` : ''}
-<section class="band"><div class="wrap tournament-detail-columns"><article><p class="section-kicker">${esc(L('주요 출전·구성', 'Field & format'))}</p><h2>${esc(L('참가 선수·팀', 'Players and teams'))}</h2><ul class="tour-detail-list">${participants.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></article><article><p class="section-kicker">${esc(L('관전 포인트', 'What to watch'))}</p><h2>${esc(L('이번 대회의 핵심 질문', 'Key questions'))}</h2><ul class="tour-detail-list">${watch.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></article><article><p class="section-kicker">SEASON CONTEXT</p><h2>${esc(L('전체 시즌에서 갖는 의미', 'Why this event matters'))}</h2><p>${esc(storyline)}</p></article></div></section>
+<section class="band band--alt"><div class="wrap tournament-detail-grid"><article class="body-card tournament-detail-main"><p class="section-kicker">${esc(L('대회 요약', 'Event briefing'))}</p><h2>${esc(L('기본 정보와 현재 상황', 'Event context'))}</h2><p>${esc(overview)}</p><div class="tournament-facts"><div><span>${esc(L('상태', 'Status'))}</span><strong>${esc(tourStatusLabel(loc, event.status))}</strong></div><div><span>${esc(L('투어', 'Tour'))}</span><strong>${esc(event.tour)}</strong></div><div><span>${esc(L('기간', 'Dates'))}</span><strong>${esc(dates)}</strong></div><div><span>${esc(L('장소', 'Location'))}</span><strong>${esc(location)}</strong></div></div></article><aside class="body-card tournament-detail-side tournament-detail-side--facts"><p class="section-kicker">${esc(L('핵심 수치와 주요 내용', 'Facts & notable details'))}</p><h2>${esc(L('대회를 이해하는 핵심 정보', 'What makes this event distinct'))}</h2><ul class="tour-detail-list">${notableFacts.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></aside></div></section>
+${storyHtml ? `<section class="event-stories-band"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">STORYLINES</p><h2 class="band__title">${esc(L('스코어 밖에서 봐야 할 이야기', 'The stories beyond the score'))}</h2><p class="band__intro">${esc(L('대회 방식과 선수 성장, 일정, 시즌 경쟁 구도가 경기 결과에 어떤 의미를 더하는지 정리합니다.', 'Format, player development, scheduling, and season pressure explain what the result means.'))}</p></div></div><div class="event-story-grid">${storyHtml}</div></div></section>` : ''}
+<section class="band"><div class="wrap tournament-detail-columns"><article><p class="section-kicker">${esc(L('주요 참가 선수·구성', 'Field & format'))}</p><h2>${esc(L('참가 선수·팀', 'Players and teams'))}</h2><ul class="tour-detail-list">${participants.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></article><article><p class="section-kicker">${esc(L('관전 포인트', 'What to watch'))}</p><h2>${esc(L('이번 대회에서 주목할 점', 'Key questions'))}</h2><ul class="tour-detail-list">${watch.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></article><article><p class="section-kicker">SEASON CONTEXT</p><h2>${esc(L('시즌 전체에서 갖는 의미', 'Why this event matters'))}</h2><p>${esc(storyline)}</p></article></div></section>
 ${tournamentReadingSections(loc, event)}
-<section class="band band--alt"><div class="wrap"><h2 class="band__title">${esc(L('다음으로 이어 보기', 'Continue following'))}</h2><div class="tour-related-grid"><a href="${link(loc, 'pro-scene/')}"><strong>${esc(proSceneLabel(loc, 'hub'))}</strong><span>${esc(L('최신 게시판으로 돌아가기', 'Back to the live board'))} →</span></a><a href="${link(loc, 'pro-scene/players/')}"><strong>${esc(proSceneLabel(loc, 'players'))}</strong><span>${esc(L('선수 프로필과 스타일 보기', 'Player profiles and styles'))} →</span></a><a href="${link(loc, 'pro-scene/results/')}"><strong>${esc(proSceneLabel(loc, 'results'))}</strong><span>${esc(L('결과와 랭킹 연결', 'Results and rankings'))} →</span></a><a href="${link(loc, 'blogs/')}"><strong>${esc(proSceneLabel(loc, 'insights'))}</strong><span>${esc(L('전술·장비·스토리 심층 글', 'Tactics, gear, and long-form stories'))} →</span></a></div></div></section>`;
+<section class="band band--alt"><div class="wrap"><h2 class="band__title">${esc(L('다음으로 이어 보기', 'Continue following'))}</h2><div class="tour-related-grid"><a href="${link(loc, 'pro-scene/')}"><strong>${esc(proSceneLabel(loc, 'hub'))}</strong><span>${esc(L('최신 투어 보드로 돌아가기', 'Back to the live board'))} →</span></a><a href="${link(loc, 'pro-scene/players/')}"><strong>${esc(proSceneLabel(loc, 'players'))}</strong><span>${esc(L('선수 프로필과 스타일 보기', 'Player profiles and styles'))} →</span></a><a href="${link(loc, 'pro-scene/results/')}"><strong>${esc(proSceneLabel(loc, 'results'))}</strong><span>${esc(L('경기 결과와 랭킹 보기', 'Results and rankings'))} →</span></a><a href="${link(loc, 'blogs/')}"><strong>${esc(proSceneLabel(loc, 'insights'))}</strong><span>${esc(L('전술·장비·선수 이야기 심층 분석', 'Tactics, gear, and long-form stories'))} →</span></a></div></div></section>`;
   return layout({ loc, rel: 'tournaments/' + event.slug + '/', title, description: overview, bodyHtml: body });
 }
 
@@ -4236,10 +4242,10 @@ function resultRecap(loc, r) {
     const note = (loc === 'ko' && sx.noteKo) ? sx.noteKo : sx.note;
     return `<li class="race"><span class="race__rank">${i + 1}</span><span class="race__body"><span class="race__team">${esc(sx.team)}</span>${note ? `<span class="race__note">${esc(note)}</span>` : ''}</span></li>`;
   }).join('');
-  const standingsLabel = (loc === 'ko' && r.standingsLabelKo) ? r.standingsLabelKo : (r.standingsLabel || (loc === 'ko' ? '타이틀 레이스' : 'Title race'));
-  const liveBtn = r.liveUrl ? `<a class="btn btn--primary" href="${escAttr(r.liveUrl)}" rel="nofollow noopener" target="_blank">${esc((loc === 'ko' && r.liveLabelKo) ? r.liveLabelKo : (r.liveLabel || (loc === 'ko' ? '라이브 순위·스코어' : 'Live standings & scores')))} →</a>` : '';
+  const standingsLabel = (loc === 'ko' && r.standingsLabelKo) ? r.standingsLabelKo : (r.standingsLabel || (loc === 'ko' ? '우승 경쟁' : 'Title race'));
+  const liveBtn = r.liveUrl ? `<a class="btn btn--primary" href="${escAttr(r.liveUrl)}" rel="nofollow noopener" target="_blank">${esc((loc === 'ko' && r.liveLabelKo) ? r.liveLabelKo : (r.liveLabel || (loc === 'ko' ? '실시간 순위·경기 결과' : 'Live standings & scores')))} →</a>` : '';
   const verifyNote = loc === 'ko'
-    ? `결과는 ${esc(r.checked)} 확인 기준이며 사후 정정될 수 있습니다. 전체 브래킷·스코어는 공식 출처에서 확인하세요.`
+    ? `${esc(r.checked)} 확인 기준입니다. 이후 결과가 정정될 수 있으니 전체 대진표와 세부 점수는 공식 출처에서 확인해 주세요.`
     : `Results as of ${esc(r.checked)} and may be amended — see the official source for full brackets and scores.`;
   return `<article class="recap">
     <header class="recap__head">
@@ -4264,7 +4270,7 @@ function renderTournamentsCategory(loc, type) {
     ko: {
       tournaments: 'PPA, PPA Challenger, MLP 등 미국 주요 대회의 일정·장소·참가 요강 확인 경로를 정리합니다.',
       international: '미국 외 국제 대회와 글로벌 확장 관련 일정·참가 요강 확인 경로를 정리합니다.',
-      results: '올해 실제 개최된 주요 대회의 경기 결과, 메달리스트, 브래킷 확인 경로와 현재 종목별 선두 현황을 정리합니다.'
+      results: '올해 열린 주요 대회의 경기 결과와 메달리스트, 공식 대진표 확인 링크, 종목별 상위 선수 현황을 정리합니다.'
     },
     en: {
       tournaments: 'U.S. event schedules, locations, entry notes, and event-page source links.',
@@ -4291,18 +4297,18 @@ function renderTournamentsCategory(loc, type) {
     ${exploreCard(link(loc, 'players/anna-bright/'), loc === 'ko' ? '선수' : 'Player', 'Anna Bright', loc === 'ko' ? 'St. Louis Shock 연승의 주역' : 'Powering the Shock’s winning streak')}
     ${exploreCard(link(loc, 'players/ben-johns/'), loc === 'ko' ? '선수' : 'Player', 'Ben Johns', loc === 'ko' ? 'LA Mad Drops 라인업의 핵심' : 'Anchor of the LA Mad Drops lineup')}
     ${exploreCard(link(loc, 'players/tyson-mcguffin/'), loc === 'ko' ? '선수' : 'Player', 'Tyson McGuffin', loc === 'ko' ? '신생 Palm Beach Royals를 이끈다' : 'Leading the expansion Palm Beach Royals')}
-    ${exploreCard(link(loc, 'level/'), loc === 'ko' ? '레벨' : 'Levels', loc === 'ko' ? '내 레벨 알아보기' : 'Find your level', loc === 'ko' ? '2.0–5.0 레벨별 기술과 성장법' : 'Skills and step-ups from 2.0 to 5.0')}
+    ${exploreCard(link(loc, 'level/'), loc === 'ko' ? '레벨' : 'Levels', loc === 'ko' ? '내 레벨 알아보기' : 'Find your level', loc === 'ko' ? '2.0–5.0 레벨별 기술과 연습 방향' : 'Skills and step-ups from 2.0 to 5.0')}
     ${exploreCard(link(loc, 'tools/paddle-finder/'), loc === 'ko' ? '도구' : 'Tool', loc === 'ko' ? '패들 파인더' : 'Paddle Finder', loc === 'ko' ? '플레이 스타일에 맞는 패들 추천' : 'Matched to your playing style')}
   </div></div></section>` : '';
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: tournamentLabel(loc, 'title'), rel: 'tournaments/' }, { name: title }])}
 <section class="page-head"><div class="wrap"><p class="page-head__eyebrow">${esc(tournamentLabel(loc, 'nav'))}</p><h1>${esc(title)}</h1><p class="page-head__intro">${esc(intro)}</p></div></section>
-<section class="band"><div class="wrap">${tournamentTabs(loc, key)}${isResults ? `<h2 class="band__title">${esc(loc === 'ko' ? '현재 종목별 선두' : 'Current discipline leaders')}</h2>${rankingsBoard(loc)}<h2 class="band__title">${esc(loc === 'ko' ? '최근 대회 결과' : 'Recent results')}</h2><div class="recaps">${recapsHtml}</div>` : `<div class="update-grid">${items.length ? items.map((u) => updateCard(u, loc)).join('') : `<p class="notice">${esc(tournamentLabel(loc, 'noItems'))}</p>`}</div>`}</div></section>
+<section class="band"><div class="wrap">${tournamentTabs(loc, key)}${isResults ? `<h2 class="band__title">${esc(loc === 'ko' ? '현재 종목별 상위 선수' : 'Current discipline leaders')}</h2>${rankingsBoard(loc)}<h2 class="band__title">${esc(loc === 'ko' ? '최근 경기 결과' : 'Recent results')}</h2><div class="recaps">${recapsHtml}</div>` : `<div class="update-grid">${items.length ? items.map((u) => updateCard(u, loc)).join('') : `<p class="notice">${esc(tournamentLabel(loc, 'noItems'))}</p>`}</div>`}</div></section>
 ${exploreBlock}${tournamentDepthBlock(loc, type)}<section class="band band--alt"><div class="wrap"><h2 class="band__title">${esc(tournamentLabel(loc, 'sources'))}</h2>${updateSourceCards(loc, type)}</div></section>`;
   return layout({ loc, rel: relMap[type], title: title + ' · ' + tournamentLabel(loc, 'title'), description: intro, bodyHtml: body });
 }
 function paddleUpdatesLabel(loc, key) {
   const labels = {
-    ko: { title: '패들 출시·리뷰 업데이트', intro: '신규 패들 출시, 가격 변화, 시장 반응, 리뷰어 평가를 패들 정보와 함께 확인합니다. 가격·승인 여부·리뷰 점수는 반드시 원문에서 최종 확인하세요.', sources: '패들 확인 출처', latest: '최근 패들 업데이트', noItems: '아직 확인된 패들 업데이트가 없습니다.', viewAll: '패들 업데이트 보기' },
+    ko: { title: '패들 신제품·리뷰 업데이트', intro: '새로 나온 패들, 가격 변화, 주요 리뷰 평가를 한곳에서 확인합니다. 가격과 공식 승인 여부, 리뷰 점수는 구매 전에 원문 출처에서 다시 확인하세요.', sources: '패들 확인 출처', latest: '최근 패들 업데이트', noItems: '아직 확인된 패들 업데이트가 없습니다.', viewAll: '패들 업데이트 보기' },
     en: { title: 'Paddle launch & review updates', intro: 'New paddle launches, price changes, market reaction, and reviewer-score notes inside the paddle section. Always verify price, legality, and review sources before buying.', sources: 'Paddle sources', latest: 'Latest paddle updates', noItems: 'No paddle updates have been approved yet.', viewAll: 'View paddle updates' },
     es: { title: 'Lanzamientos y reviews de palas', intro: 'Nuevas palas, cambios de precio, reacción del mercado y notas de reviewers dentro de la sección de palas. Verifica precio, legalidad y reviews antes de comprar.', sources: 'Fuentes de palas', latest: 'Updates recientes de palas', noItems: 'Todavía no hay updates de palas aprobados.', viewAll: 'Ver updates de palas' }
   };
@@ -4364,13 +4370,13 @@ function simplePage(loc, rel, titleText, introText, htmlBody, opts) {
 function renderAbout(loc) {
   const principles = editorialPrinciplesFor(loc).map((p) => `<li>${esc(p)}</li>`).join('');
   const html = loc === 'ko' ? `
-<p>${esc(config.siteName)}은 피클볼 플레이어가 자신의 레벨에 맞는 규칙, 스킬, 패들, 프로 선수 정보를 쉽게 찾도록 만든 독립 정보 사이트입니다. 특정 브랜드나 단체의 공식 사이트가 아니며, 독자가 더 나은 결정을 내릴 수 있도록 공식 출처 확인 경로를 함께 제공합니다.</p>
+<p>${esc(config.siteName)}은 피클볼 선수가 자신의 레벨에 맞는 규칙, 스킬, 패들, 프로 선수 정보를 쉽게 찾도록 만든 독립 정보 사이트입니다. 특정 브랜드나 단체의 공식 사이트가 아니며, 독자가 더 나은 결정을 내릴 수 있도록 공식 출처 확인 경로를 함께 제공합니다.</p>
 <h2>무엇을 다루나요</h2>
 <p>핵심 주제는 네 가지입니다. 첫째, 2.0부터 5.0까지의 레벨별 규칙과 스킬 학습. 둘째, 브랜드별 인기 패들의 가격, 형태, 성향 비교. 셋째, 세계 유명 선수의 플레이 스타일과 공식 프로필 연결. 넷째, 영상 피드백과 하이라이트를 통한 커뮤니티 학습입니다.</p>
 <h2>콘텐츠 작성 기준</h2>
 <ul class="principles">${principles}</ul>
 <h2>누가 운영하나요</h2>
-<p>${esc(ownerBio(loc))} 문의, 오류 제보, 제휴 문의는 <a href="mailto:${escAttr(config.email)}">${esc(config.email)}</a>로 보내주세요. 글 작성 기준은 <a href="${link(loc, 'editorial-policy/')}">편집 정책</a>과 <a href="${link(loc, 'corrections-policy/')}">정정 정책</a>에서 확인할 수 있습니다.</p><h2>왜 Picklary를 만들었나요</h2><p>피클볼을 시작하면 규칙, 레벨, DUPR, 패들, 복식 포지셔닝, 프로 경기 정보가 서로 흩어져 있어 초보자가 한 번에 이해하기 어렵습니다. Picklary는 그 흩어진 정보를 그대로 복사하는 대신, 동호인이 실제로 다음 행동을 정할 수 있게 정리하는 것을 목표로 합니다. 예를 들어 자가진단 결과를 레벨 페이지로 연결하고, 레벨 페이지를 샷 연습과 패들 선택으로 연결하는 식입니다.</p><p>사이트의 장기 방향은 광고 수익보다 재방문 가치입니다. 사용자가 오늘은 DUPR 자가진단을 하고, 다음에는 패들 비교를 보고, 이후에는 프로 선수의 패턴을 공부하며 다시 돌아오도록 만드는 구조가 핵심입니다.</p>` : `
+<p>${esc(ownerBio(loc))} 문의, 오류 제보, 제휴 문의는 <a href="mailto:${escAttr(config.email)}">${esc(config.email)}</a>로 보내주세요. 글 작성 기준은 <a href="${link(loc, 'editorial-policy/')}">편집 정책</a>과 <a href="${link(loc, 'corrections-policy/')}">정정 정책</a>에서 확인할 수 있습니다.</p><h2>왜 Picklary를 만들었나요</h2><p>피클볼을 시작하면 규칙, 레벨, DUPR, 패들, 복식 위치 선정, 프로 경기 정보가 서로 흩어져 있어 초보자가 한 번에 이해하기 어렵습니다. Picklary는 그 흩어진 정보를 그대로 복사하는 대신, 동호인이 실제로 다음 행동을 정할 수 있게 정리하는 것을 목표로 합니다. 예를 들어 자가진단 결과를 레벨 페이지로 연결하고, 레벨 페이지를 샷 연습과 패들 선택으로 연결하는 식입니다.</p><p>사이트의 장기 방향은 광고 수익보다 재방문 가치입니다. 사용자가 오늘은 DUPR 자가진단을 하고, 다음에는 패들 비교를 보고, 이후에는 프로 선수의 패턴을 공부하며 다시 돌아오도록 만드는 구조가 핵심입니다.</p>` : `
 <p>${esc(config.siteName)} is an independent information site about pickleball, written for players who want to choose gear sensibly and steadily improve. It is not a news aggregator, bookmaker, or marketplace — it is a curated hub of practical guides.</p>
 <h2>What we cover</h2>
 <p>Four core experiences: level-based rules and skills from 2.0 to 5.0, paddle research by brand and play style, pro player profile research, and highlight/video feedback education.</p>
@@ -4431,7 +4437,7 @@ function renderAuthor(loc) {
   <ul class="principles">${principles}</ul>
 
   <h2>${esc(loc === 'ko' ? '작성자 관점' : 'Author perspective')}</h2>
-  <p>${esc(loc === 'ko' ? 'Picklary의 글은 프로 코치의 공식 커리큘럼을 대체하려는 것이 아니라, 동호인이 실제 게임을 하며 자주 만나는 선택지를 이해하기 쉽게 정리하려는 목적입니다. 패들 추천이나 레벨 판단도 하나의 정답처럼 말하지 않고, 어떤 플레이어에게 왜 맞는지와 어떤 한계가 있는지 함께 설명합니다.' : 'Picklary articles are not meant to replace a professional coaching curriculum. They are written to make common club-player decisions easier to understand. Gear suggestions and level notes are not presented as one universal answer; they explain who a choice may fit, why it may fit, and what limitations remain.')}</p>
+  <p>${esc(loc === 'ko' ? 'Picklary의 글은 프로 코치의 공식 커리큘럼을 대체하려는 것이 아니라, 동호인이 실제 게임을 하며 자주 만나는 선택지를 이해하기 쉽게 정리하려는 목적입니다. 패들 추천이나 레벨 판단도 하나의 정답처럼 말하지 않고, 어떤 선수에게 왜 맞는지와 어떤 한계가 있는지 함께 설명합니다.' : 'Picklary articles are not meant to replace a professional coaching curriculum. They are written to make common club-player decisions easier to understand. Gear suggestions and level notes are not presented as one universal answer; they explain who a choice may fit, why it may fit, and what limitations remain.')}</p>
   <p>${esc(loc === 'ko' ? '사이트가 성장할수록 직접 플레이 경험, 공개 스펙 비교, 공식 출처 확인, 독자 피드백을 구분해 기록할 예정입니다. 이 구분은 독자가 광고, 제휴 링크, 개인 의견, 현재 사실을 혼동하지 않도록 하기 위한 운영 원칙입니다.' : 'As the site grows, it will keep separating personal playing observation, published-spec comparison, official-source verification, and reader feedback. That separation helps readers understand the difference between ads, affiliate links, opinion, and current facts.')}</p>
   <p>${esc(loc === 'ko' ? '작성자 페이지를 별도로 둔 이유는 사이트의 책임 소재와 편집 기준을 더 명확하게 보여 주기 위해서입니다. 방문자가 특정 패들 평가나 레벨 조언을 읽을 때 누가 어떤 관점으로 썼는지 확인할 수 있으면, 사이트 전체의 신뢰도가 높아집니다.' : 'The author page exists to make accountability and editorial perspective clearer. When readers see a paddle note or level recommendation, they can understand who wrote it and from what point of view, which strengthens trust across the site.')}</p>
 
@@ -4512,8 +4518,8 @@ function renderTool(loc) {
         forgiving: L('forgiving, maneuverable shape', '관용적이고 다루기 쉬운 형태'), player: L('associated line: {x}', '연관/시그니처 라인: {x}')
       },
       profile: {
-        title: L('Your ideal paddle profile', '당신에게 맞는 패들 프로필'),
-        intro: L('Based on your answers, this is the core thickness and shape that tend to fit you best:', '답변을 바탕으로, 당신에게 가장 잘 맞는 코어 두께와 모양은 다음과 같습니다:'),
+        title: L('Your ideal paddle profile', '내게 맞는 패들 프로필'),
+        intro: L('Based on your answers, this is the core thickness and shape that tend to fit you best:', '답변을 바탕으로 잘 맞을 가능성이 높은 코어 두께와 패들 형태를 정리했습니다:'),
         thicknessLabel: L('Core thickness', '코어 두께'), shapeLabel: L('Paddle shape', '패들 모양'),
         t16: L('16 mm', '16mm'), t14: L('14 mm', '14mm'),
         t16why: L('A thicker core gives more control, dwell, and forgiveness — easier resets and dinks.', '두꺼운 코어는 컨트롤·체류감·관용성이 커서 리셋과 딩크가 쉬워집니다.'),
@@ -4532,13 +4538,13 @@ function renderTool(loc) {
     '플레이 스타일·레벨·예산으로 맞는 피클볼 패들을 찾고, 코어 두께(14 vs 16mm)·모양(와이드바디·하이브리드·엘롱게이티드)·무게·그립 선택법까지 쉽게 정리한 가이드.');
   const guideHtml = `
     <h2>${esc(L('How this finder works', '이 파인더는 이렇게 작동합니다'))}</h2>
-    <p>${esc(L('This finder weighs your answers across eight factors — play style, level, budget, preferred feel and thickness, weight, height, hand size, and a favourite player\u2019s style — then ranks paddles from our curated list and shows the core thickness and shape that tend to fit you. Treat the result as a starting point: confirm the current price and exact spec at the source before buying, and demo a paddle whenever you can.', '이 파인더는 플레이 스타일·레벨·예산·선호 감과 두께·무게·신장·손 크기·좋아하는 선수 스타일까지 8가지 답변을 종합해, 큐레이션한 목록에서 패들을 순위로 추천하고 당신에게 맞는 코어 두께와 모양도 알려줍니다. 결과는 출발점으로 삼고, 구매 전 출처에서 현재 가격과 정확한 사양을 확인하고 가능하면 직접 쳐보세요.'))}</p>
+    <p>${esc(L('This finder weighs your answers across eight factors — play style, level, budget, preferred feel and thickness, weight, height, hand size, and a favourite player\u2019s style — then ranks paddles from our curated list and shows the core thickness and shape that tend to fit you. Treat the result as a starting point: confirm the current price and exact spec at the source before buying, and demo a paddle whenever you can.', '이 파인더는 플레이 스타일·레벨·예산·선호 감과 두께·무게·신장·손 크기·좋아하는 선수 스타일까지 8가지 답변을 종합해, 큐레이션한 목록에서 패들을 순위로 추천하고 잘 맞을 가능성이 높은 코어 두께와 형태도 보여줍니다. 결과는 출발점으로 삼고, 구매 전 출처에서 현재 가격과 정확한 사양을 확인하고 가능하면 직접 쳐보세요.'))}</p>
     <h2>${esc(L('Core thickness: 14 mm vs 16 mm', '코어 두께: 14mm vs 16mm'))}</h2>
     <p>${esc(L('A 16 mm (thicker) core gives more control, longer dwell time, a softer feel, and more forgiveness on resets and dinks, with slightly less raw pop. It suits control players, beginners, and anyone building a soft, touch-based kitchen game.', '16mm(두꺼운) 코어는 컨트롤·체류감·부드러운 감·관용성이 크고 리셋과 딩크에 유리하며, 순수 팝은 약간 적습니다. 컨트롤 지향, 입문자, 부드러운 터치 위주의 키친 게임을 만드는 사람에게 맞습니다.'))}</p>
-    <p>${esc(L('A 14 mm (thinner) core gives more pop, faster hand speed at the net, and a firmer, livelier feel, but it is a little less forgiving. It suits power players, fast-hands players, and those who create their own control. Many models offer both thicknesses, and for most players thickness changes the feel more than the shape does.', '14mm(얇은) 코어는 팝과 네트에서의 손 속도가 빠르고 더 단단하고 경쾌하지만 관용성은 약간 낮습니다. 파워·빠른 손 플레이어, 스스로 컨트롤을 만드는 사람에게 맞습니다. 다수 모델이 두 두께로 나오며, 많은 사람에게 두께는 모양보다 감을 더 크게 바꿉니다.'))}</p>
+    <p>${esc(L('A 14 mm (thinner) core gives more pop, faster hand speed at the net, and a firmer, livelier feel, but it is a little less forgiving. It suits power players, fast-hands players, and those who create their own control. Many models offer both thicknesses, and for most players thickness changes the feel more than the shape does.', '14mm처럼 얇은 코어는 팝이 빠르고 네트 앞 반응이 경쾌한 대신 관용성은 조금 낮을 수 있습니다. 빠른 공격 전개를 좋아하거나 스스로 컨트롤을 만들어 내는 선수에게 잘 맞습니다. 같은 모델이라도 두께에 따라 타구감 차이가 크게 느껴질 수 있습니다.'))}</p>
     <h2>${esc(L('Paddle shape: widebody, hybrid, elongated', '패들 모양: 와이드바디·하이브리드·엘롱게이티드'))}</h2>
     <ul>
-      <li>${esc(L('Widebody (standard, about 16 in \u00d7 8 in): the biggest sweet spot and the most forgiveness, easy to control and maneuver, with less reach — a great fit for beginners and for control or hands players.', '와이드바디(표준, 약 16″×8″): 스위트스폿이 가장 크고 관용성이 높아 컨트롤과 조작이 쉽지만 리치는 짧습니다. 입문자와 컨트롤·핸즈 플레이어에게 좋습니다.'))}</li>
+      <li>${esc(L('Widebody (standard, about 16 in \u00d7 8 in): the biggest sweet spot and the most forgiveness, easy to control and maneuver, with less reach — a great fit for beginners and for control or hands players.', '와이드바디(표준, 약 16″×8″): 스위트스폿이 가장 크고 관용성이 높아 컨트롤과 조작이 쉽지만 리치는 짧습니다. 입문자와 컨트롤·핸즈 선수에게 좋습니다.'))}</li>
       <li>${esc(L('Elongated (about 16.5 in \u00d7 7.5 in): more reach and leverage for power and spin, but a smaller, higher sweet spot that rewards consistent contact — suited to taller players, two-handed backhands, and power baseline games.', '엘롱게이티드(약 16.5″×7.5″): 리치와 레버리지가 커서 파워·스핀에 유리하지만 스위트스폿이 작고 높아 일관된 타점이 필요합니다. 키가 크거나 양손 백핸드, 베이스라인 파워 게임에 맞습니다.'))}</li>
       <li>${esc(L('Hybrid: a middle ground that balances sweet spot, reach, and maneuverability — a safe all-court choice if you are unsure.', '하이브리드: 스위트스폿·리치·기동성의 균형을 맞춘 중간형으로, 고민될 때 무난한 올코트 선택입니다.'))}</li>
     </ul>
@@ -4550,7 +4556,7 @@ function renderTool(loc) {
   const faqs = [
     [L('Is 14 mm or 16 mm better?', '14mm와 16mm 중 뭐가 더 좋나요?'), L('Neither is universally better. A 16 mm core leans toward control and forgiveness; a 14 mm core leans toward pop and hand speed. Choose by your game — and note that many models come in both.', '절대적으로 더 나은 건 없습니다. 16mm는 컨트롤·관용성에, 14mm는 팝·손 속도에 가깝습니다. 본인 게임에 맞춰 고르세요 — 다수 모델이 두 두께로 함께 나옵니다.')],
     [L('What paddle shape should a beginner use?', '입문자는 어떤 패들 모양이 좋나요?'), L('A widebody (standard) shape. Its larger sweet spot and forgiveness make it the easiest to control while you build consistency.', '와이드바디(표준) 모양이 좋습니다. 스위트스폿이 크고 관용성이 높아, 일관성을 키우는 동안 컨트롤하기 가장 쉽습니다.')],
-    [L('Do elongated paddles really add power?', '엘롱게이티드 패들이 정말 파워가 더 나오나요?'), L('They add reach and leverage that can increase power and spin, but the sweet spot is smaller and sits higher, so they reward consistent contact and suit more experienced players.', '리치와 레버리지가 커서 파워·스핀이 늘 수 있지만, 스위트스폿이 작고 위쪽에 있어 일관된 타점이 필요하고 더 숙련된 플레이어에게 맞습니다.')],
+    [L('Do elongated paddles really add power?', '엘롱게이티드 패들이 정말 파워가 더 나오나요?'), L('They add reach and leverage that can increase power and spin, but the sweet spot is smaller and sits higher, so they reward consistent contact and suit more experienced players.', '리치와 레버리지가 커서 파워·스핀이 늘 수 있지만, 스위트스폿이 작고 위쪽에 있어 일관된 타점이 필요하고 더 숙련된 선수에게 맞습니다.')],
     [L('How heavy should my paddle be?', '패들 무게는 어느 정도가 좋나요?'), L('Most players land around 7.9–8.3 oz. Lighter gives quicker hands; heavier gives more stability and plow-through. You can add lead or tungsten tape to fine-tune.', '대부분 약 7.9~8.3oz에 자리합니다. 가벼우면 손이 빠르고, 무거우면 안정감과 관통력이 큽니다. 납·텅스텐 테이프로 미세 조정할 수 있습니다.')],
     [L('Are these fit suggestions sponsored?', '이 적합 후보는 협찬인가요?'), L('No. They come from a curated list and general fit, not paid placement. Always confirm the current price and exact spec at the source before buying.', '아닙니다. 큐레이션한 목록과 일반적 적합성에 기반하며 유료 배치가 아닙니다. 구매 전 반드시 출처에서 현재 가격과 정확한 사양을 확인하세요.')],
   ];
@@ -4671,7 +4677,7 @@ function legalBodies(loc) {
 <p>랭킹, DUPR, 대회 결과, 가격, 승인 장비 목록은 수시로 바뀝니다. 중요한 결정 전에는 연결된 공식 출처를 확인하세요.</p>
 <p class="muted">최종 수정일: ${esc(date)}</p>`,
     editorial: `
-<p>${esc(site)}은 피클볼 플레이어에게 실제로 도움이 되는 정보만 게시하는 것을 목표로 합니다. 검색 유입을 위한 얕은 글보다, 독자가 레벨·스킬·패들·선수 정보를 더 잘 이해하도록 돕는 글을 우선합니다.</p>
+<p>${esc(site)}은 피클볼 선수에게 실제로 도움이 되는 정보만 게시하는 것을 목표로 합니다. 검색 유입을 위한 얕은 글보다, 독자가 레벨·스킬·패들·선수 정보를 더 잘 이해하도록 돕는 글을 우선합니다.</p>
 <h2>작성 원칙</h2>
 <ul class="principles">${editorialPrinciplesFor(loc).map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
 <h2>출처 기준</h2>
@@ -4818,7 +4824,7 @@ function renderVisionRating(loc) {
     : esc(title);
   const edition = L('한글판', 'English edition');
   const intro = L(
-    '한국어 UI와 한국어 결과 보고서를 제공하는 Windows 로컬 영상 분석 프로그램입니다. 내 경기 영상을 PC의 GPU 또는 CPU로 분석해 Picklary DUPR 근사치, 7점 만점의 6축 능력치, 샷·전술·이동 분석을 확인합니다.',
+    '내 경기 영상을 Windows PC에서 직접 분석하는 프로그램입니다. 한국어 화면과 한국어 결과 보고서를 제공하며, PC의 GPU 또는 CPU를 사용해 Picklary DUPR 근사치와 7점 만점의 6개 능력치, 샷·전술·움직임 분석을 보여줍니다.',
     'A Windows local video-analysis program with an English interface and English result reports. Analyze your own match video on your PC to receive Picklary DUPR estimates, a six-axis profile scored out of 7, and detailed shot, tactical, and movement insights.'
   );
   const download = ko
@@ -4845,11 +4851,11 @@ function renderVisionRating(loc) {
   const labels = axes.map((label, i) => { const [x,y,a] = labelPositions[i]; return `<text x="${x}" y="${y}" text-anchor="${a}" dominant-baseline="middle"><tspan class="vision-radar-label">${esc(label)}</tspan><tspan class="vision-radar-value" x="${x}" dy="18">${values[i].toFixed(1)} / 7</tspan></text>`; }).join('');
   const radarSvg = `<svg class="vision-demo-radar" viewBox="0 0 420 380" role="img" aria-label="${escAttr(L('7점 만점 육각형 경기 능력 예시', 'Example six-axis performance profile scored out of 7'))}"><defs><linearGradient id="visionRadarFill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#53e6bc" stop-opacity=".78"/><stop offset=".55" stop-color="#53c9ee" stop-opacity=".54"/><stop offset="1" stop-color="#8a79ff" stop-opacity=".42"/></linearGradient><filter id="visionRadarGlow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>${grid}${spokes}<polygon points="${radarPoints}" fill="url(#visionRadarFill)" stroke="#79f5d1" stroke-width="3" filter="url(#visionRadarGlow)"/>${dots}${labels}</svg>`;
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: title }])}
-<section class="vision-hero vision-hero--v062 ${ko ? 'vision-hero--ko' : 'vision-hero--en'}"><div class="wrap vision-hero__grid"><div><p class="page-head__eyebrow">${esc(L('LOCAL AI VIDEO ANALYSIS · v0.2.4 · KOREAN EDITION', 'LOCAL AI VIDEO ANALYSIS · v0.2.4 · ENGLISH EDITION'))}</p><h1 class="vision-hero__title${ko ? ' vision-hero__title--ko' : ''}">${titleHtml}</h1><p class="vision-hero__intro${ko ? ' vision-hero__intro--ko' : ''}">${esc(intro)}</p><div class="vision-edition-badge vision-edition-badge--single"><span>${ko ? 'KO' : 'EN'}</span><div><strong>${esc(L('한글 UI · 한글 결과 보고서', 'English UI · English result reports'))}</strong><small>${esc(L('현재 한국어 페이지는 한글판만 제공합니다.', 'This English page provides the English edition only.'))}</small></div></div><div class="vision-hero__actions"><a class="btn btn--primary" href="${download}" download>${esc(L('한글판 v0.2.4 다운로드', 'Download English v0.2.4'))}</a><a class="btn btn--ghost" href="${sample}" target="_blank" rel="noopener">${esc(L('한글 결과 예시 보기', 'View English result example'))} ↗</a></div><div class="vision-trust-row"><span>🔒 ${esc(L('서버 업로드 없음', 'No server upload'))}</span><span>⚡ GPU ${esc(L('우선', 'first'))}</span><span>🧠 CPU ${esc(L('자동 대체', 'fallback'))}</span><span>🗂 ${esc(L('한글 UI·보고서', 'English UI & report'))}</span></div><p class="vision-hero__fine">${esc(L('공식 DUPR가 아닌 Picklary 독립 근사치입니다. 결과는 영상 품질, 카메라 각도와 검출 신뢰도에 영향을 받습니다.', 'This is an independent Picklary estimate, not an official DUPR rating. Results depend on video quality, camera angle, and detection confidence.'))}</p></div><div class="vision-hero-preview"><div class="vision-hero-preview__top"><span>${esc(L('결과 미리보기 · 7점 만점', 'RESULT PREVIEW · 7-POINT SCALE'))}</span><strong>4.61</strong><small>Picklary DUPR</small></div>${radarSvg}<div class="vision-hero-preview__caption"><strong>${esc(L('내 플레이는 어떤 모양일까요?', 'What shape is your game?'))}</strong><span>${esc(L('영상 한 편으로 강점과 보완점을 서로 다른 6축 점수로 확인합니다.', 'Turn one match video into a clearly differentiated six-axis picture of strengths and priorities.'))}</span></div></div></div></section>
+<section class="vision-hero vision-hero--v062 ${ko ? 'vision-hero--ko' : 'vision-hero--en'}"><div class="wrap vision-hero__grid"><div><p class="page-head__eyebrow">${esc(L('LOCAL AI VIDEO ANALYSIS · v0.2.4 · KOREAN EDITION', 'LOCAL AI VIDEO ANALYSIS · v0.2.4 · ENGLISH EDITION'))}</p><h1 class="vision-hero__title${ko ? ' vision-hero__title--ko' : ''}">${titleHtml}</h1><p class="vision-hero__intro${ko ? ' vision-hero__intro--ko' : ''}">${esc(intro)}</p><div class="vision-edition-badge vision-edition-badge--single"><span>${ko ? 'KO' : 'EN'}</span><div><strong>${esc(L('한글 UI · 한글 결과 보고서', 'English UI · English result reports'))}</strong><small>${esc(L('한국어 페이지에서는 한글판 프로그램과 한글 결과 보고서만 제공합니다.', 'This English page provides the English edition only.'))}</small></div></div><div class="vision-hero__actions"><a class="btn btn--primary" href="${download}" download>${esc(L('한글판 v0.2.4 다운로드', 'Download English v0.2.4'))}</a><a class="btn btn--ghost" href="${sample}" target="_blank" rel="noopener">${esc(L('한글 결과 예시 보기', 'View English result example'))} ↗</a></div><div class="vision-trust-row"><span>🔒 ${esc(L('서버 업로드 없음', 'No server upload'))}</span><span>⚡ GPU ${esc(L('우선', 'first'))}</span><span>🧠 CPU ${esc(L('자동 대체', 'fallback'))}</span><span>🗂 ${esc(L('한글 UI·보고서', 'English UI & report'))}</span></div><p class="vision-hero__fine">${esc(L('공식 DUPR가 아닌 Picklary 독립 근사치입니다. 결과는 영상 품질, 카메라 각도와 검출 신뢰도에 영향을 받습니다.', 'This is an independent Picklary estimate, not an official DUPR rating. Results depend on video quality, camera angle, and detection confidence.'))}</p></div><div class="vision-hero-preview"><div class="vision-hero-preview__top"><span>${esc(L('결과 미리보기 · 7점 만점', 'RESULT PREVIEW · 7-POINT SCALE'))}</span><strong>4.61</strong><small>Picklary DUPR</small></div>${radarSvg}<div class="vision-hero-preview__caption"><strong>${esc(L('내 플레이는 어떤 모양일까요?', 'What shape is your game?'))}</strong><span>${esc(L('경기 영상 한 편으로 여섯 가지 능력의 강점과 보완점을 한눈에 확인할 수 있습니다.', 'Turn one match video into a clearly differentiated six-axis picture of strengths and priorities.'))}</span></div></div></div></section>
 <nav class="vision-section-nav" aria-label="${escAttr(L('비전 레이팅 페이지 메뉴', 'Vision Rating page menu'))}"><div class="wrap"><a href="#how"><span>1</span><strong>${esc(L('사용방법', 'How it works'))}</strong><small>${esc(L('영상 준비부터 보고서까지', 'From video to report'))}</small></a><a href="#logic"><span>2</span><strong>${esc(L('평가 로직', 'Rating logic'))}</strong><small>${esc(L('무엇을 보고 점수화하나요?', 'What is measured?'))}</small></a><a href="#result"><span>3</span><strong>${esc(L('결과 예시', 'Result example'))}</strong><small>${esc(L('7점 만점 육각형 프로필', '7-point radar profile'))}</small></a></div></nav>
 <section id="how" class="band vision-story-section"><div class="wrap"><div class="vision-section-heading"><div><p class="section-kicker">01 · ${esc(L('사용방법', 'HOW IT WORKS'))}</p><h2>${esc(L('내 영상이 한글 분석 보고서가 되는 과정', 'From your video to an English performance report'))}</h2><p>${esc(L('한글판을 설치한 뒤 영상과 최소한의 경기 정보를 입력하면 프로그램이 로컬 GPU 또는 CPU에서 분석하고 한글 결과를 생성합니다.', 'Install the English edition, select a match video, and enter a small amount of match context. Analysis runs on your local GPU or CPU and produces an English report.'))}</p></div><a class="btn btn--primary" href="${download}" download>${esc(L('한글판 다운로드', 'Download English edition'))}</a></div><div class="vision-step-grid"><article><span>01</span><div class="vision-step-icon">🎥</div><h3>${esc(L('경기 영상 선택', 'Choose a match video'))}</h3><p>${esc(L('고정 카메라로 촬영한 MP4 영상을 불러옵니다. 전체 코트와 4명의 선수가 보일수록 좋습니다.', 'Load an MP4 recorded from a stable camera. Full-court visibility and all four players improve analysis.'))}</p></article><article><span>02</span><div class="vision-step-icon">📐</div><h3>${esc(L('코트·선수 확인', 'Confirm court and players'))}</h3><p>${esc(L('자동 인식을 확인하고 필요한 경우 코트 8점과 선수 위치를 직접 지정합니다.', 'Review automatic detection and manually mark eight court points or player positions only when needed.'))}</p></article><article><span>03</span><div class="vision-step-icon">⚙️</div><h3>${esc(L('로컬 분석 실행', 'Run local analysis'))}</h3><p>${esc(L('DirectML GPU를 우선 사용하고 사용할 수 없으면 CPU로 자동 전환합니다. 영상은 외부 서버로 전송되지 않습니다.', 'The app prefers a DirectML GPU and automatically falls back to CPU. Your video is not sent to an external server.'))}</p></article><article><span>04</span><div class="vision-step-icon">📊</div><h3>${esc(L('한글 결과 확인', 'Open the English report'))}</h3><p>${esc(L('한글판은 메뉴, 분석 설명과 결과 보고서를 모두 한글로 생성합니다.', 'The English edition uses English throughout the interface, analysis explanations, and result report.'))}</p></article></div><div class="vision-package-callout"><div><p class="section-kicker">${esc(L('KOREAN EDITION', 'ENGLISH EDITION'))}</p><h3>${esc(L('현재 언어에 맞는 프로그램만 다운로드합니다', 'Download only the program for the current language'))}</h3><p>${esc(L('이 페이지의 다운로드 파일에는 한글 프로그램이 들어 있습니다. 압축을 푼 뒤 Picklary_Vision_Rating.cmd를 실행하면 한글 UI와 한글 결과가 제공됩니다.', 'The download on this page contains the English program. Extract it and run Picklary_Vision_Rating.cmd for an English interface and English results.'))}</p></div><div class="source-buttons"><a class="btn btn--primary" href="${download}" download>${esc(L('한글판 ZIP 다운로드', 'Download English ZIP'))}</a><a class="btn btn--ghost" href="${quick}" download>${esc(L('한글 빠른 시작', 'English quick start'))}</a></div></div></div></section>
-<section id="logic" class="band band--alt vision-story-section"><div class="wrap"><div class="vision-section-heading"><div><p class="section-kicker">02 · ${esc(L('평가 로직', 'RATING LOGIC'))}</p><h2>${esc(L('단순 승패가 아니라 플레이의 증거를 조합합니다', 'The score combines evidence, not just wins and losses'))}</h2><p>${esc(L('공·선수·코트 움직임, 샷 성공과 깊이, 공격·수비 선택, 이동량과 반복성을 함께 분석해 7점 만점의 6개 영역 점수를 구성합니다.', 'Ball, player, and court movement are combined with shot success, depth, tactical choices, movement coverage, and repeatability to build six dimensions scored out of 7.'))}</p></div></div><div class="vision-logic-layout"><div class="vision-logic-stack"><article><span>1</span><div><h3>${esc(L('관측 증거', 'Observed evidence'))}</h3><p>${esc(L('공과 선수 궤적, 샷 순간, 코트 위치와 랠리 구간을 영상에서 수집합니다.', 'Collect ball and player trajectories, shot moments, court position, and rally segments from video.'))}</p></div></article><article><span>2</span><div><h3>${esc(L('상황 분류', 'Context classification'))}</h3><p>${esc(L('서브, 리턴, 드롭, 드라이브, 네트 공방, 공격과 수비 전환을 구분합니다.', 'Classify serves, returns, drops, drives, net exchanges, and offense-to-defense transitions.'))}</p></div></article><article><span>3</span><div><h3>${esc(L('신뢰도 가중치', 'Confidence weighting'))}</h3><p>${esc(L('검출이 선명한 장면은 더 크게 반영하고 가려지거나 불확실한 장면은 영향도를 낮춥니다.', 'Give more weight to clearly detected evidence and reduce the impact of occluded or uncertain moments.'))}</p></div></article><article><span>4</span><div><h3>${esc(L('프로필과 DUPR 근사치', 'Profile and DUPR estimate'))}</h3><p>${esc(L('6축 점수, 영상 성과와 입력 정보를 종합해 Picklary DUPR 범위와 신뢰도를 표시합니다.', 'Combine the six-axis profile, video performance, and supplied context into a Picklary DUPR range and confidence score.'))}</p></div></article></div><aside class="vision-axis-panel"><h3>${esc(L('6개 평가 축 · 각 7점 만점', 'Six rating axes · each scored out of 7'))}</h3><div class="vision-axis-grid"><div><span>01</span><strong>${esc(L('서브', 'Serve'))}</strong><small>${esc(L('성공률, 깊이, 방향, 다음 공 준비', 'Success, depth, direction, and next-ball readiness'))}</small></div><div><span>02</span><strong>${esc(L('리턴', 'Return'))}</strong><small>${esc(L('깊이, 방향, 전진 연결과 실수 억제', 'Depth, direction, transition, and error control'))}</small></div><div><span>03</span><strong>${esc(L('공격', 'Offense'))}</strong><small>${esc(L('드라이브, 스피드업, 마무리 선택', 'Drives, speedups, and finishing choices'))}</small></div><div><span>04</span><strong>${esc(L('수비', 'Defense'))}</strong><small>${esc(L('리셋, 블록, 압박 상황 복구', 'Resets, blocks, and recovery under pressure'))}</small></div><div><span>05</span><strong>${esc(L('민첩성', 'Agility'))}</strong><small>${esc(L('좌우 커버, 전후 이동과 반응 속도', 'Lateral coverage, depth movement, and reaction'))}</small></div><div><span>06</span><strong>${esc(L('일관성', 'Consistency'))}</strong><small>${esc(L('반복 가능한 선택과 비강제 실수 관리', 'Repeatable choices and unforced-error control'))}</small></div></div><p class="vision-logic-note">${esc(L('7점은 영상에서 관측 가능한 강한 경기 수행을 의미하며, 낮은 점수는 다음 훈련 우선순위를 보여줍니다.', 'A score near 7 indicates strong observed performance; lower axes identify the next training priorities.'))}</p></aside></div></div></section>
-<section id="result" class="band vision-result-showcase"><div class="wrap"><div class="vision-section-heading"><div><p class="section-kicker">03 · ${esc(L('결과 예시', 'RESULT EXAMPLE'))}</p><h2>${esc(L('한 숫자가 아니라 내 경기의 모양을 확인하세요', 'See the shape of your game—not just one number'))}</h2><p>${esc(L('바깥으로 뻗은 축은 상대적 강점을, 안쪽으로 들어온 축은 다음 훈련 우선순위를 보여줍니다. 모든 능력치는 7점 만점입니다.', 'Axes extending outward indicate relative strengths; recessed axes reveal the next training priorities. Every skill dimension uses a 7-point scale.'))}</p></div><div class="source-buttons"><a class="btn btn--primary" href="${sample}" target="_blank" rel="noopener">${esc(L('전체 한글 보고서', 'Full English report'))} ↗</a><a class="btn btn--ghost" href="${download}" download>${esc(L('한글판 다운로드', 'Download English edition'))}</a></div></div><div class="vision-result-grid"><article class="vision-radar-card"><div class="vision-radar-card__head"><div><span>${esc(L('예시 선수 A · 7점 만점', 'Example Player A · 7-point scale'))}</span><h3>Picklary DUPR 4.61</h3></div><em>78% ${esc(L('신뢰도', 'confidence'))}</em></div>${radarSvg}</article><div class="vision-result-insights"><article class="is-strength"><span>${esc(L('최고 강점', 'TOP STRENGTH'))}</span><h3>${esc(L('리턴 6.6 / 7', 'Return 6.6 / 7'))}</h3><p>${esc(L('깊은 리턴과 크로스코트 방향 선택, 전진 연결이 반복적으로 관측된 예시입니다.', 'An example where return depth, cross-court direction, and transition forward are consistently observed.'))}</p></article><article><span>${esc(L('공격 패턴', 'ATTACK PATTERN'))}</span><h3>${esc(L('공격 5.3 / 7', 'Offense 5.3 / 7'))}</h3><p>${esc(L('드라이브 속도, 3구 전개와 공격 전환 선택을 조합해 평가합니다.', 'Combines drive speed, third-shot development, and attack-selection evidence.'))}</p></article><article class="is-focus"><span>${esc(L('우선 보완', 'PRIORITY FOCUS'))}</span><h3>${esc(L('민첩성 3.8 / 7', 'Agility 3.8 / 7'))}</h3><p>${esc(L('좌우 커버와 깊이 변화 대응이 다른 축보다 낮아 다음 훈련 우선순위로 표시됩니다.', 'Lateral coverage and depth response trail the other axes, making movement the next training priority.'))}</p></article><article><span>${esc(L('보고서 추가 내용', 'MORE IN THE REPORT'))}</span><h3>${esc(L('샷·코트·전술 분석', 'Shots, court, and tactics'))}</h3><p>${esc(L('샷 종류, 속도, 깊이, 코트 맵, 포지셔닝, 강점과 개선 제안을 근거와 함께 제공합니다.', 'Includes shot types, speed, depth, court maps, positioning, strengths, and improvement suggestions with supporting evidence.'))}</p></article></div></div><div class="vision-final-cta"><div><p class="section-kicker">${esc(L('YOUR VIDEO · YOUR PROFILE', 'YOUR VIDEO · YOUR PROFILE'))}</p><h2>${esc(L('내 경기 영상은 어떤 육각형을 만들까요?', 'What radar shape will your match create?'))}</h2><p>${esc(L('한글판을 내려받아 내 영상으로 Picklary DUPR 근사치와 7점 만점 능력치를 확인해 보세요.', 'Download the English edition and turn your own match into a Picklary DUPR estimate and a 7-point skill profile.'))}</p></div><a class="btn btn--primary" href="${download}" download>${esc(L('한글판 시작하기', 'Start with the English edition'))}</a></div><p class="vision-changelog-link"><a href="${changelog}" target="_blank" rel="noopener">v0.2.4 ${esc(L('한글 변경사항', 'English changelog'))} ↗</a></p></div></section>`;
+<section id="logic" class="band band--alt vision-story-section"><div class="wrap"><div class="vision-section-heading"><div><p class="section-kicker">02 · ${esc(L('평가 로직', 'RATING LOGIC'))}</p><h2>${esc(L('승패만 보지 않고 경기 속 움직임과 선택을 함께 분석합니다', 'The score combines evidence, not just wins and losses'))}</h2><p>${esc(L('공과 선수의 움직임, 코트 위치, 샷 성공 여부와 깊이, 공격·수비 선택, 이동량과 반복성을 함께 분석해 여섯 영역을 7점 만점으로 평가합니다.', 'Ball, player, and court movement are combined with shot success, depth, tactical choices, movement coverage, and repeatability to build six dimensions scored out of 7.'))}</p></div></div><div class="vision-logic-layout"><div class="vision-logic-stack"><article><span>1</span><div><h3>${esc(L('관측 증거', 'Observed evidence'))}</h3><p>${esc(L('영상에서 공과 선수의 이동 경로, 타구 순간, 코트 위치와 랠리 구간을 찾아냅니다.', 'Collect ball and player trajectories, shot moments, court position, and rally segments from video.'))}</p></div></article><article><span>2</span><div><h3>${esc(L('상황 분류', 'Context classification'))}</h3><p>${esc(L('서브, 리턴, 드롭, 드라이브, 네트 공방, 공격과 수비 전환을 구분합니다.', 'Classify serves, returns, drops, drives, net exchanges, and offense-to-defense transitions.'))}</p></div></article><article><span>3</span><div><h3>${esc(L('신뢰도 가중치', 'Confidence weighting'))}</h3><p>${esc(L('공과 선수가 또렷하게 인식된 장면은 더 크게 반영하고, 가림이나 흔들림 때문에 불확실한 장면은 반영 비중을 낮춥니다.', 'Give more weight to clearly detected evidence and reduce the impact of occluded or uncertain moments.'))}</p></div></article><article><span>4</span><div><h3>${esc(L('프로필과 DUPR 근사치', 'Profile and DUPR estimate'))}</h3><p>${esc(L('여섯 가지 능력 점수와 영상에서 확인된 경기 내용, 사용자가 입력한 정보를 종합해 Picklary DUPR 추정 범위와 신뢰도를 표시합니다.', 'Combine the six-axis profile, video performance, and supplied context into a Picklary DUPR range and confidence score.'))}</p></div></article></div><aside class="vision-axis-panel"><h3>${esc(L('6개 평가 축 · 각 7점 만점', 'Six rating axes · each scored out of 7'))}</h3><div class="vision-axis-grid"><div><span>01</span><strong>${esc(L('서브', 'Serve'))}</strong><small>${esc(L('성공률, 깊이, 방향, 다음 공 준비', 'Success, depth, direction, and next-ball readiness'))}</small></div><div><span>02</span><strong>${esc(L('리턴', 'Return'))}</strong><small>${esc(L('깊이, 방향, 전진 연결과 실수 억제', 'Depth, direction, transition, and error control'))}</small></div><div><span>03</span><strong>${esc(L('공격', 'Offense'))}</strong><small>${esc(L('드라이브, 스피드업, 마무리 선택', 'Drives, speedups, and finishing choices'))}</small></div><div><span>04</span><strong>${esc(L('수비', 'Defense'))}</strong><small>${esc(L('리셋, 블록, 압박 상황 복구', 'Resets, blocks, and recovery under pressure'))}</small></div><div><span>05</span><strong>${esc(L('민첩성', 'Agility'))}</strong><small>${esc(L('좌우 커버, 전후 이동과 반응 속도', 'Lateral coverage, depth movement, and reaction'))}</small></div><div><span>06</span><strong>${esc(L('일관성', 'Consistency'))}</strong><small>${esc(L('반복 가능한 선택과 비강제 실수 관리', 'Repeatable choices and unforced-error control'))}</small></div></div><p class="vision-logic-note">${esc(L('7점에 가까울수록 해당 능력이 영상에서 안정적으로 확인됐다는 뜻입니다. 상대적으로 낮은 항목은 다음 훈련에서 먼저 보완할 부분을 보여줍니다.', 'A score near 7 indicates strong observed performance; lower axes identify the next training priorities.'))}</p></aside></div></div></section>
+<section id="result" class="band vision-result-showcase"><div class="wrap"><div class="vision-section-heading"><div><p class="section-kicker">03 · ${esc(L('결과 예시', 'RESULT EXAMPLE'))}</p><h2>${esc(L('한 숫자보다 중요한 내 경기의 강점과 약점을 확인하세요', 'See the shape of your game—not just one number'))}</h2><p>${esc(L('육각형에서 바깥쪽으로 뻗은 항목은 강점을, 안쪽으로 들어온 항목은 우선 보완할 부분을 보여줍니다. 모든 항목은 7점 만점입니다.', 'Axes extending outward indicate relative strengths; recessed axes reveal the next training priorities. Every skill dimension uses a 7-point scale.'))}</p></div><div class="source-buttons"><a class="btn btn--primary" href="${sample}" target="_blank" rel="noopener">${esc(L('전체 한글 보고서', 'Full English report'))} ↗</a><a class="btn btn--ghost" href="${download}" download>${esc(L('한글판 다운로드', 'Download English edition'))}</a></div></div><div class="vision-result-grid"><article class="vision-radar-card"><div class="vision-radar-card__head"><div><span>${esc(L('예시 선수 A · 7점 만점', 'Example Player A · 7-point scale'))}</span><h3>Picklary DUPR 4.61</h3></div><em>78% ${esc(L('신뢰도', 'confidence'))}</em></div>${radarSvg}</article><div class="vision-result-insights"><article class="is-strength"><span>${esc(L('최고 강점', 'TOP STRENGTH'))}</span><h3>${esc(L('리턴 6.6 / 7', 'Return 6.6 / 7'))}</h3><p>${esc(L('깊은 리턴과 크로스코트 선택, 리턴 뒤 전진이 안정적으로 나타난 예시입니다.', 'An example where return depth, cross-court direction, and transition forward are consistently observed.'))}</p></article><article><span>${esc(L('공격 패턴', 'ATTACK PATTERN'))}</span><h3>${esc(L('공격 5.3 / 7', 'Offense 5.3 / 7'))}</h3><p>${esc(L('드라이브의 속도와 정확도, 3구 전개, 공격으로 전환하는 판단을 함께 평가합니다.', 'Combines drive speed, third-shot development, and attack-selection evidence.'))}</p></article><article class="is-focus"><span>${esc(L('우선 보완', 'PRIORITY FOCUS'))}</span><h3>${esc(L('민첩성 3.8 / 7', 'Agility 3.8 / 7'))}</h3><p>${esc(L('좌우 움직임과 앞뒤 깊이 변화에 대한 대응이 다른 항목보다 낮아 우선 보완 과제로 표시된 예시입니다.', 'Lateral coverage and depth response trail the other axes, making movement the next training priority.'))}</p></article><article><span>${esc(L('보고서 추가 내용', 'MORE IN THE REPORT'))}</span><h3>${esc(L('샷·코트·전술 분석', 'Shots, court, and tactics'))}</h3><p>${esc(L('샷 종류와 속도·깊이, 코트 위치, 포지셔닝, 강점과 개선 방향을 영상에서 확인된 근거와 함께 보여줍니다.', 'Includes shot types, speed, depth, court maps, positioning, strengths, and improvement suggestions with supporting evidence.'))}</p></article></div></div><div class="vision-final-cta"><div><p class="section-kicker">${esc(L('YOUR VIDEO · YOUR PROFILE', 'YOUR VIDEO · YOUR PROFILE'))}</p><h2>${esc(L('내 경기 영상은 어떤 육각형으로 나타날까요?', 'What radar shape will your match create?'))}</h2><p>${esc(L('한글판을 내려받아 내 경기 영상으로 Picklary DUPR 근사치와 7점 만점의 여섯 가지 능력치를 확인해 보세요.', 'Download the English edition and turn your own match into a Picklary DUPR estimate and a 7-point skill profile.'))}</p></div><a class="btn btn--primary" href="${download}" download>${esc(L('한글판 시작하기', 'Start with the English edition'))}</a></div><p class="vision-changelog-link"><a href="${changelog}" target="_blank" rel="noopener">v0.2.4 ${esc(L('한글 변경사항', 'English changelog'))} ↗</a></p></div></section>`;
   return layout({ loc, rel: 'vision-rating/', title, description: intro, bodyHtml: body, theme: 'vision' });
 }
 
@@ -4953,7 +4959,7 @@ function renderBlogsPage(loc) {
       intro: 'Picklary 안에서 더 읽고 싶은 분들을 위해 운영 중인 다른 블로그를 연결했습니다. 같은 콘텐츠 흐름 안에서 계속 둘러보고, 마음에 드는 채널을 즐겨찾기해 재방문할 수 있게 구성했습니다.',
       cards: [
         { label: 'Picklary Blogspot', title: 'picklary.blogspot.com', desc: '피클볼 글과 사이트 업데이트를 블로그 형식으로 이어서 볼 수 있는 채널입니다.', href: 'https://picklary.blogspot.com' },
-        { label: 'Naver Blog', title: 'blog.naver.com/arctic', desc: '네이버에서 운영하는 블로그입니다. 다른 글 포맷과 누적 콘텐츠를 연결하는 허브 역할을 합니다.', href: 'https://blog.naver.com/arctic' }
+        { label: 'Naver Blog', title: 'blog.naver.com/arctic', desc: '네이버에서 운영하는 블로그입니다. 다른 형식의 글과 누적 콘텐츠를 연결하는 허브 역할을 합니다.', href: 'https://blog.naver.com/arctic' }
       ],
       noteTitle: 'Picklary 활용 팁',
       note: ['Picklary에서 내 레벨을 확인한 뒤 관련 블로그 글을 이어서 읽어보세요.', '블로그 글을 읽다가 필요한 도구가 있으면 자가진단, 레벨 페이지, 패들 파인더를 바로 활용할 수 있습니다.', '새 글과 경기 결과 요약은 블로그와 Picklary에서 함께 확인할 수 있습니다.']

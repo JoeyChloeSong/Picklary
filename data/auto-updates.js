@@ -8,7 +8,7 @@ module.exports = [
     "title": "PPA Tour official news source",
     "titleKo": "PPA Tour 공식 뉴스 확인 경로",
     "summary": "Use the PPA Tour official site for tour announcements, live scoring links, event notes, and major competition updates. Picklary summarizes only short, source-linked notes in its own words.",
-    "summaryKo": "PPA Tour 공식 사이트는 투어 발표, 라이브 스코어 연결, 대회 공지, 주요 경쟁 소식을 확인하는 1차 경로입니다. Picklary은 원문 링크를 남기고 짧은 요약만 자체 문장으로 정리합니다.",
+    "summaryKo": "PPA Tour 공식 사이트는 투어 발표, 실시간 경기 결과 연결, 대회 공지, 주요 경쟁 소식을 확인하는 1차 경로입니다. Picklary은 원문 링크를 남기고 짧은 요약만 자체 문장으로 정리합니다.",
     "sourceName": "PPA Tour official site",
     "sourceUrl": "https://ppatour.com/",
     "tags": [
@@ -58,7 +58,7 @@ module.exports = [
     "title": "MLP standings and results source",
     "titleKo": "MLP 경기 결과·순위 확인 경로",
     "summary": "For team competition, Major League Pickleball result and standings pages are useful primary links. Treat live tables as changing information and verify close to publication time.",
-    "summaryKo": "팀 대회 결과와 순위는 Major League Pickleball의 결과·standings 페이지를 우선 확인하는 것이 좋습니다. 라이브 표는 자주 바뀌므로 게시 직전 원문에서 다시 확인하세요.",
+    "summaryKo": "팀 대회 결과와 순위는 Major League Pickleball의 공식 결과·순위 페이지를 우선 확인하는 것이 좋습니다. 실시간 표는 자주 바뀌므로 게시 직전 원문에서 다시 확인하세요.",
     "sourceName": "Major League Pickleball standings",
     "sourceUrl": "https://majorleaguepickleball.co/standings/",
     "tags": [

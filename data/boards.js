@@ -12,11 +12,11 @@
     "tag": "rules",
     "q": {
       "en": "What should a 2.0 player learn before worrying about DUPR?",
-      "ko": "2.0 플레이어가 DUPR보다 먼저 배워야 하는 것은 무엇인가요?"
+      "ko": "2.0 선수가 DUPR보다 먼저 배워야 하는 것은 무엇인가요?"
     },
     "a": {
       "en": "Learn the two-bounce rule, legal underhand/low-to-high serve motion, score calling, and where the non-volley zone begins. DUPR becomes useful after you have enough real match results.",
-      "ko": "투바운스 규칙, 합법적인 서브 동작, 스코어 콜, 논발리존 위치를 먼저 익히세요. DUPR는 실제 경기 결과가 쌓였을 때 의미가 커집니다."
+      "ko": "투바운스 규칙, 합법적인 서브 동작, 스코어 콜, 비발리존 위치를 먼저 익히세요. DUPR는 실제 경기 결과가 쌓였을 때 의미가 커집니다."
     }
   },
   {
@@ -228,7 +228,7 @@
     "tag": "dink",
     "q": {
       "en": "Why do I lose hands battles?",
-      "ko": "핸즈 배틀에서 자주 지는 이유는 무엇인가요?"
+      "ko": "빠른 손 배틀에서 자주 지는 이유는 무엇인가요?"
     },
     "a": {
       "en": "Your backswing may be too big. Keep the paddle in front, block first, and counter only when the ball is in your strike zone.",
@@ -448,7 +448,7 @@
         "votes": 31,
         "body": {
           "en": "First, buy time. Take a small adjustment step behind the ball instead of reaching. If the ball is low or behind you, choose a reset-style third shot with height and margin to the middle, not a perfect sideline drop. If the return sits up and you are balanced, drive through the middle hip to earn an easier fifth shot. Ask your partner to hold position until your shot quality is clear.",
-          "ko": "먼저 시간을 확보하세요. 뻗어서 치기보다 공 뒤로 작은 조정 스텝을 하세요. 공이 낮거나 몸 뒤에 있으면 완벽한 사이드라인 드롭보다 가운데로 높이와 여유를 둔 리셋형 3구가 안전합니다. 리턴이 떠 있고 균형이 잡혔다면 가운데 힙 방향으로 드라이브해 쉬운 5구를 만드세요. 파트너에게는 당신의 샷 품질이 확인될 때까지 무리하게 전진하지 않도록 요청하세요."
+          "ko": "먼저 시간을 확보하세요. 뻗어서 치기보다 공 뒤로 작은 조정 스텝을 하세요. 공이 낮거나 몸 뒤에 있으면 완벽한 사이드라인 드롭보다 가운데로 높이와 여유를 둔 리셋형 3구가 안전합니다. 리턴이 떠 있고 균형이 잡혔다면 가운데 힙 방향으로 드라이브해 쉬운 5구를 만드세요. 파트너에게도 샷이 안정적으로 들어간 것을 확인한 뒤 전진하자고 미리 맞춰 두세요."
         }
       },
       {
@@ -544,7 +544,7 @@
         "votes": 33,
         "body": {
           "en": "Create a default rule before the match. Common defaults are forehand takes middle, player across from the ball shades middle, or the stronger counter player owns middle during hands exchanges. The exact rule matters less than calling early. Add one emergency word such as “mine” or “yours” and rehearse it in warmup.",
-          "ko": "경기 전에 기본 원칙을 만드세요. 흔한 방식은 포핸드가 미들, 공과 마주한 선수가 미들을 더 의식, 핸즈 교환에서는 카운터가 좋은 선수가 미들 담당 등입니다. 정확한 원칙보다 빠른 콜이 더 중요합니다. “마인”, “유어스” 같은 비상 단어를 하나 정하고 워밍업 때 연습하세요."
+          "ko": "경기 전에 기본 원칙을 만드세요. 흔한 방식은 포핸드가 미들, 공과 마주한 선수가 미들을 더 의식, 빠른 손 교환에서는 카운터가 좋은 선수가 미들 담당 등입니다. 정확한 원칙보다 빠른 콜이 더 중요합니다. “마인”, “유어스” 같은 비상 단어를 하나 정하고 워밍업 때 연습하세요."
         }
       },
       {
@@ -576,7 +576,7 @@
         "votes": 29,
         "body": {
           "en": "For many developing players, a softer-feeling 16mm control or all-court paddle is easier to manage than a very stiff power paddle. Also check grip size, overgrip thickness, swing weight, and how tightly you squeeze. Equipment can help, but pain should be treated as a health signal, not only a gear problem.",
-          "ko": "많은 성장 단계 플레이어에게는 매우 딱딱한 파워 패들보다 부드러운 느낌의 16mm 컨트롤/올라운드 패들이 다루기 쉽습니다. 그립 사이즈, 오버그립 두께, 스윙웨이트, 손에 힘을 얼마나 주는지도 확인하세요. 장비가 도움은 되지만 통증은 단순 장비 문제가 아니라 몸의 신호로 봐야 합니다."
+          "ko": "많은 성장 단계 선수에게는 매우 딱딱한 파워 패들보다 부드러운 느낌의 16mm 컨트롤/올라운드 패들이 다루기 쉽습니다. 그립 크기, 오버그립 두께, 스윙웨이트, 손에 힘을 얼마나 주는지도 확인하세요. 장비가 도움은 되지만 통증은 단순 장비 문제가 아니라 몸의 신호로 봐야 합니다."
         }
       },
       {
@@ -593,13 +593,13 @@
     "id": "how-to-handle-bangers-at-25",
     "title": {
       "en": "How should a 2.5 player handle hard hitters?",
-      "ko": "2.5 플레이어는 강타자를 어떻게 상대해야 하나요?"
+      "ko": "2.5 선수는 강타자를 어떻게 상대해야 하나요?"
     },
     "level": "2.5",
     "tag": "defense",
     "question": {
       "en": "Several players hit every ball hard at me. I swing back and the point gets chaotic. What should I do instead?",
-      "ko": "몇몇 플레이어가 모든 공을 세게 칩니다. 저도 같이 휘두르면 포인트가 혼란스러워집니다. 대신 무엇을 해야 하나요?"
+      "ko": "몇몇 선수가 모든 공을 세게 칩니다. 저도 같이 휘두르면 포인트가 혼란스러워집니다. 대신 무엇을 해야 하나요?"
     },
     "votes": 12,
     "answers": [
@@ -616,7 +616,7 @@
         "votes": 5,
         "body": {
           "en": "The best advice I got: hard hitters want your panic. Make them hit one more ball.",
-          "ko": "제가 들은 최고의 조언은 “강타자는 당신의 당황을 원한다. 한 번 더 치게 만들어라”였습니다."
+          "ko": "제가 들은 최고의 조언은 “강타자는 상대가 당황하길 원한다. 침착하게 한 번 더 치게 만들어라”였습니다."
         }
       }
     ]
@@ -649,7 +649,7 @@
     "id": "how-to-use-video-review-for-50",
     "title": {
       "en": "How should a 5.0 player structure video review?",
-      "ko": "5.0 플레이어는 영상 리뷰를 어떻게 구조화해야 하나요?"
+      "ko": "5.0 선수는 영상 리뷰를 어떻게 구조화해야 하나요?"
     },
     "level": "5.0",
     "tag": "video-review",

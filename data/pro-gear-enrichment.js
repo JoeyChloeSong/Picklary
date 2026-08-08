@@ -12,7 +12,7 @@ const newPaddles = [
     reviewSignal:'A hybrid-shape Pro V paddle that blends baseline drive power, kitchen hand speed, transition control, and a more usable sweet spot than a fully elongated shape.',
     summary:'The 16mm build suits measured all-court construction; the 14mm build adds a quicker, poppier response for aggressive first-strike play.',
     ratings:{power:8.8,control:8.4,spin:8.5,forgiveness:8.2,speed:8.5},
-    translations:{ko:{reviewSignal:'베이스라인 드라이브 파워, 키친 핸드 스피드, 전환 컨트롤을 균형 있게 묶은 하이브리드형 Pro V 패들입니다. 완전한 엘롱게이티드보다 실사용 스위트스폿이 넓습니다.',summary:'16mm는 차분한 올라운드 포인트 설계에, 14mm는 빠르고 팝이 강한 선제 공격에 더 잘 맞습니다.'}},
+    translations:{ko:{reviewSignal:'베이스라인 드라이브 파워, 키친 핸드 스피드, 전환 컨트롤을 균형 있게 묶은 하이브리드형 Pro V 패들입니다. 완전한 엘롱게이티드보다 실사용 스위트스폿이 넓습니다.',summary:'16mm는 차분한 올라운드 포인트 구성에, 14mm는 빠르고 팝이 강한 선제 공격에 더 잘 맞습니다.'}},
     image:'/assets/img/paddles/joola-kosmos-pro-v.svg', imageAlt:'Illustrated product card for JOOLA Kosmos Pro V'
   },
   {
@@ -24,7 +24,7 @@ const newPaddles = [
     reviewSignal:'JOOLA’s widest Pro V shape emphasizes a large sweet spot, stability, blocks, resets, counters, and fast doubles exchanges.',
     summary:'A doubles-first paddle for players who want to survive speed, neutralize pace, and redirect the next ball instead of relying on maximum reach.',
     ratings:{power:8.2,control:9.0,spin:8.4,forgiveness:9.2,speed:8.8},
-    translations:{ko:{reviewSignal:'JOOLA Pro V 중 가장 넓은 형태로 큰 스위트스폿, 안정성, 블록, 리셋, 카운터와 빠른 복식 교전에 초점을 둡니다.',summary:'최대 리치보다 속도전을 버티고 상대 페이스를 중화한 뒤 다음 공을 재지정하는 복식 플레이어에게 맞습니다.'}},
+    translations:{ko:{reviewSignal:'JOOLA Pro V 중 가장 넓은 형태로 큰 스위트스폿, 안정성, 블록, 리셋, 카운터와 빠른 복식 교전에 초점을 둡니다.',summary:'최대 리치보다 속도전을 버티고 상대 페이스를 중화한 뒤 다음 공을 재지정하는 복식 선수에게 맞습니다.'}},
     image:'/assets/img/paddles/joola-scorpeus-pro-v.svg', imageAlt:'Illustrated product card for JOOLA Scorpeus Pro V'
   },
   {
@@ -36,7 +36,7 @@ const newPaddles = [
     reviewSignal:'An elongated advanced-player platform designed to combine top-end power and spin with a stable 16mm feel and a broad effective sweet spot.',
     summary:'Best for players who want aggressive drives and high-ball attacks without giving up all of the control needed for resets and kitchen touch.',
     ratings:{power:9.1,control:8.1,spin:9.0,forgiveness:8.4,speed:7.7},
-    translations:{ko:{reviewSignal:'상급자의 강한 파워와 스핀, 안정적인 16mm 감각, 넓은 유효 스위트스폿을 함께 노린 엘롱게이티드 플랫폼입니다.',summary:'강한 드라이브와 높은 공 공격을 원하지만 리셋과 키친 터치까지 완전히 포기하고 싶지 않은 플레이어에게 맞습니다.'}},
+    translations:{ko:{reviewSignal:'상급자의 강한 파워와 스핀, 안정적인 16mm 감각, 넓은 유효 스위트스폿을 함께 노린 엘롱게이티드 플랫폼입니다.',summary:'강한 드라이브와 높은 공 공격을 원하지만 리셋과 키친 터치까지 완전히 포기하고 싶지 않은 선수에게 맞습니다.'}},
     image:'/assets/img/paddles/rpm-friction-pro-v2.svg', imageAlt:'Illustrated product card for RPM Friction Pro V2'
   },
   {
@@ -72,7 +72,7 @@ const newPaddles = [
     reviewSignal:'An elongated C45 platform built for reach, two-handed leverage, spin, and explosive transition attacks.',
     summary:'It fits athletic pressure players who use movement to arrive early and want the paddle to turn that time advantage into pace and angles.',
     ratings:{power:9.0,control:7.9,spin:8.9,forgiveness:7.8,speed:8.5},
-    translations:{ko:{reviewSignal:'리치, 투핸드 레버리지, 스핀과 폭발적인 전환 공격을 위해 설계된 엘롱게이티드 C45 플랫폼입니다.',summary:'움직임으로 일찍 도착한 뒤 그 시간 우위를 속도와 각도로 바꾸는 운동 능력 중심 압박형 플레이어에게 맞습니다.'}},
+    translations:{ko:{reviewSignal:'리치, 투핸드 레버리지, 스핀과 폭발적인 전환 공격을 위해 설계된 엘롱게이티드 C45 플랫폼입니다.',summary:'움직임으로 일찍 도착한 뒤 그 시간 우위를 속도와 각도로 바꾸는 운동 능력 중심 압박형 선수에게 맞습니다.'}},
     image:'/assets/img/paddles/franklin-c45-hayden.svg', imageAlt:'Illustrated product card for Franklin Hayden C45'
   },
   {
@@ -108,7 +108,7 @@ const newPaddles = [
     reviewSignal:'A tennis-inspired Pro V shape that offers a high sweet spot, clean drive leverage, spin, and enough control for singles-to-doubles crossover.',
     summary:'It makes most sense for players with compact racquet-sport mechanics who want direct acceleration without moving to the longest paddle shape.',
     ratings:{power:8.8,control:8.2,spin:8.7,forgiveness:8.0,speed:8.1},
-    translations:{ko:{reviewSignal:'높은 스위트스폿, 깔끔한 드라이브 레버리지, 스핀과 싱글·복식 전환에 필요한 컨트롤을 제공하는 테니스 기반 Pro V 형태입니다.',summary:'가장 긴 패들까지 가지 않으면서 직접적인 가속을 원하는 컴팩트한 라켓 스포츠 스윙 플레이어에게 잘 맞습니다.'}},
+    translations:{ko:{reviewSignal:'높은 스위트스폿, 깔끔한 드라이브 레버리지, 스핀과 싱글·복식 전환에 필요한 컨트롤을 제공하는 테니스 기반 Pro V 형태입니다.',summary:'가장 긴 패들까지 가지 않으면서 직접적인 가속을 원하는 컴팩트한 라켓 스포츠 스윙 선수에게 잘 맞습니다.'}},
     image:'/assets/img/paddles/joola-agassi-pro-v.svg', imageAlt:'Illustrated product card for JOOLA Agassi Pro V'
   },
   {
@@ -132,7 +132,7 @@ const newPaddles = [
     reviewSignal:'A fast 13mm signature paddle that combines a crisp response, spin, extended reach, and foam-ring stability for aggressive all-court doubles.',
     summary:'The setup rewards early reads and compact attacks; players with late contact may prefer a thicker, calmer paddle.',
     ratings:{power:8.9,control:8.0,spin:9.0,forgiveness:8.0,speed:9.1},
-    translations:{ko:{reviewSignal:'공격적인 올라운드 복식을 위해 빠른 13mm 반응, 스핀, 리치, 폼 링 안정성을 결합한 시그니처 패들입니다.',summary:'빠른 판단과 짧은 공격 스윙을 보상하며, 타점이 늦은 플레이어라면 더 두껍고 차분한 패들이 편할 수 있습니다.'}},
+    translations:{ko:{reviewSignal:'공격적인 올라운드 복식을 위해 빠른 13mm 반응, 스핀, 리치, 폼 링 안정성을 결합한 시그니처 패들입니다.',summary:'빠른 판단과 짧은 공격 스윙을 보상하며, 타점이 늦은 선수라면 더 두껍고 차분한 패들이 편할 수 있습니다.'}},
     image:'/assets/img/paddles/proxr-riley-newman-pro.svg', imageAlt:'Illustrated product card for ProXR Riley Newman Pro'
   },
   {
@@ -144,7 +144,7 @@ const newPaddles = [
     reviewSignal:'A long-handle, thin-core attacking paddle built for two-handed backhands, reach, spin, and immediate acceleration.',
     summary:'It fits players who create pressure early; the trade-off is that soft resets demand disciplined hands and clean contact.',
     ratings:{power:9.4,control:7.4,spin:9.0,forgiveness:7.5,speed:8.7},
-    translations:{ko:{reviewSignal:'투핸드 백핸드, 리치, 스핀과 즉각적인 가속을 위해 만든 긴 핸들·얇은 코어 공격형 패들입니다.',summary:'일찍 압박을 만드는 플레이어에게 맞지만 부드러운 리셋은 정교한 손과 정확한 타점을 요구합니다.'}},
+    translations:{ko:{reviewSignal:'투핸드 백핸드, 리치, 스핀과 즉각적인 가속을 위해 만든 긴 핸들·얇은 코어 공격형 패들입니다.',summary:'일찍 압박을 만드는 선수에게 맞지만 부드러운 리셋은 정교한 손과 정확한 타점을 요구합니다.'}},
     image:'/assets/img/paddles/paddletek-bantam-tko-cx.svg', imageAlt:'Illustrated product card for Paddletek Bantam TKO-CX'
   }
 ];
@@ -165,7 +165,7 @@ const gear = {
   'ella-oh': { paddleName:'RPM Friction Pro V2 Pink Signature', paddleSlug:'rpm-friction-pro-v2', status:'Official signature line', statusKo:'공식 시그니처 라인', verified:checked, sourceName:'Ella Oh official site', sourceUrl:'https://ellaoh.com/paddle.html', traits:['configurable shape','controlled power','spin','junior-friendly options'], traitsKo:['선택 가능한 형태','통제된 파워','스핀','주니어 선택지'], fit:'The line offers elongated or widebody shapes and 14mm or 16mm cores, allowing the equipment to follow her growth rather than locking a junior into one extreme setup.', fitKo:'엘롱게이티드·와이드바디와 14mm·16mm 선택지가 있어 성장 중인 주니어를 하나의 극단적인 세팅에 고정하지 않습니다.', copy:'Young players should copy her preparation and development process, not assume a premium paddle replaces coaching.', copyKo:'주니어는 고가 패들이 코칭을 대신한다고 생각하지 말고 준비 동작과 성장 과정을 따라 해야 합니다.', confidence:'official' },
   'gabriel-tardio': { paddleName:'Facolos Elite X V2 Gabe Tardio Signature', paddleSlug:'facolos-elite-x-v2', status:'Official signature development platform; approval varies by edition', statusKo:'공식 시그니처 개발 플랫폼·버전별 승인 확인 필요', verified:checked, sourceName:'Facolos', sourceUrl:'https://shopfacolos.com/products/elite-x-v2-0-gabe-tardio-green', traits:['low balance','spin','counter speed','stability'], traitsKo:['낮은 밸런스','스핀','카운터 속도','안정성'], fit:'A lower balance point and wider effective sweet spot match his high-hand grip, compact backhand counters, and ability to redirect pace through the middle.', fitKo:'낮은 밸런스와 넓은 유효 스위트스폿이 높은 그립 위치, 짧은 백핸드 카운터, 중앙으로 페이스를 재지정하는 능력에 맞습니다.', copy:'His unusual grip and timing are personal; copy the early read, not the grip blindly.', copyKo:'독특한 그립과 타이밍은 개인적입니다. 그립을 그대로 따라 하기보다 조기 판단을 배우세요.', confidence:'official' },
   'hayden-patriquin': { paddleName:'Franklin C45 Hayden Patriquin 14mm / 16mm', paddleSlug:'franklin-c45-hayden', status:'Official signature line', statusKo:'공식 시그니처 라인', verified:checked, sourceName:'Franklin Sports', sourceUrl:'https://franklinsports.com/c45-hayden-paddle-series', traits:['reach','spin','transition pop','two-handed leverage'], traitsKo:['리치','스핀','전환 팝','투핸드 레버리지'], fit:'The elongated C45 turns his court speed into earlier contact, giving him leverage for counters, poaches, and transition attacks.', fitKo:'엘롱게이티드 C45가 빠른 코트 이동을 더 이른 타점으로 바꾸고 카운터, 포치, 전환 공격에 레버리지를 제공합니다.', copy:'The paddle works because he arrives early; improve movement before choosing extra reach.', copyKo:'패들이 작동하는 이유는 그가 일찍 도착하기 때문입니다. 추가 리치보다 먼저 움직임을 개선하세요.', confidence:'official' },
-  'kate-fahey': { paddleName:'JOOLA Agassi Pro V 14mm', paddleSlug:'joola-agassi-pro-v', status:'Reported current tour paddle; sponsorship has changed', statusKo:'현재 투어 패들 보도·스폰서 변경 이력 있음', verified:'2026-07-16', sourceName:'Current pro-paddle tracker', sourceUrl:'https://www.ppatour.com/athletes/kate-fahey/', traits:['singles drive','high sweet spot','spin','transition control'], traitsKo:['싱글 드라이브','높은 스위트스폿','스핀','전환 컨트롤'], fit:'The tennis-inspired shape supports deep, repeatable singles drives while keeping a manageable transition feel as her doubles game develops.', fitKo:'테니스 기반 형태가 깊고 반복 가능한 싱글 드라이브를 지원하고, 복식 게임이 성장하는 과정에서 다룰 만한 전환 감각을 유지합니다.', copy:'Copy repeatable depth and footwork; the paddle is secondary to her physical point construction.', copyKo:'반복 가능한 깊이와 풋워크를 따라 하세요. 패들은 체력 기반 포인트 설계보다 부차적입니다.', confidence:'reported' },
+  'kate-fahey': { paddleName:'JOOLA Agassi Pro V 14mm', paddleSlug:'joola-agassi-pro-v', status:'Reported current tour paddle; sponsorship has changed', statusKo:'현재 투어 패들 보도·스폰서 변경 이력 있음', verified:'2026-07-16', sourceName:'Current pro-paddle tracker', sourceUrl:'https://www.ppatour.com/athletes/kate-fahey/', traits:['singles drive','high sweet spot','spin','transition control'], traitsKo:['싱글 드라이브','높은 스위트스폿','스핀','전환 컨트롤'], fit:'The tennis-inspired shape supports deep, repeatable singles drives while keeping a manageable transition feel as her doubles game develops.', fitKo:'테니스 기반 형태가 깊고 반복 가능한 싱글 드라이브를 지원하고, 복식 게임이 성장하는 과정에서 다룰 만한 전환 감각을 유지합니다.', copy:'Copy repeatable depth and footwork; the paddle is secondary to her physical point construction.', copyKo:'반복 가능한 깊이와 풋워크를 따라 하세요. 패들은 체력 기반 포인트 구성보다 부차적입니다.', confidence:'reported' },
   'jorja-johnson': { paddleName:'PIKKL / Paddletek Group performance platform', paddleSlug:'', status:'Current brand platform; prototype/model still evolving publicly', statusKo:'현재 브랜드 플랫폼·프로토타입/모델 공개 변화 중', verified:checked, sourceName:'Paddletek Group', sourceUrl:'https://www.paddletek.com/blogs/news/paddletek-group-announces-landmark-move-agreement-to-acquire-pikkl-and-signing-of-jw-jorja-julie-johnson-and-hurricane-tyra-black', traits:['hand speed','light handling','two-handed backhand','soft-game creativity'], traitsKo:['핸드 스피드','가벼운 조작성','투핸드 백핸드','소프트 게임 창의성'], fit:'Her equipment path favors low swing resistance and fast orientation so she can disguise direction and react in kitchen exchanges.', fitKo:'장비 선택은 낮은 스윙 저항과 빠른 방향 전환을 선호해 키친 교전에서 방향을 숨기고 반응하는 데 초점을 둡니다.', copy:'The key is loose hands and early paddle position, not chasing the lightest possible setup.', copyKo:'핵심은 가장 가벼운 세팅이 아니라 힘을 뺀 손과 이른 패들 위치입니다.', confidence:'brand' },
   'hurricane-tyra-black': { paddleName:'PIKKL Hurricane Pro 14mm', paddleSlug:'pikkl-hurricane-pro', status:'Official signature line within Paddletek Group', statusKo:'Paddletek Group 내 공식 시그니처 라인', verified:checked, sourceName:'Paddletek Group', sourceUrl:'https://www.paddletek.com/blogs/news/paddletek-group-announces-landmark-move-agreement-to-acquire-pikkl-and-signing-of-jw-jorja-julie-johnson-and-hurricane-tyra-black', traits:['spin','fast hands','control','defensive stability'], traitsKo:['스핀','빠른 손','컨트롤','수비 안정성'], fit:'The quick widebody and spin-first face support elastic defense, compact counters, and the ability to change direction after absorbing pace.', fitKo:'빠른 와이드바디와 스핀 우선 표면이 탄력적인 수비, 짧은 카운터, 상대 페이스 흡수 후 방향 전환을 지원합니다.', copy:'Copy the defend-then-counter sequence rather than forcing offense from a bad height.', copyKo:'나쁜 높이에서 공격을 억지로 만들기보다 수비 후 카운터 순서를 따라 하세요.', confidence:'official' },
   'hunter-johnson': { paddleName:'HIT Pickleball Hand Cannon custom platform', paddleSlug:'hit-hand-cannon', status:'Current pro-custom platform; retail specs evolving', statusKo:'현재 프로 커스텀 플랫폼·판매 스펙 변화 중', verified:'2026-01-30', sourceName:'Pickleball.com', sourceUrl:'https://pickleball.com/people/what-is-hit-pickleball-an-inside-look-at-hunter-johnsons-new-paddle-sponsor', traits:['first-ball power','spin','custom handle','singles control'], traitsKo:['첫 공 파워','스핀','커스텀 핸들','싱글 컨트롤'], fit:'The custom platform is tuned around a solid handle, direct power, and enough touch to turn serve-plus-one pressure into shorter singles points.', fitKo:'단단한 커스텀 핸들, 직접적인 파워, 서브 후 첫 공격을 짧은 싱글 포인트로 연결할 터치에 맞춰 조정됩니다.', copy:'Copy the serve-plus-one structure; a custom paddle cannot fix a weak first-step recovery.', copyKo:'서브 후 첫 공격 구조를 배우세요. 커스텀 패들도 약한 첫 스텝 회복을 고쳐 주지는 않습니다.', confidence:'verified' },

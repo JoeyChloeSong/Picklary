@@ -11,7 +11,7 @@ module.exports = [
     bio:'Ella Oh is one of the most visible young prospects in American pickleball. Her story matters not only because she wins age-group titles, but because she is already competing above her age bracket and building a public identity around disciplined development. Picklary tracks her as a case study in how junior pathways, family support, coaching, equipment partnerships, and careful event selection can shape the next generation of the sport.',
     hometown:'United States', age:'11 (2026)', height:'Developing junior athlete', turnedPro:'Junior development pathway', plays:'Right-handed', resides:'United States',
     officialProfile:'https://ellaoh.com/', secondaryProfile:'https://www.instagram.com/ellaohpickleball/',
-    translations:{ko:{style:'간결한 기술과 대담한 포인트 설계를 갖춘 차세대 올라운드 주니어',bio:'Ella Oh는 미국 피클볼에서 가장 주목받는 어린 유망주 가운데 한 명입니다. 단순히 연령별 타이틀을 따는 데 그치지 않고, 자신보다 높은 연령 부문에 도전하며 성장 경로를 만들고 있다는 점이 중요합니다. Picklary는 그녀를 주니어 대회 구조, 가족 지원, 코칭, 장비 파트너십, 대회 선택이 차세대 선수의 성장에 어떤 영향을 주는지 보여 주는 사례로 추적합니다.',watch:'작은 체격에서도 큰 스윙 없이 빠른 공을 방향 전환하는 조기 준비를 관찰하세요.'}},
+    translations:{ko:{style:'간결한 기술과 대담한 포인트 구성를 갖춘 차세대 올라운드 주니어',bio:'Ella Oh는 미국 피클볼에서 가장 주목받는 어린 유망주 가운데 한 명입니다. 단순히 연령별 타이틀을 따는 데 그치지 않고, 자신보다 높은 연령 부문에 도전하며 성장 경로를 만들고 있다는 점이 중요합니다. Picklary는 그녀를 주니어 대회 구조, 가족 지원, 코칭, 장비 파트너십, 대회 선택이 차세대 선수의 성장에 어떤 영향을 주는지 보여 주는 사례로 추적합니다.',watch:'작은 체격에서도 큰 스윙 없이 빠른 공을 방향 전환하는 조기 준비를 관찰하세요.'}},
     image:'/assets/img/players/ella-oh.svg', imageAlt:'Illustrated profile card for Ella Oh', photoNote:'Original illustrated profile card. Not a photograph.'
   },
   {

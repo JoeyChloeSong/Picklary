@@ -18,10 +18,10 @@ module.exports = [
     dates: '2026 season — May to August', datesKo: '2026 시즌 — 5~8월',
     location: 'Multiple U.S. host cities', locationKo: '미국 여러 개최 도시',
     sourceName: 'MLP', sourceUrl: 'https://majorleaguepickleball.co/standings/',
-    liveUrl: 'https://majorleaguepickleball.co/standings/', liveLabel: 'Live standings & New York scores', liveLabelKo: '라이브 순위·뉴욕 스코어',
+    liveUrl: 'https://majorleaguepickleball.co/standings/', liveLabel: 'Live standings & New York scores', liveLabelKo: '실시간 순위·뉴욕 경기 결과',
     checked: '2026-06-26',
     summary: 'MLP’s 20-team coed league plays nine regular-season events from May to August, and standings points — not single-event wins — decide the 12-team playoff field. Five stops are complete and the New York event is underway; St. Louis and New Jersey have pulled clear at the top.',
-    summaryKo: 'MLP는 20개 코에드 팀이 5~8월 9개 정규 이벤트를 치르며, 단일 이벤트 우승이 아니라 standings 포인트로 12팀 플레이오프 진출이 정해집니다. 5개 대회가 끝나고 뉴욕 대회가 진행 중이며, St. Louis와 New Jersey가 선두권을 형성했습니다.',
+    summaryKo: 'MLP는 20개 코에드 팀이 5~8월 9개 정규 이벤트를 치르며, 단일 이벤트 우승이 아니라 정규시즌 순위 포인트로 12팀 플레이오프 진출이 정해집니다. 5개 대회가 끝나고 뉴욕 대회가 진행 중이며, St. Louis와 New Jersey가 선두권을 형성했습니다.',
     winnersLabel: 'Event-by-event results (5 of 9 regular-season stops)', winnersLabelKo: '이벤트별 결과 (정규 9개 중 5개 완료)',
     winners: [
       { division: 'Dallas — May 22–25 (opener)', divisionKo: '댈러스 — 5/22–25 (개막)', champ: 'LA Mad Drops', note: 'Mad Drops lifted the first Super Sunday Belt.', noteKo: 'Mad Drops가 첫 Super Sunday 벨트 획득.' },
@@ -30,7 +30,7 @@ module.exports = [
       { division: 'Austin — June 11–14', divisionKo: '오스틴 — 6/11–14', champ: 'New Jersey 5s', note: '5s added a second title; the Shock and Mad Drops did not play this stop.', noteKo: '5s가 두 번째 우승; 이 대회에는 Shock·Mad Drops 불참.' },
       { division: 'St. Petersburg — June 17–21', divisionKo: '세인트피터스버그 — 6/17–21', champ: 'St. Louis Shock', silver: 'LA Mad Drops', bronze: 'Brooklyn Pickleball Team', note: 'Shock beat the Mad Drops 3-0 (33-15) in the rubber match; Palm Beach 4th.', noteKo: 'Shock가 결승서 Mad Drops를 3-0(33-15)으로; Palm Beach 4위.' }
     ],
-    standingsLabel: 'Title race so far', standingsLabelKo: '현재 타이틀 레이스',
+    standingsLabel: 'Title race so far', standingsLabelKo: '현재 우승 경쟁',
     standings: [
       { team: 'St. Louis Shock', note: 'Won St. Louis and St. Pete; unbeaten in matches since late May and tracking toward a top-2 seed.', noteKo: 'St. Louis·St. Pete 우승; 5월 말 이후 경기 무패로 톱2 시드 유력.' },
       { team: 'New Jersey 5s', note: 'Bounced back from a 4th-place opener to win Columbus and Austin, led by Anna Leigh Waters.', noteKo: '개막 4위에서 반등해 Columbus·Austin 우승, 애나 리 워터스가 견인.' },
@@ -141,7 +141,7 @@ module.exports = [
     eventKo: '메이저 리그 피클볼 2026 (샌디에이고 종료 기준)',
     checked: '2026-07-20',
     liveLabel: 'Live standings & next-event scores',
-    liveLabelKo: '라이브 순위·다음 대회 스코어',
+    liveLabelKo: '실시간 순위·다음 대회 스코어',
     summary: 'Seven of nine regular-season stops are complete, along with the Mid-Season Tournament. New Jersey and St. Louis remain the central season-long rivalry, while Dallas used an undefeated San Diego run to add 25 points before Chicago.',
     summaryKo: '정규 시즌 9개 대회 중 7개와 미드시즌 토너먼트가 완료됐습니다. New Jersey와 St. Louis가 시즌 선두 경쟁의 중심이며, Dallas는 샌디에이고 무패 우승으로 시카고를 앞두고 25점을 추가했습니다.',
     winnersLabel: 'Completed 2026 MLP event results through July 20',
@@ -168,7 +168,7 @@ module.exports = [
     storylineTitle: 'Storyline — three different winners in three recent windows',
     storylineTitleKo: '관전 포인트 — 최근 세 구간에서 나온 세 우승팀',
     storyline: 'New Jersey won New York, St. Louis controlled the Mid-Season Tournament, and Dallas answered with an undefeated San Diego title. The sequence shows why the MLP race cannot be reduced to one dominant roster: format, availability, matchup plans, and the timing of each team’s final regular-season stop all matter before the playoffs.',
-    storylineKo: 'New Jersey가 뉴욕, St. Louis가 미드시즌 토너먼트, Dallas가 샌디에이고를 우승했습니다. 한 팀의 절대 우위만으로 시즌을 설명하기 어렵고, 포맷·출전 가능 여부·매치업 계획·각 팀의 마지막 정규 시즌 일정이 플레이오프 전까지 모두 중요하다는 흐름입니다.'
+    storylineKo: 'New Jersey가 뉴욕, St. Louis가 미드시즌 토너먼트, Dallas가 샌디에이고를 우승했습니다. 한 팀의 절대 우위만으로 시즌을 설명하기 어렵고, 경기 방식·출전 가능 여부·상대별 경기 계획·각 팀의 마지막 정규 시즌 일정이 플레이오프 전까지 모두 중요하다는 흐름입니다.'
   });
 })();
 
@@ -260,14 +260,14 @@ module.exports = [
       { division:'New Jersey vs Chicago', divisionKo:'New Jersey vs Chicago', champ:'New Jersey 5s', silver:'Chicago Slice', note:'3-1 · 11-2, 6-11, 11-5, 11-2', noteKo:'3-1 · 11-2, 6-11, 11-5, 11-2' },
       { division:'LA vs California', divisionKo:'LA vs California', champ:'LA Mad Drops', silver:'California Black Bears', note:'4-0 · 13-11, 11-1, 11-9, 11-3', noteKo:'4-0 · 13-11, 11-1, 11-9, 11-3' }
     ],
-    standingsLabel:'Live implications', standingsLabelKo:'라이브 관전 포인트',
+    standingsLabel:'Live implications', standingsLabelKo:'실시간 관전 포인트',
     standings:[
       { team:'LA Mad Drops', note:'Two Friday wins increased pressure on the teams above and around them in the seeding race.', noteKo:'금요일 2승으로 시드 경쟁의 상·인접 팀에 압박을 높임.' },
       { team:'St. Louis Shock', note:'A 4-0 sweep protected the No. 1 seed push.', noteKo:'4-0 스윕으로 1번 시드 경쟁을 지킴.' },
       { team:'New Jersey 5s', note:'A 3-1 win answered St. Louis from the other pool.', noteKo:'다른 풀에서 3-1 승리로 St. Louis에 응답.' },
       { team:'Las Vegas Night Owls', note:'The 21-16 DreamBreaker win kept the bubble path alive.', noteKo:'DreamBreaker 21-16 승리로 버블 가능성을 유지.' }
     ],
-    liveUrl:'https://majorleaguepickleball.co/events-2026/mlp-orlando-2026/', liveLabel:'Official live scores', liveLabelKo:'공식 라이브 스코어',
+    liveUrl:'https://majorleaguepickleball.co/events-2026/mlp-orlando-2026/', liveLabel:'Official live scores', liveLabelKo:'공식 실시간 경기 결과',
     source:'Major League Pickleball', sourceUrl:'https://majorleaguepickleball.co/events-2026/mlp-orlando-2026/'
   };
   const index=rows.findIndex((x)=>x.id===id);

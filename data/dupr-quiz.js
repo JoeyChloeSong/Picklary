@@ -72,7 +72,7 @@ module.exports = [
     "incoming": "High, attackable pop-up",
     "incomingKo": "높이 뜬 공격 가능한 볼",
     "prompt": "Dink rally at the kitchen — the opponent’s dink floats up and sits in your kitchen.",
-    "promptKo": "키친 딩크 랠리 중 — 상대 딩크가 떠서 당신 키친에 머뭅니다(찬스볼).",
+    "promptKo": "키친 딩크 랠리 중 — 상대 딩크가 떠서 내 쪽 키친에 머뭅니다(찬스볼).",
     "shot": {
       "speedup": 3,
       "smash": 3,
@@ -319,7 +319,7 @@ module.exports = [
     "incoming": "Dink up the middle",
     "incomingKo": "가운데로 오는 딩크",
     "prompt": "A dink comes right up the middle between you and your partner.",
-    "promptKo": "딩크가 당신과 파트너 사이 가운데로 옵니다.",
+    "promptKo": "딩크가 나와 파트너 사이 가운데로 옵니다.",
     "shot": {
       "dink": 3,
       "drop": 1,
@@ -684,7 +684,7 @@ module.exports = [
     "incoming": "Low drive at midcourt",
     "incomingKo": "미드코트로 오는 낮은 드라이브",
     "prompt": "Opponents at the net; you are at midcourt and they hit a low, hard drive.",
-    "promptKo": "상대는 네트, 당신은 미드코트. 상대가 낮고 강한 드라이브를 칩니다.",
+    "promptKo": "상대는 네트에 있고 나는 미드코트에 있습니다. 상대가 낮고 강한 드라이브를 칩니다.",
     "shot": {
       "reset": 3,
       "block": 2,
@@ -802,9 +802,9 @@ module.exports = [
       "power": "soft"
     },
     "incoming": "Opponent’s block pops up to you",
-    "incomingKo": "상대 블록이 떠서 당신에게",
+    "incomingKo": "상대 블록이 떠서 내 쪽으로",
     "prompt": "Your partner sped up at the opponents, whose block pops up high — the sitter comes to you.",
-    "promptKo": "파트너가 상대에게 스피드업했고, 상대의 블록이 높게 떠서 당신에게 옵니다(찬스볼).",
+    "promptKo": "파트너가 상대에게 스피드업했고, 상대의 블록이 높게 떠서 내 쪽으로 옵니다(찬스볼).",
     "shot": {
       "smash": 3,
       "speedup": 2,
@@ -925,9 +925,9 @@ module.exports = [
       "power": "hard"
     },
     "incoming": "Fast hands battle, ball at chest",
-    "incomingKo": "빠른 핸즈 배틀, 가슴으로 오는 공",
+    "incomingKo": "빠른 빠른 손 배틀, 가슴으로 오는 공",
     "prompt": "You are in a fast hands battle at the net; the ball comes at your chest at pace.",
-    "promptKo": "네트에서 빠른 핸즈 배틀 중. 공이 가슴으로 빠르게 옵니다.",
+    "promptKo": "네트에서 빠른 빠른 손 배틀 중. 공이 가슴으로 빠르게 옵니다.",
     "shot": {
       "block": 3,
       "speedup": 2,
@@ -948,7 +948,7 @@ module.exports = [
       "kR": 2
     },
     "explain": "In a hands battle, a compact block/counter at the body beats a big swing — control wins fast exchanges.",
-    "explainKo": "핸즈 배틀에서는 큰 스윙보다 몸쪽을 향한 짧은 블록/카운터가 유리합니다. 빠른 교환은 컨트롤이 이깁니다."
+    "explainKo": "빠른 손 배틀에서는 큰 스윙보다 몸쪽을 향한 짧은 블록/카운터가 유리합니다. 빠른 교환은 컨트롤이 이깁니다."
   },
   {
     "id": "d3-linedrive",
@@ -1051,7 +1051,7 @@ module.exports = [
     "incoming": "A perfect drop into your kitchen",
     "incomingKo": "키친에 완벽히 떨어진 드롭",
     "prompt": "The opponent’s third-shot drop lands perfectly low in your kitchen.",
-    "promptKo": "상대의 서드샷 드롭이 당신 키친에 완벽하게 낮게 떨어집니다.",
+    "promptKo": "상대의 서드샷 드롭이 내 쪽 키친에 낮고 완벽하게 떨어집니다.",
     "shot": {
       "dink": 3,
       "drop": 2,
@@ -1090,9 +1090,9 @@ module.exports = [
       "power": "medium"
     },
     "incoming": "Middle ball, you’re the stronger forehand",
-    "incomingKo": "가운데 공, 당신이 더 강한 포핸드",
+    "incomingKo": "가운데 공, 내 포핸드가 더 유리함",
     "prompt": "A middle ball arrives and you are the stronger forehand poaching the middle; a gap is open.",
-    "promptKo": "가운데 공이 오고, 당신이 가운데를 커버하는 더 강한 포핸드입니다. 한쪽이 비어 있습니다.",
+    "promptKo": "가운데 공이 오고, 내 포핸드가 가운데를 커버하기 더 유리한 상황입니다. 한쪽 코트가 비어 있습니다.",
     "shot": {
       "speedup": 3,
       "drive": 3,
@@ -1260,7 +1260,7 @@ module.exports = [
     "incoming": "A soft dink splits the middle between you both",
     "incomingKo": "둘 사이 가운데로 떨어지는 부드러운 딩크",
     "prompt": "A soft ball drops down the middle at the kitchen. Which player should take it, and how?",
-    "promptKo": "키친에서 공이 둘 사이 가운데로 부드럽게 옵니다. 어느 플레이어가, 어떻게 칠까요?",
+    "promptKo": "키친에서 공이 둘 사이 가운데로 부드럽게 옵니다. 어느 선수가, 어떻게 칠까요?",
     "player": {
       "p1": 3,
       "p2": 1
@@ -1282,7 +1282,7 @@ module.exports = [
       "kR": 2
     },
     "explain": "On a ball down the middle, the player whose forehand covers the center takes it — for two right-handers that is Player 1 on the left. Call it early and dink it back low.",
-    "explainKo": "가운데로 오는 공은 포핸드가 중앙을 덮는 플레이어가 잡습니다 — 둘 다 오른손잡이면 왼쪽의 플레이어 1입니다. 일찍 \"마인\" 콜하고 낮게 딩크로 돌려보내세요."
+    "explainKo": "가운데로 오는 공은 포핸드가 중앙을 덮는 선수가 잡습니다 — 둘 다 오른손잡이면 왼쪽의 선수 1입니다. 일찍 \"마인\" 콜하고 낮게 딩크로 돌려보내세요."
   },
   {
     "id": "dp2-cover",
@@ -1301,9 +1301,9 @@ module.exports = [
       "power": "medium"
     },
     "incoming": "Player 1 is pulled wide; the ball comes back to the middle",
-    "incomingKo": "플레이어 1이 넓게 끌려나간 상태에서 공이 가운데로 돌아옵니다",
+    "incomingKo": "선수 1이 넓게 끌려나간 상태에서 공이 가운데로 돌아옵니다",
     "prompt": "Player 1 is stretched wide and out of position. A ball comes to the middle. Which player should take it?",
-    "promptKo": "플레이어 1이 코트 밖으로 끌려나가 자리를 비웠습니다. 공이 가운데로 옵니다. 어느 플레이어가 칠까요?",
+    "promptKo": "선수 1이 코트 밖으로 끌려나가 자리를 비웠습니다. 공이 가운데로 옵니다. 어느 선수가 칠까요?",
     "player": {
       "p1": 1,
       "p2": 3
@@ -1325,6 +1325,6 @@ module.exports = [
       "kR": 1
     },
     "explain": "When your partner is pulled out of position, the player still in position covers the middle — here Player 2. Take it, reset softly, and give Player 1 time to recover.",
-    "explainKo": "파트너가 자리를 벗어나면, 제자리에 있는 플레이어가 가운데를 커버합니다 — 여기선 플레이어 2입니다. 받아서 부드럽게 리셋하고 플레이어 1이 복귀할 시간을 주세요."
+    "explainKo": "파트너가 자리를 벗어나면, 제자리에 있는 선수가 가운데를 커버합니다 — 여기선 선수 2입니다. 받아서 부드럽게 리셋하고 선수 1이 복귀할 시간을 주세요."
   }
 ];

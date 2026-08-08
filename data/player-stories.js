@@ -58,7 +58,7 @@ module.exports = {
     analysis:[['Athletic improvisation','His reach and balance rescue points, but the key is how quickly he reorganizes afterward.','운동 능력과 재정렬','리치와 균형으로 공을 살린 뒤 얼마나 빨리 구조를 회복하는지가 핵심입니다.'],['Backhand identity','The two-handed backhand is both a counter and a point-starting weapon.','백핸드 정체성','투핸드 백핸드는 카운터이자 포인트를 시작하는 무기입니다.'],['Three-division load','Singles movement can sharpen doubles transition, but schedule management matters.','세 종목 부담','싱글 이동이 복식 전환을 강화하지만 일정 관리가 중요합니다.']],
     timeline:[['2021','Began pickleball shortly after an undefeated NCAA Division III singles championship season.','NCAA DIII 단식 무패 우승 직후 피클볼 시작.'],['2024–2025','Moved from breakthrough wins to repeatable finals appearances.','이변에서 반복 가능한 결승 진출로 발전.'],['2026','Indoor mixed title and top-four positions across divisions.','Indoor 혼합 우승과 세 종목 상위권.']],
     partners:[['Hayden Patriquin','Men’s doubles: speed, reach, and constant pressure','남자복식: 속도·리치·지속 압박'],['Hurricane Tyra Black','Mixed doubles: explosive countering and scramble coverage','혼합복식: 폭발적 카운터와 수비 범위']],
-    nextWatch:'Whether disciplined point construction can match his improvisational ceiling.', nextWatchKo:'규율 있는 포인트 설계가 즉흥적 최고치와 같은 수준으로 올라오는지 보세요.',
+    nextWatch:'Whether disciplined point construction can match his improvisational ceiling.', nextWatchKo:'규율 있는 포인트 구성가 즉흥적 최고치와 같은 수준으로 올라오는지 보세요.',
     drill:['Recover after rescue','Start each rally with a wide defensive feed; score only if the team resets and returns to balanced spacing.','구원 후 회복','넓은 수비 피드로 시작하고 리셋 후 균형 간격을 회복해야 득점합니다.']
   },
   'gabriel-tardio': {
@@ -67,7 +67,7 @@ module.exports = {
     whyNow:'Tardio is redefining what a right-side player can contribute to an elite men’s doubles team.', whyNowKo:'Tardio는 정상급 남자복식에서 오른쪽 선수가 제공할 수 있는 역할을 다시 정의하고 있습니다.',
     analysis:[['Right-side creator','He does not wait for the left player to create every attack.','오른쪽 창조자','왼쪽 선수가 모든 공격을 만들 때까지 기다리지 않습니다.'],['Middle speed','His backhand counter closes the middle before opponents can widen the point.','중앙 속도','백핸드 카운터가 상대가 포인트를 넓히기 전에 중앙을 닫습니다.'],['Transition courage','He attacks from locations many players treat only as survival zones.','전환 구역의 대담함','다른 선수들이 생존 구역으로 여기는 위치에서 공격합니다.']],
     timeline:[['Development','Bolivian-born prospect moved quickly through the U.S. professional scene.','볼리비아 출신 유망주로 미국 프로 무대에서 급성장.'],['Partnership leap','Pairing with Ben Johns elevated both results and tactical visibility.','Ben Johns와의 조합으로 성적과 전술적 주목도 상승.'],['2026','No. 1-level men’s doubles profile and repeated championship results.','남자복식 #1 수준과 반복 우승.']],
-    partners:[['Ben Johns','Point structure + right-side acceleration','포인트 설계 + 오른쪽 가속']],
+    partners:[['Ben Johns','Point structure + right-side acceleration','포인트 구성 + 오른쪽 가속']],
     nextWatch:'Can opponents force him to play one extra soft ball before the counter window appears?', nextWatchKo:'상대가 카운터 기회 전 소프트 공을 한 번 더 치게 만들 수 있는지 보세요.',
     drill:['Right-side permission','Right-side player must initiate at least one safe attack every three rallies.','오른쪽 공격 허용','오른쪽 선수는 3랠리마다 최소 한 번 안전한 공격을 시작합니다.']
   },

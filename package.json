@@ -1,8 +1,8 @@
 {
   "name": "picklelevel",
-  "version": "0.6.7",
+  "version": "0.7.1",
   "private": true,
-  "description": "Picklary v0.6.7 — adds the completed 2026 MLP regular-season table, Dallas playoff series and rolling schedule, projected Newport Beach paths, current team rosters, and bilingual matchup analysis.",
+  "description": "Picklary v0.7.1 — polishes Korean copy across navigation, tools, Tour Board, Vision Rating, gear, community, and guide pages with consistent natural terminology while preserving v0.7.0 mobile behavior and current MLP content.",
   "scripts": {
     "build": "node build.js && node scripts/check-seo-redirects.js",
     "start": "node build.js && node start-local.js",

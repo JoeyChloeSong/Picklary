@@ -7,7 +7,7 @@ module.exports = function applyResultsLiveV059(items) {
   recap.winnersLabel='Completed Friday matches at 5:35 PM ET';
   recap.winnersLabelKo='오후 5:35 ET 기준 완료된 금요일 경기';
   recap.summary='Seven Friday matches were complete at the official scoreboard checkpoint. The live event remains in progress, so later scores and standings are not treated as final.';
-  recap.summaryKo='공식 스코어보드 확인 시점에 금요일 7경기가 완료됐습니다. 대회는 진행 중이므로 이후 스코어와 standings는 최종 결과로 처리하지 않습니다.';
+  recap.summaryKo='공식 스코어보드 확인 시점에 금요일 7경기가 끝났습니다. 대회가 아직 진행 중이므로 이후 경기 결과와 순위는 최종 결과로 확정하지 않습니다.';
   recap.winners=[
     ['St. Louis Shock','Phoenix Flames','4–0'],
     ['LA Mad Drops','Palm Beach Royals','3–1'],

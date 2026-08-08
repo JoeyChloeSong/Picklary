@@ -4,7 +4,7 @@ module.exports = {
   updated: '2026-07-19',
   editorialNote: {
     en: 'Live scores, brackets, rankings, injuries, and roster details can change during the day. Picklary summarizes the verified context and always links back to the official source.',
-    ko: '라이브 스코어, 브래킷, 랭킹, 부상·로스터 정보는 하루 중에도 바뀔 수 있습니다. Picklary는 확인된 맥락만 요약하고 공식 원문으로 다시 연결합니다.'
+    ko: '실시간 경기 결과, 대진표, 랭킹, 부상·로스터 정보는 하루 중에도 바뀔 수 있습니다. Picklary는 확인된 맥락만 요약하고 공식 원문으로 다시 연결합니다.'
   },
   statusEvents: [
     {
@@ -39,7 +39,7 @@ module.exports = {
       title: 'MLP Chicago', titleKo: 'MLP 시카고',
       location: 'Life Time North Shore, Northbrook, IL', locationKo: '미국 일리노이 노스브룩 Life Time North Shore',
       summary: 'The next MLP stop brings eleven listed teams to the Chicago area for crucial standings points and a home event for Chicago Slice.',
-      summaryKo: '다음 MLP 대회는 11개 참가 팀이 시카고 지역에서 중요한 standings 포인트를 놓고 경쟁하며, Chicago Slice의 홈 이벤트이기도 합니다.',
+      summaryKo: '다음 MLP 대회는 11개 참가 팀이 시카고 지역에서 중요한 정규시즌 순위 포인트를 놓고 경쟁하며, Chicago Slice의 홈 이벤트이기도 합니다.',
       sourceName: 'MLP Chicago official event page', sourceUrl: 'https://majorleaguepickleball.co/events-2026/mlp-chicago-2026/',
       detail: true
     },
@@ -57,7 +57,7 @@ module.exports = {
       title: 'PPA Asia 500 Singapore Open', titleKo: 'PPA 아시아 500 싱가포르 오픈',
       location: 'Singapore', locationKo: '싱가포르',
       summary: 'The PPA Asia 500 Singapore Open overlaps with the next MLP window, making international field depth and travel choices a key storyline.',
-      summaryKo: 'PPA 아시아 500 싱가포르 오픈은 다음 MLP 일정과 겹치며, 국제 선수층과 이동 선택이 중요한 스토리라인이 됩니다.',
+      summaryKo: 'PPA 아시아 500 싱가포르 오픈은 다음 MLP 일정과 겹치며, 국제 선수층과 이동 선택이 중요한 관전 흐름이 됩니다.',
       sourceName: 'PPA Tour schedule', sourceUrl: 'https://ppatour.com/schedule/',
       detail: true
     },
@@ -76,7 +76,7 @@ module.exports = {
       id: 'live-mlp-san-diego-final-day', date: '2026-07-19', kind: 'tournament', tour: 'MLP', discipline: 'team', confidence: 'official',
       title: 'MLP San Diego reaches championship day', titleKo: 'MLP 샌디에이고 챔피언십 데이',
       summary: 'San Diego closes July 19 with live scores and standings available from the official event page. The participating field is split across two groups, and every standings point matters before Chicago and Orlando.',
-      summaryKo: '샌디에이고 대회는 7월 19일 최종일을 치릅니다. 공식 이벤트 페이지에서 라이브 스코어와 standings를 확인할 수 있으며, 시카고·올랜도를 앞두고 매 포인트의 중요성이 커집니다.',
+      summaryKo: '샌디에이고 대회는 7월 19일 최종일을 치릅니다. 공식 이벤트 페이지에서 실시간 경기 결과와 순위를 확인할 수 있으며, 시카고·올랜도를 앞두고 매 포인트의 중요성이 커집니다.',
       sourceName: 'MLP San Diego', sourceUrl: 'https://majorleaguepickleball.co/events-2026/mlp-san-diego-2026/',
       internalUrl: 'tournaments/mlp-san-diego-2026/'
     },
@@ -92,7 +92,7 @@ module.exports = {
       id: 'macon-final-day', date: '2026-07-19', kind: 'tournament', tour: 'PPA', discipline: 'all', confidence: 'official',
       title: 'Macon PPA Challenger closes in Georgia', titleKo: '조지아 메이컨 PPA 챌린저 최종일',
       summary: 'The July 17–19 Challenger combines pro and amateur competition at Rhythm & Rally. Final brackets and results should be checked at the official page.',
-      summaryKo: '7월 17~19일 Rhythm & Rally에서 열리는 챌린저는 프로와 아마추어 경기를 함께 진행합니다. 최종 브래킷과 결과는 공식 페이지에서 확인하세요.',
+      summaryKo: '7월 17~19일 Rhythm & Rally에서 열리는 챌린저는 프로와 아마추어 경기를 함께 진행합니다. 최종 대진표와 경기 결과는 공식 페이지에서 확인하세요.',
       sourceName: 'PPA Tour', sourceUrl: 'https://ppatour.com/tournament/2026/2026-macon-ga/',
       internalUrl: 'tournaments/macon-ppa-challenger-2026/'
     },
@@ -100,7 +100,7 @@ module.exports = {
       id: 'mlp-playoff-race', date: '2026-07-19', kind: 'storyline', tour: 'MLP', discipline: 'team', confidence: 'analysis',
       title: 'The MLP playoff race compresses into Chicago and Orlando', titleKo: 'MLP 플레이오프 경쟁, 시카고와 올랜도로 압축',
       summary: 'San Diego is followed immediately by Chicago and then the final regular-season stop in Orlando. That short runway raises the value of team depth, availability, and DreamBreaker performance.',
-      summaryKo: '샌디에이고 직후 시카고, 이어 정규 시즌 마지막 올랜도 대회가 열립니다. 짧은 일정은 팀 뎁스, 선수 출전 가능 여부, DreamBreaker 경쟁력을 더욱 중요하게 만듭니다.',
+      summaryKo: '샌디에이고 직후 시카고, 이어 정규 시즌 마지막 올랜도 대회가 열립니다. 짧은 일정은 팀 선수층, 선수 출전 가능 여부, DreamBreaker 경쟁력을 더욱 중요하게 만듭니다.',
       sourceName: 'MLP 2026 schedule', sourceUrl: 'https://majorleaguepickleball.co/standings/',
       internalUrl: 'pro-scene/storylines/'
     },
@@ -108,7 +108,7 @@ module.exports = {
       id: 'mlp-chicago-preview', date: '2026-07-19', kind: 'tournament', tour: 'MLP', discipline: 'team', confidence: 'official',
       title: 'Next up: MLP Chicago at Life Time North Shore', titleKo: '다음 대회: Life Time North Shore의 MLP 시카고',
       summary: 'MLP lists eleven teams for July 23–26 in Northbrook. Chicago Slice gets a home-crowd window while playoff contenders chase crucial standings points.',
-      summaryKo: 'MLP는 7월 23~26일 노스브룩 대회에 11개 팀을 안내합니다. Chicago Slice는 홈 관중의 힘을 받고 플레이오프 경쟁 팀들은 중요한 standings 포인트를 추격합니다.',
+      summaryKo: 'MLP는 7월 23~26일 노스브룩 대회에 11개 팀을 안내합니다. Chicago Slice는 홈 관중의 힘을 받고 플레이오프 경쟁 팀들은 중요한 정규시즌 순위 포인트를 추격합니다.',
       sourceName: 'MLP Chicago', sourceUrl: 'https://majorleaguepickleball.co/events-2026/mlp-chicago-2026/',
       internalUrl: 'tournaments/mlp-chicago-2026/'
     },
@@ -157,7 +157,7 @@ module.exports = {
       id: 'blog-bridge', date: '2026-07-19', kind: 'insight', tour: 'all', discipline: 'all', confidence: 'analysis',
       title: 'From scoreboards to deeper Picklary and Naver stories', titleKo: '결과 게시판에서 Picklary·네이버 심층 글로 연결',
       summary: 'Tour Board stores the evolving event and player context. Companion blog posts can then explain tactics, gear choices, and the human story without duplicating the live data page.',
-      summaryKo: 'Tour Board에는 계속 바뀌는 대회·선수 맥락을 축적하고, 연결된 블로그 글에서는 전술, 장비 선택, 경기 밖 인간적인 이야기를 설명합니다. 라이브 데이터 페이지를 그대로 복사하지 않습니다.',
+      summaryKo: 'Tour Board에는 계속 바뀌는 대회·선수 맥락을 축적하고, 연결된 블로그 글에서는 전술, 장비 선택, 경기 밖 인간적인 이야기를 설명합니다. 실시간 결과 페이지를 그대로 복사하지 않습니다.',
       sourceName: 'Picklary blog hub', sourceUrl: '/en/blogs/', sourceUrlKo: '/ko/blogs/',
       internalUrl: 'blogs/'
     }
@@ -167,7 +167,7 @@ module.exports = {
       date: '2026-07-19', confidence: 'official', tour: 'MLP',
       title: 'San Diego → Chicago → Orlando', titleKo: '샌디에이고 → 시카고 → 올랜도',
       body: 'Three consecutive MLP windows lead directly into the playoffs. Teams must balance immediate standings points with roster health, travel, and matchup planning.',
-      bodyKo: '세 차례 연속 MLP 일정이 곧바로 플레이오프로 이어집니다. 팀들은 당장의 standings 포인트와 선수 컨디션, 이동, 매치업 계획을 함께 관리해야 합니다.',
+      bodyKo: '세 차례 연속 MLP 일정이 곧바로 플레이오프로 이어집니다. 팀들은 당장의 정규시즌 순위 포인트와 선수 컨디션, 이동, 상대별 경기 계획을 함께 관리해야 합니다.',
       sourceName: 'MLP 2026 schedule', sourceUrl: 'https://majorleaguepickleball.co/standings/'
     },
     {
@@ -188,27 +188,27 @@ module.exports = {
       date: '2026-05-03', confidence: 'official', tour: 'PPA',
       title: 'Next-generation singles pressure is no longer theoretical', titleKo: '차세대 단식 선수의 압박은 더 이상 가능성에 그치지 않는다',
       body: 'Fifteen-year-old Tama Shimabukuro reached the Atlanta men’s singles final from the No. 22 seed, reinforcing the importance of tracking emerging players before they enter the top-ten conversation.',
-      bodyKo: '15세 타마 시마부쿠로가 애틀랜타 남자 단식에서 22번 시드로 결승에 올라, Top 10에 진입하기 전부터 신예를 추적해야 할 이유를 보여줬습니다.',
+      bodyKo: '15세 타마 시마부쿠로가 애틀랜타 남자 단식에서 22번 시드로 결승에 올라, 상위 10위에 진입하기 전부터 신예를 추적해야 할 이유를 보여줬습니다.',
       sourceName: 'PPA Atlanta recap', sourceUrl: 'https://ppatour.com/championship-sunday-standout-stats-from-the-veolia-atlanta-pickleball-championships-2/'
     }
   ],
   insights: [
     {
-      title: 'PPA & MLP rules and formats', titleKo: 'PPA·MLP 규정과 경기 포맷',
+      title: 'PPA & MLP rules and formats', titleKo: 'PPA·MLP 규정과 경기 방식',
       body: 'Understand ranking points, team-match structure, DreamBreakers, and the checks that matter when a format changes.',
-      bodyKo: '랭킹 포인트, 팀 매치 구조, DreamBreaker, 포맷 변경 시 확인해야 할 항목을 설명합니다.',
+      bodyKo: '랭킹 포인트, 팀 매치 구조, DreamBreaker, 경기 방식 변경 시 확인해야 할 항목을 설명합니다.',
       url: 'pro-scene/rules/'
     },
     {
       title: 'Pro player learning profiles', titleKo: '프로 선수 학습형 프로필',
       body: 'Connect tour storylines with player style, skills, paddle information, and practical club-player takeaways.',
-      bodyKo: '투어 스토리를 선수 스타일, 주요 기술, 패들 정보와 클럽 플레이어가 배울 점으로 연결합니다.',
+      bodyKo: '투어 스토리를 선수 스타일, 주요 기술, 패들 정보와 클럽 선수가 배울 점으로 연결합니다.',
       url: 'pro-scene/players/'
     },
     {
       title: 'Naver and companion blogs', titleKo: '네이버 및 연계 블로그',
       body: 'Use longer posts for tactics, gear observations, and off-court stories while Tour Board remains the continuously updated data hub.',
-      bodyKo: 'Tour Board는 계속 업데이트되는 데이터 허브로 두고, 긴 글에서는 전술, 장비 관찰, 경기 밖 이야기를 다룹니다.',
+      bodyKo: 'Tour Board는 계속 업데이트되는 정보 허브로 두고, 긴 글에서는 전술, 장비 관찰, 경기 밖 이야기를 다룹니다.',
       url: 'blogs/'
     }
   ],
@@ -218,10 +218,10 @@ module.exports = {
       title: 'MLP San Diego 2026', titleKo: 'MLP 샌디에이고 2026',
       location: 'Barnes Tennis Center, San Diego, California', locationKo: '미국 캘리포니아 샌디에이고 Barnes Tennis Center',
       overview: 'MLP’s seventh regular-season event brings eleven teams to Southern California. The event page provides schedule-and-score graphics, streaming information, and links to the current standings.',
-      overviewKo: 'MLP 정규 시즌 7번째 대회로 11개 팀이 남부 캘리포니아에 모입니다. 공식 페이지에서 일정·스코어 이미지, 중계 정보, 현재 standings 연결을 제공합니다.',
+      overviewKo: 'MLP 정규 시즌 7번째 대회로 11개 팀이 남부 캘리포니아에 모입니다. 공식 페이지에서 일정·스코어 이미지, 중계 정보, 현재 순위표 링크을 제공합니다.',
       participants: ['Atlanta Bouncers', 'Bay Area Breakers', 'California Black Bears', 'Columbus Sliders', 'Dallas Flash', 'Florida Smash', 'Los Angeles Mad Drops', 'Orlando Squeeze', 'Phoenix Flames', 'SoCal Hard Eights', 'Utah Black Diamonds'],
       watch: ['How teams protect standings points before Chicago', 'Mixed-doubles pair construction', 'DreamBreaker depth and substitutions'],
-      watchKo: ['시카고를 앞둔 standings 포인트 관리', '혼합복식 조합 구성', 'DreamBreaker 뎁스와 교체 선택'],
+      watchKo: ['시카고를 앞둔 정규시즌 순위 포인트 관리', '혼합복식 조합 구성', 'DreamBreaker 선수층와 교체 선택'],
       storyline: 'This event is less an isolated tournament than the first step in a compressed San Diego–Chicago–Orlando run into the postseason.',
       storylineKo: '이 대회는 단독 이벤트라기보다 샌디에이고–시카고–올랜도로 압축된 포스트시즌 진입 구간의 첫 단계입니다.',
       sourceUrl: 'https://majorleaguepickleball.co/events-2026/mlp-san-diego-2026/', sourceName: 'MLP San Diego official event page',
@@ -238,7 +238,7 @@ module.exports = {
       watch: ['Official Winners Circle publication', 'Regional players earning PPA Australia and cross-tour points', 'International field depth'],
       watchKo: ['공식 Winners Circle 공개', 'PPA Australia 및 연계 투어 포인트를 얻는 지역 선수', '국제 선수층의 깊이'],
       storyline: 'The main Picklary angle is not to guess the medals but to track how regional PPA circuits feed a broader global player pipeline.',
-      storylineKo: 'Picklary의 핵심 관점은 메달을 추측하는 것이 아니라, 지역 PPA 투어가 글로벌 선수 성장 경로로 어떻게 연결되는지 추적하는 것입니다.',
+      storylineKo: 'Picklary의 핵심 관점은 메달을 추측하는 것이 아니라, 지역 PPA 투어가 국제 선수 성장 경로로 어떻게 연결되는지 추적하는 것입니다.',
       sourceUrl: 'https://pickleballtournaments.com/tournaments/ppa-tour-australia-ppa250-melbourne', sourceName: 'Official tournament listing',
       secondaryUrl: 'https://pickleballtournaments.com/tournaments/ppa-tour-australia-ppa250-melbourne/winners-circle', secondaryName: 'Winners Circle'
     },
@@ -247,13 +247,13 @@ module.exports = {
       title: 'Macon PPA Challenger 2026', titleKo: '메이컨 PPA 챌린저 2026',
       location: 'Rhythm & Rally Sports & Events, Macon, Georgia', locationKo: '미국 조지아 메이컨 Rhythm & Rally Sports & Events',
       overview: 'The Georgia Challenger combines pro competition with amateur brackets. The official page is the source of truth for registration, draws, broadcasts, and final results.',
-      overviewKo: '조지아 챌린저는 프로 경기와 아마추어 브래킷을 함께 운영합니다. 등록, 대진, 중계, 최종 결과는 공식 페이지를 기준으로 확인합니다.',
+      overviewKo: '조지아 챌린저는 프로 경기와 아마추어 부문을 함께 운영합니다. 참가 등록, 대진, 중계와 최종 결과는 공식 페이지에서 확인합니다.',
       participants: ['Professional and amateur singles', 'Mixed doubles', 'Men’s and women’s doubles'],
       participantsKo: ['프로·아마추어 단식', '혼합복식', '남녀 복식'],
       watch: ['Which Challenger players convert the opportunity into future tour entries', 'Local Georgia participation', 'Final draw and medal confirmations'],
       watchKo: ['챌린저 기회를 향후 투어 출전으로 연결하는 선수', '조지아 지역 참가 흐름', '최종 대진과 메달 확인'],
       storyline: 'For Georgia readers, this is a useful bridge between the global Tour Board and accessible regional competition.',
-      storylineKo: '조지아 독자에게는 글로벌 Tour Board와 실제 참가 가능한 지역 대회를 연결하는 좋은 사례입니다.',
+      storylineKo: '조지아 독자에게는 프로 투어 정보와 실제 참가 가능한 지역 대회를 연결하는 좋은 사례입니다.',
       sourceUrl: 'https://ppatour.com/tournament/2026/2026-macon-ga/', sourceName: 'PPA Tour official event page'
     },
     {
@@ -261,12 +261,12 @@ module.exports = {
       title: 'MLP Chicago 2026', titleKo: 'MLP 시카고 2026',
       location: 'Life Time North Shore Sport and Racquet, Northbrook, Illinois', locationKo: '미국 일리노이 노스브룩 Life Time North Shore Sport and Racquet',
       overview: 'MLP’s first Chicago-area stop lists eleven participating teams and crucial standings points. Sunday broadcast windows are listed on Tennis Channel and MSG Network.',
-      overviewKo: 'MLP의 첫 시카고 지역 대회로 11개 참가 팀과 중요한 standings 포인트가 걸려 있습니다. 일요일 중계는 Tennis Channel과 MSG Network에 안내돼 있습니다.',
+      overviewKo: 'MLP의 첫 시카고 지역 대회로 11개 참가 팀과 중요한 정규시즌 순위 포인트가 걸려 있습니다. 일요일 중계는 Tennis Channel과 MSG Network에 안내돼 있습니다.',
       participants: ['Atlanta Bouncers', 'Brooklyn Pickleball Team', 'California Black Bears', 'Chicago Slice', 'Dallas Flash', 'Las Vegas Night Owls', 'Miami Pickleball Club', 'Phoenix Flames', 'SoCal Hard Eights', 'Texas Ranchers', 'Utah Black Diamonds'],
       watch: ['Chicago Slice home-crowd response', 'Playoff positioning after San Diego', 'Lineup changes between consecutive events'],
       watchKo: ['Chicago Slice의 홈 관중 효과', '샌디에이고 이후 플레이오프 포지셔닝', '연속 대회 사이 라인업 변화'],
       storyline: 'The official preview explicitly frames Chicago as a home-court chance for Chicago Slice and a standings battle for playoff hopefuls.',
-      storylineKo: '공식 프리뷰는 시카고 대회를 Chicago Slice의 홈 코트 기회이자 플레이오프 경쟁 팀들의 standings 전쟁으로 설명합니다.',
+      storylineKo: '공식 프리뷰는 시카고 대회를 Chicago Slice의 홈 코트 기회이자 플레이오프 경쟁 팀들의 순위 경쟁으로 설명합니다.',
       sourceUrl: 'https://majorleaguepickleball.co/events-2026/mlp-chicago-2026/', sourceName: 'MLP Chicago official event page',
       secondaryUrl: 'https://majorleaguepickleball.co/standings/', secondaryName: 'MLP standings'
     },
@@ -317,7 +317,7 @@ module.exports = {
     resultStatus: 'live',
     resultChecked: '2026-07-19',
     resultNote: 'The official event page still showed the final-day schedule and live-score workflow when checked. MLP regular-season stops award standings points through team matches rather than individual singles or doubles medals.',
-    resultNoteKo: '확인 시점에 공식 페이지는 최종일 일정과 라이브 스코어 구조를 표시하고 있었습니다. MLP 정규 시즌 이벤트는 개인 단식·복식 메달보다 팀 매치 결과와 standings 포인트가 중심입니다.',
+    resultNoteKo: '확인 시점에 공식 페이지는 최종일 일정과 실시간 경기 결과 구조를 표시하고 있었습니다. MLP 정규 시즌 이벤트는 개인 단식·복식 메달보다 팀 매치 결과와 정규시즌 순위 포인트가 중심입니다.',
     results: [],
     resultLinks: [
       { label: 'Live schedule & scores', labelKo: '라이브 일정·스코어', url: 'https://majorleaguepickleball.co/events-2026/mlp-san-diego-2026/' },
@@ -334,9 +334,9 @@ module.exports = {
       '프로 경기와 함께 MiLP Regional Showdown 및 Jr. MLP 프로그램도 운영됐습니다.'
     ],
     stories: [
-      { kicker: 'FORMAT', kickerKo: '경기 방식', title: 'A team event, not five individual medal draws', titleKo: '개인 5종목 메달전이 아닌 팀 이벤트', body: 'San Diego should be read through team match records, standings points, lineup choices, and DreamBreaker depth. Picklary therefore presents the official score link instead of inventing individual medalists.', bodyKo: '샌디에이고는 팀 매치 전적, standings 포인트, 라인업 선택과 DreamBreaker 뎁스로 읽어야 합니다. 따라서 Picklary는 개인 메달리스트를 임의로 만들지 않고 공식 스코어 링크를 제공합니다.' },
+      { kicker: 'FORMAT', kickerKo: '경기 방식', title: 'A team event, not five individual medal draws', titleKo: '개인 5종목 메달전이 아닌 팀 이벤트', body: 'San Diego should be read through team match records, standings points, lineup choices, and DreamBreaker depth. Picklary therefore presents the official score link instead of inventing individual medalists.', bodyKo: '샌디에이고는 팀 매치 전적, 정규시즌 순위 포인트, 라인업 선택과 DreamBreaker 선수층을 중심으로 읽어야 합니다. 따라서 Picklary는 개인 메달리스트를 임의로 만들지 않고 공식 스코어 링크를 제공합니다.' },
       { kicker: 'PLAYOFF RACE', kickerKo: '플레이오프 경쟁', title: 'The first leg of a compressed three-stop finish', titleKo: '3개 연속 대회로 이어지는 첫 구간', body: 'San Diego is followed immediately by Chicago and Orlando. Availability, recovery, and roster flexibility can matter almost as much as one strong weekend.', bodyKo: '샌디에이고 직후 시카고와 올랜도가 이어집니다. 선수 출전 가능 여부, 회복, 로스터 유연성이 한 주의 경기력만큼 중요해집니다.' },
-      { kicker: 'COMMUNITY', kickerKo: '커뮤니티', title: 'Amateur and junior pathways shared the venue', titleKo: '아마추어·주니어 성장 경로가 같은 장소에 연결', body: 'The parallel MiLP and junior programming made the event more than a spectator stop: it connected local players with the professional team format.', bodyKo: 'MiLP와 주니어 프로그램이 함께 열리면서 단순 관람 대회를 넘어 지역 선수들이 프로 팀 포맷을 경험하는 접점이 됐습니다.' }
+      { kicker: 'COMMUNITY', kickerKo: '커뮤니티', title: 'Amateur and junior pathways shared the venue', titleKo: '아마추어·주니어 성장 경로가 같은 장소에 연결', body: 'The parallel MiLP and junior programming made the event more than a spectator stop: it connected local players with the professional team format.', bodyKo: 'MiLP와 주니어 프로그램이 함께 열리면서 단순 관람 대회를 넘어 지역 선수들이 프로 팀 경기 방식을 경험하는 접점이 됐습니다.' }
     ]
   });
 
@@ -403,12 +403,12 @@ module.exports = {
   if (chicago) Object.assign(chicago, {
     resultStatus: 'upcoming', resultChecked: '2026-07-19',
     resultNote: 'Results will be organized as team placements, match records, standings points, and DreamBreaker outcomes after the July 23–26 event.',
-    resultNoteKo: '7월 23–26일 대회가 끝난 뒤 팀 순위, 매치 전적, standings 포인트, DreamBreaker 결과 중심으로 정리합니다.',
+    resultNoteKo: '7월 23–26일 대회가 끝난 뒤 팀 순위, 매치 전적, 정규시즌 순위 포인트, DreamBreaker 결과 중심으로 정리합니다.',
     results: [],
     notableFacts: ['Eleven teams are listed for the Chicago stop.', 'Chicago Slice receives its first major home-crowd opportunity.', 'The event follows San Diego with only a short recovery window.'],
     notableFactsKo: ['시카고 대회에는 11개 팀이 안내돼 있습니다.', 'Chicago Slice가 본격적인 홈 관중 효과를 누릴 기회입니다.', '샌디에이고 직후 짧은 회복 기간을 두고 이어집니다.'],
     stories: [
-      { kicker: 'HOME COURT', kickerKo: '홈 코트', title: 'Chicago Slice finally gets the local spotlight', titleKo: 'Chicago Slice가 홈 스포트라이트를 받는다', body: 'A home crowd changes the atmosphere, but it also raises expectations for a team trying to turn energy into standings points.', bodyKo: '홈 관중은 분위기를 바꾸지만, 그 에너지를 standings 포인트로 바꿔야 하는 팀에는 기대와 부담도 함께 커집니다.' },
+      { kicker: 'HOME COURT', kickerKo: '홈 코트', title: 'Chicago Slice finally gets the local spotlight', titleKo: 'Chicago Slice가 홈 팬 앞에서 기회를 잡는다', body: 'A home crowd changes the atmosphere, but it also raises expectations for a team trying to turn energy into standings points.', bodyKo: '홈 관중은 분위기를 바꾸지만, 그 에너지를 정규시즌 순위 포인트로 바꿔야 하는 팀에는 기대와 부담도 함께 커집니다.' },
       { kicker: 'RECOVERY', kickerKo: '회복', title: 'Back-to-back event management becomes strategic', titleKo: '연속 대회 운영 자체가 전략이 된다', body: 'Lineup rotation, minor injuries, and travel fatigue can influence matchups as much as raw player rankings.', bodyKo: '라인업 회전, 경미한 부상, 이동 피로가 단순 선수 랭킹만큼 매치업에 영향을 줄 수 있습니다.' }
     ]
   });
@@ -494,7 +494,7 @@ module.exports = {
     notableFacts: ['Waters completed a Triple Crown across singles, women’s doubles, and mixed doubles.', 'Johns and Tardio won a record seventh consecutive men’s doubles title.', 'Fifteen-year-old Tama Shimabukuro earned his first PPA medal from the No. 22 seed.'],
     notableFactsKo: ['워터스는 단식·여자복식·혼합복식 트리플 크라운을 달성했습니다.', '존스·타르디오는 기록적인 남자 복식 7개 대회 연속 우승을 만들었습니다.', '15세 타마 시마부쿠로가 22번 시드로 첫 PPA 메달을 획득했습니다.'],
     stories: [
-      { kicker: 'BREAKOUT', kickerKo: '돌풍', title: 'Tama Shimabukuro turned a No. 22 seed into a final', titleKo: '타마 시마부쿠로, 22번 시드에서 결승까지', body: 'His run offered a concrete reason to track emerging players before they appear in the top-ten rankings.', bodyKo: '그의 돌풍은 신예가 Top 10에 들어가기 전부터 추적해야 할 구체적인 이유를 보여줬습니다.' },
+      { kicker: 'BREAKOUT', kickerKo: '돌풍', title: 'Tama Shimabukuro turned a No. 22 seed into a final', titleKo: '타마 시마부쿠로, 22번 시드에서 결승까지', body: 'His run offered a concrete reason to track emerging players before they appear in the top-ten rankings.', bodyKo: '그의 돌풍은 신예가 상위 10위에 들어가기 전부터 추적해야 할 구체적인 이유를 보여줬습니다.' },
       { kicker: 'TRIPLE CROWN', kickerKo: '트리플 크라운', title: 'Waters controlled every draw she entered', titleKo: '워터스가 출전한 모든 대진을 지배', body: 'The singles title and two doubles titles reinforced how her individual pressure and partnership chemistry can coexist.', bodyKo: '단식 우승과 두 복식 우승은 개인 압박 능력과 파트너십 시너지가 동시에 작동할 수 있음을 보여줬습니다.' }
     ]
   };
@@ -505,7 +505,7 @@ module.exports = {
   const sanDiegoStatus = statusBySlug('mlp-san-diego-2026');
   if (sanDiegoStatus) Object.assign(sanDiegoStatus, {
     summary: 'Final-day cross-group placement matches determine the event finish and standings points. Official live scores remain the source of truth.',
-    summaryKo: '최종일 두 그룹의 순위별 맞대결로 대회 성적과 standings 포인트가 결정됩니다. 공식 라이브 스코어를 최종 기준으로 확인하세요.',
+    summaryKo: '최종일 두 그룹의 순위별 맞대결로 대회 성적과 정규시즌 순위 포인트가 결정됩니다. 공식 실시간 경기 결과를 최종 기준으로 확인하세요.',
     resultHint: 'Team placements live', resultHintKo: '팀 순위 실시간 집계'
   });
   const melbourneStatus = statusBySlug('ppa-australia-melbourne-2026');
@@ -553,7 +553,7 @@ module.exports = {
     resultStatus: 'confirmed',
     resultChecked: '2026-07-20',
     overview: 'Dallas Flash went unbeaten in San Diego and defeated Columbus Sliders 3–1 in the Super Sunday final. The event awarded 25 standings points to Dallas, 18 to Columbus, and 15 to third-place Atlanta.',
-    overviewKo: 'Dallas Flash가 샌디에이고에서 무패를 기록하고 Super Sunday 결승에서 Columbus Sliders를 3–1로 꺾었습니다. Dallas는 standings 25점, Columbus는 18점, 3위 Atlanta는 15점을 얻었습니다.',
+    overviewKo: 'Dallas Flash가 샌디에이고에서 무패를 기록하고 Super Sunday 결승에서 Columbus Sliders를 3–1로 꺾었습니다. Dallas는 정규시즌 순위 포인트 25점, Columbus는 18점, 3위 Atlanta는 15점을 얻었습니다.',
     storyline: 'San Diego turned a 2025 playoff wound into Dallas redemption. The final also carried a trade subplot as Danni-Elle Townsend helped Dallas close the title against the Columbus team that acquired Tyra Black.',
     storylineKo: '샌디에이고는 2025년 플레이오프 패배를 Dallas가 되갚은 무대였습니다. Danni-Elle Townsend가 Tyra Black을 영입한 Columbus를 상대로 우승을 마무리해 최근 트레이드까지 결승 스토리로 연결됐습니다.',
     sourceUrl: 'https://pickleball.com/news/demons-conquered-dallas-takes-down-red-hot-columbus-for-first-super-sunday-belt',
@@ -561,7 +561,7 @@ module.exports = {
     secondaryUrl: 'https://majorleaguepickleball.co/events-2026/mlp-san-diego-2026/',
     secondaryName: 'MLP official event page',
     resultNote: 'The July 19 result recap confirms Dallas Flash defeated Columbus Sliders 3–1. It also lists the complete San Diego finish and standings points.',
-    resultNoteKo: '7월 19일 결과 리캡에서 Dallas Flash가 Columbus Sliders를 3–1로 꺾은 사실과 샌디에이고 전체 순위·standings 포인트가 확인됐습니다.',
+    resultNoteKo: '7월 19일 결과 리캡에서 Dallas Flash가 Columbus Sliders를 3–1로 꺾은 사실과 샌디에이고 전체 순위·정규시즌 순위 포인트가 확인됐습니다.',
     results: [
       { division: 'Super Sunday team final', divisionKo: 'Super Sunday 팀 결승', champ: 'Dallas Flash', silver: 'Columbus Sliders', bronze: 'Atlanta Bouncers', score: 'Dallas 3–1 Columbus' }
     ],
@@ -576,7 +576,7 @@ module.exports = {
       'Danni-Elle Townsend and Augie Ge won the closing mixed doubles game 11-4.'
     ],
     notableFactsKo: [
-      'Dallas Flash는 대회 무패 우승과 standings 25점을 기록했습니다.',
+      'Dallas Flash는 대회 무패 우승과 정규시즌 순위 포인트 25점을 기록했습니다.',
       'Columbus는 그룹 경기에서 게임 전적 20승 0패를 기록했지만 결승에서는 Dallas에 1–3으로 패했습니다.',
       'Atlanta Bouncers가 이벤트 포인트 15점으로 3위, SoCal Hard Eights와 LA Mad Drops가 Top 5를 완성했습니다.',
       'Danni-Elle Townsend와 Augie Ge가 마지막 혼합복식 경기를 11-4로 끝냈습니다.'
@@ -629,9 +629,9 @@ module.exports = {
     participants: ['All 20 MLP teams', 'Team Australia, Team Canada, Team Europe, and College All-Stars', '24-team double-elimination field'],
     participantsKo: ['MLP 20개 전체 팀', 'Team Australia·Team Canada·Team Europe·College All-Stars', '24팀 더블 엘리미네이션 대진'],
     watch: ['St. Louis’ unbeaten run through four matches', 'How the Shock neutralized Anna Leigh Waters in the final', 'Bonus standings points and playoff qualification'],
-    watchKo: ['St. Louis의 4경기 무패 우승', '결승에서 Shock가 Anna Leigh Waters의 영향력을 줄인 방식', '보너스 standings 포인트와 플레이오프 진출'],
+    watchKo: ['St. Louis의 4경기 무패 우승', '결승에서 Shock가 Anna Leigh Waters의 영향력을 줄인 방식', '보너스 정규시즌 순위 포인트와 플레이오프 진출'],
     storyline: 'The final was a tactical statement: St. Louis committed to a disciplined pattern in women’s doubles, then used its men’s and mixed depth to complete a national-TV sweep.',
-    storylineKo: '결승은 전술적 선언에 가까웠습니다. St. Louis는 여자복식에서 규율 있는 공략을 유지하고 남자복식과 혼합복식 뎁스로 전국 중계 3–0 스윕을 완성했습니다.',
+    storylineKo: '결승은 전술적 선언에 가까웠습니다. St. Louis는 여자복식에서 규율 있는 공략을 유지하고 남자복식과 혼합복식의 선수층까지 앞세워 전국 중계 결승을 3–0으로 마무리했습니다.',
     sourceUrl: 'https://pickleball.com/news/shock-sweep-5s-for-first-mid-season-tournament-title-in-franchise-history', sourceName: 'Pickleball.com verified championship recap',
     secondaryUrl: 'https://majorleaguepickleball.co/news/edward-jones-mlp-mid-season-tournament-bracket/', secondaryName: 'MLP official bracket overview',
     resultNote: 'The championship recap confirms St. Louis defeated New Jersey 3–0, while Columbus defeated Los Angeles 3–1 in the third-place match.',
@@ -641,7 +641,7 @@ module.exports = {
     ],
     resultLinks: [
       { label: 'Championship result recap', labelKo: '챔피언십 결과 리캡', url: 'https://pickleball.com/news/shock-sweep-5s-for-first-mid-season-tournament-title-in-franchise-history' },
-      { label: 'MLP official bracket', labelKo: 'MLP 공식 브래킷', url: 'https://majorleaguepickleball.co/news/edward-jones-mlp-mid-season-tournament-bracket/' }
+      { label: 'MLP official bracket', labelKo: 'MLP 공식 대진표', url: 'https://majorleaguepickleball.co/news/edward-jones-mlp-mid-season-tournament-bracket/' }
     ],
     notableFacts: [
       'St. Louis went 4-0 in matches and lost only one game across the tournament.',
@@ -654,13 +654,13 @@ module.exports = {
       'St. Louis는 팀 매치 4전 전승을 기록했고 대회 전체에서 단 한 게임만 내줬습니다.',
       'Anna Bright/Kate Fahey는 결승에서 무패였던 Anna Leigh Waters/Jorja Johnson 조를 11-6으로 꺾었습니다.',
       'Gabe Tardio/Hayden Patriquin이 남자복식 11-3, Bright/Patriquin이 혼합복식 11-8로 승리했습니다.',
-      '우승으로 보너스 standings 10점을 얻고 St. Louis의 플레이오프 진출이 확정됐습니다.',
-      'Columbus가 LA Mad Drops를 3–1로 꺾고 동메달과 standings 4점을 얻었습니다.'
+      '우승으로 보너스 정규시즌 순위 포인트 10점을 얻고 St. Louis의 플레이오프 진출이 확정됐습니다.',
+      'Columbus가 LA Mad Drops를 3–1로 꺾고 동메달과 정규시즌 순위 포인트 4점을 얻었습니다.'
     ],
     stories: [
       { kicker: 'TACTICAL UPSET', kickerKo: '전술적 업셋', title: 'Bright and Fahey ended a 25-0 women’s doubles run', titleKo: 'Bright와 Fahey, 여자복식 25연승 조합을 멈추다', body: 'Their 11-6 win over Waters/Johnson established the final’s direction and showed how disciplined target selection can reshape an MLP match.', bodyKo: 'Waters/Johnson을 상대로 한 11-6 승리는 결승의 방향을 정했고, 규율 있는 타깃 선택이 MLP 매치를 어떻게 바꾸는지 보여줬습니다.' },
-      { kicker: 'DEPTH', kickerKo: '뎁스', title: 'St. Louis won through every part of the lineup', titleKo: '라인업 전 구간에서 우위를 만든 St. Louis', body: 'Women’s, men’s, and mixed doubles each supplied a point, making the 3-0 final a complete team performance.', bodyKo: '여자복식·남자복식·혼합복식이 각각 한 점씩 만들며 3–0 결승을 완전한 팀 승리로 만들었습니다.' },
-      { kicker: 'PLAYOFF SIGNAL', kickerKo: '플레이오프 신호', title: 'A trophy, first place, and a secured postseason spot', titleKo: '우승컵·선두·플레이오프 티켓을 한 번에', body: 'The bonus points moved the Shock to the top tier of the standings and removed uncertainty about postseason qualification.', bodyKo: '보너스 포인트로 Shock는 standings 최상위권에 올라섰고 포스트시즌 진출 불확실성도 없앴습니다.' }
+      { kicker: 'DEPTH', kickerKo: '선수층', title: 'St. Louis won through every part of the lineup', titleKo: '라인업 전 구간에서 우위를 만든 St. Louis', body: 'Women’s, men’s, and mixed doubles each supplied a point, making the 3-0 final a complete team performance.', bodyKo: '여자복식·남자복식·혼합복식이 각각 한 점씩 만들며 3–0 결승을 완전한 팀 승리로 만들었습니다.' },
+      { kicker: 'PLAYOFF SIGNAL', kickerKo: '플레이오프 신호', title: 'A trophy, first place, and a secured postseason spot', titleKo: '우승과 선두, 플레이오프 진출까지 한 번에', body: 'The bonus points moved the Shock to the top tier of the standings and removed uncertainty about postseason qualification.', bodyKo: '보너스 포인트로 Shock는 정규시즌 순위 최상위권에 올라섰고 포스트시즌 진출 불확실성도 없앴습니다.' }
     ]
   };
   if (!(board.tournaments || []).some((x) => x.slug === midSeasonSlug)) board.tournaments.push(midSeasonEvent);
@@ -693,7 +693,7 @@ module.exports = {
       id: 'mlp-san-diego-dallas-title', date: '2026-07-20', kind: 'result', tour: 'MLP', discipline: 'team', confidence: 'official',
       title: 'Dallas Flash win MLP San Diego over Columbus, 3–1', titleKo: 'Dallas Flash, Columbus를 3–1로 꺾고 MLP 샌디에이고 우승',
       summary: 'Dallas completed an undefeated event, earned 25 standings points, and turned last year’s San Diego playoff loss to Columbus into a Super Sunday title. Atlanta finished third.',
-      summaryKo: 'Dallas가 대회 무패와 standings 25점을 기록하며 지난해 샌디에이고 플레이오프의 Columbus전 패배를 Super Sunday 우승으로 되갚았습니다. Atlanta는 3위였습니다.',
+      summaryKo: 'Dallas가 대회 무패와 정규시즌 순위 포인트 25점을 기록하며 지난해 샌디에이고 플레이오프의 Columbus전 패배를 Super Sunday 우승으로 되갚았습니다. Atlanta는 3위였습니다.',
       sourceName: 'Pickleball.com result recap', sourceUrl: 'https://pickleball.com/news/demons-conquered-dallas-takes-down-red-hot-columbus-for-first-super-sunday-belt',
       internalUrl: 'tournaments/mlp-san-diego-2026/'
     },
@@ -701,13 +701,13 @@ module.exports = {
       id: 'mlp-mid-season-st-louis-title', date: '2026-07-20', kind: 'result', tour: 'MLP', discipline: 'team', confidence: 'official',
       title: 'St. Louis Shock sweep New Jersey for the Mid-Season title', titleKo: 'St. Louis Shock, New Jersey를 스윕하고 미드시즌 우승',
       summary: 'The Shock went unbeaten and won the final 3–0. Columbus took third by beating the LA Mad Drops 3–1, while St. Louis collected bonus standings points and a playoff berth.',
-      summaryKo: 'Shock는 대회 무패와 결승 3–0 승리를 기록했습니다. Columbus는 LA Mad Drops를 3–1로 꺾고 3위, St. Louis는 보너스 standings 포인트와 플레이오프 티켓을 얻었습니다.',
+      summaryKo: 'Shock는 대회 무패와 결승 3–0 승리를 기록했습니다. Columbus는 LA Mad Drops를 3–1로 꺾고 3위, St. Louis는 보너스 정규시즌 순위 포인트와 플레이오프 티켓을 얻었습니다.',
       sourceName: 'Pickleball.com championship recap', sourceUrl: 'https://pickleball.com/news/shock-sweep-5s-for-first-mid-season-tournament-title-in-franchise-history',
       internalUrl: 'tournaments/mlp-mid-season-grand-rapids-2026/'
     },
     {
       id: 'melbourne-completed-20260720', date: '2026-07-20', kind: 'result', tour: 'PPA', discipline: 'all', confidence: 'official',
-      title: 'Melbourne completed; official medal table still pending', titleKo: '멜버른 대회 완료, 공식 메달 표는 계속 확인 중',
+      title: 'Melbourne completed; official medal table still pending', titleKo: '멜버른 대회 종료, 공식 메달 결과는 확인 중',
       summary: 'The official listing confirms 398 registered players and completed status. Picklary rechecked on July 20 and continues to withhold medal names until a stable Winners Circle table is visible.',
       summaryKo: '공식 페이지에서 등록 선수 398명과 대회 완료 상태가 확인됩니다. Picklary는 7월 20일 재확인했으며 안정적인 Winners Circle 표가 공개될 때까지 메달리스트 이름을 보류합니다.',
       sourceName: 'Official tournament listing', sourceUrl: 'https://pickleballtournaments.com/tournaments/ppa-tour-australia-ppa250-melbourne',
@@ -715,7 +715,7 @@ module.exports = {
     },
     {
       id: 'macon-completed-20260720', date: '2026-07-20', kind: 'result', tour: 'PPA', discipline: 'all', confidence: 'official',
-      title: 'Macon Challenger completed; medal names await official table', titleKo: '메이컨 챌린저 완료, 메달리스트는 공식 표 대기',
+      title: 'Macon Challenger completed; medal names await official table', titleKo: '메이컨 챌린저 종료, 공식 메달 결과는 확인 중',
       summary: 'The official event is marked complete with 514 registered players. No champion names are inferred until the public Winners Circle provides a stable result table.',
       summaryKo: '공식 이벤트는 등록 선수 514명과 완료 상태로 표시됩니다. 공개 Winners Circle에 안정적인 결과 표가 나타날 때까지 우승자 이름을 추정하지 않습니다.',
       sourceName: 'PPA Tour event page', sourceUrl: 'https://ppatour.com/tournament/2026/2026-macon-ga/',
@@ -736,9 +736,9 @@ module.exports = {
 
   const stLouisStory = {
     date: '2026-07-20', confidence: 'official', tour: 'MLP',
-    title: 'St. Louis turned a matchup plan into a 3–0 final', titleKo: 'St. Louis, 매치업 계획을 결승 3–0으로 완성',
+    title: 'St. Louis turned a matchup plan into a 3–0 final', titleKo: 'St. Louis, 상대별 경기 계획을 결승 3–0으로 완성',
     body: 'The Shock ended Waters/Johnson’s unbeaten women’s doubles run, then added men’s and mixed points. The result links tactical targeting, lineup depth, and playoff positioning in one tournament story.',
-    bodyKo: 'Shock는 Waters/Johnson의 여자복식 무패 행진을 멈추고 남자복식과 혼합복식까지 가져갔습니다. 전술적 타깃 선택, 라인업 뎁스, 플레이오프 순위가 하나의 대회 스토리로 연결됐습니다.',
+    bodyKo: 'Shock는 Waters/Johnson의 여자복식 무패 행진을 멈추고 남자복식과 혼합복식까지 가져갔습니다. 전술적 타깃 선택, 라인업의 두터운 선수층, 플레이오프 순위가 하나의 대회 스토리로 연결됐습니다.',
     sourceName: 'Pickleball.com championship recap', sourceUrl: 'https://pickleball.com/news/shock-sweep-5s-for-first-mid-season-tournament-title-in-franchise-history'
   };
   board.storylines = board.storylines.filter((x) => x.title !== stLouisStory.title);
@@ -795,11 +795,11 @@ module.exports = {
       'Dallas는 이벤트 포인트 25점, Brooklyn 18점, California 15점, Chicago Slice 12점을 획득했습니다.',
       'JW Johnson은 DreamBreaker 첫 로테이션에서 Chris Haworth를 상대로 4–0을 만들었습니다.',
       'Danni-Elle Townsend는 두 복식 경기를 모두 이기고 DreamBreaker의 마지막 포인트까지 기록했습니다.',
-      'Dallas는 샌디에이고와 시카고 2연속 우승 뒤 정규 시즌을 standings 72점으로 마쳤습니다.',
+      'Dallas는 샌디에이고와 시카고 2연속 우승 뒤 정규 시즌을 정규시즌 순위 포인트 72점으로 마쳤습니다.',
       'California는 Dylan Frazier와 Zoey Weil 합류 이후 상승세를 이어가며 3위를 차지했습니다.'
     ],
     stories: [
-      { kicker: 'BACK-TO-BACK', kickerKo: '2연속 우승', title: 'Dallas turned late-season momentum into a real playoff threat', titleKo: 'Dallas, 시즌 막판 상승세를 실제 플레이오프 위협으로 전환', body: 'Dallas beat Columbus, Los Angeles, and Brooklyn across consecutive weeks, then finished Chicago with a dominant DreamBreaker. The question is no longer whether Dallas belongs in the postseason field, but how far its singles depth can carry it.', bodyKo: 'Dallas는 연속된 일정에서 Columbus, Los Angeles, Brooklyn을 꺾고 시카고 결승 DreamBreaker까지 압도했습니다. 이제 질문은 플레이오프 진출 여부가 아니라 단식 뎁스가 팀을 어디까지 끌고 갈 수 있느냐입니다.' },
+      { kicker: 'BACK-TO-BACK', kickerKo: '2연속 우승', title: 'Dallas turned late-season momentum into a real playoff threat', titleKo: 'Dallas, 시즌 막판 상승세를 실제 플레이오프 위협으로 전환', body: 'Dallas beat Columbus, Los Angeles, and Brooklyn across consecutive weeks, then finished Chicago with a dominant DreamBreaker. The question is no longer whether Dallas belongs in the postseason field, but how far its singles depth can carry it.', bodyKo: 'Dallas는 연속된 일정에서 Columbus, Los Angeles, Brooklyn을 꺾고 시카고 결승 DreamBreaker까지 압도했습니다. 이제 질문은 플레이오프 진출 여부가 아니라 단식 선수층이 팀을 어디까지 끌고 갈 수 있느냐입니다.' },
       { kicker: 'MOST IMPROVED', kickerKo: '성장 스토리', title: 'Danni-Elle Townsend became the final’s hinge player', titleKo: '결승의 중심축이 된 Danni-Elle Townsend', body: 'Townsend contributed in women’s doubles, mixed doubles, and the closing DreamBreaker point, turning a team result into a clear individual growth storyline.', bodyKo: 'Townsend는 여자복식, 혼합복식, 마지막 DreamBreaker 포인트에 모두 기여하며 팀 결과를 분명한 개인 성장 스토리로 바꿨습니다.' },
       { kicker: 'PLAYOFF BUBBLE', kickerKo: '플레이오프 버블', title: 'California rose while SoCal was forced to scoreboard-watch', titleKo: '상승한 California, 결과를 지켜봐야 하는 SoCal', body: 'California’s rebuilt lineup finished third, while Atlanta moved to 36 points and SoCal remained vulnerable at 34. Orlando now decides the final shape of the twelve-team playoff field.', bodyKo: '재구성된 California 라인업은 3위를 기록했고 Atlanta는 36점으로 올라선 반면 SoCal은 34점에서 불안한 위치에 남았습니다. 이제 올랜도가 12팀 플레이오프의 최종 구도를 결정합니다.' }
     ],

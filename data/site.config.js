@@ -10,7 +10,7 @@
 }(typeof self !== 'undefined' ? self : this, function () {
   return {
     siteName: 'Picklary',
-    tagline: '내 레벨에 맞는 피클볼 성장 지도 — 스킬, 패들, 프로 분석, 하이라이트 배틀.',
+    tagline: '내 레벨에 맞춰 배우는 피클볼 가이드 — 기술, 장비, 프로 투어, 커뮤니티.',
     description:
       'Picklary is a level-based pickleball hub for rules and skill learning, DUPR pathway guidance from 2.0 to 5.0, paddle comparisons, pro player profiles, and community highlight feedback.',
 
@@ -38,8 +38,8 @@
       translations: {
         ko: {
           name: 'Shawn',
-          role: '피클볼 2년차 동호인이자 Picklary를 만든 사람',
-          bio: '안녕하세요, Shawn입니다. 2024년 테니스에서 피클볼로 전향해 지금은 애틀랜타 지역의 Lifetime Fitness와 ACE Pickleball Club에서 주 3회가량 복식을 칩니다. 공식 대회 경험은 없지만 입문자 강습을 돕고, 장비를 직접 사서 써보며 배운 것을 정리하는 걸 좋아합니다. 레벨·규칙·장비를 한국어와 영어로 깔끔하게 정리한 정보가 부족해서, 제가 공부하며 모은 내용을 누구나 보기 쉽게 한곳에 모으려고 Picklary를 만들었습니다. 레이팅·가격·규칙처럼 자주 바뀌는 정보는 공식 출처를 함께 안내합니다.',
+          role: '피클볼 2년차 동호인이자 Picklary 운영자',
+          bio: '안녕하세요, Shawn입니다. 2024년 테니스에서 피클볼로 전향해 지금은 애틀랜타 지역의 Lifetime Fitness와 ACE Pickleball Club에서 주 3회가량 복식을 칩니다. 공식 대회 경험은 없지만 입문자들이 기본기를 익히는 것을 돕고, 장비를 직접 사서 써보며 배운 내용을 정리하는 것을 좋아합니다. 레벨·규칙·장비를 한국어와 영어로 깔끔하게 정리한 정보가 부족해서, 제가 공부하며 모은 내용을 누구나 보기 쉽게 한곳에 모으려고 Picklary를 만들었습니다. 레이팅·가격·규칙처럼 자주 바뀌는 정보는 공식 출처를 함께 안내합니다.',
           location: '미국 조지아주 애틀랜타'
         },
         es: {
@@ -51,7 +51,7 @@
     },
 
     // Brand colours (also mirrored as CSS variables in assets/css/style.css).
-    colors: { main: '#1E6F5C', sub: '#F4B400' },
+    colors: { main: '#15A58B', sub: '#6FEACF' },
 
     // --- Google AdSense -------------------------------------------------------
     // Leave clientId EMPTY until you are ready to verify/apply. When you paste your

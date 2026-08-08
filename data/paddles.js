@@ -41,8 +41,8 @@
     },
     "translations": {
       "ko": {
-        "reviewSignal": "상급자용 올라운드 기준점에 가까운 패들입니다. 긴 리치, 컨트롤된 파워, 스핀 친화적인 표면을 원하는 플레이어에게 맞습니다.",
-        "summary": "속도를 다룰 수 있고 포인트 설계 능력을 키우려는 3.5 이상 플레이어에게 어울리는 프리미엄 엘롱게이티드 패들입니다."
+        "reviewSignal": "상급자용 올라운드 기준점에 가까운 패들입니다. 긴 리치, 컨트롤된 파워, 스핀 친화적인 표면을 원하는 선수에게 맞습니다.",
+        "summary": "속도를 다룰 수 있고 포인트 구성 능력을 키우려는 3.5 이상 선수에게 어울리는 프리미엄 엘롱게이티드 패들입니다."
       }
     },
     "image": "/assets/img/paddles/joola-ben-johns-perseus.svg",
@@ -60,7 +60,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -109,7 +109,7 @@
     "translations": {
       "ko": {
         "reviewSignal": "와이드바디 형태라 빠른 손싸움, 블록, 리셋, 키친 교전에 강점이 있습니다.",
-        "summary": "최대 리치보다 관용성, 카운터, 빠른 NVZ 반응을 중시하는 더블스 플레이어에게 잘 맞습니다."
+        "summary": "최대 리치보다 관용성, 카운터, 빠른 NVZ 반응을 중시하는 더블스 선수에게 잘 맞습니다."
       }
     },
     "image": "/assets/img/paddles/joola-scorpeus.svg",
@@ -127,7 +127,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -176,7 +176,7 @@
     "translations": {
       "ko": {
         "reviewSignal": "터치, 리셋, 드롭, 정교한 플레이를 중심으로 설계된 프리미엄 컨트롤 패들입니다.",
-        "summary": "공을 낮게 유지하고 딩크와 드롭의 안정성을 높이고 싶은 플레이어에게 적합합니다."
+        "summary": "공을 낮게 유지하고 딩크와 드롭의 안정성을 높이고 싶은 선수에게 적합합니다."
       }
     },
     "image": "/assets/img/paddles/selkirk-luxx-control-air.svg",
@@ -194,7 +194,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -241,8 +241,8 @@
     },
     "translations": {
       "ko": {
-        "reviewSignal": "반발력을 다룰 수 있는 플레이어가 공격성과 결정력을 높일 때 좋은 파워형 패들입니다.",
-        "summary": "드라이브와 스피드업에는 유리하지만 리셋이 뜨는 플레이어라면 적응 시간이 필요합니다."
+        "reviewSignal": "반발력을 다룰 수 있는 선수가 공격성과 결정력을 높일 때 좋은 파워형 패들입니다.",
+        "summary": "드라이브와 스피드업에는 유리하지만 리셋이 뜨는 선수라면 적응 시간이 필요합니다."
       }
     },
     "image": "/assets/img/paddles/selkirk-power-air.svg",
@@ -260,7 +260,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -307,7 +307,7 @@
     },
     "translations": {
       "ko": {
-        "reviewSignal": "공격적인 드라이브와 리치를 원하는 플레이어를 위한 로우 카본 엘롱게이티드 파워 패들입니다.",
+        "reviewSignal": "공격적인 드라이브와 리치를 원하는 선수를 위한 로우 카본 엘롱게이티드 파워 패들입니다.",
         "summary": "파워와 스핀을 동시에 원할 때 좋지만, 깨끗한 임팩트와 안정된 스윙이 필요합니다."
       }
     },
@@ -326,7 +326,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -374,7 +374,7 @@
     },
     "translations": {
       "ko": {
-        "reviewSignal": "파워와 스핀을 유지하면서 더 넓은 스윗스팟을 원하는 플레이어에게 맞는 X 시리즈 대안입니다.",
+        "reviewSignal": "파워와 스핀을 유지하면서 더 넓은 스윗스팟을 원하는 선수에게 맞는 X 시리즈 대안입니다.",
         "summary": "블레이드형보다 관용성이 높아 더블스의 블록과 안정적인 카운터에 유리합니다."
       }
     },
@@ -393,7 +393,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -442,7 +442,7 @@
     "translations": {
       "ko": {
         "reviewSignal": "컨트롤, 스핀, 파워 밸런스가 좋아 가성비 높은 올라운드 기준점으로 자주 언급됩니다.",
-        "summary": "최고가 라인까지 가지 않고 현대적인 로우 카본 감각을 경험하고 싶은 성장형 플레이어에게 좋습니다."
+        "summary": "최고가 라인까지 가지 않고 현대적인 로우 카본 감각을 경험하고 싶은 성장형 선수에게 좋습니다."
       }
     },
     "image": "/assets/img/paddles/six-zero-double-black-diamond-control.svg",
@@ -460,7 +460,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -508,7 +508,7 @@
     "translations": {
       "ko": {
         "reviewSignal": "아라미드 계열 표면으로 스핀, 타구감, 안정성 면에서 차별화된 패들로 언급됩니다.",
-        "summary": "일반 카본과 다른 감각, 컨트롤된 스핀, 손에 붙는 터치를 원하는 플레이어에게 적합합니다."
+        "summary": "일반 카본과 다른 감각, 컨트롤된 스핀, 손에 붙는 터치를 원하는 선수에게 적합합니다."
       }
     },
     "image": "/assets/img/paddles/six-zero-ruby.svg",
@@ -526,7 +526,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -574,7 +574,7 @@
     },
     "translations": {
       "ko": {
-        "reviewSignal": "Christian Alshon과 함께 설계된 파워·리치 중심 패들로 강한 페이스를 만들고 싶은 플레이어에게 맞습니다.",
+        "reviewSignal": "Christian Alshon과 함께 설계된 파워·리치 중심 패들로 강한 페이스를 만들고 싶은 선수에게 맞습니다.",
         "summary": "긴 리치와 로우 카본 타구면을 활용해 공격적인 경기를 운영하는 상급자에게 적합합니다."
       }
     },
@@ -593,7 +593,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -641,7 +641,7 @@
     "translations": {
       "ko": {
         "reviewSignal": "터치, 리셋, 안정적인 올라운드 플레이를 익히는 데 적합한 장수 컨트롤 패들입니다.",
-        "summary": "최대 파워보다 예측 가능한 반응과 클래식한 형태를 선호하는 플레이어에게 어울립니다."
+        "summary": "최대 파워보다 예측 가능한 반응과 클래식한 형태를 선호하는 선수에게 어울립니다."
       }
     },
     "image": "/assets/img/paddles/paddletek-tempest-wave-pro.svg",
@@ -659,7 +659,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -726,7 +726,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -791,7 +791,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -837,8 +837,8 @@
     },
     "translations": {
       "ko": {
-        "reviewSignal": "Gearbox 특유의 내구성과 컨트롤 감각을 선호하는 플레이어가 선택하는 라인입니다.",
-        "summary": "강한 반발력보다 내구성, 피드백, 안정적인 컨트롤을 중시하는 플레이어에게 맞습니다."
+        "reviewSignal": "Gearbox 특유의 내구성과 컨트롤 감각을 선호하는 선수가 선택하는 라인입니다.",
+        "summary": "강한 반발력보다 내구성, 피드백, 안정적인 컨트롤을 중시하는 선수에게 맞습니다."
       }
     },
     "image": "/assets/img/paddles/gearbox-cx14.svg",
@@ -856,7 +856,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -904,7 +904,7 @@
     "translations": {
       "ko": {
         "reviewSignal": "3D 18K 우븐 표면을 활용해 스핀, 컨트롤, 프리미엄 타구감을 강조한 패들입니다.",
-        "summary": "확실한 표면감과 16mm 컨트롤 반응을 원하는 스핀 중심 플레이어에게 좋습니다."
+        "summary": "확실한 표면감과 16mm 컨트롤 반응을 원하는 스핀 중심 선수에게 좋습니다."
       }
     },
     "image": "/assets/img/paddles/diadem-edge-18k.svg",
@@ -922,7 +922,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -969,7 +969,7 @@
     },
     "translations": {
       "ko": {
-        "reviewSignal": "지나치게 먹먹하지 않은 컨트롤과 밸런스를 원하는 플레이어에게 맞는 올라운드형 모델입니다.",
+        "reviewSignal": "지나치게 먹먹하지 않은 컨트롤과 밸런스를 원하는 선수에게 맞는 올라운드형 모델입니다.",
         "summary": "입문용에서 벗어나 본격적인 올라운드 세팅으로 넘어갈 때 비교하기 좋은 선택지입니다."
       }
     },
@@ -988,7 +988,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -1036,7 +1036,7 @@
     "translations": {
       "ko": {
         "reviewSignal": "가격 대비 로우 카본 컨트롤 성능과 하이브리드 형태의 관용성이 좋은 가성비 패들입니다.",
-        "summary": "프리미엄 가격 없이 컨트롤과 스핀 성능을 체감하고 싶은 플레이어에게 추천하기 쉽습니다."
+        "summary": "프리미엄 가격 없이 컨트롤과 스핀 성능을 체감하고 싶은 선수에게 추천하기 쉽습니다."
       }
     },
     "image": "/assets/img/paddles/vatic-pro-prism-flash.svg",
@@ -1054,7 +1054,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -1103,7 +1103,7 @@
     "translations": {
       "ko": {
         "reviewSignal": "낮은 가격대와 넓은 레벨 적합성을 가진 현대적인 올라운드 선택지입니다.",
-        "summary": "순수 컨트롤이나 순수 파워보다 밸런스를 원하는 가성비 플레이어에게 비교 가치가 있습니다."
+        "summary": "순수 컨트롤이나 순수 파워보다 밸런스를 원하는 가성비 선수에게 비교 가치가 있습니다."
       }
     },
     "image": "/assets/img/paddles/vatic-pro-saga.svg",
@@ -1121,7 +1121,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -1170,7 +1170,7 @@
     "translations": {
       "ko": {
         "reviewSignal": "반발력과 빠른 손, 팔 부담 완화 기술로 자주 언급되는 파워형 패들입니다.",
-        "summary": "빠른 반응과 ProKennex 특유의 진동 관리 기술을 원하는 플레이어에게 맞습니다."
+        "summary": "빠른 반응과 ProKennex 특유의 진동 관리 기술을 원하는 선수에게 맞습니다."
       }
     },
     "image": "/assets/img/paddles/prokennex-black-ace-pro.svg",
@@ -1188,7 +1188,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -1254,7 +1254,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -1320,7 +1320,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -1369,7 +1369,7 @@
     "translations": {
       "ko": {
         "reviewSignal": "스핀, 관용성, 합리적인 가격을 갖춘 와이드바디 컨트롤 패들입니다.",
-        "summary": "넓은 페이스로 미스히트를 줄이고 16mm 컨트롤 감각을 원하는 더블스 플레이어에게 매력적입니다."
+        "summary": "넓은 페이스로 미스히트를 줄이고 16mm 컨트롤 감각을 원하는 더블스 선수에게 매력적입니다."
       }
     },
     "image": "/assets/img/paddles/volair-mach-2-forza.svg",
@@ -1387,7 +1387,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -1436,7 +1436,7 @@
     "translations": {
       "ko": {
         "reviewSignal": "독특한 브랜드 감성과 파워·스핀 성향으로 인기가 있는 DTC 패들입니다.",
-        "summary": "고가 프리미엄 라인까지 가지 않고 엘롱게이티드 리치와 써모폼 파워를 원하는 플레이어에게 좋습니다."
+        "summary": "고가 프리미엄 라인까지 가지 않고 엘롱게이티드 리치와 써모폼 파워를 원하는 선수에게 좋습니다."
       }
     },
     "image": "/assets/img/paddles/bread-and-butter-filth.svg",
@@ -1454,7 +1454,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -1502,7 +1502,7 @@
     "translations": {
       "ko": {
         "reviewSignal": "입문자가 부담 없이 업그레이드하기 좋은 관용성 높은 가성비 스타터 패들입니다.",
-        "summary": "새 플레이어가 레슨이나 코트 시간에 더 투자하면서도 괜찮은 카본 스타일 패들을 쓰고 싶을 때 좋습니다."
+        "summary": "새 선수가 레슨이나 코트 시간에 더 투자하면서도 괜찮은 카본 스타일 패들을 쓰고 싶을 때 좋습니다."
       }
     },
     "image": "/assets/img/paddles/friday-original.svg",
@@ -1520,7 +1520,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -1567,7 +1567,7 @@
     "translations": {
       "ko": {
         "reviewSignal": "리치 중심 형태와 토너먼트 승인 포지셔닝을 갖춘 장수 파워 패들입니다.",
-        "summary": "최신 로우 카본 패들과 비교해 볼 만한 파워형 모델로, 컴포지트 반발감을 좋아하는 플레이어에게 맞습니다."
+        "summary": "최신 로우 카본 패들과 비교해 볼 만한 파워형 모델로, 컴포지트 반발감을 좋아하는 선수에게 맞습니다."
       }
     },
     "image": "/assets/img/paddles/onix-evoke-premier.svg",
@@ -1585,7 +1585,7 @@
         "score": "Video review source",
         "url": "https://www.youtube.com/@PickleballStudio",
         "note": "YouTube reviewer source for launch impressions, durability notes, and player-fit commentary.",
-        "noteKo": "출시 초기 인상, 내구성, 적합 플레이어 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
+        "noteKo": "출시 초기 인상, 내구성, 적합 선수 설명을 확인할 수 있는 유튜브 리뷰어 출처입니다."
       },
       {
         "reviewer": "John Kew Pickleball",
@@ -1597,9 +1597,9 @@
     ]
   }
 ,
-  {"brand":"JOOLA","model":"Ben Johns Perseus Pro V","slug":"joola-perseus-pro-v","style":"all-court","shape":"elongated","core":"Propulsion core with KineticFrame throat, 14/16mm options","face":"Textured carbon friction surface","priceBand":"$$","priceUsd":299.95,"priceSource":"Official brand product page, verify before purchase","sourceName":"JOOLA product page","sourceUrl":"https://joola.com/products/joola-perseus-pro-v-pickleball-paddle-1","levels":["3.5","4.0","4.5","5.0"],"traits":["power","spin","reach","control"],"usedBy":"Ben Johns signature line","reviewSignal":"The latest Ben Johns Perseus: an elongated all-court paddle with a flexing KineticFrame for controlled power, reach, and spin for aggressive advanced players.","summary":"A premium elongated JOOLA signature paddle (14mm or 16mm) for advanced players who want consistent, controllable power with reach and spin.","ratings":{"power":9,"control":7.8,"spin":8.6,"forgiveness":7.5,"speed":7.5},"translations":{"ko":{"reviewSignal":"최신 벤 존스 페르세우스: 휘어지는 KineticFrame로 통제된 파워와 리치, 스핀을 주는 엘롱게이티드 올라운드 패들로 공격적인 상급자에게 맞습니다.","summary":"14mm 또는 16mm로 나오는 프리미엄 엘롱게이티드 JOOLA 시그니처 패들. 일관되고 통제 가능한 파워와 리치, 스핀을 원하는 상급자용입니다."}},"image":"/assets/img/paddles/joola-perseus-pro-v.svg","imageAlt":"Illustrated product card for JOOLA Ben Johns Perseus Pro V","reviewerScores":[{"reviewer":"Pickleball Effect","score":"Open review/database","url":"https://pickleballeffect.com/equipment-reviews/","note":"Independent play-tested review library and paddle tools. Check the exact model page for the latest.","noteKo":"독립 플레이 테스트 기반 리뷰와 패들 도구. 모델별 원문에서 최신 내용을 확인하세요."},{"reviewer":"Pickleball Studio","score":"Video review source","url":"https://www.youtube.com/@PickleballStudio","note":"YouTube reviewer for launch impressions, durability, and player-fit notes.","noteKo":"출시 인상·내구성·적합 플레이어 설명을 다루는 유튜브 리뷰어 출처입니다."}]},
-  {"brand":"Selkirk","model":"LABS Project Boomstik Elongated","slug":"selkirk-project-boomstik","style":"power","shape":"elongated","core":"BoomCore foam (PureFoam + EVA Power Ring), 16mm","face":"3-layer Multistrata T700 carbon with InfiniGrit texture","priceBand":"$$","priceUsd":332.99,"priceSource":"Official brand product page, verify before purchase","sourceName":"Selkirk product page","sourceUrl":"https://www.selkirk.com/products/selkirk-labs-project-boomstik","levels":["4.0","4.5","5.0"],"traits":["power","spin","stability","reach"],"usedBy":"Selkirk LABS / Selkirk pros","reviewSignal":"A 100% foam-core power paddle: explosive, durable, and surprisingly stable, with an MOI tuning system and long-lasting InfiniGrit spin for demanding advanced players.","summary":"A premium 16mm foam-core (BoomCore) elongated power paddle with a large sweet spot and durable spin texture; built for advanced players who can control real power.","ratings":{"power":9.5,"control":7.2,"spin":8.6,"forgiveness":8,"speed":6.6},"translations":{"ko":{"reviewSignal":"100% 폼 코어 파워 패들: 폭발적이고 내구성이 좋으며 의외로 안정적입니다. MOI 튜닝 시스템과 오래 가는 InfiniGrit 스핀으로 까다로운 상급자에게 맞습니다.","summary":"큰 스위트스폿과 내구성 있는 스핀 표면을 가진 프리미엄 16mm 폼 코어(BoomCore) 엘롱게이티드 파워 패들. 진짜 파워를 다룰 수 있는 상급자용입니다."}},"image":"/assets/img/paddles/selkirk-project-boomstik.svg","imageAlt":"Illustrated product card for Selkirk LABS Project Boomstik Elongated","reviewerScores":[{"reviewer":"Pickleball Effect","score":"Open review/database","url":"https://pickleballeffect.com/equipment-reviews/","note":"Independent play-tested review library and paddle tools. Check the exact model page for the latest.","noteKo":"독립 플레이 테스트 기반 리뷰와 패들 도구. 모델별 원문에서 최신 내용을 확인하세요."},{"reviewer":"Pickleball Studio","score":"Video review source","url":"https://www.youtube.com/@PickleballStudio","note":"YouTube reviewer for launch impressions, durability, and player-fit notes.","noteKo":"출시 인상·내구성·적합 플레이어 설명을 다루는 유튜브 리뷰어 출처입니다."}]},
-  {"brand":"Selkirk","model":"OMNI Elongated","slug":"selkirk-omni","style":"all-court","shape":"elongated","core":"ReactCore foam (PureFoam center + EVA Power Ring), 16mm","face":"Multistrata T700 carbon with InfiniGrit texture","priceBand":"$$","priceUsd":299.99,"priceSource":"Official brand product page, verify before purchase","sourceName":"Selkirk product page","sourceUrl":"https://www.selkirk.com/products/selkirk-omni-pickleball-paddle","levels":["3.5","4.0","4.5","5.0"],"traits":["control","spin","reach","stability"],"usedBy":"Selkirk OMNI line","reviewSignal":"The all-court alternative to the Boomstik: a foam paddle that plays soft on resets and crisp on drives, with an adjustable MOI tuning system you can move by hand.","summary":"A premium 16mm all-court foam paddle (ReactCore) with adjustable perimeter weights, balancing touch and pop with reach and durable spin for aggressive all-court players.","ratings":{"power":8.2,"control":8.5,"spin":8.5,"forgiveness":8.2,"speed":7.4},"translations":{"ko":{"reviewSignal":"Boomstik의 올코트 대안: 리셋에선 부드럽고 드라이브에선 단단하게 반응하는 폼 패들로, 손으로 옮길 수 있는 조절식 MOI 튜닝 시스템을 갖췄습니다.","summary":"조절식 둘레 웨이트를 가진 프리미엄 16mm 올코트 폼 패들(ReactCore). 터치와 팝, 리치, 내구성 있는 스핀의 균형으로 공격적인 올코트 플레이어에게 맞습니다."}},"image":"/assets/img/paddles/selkirk-omni.svg","imageAlt":"Illustrated product card for Selkirk OMNI Elongated","reviewerScores":[{"reviewer":"Pickleball Effect","score":"Open review/database","url":"https://pickleballeffect.com/equipment-reviews/","note":"Independent play-tested review library and paddle tools. Check the exact model page for the latest.","noteKo":"독립 플레이 테스트 기반 리뷰와 패들 도구. 모델별 원문에서 최신 내용을 확인하세요."},{"reviewer":"Pickleball Studio","score":"Video review source","url":"https://www.youtube.com/@PickleballStudio","note":"YouTube reviewer for launch impressions, durability, and player-fit notes.","noteKo":"출시 인상·내구성·적합 플레이어 설명을 다루는 유튜브 리뷰어 출처입니다."}]},
-  {"brand":"CRBN","model":"1 TruFoam Genesis","slug":"crbn-trufoam-genesis","style":"control","shape":"elongated","core":"100% proprietary TruFoam core, 14mm (single thickness)","face":"T700 raw carbon fiber with an added fiberglass layer","priceBand":"$$","priceUsd":279.99,"priceSource":"Official brand product page, verify before purchase","sourceName":"CRBN product page","sourceUrl":"https://crbnpickleball.com/products/crbn-pickleball-trufoam-genesis-paddle-1","levels":["4.0","4.5","5.0"],"traits":["control","touch","spin","reach"],"usedBy":"CRBN TruFoam Genesis line","reviewSignal":"A Gen-4, 100% foam-core paddle with a tennis-like dwell and feel: exceptional on dinks and resets with strong spin, leaning control over raw pop for advanced players.","summary":"A premium 14mm full-foam elongated paddle with long dwell time and a soft, controllable feel; a precision tool for 4.0+ players who value touch and spin over raw power.","ratings":{"power":7.6,"control":9,"spin":8.5,"forgiveness":8,"speed":7},"translations":{"ko":{"reviewSignal":"테니스 라켓 같은 체류감과 감을 주는 4세대 100% 폼 코어 패들: 딩크와 리셋에 탁월하고 스핀이 강하며, 순수 팝보다 컨트롤에 무게를 둔 상급자용입니다.","summary":"긴 체류감과 부드럽고 통제 가능한 감을 가진 프리미엄 14mm 풀폼 엘롱게이티드 패들. 순수 파워보다 터치와 스핀을 중시하는 4.0+ 플레이어를 위한 정밀 도구입니다."}},"image":"/assets/img/paddles/crbn-trufoam-genesis.svg","imageAlt":"Illustrated product card for CRBN 1 TruFoam Genesis","reviewerScores":[{"reviewer":"Pickleball Effect","score":"Open review/database","url":"https://pickleballeffect.com/equipment-reviews/","note":"Independent play-tested review library and paddle tools. Check the exact model page for the latest.","noteKo":"독립 플레이 테스트 기반 리뷰와 패들 도구. 모델별 원문에서 최신 내용을 확인하세요."},{"reviewer":"Pickleball Studio","score":"Video review source","url":"https://www.youtube.com/@PickleballStudio","note":"YouTube reviewer for launch impressions, durability, and player-fit notes.","noteKo":"출시 인상·내구성·적합 플레이어 설명을 다루는 유튜브 리뷰어 출처입니다."}]}
+  {"brand":"JOOLA","model":"Ben Johns Perseus Pro V","slug":"joola-perseus-pro-v","style":"all-court","shape":"elongated","core":"Propulsion core with KineticFrame throat, 14/16mm options","face":"Textured carbon friction surface","priceBand":"$$","priceUsd":299.95,"priceSource":"Official brand product page, verify before purchase","sourceName":"JOOLA product page","sourceUrl":"https://joola.com/products/joola-perseus-pro-v-pickleball-paddle-1","levels":["3.5","4.0","4.5","5.0"],"traits":["power","spin","reach","control"],"usedBy":"Ben Johns signature line","reviewSignal":"The latest Ben Johns Perseus: an elongated all-court paddle with a flexing KineticFrame for controlled power, reach, and spin for aggressive advanced players.","summary":"A premium elongated JOOLA signature paddle (14mm or 16mm) for advanced players who want consistent, controllable power with reach and spin.","ratings":{"power":9,"control":7.8,"spin":8.6,"forgiveness":7.5,"speed":7.5},"translations":{"ko":{"reviewSignal":"최신 벤 존스 페르세우스: 휘어지는 KineticFrame로 통제된 파워와 리치, 스핀을 주는 엘롱게이티드 올라운드 패들로 공격적인 상급자에게 맞습니다.","summary":"14mm 또는 16mm로 나오는 프리미엄 엘롱게이티드 JOOLA 시그니처 패들. 일관되고 통제 가능한 파워와 리치, 스핀을 원하는 상급자용입니다."}},"image":"/assets/img/paddles/joola-perseus-pro-v.svg","imageAlt":"Illustrated product card for JOOLA Ben Johns Perseus Pro V","reviewerScores":[{"reviewer":"Pickleball Effect","score":"Open review/database","url":"https://pickleballeffect.com/equipment-reviews/","note":"Independent play-tested review library and paddle tools. Check the exact model page for the latest.","noteKo":"독립 플레이 테스트 기반 리뷰와 패들 도구. 모델별 원문에서 최신 내용을 확인하세요."},{"reviewer":"Pickleball Studio","score":"Video review source","url":"https://www.youtube.com/@PickleballStudio","note":"YouTube reviewer for launch impressions, durability, and player-fit notes.","noteKo":"출시 인상·내구성·적합 선수 설명을 다루는 유튜브 리뷰어 출처입니다."}]},
+  {"brand":"Selkirk","model":"LABS Project Boomstik Elongated","slug":"selkirk-project-boomstik","style":"power","shape":"elongated","core":"BoomCore foam (PureFoam + EVA Power Ring), 16mm","face":"3-layer Multistrata T700 carbon with InfiniGrit texture","priceBand":"$$","priceUsd":332.99,"priceSource":"Official brand product page, verify before purchase","sourceName":"Selkirk product page","sourceUrl":"https://www.selkirk.com/products/selkirk-labs-project-boomstik","levels":["4.0","4.5","5.0"],"traits":["power","spin","stability","reach"],"usedBy":"Selkirk LABS / Selkirk pros","reviewSignal":"A 100% foam-core power paddle: explosive, durable, and surprisingly stable, with an MOI tuning system and long-lasting InfiniGrit spin for demanding advanced players.","summary":"A premium 16mm foam-core (BoomCore) elongated power paddle with a large sweet spot and durable spin texture; built for advanced players who can control real power.","ratings":{"power":9.5,"control":7.2,"spin":8.6,"forgiveness":8,"speed":6.6},"translations":{"ko":{"reviewSignal":"100% 폼 코어 파워 패들: 폭발적이고 내구성이 좋으며 의외로 안정적입니다. MOI 튜닝 시스템과 오래 가는 InfiniGrit 스핀으로 까다로운 상급자에게 맞습니다.","summary":"큰 스위트스폿과 내구성 있는 스핀 표면을 가진 프리미엄 16mm 폼 코어(BoomCore) 엘롱게이티드 파워 패들. 진짜 파워를 다룰 수 있는 상급자용입니다."}},"image":"/assets/img/paddles/selkirk-project-boomstik.svg","imageAlt":"Illustrated product card for Selkirk LABS Project Boomstik Elongated","reviewerScores":[{"reviewer":"Pickleball Effect","score":"Open review/database","url":"https://pickleballeffect.com/equipment-reviews/","note":"Independent play-tested review library and paddle tools. Check the exact model page for the latest.","noteKo":"독립 플레이 테스트 기반 리뷰와 패들 도구. 모델별 원문에서 최신 내용을 확인하세요."},{"reviewer":"Pickleball Studio","score":"Video review source","url":"https://www.youtube.com/@PickleballStudio","note":"YouTube reviewer for launch impressions, durability, and player-fit notes.","noteKo":"출시 인상·내구성·적합 선수 설명을 다루는 유튜브 리뷰어 출처입니다."}]},
+  {"brand":"Selkirk","model":"OMNI Elongated","slug":"selkirk-omni","style":"all-court","shape":"elongated","core":"ReactCore foam (PureFoam center + EVA Power Ring), 16mm","face":"Multistrata T700 carbon with InfiniGrit texture","priceBand":"$$","priceUsd":299.99,"priceSource":"Official brand product page, verify before purchase","sourceName":"Selkirk product page","sourceUrl":"https://www.selkirk.com/products/selkirk-omni-pickleball-paddle","levels":["3.5","4.0","4.5","5.0"],"traits":["control","spin","reach","stability"],"usedBy":"Selkirk OMNI line","reviewSignal":"The all-court alternative to the Boomstik: a foam paddle that plays soft on resets and crisp on drives, with an adjustable MOI tuning system you can move by hand.","summary":"A premium 16mm all-court foam paddle (ReactCore) with adjustable perimeter weights, balancing touch and pop with reach and durable spin for aggressive all-court players.","ratings":{"power":8.2,"control":8.5,"spin":8.5,"forgiveness":8.2,"speed":7.4},"translations":{"ko":{"reviewSignal":"Boomstik의 올코트 대안: 리셋에선 부드럽고 드라이브에선 단단하게 반응하는 폼 패들로, 손으로 옮길 수 있는 조절식 MOI 튜닝 시스템을 갖췄습니다.","summary":"조절식 둘레 웨이트를 가진 프리미엄 16mm 올코트 폼 패들(ReactCore). 터치와 팝, 리치, 내구성 있는 스핀의 균형으로 공격적인 올코트 선수에게 맞습니다."}},"image":"/assets/img/paddles/selkirk-omni.svg","imageAlt":"Illustrated product card for Selkirk OMNI Elongated","reviewerScores":[{"reviewer":"Pickleball Effect","score":"Open review/database","url":"https://pickleballeffect.com/equipment-reviews/","note":"Independent play-tested review library and paddle tools. Check the exact model page for the latest.","noteKo":"독립 플레이 테스트 기반 리뷰와 패들 도구. 모델별 원문에서 최신 내용을 확인하세요."},{"reviewer":"Pickleball Studio","score":"Video review source","url":"https://www.youtube.com/@PickleballStudio","note":"YouTube reviewer for launch impressions, durability, and player-fit notes.","noteKo":"출시 인상·내구성·적합 선수 설명을 다루는 유튜브 리뷰어 출처입니다."}]},
+  {"brand":"CRBN","model":"1 TruFoam Genesis","slug":"crbn-trufoam-genesis","style":"control","shape":"elongated","core":"100% proprietary TruFoam core, 14mm (single thickness)","face":"T700 raw carbon fiber with an added fiberglass layer","priceBand":"$$","priceUsd":279.99,"priceSource":"Official brand product page, verify before purchase","sourceName":"CRBN product page","sourceUrl":"https://crbnpickleball.com/products/crbn-pickleball-trufoam-genesis-paddle-1","levels":["4.0","4.5","5.0"],"traits":["control","touch","spin","reach"],"usedBy":"CRBN TruFoam Genesis line","reviewSignal":"A Gen-4, 100% foam-core paddle with a tennis-like dwell and feel: exceptional on dinks and resets with strong spin, leaning control over raw pop for advanced players.","summary":"A premium 14mm full-foam elongated paddle with long dwell time and a soft, controllable feel; a precision tool for 4.0+ players who value touch and spin over raw power.","ratings":{"power":7.6,"control":9,"spin":8.5,"forgiveness":8,"speed":7},"translations":{"ko":{"reviewSignal":"테니스 라켓 같은 체류감과 감을 주는 4세대 100% 폼 코어 패들: 딩크와 리셋에 탁월하고 스핀이 강하며, 순수 팝보다 컨트롤에 무게를 둔 상급자용입니다.","summary":"긴 체류감과 부드럽고 통제 가능한 감을 가진 프리미엄 14mm 풀폼 엘롱게이티드 패들. 순수 파워보다 터치와 스핀을 중시하는 4.0+ 선수를 위한 정밀 도구입니다."}},"image":"/assets/img/paddles/crbn-trufoam-genesis.svg","imageAlt":"Illustrated product card for CRBN 1 TruFoam Genesis","reviewerScores":[{"reviewer":"Pickleball Effect","score":"Open review/database","url":"https://pickleballeffect.com/equipment-reviews/","note":"Independent play-tested review library and paddle tools. Check the exact model page for the latest.","noteKo":"독립 플레이 테스트 기반 리뷰와 패들 도구. 모델별 원문에서 최신 내용을 확인하세요."},{"reviewer":"Pickleball Studio","score":"Video review source","url":"https://www.youtube.com/@PickleballStudio","note":"YouTube reviewer for launch impressions, durability, and player-fit notes.","noteKo":"출시 인상·내구성·적합 선수 설명을 다루는 유튜브 리뷰어 출처입니다."}]}
 ];
 }));

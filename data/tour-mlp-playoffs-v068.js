@@ -3,8 +3,8 @@
 module.exports = function applyMlpPlayoffsV068(board) {
   if (!board || typeof board !== 'object') return board;
 
-  const UPDATED_AT = '2026-08-08T00:16:00-04:00';
-  const UPDATED_LABEL = '2026-08-08 · 12:16 AM ET';
+  const UPDATED_AT = '2026-08-08T00:59:00-04:00';
+  const UPDATED_LABEL = '2026-08-08 · 12:59 AM ET';
   const RESULT_DATE = '2026-08-07';
   const officialDallas = 'https://majorleaguepickleball.co/events-2026/mlp-playoffs-dallas-2026/';
 

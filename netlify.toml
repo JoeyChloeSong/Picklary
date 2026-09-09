@@ -122,13 +122,13 @@
 
 [[redirects]]
   from = "/download/ko"
-  to = "/picklary-lite/downloads/Picklary_Lite_v0.7.5_KO_Windows.zip"
+  to = "/picklary-lite/ko/"
   status = 302
   force = true
 
 [[redirects]]
   from = "/download/en"
-  to = "/picklary-lite/downloads/Picklary_Lite_v0.7.5_EN_Windows.zip"
+  to = "/picklary-lite/en/"
   status = 302
   force = true
 

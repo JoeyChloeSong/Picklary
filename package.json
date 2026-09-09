@@ -1,8 +1,8 @@
 {
   "name": "picklelevel",
-  "version": "0.7.3",
+  "version": "0.8.2",
   "private": true,
-  "description": "Picklary v0.7.3 - updates MLP Dallas Round 1 through August 10, publishes all four 2-0 series finals, and refreshes the Newport Beach quarterfinal field while preserving the v0.7.2 result-first Tour Board behavior.",
+  "description": "Picklary v0.8.2 - visual Gear Lab with real paddle imagery and expanded in-site Tour Board finals/results.",
   "scripts": {
     "build": "node build.js && node scripts/check-seo-redirects.js",
     "start": "node build.js && node start-local.js",

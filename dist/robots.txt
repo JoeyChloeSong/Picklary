@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /admin/
-Disallow: /data/
-Disallow: /i18n/
-
-Sitemap: https://picklary.com/sitemap.xml

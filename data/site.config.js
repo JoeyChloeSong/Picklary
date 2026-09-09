@@ -89,8 +89,8 @@
 
     // --- Entry language routing ---------------------------------------------
     // AdSense review mode: keep automatic IP/GeoIP language routing disabled.
-    // Visitors land on the root language-choice page and can select Korean or
-    // English manually. This avoids unnecessary location lookups before review.
+    // The root URL redirects to /en/; Korean remains directly available at /ko/.
+    // This avoids unnecessary location lookups before review.
     // After approval, you may enable a privacy-reviewed server-side redirect,
     // but do not use public GeoIP endpoints unless the Privacy Policy is updated.
     languageDetection: {

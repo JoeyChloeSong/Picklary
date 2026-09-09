@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-labelledby="t d">
+<title id="t">Lululemon Pace Rival Skirt</title><desc id="d">Commonly chosen for fit, pocket utility, and hot-weather play.</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#9d174d"/><stop offset="100%" stop-color="#f472b6"/></linearGradient></defs>
+<rect width="720" height="420" rx="28" fill="#f8fafc"/>
+<rect x="20" y="20" width="680" height="380" rx="24" fill="url(#g)" opacity="0.10"/>
+<rect x="28" y="28" width="220" height="364" rx="24" fill="url(#g)"/>
+<path d="M37 36l17 10 17-10 22 16-12 16-8-4v34H35V64l-8 4-12-16z" fill="#fff" fill-opacity="0.95"/><path d="M41 38c2 10 24 10 26 0" fill="none" stroke="#1f2937" stroke-width="3" stroke-linecap="round" opacity="0.25"/>
+<rect x="40" y="286" width="90" height="28" rx="14" fill="#ffffff" fill-opacity="0.18"/>
+<text x="85" y="305" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Bottom</text>
+<text x="118" y="34" font-size="14" font-weight="700" fill="#9d174d">LULULEMON</text>
+<text x="610" y="34" text-anchor="end" font-size="14" font-weight="700" fill="#f472b6">APPAREL</text>
+<text x="118" y="60" font-size="20" font-weight="700" fill="#0f172a">Pace Rival Skirt</text>
+<text x="118" y="116" font-size="12" fill="#334155">Commonly chosen for fit, pocket</text><text x="118" y="131" font-size="12" fill="#334155">utility, and hot-weather play.</text>
+<line x1="118" y1="156" x2="670" y2="156" stroke="#cbd5e1"/>
+<text x="118" y="190" font-size="13" font-weight="700" fill="#475569">WHY PICKLARY LISTS IT</text>
+<text x="118" y="212" font-size="13" fill="#334155">Premium comfort + movement</text>
+<text x="118" y="246" font-size="13" font-weight="700" fill="#475569">SHOPPING ANGLE</text>
+<text x="118" y="268" font-size="13" fill="#334155">Compare fit, surface match, and repeat-use value before buying.</text>
+<rect x="118" y="318" width="176" height="34" rx="17" fill="#9d174d" opacity="0.10"/>
+<text x="206" y="340" text-anchor="middle" font-size="13" font-weight="700" fill="#9d174d">Lululemon · Bottom</text>
+</svg>

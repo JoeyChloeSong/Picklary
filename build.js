@@ -29,6 +29,8 @@ try {
 try {
   require('./data/pro-gear-enrichment.js')(players, paddles);
 } catch (e) { console.warn('Pro gear enrichment skipped:', e.message); }
+try { require('./data/paddle-real-images-v083-extra.js')(paddles); } catch (e) { console.warn('Extra paddle image enrichment skipped:', e.message); }
+try { require('./data/player-real-images-v083.js')(players); } catch (e) { console.warn('Player real image enrichment skipped:', e.message); }
 let playerStories = {};
 try { playerStories = require('./data/player-stories.js'); } catch (e) { playerStories = {}; }
 let duprSnapshot = { updated: '', sourceUrl: 'https://www.dupr.com/rankings', ratings: {} };
@@ -56,6 +58,10 @@ let duprQuiz = [];
 try { duprQuiz = require('./data/dupr-quiz.js'); } catch (e) { duprQuiz = []; }
 let rankingsData = null;
 try { rankingsData = require('./data/rankings.js'); } catch (e) { rankingsData = null; }
+let gearBrandCatalog = {};
+try { gearBrandCatalog = require('./data/gear-brand-catalog.js'); } catch (e) { gearBrandCatalog = {}; }
+let worldRankingsTop10 = null;
+try { worldRankingsTop10 = require('./data/world-rankings-top10.js'); } catch (e) { worldRankingsTop10 = null; }
 let automationSourceConfig = { sources: [] };
 try { automationSourceConfig = require('./automation/sources.json'); } catch (e) { automationSourceConfig = { sources: [] }; }
 
@@ -1344,7 +1350,7 @@ function assetImage(src, alt, cls) {
 // Slug-matched illustration for legacy entries, but prefer verified brand product imagery when supplied.
 function entityIllus(folder, slug, fallbackSrc, alt, note) {
   const relPath = 'assets/img/' + folder + '/' + slug + '.svg';
-  const preferActual = /^https?:\/\//i.test(String(fallbackSrc || ''));
+  const preferActual = !!fallbackSrc && !/\.svg(\?|$)/i.test(String(fallbackSrc || ''));
   let exists = false;
   try { exists = fs.existsSync(path.join(ROOT, relPath)); } catch (e) { exists = false; }
   const imgHtml = preferActual
@@ -2141,7 +2147,7 @@ function gearCards(loc, opts) {
 
 function gearPaddleWall(loc) {
   const L = (ko, en) => loc === 'ko' ? ko : en;
-  const actual = paddles.filter((p) => /^https?:\/\//i.test(String(p.image || ''))).slice(0, 8);
+  const actual = paddles.filter((p) => p.image && !/\/assets\/img\/paddles\/.+\.svg$/i.test(String(p.image || '')) && !/\.svg(\?|$)/i.test(String(p.image || ''))).slice(0, 12);
   if (!actual.length) return '';
   const cards = actual.map((p) => `<a class="gear-product-shot" href="${link(loc, 'paddles/' + p.slug + '/')}">${assetImage(p.image, p.imageAlt || paddleTitle(p), 'gear-product-shot__img')}<span><small>${esc(p.brand || '')}</small><strong>${esc(p.model || paddleTitle(p))}</strong></span></a>`).join('');
   return `<section class="band band--gear-gallery"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">REAL PADDLE GALLERY</p><h2 class="band__title">${esc(L('실제 패들 이미지로 비교하세요', 'Compare paddles with real product imagery'))}</h2><p class="band__intro">${esc(L('일러스트 대신 제조사 제품 이미지를 우선 적용한 주요 모델입니다. 형태·헤드 폭·목 길이·그립 비율을 한눈에 비교할 수 있습니다.', 'Featured models now prioritize manufacturer product imagery so you can compare shape, head width, throat length, and grip proportions at a glance.'))}</p></div><a href="${link(loc, 'paddles/')}">${esc(L('전체 패들 보기', 'View all paddles'))} →</a></div><div class="gear-product-wall">${cards}</div><p class="notice">${esc(L('제품 이미지는 제조사 공식 이미지 출처를 사용하며 디자인·색상은 변경될 수 있습니다.', 'Product imagery is sourced from official manufacturer pages and may change by colorway or revision.'))}</p></div></section>`;
@@ -2157,87 +2163,32 @@ function gearRelatedNav(loc, currentKey) {
 
 
 
+
 function gearRealExamples(loc, topic) {
   const L = (ko, en) => (loc === 'ko' ? ko : en);
-  const examples = {
-    balls: [
-      {
-        name: 'Franklin X-40',
-        tag: L('대표적인 실외용 공', 'Outdoor benchmark'),
-        body: L('야외 오픈플레이와 대회 준비에서 가장 자주 비교되는 공입니다. 속도·바운스 기준을 잡기 좋습니다.', 'A common outdoor benchmark for open play and event preparation. Useful for learning the speed and bounce many players expect.')
-      },
-      {
-        name: 'Dura Fast 40',
-        tag: L('빠른 반발의 실외용 공', 'Fast outdoor feel'),
-        body: L('더 단단하고 빠른 느낌을 선호하는 경쟁 선수가 비교할 만합니다. 초보자에게는 빠르게 느껴질 수 있습니다.', 'A firmer, faster outdoor comparison point. It can feel quick for beginners, but it is useful for competitive-speed practice.')
-      },
-      {
-        name: 'Selkirk Pro S1',
-        tag: L('프리미엄 실외용 공', 'Premium outdoor candidate'),
-        body: L('내구성·일관성·38홀 설계로 알려진 후보입니다. 가격과 현재 승인 상태는 구매 전 확인하세요.', 'A premium outdoor candidate associated with durability, consistency, and a 38-hole design. Verify current price and eligibility before buying.')
-      },
-      {
-        name: 'ONIX Fuse Indoor',
-        tag: L('실내용 공', 'Indoor candidate'),
-        body: L('실내 체육관·스포츠코트에서 부드러운 바운스와 컨트롤을 비교할 때 확인할 만한 공입니다.', 'A useful indoor candidate when comparing softer bounce and controlled feel on gym or sport-court surfaces.')
-      },
-      {
-        name: L('클럽 제공 공', 'Club-provided ball'),
-        tag: L('Life Time·지역 클럽', 'Life Time / local clubs'),
-        body: L('클럽 지점마다 제공 공이 다를 수 있습니다. 자주 치는 장소에서 실제 쓰는 공을 확인하고 같은 공으로 연습하세요.', 'Club locations can vary. Check the exact ball your location uses and practise with that model when possible.')
-      }
-    ],
-    shoes: [
-      {
-        name: 'Wilson Pickle Pro',
-        tag: L('피클볼 전용화', 'Pickleball-specific candidate'),
-        body: L('측면 지지력과 코트 움직임을 기준으로 비교할 만한 피클볼화 후보입니다.', 'A pickleball-specific option to compare for lateral support and court movement.')
-      },
-      {
-        name: 'Babolat Jet Mach 4',
-        tag: L('빠른 움직임', 'Fast movement'),
-        body: L('가벼운 코트 움직임과 반응성을 중요하게 보는 선수가 비교할 만합니다.', 'A court-shoe candidate for players who value lighter movement and responsiveness.')
-      },
-      {
-        name: 'ASICS Solution Speed FF',
-        tag: L('테니스 코트화', 'Tennis-court base'),
-        body: L('테니스화 기반의 빠른 방향 전환과 접지력을 비교할 때 참고하기 좋습니다.', 'A tennis-court reference point for quick cuts and traction.')
-      },
-      {
-        name: 'ON Roger Clubhouse Pro',
-        tag: L('클럽용 편안함', 'Club comfort'),
-        body: L('긴 클럽 세션에서 편안함과 코트 안정성을 함께 확인할 후보입니다.', 'A candidate to compare when comfort across long club sessions matters.')
-      }
-    ],
-    apparel: [
-      { name: L('땀 배출 셔츠', 'Moisture-wicking shirt'), tag: L('기본', 'Core'), body: L('면 티셔츠보다 땀이 빨리 마르는 소재가 후반 집중력에 유리합니다.', 'Fabric that dries faster than cotton helps maintain comfort and focus late in play.') },
-      { name: L('주머니 있는 쇼츠·스커트', 'Shorts or skirt with pockets'), tag: L('실전 편의', 'Practical'), body: L('공을 보관하거나 교대 중 빠르게 움직일 수 있어 오픈플레이에서 편합니다.', 'Useful for holding balls and moving quickly during open play.') },
-      { name: L('UPF 긴팔·모자·바이저', 'UPF layer, hat, or visor'), tag: L('야외', 'Outdoor'), body: L('야외 코트에서는 자외선, 눈부심, 열 관리를 장비처럼 생각하세요.', 'For outdoor courts, treat sun, glare, and heat management as part of your gear system.') },
-      { name: L('여벌 양말·셔츠', 'Extra socks and shirts'), tag: L('대회·장시간', 'Tournament / long session'), body: L('젖은 옷으로 오래 대기하면 몸이 식고 집중력이 떨어질 수 있습니다.', 'Waiting in wet clothing can cool you down and hurt concentration.') }
-    ],
-    accessories: [
-      { name: L('오버그립', 'Overgrips'), tag: L('가성비 체감', 'High-value feel'), body: L('땀, 손 크기, 패들 회전을 가장 저렴하게 개선할 수 있는 후보입니다.', 'Often the cheapest way to improve sweat control, grip size, and paddle twisting.') },
-      { name: L('보호안경', 'Eye protection'), tag: L('안전', 'Safety'), body: L('키친 앞 핸드배틀과 파트너 디플렉션이 많은 환경에서는 우선순위가 높습니다.', 'High priority around kitchen hand battles, partner deflections, and crowded club play.') },
-      { name: L('손목밴드·타월', 'Wristbands and towel'), tag: L('땀 관리', 'Sweat control'), body: L('그립 젖음과 눈에 들어가는 땀을 줄이는 작은 장비입니다.', 'Small items that reduce grip moisture and sweat in the eyes.') },
-      { name: L('패들·신발 분리 가방', 'Bag with shoe/paddle separation'), tag: L('클럽 이동', 'Club carry'), body: L('패들 보호, 신발 분리, 물병, 수건, 여벌 의류를 한 번에 넣을 수 있는지 확인하세요.', 'Check whether it actually carries paddles, shoes, water, towel, and spare clothing.') }
-    ]
-  };
-  const items = examples[topic] || [];
-  if (!items.length) return '';
   const titleMap = {
-    balls: L('대표 공 후보와 실제 사용 기준', 'Popular ball candidates and real-use criteria'),
-    shoes: L('실제 비교해 볼 만한 신발 후보', 'Shoe candidates worth comparing'),
-    apparel: L('사용자가 자주 찾는 의류군', 'Apparel categories players actually use'),
-    accessories: L('체감이 큰 액세서리 후보', 'Accessories with noticeable impact')
+    balls: L('브랜드별 볼 선택 폭', 'Ball options by brand'),
+    shoes: L('브랜드별 신발 비교 후보', 'Shoes grouped by brand'),
+    apparel: L('브랜드별 의류 선택 폭', 'Apparel options by brand'),
+    accessories: L('브랜드별 액세서리 선택 폭', 'Accessories grouped by brand')
   };
   const noteMap = {
-    balls: L('공은 “가장 좋은 공”보다 내가 치는 코트와 클럽에서 실제 쓰는 공에 맞추는 것이 중요합니다.', 'For balls, matching the court and club you actually play at matters more than finding one universal best ball.'),
-    shoes: L('신발은 제품명보다 발볼, 뒤꿈치 고정, 코트 표면, 측면 지지력이 우선입니다.', 'For shoes, width, heel lockdown, court surface, and lateral support matter more than the model name.'),
-    apparel: L('의류는 브랜드보다 땀·열·움직임·대기 시간을 해결하는지가 핵심입니다.', 'For apparel, solve sweat, heat, movement, and waiting time before focusing on brand.'),
-    accessories: L('액세서리는 저렴하지만 경기 감각을 크게 바꿀 수 있으므로 작은 단위로 테스트하세요.', 'Accessories are inexpensive but can change feel a lot, so test them in small steps.')
+    balls: L('공은 내가 실제로 치는 클럽·대회·코트 환경과 맞는지를 가장 먼저 확인하세요. 같은 브랜드라도 실내/실외와 속도감이 달라집니다.', 'For balls, start by matching the club, tournament, and court environment you actually play in. Even within one brand, indoor and outdoor models can feel very different.'),
+    shoes: L('신발은 브랜드보다 발볼, 뒤꿈치 고정, 측면 지지력, 코트 표면 적합성이 우선입니다. 아래 리스트는 비교 출발점입니다.', 'For shoes, width, heel lockdown, lateral support, and court-surface fit matter more than the brand. Use the groups below as a practical comparison starting point.'),
+    apparel: L('의류는 스타일보다 움직임, 땀 배출, 포켓, 대기 시간까지 포함한 실전 편의성이 중요합니다.', 'For apparel, match-day usefulness matters more than style alone: freedom of movement, sweat management, pockets, and long-session comfort.'),
+    accessories: L('액세서리는 작은 비용으로 체감 변화를 주기 쉬운 영역입니다. 그립, 가방, 보호장비, 관리도구를 브랜드별로 폭넓게 비교해 보세요.', 'Accessories are one of the easiest places to improve feel without a huge budget. Compare grips, bags, safety items, and maintenance tools by brand.')
   };
-  const cards = items.map((x) => `<article class="gear-example-card"><span>${esc(x.tag)}</span><h3>${esc(x.name)}</h3><p>${esc(x.body)}</p></article>`).join('');
-  return `<section class="gear-examples"><h2>${esc(titleMap[topic] || L('실제 제품군 예시', 'Real product examples'))}</h2><p>${esc(noteMap[topic] || '')}</p><div class="gear-example-grid">${cards}</div><p class="notice">${esc(L('제품 가격, 승인 상태, 재고, 클럽 제공 모델은 바뀔 수 있으므로 구매·대회 사용 전 공식 출처에서 다시 확인하세요.', 'Prices, approval status, stock, and club-provided models can change, so verify at official sources before buying or using in competition.'))}</p></section>`;
+  const catalog = gearBrandCatalog && gearBrandCatalog[topic] ? gearBrandCatalog[topic] : [];
+  if (!catalog.length) return '';
+  const blocks = catalog.map((brandBlock) => {
+    const items = (brandBlock.items || []).map((item) => {
+      const href = item.href || '#';
+      const image = item.image || `/assets/img/gear-catalog/${item.slug}.svg`;
+      return `<article class="gear-product-card"><div class="gear-product-card__thumb">${assetImage(image, `${brandBlock.brand} ${item.name}`, 'gear-product-card__img')}</div><div class="gear-product-card__body"><span class="gear-product-card__tag">${esc(item.tag || brandBlock.brand)}</span><h4>${esc(item.name)}</h4><p>${esc(item.body || '')}</p>${href !== '#' ? `<a href="${escAttr(href)}" target="_blank" rel="noreferrer noopener">${esc(loc === 'ko' ? '공식 페이지' : 'Official page')} ↗</a>` : `<small>${esc(loc === 'ko' ? '브랜드 비교용 예시' : 'Brand comparison example')}</small>`}</div></article>`;
+    }).join('');
+    return `<section class="gear-brand-block"><div class="gear-brand-block__head"><div><p class="section-kicker">${esc(topic.toUpperCase())}</p><h3>${esc(brandBlock.brand)}</h3><p>${esc(brandBlock.note || '')}</p></div><span class="gear-brand-block__count">${esc(String((brandBlock.items || []).length))} ${esc(loc === 'ko' ? 'items' : 'items')}</span></div><div class="gear-brand-block__grid">${items}</div></section>`;
+  }).join('');
+  return `<section class="gear-examples"><h2>${esc(titleMap[topic] || L('브랜드별 실제 제품군 예시', 'Brand-grouped product examples'))}</h2><p>${esc(noteMap[topic] || '')}</p><div class="gear-brand-catalog">${blocks}</div><p class="notice">${esc(L('제품 구성과 출시 색상은 수시로 바뀔 수 있으므로 구매 전 공식 페이지에서 재확인하세요. 이 페이지는 비교 탐색을 쉽게 만들기 위한 브랜드별 큐레이션입니다.', 'Product assortments and colorways can change, so confirm the latest details on official pages before buying. This page is a brand-organized curation built to widen comparison choices.'))}</p></section>`;
 }
 
 function renderGearIndex(loc) {
@@ -2604,7 +2555,7 @@ function renderPaddlePage(paddle, loc) {
   <div><p class="page-head__eyebrow">${esc(paddle.brand)}</p><h1>${esc(title)}</h1>
   <p class="page-head__intro">${esc(loc1(paddle, loc, 'reviewSignal'))}</p>
   <p class="page-head__intro page-head__intro--small">${esc(loc1(paddle, loc, 'summary'))}</p></div>
-  ${entityIllus('paddles', paddle.slug, paddle.image, paddle.imageAlt || title, /^https?:\/\//i.test(String(paddle.image || '')) ? (loc === 'ko' ? `제조사 공식 제품 이미지 · ${paddle.imageCredit || paddle.brand}` : `Official manufacturer product image · ${paddle.imageCredit || paddle.brand}`) : (loc === 'ko' ? '양식화된 패들 일러스트' : 'Stylised paddle illustration'))}
+  ${entityIllus('paddles', paddle.slug, paddle.image, paddle.imageAlt || title, !/\.svg(\?|$)/i.test(String(paddle.image || '')) ? (loc === 'ko' ? `제조사 공식 제품 이미지 · ${paddle.imageCredit || paddle.brand}` : `Official manufacturer product image · ${paddle.imageCredit || paddle.brand}`) : (loc === 'ko' ? '양식화된 패들 일러스트' : 'Stylised paddle illustration'))}
 </div></section>
 <section class="band"><div class="wrap two-col two-col--wide paddle-detail-grid">
   <div class="spec-card spec-card--details"><table class="spec-table"><tbody>
@@ -2675,7 +2626,7 @@ function renderPlayerPage(player, loc) {
   const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: tt(loc, 'players.title'), rel: 'players/' }, { name: title }])}
 <section class="page-head page-head--visual"><div class="wrap two-col two-col--wide">
   <div><p class="page-head__eyebrow">${esc(player.country)}</p><h1>${esc(title)}</h1><p class="page-head__intro">${esc(loc1(player, loc, 'style'))}</p></div>
-  ${entityIllus('players', player.slug, player.image, (player.imageAlt || player.name) + ' — illustration', loc === 'ko' ? '양식화된 일러스트 (실제 사진 아님)' : 'Stylised illustration (not a photo)')}
+  ${entityIllus('players', player.slug, player.image, player.imageAlt || player.name, player.image && !/\.svg(\?|$)/i.test(String(player.image || '')) ? (loc === 'ko' ? '선수 실제 이미지 스냅샷' : 'Player photo snapshot') : (loc === 'ko' ? '양식화된 일러스트 (실제 사진 아님)' : 'Stylised illustration (not a photo)'))}
 </div></section>
 ${playerStorySections(player, loc)}
 ${playerGearPanel(player, loc)}
@@ -3723,12 +3674,13 @@ function playerAvatar(person, loc) {
   const slug = person.slug;
   let hasSvg = false;
   if (slug) { try { hasSvg = fs.existsSync(path.join(ROOT, 'assets/img/players/' + slug + '.svg')); } catch (e) { hasSvg = false; } }
+  const photo = person.image && !/\.svg(\?|$)/i.test(String(person.image || '')) ? assetImage(person.image, person.imageAlt || name, 'rank-avatar__img') : '';
   const initials = (name || '?').split(/\s+/).map((w) => w[0]).slice(0, 2).join('').toUpperCase();
-  const inner = hasSvg
+  const inner = photo || (hasSvg
     ? `<img class="rank-avatar__img" src="/assets/img/players/${escAttr(slug)}.svg"${svgDims('players/' + slug + '.svg')} alt="${escAttr(name)} — illustration" loading="lazy">`
-    : `<span class="rank-avatar__ini" aria-hidden="true">${esc(initials)}</span>`;
+    : `<span class="rank-avatar__ini" aria-hidden="true">${esc(initials)}</span>`);
   const label = `<span class="rank-name">${esc(name)}</span>`;
-  if (slug && hasSvg) return `<a class="rank-person" href="${link(loc, 'players/' + slug + '/')}"><span class="rank-avatar">${inner}</span>${label}</a>`;
+  if (slug && (photo || hasSvg)) return `<a class="rank-person" href="${link(loc, 'players/' + slug + '/')}"><span class="rank-avatar${photo ? ' rank-avatar--photo' : ''}">${inner}</span>${label}</a>`;
   if (slug) return `<a class="rank-person" href="${link(loc, 'players/' + slug + '/')}"><span class="rank-avatar rank-avatar--ini">${inner}</span>${label}</a>`;
   return `<span class="rank-person"><span class="rank-avatar rank-avatar--ini">${inner}</span>${label}</span>`;
 }
@@ -4217,6 +4169,61 @@ function tourInlineResults(loc) {
     return `<article class="tour-result-event${eventIndex === 0 ? ' is-featured' : ''}"><header><div><span class="tour-chip">${esc(r.channel ? String(r.channel).toUpperCase() : (r.tier || ''))}</span><h3>${esc(loc === 'ko' && r.eventKo ? r.eventKo : r.event)}</h3><p>${esc(loc === 'ko' && r.datesKo ? r.datesKo : r.dates)} · ${esc(loc === 'ko' && r.locationKo ? r.locationKo : r.location)}</p></div><span class="result-state result-state--completed">${esc(L('결과 확정', 'Final'))}</span></header><div class="tour-result-table">${rows}</div><footer><span>${esc(L('Picklary 확인일', 'Verified'))}: ${esc(r.checked || '')}</span><a href="${link(loc, 'pro-scene/results/')}">${esc(L('Picklary 결과센터에서 더 보기', 'More in Picklary Results Center'))} →</a></footer></article>`;
   }).join('');
   return `<section class="band band--tour-results-snapshot" id="latest-results"><div class="wrap"><div class="section-heading-row"><div><p class="section-kicker">RESULTS INSIDE PICKLARY</p><h2 class="band__title">${esc(L('링크를 열지 않아도 최신 결승 결과를 확인하세요', 'Read the latest finals without leaving Picklary'))}</h2><p class="band__intro">${esc(L('단식·남자복식·여자복식·혼합복식의 우승/준우승과 게임별 점수를 Picklary 안에서 바로 정리합니다.', 'Champions, runners-up, and game-by-game finals scores for singles, men’s doubles, women’s doubles, and mixed doubles are summarized directly on Picklary.'))}</p></div><a href="${link(loc, 'pro-scene/results/')}">${esc(L('전체 경기결과', 'All results'))} →</a></div><div class="tour-result-events">${events}</div></div></section>`;
+}
+
+
+function worldRankingLabel(loc, cat) {
+  return (cat && cat.label && (cat.label[loc] || cat.label.en || cat.label.ko)) || '';
+}
+function worldRankingsNav(loc, activeKey) {
+  if (!worldRankingsTop10 || !Array.isArray(worldRankingsTop10.categories)) return '';
+  const label = loc === 'ko' ? '세계랭킹 서브메뉴' : 'World rankings sub menu';
+  const items = worldRankingsTop10.categories.map((cat) => `<a class="tourboard-filter${cat.key === activeKey ? ' is-active' : ''}" href="${link(loc, `pro-scene/rankings/${cat.key}/`)}">${esc(worldRankingLabel(loc, cat))}</a>`).join('');
+  return `<div class="tourboard-filters" aria-label="${escAttr(label)}"><a class="tourboard-filter${!activeKey ? ' is-active' : ''}" href="${link(loc, 'pro-scene/rankings/')}">${esc(loc === 'ko' ? '전체 보기' : 'All categories')}</a>${items}</div>`;
+}
+function lookupPlayerByName(name) {
+  const norm = String(name || '').trim().toLowerCase();
+  return players.find((p) => String(p.name || '').trim().toLowerCase() === norm) || null;
+}
+function rankingEntryAvatar(entry) {
+  const player = entry.slug ? players.find((p) => p.slug === entry.slug) : lookupPlayerByName(entry.name);
+  const base = playerAvatar(player || { name: entry.name }, 'en');
+  return base.replace(/^<a class="rank-person"[^>]*>/, '<span class="rank-person">').replace(/<\/a>$/, '</span>');
+}
+function rankingEntryLink(loc, entry) {
+  const player = entry.slug ? players.find((p) => p.slug === entry.slug) : lookupPlayerByName(entry.name);
+  return player ? link(loc, `players/${player.slug}/`) : '';
+}
+function worldRankingsHero(loc) {
+  if (!worldRankingsTop10 || !Array.isArray(worldRankingsTop10.categories)) return '';
+  const cards = worldRankingsTop10.categories.map((cat) => {
+    const leader = (cat.items || [])[0];
+    if (!leader) return '';
+    const href = link(loc, `pro-scene/rankings/${cat.key}/`);
+    return `<a class="world-rankings-hero-card" href="${href}"><span class="world-rankings-hero-card__label">${esc(worldRankingLabel(loc, cat))}</span><div class="world-rankings-hero-card__leader">${rankingEntryAvatar(leader)}<span><strong>#1 ${esc(leader.name)}</strong><small>ELO ${esc(String(leader.elo || '—'))} · ${esc(String(leader.wins || '—'))} ${esc(loc === 'ko' ? '승' : 'wins')}</small></span></div></a>`;
+  }).join('');
+  return `<section class="world-rankings-hero"><div class="world-rankings-hero__grid">${cards}</div><p class="notice">${esc((loc === 'ko' ? '데이터 출처: ' : 'Source: ') + ((worldRankingsTop10 && worldRankingsTop10.sourceName) || 'Ranking snapshot') + ' · ' + (worldRankingsTop10.updated || ''))}</p></section>`;
+}
+function worldRankingTable(loc, cat, compact) {
+  const rows = (cat.items || []).map((entry) => {
+    const href = rankingEntryLink(loc, entry);
+    const nameHtml = href ? `<a href="${href}">${esc(entry.name)}</a>` : esc(entry.name);
+    return `<tr><td>${esc(String(entry.rank))}</td><td><div class="rank-player-row">${rankingEntryAvatar(entry)}<span>${nameHtml}</span></div></td><td>${esc(String(entry.elo || '—'))}</td><td>${esc(String(entry.wins || '—'))}</td></tr>`;
+  }).join('');
+  return `<section class="world-ranking-card${compact ? ' world-ranking-card--compact' : ''}" id="${escAttr(cat.key)}"><div class="world-ranking-card__head"><div><p class="section-kicker">${esc(cat.shortLabel || '')}</p><h2>${esc(worldRankingLabel(loc, cat))}</h2></div><a href="${link(loc, `pro-scene/rankings/${cat.key}/`)}">${esc(loc === 'ko' ? '개별 보기' : 'Open')}</a></div><div class="table-wrap"><table class="world-ranking-table"><thead><tr><th>#</th><th>${esc(loc === 'ko' ? '선수' : 'Player')}</th><th>ELO</th><th>${esc(loc === 'ko' ? '통산승' : 'Wins')}</th></tr></thead><tbody>${rows}</tbody></table></div></section>`;
+}
+function renderWorldRankingsPage(loc, activeKey) {
+  const cats = worldRankingsTop10 && Array.isArray(worldRankingsTop10.categories) ? worldRankingsTop10.categories : [];
+  const active = activeKey ? cats.find((cat) => cat.key === activeKey) : null;
+  const title = active ? `${worldRankingLabel(loc, active)} Top 10` : (loc === 'ko' ? '세계랭킹 Top 10' : 'World Pickleball Top 10');
+  const intro = active
+    ? (loc === 'ko' ? `${worldRankingLabel(loc, active)} 1위부터 10위까지를 한눈에 볼 수 있는 스냅샷입니다.` : `A quick Top 10 snapshot for ${worldRankingLabel(loc, active)}.`)
+    : (loc === 'ko' ? '남자 단식, 여자 단식, 남자 복식, 여자 복식, 혼합 복식 Top 10을 한 페이지에서 빠르게 확인하세요.' : 'See the current Top 10 snapshot for mens singles, womens singles, mens doubles, womens doubles, and mixed doubles in one place.');
+  const board = active ? worldRankingTable(loc, active, false) : `<div class="world-rankings-grid">${cats.map((cat) => worldRankingTable(loc, cat, true)).join('')}</div>`;
+  const body = `${breadcrumbs(loc, [{ name: tt(loc, 'breadcrumb.home'), rel: '' }, { name: loc === 'ko' ? '투어보드' : 'Tour Board', rel: 'pro-scene/' }, { name: title }])}
+<section class="page-head page-head--visual"><div class="wrap two-col two-col--wide"><div><p class="page-head__eyebrow">${esc(loc === 'ko' ? '투어보드 · 세계랭킹' : 'Tour Board · Rankings')}</p><h1>${esc(title)}</h1><p class="page-head__intro">${esc(intro)}</p></div><div class="pro-scene-metrics"><article><strong>${esc(String(cats.length))}</strong><span>${esc(loc === 'ko' ? '카테고리' : 'categories')}</span></article><article><strong>Top 10</strong><span>${esc(loc === 'ko' ? '랭킹 스냅샷' : 'snapshot')}</span></article><article><strong>${esc(worldRankingsTop10 && worldRankingsTop10.updated || '—')}</strong><span>${esc(loc === 'ko' ? '업데이트' : 'updated')}</span></article></div></div></section>
+<section class="band"><div class="wrap">${proSceneTabs(loc, activeKey ? `pro-scene/rankings/${activeKey}/` : 'pro-scene/rankings/')}${worldRankingsNav(loc, activeKey)}${!activeKey ? worldRankingsHero(loc) : ''}${board}<p class="notice">${esc(loc === 'ko' ? '선수 이미지가 준비된 경우 실제 이미지를, 그 외에는 기본 아바타를 사용합니다. 랭킹 수치는 최신 공개 스냅샷 기준으로 정리했습니다.' : 'When a player photo is available, the table uses it; otherwise a fallback avatar is shown. Ranking values are organized from the latest public snapshot used for this build.')}</p></div></section>`;
+  return layout({ loc, rel: activeKey ? `pro-scene/rankings/${activeKey}/` : 'pro-scene/rankings/', title, description: intro, bodyHtml: body });
 }
 
 function renderProSceneHub(loc) {
@@ -5286,7 +5293,8 @@ function buildSitemapXml() {
   add('tools/paddle-finder/', 'weekly', '0.75');
   add('players/', 'weekly', '0.8');
   add('pro-scene/', 'daily', '0.90');
-  ['players','results','storylines','rules'].forEach((type) => add('pro-scene/' + type + '/', 'weekly', '0.74'));
+  ['players','results','storylines','rules','rankings'].forEach((type) => add('pro-scene/' + type + '/', 'weekly', '0.74'));
+  if (worldRankingsTop10 && Array.isArray(worldRankingsTop10.categories)) worldRankingsTop10.categories.forEach((cat) => add('pro-scene/rankings/' + cat.key + '/', 'weekly', '0.72'));
   urls.push(`  <url>\n    <loc>${config.url}/clip-lite/</loc>\n    <xhtml:link rel="alternate" hreflang="ko" href="${config.url}/clip-lite/"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${config.url}/clip-lite/en/"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${config.url}/clip-lite/en/"/>\n    <changefreq>monthly</changefreq>\n    <priority>0.78</priority>\n  </url>`);
   urls.push(`  <url>\n    <loc>${config.url}/clip-lite/en/</loc>\n    <xhtml:link rel="alternate" hreflang="ko" href="${config.url}/clip-lite/"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${config.url}/clip-lite/en/"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${config.url}/clip-lite/en/"/>\n    <changefreq>monthly</changefreq>\n    <priority>0.78</priority>\n  </url>`);
   add('vision-rating/', 'monthly', '0.82');
@@ -5347,6 +5355,10 @@ function build() {
     writePage(loc, 'pro-scene/results', renderProSceneResults(loc));
     writePage(loc, 'pro-scene/storylines', renderProSceneStorylines(loc));
     writePage(loc, 'pro-scene/rules', renderProSceneRules(loc));
+    writePage(loc, 'pro-scene/rankings', renderWorldRankingsPage(loc));
+    if (worldRankingsTop10 && Array.isArray(worldRankingsTop10.categories)) {
+      worldRankingsTop10.categories.forEach((cat) => writePage(loc, `pro-scene/rankings/${cat.key}`, renderWorldRankingsPage(loc, cat.key)));
+    }
     writePage(loc, 'clip-lite', renderClipLite(loc));
     writePage(loc, 'vision-rating', renderVisionRating(loc));
     writePage(loc, 'tournaments', renderTournamentsIndex(loc));

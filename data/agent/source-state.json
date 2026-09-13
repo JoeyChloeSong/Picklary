@@ -1,0 +1,90 @@
+{
+  "ppa-tour-home": {
+    "hash": "d2bfbe99e835b76b3555fae8dc281267047564ec0c8eead5653c796a7e969889",
+    "lastFetchedAt": "2026-09-13T04:45:08.345Z",
+    "lastChangedAt": "2026-09-13T04:45:08.345Z",
+    "title": "Carvana PPA Tour — The Pro Tour of Pickleball",
+    "description": "The best content, scores, and streaming experience in professional pickleball. Watch live, follow the pros, and plan your trip to every tour stop.",
+    "url": "https://ppatour.com/"
+  },
+  "ppa-tour-schedule": {
+    "hash": "b86b34f4aee69052c9852f04b8c2506c06b80595fc23f5830e63028e3be8e70d",
+    "lastFetchedAt": "2026-09-13T04:45:09.829Z",
+    "lastChangedAt": "2026-09-13T04:45:09.829Z",
+    "title": "Events · Carvana PPA Tour",
+    "description": "The full PPA Tour schedule — The Tour and every other event, U.S. and international, past and upcoming. Search or filter to find your event.",
+    "url": "https://ppatour.com/schedule/"
+  },
+  "ppa-challenger-schedule": {
+    "hash": "45b416a8e2d4366be08f72680301ba3637f80166f10c679f62cd871b27d8e1d2",
+    "lastFetchedAt": "2026-09-13T04:45:13.779Z",
+    "lastChangedAt": "2026-09-13T04:45:13.779Z",
+    "title": "Upcoming Tour Stops | PPA Challengers",
+    "description": "The official professional pickleball tournament schedule of the PPA Tour, comprising 25 tour stops throughout the United States.",
+    "url": "https://ppachallenger.com/schedule/"
+  },
+  "major-league-pickleball": {
+    "hash": "e4f928d8206afb32f1ec14eb0d4878b4c4598f12a2087bf9a0e27385e4f1a7ff",
+    "lastFetchedAt": "2026-09-13T04:45:18.953Z",
+    "lastChangedAt": "2026-09-13T04:45:18.953Z",
+    "title": "Major League Pickleball",
+    "description": "Explore Major League Pickleball for the latest events, standings, and news. Follow your favorite teams and players in exciting matches and tournaments.",
+    "url": "https://majorleaguepickleball.co/"
+  },
+  "mlp-standings": {
+    "hash": "e69e44c3168b0540633d36316d548ab83ebc8e4c135d31609ff0ba7b4726f0c0",
+    "lastFetchedAt": "2026-09-13T04:45:22.583Z",
+    "lastChangedAt": "2026-09-13T04:45:22.583Z",
+    "title": "Standings - Major League Pickleball",
+    "description": "Standings - Major League Pickleball Skip to main content Skip to footer SCHEDULE 2026 Season Dallas: May 22 &#8211; 25 Columbus: May 28 &#8211; 31 St. Louis: June 4 &#8211; 7 Austin: June 11 &#8211; 14 St. Petersburg: June 17 &#8211; 21 New York: June 25 &#8211; 28 Grand Rapids: July 8 &#8211; 12 San Diego: July 16-19 Chicago: July 23 &#8211; 26 Orlando: July 30 &#8211; Aug 2 Dallas (Playoffs): Aug 7-9 Newport Beach (Playoffs): Aug 14-16 New York City (Finals): Aug 28-30 Dall",
+    "url": "https://majorleaguepickleball.co/standings/"
+  },
+  "dupr-rankings": {
+    "hash": "7d8775091bee5cce378f04a32ac13a8a2e706952f3b3840ce761526b26660656",
+    "lastFetchedAt": "2026-09-13T04:45:23.915Z",
+    "lastChangedAt": "2026-09-13T04:45:23.915Z",
+    "title": "DUPR Top Rankings",
+    "description": "DUPR Top Rankings Ratings Search Players How It Works How to Get Rated Reliability Score Pickleball Rules Support Rankings Top Ranked Players Continental Rankings Club Rankings College Rankings Events Explore Events College College Ambassadors Minor League Pickleball Coaching Find a Coach Become a Coach Company Blog Press Our Partners Pickleball Market Consumer Habits Careers Start a Club Become a Coach LOGIN SIGN UP DUPR RANKINGS Updated: July 15, 2026 Open Senior Junior Men",
+    "url": "https://www.dupr.com/rankings"
+  },
+  "usa-pickleball-rules": {
+    "hash": "90b401d0c247c18871f711a1c721d65baa165952b8a59e3654d50d81c439efa7",
+    "lastFetchedAt": "2026-09-13T04:45:25.209Z",
+    "lastChangedAt": "2026-09-13T04:45:25.209Z",
+    "title": "USA Pickleball official rules",
+    "description": "",
+    "url": "https://usapickleball.org/what-is-pickleball/official-rules/"
+  },
+  "usap-equipment-paddle-list": {
+    "hash": "02afc0464e5982781b2666a292bbf84658da2337a9a5dd4e61830327d4279154",
+    "lastFetchedAt": "2026-09-13T04:45:26.648Z",
+    "lastChangedAt": "2026-09-13T04:45:26.648Z",
+    "title": "USA Pickleball approved paddle list",
+    "description": "",
+    "url": "https://equipment.usapickleball.org/paddle-list/"
+  },
+  "upaa-rulebook": {
+    "hash": "806ab84d22930edd32d10a5ed41b1b9c09c31de00efdd103b286ec3436fd14a0",
+    "lastFetchedAt": "2026-09-13T04:45:27.908Z",
+    "lastChangedAt": "2026-09-13T04:45:27.908Z",
+    "title": "Official Rulebook &#8211; UPA-A",
+    "description": "Official Rulebook &#8211; UPA-A Skip to content About Us Paddles Certification Information Stamp Artwork 2026 Checklist Certification Application Paddle Rules Approved Paddles Approved Paddles List De-Listed Paddles Report Paddle Feedback Governance Official Rulebook UPA-A Referee Affiliates News Blogs Contact Contact Us Get Updates ZH About Us Paddles Certification Information Stamp Artwork 2026 Checklist Certification Application Paddle Rules Approved Paddles Approved Paddl",
+    "url": "https://upaa.unitedpickleball.com/official-rulebook/"
+  },
+  "pickleball-review-score-template": {
+    "hash": "53273f32e390a02b1db98879a404ee4ef9128b99e966bbd7254377e67a9b5597",
+    "lastFetchedAt": "2026-09-13T04:45:29.110Z",
+    "lastChangedAt": "2026-09-13T04:45:29.110Z",
+    "title": "Manual reviewer score template",
+    "description": "[manual source] manual://automation/reviewer-score-template.csv",
+    "url": "manual://automation/reviewer-score-template.csv"
+  },
+  "ppa-international-news": {
+    "hash": "d2bfbe99e835b76b3555fae8dc281267047564ec0c8eead5653c796a7e969889",
+    "lastFetchedAt": "2026-09-13T04:45:30.550Z",
+    "lastChangedAt": "2026-09-13T04:45:30.550Z",
+    "title": "Carvana PPA Tour — The Pro Tour of Pickleball",
+    "description": "The best content, scores, and streaming experience in professional pickleball. Watch live, follow the pros, and plan your trip to every tour stop.",
+    "url": "https://ppatour.com/"
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "vision-ko",
+    "kind": "vision",
+    "title": "Vision Rating - Korean",
+    "version": "0.2.4",
+    "language": "ko",
+    "file": "Picklary_Vision_Rating_Local_Web_v0.2.4_KO.zip",
+    "reviewed": false,
+    "sha256": null
+  },
+  {
+    "id": "vision-en",
+    "kind": "vision",
+    "title": "Vision Rating - English",
+    "version": "0.2.4",
+    "language": "en",
+    "file": "Picklary_Vision_Rating_Local_Web_v0.2.4_EN.zip",
+    "reviewed": false,
+    "sha256": null
+  },
+  {
+    "id": "windows-editor",
+    "kind": "windows-editor",
+    "title": "Picklary Lite Windows",
+    "version": "0.9.8",
+    "language": "both",
+    "file": "Picklary_Lite_v0.9.8_ClipJoin_OutputUI_Windows.zip",
+    "reviewed": false,
+    "sha256": null
+  }
+]

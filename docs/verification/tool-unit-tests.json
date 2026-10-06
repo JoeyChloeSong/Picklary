@@ -1,0 +1,8 @@
+{
+  "tests": 24,
+  "pass": 24,
+  "fail": 0,
+  "skipped": 0,
+  "status": "PASS",
+  "scope": "Node unit/contract checks, no actual WASM or Windows execution"
+}

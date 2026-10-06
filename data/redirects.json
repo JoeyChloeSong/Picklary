@@ -78,12 +78,6 @@
     "reason": "Equivalent revised page"
   },
   {
-    "from": "/en/dupr-self-check/",
-    "to": "/en/tools/self-check/",
-    "status": 301,
-    "reason": "Equivalent revised page"
-  },
-  {
     "from": "/en/players/ben-johns/",
     "to": "/en/tour/players/#ben-johns",
     "status": 301,
@@ -312,18 +306,6 @@
     "reason": "Replaced unsupported values; provider now explicitly labeled"
   },
   {
-    "from": "/en/clip-lite/",
-    "to": "/en/tools/review/",
-    "status": 302,
-    "reason": "Temporary public-feature reduction; worksheet is not an MP4 editor or AI rating"
-  },
-  {
-    "from": "/en/vision-rating/",
-    "to": "/en/tools/review/",
-    "status": 302,
-    "reason": "Temporary public-feature reduction; worksheet is not an MP4 editor or AI rating"
-  },
-  {
     "from": "/ko/pro-scene/",
     "to": "/ko/tour/",
     "status": 301,
@@ -398,12 +380,6 @@
   {
     "from": "/ko/pickleball-complete-beginner-guide/",
     "to": "/ko/learn/first-session-plan/",
-    "status": 301,
-    "reason": "Equivalent revised page"
-  },
-  {
-    "from": "/ko/dupr-self-check/",
-    "to": "/ko/tools/self-check/",
     "status": 301,
     "reason": "Equivalent revised page"
   },
@@ -636,27 +612,76 @@
     "reason": "Replaced unsupported values; provider now explicitly labeled"
   },
   {
-    "from": "/ko/clip-lite/",
-    "to": "/ko/tools/review/",
-    "status": 302,
-    "reason": "Temporary public-feature reduction; worksheet is not an MP4 editor or AI rating"
+    "from": "/en/tools/dupr-self-check/",
+    "to": "/en/dupr-self-check/",
+    "status": 301,
+    "reason": "Restore matching tool or actual package directory"
   },
   {
-    "from": "/ko/vision-rating/",
-    "to": "/ko/tools/review/",
-    "status": 302,
-    "reason": "Temporary public-feature reduction; worksheet is not an MP4 editor or AI rating"
+    "from": "/en/tools/clip-lite/",
+    "to": "/en/clip-lite/",
+    "status": 301,
+    "reason": "Restore matching tool or actual package directory"
+  },
+  {
+    "from": "/picklary-lite/en/",
+    "to": "/en/downloads/",
+    "status": 301,
+    "reason": "Restore matching tool or actual package directory"
+  },
+  {
+    "from": "/download/en",
+    "to": "/en/downloads/",
+    "status": 301,
+    "reason": "Restore matching tool or actual package directory"
+  },
+  {
+    "from": "/ko/tools/dupr-self-check/",
+    "to": "/ko/dupr-self-check/",
+    "status": 301,
+    "reason": "Restore matching tool or actual package directory"
+  },
+  {
+    "from": "/ko/tools/clip-lite/",
+    "to": "/ko/clip-lite/",
+    "status": 301,
+    "reason": "Restore matching tool or actual package directory"
+  },
+  {
+    "from": "/picklary-lite/ko/",
+    "to": "/ko/downloads/",
+    "status": 301,
+    "reason": "Restore matching tool or actual package directory"
+  },
+  {
+    "from": "/download/ko",
+    "to": "/ko/downloads/",
+    "status": 301,
+    "reason": "Restore matching tool or actual package directory"
   },
   {
     "from": "/clip-lite/",
-    "to": "/ko/tools/review/",
-    "status": 302,
-    "reason": "Legacy application retained in source, not published"
+    "to": "/ko/clip-lite/",
+    "status": 301
   },
   {
     "from": "/clip-lite/en/",
-    "to": "/en/tools/review/",
-    "status": 302,
-    "reason": "Legacy application retained in source, not published"
+    "to": "/en/clip-lite/",
+    "status": 301
+  },
+  {
+    "from": "/picklary-lite/",
+    "to": "/en/downloads/",
+    "status": 301
+  },
+  {
+    "from": "/dupr-self-check/",
+    "to": "/en/dupr-self-check/",
+    "status": 301
+  },
+  {
+    "from": "/vision-rating/",
+    "to": "/en/vision-rating/",
+    "status": 301
   }
 ]

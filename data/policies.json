@@ -38,6 +38,10 @@
           {
             "en": "The local-video worksheet is designed to keep a player focused on the condition before an error. It exports observations and planned changes. It does not claim to recognize players automatically, measure shot speed or produce an official DUPR rating.",
             "ko": "로컬 영상 분석 도구는 실수 이전의 조건에 집중하도록 설계했습니다. 관찰 내용과 다음에 바꿔 볼 점을 내보내며, 자동 선수 인식·샷 속도 측정·공식 DUPR 산출을 한다고 주장하지 않습니다."
+          },
+          {
+            "en": "Picklary also retains its original court-based self-check and video editing workflow. The site connects level self-reflection, the independent Vision Rating desktop project, clip editing and practical learning. Manual worksheets supplement these tools rather than replace them.",
+            "ko": "Picklary는 기존 코트형 자가진단과 영상 편집 흐름도 유지합니다. 실력 점검, 독립 데스크톱 Vision Rating, 클립 편집과 실전 학습을 연결합니다. 수동 노트는 대체 기능이 아닌 보조 도구입니다."
           }
         ]
       },
@@ -196,8 +200,8 @@
         },
         "paragraphs": [
           {
-            "en": "Picklary is operated by Shawn. This notice describes the public v1.0.0 build dated October 4, 2026. Contact iam4na2@gmail.com with questions about this site or information you have emailed to the operator.",
-            "ko": "Picklary는 Shawn이 운영합니다. 이 안내는 2026년 10월 4일 공개용 v1.0.0 빌드의 동작을 설명합니다. 사이트 또는 운영자에게 이메일로 제공한 정보에 관한 문의는 iam4na2@gmail.com으로 보내 주세요."
+            "en": "Picklary is operated by Shawn. This notice describes the public v1.1.0 tools-restoration build dated October 6, 2026. Tournament content retains its separately stated October 4 cutoff. Contact iam4na2@gmail.com with privacy questions.",
+            "ko": "Picklary의 운영자는 Shawn입니다. 이 안내는 2026년 10월 6일 v1.1.0 도구 복원본을 설명합니다. 경기 결과는 별도로 표시한 10월 4일 기준을 유지합니다. 문의: iam4na2@gmail.com."
           }
         ]
       },
@@ -224,8 +228,8 @@
         },
         "paragraphs": [
           {
-            "en": "Selecting a video creates a local browser object URL. The review code does not upload the video to Picklary or a third-party processor. CSV and JSON downloads contain your notes, not video bytes. Supported playback depends on your browser and the video codec.",
-            "ko": "영상을 선택하면 브라우저의 로컬 객체 URL을 생성합니다. 분석 코드가 영상을 Picklary나 외부 처리 서버로 업로드하지 않습니다. CSV와 JSON에는 노트만 포함되고 영상 데이터는 포함되지 않습니다. 재생 가능 여부는 브라우저와 영상 코덱에 따라 다릅니다."
+            "en": "Selecting a video creates a local browser object URL. The review worksheet and Clip Lite do not upload source video bytes to Picklary or an external processor. The worksheet exports notes; Clip Lite can export encoded MP4 video, clip ZIPs and a JSON cut list. Playback and processing depend on the browser, codec and device memory.",
+            "ko": "영상 선택 시 브라우저의 로컬 객체 URL을 사용합니다. 분석 노트와 Clip Lite는 원본 영상을 Picklary나 외부 서버에 업로드하지 않습니다. 노트는 기록을, Clip Lite는 MP4·클립 ZIP·JSON 구간 목록을 내보낼 수 있습니다. 재생과 처리는 브라우저·코덱·메모리에 영향받습니다."
           },
           {
             "en": "Notes remain in page memory until you choose “Save here.” That button writes to localStorage on this browser and site origin. “Load” reads it; “Delete all” removes the saved worksheet and clears the current list after confirmation. The site cannot retrieve that local copy for you. Clearing browser site data also removes it. Do not save sensitive notes on a shared device.",
@@ -234,6 +238,14 @@
           {
             "en": "The practice priority check does not transmit or persist its answers. Product filters and comparison choices run in page memory. There are no community-registration forms in this edition.",
             "ko": "연습 우선순위 점검은 응답을 전송하거나 저장하지 않습니다. 제품 필터와 비교 선택도 페이지 메모리에서 처리합니다. 이 판에는 커뮤니티 가입 양식이 없습니다."
+          },
+          {
+            "en": "Clip Lite requests the pinned FFmpeg core JavaScript and WebAssembly from unpkg.com on first export unless the operator packages them locally. The provider receives ordinary download-request metadata such as IP address, not your video bytes. The core runs in a local browser worker. No request is made merely to use the self-check. Browser caching is controlled by the browser and resource headers.",
+            "ko": "Clip Lite는 운영자가 로컬로 포함하지 않으면 첫 추출 시 unpkg.com에서 고정 버전 FFmpeg JavaScript와 WebAssembly를 받습니다. 제공자에게는 IP 등 일반 다운로드 요청 정보만 전달되며 영상은 전달되지 않습니다. 엔진은 로컬 브라우저 워커에서 실행됩니다. 자가진단 사용만으로는 이 요청을 하지 않습니다."
+          },
+          {
+            "en": "The court-based DUPR self-check stores no answers on a server. Opting into local history saves up to 20 result records under picklary.dupr.history in this origin. Existing compatible older records can be displayed. Clear history or clear site data to remove them. The JSON export includes your chosen answers and the non-official estimate.",
+            "ko": "코트형 DUPR 자가진단은 응답을 서버에 저장하지 않습니다. 기록 저장을 선택하면 이 도메인의 picklary.dupr.history에 최대 20개 결과를 저장합니다. 호환되는 기존 기록도 표시합니다. 기록 지우기 또는 사이트 데이터 삭제로 지우세요. JSON은 선택한 답과 비공식 추정치를 포함합니다."
           }
         ]
       },
@@ -308,8 +320,8 @@
         },
         "paragraphs": [
           {
-            "en": "Keep the original copy of your video and notes. Browser memory, codec support and local storage vary. The current review tool exports a worksheet only; it is not a video encoding service. Review exports before sharing because your own notes may contain identifying details.",
-            "ko": "원본 영상과 노트의 사본을 보관하세요. 브라우저 메모리, 코덱 지원, 로컬 저장 방식은 환경에 따라 다릅니다. 현재 도구는 분석 노트만 내보내며 영상 인코딩 서비스가 아닙니다. 작성한 노트에 식별 정보가 들어 있을 수 있으므로 공유 전에 확인하세요."
+            "en": "Keep your original video and notes. The court self-check is an uncalibrated decision exercise, not official DUPR or event eligibility. Clip Lite has a separate browser encoder; downloads labeled as a local web bundle are not the native Windows suite. Missing native programs are explicitly marked unavailable. Verify software provenance and applicable third-party licences before installing or redistributing; a checksum is integrity information, not a safety certification. The website cannot start or certify a separately installed Vision analyzer.",
+            "ko": "원본 영상과 노트를 보관하세요. 자가진단은 공식 DUPR이나 대회 자격을 정하지 않습니다. Clip Lite 웹 묶음은 Windows 네이티브 프로그램이 아닙니다. 파일이 없으면 미포함으로 표시합니다. 설치·재배포 전 출처와 라이선스를 확인하세요. 체크섬은 안전 인증이 아닙니다. 웹사이트는 별도 설치된 Vision 분석기를 실행하거나 인증하지 않습니다."
           }
         ]
       },

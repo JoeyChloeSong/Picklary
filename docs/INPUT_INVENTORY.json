@@ -1,0 +1,9 @@
+{
+  "input": "Picklary_v0.8.4_SOURCE_FINAL(1).zip",
+  "sha256": "24b389ecb477c16cfe07fc603d8734e21b3c23898516376ea6d410fe508ea481",
+  "selfCheckScenarios": 32,
+  "visionEngineIncluded": false,
+  "windowsProgramIncluded": false,
+  "browserEditorVersion": "0.5.13.0",
+  "visionDocumentationVersion": "0.2.4"
+}

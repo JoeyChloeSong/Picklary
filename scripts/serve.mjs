@@ -9,7 +9,7 @@ const port=Number(process.env.PORT||process.argv[2]||8080);
 if(!fs.existsSync(path.join(DIST,'index.html')))throw new Error('Run npm run build first.');
 const routes=JSON.parse(fs.readFileSync(path.join(ROOT,'data/redirects.json'),'utf8'));
 routes.unshift({from:'/',to:'/en/',status:301});
-const mime={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8',
+const mime={'.mjs':'text/javascript; charset=utf-8','.wasm':'application/wasm','.zip':'application/zip','.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8',
  '.json':'application/json; charset=utf-8','.xml':'application/xml; charset=utf-8','.txt':'text/plain; charset=utf-8',
  '.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.mp4':'video/mp4'};
 const server=http.createServer((req,res)=>{

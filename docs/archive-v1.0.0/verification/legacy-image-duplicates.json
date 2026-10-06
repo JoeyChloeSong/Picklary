@@ -1,0 +1,29 @@
+[
+  {
+    "fileA": "assets/img/players-real/jorja-johnson.png",
+    "fileB": "assets/img/players-real/catherine-parenteau.png",
+    "identicalBytes": true,
+    "sha256": [
+      "59107b1134c8c726c20e680c2ae94007671ed03e7ec5226d3313027fbe841fee",
+      "59107b1134c8c726c20e680c2ae94007671ed03e7ec5226d3313027fbe841fee"
+    ]
+  },
+  {
+    "fileA": "assets/img/players-real/hurricane-tyra-black.png",
+    "fileB": "assets/img/players-real/lea-jansen.png",
+    "identicalBytes": true,
+    "sha256": [
+      "3246514a0c11031ad5124246eb42a7fa1a4c91757b9a890ea3dda083c0f9184f",
+      "3246514a0c11031ad5124246eb42a7fa1a4c91757b9a890ea3dda083c0f9184f"
+    ]
+  },
+  {
+    "fileA": "assets/img/players-real/kate-fahey.png",
+    "fileB": "assets/img/players-real/anna-leigh-waters.png",
+    "identicalBytes": true,
+    "sha256": [
+      "74ae78b9d0330204f231e96d8152cafeb926d1db9b519d6c4d91d018f7948fe8",
+      "74ae78b9d0330204f231e96d8152cafeb926d1db9b519d6c4d91d018f7948fe8"
+    ]
+  }
+]

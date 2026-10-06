@@ -1,5 +1,1 @@
-# 화면 미리보기
-
-로컬 소스의 실제 HTML/CSS/JavaScript를 렌더링한 화면입니다. 배포된 운영 사이트의 캡처가 아닙니다.
-
-외부 네트워크 요청은 차단했으며, 홈의 실제 선수 사진은 로컬 파일입니다. 전체 화면/동작 검사 범위는 `../TEST_SCOPE.md`를 확인하세요.
+v1.1.0 injected-DOM screenshots. Actual local CSS/JS; remote images blocked. Clip preview uses a synthetic test pattern, not a match. Native program availability remains incomplete. See TEST_SCOPE.md.

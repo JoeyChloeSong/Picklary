@@ -137,8 +137,9 @@ warnings.push(`${remote} of ${Object.keys(media).length} named images use remote
 warnings.push('Image reuse rights are not documented. Review THIRD_PARTY_NOTICES.md and docs/MEDIA_RIGHTS_CHECKLIST.csv before publication/monetization.');
 warnings.push('Exact Google rejection notice was not available. Technical tests are not an AdSense approval decision.');
 warnings.push(`${pendingRows} division finals pending; ${unscoredRows} confirmed podium without game scores. Do not invent missing values.`);
-warnings.push('Legacy video rendering and retired content are not published; review migration and feature-change notes before replacing production.');
-const report={version:site.version,editorialDate:site.editorialDate,technicalStatus:errors.length?'FAIL':'PASS',
+warnings.push('Self-check and browser editor restored. Desktop Vision and Windows binaries are absent until operator-supplied releases are registered. Browser encoding needs an additional engine download and production smoke test.');
+const releaseState=JSON.parse(fs.readFileSync(path.join(ROOT,'test-results/build-manifest.json'))).desktopReleases||[];
+const report={desktopPackagesAvailable:releaseState.filter(r=>r.available).length,desktopPackagesPending:releaseState.filter(r=>!r.available).length,version:site.version,editorialDate:site.editorialDate,technicalStatus:errors.length?'FAIL':'PASS',
  htmlFiles:htmls.length,sitemapUrls:sm.length,internalReferences:refs,jsonldBlocks:jsonld,
  guides:guides.length,products:products.length,players:players.length,mediaRecords:Object.keys(media).length,localMedia:local,remoteMedia:remote,
  eventRecords:results.length,confirmedResultRows:confirmedRows,pendingResultRows:pendingRows,confirmedPodiumsWithoutScores:unscoredRows,

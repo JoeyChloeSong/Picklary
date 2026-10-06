@@ -1,0 +1,51 @@
+<div class="quiz" data-dupr-quiz="">
+<div class="quiz__bar"><span class="quiz__count"><span data-q-num="">1</span> of <span data-q-total="">10</span></span><div class="quiz__progress"><span data-q-fill=""></span></div></div>
+<p class="quiz__prompt" data-q-prompt=""></p>
+<p class="quiz__youpos" data-q-youpos="">You are Player 1 — the dot marked 1. Choose your shot.</p>
+<p class="quiz__incoming"><strong>Incoming ball:</strong> <span data-q-incoming=""></span> <span class="quiz__power-chip" data-q-power=""></span></p>
+<div class="quiz__layout">
+<div class="quiz__court">
+<div class="court-view-toolbar"><button aria-pressed="true" class="court-view-toggle" data-court-toggle="" type="button">Switch to 2D view</button></div>
+<svg aria-label="Court — tap a target zone" class="court-svg" role="application" viewbox="0 0 300 460">
+<g class="court-flat" style="display:none">
+<rect fill="#eaf3ef" height="416" stroke="#1E6F5C" stroke-width="2.5" width="264" x="18" y="20"></rect>
+<rect fill="#fbe9b0" height="52" opacity="0.55" width="264" x="18" y="176"></rect>
+<rect fill="#fbe9b0" height="52" opacity="0.55" width="264" x="18" y="228"></rect>
+<line stroke="#14513f" stroke-dasharray="7 5" stroke-width="3" x1="18" x2="282" y1="228" y2="228"></line>
+<line stroke="#1E6F5C" stroke-width="1.5" x1="150" x2="150" y1="20" y2="176"></line>
+<line stroke="#1E6F5C" stroke-width="1.5" x1="150" x2="150" y1="280" y2="436"></line>
+<g class="court-zones">
+<rect class="court-zone" data-zone="dL" height="50" rx="3" width="80" x="20" y="22"></rect><rect class="court-zone" data-zone="dM" height="50" rx="3" width="100" x="100" y="22"></rect><rect class="court-zone" data-zone="dR" height="50" rx="3" width="80" x="200" y="22"></rect>
+<rect class="court-zone" data-zone="mL" height="50" rx="3" width="80" x="20" y="73"></rect><rect class="court-zone" data-zone="mM" height="50" rx="3" width="100" x="100" y="73"></rect><rect class="court-zone" data-zone="mR" height="50" rx="3" width="80" x="200" y="73"></rect>
+<rect class="court-zone" data-zone="nL" height="50" rx="3" width="80" x="20" y="124"></rect><rect class="court-zone" data-zone="nM" height="50" rx="3" width="100" x="100" y="124"></rect><rect class="court-zone" data-zone="nR" height="50" rx="3" width="80" x="200" y="124"></rect>
+<rect class="court-zone" data-zone="kL" height="50" rx="3" width="80" x="20" y="176"></rect><rect class="court-zone" data-zone="kM" height="50" rx="3" width="100" x="100" y="176"></rect><rect class="court-zone" data-zone="kR" height="50" rx="3" width="80" x="200" y="176"></rect>
+</g>
+<text fill="#5b665f" font-family="sans-serif" font-size="11" text-anchor="middle" x="150" y="14">Opponent</text>
+<text fill="#5b665f" font-family="sans-serif" font-size="11" text-anchor="middle" x="150" y="452">Us</text>
+</g>
+<g class="court-iso"></g>
+<g data-markers=""></g>
+</svg>
+<ul class="court-legend"><li><span class="dot dot--me"></span>You (Player 1)</li><li><span class="dot dot--you"></span>Partner (Player 2)</li><li><span class="dot dot--opp"></span>Opponent</li><li><span class="dot dot--ball"></span>Incoming ball</li><li><span aria-hidden="true" class="leg-arrow">⇢</span>Moving</li></ul>
+<p class="court-view-hint">Tip: switch between 2D and 3D court views.</p>
+</div>
+<div class="quiz__controls">
+<div class="quiz__group quiz__group--player" data-player-group="" hidden=""><h3><span class="quiz__step-num">0</span>Who should play it — you or your partner?</h3><div class="opts opts--player" data-opts="player"><button class="opt" data-val="p1" type="button">You (Player 1)</button><button class="opt" data-val="p2" type="button">Partner (Player 2)</button></div></div>
+<div class="quiz__group quiz__group--step is-active" data-answer-step="shot"><h3><span class="quiz__step-num">1</span>Your shot</h3><div class="opts opts--shot" data-opts="shot"><button class="opt" data-val="dink" type="button">Dink</button><button class="opt" data-val="drop" type="button">Drop</button><button class="opt" data-val="drive" type="button">Drive</button><button class="opt" data-val="reset" type="button">Reset</button><button class="opt" data-val="roll" type="button">Roll</button><button class="opt" data-val="flick" type="button">Flick</button><button class="opt" data-val="block" type="button">Block</button><button class="opt" data-val="smash" type="button">Smash</button><button class="opt" data-val="speedup" type="button">Speed-up</button><button class="opt" data-val="lob" type="button">Lob</button></div></div>
+<div class="quiz__group quiz__group--step is-locked" data-answer-step="power"><h3><span class="quiz__step-num">2</span>Power</h3><div class="opts opts--power" data-opts="power"><button class="opt" data-val="soft" type="button">Soft</button><button class="opt" data-val="medium" type="button">Medium</button><button class="opt" data-val="hard" type="button">Hard</button></div></div>
+<div class="quiz__group quiz__group--step quiz__group--target is-locked" data-answer-step="target"><h3><span class="quiz__step-num">3</span>Target</h3><div class="opts opts--target" data-opts="target"><button class="opt opt--target" data-val="kL" type="button">Kitchen L</button><button class="opt opt--target" data-val="kM" type="button">Kitchen M</button><button class="opt opt--target" data-val="kR" type="button">Kitchen R</button><button class="opt opt--target" data-val="nL" type="button">Short L</button><button class="opt opt--target" data-val="nM" type="button">Short M</button><button class="opt opt--target" data-val="nR" type="button">Short R</button><button class="opt opt--target" data-val="mL" type="button">Mid L</button><button class="opt opt--target" data-val="mM" type="button">Mid M</button><button class="opt opt--target" data-val="mR" type="button">Mid R</button><button class="opt opt--target" data-val="dL" type="button">Deep L</button><button class="opt opt--target" data-val="dM" type="button">Deep M</button><button class="opt opt--target" data-val="dR" type="button">Deep R</button></div><p class="quiz__zone-label"><span>Selected:</span> <strong data-zone-label="">—</strong></p></div>
+<div class="quiz__nav"><button class="btn btn--ghost quiz__back" data-q-back="" hidden="" type="button">Back</button><button class="btn btn--primary quiz__next" data-q-next="" disabled="" type="button">Next</button></div>
+</div>
+</div>
+</div>
+<div class="quiz__choice" data-q-choice="" hidden="">
+<h2>Nice — 10 questions done!</h2>
+<p>See your estimate now, or try ten more situations. Accuracy has not been calibrated against official ratings.</p>
+<div class="quiz__choice-actions">
+<button class="btn btn--primary" data-q-see="" type="button">See my result</button>
+<button class="btn btn--ghost" data-q-more="" type="button">Try 10 more situations</button>
+</div>
+<p class="quiz__choice-hint">More questions broaden your review, not a guaranteed improvement in accuracy.</p>
+</div>
+<div class="quiz__result" data-q-result="" hidden=""></div>
+<div class="quiz-history" data-quiz-history="" hidden=""></div>

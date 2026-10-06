@@ -27,3 +27,24 @@ The new site uses system font stacks. No font files are redistributed.
 ## No endorsement
 
 PPA, MLP, USA Pickleball, DUPR and product brands are not represented as endorsing Picklary.
+
+## Restored video tools (v1.1.0)
+
+The restored browser UI originates in the operator-supplied Picklary v0.8.4 site
+(Clip Lite Web 0.5.13.0). The worker adapter and stored-ZIP utility in this edition
+are source code, not copies of the native Windows application.
+
+Browser export loads `@ffmpeg/core` **0.12.6** (single-thread UMD JS/WASM) from
+`https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd/` unless the operator packages it at
+`/assets/vendor/ffmpeg-core/`. FFmpeg and bundled codecs have their own licences;
+review upstream build/source obligations before redistributing a cached binary.
+A codec-enabled FFmpeg core should not be assumed to be MIT simply because a
+JavaScript wrapper is MIT. Core binaries are not included in this source ZIP.
+
+Official implementation guidance: https://ffmpegwasm.netlify.app/docs/getting-started/installation/
+Upstream project/source: https://github.com/ffmpegwasm/ffmpeg.wasm
+FFmpeg legal information: https://ffmpeg.org/legal.html
+
+The archive under downloads labeled Vision documentation contains user-supplied
+historical guides/examples only. Those examples are not new verified measurements.
+No Vision model weights or Windows application executable were recovered.

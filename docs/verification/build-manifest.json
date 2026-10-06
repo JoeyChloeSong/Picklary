@@ -1,8 +1,46 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "editorialDate": "2026-10-04",
   "css": "/assets/css/site.0efc81a1f7.css",
   "js": "/assets/js/site.07cd4831d3.js",
+  "toolCss": "/assets/tools/tools.eaa80c2dff.css",
+  "selfJs": "/assets/tools/self-check.c7c9384e1b.js",
+  "clipJs": "/assets/tools/clip-editor.f909a8d86c.js",
+  "desktopReleases": [
+    {
+      "id": "vision-ko",
+      "kind": "vision",
+      "title": "Vision Rating - Korean",
+      "version": "0.2.4",
+      "language": "ko",
+      "file": "Picklary_Vision_Rating_Local_Web_v0.2.4_KO.zip",
+      "reviewed": false,
+      "sha256": null,
+      "available": false
+    },
+    {
+      "id": "vision-en",
+      "kind": "vision",
+      "title": "Vision Rating - English",
+      "version": "0.2.4",
+      "language": "en",
+      "file": "Picklary_Vision_Rating_Local_Web_v0.2.4_EN.zip",
+      "reviewed": false,
+      "sha256": null,
+      "available": false
+    },
+    {
+      "id": "windows-editor",
+      "kind": "windows-editor",
+      "title": "Picklary Lite Windows",
+      "version": "0.9.8",
+      "language": "both",
+      "file": "Picklary_Lite_v0.9.8_ClipJoin_OutputUI_Windows.zip",
+      "reviewed": false,
+      "sha256": null,
+      "available": false
+    }
+  ],
   "pages": [
     {
       "path": "/en/",
@@ -188,7 +226,7 @@
     },
     {
       "path": "/en/tools/",
-      "title": "Practice & review tools",
+      "title": "All Picklary tools",
       "locale": "en",
       "rel": "tools/",
       "indexable": true
@@ -440,7 +478,7 @@
     },
     {
       "path": "/ko/tools/",
-      "title": "연습·분석 도구",
+      "title": "Picklary 도구 전체",
       "locale": "ko",
       "rel": "tools/",
       "indexable": true
@@ -507,6 +545,90 @@
       "locale": "ko",
       "rel": "media/",
       "indexable": false
+    },
+    {
+      "path": "/en/level-check/",
+      "title": "Know your game: self-check and video analysis",
+      "locale": "en",
+      "rel": "level-check/",
+      "indexable": true
+    },
+    {
+      "path": "/en/dupr-self-check/",
+      "title": "DUPR Self Check - court decisions",
+      "locale": "en",
+      "rel": "dupr-self-check/",
+      "indexable": true
+    },
+    {
+      "path": "/en/vision-rating/",
+      "title": "Picklary Vision Rating - desktop analysis",
+      "locale": "en",
+      "rel": "vision-rating/",
+      "indexable": true
+    },
+    {
+      "path": "/en/clip-lite/",
+      "title": "Picklary Clip Lite - video editor",
+      "locale": "en",
+      "rel": "clip-lite/",
+      "indexable": true
+    },
+    {
+      "path": "/en/downloads/",
+      "title": "Picklary program downloads",
+      "locale": "en",
+      "rel": "downloads/",
+      "indexable": true
+    },
+    {
+      "path": "/en/video-tools/",
+      "title": "Picklary video tools",
+      "locale": "en",
+      "rel": "video-tools/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/level-check/",
+      "title": "내 실력 확인: 자가진단과 영상 분석",
+      "locale": "ko",
+      "rel": "level-check/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/dupr-self-check/",
+      "title": "DUPR Self Check - 코트 상황 판단",
+      "locale": "ko",
+      "rel": "dupr-self-check/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/vision-rating/",
+      "title": "Picklary Vision Rating - 데스크톱 분석",
+      "locale": "ko",
+      "rel": "vision-rating/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/clip-lite/",
+      "title": "Picklary Clip Lite - 영상 편집기",
+      "locale": "ko",
+      "rel": "clip-lite/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/downloads/",
+      "title": "Picklary 프로그램 다운로드",
+      "locale": "ko",
+      "rel": "downloads/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/video-tools/",
+      "title": "Picklary 영상 도구",
+      "locale": "ko",
+      "rel": "video-tools/",
+      "indexable": true
     },
     {
       "path": "/en/sitemap/",

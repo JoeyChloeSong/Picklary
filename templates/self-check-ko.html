@@ -1,0 +1,51 @@
+<div class="quiz" data-dupr-quiz="">
+<div class="quiz__bar"><span class="quiz__count"><span data-q-num="">1</span> / <span data-q-total="">10</span></span><div class="quiz__progress"><span data-q-fill=""></span></div></div>
+<p class="quiz__prompt" data-q-prompt=""></p>
+<p class="quiz__youpos" data-q-youpos="">코트에 1로 표시된 선수가 나입니다. 어떤 샷을 칠지 고르세요.</p>
+<p class="quiz__incoming"><strong>들어오는 공:</strong> <span data-q-incoming=""></span> <span class="quiz__power-chip" data-q-power=""></span></p>
+<div class="quiz__layout">
+<div class="quiz__court">
+<div class="court-view-toolbar"><button aria-pressed="true" class="court-view-toggle" data-court-toggle="" type="button">평면(2D)으로 보기</button></div>
+<svg aria-label="코트 — 보낼 구역 선택" class="court-svg" role="application" viewbox="0 0 300 460">
+<g class="court-flat" style="display:none">
+<rect fill="#eaf3ef" height="416" stroke="#1E6F5C" stroke-width="2.5" width="264" x="18" y="20"></rect>
+<rect fill="#fbe9b0" height="52" opacity="0.55" width="264" x="18" y="176"></rect>
+<rect fill="#fbe9b0" height="52" opacity="0.55" width="264" x="18" y="228"></rect>
+<line stroke="#14513f" stroke-dasharray="7 5" stroke-width="3" x1="18" x2="282" y1="228" y2="228"></line>
+<line stroke="#1E6F5C" stroke-width="1.5" x1="150" x2="150" y1="20" y2="176"></line>
+<line stroke="#1E6F5C" stroke-width="1.5" x1="150" x2="150" y1="280" y2="436"></line>
+<g class="court-zones">
+<rect class="court-zone" data-zone="dL" height="50" rx="3" width="80" x="20" y="22"></rect><rect class="court-zone" data-zone="dM" height="50" rx="3" width="100" x="100" y="22"></rect><rect class="court-zone" data-zone="dR" height="50" rx="3" width="80" x="200" y="22"></rect>
+<rect class="court-zone" data-zone="mL" height="50" rx="3" width="80" x="20" y="73"></rect><rect class="court-zone" data-zone="mM" height="50" rx="3" width="100" x="100" y="73"></rect><rect class="court-zone" data-zone="mR" height="50" rx="3" width="80" x="200" y="73"></rect>
+<rect class="court-zone" data-zone="nL" height="50" rx="3" width="80" x="20" y="124"></rect><rect class="court-zone" data-zone="nM" height="50" rx="3" width="100" x="100" y="124"></rect><rect class="court-zone" data-zone="nR" height="50" rx="3" width="80" x="200" y="124"></rect>
+<rect class="court-zone" data-zone="kL" height="50" rx="3" width="80" x="20" y="176"></rect><rect class="court-zone" data-zone="kM" height="50" rx="3" width="100" x="100" y="176"></rect><rect class="court-zone" data-zone="kR" height="50" rx="3" width="80" x="200" y="176"></rect>
+</g>
+<text fill="#5b665f" font-family="sans-serif" font-size="11" text-anchor="middle" x="150" y="14">상대</text>
+<text fill="#5b665f" font-family="sans-serif" font-size="11" text-anchor="middle" x="150" y="452">우리</text>
+</g>
+<g class="court-iso"></g>
+<g data-markers=""></g>
+</svg>
+<ul class="court-legend"><li><span class="dot dot--me"></span>나 (1번)</li><li><span class="dot dot--you"></span>파트너 (2번)</li><li><span class="dot dot--opp"></span>상대</li><li><span class="dot dot--ball"></span>들어오는 공</li><li><span aria-hidden="true" class="leg-arrow">⇢</span>이동 중</li></ul>
+<p class="court-view-hint">팁: 2D·3D 코트 보기를 전환할 수 있어요.</p>
+</div>
+<div class="quiz__controls">
+<div class="quiz__group quiz__group--player" data-player-group="" hidden=""><h3><span class="quiz__step-num">0</span>누가 칠까요 — 나 vs 파트너?</h3><div class="opts opts--player" data-opts="player"><button class="opt" data-val="p1" type="button">나 (1번)</button><button class="opt" data-val="p2" type="button">파트너 (2번)</button></div></div>
+<div class="quiz__group quiz__group--step is-active" data-answer-step="shot"><h3><span class="quiz__step-num">1</span>사용할 샷</h3><div class="opts opts--shot" data-opts="shot"><button class="opt" data-val="dink" type="button">딩크</button><button class="opt" data-val="drop" type="button">드롭</button><button class="opt" data-val="drive" type="button">드라이브</button><button class="opt" data-val="reset" type="button">리셋</button><button class="opt" data-val="roll" type="button">롤</button><button class="opt" data-val="flick" type="button">플릭</button><button class="opt" data-val="block" type="button">블록</button><button class="opt" data-val="smash" type="button">스매시</button><button class="opt" data-val="speedup" type="button">스피드업</button><button class="opt" data-val="lob" type="button">로브</button></div></div>
+<div class="quiz__group quiz__group--step is-locked" data-answer-step="power"><h3><span class="quiz__step-num">2</span>강도</h3><div class="opts opts--power" data-opts="power"><button class="opt" data-val="soft" type="button">부드럽게</button><button class="opt" data-val="medium" type="button">보통</button><button class="opt" data-val="hard" type="button">강하게</button></div></div>
+<div class="quiz__group quiz__group--step quiz__group--target is-locked" data-answer-step="target"><h3><span class="quiz__step-num">3</span>보낼 곳</h3><div class="opts opts--target" data-opts="target"><button class="opt opt--target" data-val="kL" type="button">키친 왼쪽</button><button class="opt opt--target" data-val="kM" type="button">키친 중앙</button><button class="opt opt--target" data-val="kR" type="button">키친 오른쪽</button><button class="opt opt--target" data-val="nL" type="button">짧게 왼쪽</button><button class="opt opt--target" data-val="nM" type="button">짧게 중앙</button><button class="opt opt--target" data-val="nR" type="button">짧게 오른쪽</button><button class="opt opt--target" data-val="mL" type="button">미드 왼쪽</button><button class="opt opt--target" data-val="mM" type="button">미드 중앙</button><button class="opt opt--target" data-val="mR" type="button">미드 오른쪽</button><button class="opt opt--target" data-val="dL" type="button">깊게 왼쪽</button><button class="opt opt--target" data-val="dM" type="button">깊게 중앙</button><button class="opt opt--target" data-val="dR" type="button">깊게 오른쪽</button></div><p class="quiz__zone-label"><span>선택됨:</span> <strong data-zone-label="">—</strong></p></div>
+<div class="quiz__nav"><button class="btn btn--ghost quiz__back" data-q-back="" hidden="" type="button">이전</button><button class="btn btn--primary quiz__next" data-q-next="" disabled="" type="button">다음</button></div>
+</div>
+</div>
+</div>
+<div class="quiz__choice" data-q-choice="" hidden="">
+<h2>좋아요 — 10문항 완료!</h2>
+<p>결과를 보거나 10문항을 더 풀어 보세요. 공식 레이팅과의 정확도는 검증되지 않았습니다.</p>
+<div class="quiz__choice-actions">
+<button class="btn btn--primary" data-q-see="" type="button">측정 결과 보기</button>
+<button class="btn btn--ghost" data-q-more="" type="button">10문항 더 풀기</button>
+</div>
+<p class="quiz__choice-hint">더 많은 상황을 복습하는 용도입니다.</p>
+</div>
+<div class="quiz__result" data-q-result="" hidden=""></div>
+<div class="quiz-history" data-quiz-history="" hidden=""></div>

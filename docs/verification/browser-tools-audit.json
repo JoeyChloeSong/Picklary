@@ -1,0 +1,748 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "HTTP /en/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 1440 /en/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "s": 1440
+      }
+    },
+    {
+      "name": "Tool labels never undefined 1440 /en/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /ko/dupr-self-check/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 1440 /ko/dupr-self-check/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "s": 1440
+      }
+    },
+    {
+      "name": "Tool labels never undefined 1440 /ko/dupr-self-check/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/clip-lite/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 1440 /en/clip-lite/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "s": 1440
+      }
+    },
+    {
+      "name": "Tool labels never undefined 1440 /en/clip-lite/",
+      "ok": true
+    },
+    {
+      "name": "Video and transport separate 1440",
+      "ok": true,
+      "detail": {
+        "bottom": 1084.40625,
+        "top": 1098.40625
+      }
+    },
+    {
+      "name": "HTTP /ko/downloads/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 1440 /ko/downloads/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "s": 1440
+      }
+    },
+    {
+      "name": "Tool labels never undefined 1440 /ko/downloads/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/vision-rating/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 1440 /en/vision-rating/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "s": 1440
+      }
+    },
+    {
+      "name": "Tool labels never undefined 1440 /en/vision-rating/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/tour/schedule/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 1440 /en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "s": 1440
+      }
+    },
+    {
+      "name": "Tool labels never undefined 1440 /en/tour/schedule/",
+      "ok": true
+    },
+    {
+      "name": "Schedule stats below hero 1440",
+      "ok": true,
+      "detail": {
+        "bottom": 536.484375,
+        "top": 574.484375
+      }
+    },
+    {
+      "name": "HTTP /en/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 1024 /en/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "s": 1024
+      }
+    },
+    {
+      "name": "Tool labels never undefined 1024 /en/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /ko/dupr-self-check/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 1024 /ko/dupr-self-check/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "s": 1024
+      }
+    },
+    {
+      "name": "Tool labels never undefined 1024 /ko/dupr-self-check/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/clip-lite/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 1024 /en/clip-lite/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "s": 1024
+      }
+    },
+    {
+      "name": "Tool labels never undefined 1024 /en/clip-lite/",
+      "ok": true
+    },
+    {
+      "name": "Video and transport separate 1024",
+      "ok": true,
+      "detail": {
+        "bottom": 1069.5,
+        "top": 1083.5
+      }
+    },
+    {
+      "name": "HTTP /ko/downloads/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 1024 /ko/downloads/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "s": 1024
+      }
+    },
+    {
+      "name": "Tool labels never undefined 1024 /ko/downloads/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/vision-rating/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 1024 /en/vision-rating/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "s": 1024
+      }
+    },
+    {
+      "name": "Tool labels never undefined 1024 /en/vision-rating/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/tour/schedule/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 1024 /en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "s": 1024
+      }
+    },
+    {
+      "name": "Tool labels never undefined 1024 /en/tour/schedule/",
+      "ok": true
+    },
+    {
+      "name": "Schedule stats below hero 1024",
+      "ok": true,
+      "detail": {
+        "bottom": 536.484375,
+        "top": 574.484375
+      }
+    },
+    {
+      "name": "HTTP /en/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 768 /en/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "s": 768
+      }
+    },
+    {
+      "name": "Tool labels never undefined 768 /en/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /ko/dupr-self-check/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 768 /ko/dupr-self-check/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "s": 768
+      }
+    },
+    {
+      "name": "Tool labels never undefined 768 /ko/dupr-self-check/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/clip-lite/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 768 /en/clip-lite/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "s": 768
+      }
+    },
+    {
+      "name": "Tool labels never undefined 768 /en/clip-lite/",
+      "ok": true
+    },
+    {
+      "name": "Video and transport separate 768",
+      "ok": true,
+      "detail": {
+        "bottom": 915.65625,
+        "top": 929.65625
+      }
+    },
+    {
+      "name": "HTTP /ko/downloads/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 768 /ko/downloads/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "s": 768
+      }
+    },
+    {
+      "name": "Tool labels never undefined 768 /ko/downloads/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/vision-rating/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 768 /en/vision-rating/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "s": 768
+      }
+    },
+    {
+      "name": "Tool labels never undefined 768 /en/vision-rating/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/tour/schedule/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 768 /en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "s": 768
+      }
+    },
+    {
+      "name": "Tool labels never undefined 768 /en/tour/schedule/",
+      "ok": true
+    },
+    {
+      "name": "Schedule stats below hero 768",
+      "ok": true,
+      "detail": {
+        "bottom": 586.046875,
+        "top": 624.046875
+      }
+    },
+    {
+      "name": "HTTP /en/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 390 /en/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "s": 390
+      }
+    },
+    {
+      "name": "Tool labels never undefined 390 /en/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /ko/dupr-self-check/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 390 /ko/dupr-self-check/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "s": 390
+      }
+    },
+    {
+      "name": "Tool labels never undefined 390 /ko/dupr-self-check/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/clip-lite/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 390 /en/clip-lite/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "s": 390
+      }
+    },
+    {
+      "name": "Tool labels never undefined 390 /en/clip-lite/",
+      "ok": true
+    },
+    {
+      "name": "Video and transport separate 390",
+      "ok": true,
+      "detail": {
+        "bottom": 830.875,
+        "top": 844.875
+      }
+    },
+    {
+      "name": "HTTP /ko/downloads/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 390 /ko/downloads/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "s": 390
+      }
+    },
+    {
+      "name": "Tool labels never undefined 390 /ko/downloads/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/vision-rating/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 390 /en/vision-rating/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "s": 390
+      }
+    },
+    {
+      "name": "Tool labels never undefined 390 /en/vision-rating/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/tour/schedule/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 390 /en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "s": 390
+      }
+    },
+    {
+      "name": "Tool labels never undefined 390 /en/tour/schedule/",
+      "ok": true
+    },
+    {
+      "name": "Schedule stats below hero 390",
+      "ok": true,
+      "detail": {
+        "bottom": 792.046875,
+        "top": 817.046875
+      }
+    },
+    {
+      "name": "HTTP /en/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 360 /en/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "s": 360
+      }
+    },
+    {
+      "name": "Tool labels never undefined 360 /en/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /ko/dupr-self-check/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 360 /ko/dupr-self-check/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "s": 360
+      }
+    },
+    {
+      "name": "Tool labels never undefined 360 /ko/dupr-self-check/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/clip-lite/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 360 /en/clip-lite/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "s": 360
+      }
+    },
+    {
+      "name": "Tool labels never undefined 360 /en/clip-lite/",
+      "ok": true
+    },
+    {
+      "name": "Video and transport separate 360",
+      "ok": true,
+      "detail": {
+        "bottom": 849.296875,
+        "top": 863.296875
+      }
+    },
+    {
+      "name": "HTTP /ko/downloads/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 360 /ko/downloads/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "s": 360
+      }
+    },
+    {
+      "name": "Tool labels never undefined 360 /ko/downloads/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/vision-rating/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 360 /en/vision-rating/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "s": 360
+      }
+    },
+    {
+      "name": "Tool labels never undefined 360 /en/vision-rating/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/tour/schedule/",
+      "ok": true
+    },
+    {
+      "name": "No overflow 360 /en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "s": 360
+      }
+    },
+    {
+      "name": "Tool labels never undefined 360 /en/tour/schedule/",
+      "ok": true
+    },
+    {
+      "name": "Schedule stats below hero 360",
+      "ok": true,
+      "detail": {
+        "bottom": 901.234375,
+        "top": 926.234375
+      }
+    },
+    {
+      "name": "HTTP /ko/dupr-self-check/",
+      "ok": true
+    },
+    {
+      "name": "3D is default",
+      "ok": true
+    },
+    {
+      "name": "Cannot answer power before shot",
+      "ok": true
+    },
+    {
+      "name": "2D toggle",
+      "ok": true
+    },
+    {
+      "name": "Keyboard toggles once",
+      "ok": true
+    },
+    {
+      "name": "Touch does not double-toggle",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/dupr-self-check/",
+      "ok": true
+    },
+    {
+      "name": "Back retains question and choice",
+      "ok": true
+    },
+    {
+      "name": "Ten-question choice screen",
+      "ok": true
+    },
+    {
+      "name": "No repeated questions in first ten",
+      "ok": true
+    },
+    {
+      "name": "Result shows all ten reviews",
+      "ok": true
+    },
+    {
+      "name": "Estimate is rounded and bounded",
+      "ok": true
+    },
+    {
+      "name": "History opt-in respected",
+      "ok": true
+    },
+    {
+      "name": "Review explanation can be opened",
+      "ok": true
+    },
+    {
+      "name": "JSON export has independent estimate and ten question answers",
+      "ok": true
+    },
+    {
+      "name": "Extended attempt uses twenty unique scenarios",
+      "ok": true
+    },
+    {
+      "name": "Extended result renders twenty reviews",
+      "ok": true
+    },
+    {
+      "name": "Opt-in stores completed attempt only",
+      "ok": true
+    },
+    {
+      "name": "Low-score attempt lower than perfect attempt",
+      "ok": true
+    },
+    {
+      "name": "Clear history removes saved attempts",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/dupr-self-check/",
+      "ok": true
+    },
+    {
+      "name": "Invalid saved history does not break quiz",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/clip-lite/",
+      "ok": true
+    },
+    {
+      "name": "Empty editor cannot export",
+      "ok": true
+    },
+    {
+      "name": "Local H264/AAC video metadata decoded",
+      "ok": true
+    },
+    {
+      "name": "Local video uses blob, not upload URL",
+      "ok": true
+    },
+    {
+      "name": "Direct IN/OUT adds one cut",
+      "ok": true
+    },
+    {
+      "name": "Reversed range rejected",
+      "ok": true
+    },
+    {
+      "name": "Outside duration rejected",
+      "ok": true
+    },
+    {
+      "name": "I/O controls add second cut",
+      "ok": true
+    },
+    {
+      "name": "Delete leaves playhead unchanged",
+      "ok": true
+    },
+    {
+      "name": "Cut list export contains selected boundaries",
+      "ok": true
+    },
+    {
+      "name": "Export enabled after valid cuts",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/clip-lite/",
+      "ok": true
+    },
+    {
+      "name": "Export locks mutation controls",
+      "ok": true
+    },
+    {
+      "name": "Cancel unlocks only after job exits",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/clip-lite/",
+      "ok": true
+    },
+    {
+      "name": "Failed export never claims original is finished edit",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/dupr-self-check/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /ko/downloads/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /ko/vision-rating/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/",
+      "ok": true
+    },
+    {
+      "name": "HTTP /ko/clip-lite/",
+      "ok": true
+    },
+    {
+      "name": "No uncaught JavaScript exceptions",
+      "ok": true,
+      "detail": []
+    }
+  ],
+  "renderMode": "injected local HTML/CSS/JS (no navigation policy change)",
+  "storage": "explicit in-memory test double",
+  "browserEncoder": "NOT TESTED: adapter double used ONLY for failure/cancellation; no actual WASM execution",
+  "videoPreview": "real local synthetic H264/AAC via Blob URL",
+  "remoteRequestsBlocked": 0,
+  "jsErrors": []
+}

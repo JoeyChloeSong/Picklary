@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "scope": "Native FFmpeg CLI only; validates command compatibility and ZIP bytes, NOT FFmpeg.wasm browser execution",
+  "checks": [
+    {
+      "name": "Native clip 1 duration",
+      "ok": true,
+      "detail": 1.0
+    },
+    {
+      "name": "Native clip 2 duration",
+      "ok": true,
+      "detail": 1.0
+    },
+    {
+      "name": "Native concat approximately two seconds",
+      "ok": true,
+      "detail": 2.02322
+    },
+    {
+      "name": "Native MPEG4 fallback command supported",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "Optional audio mapping accepts silent input",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "Actual ZIP CRC integrity Picklary_Vision_v0.2.4_Docs_Only.zip",
+      "ok": true,
+      "detail": 7
+    },
+    {
+      "name": "Actual ZIP CRC integrity Picklary_Clip_Web_v1.1.0_Local.zip",
+      "ok": true,
+      "detail": 15
+    },
+    {
+      "name": "Edited output differs from original",
+      "ok": true,
+      "detail": null
+    }
+  ]
+}

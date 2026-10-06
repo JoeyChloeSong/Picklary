@@ -1,16 +1,21 @@
 {
   "name": "picklary-editorial",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "Picklary: bilingual, source-led pickleball learning, gear and tour coverage",
   "type": "module",
-  "engines": {"node": ">=22"},
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "node scripts/validate.mjs",
+    "test": "node scripts/validate.mjs && npm run test:tools",
     "check": "npm run build && npm test",
     "serve": "node scripts/serve.mjs",
     "media:cache": "node scripts/cache-media.mjs",
-    "check:live": "node scripts/check-live.mjs"
+    "check:live": "node scripts/check-live.mjs",
+    "engine:cache": "node scripts/cache-engine.mjs",
+    "release:register": "node scripts/register-release.mjs",
+    "test:tools": "node --test tests/tools.test.mjs"
   }
 }

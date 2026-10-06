@@ -1,0 +1,6 @@
+{
+  "status": "NOT RUN",
+  "reason": "Managed browser URL navigation restriction and no core asset download available in the restoration runtime",
+  "providedWorkflow": ".github/workflows/browser-export-smoke.yml",
+  "noEncoderMockInProvidedSmokeTest": true
+}

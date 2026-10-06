@@ -48,3 +48,7 @@ FFmpeg legal information: https://ffmpeg.org/legal.html
 The archive under downloads labeled Vision documentation contains user-supplied
 historical guides/examples only. Those examples are not new verified measurements.
 No Vision model weights or Windows application executable were recovered.
+
+
+## Menu artwork in 1.2.2
+Existing illustration files supplied with the Picklary v0.8.4 website source are privately archived in design/menu-originals. Crops and hashes are listed in data/menu-art.json. Only derived menu/learning illustrations are public. No named product/player identity is assigned to them, and no official DUPR endorsement is asserted. The old verification badge, sample rating dashboard and expert-tested sidebar are not used in public navigation. This reuse does not grant additional third-party photo rights.

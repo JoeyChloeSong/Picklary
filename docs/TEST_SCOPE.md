@@ -1,35 +1,9 @@
-# Picklary v1.2.0 — Test scope
+# v1.2.2 test scope
 
-## Executed for this version
+The Node build/reference and unit tests execute on the generated website. Image hashes verify both committed WebP sizes and their source-crop provenance. All original engine/template/content files in the preservation manifest are compared byte-for-byte with v1.2.1.
 
-- `npm run check`: static build/validation, 24 original tool unit/contract tests, 8 new visual and source-preservation tests.
-- `python scripts/visual-audit.py`: 483 browser checks, bilingual, widths 1440/1024/768/390/360; gallery containment, card separation, tabs, score source parity, partial coverage labels, brand filters, compare, mobile menu/dock.
-- `python scripts/browser-tools-audit.py`: 144 restored-tool checks.
-- `python scripts/browser-audit.py --offline-render`: 235 base-site regression checks.
+The new image/menu audit renders shipped HTML/CSS/JS in Chromium at widths 1440, 1024, 768, 390, and 360, in Korean and English. Local images are embedded as data URLs, CSS/JS are injected without changing browser URL-navigation policy, and external requests are blocked. Image decode and screenshot capture are awaited. Srcset variants are checked for existence, dimensions and hashes; the render harness uses the large candidate, so it is not a bandwidth or live srcset-selection test.
 
-The three browser reports have overlapping coverage; their counts are not a count of unique user studies or performance benchmarks.
+The existing tool browser test exercises actual synthetic local H.264 video preview, IN/OUT cuts, deletion, JSON export and quiz interaction. A test adapter is used only for encoder failure/cancellation. localStorage is an explicit in-memory stand-in. These tests do NOT establish real WASM/MP4 output, persistent browser storage in production, actual desktop app execution, third-party photo uptime, copyright permissions, live Netlify deployment, or AdSense approval.
 
-## Core source preservation
-
-18 SHA256 references in `V1_1_SOURCE_PRESERVATION.json` are compared by `tests/visual.test.mjs`.
-These include quiz/editor logic and templates plus products, players, media, results and rankings.
-The original editorial reference date remains 2026-10-04; this release is a visual interface update.
-
-## Environment and important limitations
-
-The managed Chromium navigation policy was not changed. Tests rendered local HTML/CSS/JS through about:blank/set_content; external requests were blocked. The explicit in-memory localStorage double supports logical storage tests but is not a production-origin persistence test.
-
-Synthetic local H264/AAC Blob playback was tested. Failure/cancellation adapter tests used a test encoder, not a real full FFmpeg.wasm export.
-No actual browser MP4 encoding, Windows application execution, Vision inference or calibrated rating study was performed in this visual release.
-
-The optional GitHub Action `browser-export-smoke.yml` remains available for a real-browser export check; it has not been run by this release's container tests.
-Native FFmpeg CLI reports archived from v1.1.0 are historical and are not claimed as newly executed v1.2.0 tests.
-
-31 remote image URLs and their reuse permissions remain operator checks. Test screenshots intentionally show fallbacks where remote requests were blocked.
-No production-domain deployment or AdSense approval was tested.
-
-## Evidence
-
-`docs/verification/` contains only reports from this visual release.
-`docs/archive-v1.1.0/verification/` preserves prior-version results with their original scope.
-Fresh ZIP extraction/build and archive integrity are recorded separately in `PACKAGE_VERIFICATION.json`.
+Screenshots in docs/preview are generated from this release. Earlier snapshots/reports, where retained, are historical rather than a new test run.

@@ -6,7 +6,7 @@ export function packageTools(ROOT,OUT,site){
  // Include only the files needed by the web editor; exclude other tools and source archives.
  for(const file of walk(path.join(OUT,'assets'))){
   const rel=path.relative(OUT,file).split(path.sep).join('/');
-  if((rel==='assets/favicon.svg'||/^assets\/(css\/(?:site|visual)\.|js\/(?:site|visual)\.|tools\/|vendor\/ffmpeg-core\/)/.test(rel))&&!rel.includes('self-check'))put(rel,fs.readFileSync(file));
+  if((rel==='assets/favicon.svg'||/^assets\/(css\/(?:site|visual|menu)\.|js\/(?:site|visual)\.|tools\/|vendor\/ffmpeg-core\/)/.test(rel))&&!rel.includes('self-check'))put(rel,fs.readFileSync(file));
  }
  for(const l of site.locales){
   let html=fs.readFileSync(path.join(OUT,l,'clip-lite/index.html'),'utf8');

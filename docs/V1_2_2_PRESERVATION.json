@@ -1,0 +1,114 @@
+{
+  "baseline": "Picklary_v1.2.1_VISUAL_IMAGE_MENU_SOURCE.zip",
+  "files": [
+    {
+      "file": "public/assets/tools/self-check.js",
+      "baselineSha256": "c7c9384e1b7c7eacb2dab34a578adc2bc3228f174501819768e2d56ccd6ebae1",
+      "currentSha256": "c7c9384e1b7c7eacb2dab34a578adc2bc3228f174501819768e2d56ccd6ebae1",
+      "identical": true
+    },
+    {
+      "file": "public/assets/tools/clip-editor.js",
+      "baselineSha256": "f909a8d86c99d8aaba37b4b1f6c9befb92c3b0f8abccb814de554d38fc715562",
+      "currentSha256": "f909a8d86c99d8aaba37b4b1f6c9befb92c3b0f8abccb814de554d38fc715562",
+      "identical": true
+    },
+    {
+      "file": "public/assets/tools/ffmpeg-engine.js",
+      "baselineSha256": "7c927cacd5519818cd165376687060643b1f39771ed83b3ca8d68308db3fe873",
+      "currentSha256": "7c927cacd5519818cd165376687060643b1f39771ed83b3ca8d68308db3fe873",
+      "identical": true
+    },
+    {
+      "file": "public/assets/tools/ffmpeg-worker.js",
+      "baselineSha256": "c32bfc4d90e4d8cc110f04c0bdc65ff90d3e0c88ee6d095d323618da1d3b48d0",
+      "currentSha256": "c32bfc4d90e4d8cc110f04c0bdc65ff90d3e0c88ee6d095d323618da1d3b48d0",
+      "identical": true
+    },
+    {
+      "file": "public/assets/tools/zip-store.js",
+      "baselineSha256": "001f5d6f69ec417156b15904803b231de830a2183650a438a4f04b84bdcd5119",
+      "currentSha256": "001f5d6f69ec417156b15904803b231de830a2183650a438a4f04b84bdcd5119",
+      "identical": true
+    },
+    {
+      "file": "data/self-check-en.json",
+      "baselineSha256": "9dad1ac425a0e9a86d657eeac41ef5a9849472520eedbbc41e51baecb67af0d5",
+      "currentSha256": "9dad1ac425a0e9a86d657eeac41ef5a9849472520eedbbc41e51baecb67af0d5",
+      "identical": true
+    },
+    {
+      "file": "data/self-check-ko.json",
+      "baselineSha256": "6b3af18a47d4deebc9e0a4d73153798fd8164681b3e58f3ea2b2d8baba24bc2f",
+      "currentSha256": "6b3af18a47d4deebc9e0a4d73153798fd8164681b3e58f3ea2b2d8baba24bc2f",
+      "identical": true
+    },
+    {
+      "file": "data/clip-config-en.json",
+      "baselineSha256": "7be720d714af3e6d0e20afab10c2619fa7ebac59ede81ffd08e0bc1fa2944d2b",
+      "currentSha256": "7be720d714af3e6d0e20afab10c2619fa7ebac59ede81ffd08e0bc1fa2944d2b",
+      "identical": true
+    },
+    {
+      "file": "data/clip-config-ko.json",
+      "baselineSha256": "07d2146f55f2952d297a183d6237afae774e5a5736cf0e37eca2330602c5f05a",
+      "currentSha256": "07d2146f55f2952d297a183d6237afae774e5a5736cf0e37eca2330602c5f05a",
+      "identical": true
+    },
+    {
+      "file": "templates/self-check-en.html",
+      "baselineSha256": "fa17baf1ef78544ae8a3c3ded9a27a62ccd505ad34c501c6916fd12fa7f6f132",
+      "currentSha256": "fa17baf1ef78544ae8a3c3ded9a27a62ccd505ad34c501c6916fd12fa7f6f132",
+      "identical": true
+    },
+    {
+      "file": "templates/self-check-ko.html",
+      "baselineSha256": "e0711896b77c04ea36ba6479113902b5a0b149ea1c588af455fd066485ea6061",
+      "currentSha256": "e0711896b77c04ea36ba6479113902b5a0b149ea1c588af455fd066485ea6061",
+      "identical": true
+    },
+    {
+      "file": "templates/clip-editor-en.html",
+      "baselineSha256": "aa797a9613f378b9cb5f0af038e43fb61c8efbbd7befec3453991360ae07b970",
+      "currentSha256": "aa797a9613f378b9cb5f0af038e43fb61c8efbbd7befec3453991360ae07b970",
+      "identical": true
+    },
+    {
+      "file": "templates/clip-editor-ko.html",
+      "baselineSha256": "e9646192692b088ef8ce654b9acec299e6a19d87d1e61980a2696921cf02622f",
+      "currentSha256": "e9646192692b088ef8ce654b9acec299e6a19d87d1e61980a2696921cf02622f",
+      "identical": true
+    },
+    {
+      "file": "data/results.json",
+      "baselineSha256": "cf6156791ad1c2f45e46228652c1727fc9fee336ee27ddcdded39b4db20423d9",
+      "currentSha256": "cf6156791ad1c2f45e46228652c1727fc9fee336ee27ddcdded39b4db20423d9",
+      "identical": true
+    },
+    {
+      "file": "data/rankings.json",
+      "baselineSha256": "c61eb82a0f60af317e2ccf3db838a2ab0402890c5fe251ee371f82b1964de138",
+      "currentSha256": "c61eb82a0f60af317e2ccf3db838a2ab0402890c5fe251ee371f82b1964de138",
+      "identical": true
+    },
+    {
+      "file": "data/media.json",
+      "baselineSha256": "1952b2c71d1e0f41ec1eaf333eb899d03886dee9bdc7438eca8f8b3c38d53916",
+      "currentSha256": "1952b2c71d1e0f41ec1eaf333eb899d03886dee9bdc7438eca8f8b3c38d53916",
+      "identical": true
+    },
+    {
+      "file": "data/products.json",
+      "baselineSha256": "ac2f68a2c28e59fe2b24c6a261cf74e110983fae55eef57c0e9d8889c654b066",
+      "currentSha256": "ac2f68a2c28e59fe2b24c6a261cf74e110983fae55eef57c0e9d8889c654b066",
+      "identical": true
+    },
+    {
+      "file": "data/players.json",
+      "baselineSha256": "22708e78b0719aa08b681b68ae0eff7ae95e4f5b7fef163b9ef8d9e260c7bb6b",
+      "currentSha256": "22708e78b0719aa08b681b68ae0eff7ae95e4f5b7fef163b9ef8d9e260c7bb6b",
+      "identical": true
+    }
+  ],
+  "status": "PASS"
+}

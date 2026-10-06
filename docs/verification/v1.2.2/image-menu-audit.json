@@ -1,0 +1,2146 @@
+{
+  "status": "PASS",
+  "checks": 344,
+  "failures": [],
+  "checksDetail": [
+    {
+      "name": "Image decodes with declared dimensions home-court 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions home-court 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions self-check 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions self-check 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions video-review 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions video-review 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions clip-rallies 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions clip-rallies 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions players 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions players 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions results 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions results 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions schedule 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions schedule 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions paddles 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions paddles 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions balls 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions balls 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions shoes 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions shoes 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions apparel 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions apparel 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions accessories 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions accessories 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions downloads 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions downloads 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions serve 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions serve 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions return 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions return 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions dink 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions dink 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions drop 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions drop 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions reset 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions reset 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions position 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions position 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions confidence 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions confidence 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions guide-reset 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions guide-reset 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions guide-dink 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions guide-dink 960",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions guide-position 480",
+      "ok": true
+    },
+    {
+      "name": "Image decodes with declared dimensions guide-position 960",
+      "ok": true
+    },
+    {
+      "name": "No horizontal overflow 1440 ko/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 ko/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Six real image feature links 1440 ko",
+      "ok": true
+    },
+    {
+      "name": "Core tools preserved 1440 ko",
+      "ok": true
+    },
+    {
+      "name": "Images occupy most of each home card 1440 ko",
+      "ok": true,
+      "details": [
+        0.6894322955940967,
+        0.6894322955940967,
+        0.608447643623523,
+        0.608447643623523,
+        0.608447643623523,
+        0.608447643623523
+      ]
+    },
+    {
+      "name": "No duplicated screenshot gallery 1440 ko",
+      "ok": true
+    },
+    {
+      "name": "No horizontal overflow 1440 ko/gear/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 ko/gear/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1440 ko/gear/paddles/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 ko/gear/paddles/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1440 ko/gear/shoes/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 ko/gear/shoes/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1440 ko/learn/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 ko/learn/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1440 ko/level-check/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 ko/level-check/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1440 ko/video-tools/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 ko/video-tools/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1440 ko/vision-rating/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 ko/vision-rating/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1440 ko/downloads/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 ko/downloads/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1440 ko/tour/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 ko/tour/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1440 ko/tour/schedule/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 ko/tour/schedule/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Calendar statistics never overlay hero 1440 ko",
+      "ok": true,
+      "details": {
+        "bottom": 780.765625,
+        "stats": 812.765625
+      }
+    },
+    {
+      "name": "No horizontal overflow 1440 ko/tour/players/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 ko/tour/players/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1440 en/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 en/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Six real image feature links 1440 en",
+      "ok": true
+    },
+    {
+      "name": "Core tools preserved 1440 en",
+      "ok": true
+    },
+    {
+      "name": "Images occupy most of each home card 1440 en",
+      "ok": true,
+      "details": [
+        0.6894322955940967,
+        0.6894322955940967,
+        0.608447643623523,
+        0.608447643623523,
+        0.608447643623523,
+        0.608447643623523
+      ]
+    },
+    {
+      "name": "No duplicated screenshot gallery 1440 en",
+      "ok": true
+    },
+    {
+      "name": "No horizontal overflow 1440 en/gear/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 en/gear/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1440 en/gear/paddles/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 en/gear/paddles/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1440 en/gear/shoes/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 en/gear/shoes/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1440 en/learn/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 en/learn/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1440 en/level-check/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 en/level-check/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1440 en/video-tools/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 en/video-tools/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1440 en/vision-rating/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 en/vision-rating/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1440 en/downloads/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 en/downloads/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1440 en/tour/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 en/tour/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1440 en/tour/schedule/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 en/tour/schedule/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Calendar statistics never overlay hero 1440 en",
+      "ok": true,
+      "details": {
+        "bottom": 780.765625,
+        "stats": 812.765625
+      }
+    },
+    {
+      "name": "No horizontal overflow 1440 en/tour/players/",
+      "ok": true,
+      "details": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1440 en/tour/players/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1024 ko/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 ko/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Six real image feature links 1024 ko",
+      "ok": true
+    },
+    {
+      "name": "Core tools preserved 1024 ko",
+      "ok": true
+    },
+    {
+      "name": "Images occupy most of each home card 1024 ko",
+      "ok": true,
+      "details": [
+        0.6713192065304742,
+        0.6713192065304742,
+        0.5942590332678941,
+        0.5942590332678941,
+        0.5942590332678941,
+        0.5942590332678941
+      ]
+    },
+    {
+      "name": "No duplicated screenshot gallery 1024 ko",
+      "ok": true
+    },
+    {
+      "name": "No horizontal overflow 1024 ko/gear/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 ko/gear/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1024 ko/gear/paddles/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 ko/gear/paddles/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1024 ko/gear/shoes/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 ko/gear/shoes/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1024 ko/learn/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 ko/learn/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1024 ko/level-check/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 ko/level-check/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1024 ko/video-tools/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 ko/video-tools/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1024 ko/vision-rating/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 ko/vision-rating/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1024 ko/downloads/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 ko/downloads/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1024 ko/tour/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 ko/tour/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1024 ko/tour/schedule/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 ko/tour/schedule/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Calendar statistics never overlay hero 1024 ko",
+      "ok": true,
+      "details": {
+        "bottom": 780.765625,
+        "stats": 812.765625
+      }
+    },
+    {
+      "name": "No horizontal overflow 1024 ko/tour/players/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 ko/tour/players/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1024 en/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 en/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Six real image feature links 1024 en",
+      "ok": true
+    },
+    {
+      "name": "Core tools preserved 1024 en",
+      "ok": true
+    },
+    {
+      "name": "Images occupy most of each home card 1024 en",
+      "ok": true,
+      "details": [
+        0.6713192065304742,
+        0.6713192065304742,
+        0.5942590332678941,
+        0.5942590332678941,
+        0.5942590332678941,
+        0.5942590332678941
+      ]
+    },
+    {
+      "name": "No duplicated screenshot gallery 1024 en",
+      "ok": true
+    },
+    {
+      "name": "No horizontal overflow 1024 en/gear/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 en/gear/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1024 en/gear/paddles/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 en/gear/paddles/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1024 en/gear/shoes/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 en/gear/shoes/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1024 en/learn/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 en/learn/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1024 en/level-check/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 en/level-check/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1024 en/video-tools/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 en/video-tools/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1024 en/vision-rating/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 en/vision-rating/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1024 en/downloads/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 en/downloads/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1024 en/tour/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 en/tour/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 1024 en/tour/schedule/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 en/tour/schedule/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Calendar statistics never overlay hero 1024 en",
+      "ok": true,
+      "details": {
+        "bottom": 780.765625,
+        "stats": 812.765625
+      }
+    },
+    {
+      "name": "No horizontal overflow 1024 en/tour/players/",
+      "ok": true,
+      "details": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Image and label boxes separate 1024 en/tour/players/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 768 ko/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 ko/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Six real image feature links 768 ko",
+      "ok": true
+    },
+    {
+      "name": "Core tools preserved 768 ko",
+      "ok": true
+    },
+    {
+      "name": "Images occupy most of each home card 768 ko",
+      "ok": true,
+      "details": [
+        0.6490108198650912,
+        0.6490108198650912,
+        0.6227801294214956,
+        0.6227801294214956,
+        0.6227801294214956,
+        0.6227801294214956
+      ]
+    },
+    {
+      "name": "No duplicated screenshot gallery 768 ko",
+      "ok": true
+    },
+    {
+      "name": "No horizontal overflow 768 ko/gear/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 ko/gear/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 768 ko/gear/paddles/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 ko/gear/paddles/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 768 ko/gear/shoes/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 ko/gear/shoes/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 768 ko/learn/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 ko/learn/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 768 ko/level-check/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 ko/level-check/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 768 ko/video-tools/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 ko/video-tools/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 768 ko/vision-rating/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 ko/vision-rating/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 768 ko/downloads/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 ko/downloads/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 768 ko/tour/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 ko/tour/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 768 ko/tour/schedule/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 ko/tour/schedule/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Calendar statistics never overlay hero 768 ko",
+      "ok": true,
+      "details": {
+        "bottom": 762.765625,
+        "stats": 794.765625
+      }
+    },
+    {
+      "name": "No horizontal overflow 768 ko/tour/players/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 ko/tour/players/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 768 en/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 en/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Six real image feature links 768 en",
+      "ok": true
+    },
+    {
+      "name": "Core tools preserved 768 en",
+      "ok": true
+    },
+    {
+      "name": "Images occupy most of each home card 768 en",
+      "ok": true,
+      "details": [
+        0.6490108198650912,
+        0.6490108198650912,
+        0.6227801294214956,
+        0.6227801294214956,
+        0.6227801294214956,
+        0.6227801294214956
+      ]
+    },
+    {
+      "name": "No duplicated screenshot gallery 768 en",
+      "ok": true
+    },
+    {
+      "name": "No horizontal overflow 768 en/gear/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 en/gear/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 768 en/gear/paddles/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 en/gear/paddles/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 768 en/gear/shoes/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 en/gear/shoes/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 768 en/learn/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 en/learn/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 768 en/level-check/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 en/level-check/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 768 en/video-tools/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 en/video-tools/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 768 en/vision-rating/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 en/vision-rating/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 768 en/downloads/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 en/downloads/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 768 en/tour/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 en/tour/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 768 en/tour/schedule/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 en/tour/schedule/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Calendar statistics never overlay hero 768 en",
+      "ok": true,
+      "details": {
+        "bottom": 762.765625,
+        "stats": 794.765625
+      }
+    },
+    {
+      "name": "No horizontal overflow 768 en/tour/players/",
+      "ok": true,
+      "details": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Image and label boxes separate 768 en/tour/players/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 390 ko/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 ko/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Six real image feature links 390 ko",
+      "ok": true
+    },
+    {
+      "name": "Core tools preserved 390 ko",
+      "ok": true
+    },
+    {
+      "name": "Images occupy most of each home card 390 ko",
+      "ok": true,
+      "details": [
+        0.6016260162601627,
+        0.6016260162601627,
+        0.6016260162601627,
+        0.6016260162601627,
+        0.6016260162601627,
+        0.6016260162601627
+      ]
+    },
+    {
+      "name": "No duplicated screenshot gallery 390 ko",
+      "ok": true
+    },
+    {
+      "name": "No horizontal overflow 390 ko/gear/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 ko/gear/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 390 ko/gear/paddles/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 ko/gear/paddles/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 390 ko/gear/shoes/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 ko/gear/shoes/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 390 ko/learn/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 ko/learn/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 390 ko/level-check/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 ko/level-check/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 390 ko/video-tools/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 ko/video-tools/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 390 ko/vision-rating/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 ko/vision-rating/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 390 ko/downloads/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 ko/downloads/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 390 ko/tour/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 ko/tour/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 390 ko/tour/schedule/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 ko/tour/schedule/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Calendar statistics never overlay hero 390 ko",
+      "ok": true,
+      "details": {
+        "bottom": 1016.890625,
+        "stats": 1041.890625
+      }
+    },
+    {
+      "name": "No horizontal overflow 390 ko/tour/players/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 ko/tour/players/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 390 en/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 en/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Six real image feature links 390 en",
+      "ok": true
+    },
+    {
+      "name": "Core tools preserved 390 en",
+      "ok": true
+    },
+    {
+      "name": "Images occupy most of each home card 390 en",
+      "ok": true,
+      "details": [
+        0.5717735120125559,
+        0.5717735120125559,
+        0.6016260162601627,
+        0.6016260162601627,
+        0.6016260162601627,
+        0.6016260162601627
+      ]
+    },
+    {
+      "name": "No duplicated screenshot gallery 390 en",
+      "ok": true
+    },
+    {
+      "name": "No horizontal overflow 390 en/gear/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 en/gear/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 390 en/gear/paddles/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 en/gear/paddles/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 390 en/gear/shoes/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 en/gear/shoes/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 390 en/learn/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 en/learn/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 390 en/level-check/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 en/level-check/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 390 en/video-tools/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 en/video-tools/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 390 en/vision-rating/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 en/vision-rating/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 390 en/downloads/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 en/downloads/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 390 en/tour/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 en/tour/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 390 en/tour/schedule/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 en/tour/schedule/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Calendar statistics never overlay hero 390 en",
+      "ok": true,
+      "details": {
+        "bottom": 1016.890625,
+        "stats": 1041.890625
+      }
+    },
+    {
+      "name": "No horizontal overflow 390 en/tour/players/",
+      "ok": true,
+      "details": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Image and label boxes separate 390 en/tour/players/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 360 ko/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 ko/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Six real image feature links 360 ko",
+      "ok": true
+    },
+    {
+      "name": "Core tools preserved 360 ko",
+      "ok": true
+    },
+    {
+      "name": "Images occupy most of each home card 360 ko",
+      "ok": true,
+      "details": [
+        0.5717735120125559,
+        0.5717735120125559,
+        0.5717735120125559,
+        0.5717735120125559,
+        0.6016260162601627,
+        0.6016260162601627
+      ]
+    },
+    {
+      "name": "No duplicated screenshot gallery 360 ko",
+      "ok": true
+    },
+    {
+      "name": "No horizontal overflow 360 ko/gear/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 ko/gear/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 360 ko/gear/paddles/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 ko/gear/paddles/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 360 ko/gear/shoes/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 ko/gear/shoes/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 360 ko/learn/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 ko/learn/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 360 ko/level-check/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 ko/level-check/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 360 ko/video-tools/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 ko/video-tools/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 360 ko/vision-rating/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 ko/vision-rating/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 360 ko/downloads/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 ko/downloads/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 360 ko/tour/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 ko/tour/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 360 ko/tour/schedule/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 ko/tour/schedule/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Calendar statistics never overlay hero 360 ko",
+      "ok": true,
+      "details": {
+        "bottom": 1043.96875,
+        "stats": 1068.96875
+      }
+    },
+    {
+      "name": "No horizontal overflow 360 ko/tour/players/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 ko/tour/players/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 360 en/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 en/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Six real image feature links 360 en",
+      "ok": true
+    },
+    {
+      "name": "Core tools preserved 360 en",
+      "ok": true
+    },
+    {
+      "name": "Images occupy most of each home card 360 en",
+      "ok": true,
+      "details": [
+        0.5717735120125559,
+        0.5717735120125559,
+        0.5717735120125559,
+        0.5717735120125559,
+        0.6016260162601627,
+        0.6016260162601627
+      ]
+    },
+    {
+      "name": "No duplicated screenshot gallery 360 en",
+      "ok": true
+    },
+    {
+      "name": "No horizontal overflow 360 en/gear/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 en/gear/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 360 en/gear/paddles/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 en/gear/paddles/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 360 en/gear/shoes/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 en/gear/shoes/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 360 en/learn/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 en/learn/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 360 en/level-check/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 en/level-check/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 360 en/video-tools/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 en/video-tools/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 360 en/vision-rating/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 en/vision-rating/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 360 en/downloads/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 en/downloads/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 360 en/tour/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 en/tour/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No horizontal overflow 360 en/tour/schedule/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 en/tour/schedule/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Calendar statistics never overlay hero 360 en",
+      "ok": true,
+      "details": {
+        "bottom": 1016.890625,
+        "stats": 1041.890625
+      }
+    },
+    {
+      "name": "No horizontal overflow 360 en/tour/players/",
+      "ok": true,
+      "details": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Image and label boxes separate 360 en/tour/players/",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "All feature cards have visible names and natural keyboard focus",
+      "ok": true,
+      "details": [
+        {
+          "href": "/ko/dupr-self-check/",
+          "heading": "DUPR 자가진단",
+          "tab": 0
+        },
+        {
+          "href": "/ko/clip-lite/",
+          "heading": "Clip Lite",
+          "tab": 0
+        },
+        {
+          "href": "/ko/vision-rating/",
+          "heading": "Vision Rating",
+          "tab": 0
+        },
+        {
+          "href": "/ko/gear/",
+          "heading": "Gear Lab",
+          "tab": 0
+        },
+        {
+          "href": "/ko/tour/",
+          "heading": "Tour Board",
+          "tab": 0
+        },
+        {
+          "href": "/ko/learn/",
+          "heading": "실전 가이드",
+          "tab": 0
+        }
+      ]
+    },
+    {
+      "name": "Mobile navigation opens",
+      "ok": true
+    },
+    {
+      "name": "Mobile navigation closes with Escape",
+      "ok": true
+    },
+    {
+      "name": "No redundant navigation artwork in active tool dupr-self-check/",
+      "ok": true
+    },
+    {
+      "name": "Mobile dock hidden on active tool dupr-self-check/",
+      "ok": true
+    },
+    {
+      "name": "No redundant navigation artwork in active tool clip-lite/",
+      "ok": true
+    },
+    {
+      "name": "Mobile dock hidden on active tool clip-lite/",
+      "ok": true
+    },
+    {
+      "name": "No uncaught browser JavaScript errors",
+      "ok": true,
+      "details": []
+    }
+  ],
+  "externalRequestsBlocked": [
+    "https://crbnpickleball.com/cdn/shop/files/CRBN_Power_1X_AlternativeMain.jpg?v=1771601486&width=1080",
+    "https://images.asics.com/is/image/asics/1072A126_500_SL_LT_GLB?%24sfcc-product%24=",
+    "https://images.skechers.com/image;format=auto/246109_NVY_HERO_LG",
+    "https://media.babolat.com/image/upload/v1623932381/Website_content/Tennis_news/jet-mach-3/men-shoes-centered.png",
+    "https://vaticpro.com/cdn/shop/files/DSC03090.jpg?v=1777835695&width=580",
+    "https://www.paddletek.com/cdn/shop/files/Paddletek_Bantam_TKO-C_Ocean_12.7_Front.png?v=1770072518&width=1200",
+    "https://www.sixzeropickleball.com/cdn/shop/files/Ruby-Six-Zero-152745783_6c0f8641-6bfb-4cde-a761-5df8e3c6b6c6.png?v=1759968037&width=1080"
+  ],
+  "scope": "Actual browser renders of shipped HTML/CSS/JS with embedded local WebP. External requests blocked. localStorage is an in-memory stand-in. Responsive srcset file dimensions validated, rendering uses large candidate. Not hosted uptime, WASM encoding, native app or official rating validation."
+}

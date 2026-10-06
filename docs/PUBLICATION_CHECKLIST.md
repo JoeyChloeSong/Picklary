@@ -1,14 +1,10 @@
-# v1.1.0 publication checklist
+# Preview publication checklist - 1.2.2
 
-- [ ] Upload the extracted source to a GitHub preview branch; preserve .github/.
-- [ ] Run npm ci --ignore-scripts and npm run check.
-- [ ] Netlify uses npm run check and publishes dist, not the source root.
-- [ ] Confirm both languages and old tool URLs reach the actual restored tools.
-- [ ] Run one 10-question and one 20-question assessment; inspect result/clear history.
-- [ ] Load a small H264/AAC video; verify cutting, all three MP4/ZIP modes and cancellation in the live browser.
-- [ ] Run the optional real browser export GitHub Action before relying on encoding; inspect its report, not just a successful website build.
-- [ ] Preserve installed desktop apps. Do not substitute the local web ZIP for Windows v0.9.8.
-- [ ] Supply and review the real Vision/Windows packages before enabling their downloads.
-- [ ] Verify image usage rights and external availability separately.
-- [ ] Competition content remains at its existing October 4 snapshot; do not call this a new results update.
-- [ ] Treat Google approval as a separate review; no guaranteed approval claim.
+- Build with Node 22: npm run check.
+- Upload the source contents to repository root. Never publish design/, data/, scripts/, templates/, tests/, or legacy/ as site files; publish dist/ only.
+- On a Netlify preview check /ko/, /en/, the gear categories, tour pages, the self-check, Clip Lite and downloads.
+- Confirm image-menu links, Korean/English language switching, mobile menu, score tabs and brand filters.
+- Test one short video export on your actual target browser. This release does not close the existing WASM export verification gap.
+- Desktop releases remain unavailable until real reviewed ZIPs are registered. Do not replace pending buttons with nonexistent files.
+- The new menu illustrations are bundled locally. The 31 existing remote named photos and their usage rights still need their separate checks.
+- Do not interpret build success as AdSense approval or a current-event data refresh. Editorial data stays at 2026-10-04.

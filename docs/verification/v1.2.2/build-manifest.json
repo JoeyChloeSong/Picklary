@@ -1,0 +1,651 @@
+{
+  "version": "1.2.2",
+  "editorialDate": "2026-10-04",
+  "css": "/assets/css/site.0efc81a1f7.css",
+  "js": "/assets/js/site.07cd4831d3.js",
+  "toolCss": "/assets/tools/tools.eaa80c2dff.css",
+  "selfJs": "/assets/tools/self-check.c7c9384e1b.js",
+  "clipJs": "/assets/tools/clip-editor.f909a8d86c.js",
+  "visualCss": "/assets/css/visual.524a289c57.css",
+  "visualJs": "/assets/js/visual.baafbe884a.js",
+  "menuCss": "/assets/css/menu.632ccf499d.css",
+  "desktopReleases": [
+    {
+      "id": "vision-ko",
+      "kind": "vision",
+      "title": "Vision Rating - Korean",
+      "version": "0.2.4",
+      "language": "ko",
+      "file": "Picklary_Vision_Rating_Local_Web_v0.2.4_KO.zip",
+      "reviewed": false,
+      "sha256": null,
+      "available": false
+    },
+    {
+      "id": "vision-en",
+      "kind": "vision",
+      "title": "Vision Rating - English",
+      "version": "0.2.4",
+      "language": "en",
+      "file": "Picklary_Vision_Rating_Local_Web_v0.2.4_EN.zip",
+      "reviewed": false,
+      "sha256": null,
+      "available": false
+    },
+    {
+      "id": "windows-editor",
+      "kind": "windows-editor",
+      "title": "Picklary Lite Windows",
+      "version": "0.9.8",
+      "language": "both",
+      "file": "Picklary_Lite_v0.9.8_ClipJoin_OutputUI_Windows.zip",
+      "reviewed": false,
+      "sha256": null,
+      "available": false
+    }
+  ],
+  "pages": [
+    {
+      "path": "/en/",
+      "title": "Play with a plan",
+      "locale": "en",
+      "rel": "",
+      "indexable": true
+    },
+    {
+      "path": "/en/learn/",
+      "title": "A practical learning library",
+      "locale": "en",
+      "rel": "learn/",
+      "indexable": true
+    },
+    {
+      "path": "/en/learn/first-session-plan/",
+      "title": "Your first session: fewer rules, better habits",
+      "locale": "en",
+      "rel": "learn/first-session-plan/",
+      "indexable": true
+    },
+    {
+      "path": "/en/learn/third-shot-drive-or-drop/",
+      "title": "Third-shot drive or drop? Read the contact",
+      "locale": "en",
+      "rel": "learn/third-shot-drive-or-drop/",
+      "indexable": true
+    },
+    {
+      "path": "/en/learn/transition-reset-footwork/",
+      "title": "The transition reset starts with your feet",
+      "locale": "en",
+      "rel": "learn/transition-reset-footwork/",
+      "indexable": true
+    },
+    {
+      "path": "/en/learn/purposeful-dinking/",
+      "title": "A dink should ask a question",
+      "locale": "en",
+      "rel": "learn/purposeful-dinking/",
+      "indexable": true
+    },
+    {
+      "path": "/en/learn/return-depth-and-recovery/",
+      "title": "Return deep enough to buy your next step",
+      "locale": "en",
+      "rel": "learn/return-depth-and-recovery/",
+      "indexable": true
+    },
+    {
+      "path": "/en/learn/offensive-lob/",
+      "title": "The offensive lob: read the lean, not just the height",
+      "locale": "en",
+      "rel": "learn/offensive-lob/",
+      "indexable": true
+    },
+    {
+      "path": "/en/learn/paddle-demo-checklist/",
+      "title": "A paddle demo that tests more than power",
+      "locale": "en",
+      "rel": "learn/paddle-demo-checklist/",
+      "indexable": true
+    },
+    {
+      "path": "/en/learn/court-shoe-fit-test/",
+      "title": "Court-shoe fit: test the stop, not just the walk",
+      "locale": "en",
+      "rel": "learn/court-shoe-fit-test/",
+      "indexable": true
+    },
+    {
+      "path": "/en/learn/match-review-worksheet/",
+      "title": "Review ten points. Leave with one change.",
+      "locale": "en",
+      "rel": "learn/match-review-worksheet/",
+      "indexable": true
+    },
+    {
+      "path": "/en/gear/",
+      "title": "Gear Lab",
+      "locale": "en",
+      "rel": "gear/",
+      "indexable": true
+    },
+    {
+      "path": "/en/gear/paddles/",
+      "title": "Paddles · Gear Lab",
+      "locale": "en",
+      "rel": "gear/paddles/",
+      "indexable": true
+    },
+    {
+      "path": "/en/gear/balls/",
+      "title": "Balls · Gear Lab",
+      "locale": "en",
+      "rel": "gear/balls/",
+      "indexable": true
+    },
+    {
+      "path": "/en/gear/shoes/",
+      "title": "Shoes · Gear Lab",
+      "locale": "en",
+      "rel": "gear/shoes/",
+      "indexable": true
+    },
+    {
+      "path": "/en/gear/apparel/",
+      "title": "Apparel · Gear Lab",
+      "locale": "en",
+      "rel": "gear/apparel/",
+      "indexable": true
+    },
+    {
+      "path": "/en/gear/accessories/",
+      "title": "Accessories · Gear Lab",
+      "locale": "en",
+      "rel": "gear/accessories/",
+      "indexable": true
+    },
+    {
+      "path": "/en/tour/",
+      "title": "Tour Board",
+      "locale": "en",
+      "rel": "tour/",
+      "indexable": true
+    },
+    {
+      "path": "/en/tour/results/",
+      "title": "Tournament results",
+      "locale": "en",
+      "rel": "tour/results/",
+      "indexable": true
+    },
+    {
+      "path": "/en/tour/results/las-vegas-2026/",
+      "title": "Rate Las Vegas Open · Results",
+      "locale": "en",
+      "rel": "tour/results/las-vegas-2026/",
+      "indexable": true
+    },
+    {
+      "path": "/en/tour/results/arizona-2026/",
+      "title": "Veolia Arizona Open · Results",
+      "locale": "en",
+      "rel": "tour/results/arizona-2026/",
+      "indexable": true
+    },
+    {
+      "path": "/en/tour/results/kuala-lumpur-2026/",
+      "title": "PPA Asia Kuala Lumpur Cup · Results",
+      "locale": "en",
+      "rel": "tour/results/kuala-lumpur-2026/",
+      "indexable": true
+    },
+    {
+      "path": "/en/tour/results/mlp-finals-2026/",
+      "title": "MLP Finals · New York City · Results",
+      "locale": "en",
+      "rel": "tour/results/mlp-finals-2026/",
+      "indexable": true
+    },
+    {
+      "path": "/en/tour/schedule/",
+      "title": "Events & schedule",
+      "locale": "en",
+      "rel": "tour/schedule/",
+      "indexable": true
+    },
+    {
+      "path": "/en/tour/players/",
+      "title": "Player study notes",
+      "locale": "en",
+      "rel": "tour/players/",
+      "indexable": true
+    },
+    {
+      "path": "/en/tour/rankings/",
+      "title": "Rankings: know the system",
+      "locale": "en",
+      "rel": "tour/rankings/",
+      "indexable": true
+    },
+    {
+      "path": "/en/tools/",
+      "title": "All Picklary tools",
+      "locale": "en",
+      "rel": "tools/",
+      "indexable": true
+    },
+    {
+      "path": "/en/tools/self-check/",
+      "title": "Practice priority check",
+      "locale": "en",
+      "rel": "tools/self-check/",
+      "indexable": false
+    },
+    {
+      "path": "/en/tools/review/",
+      "title": "Ten-rally video worksheet",
+      "locale": "en",
+      "rel": "tools/review/",
+      "indexable": false
+    },
+    {
+      "path": "/en/about/",
+      "title": "About Picklary",
+      "locale": "en",
+      "rel": "about/",
+      "indexable": true
+    },
+    {
+      "path": "/en/contact/",
+      "title": "Contact the editor",
+      "locale": "en",
+      "rel": "contact/",
+      "indexable": true
+    },
+    {
+      "path": "/en/editorial-policy/",
+      "title": "Editorial method",
+      "locale": "en",
+      "rel": "editorial-policy/",
+      "indexable": true
+    },
+    {
+      "path": "/en/privacy/",
+      "title": "Privacy",
+      "locale": "en",
+      "rel": "privacy/",
+      "indexable": true
+    },
+    {
+      "path": "/en/terms/",
+      "title": "Using Picklary",
+      "locale": "en",
+      "rel": "terms/",
+      "indexable": true
+    },
+    {
+      "path": "/en/corrections/",
+      "title": "Corrections & changes",
+      "locale": "en",
+      "rel": "corrections/",
+      "indexable": true
+    },
+    {
+      "path": "/en/media/",
+      "title": "Image credits",
+      "locale": "en",
+      "rel": "media/",
+      "indexable": false
+    },
+    {
+      "path": "/ko/",
+      "title": "생각하며 치는 피클볼",
+      "locale": "ko",
+      "rel": "",
+      "indexable": true
+    },
+    {
+      "path": "/ko/learn/",
+      "title": "실전에 연결하는 피클볼 가이드",
+      "locale": "ko",
+      "rel": "learn/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/learn/first-session-plan/",
+      "title": "첫 오픈플레이: 규칙보다 먼저 익힐 경기의 흐름",
+      "locale": "ko",
+      "rel": "learn/first-session-plan/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/learn/third-shot-drive-or-drop/",
+      "title": "3구 드라이브인가 드롭인가: 타점으로 결정하기",
+      "locale": "ko",
+      "rel": "learn/third-shot-drive-or-drop/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/learn/transition-reset-footwork/",
+      "title": "트랜지션 리셋은 손보다 발에서 시작됩니다",
+      "locale": "ko",
+      "rel": "learn/transition-reset-footwork/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/learn/purposeful-dinking/",
+      "title": "딩크는 상대에게 질문하는 공입니다",
+      "locale": "ko",
+      "rel": "learn/purposeful-dinking/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/learn/return-depth-and-recovery/",
+      "title": "리턴의 깊이는 다음 한 걸음을 위한 시간입니다",
+      "locale": "ko",
+      "rel": "learn/return-depth-and-recovery/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/learn/offensive-lob/",
+      "title": "공격 로브: 키보다 무게중심을 읽으세요",
+      "locale": "ko",
+      "rel": "learn/offensive-lob/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/learn/paddle-demo-checklist/",
+      "title": "파워만 보지 않는 패들 시타 체크리스트",
+      "locale": "ko",
+      "rel": "learn/paddle-demo-checklist/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/learn/court-shoe-fit-test/",
+      "title": "코트화 피팅: 걷기보다 멈추기를 확인하세요",
+      "locale": "ko",
+      "rel": "learn/court-shoe-fit-test/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/learn/match-review-worksheet/",
+      "title": "10포인트를 보고, 한 가지만 바꾸세요",
+      "locale": "ko",
+      "rel": "learn/match-review-worksheet/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/gear/",
+      "title": "장비 연구실 · Gear Lab",
+      "locale": "ko",
+      "rel": "gear/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/gear/paddles/",
+      "title": "패들 · Gear Lab",
+      "locale": "ko",
+      "rel": "gear/paddles/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/gear/balls/",
+      "title": "공 · Gear Lab",
+      "locale": "ko",
+      "rel": "gear/balls/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/gear/shoes/",
+      "title": "신발 · Gear Lab",
+      "locale": "ko",
+      "rel": "gear/shoes/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/gear/apparel/",
+      "title": "의류 · Gear Lab",
+      "locale": "ko",
+      "rel": "gear/apparel/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/gear/accessories/",
+      "title": "액세서리 · Gear Lab",
+      "locale": "ko",
+      "rel": "gear/accessories/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/tour/",
+      "title": "투어 보드",
+      "locale": "ko",
+      "rel": "tour/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/tour/results/",
+      "title": "대회 경기 결과",
+      "locale": "ko",
+      "rel": "tour/results/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/tour/results/las-vegas-2026/",
+      "title": "Rate Las Vegas Open · 경기 결과",
+      "locale": "ko",
+      "rel": "tour/results/las-vegas-2026/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/tour/results/arizona-2026/",
+      "title": "Veolia Arizona Open · 경기 결과",
+      "locale": "ko",
+      "rel": "tour/results/arizona-2026/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/tour/results/kuala-lumpur-2026/",
+      "title": "PPA Asia Kuala Lumpur Cup · 경기 결과",
+      "locale": "ko",
+      "rel": "tour/results/kuala-lumpur-2026/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/tour/results/mlp-finals-2026/",
+      "title": "MLP Finals · 뉴욕 · 경기 결과",
+      "locale": "ko",
+      "rel": "tour/results/mlp-finals-2026/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/tour/schedule/",
+      "title": "대회 일정",
+      "locale": "ko",
+      "rel": "tour/schedule/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/tour/players/",
+      "title": "선수 관찰 노트",
+      "locale": "ko",
+      "rel": "tour/players/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/tour/rankings/",
+      "title": "랭킹: 기준부터 구분하기",
+      "locale": "ko",
+      "rel": "tour/rankings/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/tools/",
+      "title": "Picklary 도구 전체",
+      "locale": "ko",
+      "rel": "tools/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/tools/self-check/",
+      "title": "연습 우선순위 점검",
+      "locale": "ko",
+      "rel": "tools/self-check/",
+      "indexable": false
+    },
+    {
+      "path": "/ko/tools/review/",
+      "title": "10개 랠리 영상 분석 노트",
+      "locale": "ko",
+      "rel": "tools/review/",
+      "indexable": false
+    },
+    {
+      "path": "/ko/about/",
+      "title": "Picklary 소개",
+      "locale": "ko",
+      "rel": "about/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/contact/",
+      "title": "편집자에게 문의하기",
+      "locale": "ko",
+      "rel": "contact/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/editorial-policy/",
+      "title": "편집 원칙",
+      "locale": "ko",
+      "rel": "editorial-policy/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/privacy/",
+      "title": "개인정보 처리 안내",
+      "locale": "ko",
+      "rel": "privacy/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/terms/",
+      "title": "Picklary 이용 안내",
+      "locale": "ko",
+      "rel": "terms/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/corrections/",
+      "title": "정정과 변경 내역",
+      "locale": "ko",
+      "rel": "corrections/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/media/",
+      "title": "이미지 출처",
+      "locale": "ko",
+      "rel": "media/",
+      "indexable": false
+    },
+    {
+      "path": "/en/level-check/",
+      "title": "Know your game: self-check and video analysis",
+      "locale": "en",
+      "rel": "level-check/",
+      "indexable": true
+    },
+    {
+      "path": "/en/dupr-self-check/",
+      "title": "DUPR Self Check - court decisions",
+      "locale": "en",
+      "rel": "dupr-self-check/",
+      "indexable": true
+    },
+    {
+      "path": "/en/vision-rating/",
+      "title": "Picklary Vision Rating - desktop analysis",
+      "locale": "en",
+      "rel": "vision-rating/",
+      "indexable": true
+    },
+    {
+      "path": "/en/clip-lite/",
+      "title": "Picklary Clip Lite - video editor",
+      "locale": "en",
+      "rel": "clip-lite/",
+      "indexable": true
+    },
+    {
+      "path": "/en/downloads/",
+      "title": "Picklary program downloads",
+      "locale": "en",
+      "rel": "downloads/",
+      "indexable": true
+    },
+    {
+      "path": "/en/video-tools/",
+      "title": "Picklary video tools",
+      "locale": "en",
+      "rel": "video-tools/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/level-check/",
+      "title": "내 실력 확인: 자가진단과 영상 분석",
+      "locale": "ko",
+      "rel": "level-check/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/dupr-self-check/",
+      "title": "DUPR Self Check - 코트 상황 판단",
+      "locale": "ko",
+      "rel": "dupr-self-check/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/vision-rating/",
+      "title": "Picklary Vision Rating - 데스크톱 분석",
+      "locale": "ko",
+      "rel": "vision-rating/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/clip-lite/",
+      "title": "Picklary Clip Lite - 영상 편집기",
+      "locale": "ko",
+      "rel": "clip-lite/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/downloads/",
+      "title": "Picklary 프로그램 다운로드",
+      "locale": "ko",
+      "rel": "downloads/",
+      "indexable": true
+    },
+    {
+      "path": "/ko/video-tools/",
+      "title": "Picklary 영상 도구",
+      "locale": "ko",
+      "rel": "video-tools/",
+      "indexable": true
+    },
+    {
+      "path": "/en/sitemap/",
+      "title": "Site map",
+      "locale": "en",
+      "rel": "sitemap/",
+      "indexable": false
+    },
+    {
+      "path": "/ko/sitemap/",
+      "title": "사이트맵",
+      "locale": "ko",
+      "rel": "sitemap/",
+      "indexable": false
+    }
+  ]
+}

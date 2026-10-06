@@ -1,5 +1,5 @@
 
-/* Picklary Visual UX 1.2.0
+/* Picklary Visual UX 1.2.1
    Loaded after the base and tool sheets. Presentation only; original app selectors remain.
    No automatic carousels, fabricated counters or conversion overlays. */
 :root{
@@ -48,6 +48,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .ux-intro-art>.ux-art{height:230px}
 .ux-intro-art>span{position:absolute;left:20px;bottom:13px;letter-spacing:.13em;font-size:.5rem;font-weight:700;color:#4a7371}
 .ux-intro-art .ux-gear-art{height:250px}
+.ux-intro-art .ux-legacy-shot{height:100%}
+.ux-intro-art .ux-legacy-shot img{object-position:center top}
 .subnav{border:0;padding-block:14px;margin-top:18px;gap:8px;display:flex;flex-wrap:wrap}
 .subnav>a{display:inline-flex;align-items:center;gap:8px;background:white;border:1px solid #dce6e3;padding:10px 15px;font-size:.78rem;border-radius:10px;min-height:44px}
 .subnav>a .ux-icon{width:18px;height:18px}
@@ -77,6 +79,20 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .ux-preview-bottom{background:#e8f4ed;color:#143e39;padding:18px 23px;display:flex;align-items:center;justify-content:space-between;gap:18px}
 .ux-preview-bottom strong{display:block;font-size:.98rem;margin-bottom:6px}
 .ux-preview-bottom small{display:block;color:#526d68;font-size:.58rem;line-height:1.55}
+.ux-legacy-shot{height:100%;position:relative;background:#eef4f3;overflow:hidden}
+.ux-legacy-shot img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top}
+.ux-legacy-shot.is-zoom-mid img{object-position:center 38%}
+.ux-legacy-shot.is-zoom-top img{object-position:center top}
+.ux-legacy-caption{display:none}
+.ux-hero-mosaic{display:grid;gap:16px;min-width:0}
+.ux-hero-main-shot{display:block;background:#163944;border:1px solid #537a79;border-radius:22px;box-shadow:0 25px 65px #00101444;color:white;text-decoration:none;overflow:hidden}
+.ux-hero-main-shot .ux-legacy-shot{height:308px;background:#0f3037}
+.ux-hero-mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.ux-image-tile{display:flex;flex-direction:column;background:#173c45;border:1px solid #355961;border-radius:16px;overflow:hidden;color:white;text-decoration:none;min-width:0;box-shadow:0 12px 28px #00131d1a}
+.ux-image-tile .ux-legacy-shot{height:112px}
+.ux-image-tile>div{padding:11px 12px 14px}
+.ux-image-tile b{display:block;font-size:.88rem;line-height:1.25}
+.ux-image-tile span{display:block;margin-top:4px;font-size:.68rem;line-height:1.5;color:#b9d3d6}
 .ux-art{display:grid;place-items:center;min-width:0;width:100%}
 .ux-art>svg{display:block;width:100%;height:100%;max-height:100%}
 .ux-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:23px}
@@ -85,6 +101,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .ux-feature-link{display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit}
 .ux-feature-visual{height:190px;position:relative;overflow:hidden;border-bottom:1px solid #e0e9e5;background:#e7f5ed;flex:none}
 .ux-feature-visual .ux-art{height:187px;padding:9px 26px}
+.ux-feature-visual .ux-legacy-shot{height:100%}
+.ux-feature-visual .ux-legacy-shot img{object-fit:cover}
 .ux-visual-label{position:absolute;top:14px;left:17px;color:#31564f;font-size:.48rem;letter-spacing:.12em;font-weight:700}
 .ux-feature-body{padding:20px 24px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
 .ux-card-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
@@ -116,6 +134,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .ux-gear-art .media-stage{height:166px!important;background:transparent;overflow:visible}
 .ux-gear-art .object-2 .media-stage{height:132px!important}
 .ux-gear-art img{padding:0;object-fit:contain;background:transparent}
+.ux-menu-gallery{background:#eef4f3;border-block:1px solid #dce7e4}
+.ux-gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.ux-gallery-card{display:flex;flex-direction:column;background:#fff;border:1px solid #d9e4e2;border-radius:18px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:var(--ux-shadow);transition:box-shadow .2s,border-color .2s}
+.ux-gallery-card:hover{box-shadow:0 13px 36px #173c4b17;border-color:#8ac4b1}
+.ux-gallery-card .ux-legacy-shot{height:220px}
+.ux-gallery-card>div{padding:18px 20px 21px}
+.ux-gallery-card strong{display:block;font-size:1.12rem;line-height:1.25}
+.ux-gallery-card p{font-size:.82rem;line-height:1.75;color:#536870;margin:8px 0 0}
 .ux-gear-art .media-fallback{font-size:.4rem;padding:8px}
 .ux-results-section{background:#eaf1f1;border-block:1px solid #dbe5e5}
 .ux-event{padding:0;border-radius:17px;border:1px solid #d7e4e4;background:white;overflow:hidden;box-shadow:0 6px 24px #24444209;min-width:0}
@@ -227,6 +253,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .ux-last-move-panel h2{font-size:2rem;line-height:1.27;margin:15px 0;color:white}
 .ux-last-move-panel p:not(.eyebrow){font-size:.88rem;color:#b9cdd1;margin-bottom:22px}
 .ux-last-move-panel .ux-art{height:255px}
+.ux-last-move-panel .ux-legacy-shot{height:255px;border-radius:18px;overflow:hidden;border:1px solid #34505d;background:#102d36}
+.ux-last-move-panel .ux-legacy-shot img{object-position:center 26%}
 .ux-podium-winner .ux-people{margin-bottom:13px}
 .ux-ranking-person{display:flex;align-items:center;gap:8px;min-width:0}
 .ux-ranking-person .ux-avatar{width:30px;height:35px;border-radius:6px;flex:none}
@@ -462,6 +490,20 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
  .interactive-tool-page .subnav a{font-size:.6rem;padding:7px 9px}
  .interactive-tool-page .subnav a .ux-icon{width:14px;height:14px}
  .interactive-tool-page .page-intro h1{font-size:1.8rem}
+}
+@media(max-width:980px){
+ .ux-hero-mini-grid{grid-template-columns:1fr;}
+ .ux-image-tile{flex-direction:row;align-items:stretch}
+ .ux-image-tile .ux-legacy-shot{width:42%;height:auto;min-height:100%}
+ .ux-image-tile>div{flex:1}
+}
+@media(max-width:720px){
+ .ux-hero-main-shot .ux-legacy-shot{height:210px}
+ .ux-image-tile{flex-direction:column}
+ .ux-image-tile .ux-legacy-shot{width:100%;height:116px}
+ .ux-gallery-grid{grid-template-columns:1fr}
+ .ux-gallery-card .ux-legacy-shot{height:170px}
+ .ux-last-move-panel .ux-legacy-shot{height:186px}
 }
 @media(prefers-reduced-motion:reduce){.ux-feature,.ux-mini-product,.ux-category-strip>a{transition:none}}
 @media print{.ux-mobile-dock{display:none}.ux-home-hero{background:white;color:#000}.ux-feature-grid{grid-template-columns:repeat(2,1fr)}.ux-division-tabs{display:none}.ux-final-panels>[hidden]{display:block!important}.ux-event,.ux-feature{break-inside:avoid}}

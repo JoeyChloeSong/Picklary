@@ -1,0 +1,646 @@
+{
+  "home-court": {
+    "kind": "navigation-illustration",
+    "alt": "Players enjoying a pickleball session",
+    "source": "play-hub-hero.webp",
+    "sourceSha256": "fe76ee5e5c0083cbbf46a741cd41de7a8e0816ea01ae9d8d88ad3c2f1e3b0d58",
+    "crop": [
+      0,
+      128,
+      617,
+      584
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/home-court-480.44faf8cb9d.webp",
+        "width": 480,
+        "height": 355,
+        "bytes": 33356,
+        "sha256": "44faf8cb9d76e5f1b7999c77860d56eb3c7889bcdbaf537c09dbdb4f07a493fc"
+      },
+      {
+        "path": "/assets/menu/v122/home-court-960.8f2445343a.webp",
+        "width": 960,
+        "height": 709,
+        "bytes": 71472,
+        "sha256": "8f2445343a2cec8596c040a854c60821e404634803f95bd09c3b33d4c77f4db3"
+      }
+    ]
+  },
+  "self-check": {
+    "kind": "navigation-illustration",
+    "alt": "Two shot choices on a pickleball court",
+    "source": "posts/third-shot-drop-vs-drive.webp",
+    "sourceSha256": "3f6bd46f2ff8fb5d62cb1b50f152c1a44e083e7d551bf8c773ff82f73876da34",
+    "crop": [
+      0,
+      144,
+      1200,
+      873
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/self-check-480.f5df566bf4.webp",
+        "width": 480,
+        "height": 292,
+        "bytes": 25612,
+        "sha256": "f5df566bf4396d461414434b12bc394bc4661d4fa4e750d9e7c79662b3c5431a"
+      },
+      {
+        "path": "/assets/menu/v122/self-check-960.7dffdb159b.webp",
+        "width": 960,
+        "height": 583,
+        "bytes": 64010,
+        "sha256": "7dffdb159b93774ec2d82a8041a1a3e2f2773ec49ba5ffd5c4ffcd6abfcea6ba"
+      }
+    ]
+  },
+  "video-review": {
+    "kind": "navigation-illustration",
+    "alt": "A video review screen illustration",
+    "source": "insights-dashboard-design.webp",
+    "sourceSha256": "7522fb46df4fe1573afd16447317514cffe95eea2f1e12866d981973c36d13c7",
+    "crop": [
+      513,
+      257,
+      956,
+      539
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/video-review-480.bc4f60b28f.webp",
+        "width": 480,
+        "height": 306,
+        "bytes": 12406,
+        "sha256": "bc4f60b28f9da93ec784a5e451f5bd86968ee5f4275c8284f7ae3d9059590b81"
+      },
+      {
+        "path": "/assets/menu/v122/video-review-960.ff65d22c3c.webp",
+        "width": 960,
+        "height": 611,
+        "bytes": 24138,
+        "sha256": "ff65d22c3c2e642ff134dec12fe4655f81b07e50db47b939f18f912af82a11ce"
+      }
+    ]
+  },
+  "clip-rallies": {
+    "kind": "navigation-illustration",
+    "alt": "A rally on a video review screen",
+    "source": "posts/dupr-balanced-score.webp",
+    "sourceSha256": "b941755f99cc8f935988939c9ad8ba8006b2e974d24d27753cbb753c8038bc6a",
+    "crop": [
+      12,
+      364,
+      1184,
+      645
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/clip-rallies-480.09ed631773.webp",
+        "width": 480,
+        "height": 115,
+        "bytes": 11222,
+        "sha256": "09ed631773dc6b8f9a0c52caf73648319b71186956698e76d5e003e077446aa0"
+      },
+      {
+        "path": "/assets/menu/v122/clip-rallies-960.679e2585e7.webp",
+        "width": 960,
+        "height": 230,
+        "bytes": 29082,
+        "sha256": "679e2585e7cf1f160f183df8537c5528eaf1074cfb93113ffabb380941625664"
+      }
+    ]
+  },
+  "players": {
+    "kind": "navigation-illustration",
+    "alt": "A generic player profile illustration",
+    "source": "pro-scene-dashboard-design.webp",
+    "sourceSha256": "e6efbcc12bc64b027a7b3ceca9073a1df26651acc11add55f3d371b9a0742f09",
+    "crop": [
+      152,
+      154,
+      637,
+      538
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/players-480.d65626ddab.webp",
+        "width": 480,
+        "height": 380,
+        "bytes": 6620,
+        "sha256": "d65626ddab4db99516dd4710761f46fcdf34d2ed821516dfd0b57c10b7075f90"
+      },
+      {
+        "path": "/assets/menu/v122/players-960.a7001acabb.webp",
+        "width": 960,
+        "height": 760,
+        "bytes": 13474,
+        "sha256": "a7001acabb8b90c465589793b2bcc0a48bc508b627b9d76a7c6367c362d35e79"
+      }
+    ]
+  },
+  "results": {
+    "kind": "navigation-illustration",
+    "alt": "A gold tournament trophy",
+    "source": "pro-scene-dashboard-design.webp",
+    "sourceSha256": "e6efbcc12bc64b027a7b3ceca9073a1df26651acc11add55f3d371b9a0742f09",
+    "crop": [
+      760,
+      166,
+      1008,
+      532
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/results-480.02c3253988.webp",
+        "width": 480,
+        "height": 708,
+        "bytes": 14078,
+        "sha256": "02c325398854b5ae46a7f711fe4e144db546f9c3c5ba5fd2694f67ad8f0fecbf"
+      },
+      {
+        "path": "/assets/menu/v122/results-960.d5862abb49.webp",
+        "width": 960,
+        "height": 1417,
+        "bytes": 31238,
+        "sha256": "d5862abb4930cc72b96d12ccc0ed1dab4543da59f126150585e7d333934c2563"
+      }
+    ]
+  },
+  "schedule": {
+    "kind": "navigation-illustration",
+    "alt": "A trophy and calendar illustration",
+    "source": "play-hub-dashboard-design.webp",
+    "sourceSha256": "fdae86b6407d154676cc31fc3daa33bb1482123a1b09b33ed5870927c19907ad",
+    "crop": [
+      74,
+      623,
+      333,
+      932
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/schedule-480.f909ff38d1.webp",
+        "width": 480,
+        "height": 573,
+        "bytes": 12458,
+        "sha256": "f909ff38d147f0a9efa03b6413f811fed5919cdf32bc2dc4325711374b41894e"
+      },
+      {
+        "path": "/assets/menu/v122/schedule-960.661c7cb8cd.webp",
+        "width": 960,
+        "height": 1145,
+        "bytes": 26778,
+        "sha256": "661c7cb8cdfedd4fb707219652bf1b9ead83b957906b9a32d028fc439564eeb2"
+      }
+    ]
+  },
+  "paddles": {
+    "kind": "navigation-illustration",
+    "alt": "A generic paddle illustration",
+    "source": "gear-lab-dashboard-design.webp",
+    "sourceSha256": "08280d20a5f725cef2c408c0d1d8fd4729638ff385408098205f53031de7df53",
+    "crop": [
+      560,
+      60,
+      849,
+      427
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/paddles-480.6cf00ab2ff.webp",
+        "width": 480,
+        "height": 610,
+        "bytes": 11268,
+        "sha256": "6cf00ab2ff247253f7918ddda015133fa8fbda09f54db5084f68705a5547f026"
+      },
+      {
+        "path": "/assets/menu/v122/paddles-960.f57b0920a2.webp",
+        "width": 960,
+        "height": 1219,
+        "bytes": 25470,
+        "sha256": "f57b0920a2499816abb3468998e7c90d45d9a61ac6a58d2c6158aebcb21492d5"
+      }
+    ]
+  },
+  "balls": {
+    "kind": "navigation-illustration",
+    "alt": "Two pickleballs beside a net",
+    "source": "gear-lab-dashboard-design.webp",
+    "sourceSha256": "08280d20a5f725cef2c408c0d1d8fd4729638ff385408098205f53031de7df53",
+    "crop": [
+      146,
+      820,
+      332,
+      992
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/balls-480.08a29620d5.webp",
+        "width": 480,
+        "height": 444,
+        "bytes": 10134,
+        "sha256": "08a29620d5b9090797f66a95e95a53dabe7d69c93e7d4a089d273ed8328cec23"
+      },
+      {
+        "path": "/assets/menu/v122/balls-960.f88ce2caf3.webp",
+        "width": 960,
+        "height": 888,
+        "bytes": 22256,
+        "sha256": "f88ce2caf3120d446ab9c486173189698b0649e00a201f0da066a552b4135e97"
+      }
+    ]
+  },
+  "shoes": {
+    "kind": "navigation-illustration",
+    "alt": "A generic court shoe illustration",
+    "source": "gear-lab-dashboard-design.webp",
+    "sourceSha256": "08280d20a5f725cef2c408c0d1d8fd4729638ff385408098205f53031de7df53",
+    "crop": [
+      944,
+      152,
+      1348,
+      413
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/shoes-480.39852ec63b.webp",
+        "width": 480,
+        "height": 310,
+        "bytes": 14046,
+        "sha256": "39852ec63b66f12d34e363986c63302e1f3dc302ae2728d8fea89e570e08ab04"
+      },
+      {
+        "path": "/assets/menu/v122/shoes-960.52b0702b84.webp",
+        "width": 960,
+        "height": 620,
+        "bytes": 29120,
+        "sha256": "52b0702b84167abe48127dd0a37f6c0c24ce8445445c55fa5ac6b44dfc816f92"
+      }
+    ]
+  },
+  "apparel": {
+    "kind": "navigation-illustration",
+    "alt": "A court shirt and skirt illustration",
+    "source": "gear-lab-dashboard-design.webp",
+    "sourceSha256": "08280d20a5f725cef2c408c0d1d8fd4729638ff385408098205f53031de7df53",
+    "crop": [
+      562,
+      594,
+      877,
+      940
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/apparel-480.a988584954.webp",
+        "width": 480,
+        "height": 527,
+        "bytes": 10846,
+        "sha256": "a988584954f7f0888617fea2261ba5239d03aebde3eb5cce10f38a4ec4b8011f"
+      },
+      {
+        "path": "/assets/menu/v122/apparel-960.4b27fc8873.webp",
+        "width": 960,
+        "height": 1054,
+        "bytes": 23612,
+        "sha256": "4b27fc8873c283b8d1efc91b0bb70a4d0b3d9f804899cf1f10551c1bae8495c7"
+      }
+    ]
+  },
+  "accessories": {
+    "kind": "navigation-illustration",
+    "alt": "A gear bag, water bottle and towel",
+    "source": "gear-lab-dashboard-design.webp",
+    "sourceSha256": "08280d20a5f725cef2c408c0d1d8fd4729638ff385408098205f53031de7df53",
+    "crop": [
+      953,
+      594,
+      1354,
+      929
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/accessories-480.4115ebf1f9.webp",
+        "width": 480,
+        "height": 401,
+        "bytes": 17224,
+        "sha256": "4115ebf1f98baafeac7499eaaa484659c87aff0d05cad4ab1278b1b27e78715d"
+      },
+      {
+        "path": "/assets/menu/v122/accessories-960.3d1d0ea1a1.webp",
+        "width": 960,
+        "height": 802,
+        "bytes": 33692,
+        "sha256": "3d1d0ea1a1578b339f248152f007030860c7b258b3493c0c14775bce1561ba7c"
+      }
+    ]
+  },
+  "downloads": {
+    "kind": "navigation-illustration",
+    "alt": "An illustrated app window and link",
+    "source": "insights-dashboard-design.webp",
+    "sourceSha256": "7522fb46df4fe1573afd16447317514cffe95eea2f1e12866d981973c36d13c7",
+    "crop": [
+      986,
+      253,
+      1216,
+      543
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/downloads-480.7ca64e9766.webp",
+        "width": 480,
+        "height": 605,
+        "bytes": 16014,
+        "sha256": "7ca64e9766977bfbefdd4d825a37fb5491288af363071a1a7950980f5351da0c"
+      },
+      {
+        "path": "/assets/menu/v122/downloads-960.54c09ee75c.webp",
+        "width": 960,
+        "height": 1210,
+        "bytes": 34316,
+        "sha256": "54c09ee75c639caf9b0e0ffddfd60b5ead11af41f01f007daa7343a805eb929f"
+      }
+    ]
+  },
+  "serve": {
+    "kind": "navigation-illustration",
+    "alt": "A serve illustrated with a paddle and ball",
+    "source": "level-up-dashboard-design.webp",
+    "sourceSha256": "c5ede90f45f8fce798b2c73856b6cbd4aff26d0229596e3f96a1851156abb328",
+    "crop": [
+      29,
+      652,
+      200,
+      860
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/serve-480.26db295634.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 10872,
+        "sha256": "26db2956348d6c6ca17aa6804497609477919bf0544523fa41fe3eae751797dd"
+      },
+      {
+        "path": "/assets/menu/v122/serve-960.56386e0137.webp",
+        "width": 960,
+        "height": 1168,
+        "bytes": 24402,
+        "sha256": "56386e01370414363b39228513f4ba25689c88be83cc5868ec7e5599988148ff"
+      }
+    ]
+  },
+  "return": {
+    "kind": "navigation-illustration",
+    "alt": "A return illustrated with a paddle",
+    "source": "level-up-dashboard-design.webp",
+    "sourceSha256": "c5ede90f45f8fce798b2c73856b6cbd4aff26d0229596e3f96a1851156abb328",
+    "crop": [
+      237,
+      653,
+      408,
+      858
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/return-480.8739538b56.webp",
+        "width": 480,
+        "height": 575,
+        "bytes": 8710,
+        "sha256": "8739538b56e2293a4d5990ad25c67f74a5cf34aa6eddc53d3a7913aab9b63447"
+      },
+      {
+        "path": "/assets/menu/v122/return-960.f7f7693312.webp",
+        "width": 960,
+        "height": 1151,
+        "bytes": 20038,
+        "sha256": "f7f7693312edc3ec459b1faf5b57de7d1a8a7040c2edf7ed9fd29547e82324c4"
+      }
+    ]
+  },
+  "dink": {
+    "kind": "navigation-illustration",
+    "alt": "A dink illustrated with a paddle and ball",
+    "source": "level-up-dashboard-design.webp",
+    "sourceSha256": "c5ede90f45f8fce798b2c73856b6cbd4aff26d0229596e3f96a1851156abb328",
+    "crop": [
+      453,
+      652,
+      610,
+      858
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/dink-480.5103b72eb6.webp",
+        "width": 480,
+        "height": 630,
+        "bytes": 10856,
+        "sha256": "5103b72eb676b185b6b2a6cb464f22724d86b1defb94a54d996da431850bddbf"
+      },
+      {
+        "path": "/assets/menu/v122/dink-960.b1aa37efe5.webp",
+        "width": 960,
+        "height": 1260,
+        "bytes": 24616,
+        "sha256": "b1aa37efe59774c50fb546ab10711db194e1db20b46df9e72286ed6e00f4457d"
+      }
+    ]
+  },
+  "drop": {
+    "kind": "navigation-illustration",
+    "alt": "A drop shot illustration",
+    "source": "level-up-dashboard-design.webp",
+    "sourceSha256": "c5ede90f45f8fce798b2c73856b6cbd4aff26d0229596e3f96a1851156abb328",
+    "crop": [
+      657,
+      662,
+      818,
+      857
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/drop-480.20b248e79b.webp",
+        "width": 480,
+        "height": 581,
+        "bytes": 11098,
+        "sha256": "20b248e79b4a2c3a28271cf426f403b4fa91f9e7ab25aa544e6ee89db738bd1f"
+      },
+      {
+        "path": "/assets/menu/v122/drop-960.63309751d3.webp",
+        "width": 960,
+        "height": 1163,
+        "bytes": 24960,
+        "sha256": "63309751d3ef959b192f9d61454e65ab7260592e8cb3cda716b4e822e5c0efaf"
+      }
+    ]
+  },
+  "reset": {
+    "kind": "navigation-illustration",
+    "alt": "A reset illustrated with a paddle",
+    "source": "level-up-dashboard-design.webp",
+    "sourceSha256": "c5ede90f45f8fce798b2c73856b6cbd4aff26d0229596e3f96a1851156abb328",
+    "crop": [
+      863,
+      652,
+      1021,
+      858
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/reset-480.06cb9490a4.webp",
+        "width": 480,
+        "height": 626,
+        "bytes": 11196,
+        "sha256": "06cb9490a4999943ff28a0b215ef62457c946e75a649a0c9dafd9caddcea46b7"
+      },
+      {
+        "path": "/assets/menu/v122/reset-960.d75e7018e6.webp",
+        "width": 960,
+        "height": 1252,
+        "bytes": 25192,
+        "sha256": "d75e7018e62fd707c9e7ede96e8d75e79b52ec140ae9f230ef17cf9e84b183a7"
+      }
+    ]
+  },
+  "position": {
+    "kind": "navigation-illustration",
+    "alt": "Court positioning illustration",
+    "source": "level-up-dashboard-design.webp",
+    "sourceSha256": "c5ede90f45f8fce798b2c73856b6cbd4aff26d0229596e3f96a1851156abb328",
+    "crop": [
+      1061,
+      657,
+      1224,
+      867
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/position-480.2d1b472a3f.webp",
+        "width": 480,
+        "height": 618,
+        "bytes": 11182,
+        "sha256": "2d1b472a3f21a881aa4ea278a9221f94f3550577d3837008ae0a67750d2fa087"
+      },
+      {
+        "path": "/assets/menu/v122/position-960.5c9313f33c.webp",
+        "width": 960,
+        "height": 1237,
+        "bytes": 24492,
+        "sha256": "5c9313f33c6b0ec59f2c220b906eb897cd8d51f1d42485fa2c8bdaa6aa360d3f"
+      }
+    ]
+  },
+  "confidence": {
+    "kind": "navigation-illustration",
+    "alt": "Learning and improvement illustration",
+    "source": "level-up-dashboard-design.webp",
+    "sourceSha256": "c5ede90f45f8fce798b2c73856b6cbd4aff26d0229596e3f96a1851156abb328",
+    "crop": [
+      1268,
+      658,
+      1428,
+      856
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/confidence-480.254de3c3f5.webp",
+        "width": 480,
+        "height": 594,
+        "bytes": 6524,
+        "sha256": "254de3c3f53bf93c53d51b52a6d9f6f48c78396f903942ce614528ef62f48639"
+      },
+      {
+        "path": "/assets/menu/v122/confidence-960.a41107c0a5.webp",
+        "width": 960,
+        "height": 1188,
+        "bytes": 15642,
+        "sha256": "a41107c0a5086071027de6a86219cfec4b400e72a31dd76b0c971f7985d1026c"
+      }
+    ]
+  },
+  "guide-reset": {
+    "kind": "navigation-illustration",
+    "alt": "A player preparing a low reset",
+    "source": "posts/backhand-reset-soft-control.webp",
+    "sourceSha256": "df8c8aa9f1c834176255e94ca9667da112d7e1f2e8c0a42a2547757164d82e99",
+    "crop": [
+      20,
+      306,
+      1176,
+      709
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/guide-reset-480.5e9305d18a.webp",
+        "width": 480,
+        "height": 167,
+        "bytes": 14560,
+        "sha256": "5e9305d18a19e98a4d4c6afed64fa9afd67af2e39b461da5b3c0d77a2dbaa9ec"
+      },
+      {
+        "path": "/assets/menu/v122/guide-reset-960.bd86e40695.webp",
+        "width": 960,
+        "height": 335,
+        "bytes": 35364,
+        "sha256": "bd86e406951d2c38f90b5d69ed586a8ac59b3b35badbcd34f7a0ef6cd2ff5549"
+      }
+    ]
+  },
+  "guide-dink": {
+    "kind": "navigation-illustration",
+    "alt": "A controlled dink exchange",
+    "source": "posts/dink-rally-consistency.webp",
+    "sourceSha256": "661bad94fcf2f643887992782637a0dbb5705d97ee8d4462238b586697d68345",
+    "crop": [
+      18,
+      238,
+      1188,
+      734
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/guide-dink-480.65a8ab5dd4.webp",
+        "width": 480,
+        "height": 203,
+        "bytes": 16628,
+        "sha256": "65a8ab5dd4a46b0a6709d1dbb5473eb4cbde5117733e2b78a7f9cb743e29986d"
+      },
+      {
+        "path": "/assets/menu/v122/guide-dink-960.6e4e963e93.webp",
+        "width": 960,
+        "height": 407,
+        "bytes": 42064,
+        "sha256": "6e4e963e93a0e28821eb773df9149768445be05179f966a2d3ab38b99afb6838"
+      }
+    ]
+  },
+  "guide-position": {
+    "kind": "navigation-illustration",
+    "alt": "Players covering the middle of the court",
+    "source": "posts/doubles-middle-ball.webp",
+    "sourceSha256": "20d30edadac7de253e909ba4384e27031352176de0b99f01bb2bdab1b8840a40",
+    "crop": [
+      16,
+      160,
+      1182,
+      720
+    ],
+    "variants": [
+      {
+        "path": "/assets/menu/v122/guide-position-480.9da7885566.webp",
+        "width": 480,
+        "height": 231,
+        "bytes": 19000,
+        "sha256": "9da788556687b4239aff35a56ba2608384487e3123638b7d4689893b7253c767"
+      },
+      {
+        "path": "/assets/menu/v122/guide-position-960.d27c4334dc.webp",
+        "width": 960,
+        "height": 461,
+        "bytes": 49050,
+        "sha256": "d27c4334dc199d14484323af280567006dd890f32474270e5cd51f7cb450ed5d"
+      }
+    ]
+  }
+}

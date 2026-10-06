@@ -1,0 +1,10 @@
+{
+  "version": "1.2.0",
+  "status": "PASS",
+  "command": "npm run check",
+  "originalToolUnitTests": 24,
+  "newVisualAndPreservationTests": 8,
+  "preservedSourceFiles": 18,
+  "evidence": "npm-check-output.txt",
+  "scope": "Node tests and static validation. Browser, Windows and final encoder execution are separate."
+}

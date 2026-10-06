@@ -1,0 +1,23 @@
+{
+  "baseline": "Picklary_v1.1.0_GITHUB_SOURCE.zip",
+  "sha256": {
+    "public/assets/tools/self-check.js": "c7c9384e1b7c7eacb2dab34a578adc2bc3228f174501819768e2d56ccd6ebae1",
+    "public/assets/tools/clip-editor.js": "f909a8d86c99d8aaba37b4b1f6c9befb92c3b0f8abccb814de554d38fc715562",
+    "public/assets/tools/ffmpeg-engine.js": "7c927cacd5519818cd165376687060643b1f39771ed83b3ca8d68308db3fe873",
+    "public/assets/tools/ffmpeg-worker.js": "c32bfc4d90e4d8cc110f04c0bdc65ff90d3e0c88ee6d095d323618da1d3b48d0",
+    "public/assets/tools/zip-store.js": "001f5d6f69ec417156b15904803b231de830a2183650a438a4f04b84bdcd5119",
+    "data/self-check-en.json": "9dad1ac425a0e9a86d657eeac41ef5a9849472520eedbbc41e51baecb67af0d5",
+    "data/self-check-ko.json": "6b3af18a47d4deebc9e0a4d73153798fd8164681b3e58f3ea2b2d8baba24bc2f",
+    "data/clip-config-en.json": "7be720d714af3e6d0e20afab10c2619fa7ebac59ede81ffd08e0bc1fa2944d2b",
+    "data/clip-config-ko.json": "07d2146f55f2952d297a183d6237afae774e5a5736cf0e37eca2330602c5f05a",
+    "templates/self-check-en.html": "fa17baf1ef78544ae8a3c3ded9a27a62ccd505ad34c501c6916fd12fa7f6f132",
+    "templates/self-check-ko.html": "e0711896b77c04ea36ba6479113902b5a0b149ea1c588af455fd066485ea6061",
+    "templates/clip-editor-en.html": "aa797a9613f378b9cb5f0af038e43fb61c8efbbd7befec3453991360ae07b970",
+    "templates/clip-editor-ko.html": "e9646192692b088ef8ce654b9acec299e6a19d87d1e61980a2696921cf02622f",
+    "data/results.json": "cf6156791ad1c2f45e46228652c1727fc9fee336ee27ddcdded39b4db20423d9",
+    "data/rankings.json": "c61eb82a0f60af317e2ccf3db838a2ab0402890c5fe251ee371f82b1964de138",
+    "data/media.json": "1952b2c71d1e0f41ec1eaf333eb899d03886dee9bdc7438eca8f8b3c38d53916",
+    "data/products.json": "ac2f68a2c28e59fe2b24c6a261cf74e110983fae55eef57c0e9d8889c654b066",
+    "data/players.json": "22708e78b0719aa08b681b68ae0eff7ae95e4f5b7fef163b9ef8d9e260c7bb6b"
+  }
+}

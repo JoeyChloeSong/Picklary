@@ -53,8 +53,8 @@
       "name": "Video and transport separate 1440",
       "ok": true,
       "detail": {
-        "bottom": 1110.46875,
-        "top": 1124.46875
+        "bottom": 1084.40625,
+        "top": 1098.40625
       }
     },
     {
@@ -109,8 +109,8 @@
       "name": "Schedule stats below hero 1440",
       "ok": true,
       "detail": {
-        "bottom": 590.765625,
-        "top": 622.765625
+        "bottom": 536.484375,
+        "top": 574.484375
       }
     },
     {
@@ -165,8 +165,8 @@
       "name": "Video and transport separate 1024",
       "ok": true,
       "detail": {
-        "bottom": 1095.5625,
-        "top": 1109.5625
+        "bottom": 1069.5,
+        "top": 1083.5
       }
     },
     {
@@ -221,8 +221,8 @@
       "name": "Schedule stats below hero 1024",
       "ok": true,
       "detail": {
-        "bottom": 590.765625,
-        "top": 622.765625
+        "bottom": 536.484375,
+        "top": 574.484375
       }
     },
     {
@@ -277,8 +277,8 @@
       "name": "Video and transport separate 768",
       "ok": true,
       "detail": {
-        "bottom": 945.71875,
-        "top": 959.71875
+        "bottom": 915.65625,
+        "top": 929.65625
       }
     },
     {
@@ -333,8 +333,8 @@
       "name": "Schedule stats below hero 768",
       "ok": true,
       "detail": {
-        "bottom": 572.765625,
-        "top": 604.765625
+        "bottom": 586.046875,
+        "top": 624.046875
       }
     },
     {
@@ -389,8 +389,8 @@
       "name": "Video and transport separate 390",
       "ok": true,
       "detail": {
-        "bottom": 887.5,
-        "top": 901.5
+        "bottom": 830.875,
+        "top": 844.875
       }
     },
     {
@@ -445,8 +445,8 @@
       "name": "Schedule stats below hero 390",
       "ok": true,
       "detail": {
-        "bottom": 838.890625,
-        "top": 863.890625
+        "bottom": 792.046875,
+        "top": 817.046875
       }
     },
     {
@@ -501,8 +501,8 @@
       "name": "Video and transport separate 360",
       "ok": true,
       "detail": {
-        "bottom": 883.609375,
-        "top": 897.609375
+        "bottom": 849.296875,
+        "top": 863.296875
       }
     },
     {
@@ -557,8 +557,8 @@
       "name": "Schedule stats below hero 360",
       "ok": true,
       "detail": {
-        "bottom": 838.890625,
-        "top": 863.890625
+        "bottom": 901.234375,
+        "top": 926.234375
       }
     },
     {

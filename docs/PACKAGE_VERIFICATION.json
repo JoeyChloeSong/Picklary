@@ -1,0 +1,31 @@
+{
+  "version": "1.2.0",
+  "status": "PASS",
+  "sourceArchiveExtractedAndBuilt": true,
+  "freshBuildCommand": "npm run check",
+  "freshHtmlFiles": 88,
+  "freshSitemapUrls": 78,
+  "freshInternalReferences": 4272,
+  "freshPathErrors": 0,
+  "freshToolTests": 24,
+  "freshVisualTests": 8,
+  "netlifyArchiveHasDistContentsAtRoot": true,
+  "sourceArchiveHasPackageJsonAtRoot": true,
+  "fontFilesIncluded": 0,
+  "environmentSecretFilesIncluded": 0,
+  "nestedDownloads": [
+    {
+      "file": "Picklary_Clip_Web_v1.2.0_Local.zip",
+      "crc": "PASS",
+      "entries": 17,
+      "localStyleAndScriptReferencesChecked": 12
+    },
+    {
+      "file": "Picklary_Vision_v0.2.4_Docs_Only.zip",
+      "crc": "PASS",
+      "entries": 7,
+      "localStyleAndScriptReferencesChecked": 0
+    }
+  ],
+  "scope": "Archive integrity, local references, clean source build. No deployment or actual browser video encoding."
+}

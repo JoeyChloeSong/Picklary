@@ -33,7 +33,7 @@ for(const lang of ['en','ko']){
  test(lang+': core tool routes render real controls and disclosures',()=>{
   const q=read('dist/'+lang+'/dupr-self-check/index.html');assert.match(q,/data-dupr-quiz/);assert.match(q,/dupr-quiz-data/);assert.match(q,/data-save-assessment/);assert.match(q,/self-check\.[a-f0-9]+\.js/);
   const c=read('dist/'+lang+'/clip-lite/index.html');for(const id of ['workspace','video','videoInput','markIn','markOut','addDirect','exportBtn','cutsList'])assert.ok(c.includes('id="'+id+'"'),id);
-  assert.ok(c.includes('clip-editor.'));assert.ok(c.includes('Picklary_Clip_Web_v1.1.0_Local.zip'));
+  assert.ok(c.includes('clip-editor.'));assert.ok(c.includes('Picklary_Clip_Web_v1.2.0_Local.zip'));
   const v=read('dist/'+lang+'/vision-rating/index.html');assert.ok(v.includes('127.0.0.1:8865/'));assert.ok(v.includes('Picklary_Vision_v0.2.4_Docs_Only.zip'));
  });
 }
@@ -52,7 +52,7 @@ test('Old original URLs do not send users to the manual worksheet',()=>{
 test('Download buttons exist only for packaged bytes; missing native packages are not docs',()=>{
  const dist=read('dist/en/downloads/index.html');
  for(const row of json('data/app-releases.json'))if(!row.reviewed||!fs.existsSync(path.join(ROOT,'releases',row.file)))assert.ok(!dist.includes('href="/downloads/'+row.file+'"'));
- assert.ok(dist.includes('Picklary_Clip_Web_v1.1.0_Local.zip'));assert.ok(dist.includes('Picklary_Vision_v0.2.4_Docs_Only.zip'));
+ assert.ok(dist.includes('Picklary_Clip_Web_v1.2.0_Local.zip'));assert.ok(dist.includes('Picklary_Vision_v0.2.4_Docs_Only.zip'));
 });
 test('No ad-request scripts are present in the restored apps',()=>{
  for(const lang of ['en','ko'])for(const rel of ['clip-lite','dupr-self-check','vision-rating','downloads']){

@@ -1,8 +1,16 @@
-# Picklary v1.1.0 - restored tools
+# Picklary v1.2.0 - visual navigation, original tools retained
 
 **Korean / English. GitHub source with a Netlify static build.**
 
-## What this release restores
+## Visual upgrade
+Photo-first categories, six visual entry cards, score tabs with source-derived results,
+icon-labeled navigation, mobile quick access, and brand chips synchronized with filters.
+See `docs/VISUAL_UX_V1_KO.md` and `docs/RELEASE_AUDIT.md`.
+
+The app calculation, video engine, original tool templates, and editorial datasets are preserved
+byte-for-byte in 18 baseline files. See `docs/V1_1_SOURCE_PRESERVATION.json`.
+
+## Included features
 
 | Area | Included and working in the website | Not included / not claimed |
 |---|---|---|
@@ -42,7 +50,7 @@ Node: 22
 
 Use a preview branch/deploy first. This task creates files; it does not push to GitHub or deploy to picklary.com.
 
-`npm run check` builds fully rendered HTML, validates internal paths, redirects and metadata, and executes 24 tool unit/contract tests. `.github/workflows/ci.yml` runs that check and makes a deployable `dist` artifact. It does not claim browser encoding or Windows testing.
+`npm run check` builds fully rendered HTML, validates internal paths, redirects and metadata, and executes 24 tool unit/contract tests plus 8 visual-structure/source-preservation tests. `.github/workflows/ci.yml` runs that check and makes a deployable `dist` artifact. It does not claim browser encoding or Windows testing.
 
 ## Restored public routes
 
@@ -100,7 +108,7 @@ The helper does NOT execute archives. It checks ZIP paths and expected applicati
 
 ## Sharing the web editor locally
 
-The build creates `dist/downloads/Picklary_Clip_Web_v1.1.0_Local.zip`. This is an actual local BROWSER edition, not the native Windows suite. Extract it and use `START_WINDOWS.bat` or `node server.mjs` after installing Node.js 22+. It listens only on `127.0.0.1:8877`. Engine first-use download requirements still apply.
+The build creates `dist/downloads/Picklary_Clip_Web_v1.2.0_Local.zip`. This is an actual local BROWSER edition, not the native Windows suite. Extract it and use `START_WINDOWS.bat` or `node server.mjs` after installing Node.js 22+. It listens only on `127.0.0.1:8877`. Engine first-use download requirements still apply.
 
 The Vision documentation download is named `Picklary_Vision_v0.2.4_Docs_Only.zip`. It includes original guides and illustrative reports, NOT a model, installer or a result of the user's video.
 

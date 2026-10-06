@@ -18,12 +18,13 @@ export function loadReleases(ROOT,OUT){
 }
 
 export function restoredTools(C){
- const {ROOT,OUT,page,intro,T,esc,url,button,site,toolCss,selfJs,clipJs}=C;
+ const {ROOT,OUT,page,intro,T,esc,url,button,site,toolCss,selfJs,clipJs,visual}=C;
  const releases=loadReleases(ROOT,OUT);
- const pack='Picklary_Clip_Web_v1.1.0_Local.zip';
+ const pack='Picklary_Clip_Web_v1.2.0_Local.zip';
  const langName=(l,x)=>x==='both'?T(l,'Korean + English','\ud55c\uad6d\uc5b4 + English'):x==='ko'?'\ud55c\uad6d\uc5b4':'English';
- const nav=(l,active)=>`<nav class="subnav" aria-label="Picklary tools">${[['level-check/','Skill tools','\ub0b4 \uc2e4\ub825 \ud655\uc778'],['dupr-self-check/','DUPR Self Check','DUPR \uc790\uac00\uc9c4\ub2e8'],['vision-rating/','Vision Rating','Vision Rating'],['clip-lite/','Clip Lite','Clip Lite'],['downloads/','Downloads','\ub2e4\uc6b4\ub85c\ub4dc']].map(([p,en,ko])=>`<a href="${url(l,p)}" ${p===active?'aria-current="page"':''}>${T(l,en,ko)}</a>`).join('')}</nav>`;
- const card=(l,n,p,title,body,state)=>`<article class="restored-card"><div class="card-top"><span class="tool-number">${n}</span><span class="pill">${state}</span></div><h2>${title}</h2><p>${body}</p><a class="button secondary" href="${url(l,p)}">${T(l,'Open','\uc5f4\uae30')} \u2197</a></article>`;
+ const nav=(l,active)=>`<nav class="subnav" aria-label="Picklary tools">${[['level-check/','Skill tools','\ub0b4 \uc2e4\ub825 \ud655\uc778'],['dupr-self-check/','DUPR Self Check','DUPR \uc790\uac00\uc9c4\ub2e8'],['vision-rating/','Vision Rating','Vision Rating'],['clip-lite/','Clip Lite','Clip Lite'],['downloads/','Downloads','\ub2e4\uc6b4\ub85c\ub4dc']].map(([p,en,ko])=>`<a href="${url(l,p)}" ${p===active?'aria-current="page"':''}>${visual.navIcon(l,p)}<span>${T(l,en,ko)}</span></a>`).join('')}</nav>`;
+
+ const card=(l,n,p,title,body,state)=>visual.toolCard(l,n,p,title,body,state);
  for(const l of site.locales){
   const ko=l==='ko';
   page(l,'level-check/',T(l,'Know your game: self-check and video analysis','\ub0b4 \uc2e4\ub825 \ud655\uc778: \uc790\uac00\uc9c4\ub2e8\uacfc \uc601\uc0c1 \ubd84\uc11d'),

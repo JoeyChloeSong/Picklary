@@ -1,3 +1,4 @@
+import {createVisualUX} from './visual-ux.mjs';
 import {restoredTools} from './restored-tools.mjs';
 import {packageTools} from './package-tools.mjs';
 import fs from 'node:fs';
@@ -24,6 +25,7 @@ const asset=(folder,name)=>{
  return '/assets/'+folder+'/'+file;
 };
 const css=asset('css','site.css'), js=asset('js','site.js');
+const visualCss=asset('css','visual.css'),visualJs=asset('js','visual.js');
 const toolCss=asset('tools','tools.css'),selfJs=asset('tools','self-check.js'),clipJs=asset('tools','clip-editor.js');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const T=(l,en,ko)=>l==='ko'?ko:en;
@@ -41,6 +43,7 @@ const divLabels={
  MD:{en:"Men’s doubles",ko:'남자 복식'},WD:{en:"Women’s doubles",ko:'여자 복식'},
  XD:{en:'Mixed doubles',ko:'혼합복식'},TEAM:{en:'Team series',ko:'팀 시리즈'}
 };
+const V=createVisualUX({T,esc,text,url,photo,ref,players,products,events,guides,site,catLabels,divLabels});
 function ref(l,id,label){
  const s=sources[id]; if(!s)throw new Error('Unknown source '+id);
  return `<a class="source-link" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(label||s.title)} <span aria-hidden="true">↗</span></a>`;
@@ -54,7 +57,7 @@ function photo(l,id,cls='',eager=false,caption=true){
  const local=cache[id]?.path||m.local;
  const src=local&&fs.existsSync(path.join(OUT,local))?local:m.url;
  if(!src)throw new Error('Missing photo '+id);
- return `<figure class="media ${cls}" data-media="${esc(id)}"><div class="media-stage"><img src="${esc(src)}" alt="${esc(m.subject)}" width="${m.kind==='athlete'?640:700}" height="${m.kind==='athlete'?800:700}" loading="${eager?'eager':'lazy'}" decoding="async" ${eager?'fetchpriority="high"':''} referrerpolicy="no-referrer"><span class="media-fallback" hidden>${T(l,'Image unavailable from its source.','원본 출처의 이미지를 불러오지 못했습니다.')}<small>${esc(m.subject)}</small></span></div>${caption?`<figcaption>${ref(l,m.source,T(l,'Image source','사진 출처'))}</figcaption>`:''}</figure>`;
+ return `<figure class="media ${cls}" data-media="${esc(id)}"><div class="media-stage"><img src="${esc(src)}" alt="${esc(m.subject)}" width="${m.kind==='athlete'?640:700}" height="${m.kind==='athlete'?800:700}" loading="${eager?'eager':'lazy'}" decoding="async" ${eager?'fetchpriority="high"':''} referrerpolicy="no-referrer"><span class="media-fallback" hidden>${m.kind==='athlete'?V.icon('user'):V.navIcon(l,'gear/'+(products.find(p=>p.media===id)?.category||'paddles')+'/')}${T(l,'Image unavailable from its source.','원본 출처의 이미지를 불러오지 못했습니다.')}<small>${esc(m.subject)}</small></span></div>${caption?`<figcaption>${ref(l,m.source,T(l,'Image source','사진 출처'))}</figcaption>`:''}</figure>`;
 }
 function pill(s,cls=''){return `<span class="pill ${cls}">${esc(s)}</span>`}
 function button(l,rel,en,ko,cls=''){return `<a class="button ${cls}" href="${url(l,rel)}">${T(l,en,ko)} <span aria-hidden="true">↗</span></a>`}
@@ -62,16 +65,16 @@ function tourNav(l,active=''){
  return `<nav class="subnav" aria-label="${T(l,'Tour Board','투어 보드')}">${[
  ['tour/','Board','투어 보드'],['tour/results/','Results','경기 결과'],['tour/schedule/','Events & schedule','대회 일정'],
  ['tour/players/','Players','선수'],['tour/rankings/','Rankings','랭킹']
- ].map(([p,en,ko])=>`<a href="${url(l,p)}" ${active===p?'aria-current="page"':''}>${T(l,en,ko)}</a>`).join('')}</nav>`;
+ ].map(([p,en,ko])=>`<a href="${url(l,p)}" ${active===p?'aria-current="page"':''}>${V.navIcon(l,p)}<span>${T(l,en,ko)}</span></a>`).join('')}</nav>`;
 }
-function gearNav(l,active=''){return `<nav class="subnav" aria-label="${T(l,'Gear categories','장비 종류')}">${Object.entries(catLabels).map(([k,v])=>`<a href="${url(l,'gear/'+k+'/')}" ${active===k?'aria-current="page"':''}>${esc(text(l,v))}</a>`).join('')}</nav>`}
+function gearNav(l,active=''){return `<nav class="subnav" aria-label="${T(l,'Gear categories','장비 종류')}">${Object.entries(catLabels).map(([k,v])=>`<a href="${url(l,'gear/'+k+'/')}" ${active===k?'aria-current="page"':''}>${V.navIcon(l,'gear/'+k+'/')}<span>${esc(text(l,v))}</span></a>`).join('')}</nav>`}
 function header(l,rel){
  const nav=[['','Home','\ud648'],['level-check/','Skill tools','\ub0b4 \uc2e4\ub825 \ud655\uc778'],['video-tools/','Video tools','\uc601\uc0c1 \ub3c4\uad6c'],['learn/','Learn','\ubc30\uc6b0\uae30'],['gear/','Gear Lab','Gear Lab'],['tour/','Tour Board','Tour Board']];
  const other=l==='ko'?'en':'ko';
- return `<div class="edition"><div class="wrap"><span>INDEPENDENT PICKLEBALL JOURNAL</span><span>${T(l,'Edition 01','에디션 01')} · ${D(site.editorialDate)}</span></div></div>
+ return `<div class="edition"><div class="wrap"><span>PLAY · REVIEW · IMPROVE</span><span>${T(l,'Editorial snapshot','콘텐츠 기준일')} · ${D(site.editorialDate)}</span></div></div>
  <header class="site-header"><div class="wrap header-inner"><a class="brand" href="${url(l)}" aria-label="Picklary ${T(l,'home','홈')}"><span class="brand-icon" aria-hidden="true">p.</span>Picklary<span class="brand-dot">●</span></a>
  <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">${T(l,'Menu','메뉴')}</button>
- <nav id="primary-nav" aria-label="${T(l,'Primary navigation','주 메뉴')}">${nav.map(([p,en,ko])=>`<a href="${url(l,p)}" ${(p===''?rel==='':p==='level-check/'?/^(level-check|dupr-self-check|vision-rating)\//.test(rel):p==='video-tools/'?/^(video-tools|clip-lite|downloads|tools)\//.test(rel):rel.startsWith(p))?'aria-current="page"':''}>${T(l,en,ko)}</a>`).join('')}</nav>
+ <nav id="primary-nav" aria-label="${T(l,'Primary navigation','주 메뉴')}">${nav.map(([p,en,ko])=>`<a href="${url(l,p)}" ${(p===''?rel==='':p==='level-check/'?/^(level-check|dupr-self-check|vision-rating)\//.test(rel):p==='video-tools/'?/^(video-tools|clip-lite|downloads|tools)\//.test(rel):rel.startsWith(p))?'aria-current="page"':''}>${V.navIcon(l,p)}<span>${T(l,en,ko)}</span></a>`).join('')}</nav>
  <a class="lang-switch" href="${url(other,rel)}" lang="${other}" hreflang="${other}">${other==='ko'?'한국어':'EN'}</a></div></header>`;
 }
 function footer(l){
@@ -95,10 +98,10 @@ function page(l,rel,title,description,body,opts={}){
  <meta property="og:type" content="${opts.article?'article':'website'}"><meta property="og:title" content="${esc(title)}">
  <meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${canonical}"><meta property="og:site_name" content="Picklary">
  <meta name="picklary-version" content="${site.version}"><meta name="theme-color" content="#123d39"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
- <link rel="stylesheet" href="${css}"><link rel="stylesheet" href="${toolCss}"><script defer src="${js}"></script>${(opts.scripts||[]).map(src=>`<script defer src="${src}"></script>`).join('')}
+ <link rel="stylesheet" href="${css}"><link rel="stylesheet" href="${toolCss}"><link rel="stylesheet" href="${visualCss}"><script defer src="${js}"></script><script defer src="${visualJs}"></script>${(opts.scripts||[]).map(src=>`<script defer src="${src}"></script>`).join('')}
  <script type="application/ld+json">${JSON.stringify(schemas).replaceAll('<','\\u003c')}</script></head>
  <body class="${/^(dupr-self-check|clip-lite)\//.test(rel)?'interactive-tool-page':''}"><a class="skip-link" href="#main">${T(l,'Skip to content','본문 바로가기')}</a>${header(l,rel)}
- <main id="main">${body}</main>${footer(l)}</body></html>`;
+ <main id="main">${body}<noscript><style>.ux-division-tabs{display:none}.ux-final-panels>[hidden]{display:block!important}</style></noscript></main>${footer(l)}${V.bottomNav(l,rel)}</body></html>`;
  const dest=path.join(OUT,l,rel,'index.html');fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,doc);
  pages.push({path:url(l,rel),title,locale:l,rel,indexable:!opts.noindex});
 }
@@ -106,11 +109,10 @@ function sectionHead(l,kicker,title,description='',action=''){
  return `<div class="section-heading"><div><p class="eyebrow">${esc(kicker)}</p><h2>${esc(title)}</h2>${description?`<p>${esc(description)}</p>`:''}</div>${action}</div>`;
 }
 function intro(l,kicker,title,dek,more=''){
- return `<section class="page-intro"><div class="wrap"><p class="eyebrow">${esc(kicker)}</p><h1>${esc(title)}</h1><p class="dek">${esc(dek)}</p>${more}</div></section>`;
+ const art=V.introArt(l,kicker);
+ return `<section class="page-intro${art?' ux-intro-visual':''}"><div class="wrap"><div class="ux-intro-grid"><div><p class="eyebrow">${esc(kicker)}</p><h1>${esc(title)}</h1><p class="dek">${esc(dek)}</p></div>${art?`<div class="ux-intro-art">${art}<span>${T(l,'PICKLARY / EXPLORE','PICKLARY / 둘러보기')}</span></div>`:''}</div>${more}</div></section>`;
 }
-function guideCard(l,g,i=0){
- return `<article class="guide-card"><a href="${url(l,'learn/'+g.slug+'/')}"><div class="card-top"><span class="eyebrow">${esc(g.level)}</span><span class="card-number">${String(i+1).padStart(2,'0')}</span></div><h3>${esc(text(l,g.title))}</h3><p>${esc(text(l,g.dek))}</p><span class="read-link">${T(l,'Read the guide','가이드 읽기')} <b aria-hidden="true">↗</b></span></a></article>`;
-}
+function guideCard(l,g,i=0){return V.guideCard(l,g,i);}
 function playerLink(l,name){
  const n=name.toLowerCase().replace(/[^a-z ]/g,'');
  const p=players.find(p=>p.name.toLowerCase().replace(/[^a-z ]/g,'')===n);
@@ -124,28 +126,11 @@ function eventStatus(l,e){
  e.status==='partial-scores'?T(l,'Champions confirmed · partial scores','우승 확인 · 일부 점수 미확인'):
  T(l,'Partial results','일부 결과 확인');
 }
-function eventCard(l,e){
- const primary=e.rows.find(r=>r.games.length)||e.rows[0];
- return `<article class="event-card"><div class="card-top">${pill(e.tour)}<span class="small">${D(e.end)}</span></div><h3><a href="${url(l,'tour/results/'+e.slug+'/')}">${esc(text(l,e.title))}</a></h3><p class="event-state">${eventStatus(l,e)}</p><p>${esc(text(l,e.intro))}</p><div class="event-winner"><small>${esc(text(l,divLabels[primary.division]))}</small><strong>${primary.winner.map(n=>esc(n)).join(' / ')}</strong>${primary.games.length?`<span>${primary.games.map(g=>g.join('–')).join(' · ')}</span>`:`<span>${T(l,'Series','시리즈')} ${primary.series?.join('–')||''}</span>`}</div><a class="read-link" href="${url(l,'tour/results/'+e.slug+'/')}">${T(l,'Results inside Picklary','Picklary에서 결과 보기')} ↗</a></article>`;
-}
+function eventCard(l,e){return V.eventCard(l,e);}
 function home(l){
- const b=`<section class="home-hero"><div class="wrap hero-grid"><div class="hero-copy"><p class="eyebrow">PLAY WITH A PLAN</p><h1>${T(l,'Know the<br><em>next shot.</em>','생각하며 치는<br><em>다음 한 샷.</em>')}</h1><p class="hero-dek">${T(l,'Less hype. More useful decisions. Learn a pattern, compare the right gear, and follow the game without losing the details.','과장보다 판단 기준을. 하나의 패턴을 배우고, 내게 맞는 장비를 비교하고, 경기 결과의 맥락까지 읽어 보세요.')}</p><div class="actions">${button(l,'dupr-self-check/','DUPR Self Check','DUPR \uc790\uac00\uc9c4\ub2e8')}${button(l,'clip-lite/','Edit a video','\uc601\uc0c1 \ud3b8\uc9d1','secondary')}${button(l,'vision-rating/','Vision Rating','Vision Rating','secondary')}</div><p class="hero-foot">${T(l,'Independent editorial · English / 한국어','독립 편집 콘텐츠 · 한국어 / English')}</p></div><div class="hero-notebook"><div class="notebook-top"><span>THE COURT-SIDE NOTEBOOK</span><span>01 / 26</span></div><div class="hero-portraits">${photo(l,'ben-johns','portrait',true,false)}${photo(l,'anna-leigh-waters','portrait',true,false)}</div><div class="notebook-copy"><p class="eyebrow">${T(l,'WATCH THE DECISION','판단의 순간을 보세요')}</p><h2>${T(l,'What happens before<br>the highlight?','하이라이트 직전에는<br>무슨 일이 있었을까요?')}</h2><p>${T(l,'Start with contact height, balance and the next recoverable position.','타점의 높이, 균형, 다음 공을 준비할 위치부터 보세요.')}</p><a class="read-link" href="${url(l,'tour/players/')}">${T(l,'Player study notes','선수 관찰 노트')} ↗</a><small>${ref(l,'athlete-ben-johns','Ben Johns')} · ${ref(l,'athlete-anna-leigh-waters','Anna Leigh Waters')}</small></div></div></div></section>
-
- <section class="tools-launch"><div class="wrap"><div class="grid three">${[
- ['01','dupr-self-check/','DUPR Self Check','DUPR \uc790\uac00\uc9c4\ub2e8','Choose shots on a 3D/2D court. Ten questions, optionally twenty.','3D/2D \ucf54\ud2b8\uc5d0\uc11c \uc0f7\uc744 \uc120\ud0dd\ud569\ub2c8\ub2e4. 10\ubb38\ud56d + \uc120\ud0dd 10\ubb38\ud56d.'],
- ['02','vision-rating/','Vision Rating','Vision Rating','Original local video-analysis workflow. Separate desktop package required.','\uae30\uc874 \ub85c\uceec \uc601\uc0c1 \ubd84\uc11d. \ubcc4\ub3c4 \ub370\uc2a4\ud06c\ud1b1 \ud504\ub85c\uadf8\ub7a8\uc774 \ud544\uc694\ud569\ub2c8\ub2e4.'],
- ['03','clip-lite/','Clip Lite','Clip Lite','Cut rallies and export MP4 or ZIP. Download the local web bundle.','\ub7a0\ub9ac\ub97c \ud3b8\uc9d1\ud558\uace0 MP4/ZIP\uc73c\ub85c \ucd94\ucd9c\ud569\ub2c8\ub2e4. \ub85c\uceec \uc6f9 \ubb36\uc74c\ub3c4 \uc81c\uacf5\ud569\ub2c8\ub2e4.']
- ].map(([n,p,en,ko,d,dk])=>`<article class="restored-card"><span class="tool-number">${n}</span><h2>${T(l,en,ko)}</h2><p>${T(l,d,dk)}</p>${button(l,p,'Open tool','\ub3c4\uad6c \uc5f4\uae30','secondary')}</article>`).join('')}</div></div></section>
- <section class="path-strip"><div class="wrap paths">${[
- ['01','learn/','Learn one pattern','하나의 패턴 배우기','From return to reset.','리턴부터 리셋까지.'],
- ['02','gear/','Choose with a reason','이유가 있는 장비 선택','Photos, sources, comparison prompts.','제품 사진·출처·비교 질문.'],
- ['03','tour/','Follow the context','경기의 맥락 읽기','Scores are only the starting point.','점수는 출발점입니다.']
- ].map(([n,p,en,ko,d,dk])=>`<a href="${url(l,p)}"><span>${n}</span><div><h2>${T(l,en,ko)}</h2><p>${T(l,d,dk)}</p></div><b aria-hidden="true">↗</b></a>`).join('')}</div></section>
- <section class="section"><div class="wrap">${sectionHead(l,'LEARN / PRACTICE',T(l,'Build a more repeatable game.','다시 해도 되는 플레이를 만드세요.'),'',button(l,'learn/','All guides','전체 가이드','text-button'))}<div class="grid three">${guides.slice(1,4).map((g,i)=>guideCard(l,g,i)).join('')}</div></div></section>
- <section class="section tint"><div class="wrap">${sectionHead(l,'TOUR DESK',T(l,'Results with the missing pieces marked.','확인된 결과, 표시된 빈칸.'),T(l,'Checked for the October 4 edition. Unverified finals stay pending—not guessed.','10월 4일 판의 확인 결과입니다. 확인하지 못한 결승은 추정하지 않습니다.'))}<div class="grid three">${events.slice(0,3).map(e=>eventCard(l,e)).join('')}</div></div></section>
- <section class="section"><div class="wrap gear-feature"><div>${photo(l,'franklin-c45','product-feature',false)}${pill(T(l,'MODEL-MATCHED IMAGERY','모델을 대조한 실제 이미지'))}</div><div><p class="eyebrow">GEAR LAB</p><h2>${T(l,'The right question beats<br>another “best” list.','“최고의 패들” 목록보다<br>나에게 필요한 질문.')}</h2><p>${T(l,'Can you reset with it? Does the handle fit? Can you repeat the shot after ten minutes? Our demo checklist gives you a comparison you can actually use.','이 패들로 리셋할 수 있나요? 핸들은 맞나요? 10분 뒤에도 같은 샷을 반복할 수 있나요? 실제로 써 볼 수 있는 비교 기준을 정리했습니다.')}</p><div class="actions">${button(l,'gear/','Explore the lab','장비 연구실 보기')}${button(l,'learn/paddle-demo-checklist/','Paddle demo checklist','패들 시타 체크리스트','secondary')}</div></div></div></section>
- <section class="section dark"><div class="wrap tool-feature"><div><p class="eyebrow">MAKE IT YOURS</p><h2>${T(l,'Turn ten rallies into<br>your next practice.','10개의 랠리로<br>다음 연습을 정하세요.')}</h2><p>${T(l,'Review a local video, mark the phase and write one testable change. No video upload. No invented AI rating.','로컬 영상을 보고 경기 국면을 표시한 뒤 검증할 변화 한 가지를 적으세요. 영상 업로드도, 근거 없는 AI 레이팅도 없습니다.')}</p></div>${button(l,'tools/review/','Open the match worksheet','경기 분석 도구 열기','lime')}</div></section>`;
- page(l,'',T(l,'Play with a plan','생각하며 치는 피클볼'),T(l,'Practical pickleball guides, model-matched gear, sourced tournament results and local review tools.','실전 피클볼 가이드, 정확한 장비 이미지, 출처가 있는 대회 결과와 로컬 경기 분석 도구.'),b);
+ page(l,'',T(l,'Play with a plan','생각하며 치는 피클볼'),
+ T(l,'Check your game, edit rallies, compare gear and follow sourced pro results.','내 실력을 확인하고 랠리를 편집하고, 장비와 출처가 있는 프로 경기 결과를 둘러보세요.'),
+ V.homeBody(l,sectionHead,button));
 }
 function learn(l){
  page(l,'learn/',T(l,'A practical learning library','실전에 연결하는 피클볼 가이드'),T(l,'Learn a decision, test it on court, and come back with a better question.','경기 중 판단 하나를 배우고 코트에서 확인해 보세요.'),
@@ -199,13 +184,13 @@ function gear(l){
  const cards=Object.entries(catLabels).map(([k,v],i)=>`<a class="category-card" href="${url(l,'gear/'+k+'/')}">${photo(l,featured[i],'category-photo',false,false)}<div><span class="eyebrow">${String(i+1).padStart(2,'0')} / GEAR</span><h2>${esc(text(l,v))}</h2><p>${T(l,'Compare by purpose and brand.','용도와 브랜드로 비교하세요.')}</p><span class="read-link">${products.filter(p=>p.category===k).length} ${T(l,'models','모델')} ↗</span></div></a>`).join('');
  page(l,'gear/',T(l,'Gear Lab','장비 연구실 · Gear Lab'),T(l,'Model-matched product photos, brand-organized options and practical comparison questions.','모델을 대조한 실제 제품 사진, 브랜드별 선택지와 실전 비교 질문.'),
  intro(l,'GEAR / RESEARCH',T(l,'Buy less blindly.','막연하게 고르지 마세요.'),T(l,'A narrower shortlist with better evidence. Browse identifiable products, then test what matters on your court.','근거가 분명한 선택지를 비교하세요. 제품을 정확히 구분한 뒤 내 코트에서 중요한 기준을 확인합니다.'))+
- `<section class="section"><div class="wrap"><div class="category-grid">${cards}</div><div class="callout"><h2>${T(l,'What this lab does—and does not do','장비 연구실의 기준')}</h2><p>${T(l,'Photos are matched to a named product or explicitly described model family. We do not claim to have tested every product, calculate a laboratory spin score or promise current stock. Links are ordinary source links; no affiliate tracking has been added in this edition.','사진을 실제 제품 또는 명확히 설명한 제품군과 연결합니다. 모든 제품을 직접 테스트했다고 주장하거나 실험 스핀 점수를 계산하거나 현재 재고를 약속하지 않습니다. 이 판의 링크에는 제휴 추적 코드를 추가하지 않았습니다.')}</p>${button(l,'learn/paddle-demo-checklist/','Read the demo method','시타 방법 읽기','secondary')}</div></div></section>`);
+ `<section class="section"><div class="wrap">${V.categoryStrip(l)}<div class="ux-gear-dashboard"><div><p class="eyebrow">PHOTO-FIRST / PURPOSE-LED</p><h2>${T(l,'Start with what you need.','필요한 장비부터 골라 보세요.')}</h2><p>${T(l,'Browse a category, filter by brand, and compare up to three models.','카테고리와 브랜드로 찾고 최대 3개 모델을 비교하세요.')}</p><div class="ux-metrics"><span><b>${products.length}</b>${T(l,'Models','모델')}</span><span><b>${new Set(products.map(p=>p.brand)).size}</b>${T(l,'Brands','브랜드')}</span><span><b>5</b>${T(l,'Categories','종류')}</span></div></div>${V.art(l,'gear/')}</div><div class="callout"><h2>${T(l,'What this lab does—and does not do','장비 연구실의 기준')}</h2><p>${T(l,'Photos are matched to a named product or explicitly described model family. We do not claim to have tested every product, calculate a laboratory spin score or promise current stock. Links are ordinary source links; no affiliate tracking has been added in this edition.','사진을 실제 제품 또는 명확히 설명한 제품군과 연결합니다. 모든 제품을 직접 테스트했다고 주장하거나 실험 스핀 점수를 계산하거나 현재 재고를 약속하지 않습니다. 이 판의 링크에는 제휴 추적 코드를 추가하지 않았습니다.')}</p>${button(l,'learn/paddle-demo-checklist/','Read the demo method','시타 방법 읽기','secondary')}</div></div></section>`);
  for(const k of Object.keys(catLabels)){
  const n=gearNotes[k],list=products.filter(p=>p.category===k),brands=[...new Set(list.map(p=>p.brand))];
  page(l,'gear/'+k+'/',text(l,catLabels[k])+' · Gear Lab',text(l,n.intro),
  intro(l,'GEAR LAB / '+k.toUpperCase(),text(l,n.title),text(l,n.intro),gearNav(l,k))+
- `<section class="section"><div class="wrap"><div class="decision-strip">${n.checklist.map((x,i)=>`<div><span>0${i+1}</span><p>${T(l,...x)}</p></div>`).join('')}</div><div class="filterbar" data-filter-root><label>${T(l,'Find a model','모델 찾기')}<input type="search" data-product-search placeholder="${T(l,'Name or brand','이름 또는 브랜드')}"></label><label>${T(l,'Brand','브랜드')}<select data-brand-filter><option value="">${T(l,'All brands','전체 브랜드')}</option>${brands.map(b=>`<option>${esc(b)}</option>`).join('')}</select></label><p aria-live="polite"><b data-product-count>${list.length}</b> ${T(l,'models','모델')}</p><button class="button secondary" type="button" data-reset-filter>${T(l,'Reset','초기화')}</button></div>
- <div class="product-groups">${brands.map(brand=>`<section class="brand-group" data-brand-group><h2>${esc(brand)} <span>${list.filter(x=>x.brand===brand).length}</span></h2><div class="grid three">${list.filter(x=>x.brand===brand).map(p=>productCard(l,p)).join('')}</div></section>`).join('')}</div>
+ `<section class="section"><div class="wrap">${V.categoryStrip(l,k)}<div class="decision-strip">${n.checklist.map((x,i)=>`<div><span>0${i+1}</span><p>${T(l,...x)}</p></div>`).join('')}</div><div class="filterbar" data-filter-root><label>${T(l,'Find a model','모델 찾기')}<input type="search" data-product-search placeholder="${T(l,'Name or brand','이름 또는 브랜드')}"></label><label>${T(l,'Brand','브랜드')}<select data-brand-filter><option value="">${T(l,'All brands','전체 브랜드')}</option>${brands.map(b=>`<option>${esc(b)}</option>`).join('')}</select></label><p aria-live="polite"><b data-product-count>${list.length}</b> ${T(l,'models','모델')}</p><button class="button secondary" type="button" data-reset-filter>${T(l,'Reset','초기화')}</button></div>
+ ${V.brandChips(l,list)}<div class="product-groups"><section class="brand-group ux-continuous-catalog" data-brand-group aria-label="${T(l,'Models by brand','브랜드별 제품')}"><div class="grid three">${list.map(p=>productCard(l,p)).join('')}</div></section></div>
  <p class="empty-note" data-product-empty hidden>${T(l,'No model matches. Reset the filter to see all products.','일치하는 모델이 없습니다. 필터를 초기화해 전체 제품을 보세요.')}</p>
  <section class="compare-panel" data-compare-panel hidden><h2>${T(l,'Your comparison questions','내 비교 질문')}</h2><div data-compare-content class="grid three"></div><p class="small">${T(l,'Up to three products, compared by what to check—not a paid or laboratory ranking.','최대 3개 제품의 확인 질문을 비교합니다. 유료 순위나 실험 점수가 아닙니다.')}</p></section>
  <div class="callout"><h2>${T(l,'Before you choose','선택하기 전에')}</h2><p>${T(l,'Availability, versions and certification can change. Check the exact product at the source. A useful comparison changes one variable at a time and includes the shots or movements you find difficult.','재고·버전·승인 상태는 바뀔 수 있습니다. 출처에서 정확한 제품을 확인하세요. 비교할 때는 한 번에 한 조건씩 바꾸고 어려운 샷이나 움직임을 반드시 포함하세요.')}</p>${button(l,'learn/'+n.guide+'/','Use the checklist','체크리스트 보기','secondary')}</div></div></section>`);
@@ -215,7 +200,7 @@ function scoreRow(l,r){
  const label=text(l,divLabels[r.division]);
  if(!r.winner.length) return `<article class="result-row pending"><div class="division">${esc(label)}</div><div><span class="result-label">${T(l,'Verification pending','개별 결과 확인 전')}</span><p>${T(l,'No champion or score is inferred from the draw, seed or schedule.','대진·시드·일정에서 우승자나 점수를 추정하지 않습니다.')}</p></div><span class="small">${T(l,'Not entered','미입력')}</span></article>`;
  const gamesWon=r.games.filter(g=>g[0]>g[1]).length, gamesLost=r.games.length-gamesWon;
- return `<article class="result-row"><div class="division">${esc(label)}<strong>${r.series?`${r.series.join('–')} <small>${T(l,'series','시리즈')}</small>`:r.games.length?`${gamesWon}–${gamesLost} <small>${T(l,'games','게임')}</small>`:''}</strong></div><div class="podium"><div><span class="result-label gold">${T(l,'Champion','우승')}</span><strong>${r.winner.map(n=>playerLink(l,n)).join(' / ')}</strong></div><div><span class="result-label">${T(l,'Runner-up','준우승')}</span><span>${r.runnerUp.map(n=>playerLink(l,n)).join(' / ')}</span></div></div><div class="result-detail">${r.games.length?`<div class="game-scores">${r.games.map((g,i)=>`<span><small>G${i+1}</small><b>${g[0]}–${g[1]}</b></span>`).join('')}</div>`:`<p class="small">${r.series?T(l,'Individual match/game scores not entered.','개별 매치·게임 점수는 미입력입니다.'):T(l,'Game points not verified in this edition.','이 판에서 게임별 점수를 확인하지 못했습니다.')}</p>`}${ref(l,r.source,T(l,'Result source','결과 출처'))}</div></article>`;
+ return `<article class="result-row"><div class="division">${esc(label)}<strong>${r.series?`${r.series.join('–')} <small>${T(l,'series','시리즈')}</small>`:r.games.length?`${gamesWon}–${gamesLost} <small>${T(l,'games','게임')}</small>`:''}</strong></div><div class="podium"><div class="ux-podium-winner">${V.people(l,r.winner)}<span class="result-label gold">${T(l,'Champion','우승')}</span><strong>${r.winner.map(n=>playerLink(l,n)).join(' / ')}</strong></div><div><span class="result-label">${T(l,'Runner-up','준우승')}</span><span>${r.runnerUp.map(n=>playerLink(l,n)).join(' / ')}</span></div></div><div class="result-detail">${r.games.length?`<div class="game-scores">${r.games.map((g,i)=>`<span><small>G${i+1}</small><b>${g[0]}–${g[1]}</b></span>`).join('')}</div>`:`<p class="small">${r.series?T(l,'Individual match/game scores not entered.','개별 매치·게임 점수는 미입력입니다.'):T(l,'Game points not verified in this edition.','이 판에서 게임별 점수를 확인하지 못했습니다.')}</p>`}${ref(l,r.source,T(l,'Result source','결과 출처'))}</div></article>`;
 }
 function tour(l){
  page(l,'tour/',T(l,'Tour Board','투어 보드'),T(l,'Read verified finals, follow event dates and separate official rankings from independent ratings.','확인된 결승 결과와 대회 일정, 공식 랭킹과 독립 레이팅의 차이를 확인하세요.'),
@@ -225,7 +210,7 @@ function tour(l){
  ['tour/schedule/','Events & schedule','대회 일정','Dates and result availability are separate.','대회 날짜와 결과 확인 여부는 구분합니다.'],
  ['tour/players/','Players to study','관찰할 선수들','Follow a decision, not just a familiar face.','익숙한 얼굴보다 판단의 순간을 보세요.'],
  ['tour/rankings/','Which ranking?','어떤 랭킹인가요?','PPA points and independent Elo are different.','PPA 포인트와 독립 Elo는 다릅니다.']
- ].map(([p,en,ko,d,dk])=>`<a class="link-card" href="${url(l,p)}"><span class="eyebrow">EXPLORE</span><h2>${T(l,en,ko)}</h2><p>${T(l,d,dk)}</p><span>↗</span></a>`).join('')}</div></div></section>`);
+ ].map(([p,en,ko,d,dk])=>`${V.featureCard(l,p,T(l,en,ko),T(l,d,dk),'')}`).join('')}</div></div></section>`);
  page(l,'tour/results/',T(l,'Tournament results','대회 경기 결과'),T(l,'Champions, finalists and verified game-by-game scores, separated into PPA, MLP and Asia.','PPA·MLP·아시아의 우승, 준우승, 확인된 게임별 점수.'),
  intro(l,'RESULTS / SOURCE-LED',T(l,'Read the score here.','결과는 여기에서 확인하세요.'),T(l,'Four updated event records. Game points are always shown from the champion’s side; series results are labeled separately.','네 대회의 결과를 새로 정리했습니다. 게임별 점수는 우승자 기준이며 시리즈 스코어는 별도로 표시합니다.'),tourNav(l,'tour/results/'))+
  `<section class="section"><div class="wrap"><div class="coverage-note" data-as-of="${site.editorialDate}"><strong>${T(l,'Editorial check','편집 확인')} ${D(site.editorialDate)}</strong><p>${T(l,'Las Vegas: one of five finals verified. Kuala Lumpur: five winners, four score lines. Arizona: all five finals. MLP: championship series only. This is not a live feed.','라스베이거스는 5개 중 1개 결승, 쿠알라룸푸르는 우승 5개·점수 4개, 애리조나는 5개 결승, MLP는 챔피언십 시리즈 결과를 확인했습니다. 실시간 피드가 아닙니다.')}</p><p data-stale-warning hidden></p></div><div class="grid two">${events.map(e=>eventCard(l,e)).join('')}</div></div></section>`);
@@ -245,7 +230,7 @@ function playersPage(l){
  `<section class="section"><div class="wrap"><label class="standalone-search">${T(l,'Find a player','선수 찾기')}<input type="search" data-player-search placeholder="${T(l,'Search by name','이름으로 찾기')}"></label><div class="player-grid">${players.map(p=>`<article class="player-card" id="${p.slug}" data-player="${esc(p.name.toLowerCase())}">${photo(l,p.media,'portrait',false,false)}<div class="player-body"><div class="card-top">${pill(p.country)}${p.kind==='junior'?pill(T(l,'Junior prospect','주니어 유망주'),'junior'):''}</div><h2>${esc(p.name)}</h2><h3>${esc(text(l,p.style))}</h3><p>${esc(text(l,p.watch))}</p><div class="player-links">${ref(l,p.source,T(l,'Profile & photo source','프로필·사진 출처'))}<a href="${url(l,'learn/'+p.lesson+'/')}">${T(l,'Related practice','관련 연습')} ↗</a></div></div></article>`).join('')}</div><p data-player-empty hidden>${T(l,'No matching player.','일치하는 선수가 없습니다.')}</p><p class="evidence">${T(l,'Use the date and the original profile to check changing facts. The editorial viewing prompts are Picklary’s interpretation; player ages, live DUPR and current sponsorships are deliberately not inferred.','변동되는 사실은 출처의 날짜와 원래 프로필에서 확인하세요. 관찰 질문은 Picklary의 해석이며 나이·실시간 DUPR·현재 스폰서를 추정해서 싣지 않았습니다.')}</p></div></section>`);
 }
 function rankingsPage(l){
- const table=(rows,type)=>`<table class="ranking-table"><thead><tr><th scope="col">#</th><th scope="col">${T(l,'Player','선수')}</th><th scope="col">${type==='elo'?'Elo':T(l,'Points','포인트')}</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${r.rank}</td><td>${playerLink(l,r.name)}</td><td>${Number(r[type]).toLocaleString('en-US',{maximumFractionDigits:1})}</td></tr>`).join('')}</tbody></table>`;
+ const table=(rows,type)=>`<table class="ranking-table"><thead><tr><th scope="col">#</th><th scope="col">${T(l,'Player','선수')}</th><th scope="col">${type==='elo'?'Elo':T(l,'Points','포인트')}</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${r.rank}</td><td><div class="ux-ranking-person">${V.avatar(l,r.name)}${playerLink(l,r.name)}</div></td><td>${Number(r[type]).toLocaleString('en-US',{maximumFractionDigits:1})}</td></tr>`).join('')}</tbody></table>`;
  page(l,'tour/rankings/',T(l,'Rankings: know the system','랭킹: 기준부터 구분하기'),T(l,'PPA composite world rankings and five independent PickleWave Elo boards, clearly separated.','PPA 종합 세계랭킹과 PickleWave의 5개 독립 Elo 표를 분리해 제공합니다.'),
  intro(l,'RANKINGS / METHOD',T(l,'A number needs a definition.','숫자에는 기준이 필요합니다.'),T(l,'PPA points, an independent Elo model and DUPR are not interchangeable. This page identifies the source before showing the order.','PPA 포인트, 독립 Elo 모델, DUPR는 서로 바꿔 쓸 수 없습니다. 순서보다 출처와 기준을 먼저 표시합니다.'),tourNav(l,'tour/rankings/'))+
  `<section class="section"><div class="wrap">${sectionHead(l,'OFFICIAL PPA / WPR',T(l,'Composite world rankings','종합 세계랭킹'),T(l,'Snapshot of the PPA board checked October 4, 2026. These are individual multi-discipline standings, not fixed doubles-team rankings.','2026년 10월 4일 확인한 PPA 표의 스냅샷입니다. 여러 종목을 합산한 개인 순위이며 고정 복식팀 순위가 아닙니다.'))}
@@ -297,7 +282,7 @@ function policyPages(l){
  `<section class="section"><div class="wrap"><div class="callout"><h2>${T(l,'Photo handling','사진 관리')}</h2><p>${T(l,'Images are linked to an official profile or product source. Some source-provided files are included locally; others are requested from the source CDN. We do not use a different person or product as a fallback. Rights remain with the original rights holders.','이미지는 공식 프로필 또는 제품 출처와 연결합니다. 일부 제공 파일은 로컬로 포함되어 있고 나머지는 원출처 CDN에서 불러옵니다. 다른 인물이나 제품의 사진을 대체 이미지로 쓰지 않습니다. 권리는 원권리자에게 있습니다.')}</p></div><div class="credit-list">${ids.map(id=>`<article><strong>${esc(media[id].subject)}</strong><span>${ref(l,media[id].source,T(l,'Original source','원출처'))}</span><span class="small">${T(l,'Checked','확인')} ${D(media[id].checked)}</span></article>`).join('')}</div></div></section>`,{noindex:true});
 }
 for(const l of site.locales){home(l);learn(l);gear(l);tour(l);eventSchedule(l);playersPage(l);rankingsPage(l);tools(l);policyPages(l);}
-const restoredReleaseState=restoredTools({ROOT,OUT,page,intro,T,esc,url,button,site,toolCss,selfJs,clipJs});
+const restoredReleaseState=restoredTools({ROOT,OUT,page,intro,T,esc,url,button,site,toolCss,selfJs,clipJs,visual:V});
 packageTools(ROOT,OUT,site);
 for(const l of site.locales){
  const rows=pages.filter(p=>p.locale===l&&p.indexable);
@@ -320,5 +305,5 @@ fs.writeFileSync(path.join(OUT,'_redirects'),`# No SPA catch-all. Unknown paths 
  '\n# Old store URLs have no replacement commerce content.\n/cart/* /404.html 404\n/checkout/* /404.html 404\n/wp-admin/* /404.html 404\n');
 fs.writeFileSync(path.join(OUT,'_headers'),`/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  X-Frame-Options: SAMEORIGIN\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n  Cache-Control: public, max-age=0, must-revalidate\n/assets/css/*\n  Cache-Control: public, max-age=31536000, immutable\n/assets/js/*\n  Cache-Control: public, max-age=31536000, immutable\n/assets/tools/*\n  Cache-Control: public, max-age=0, must-revalidate\n/assets/vendor/*\n  Cache-Control: public, max-age=86400\n/downloads/*\n  Cache-Control: public, max-age=0, must-revalidate\n/assets/media/*\n  Cache-Control: public, max-age=86400\n/ads.txt\n  Cache-Control: public, max-age=3600\n/robots.txt\n  Cache-Control: public, max-age=3600\n/sitemap.xml\n  Cache-Control: public, max-age=3600\n`);
 fs.mkdirSync(path.join(ROOT,'test-results'),{recursive:true});
-fs.writeFileSync(path.join(ROOT,'test-results','build-manifest.json'),JSON.stringify({version:site.version,editorialDate:site.editorialDate,css,js,toolCss,selfJs,clipJs,desktopReleases:restoredReleaseState,pages},null,2));
+fs.writeFileSync(path.join(ROOT,'test-results','build-manifest.json'),JSON.stringify({version:site.version,editorialDate:site.editorialDate,css,js,toolCss,selfJs,clipJs,visualCss,visualJs,desktopReleases:restoredReleaseState,pages},null,2));
 console.log(`Built Picklary ${site.version}: ${pages.length+2} HTML files; ${indexable.length} indexable URLs. Ad serving: OFF.`);

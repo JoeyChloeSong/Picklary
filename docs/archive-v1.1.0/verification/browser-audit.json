@@ -19,9 +19,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 1440,
-        "height": 79
+        "height": 83
       }
     },
     {
@@ -47,9 +47,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 1440,
-        "height": 79
+        "height": 83
       }
     },
     {
@@ -75,9 +75,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 1440,
-        "height": 79
+        "height": 83
       }
     },
     {
@@ -103,9 +103,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 1440,
-        "height": 79
+        "height": 83
       }
     },
     {
@@ -131,9 +131,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 1440,
-        "height": 79
+        "height": 83
       }
     },
     {
@@ -159,9 +159,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 1440,
-        "height": 79
+        "height": 83
       }
     },
     {
@@ -187,9 +187,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 1440,
-        "height": 79
+        "height": 83
       }
     },
     {
@@ -201,8 +201,8 @@
       "name": "Schedule stats below hero 1440 /en/tour/schedule/",
       "ok": true,
       "detail": {
-        "stats": 622.765625,
-        "hero": 590.765625
+        "stats": 574.484375,
+        "hero": 536.484375
       }
     },
     {
@@ -223,9 +223,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 1440,
-        "height": 79
+        "height": 83
       }
     },
     {
@@ -237,8 +237,8 @@
       "name": "Schedule stats below hero 1440 /ko/tour/schedule/",
       "ok": true,
       "detail": {
-        "stats": 622.765625,
-        "hero": 590.765625
+        "stats": 574.484375,
+        "hero": 536.484375
       }
     },
     {
@@ -259,9 +259,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 1440,
-        "height": 79
+        "height": 83
       }
     },
     {
@@ -287,9 +287,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 1440,
-        "height": 79
+        "height": 83
       }
     },
     {
@@ -315,9 +315,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 1440,
-        "height": 79
+        "height": 83
       }
     },
     {
@@ -343,9 +343,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 1440,
-        "height": 79
+        "height": 83
       }
     },
     {
@@ -371,7 +371,7 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 768,
         "height": 71
       }
@@ -399,7 +399,7 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 768,
         "height": 71
       }
@@ -427,7 +427,7 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 768,
         "height": 71
       }
@@ -455,7 +455,7 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 768,
         "height": 71
       }
@@ -483,7 +483,7 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 768,
         "height": 71
       }
@@ -511,7 +511,7 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 768,
         "height": 71
       }
@@ -539,7 +539,7 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 768,
         "height": 71
       }
@@ -553,8 +553,8 @@
       "name": "Schedule stats below hero 768 /en/tour/schedule/",
       "ok": true,
       "detail": {
-        "stats": 604.765625,
-        "hero": 572.765625
+        "stats": 624.046875,
+        "hero": 586.046875
       }
     },
     {
@@ -575,7 +575,7 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 768,
         "height": 71
       }
@@ -589,8 +589,8 @@
       "name": "Schedule stats below hero 768 /ko/tour/schedule/",
       "ok": true,
       "detail": {
-        "stats": 604.765625,
-        "hero": 572.765625
+        "stats": 552.484375,
+        "hero": 514.484375
       }
     },
     {
@@ -611,7 +611,7 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 768,
         "height": 71
       }
@@ -639,7 +639,7 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 768,
         "height": 71
       }
@@ -667,7 +667,7 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 768,
         "height": 71
       }
@@ -695,7 +695,7 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 45,
+        "y": 30,
         "width": 768,
         "height": 71
       }
@@ -723,9 +723,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 390,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -751,9 +751,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 390,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -779,9 +779,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 390,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -807,9 +807,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 390,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -835,9 +835,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 390,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -863,9 +863,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 390,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -891,9 +891,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 390,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -905,8 +905,8 @@
       "name": "Schedule stats below hero 390 /en/tour/schedule/",
       "ok": true,
       "detail": {
-        "stats": 863.890625,
-        "hero": 838.890625
+        "stats": 817.046875,
+        "hero": 792.046875
       }
     },
     {
@@ -927,9 +927,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 390,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -941,8 +941,8 @@
       "name": "Schedule stats below hero 390 /ko/tour/schedule/",
       "ok": true,
       "detail": {
-        "stats": 863.890625,
-        "hero": 838.890625
+        "stats": 817.046875,
+        "hero": 792.046875
       }
     },
     {
@@ -963,9 +963,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 390,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -991,9 +991,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 390,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -1019,9 +1019,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 390,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -1047,9 +1047,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 390,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -1075,9 +1075,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 360,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -1103,9 +1103,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 360,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -1131,9 +1131,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 360,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -1159,9 +1159,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 360,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -1187,9 +1187,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 360,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -1215,9 +1215,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 360,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -1243,9 +1243,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 360,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -1257,8 +1257,8 @@
       "name": "Schedule stats below hero 360 /en/tour/schedule/",
       "ok": true,
       "detail": {
-        "stats": 863.890625,
-        "hero": 838.890625
+        "stats": 926.234375,
+        "hero": 901.234375
       }
     },
     {
@@ -1279,9 +1279,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 360,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -1293,8 +1293,8 @@
       "name": "Schedule stats below hero 360 /ko/tour/schedule/",
       "ok": true,
       "detail": {
-        "stats": 890.96875,
-        "hero": 865.96875
+        "stats": 844.125,
+        "hero": 819.125
       }
     },
     {
@@ -1315,9 +1315,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 360,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -1343,9 +1343,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 360,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -1371,9 +1371,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 360,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -1399,9 +1399,9 @@
       "ok": true,
       "detail": {
         "x": 0,
-        "y": 43,
+        "y": 30,
         "width": 360,
-        "height": 63
+        "height": 65
       }
     },
     {
@@ -1565,7 +1565,7 @@
       "detail": []
     }
   ],
-  "blockedRemoteRequests": 19,
+  "blockedRemoteRequests": 10,
   "remoteImageAvailability": "NOT TESTED (external requests blocked)",
   "renderMode": "injected local HTML",
   "storageMode": "explicit test double (opaque about:blank)",

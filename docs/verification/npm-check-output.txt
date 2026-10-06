@@ -1,0 +1,264 @@
+
+> picklary-editorial@1.2.0 check
+> npm run build && npm test
+
+
+> picklary-editorial@1.2.0 build
+> node scripts/build.mjs
+
+Built Picklary 1.2.0: 88 HTML files; 78 indexable URLs. Ad serving: OFF.
+
+> picklary-editorial@1.2.0 test
+> node scripts/validate.mjs && npm run test:tools && npm run test:visual
+
+{
+  "desktopPackagesAvailable": 0,
+  "desktopPackagesPending": 3,
+  "version": "1.2.0",
+  "editorialDate": "2026-10-04",
+  "technicalStatus": "PASS",
+  "htmlFiles": 88,
+  "sitemapUrls": 78,
+  "internalReferences": 4272,
+  "jsonldBlocks": 86,
+  "guides": 9,
+  "products": 28,
+  "players": 20,
+  "mediaRecords": 48,
+  "localMedia": 17,
+  "remoteMedia": 31,
+  "eventRecords": 4,
+  "confirmedResultRows": 12,
+  "pendingResultRows": 4,
+  "confirmedPodiumsWithoutScores": 1,
+  "exactMigrationRedirects": 115,
+  "adServing": false,
+  "errors": [],
+  "warnings": [
+    "31 of 48 named images use remote sources unless media caching is run; offline checks cannot certify their availability.",
+    "Image reuse rights are not documented. Review THIRD_PARTY_NOTICES.md and docs/MEDIA_RIGHTS_CHECKLIST.csv before publication/monetization.",
+    "Exact Google rejection notice was not available. Technical tests are not an AdSense approval decision.",
+    "4 division finals pending; 1 confirmed podium without game scores. Do not invent missing values.",
+    "Self-check and browser editor restored. Desktop Vision and Windows binaries are absent until operator-supplied releases are registered. Browser encoding needs an additional engine download and production smoke test."
+  ]
+}
+
+> picklary-editorial@1.2.0 test:tools
+> node --test tests/tools.test.mjs
+
+TAP version 13
+# Subtest: en: all 32 scenarios are unique and localized
+ok 1 - en: all 32 scenarios are unique and localized
+  ---
+  duration_ms: 0.860831
+  type: 'test'
+  ...
+# Subtest: en: quiz choices and coordinates are well-formed
+ok 2 - en: quiz choices and coordinates are well-formed
+  ---
+  duration_ms: 0.530546
+  type: 'test'
+  ...
+# Subtest: en: core tool routes render real controls and disclosures
+ok 3 - en: core tool routes render real controls and disclosures
+  ---
+  duration_ms: 0.559309
+  type: 'test'
+  ...
+# Subtest: ko: all 32 scenarios are unique and localized
+ok 4 - ko: all 32 scenarios are unique and localized
+  ---
+  duration_ms: 0.179269
+  type: 'test'
+  ...
+# Subtest: ko: quiz choices and coordinates are well-formed
+ok 5 - ko: quiz choices and coordinates are well-formed
+  ---
+  duration_ms: 0.774272
+  type: 'test'
+  ...
+# Subtest: ko: core tool routes render real controls and disclosures
+ok 6 - ko: core tool routes render real controls and disclosures
+  ---
+  duration_ms: 0.437737
+  type: 'test'
+  ...
+# Subtest: EN/KO keep identical quiz scoring and scenario identities
+ok 7 - EN/KO keep identical quiz scoring and scenario identities
+  ---
+  duration_ms: 1.418389
+  type: 'test'
+  ...
+# Subtest: Restored quiz is independent, opt-in and accessible
+ok 8 - Restored quiz is independent, opt-in and accessible
+  ---
+  duration_ms: 0.285529
+  type: 'test'
+  ...
+# Subtest: Old original URLs do not send users to the manual worksheet
+ok 9 - Old original URLs do not send users to the manual worksheet
+  ---
+  duration_ms: 0.548423
+  type: 'test'
+  ...
+# Subtest: Download buttons exist only for packaged bytes; missing native packages are not docs
+ok 10 - Download buttons exist only for packaged bytes; missing native packages are not docs
+  ---
+  duration_ms: 0.447512
+  type: 'test'
+  ...
+# Subtest: No ad-request scripts are present in the restored apps
+ok 11 - No ad-request scripts are present in the restored apps
+  ---
+  duration_ms: 0.838648
+  type: 'test'
+  ...
+# Subtest: All restored browser JavaScript parses
+ok 12 - All restored browser JavaScript parses
+  ---
+  duration_ms: 106.093976
+  type: 'test'
+  ...
+# Subtest: CRC32 standard check vector and empty input
+ok 13 - CRC32 standard check vector and empty input
+  ---
+  duration_ms: 0.348683
+  type: 'test'
+  ...
+# Subtest: ZIP directory, UTF8 filenames, sizes and per-entry CRC32
+ok 14 - ZIP directory, UTF8 filenames, sizes and per-entry CRC32
+  ---
+  duration_ms: 0.793371
+  type: 'test'
+  ...
+# Subtest: ZIP rejects unsafe output entry paths
+ok 15 - ZIP rejects unsafe output entry paths
+  ---
+  duration_ms: 0.290906
+  type: 'test'
+  ...
+# Subtest: Download SHA256 values match the delivered bytes
+ok 16 - Download SHA256 values match the delivered bytes
+  ---
+  duration_ms: 1.260131
+  type: 'test'
+  ...
+# Subtest: Release loader requires explicit operator review and an exact digest
+ok 17 - Release loader requires explicit operator review and an exact digest
+  ---
+  duration_ms: 2.9251
+  type: 'test'
+  ...
+# Subtest: Registration rejects documentation-only ZIPs
+ok 18 - Registration rejects documentation-only ZIPs
+  ---
+  duration_ms: 37.206068
+  type: 'test'
+  ...
+# Subtest: Registration requires operator attestation
+ok 19 - Registration requires operator attestation
+  ---
+  duration_ms: 34.544384
+  type: 'test'
+  ...
+# Subtest: Registration accepts structurally valid app sources without executing them
+ok 20 - Registration accepts structurally valid app sources without executing them
+  ---
+  duration_ms: 32.563461
+  type: 'test'
+  ...
+# Subtest: Worker contract reads a copy rather than detaching the core filesystem
+ok 21 - Worker contract reads a copy rather than detaching the core filesystem
+  ---
+  duration_ms: 1.770567
+  type: 'test'
+  ...
+# Subtest: Adapter terminates pending work and uses a same-origin worker
+ok 22 - Adapter terminates pending work and uses a same-origin worker
+  ---
+  duration_ms: 0.56689
+  type: 'test'
+  ...
+# Subtest: fetchFile reads a local File-like object without a network request
+ok 23 - fetchFile reads a local File-like object without a network request
+  ---
+  duration_ms: 0.283836
+  type: 'test'
+  ...
+# Subtest: Browser export is guarded against cancellation, double starts and memory-heavy inputs
+ok 24 - Browser export is guarded against cancellation, double starts and memory-heavy inputs
+  ---
+  duration_ms: 0.332699
+  type: 'test'
+  ...
+1..24
+# tests 24
+# suites 0
+# pass 24
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 294.861928
+
+> picklary-editorial@1.2.0 test:visual
+> node --test tests/visual.test.mjs
+
+TAP version 13
+# Subtest: en: six visual feature destinations preserve original tools
+ok 1 - en: six visual feature destinations preserve original tools
+  ---
+  duration_ms: 1.77262
+  type: 'test'
+  ...
+# Subtest: en: each event division has a corresponding unique accessible tab panel
+ok 2 - en: each event division has a corresponding unique accessible tab panel
+  ---
+  duration_ms: 1.496425
+  type: 'test'
+  ...
+# Subtest: en: brand controls derive from the exact product catalogue
+ok 3 - en: brand controls derive from the exact product catalogue
+  ---
+  duration_ms: 2.549336
+  type: 'test'
+  ...
+# Subtest: ko: six visual feature destinations preserve original tools
+ok 4 - ko: six visual feature destinations preserve original tools
+  ---
+  duration_ms: 0.398318
+  type: 'test'
+  ...
+# Subtest: ko: each event division has a corresponding unique accessible tab panel
+ok 5 - ko: each event division has a corresponding unique accessible tab panel
+  ---
+  duration_ms: 0.82611
+  type: 'test'
+  ...
+# Subtest: ko: brand controls derive from the exact product catalogue
+ok 6 - ko: brand controls derive from the exact product catalogue
+  ---
+  duration_ms: 0.443125
+  type: 'test'
+  ...
+# Subtest: Original calculation, video engine, tool templates and editorial datasets are unchanged
+ok 7 - Original calculation, video engine, tool templates and editorial datasets are unchanged
+  ---
+  duration_ms: 1.483176
+  type: 'test'
+  ...
+# Subtest: Visual behavior parses and is independent from encoders and ratings
+ok 8 - Visual behavior parses and is independent from encoders and ratings
+  ---
+  duration_ms: 0.37973
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 80.793365

@@ -1,0 +1,2534 @@
+{
+  "status": "PASS",
+  "checks": 483,
+  "failures": [],
+  "checksDetail": [
+    {
+      "name": "Viewport overflow 1440 en/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1440 en/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1440 en/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Six visible feature cards 1440 en",
+      "ok": true
+    },
+    {
+      "name": "Original tools reachable 1440 en",
+      "ok": true
+    },
+    {
+      "name": "Viewport overflow 1440 en/gear/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1440 en/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1440 en/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1440 en/gear/paddles/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1440 en/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1440 en/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1440 en/gear/apparel/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1440 en/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1440 en/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1440 en/tour/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1440 en/tour/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1440 en/tour/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1440 en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1440 en/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1440 en/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Schedule stats follow hero 1440 en",
+      "ok": true,
+      "detail": [
+        590.765625,
+        622.765625
+      ]
+    },
+    {
+      "name": "Viewport overflow 1440 en/level-check/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1440 en/level-check/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1440 en/level-check/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1440 en/video-tools/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1440 en/video-tools/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1440 en/video-tools/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1440 en/learn/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1440 en/learn/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1440 en/learn/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1440 ko/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1440 ko/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1440 ko/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Six visible feature cards 1440 ko",
+      "ok": true
+    },
+    {
+      "name": "Original tools reachable 1440 ko",
+      "ok": true
+    },
+    {
+      "name": "Viewport overflow 1440 ko/gear/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1440 ko/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1440 ko/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1440 ko/gear/paddles/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1440 ko/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1440 ko/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1440 ko/gear/apparel/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1440 ko/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1440 ko/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1440 ko/tour/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1440 ko/tour/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1440 ko/tour/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1440 ko/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1440 ko/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1440 ko/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Schedule stats follow hero 1440 ko",
+      "ok": true,
+      "detail": [
+        590.765625,
+        622.765625
+      ]
+    },
+    {
+      "name": "Viewport overflow 1440 ko/level-check/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1440 ko/level-check/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1440 ko/level-check/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1440 ko/video-tools/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1440 ko/video-tools/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1440 ko/video-tools/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1440 ko/learn/",
+      "ok": true,
+      "detail": {
+        "w": 1440,
+        "sw": 1440
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1440 ko/learn/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1440 ko/learn/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1024 en/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1024 en/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1024 en/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Six visible feature cards 1024 en",
+      "ok": true
+    },
+    {
+      "name": "Original tools reachable 1024 en",
+      "ok": true
+    },
+    {
+      "name": "Viewport overflow 1024 en/gear/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1024 en/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1024 en/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1024 en/gear/paddles/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1024 en/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1024 en/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1024 en/gear/apparel/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1024 en/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1024 en/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1024 en/tour/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1024 en/tour/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1024 en/tour/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1024 en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1024 en/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1024 en/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Schedule stats follow hero 1024 en",
+      "ok": true,
+      "detail": [
+        590.765625,
+        622.765625
+      ]
+    },
+    {
+      "name": "Viewport overflow 1024 en/level-check/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1024 en/level-check/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1024 en/level-check/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1024 en/video-tools/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1024 en/video-tools/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1024 en/video-tools/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1024 en/learn/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1024 en/learn/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1024 en/learn/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1024 ko/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1024 ko/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1024 ko/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Six visible feature cards 1024 ko",
+      "ok": true
+    },
+    {
+      "name": "Original tools reachable 1024 ko",
+      "ok": true
+    },
+    {
+      "name": "Viewport overflow 1024 ko/gear/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1024 ko/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1024 ko/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1024 ko/gear/paddles/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1024 ko/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1024 ko/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1024 ko/gear/apparel/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1024 ko/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1024 ko/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1024 ko/tour/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1024 ko/tour/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1024 ko/tour/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1024 ko/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1024 ko/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1024 ko/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Schedule stats follow hero 1024 ko",
+      "ok": true,
+      "detail": [
+        590.765625,
+        622.765625
+      ]
+    },
+    {
+      "name": "Viewport overflow 1024 ko/level-check/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1024 ko/level-check/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1024 ko/level-check/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1024 ko/video-tools/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1024 ko/video-tools/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1024 ko/video-tools/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 1024 ko/learn/",
+      "ok": true,
+      "detail": {
+        "w": 1024,
+        "sw": 1024
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 1024 ko/learn/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 1024 ko/learn/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 768 en/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 768 en/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 768 en/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Six visible feature cards 768 en",
+      "ok": true
+    },
+    {
+      "name": "Original tools reachable 768 en",
+      "ok": true
+    },
+    {
+      "name": "Viewport overflow 768 en/gear/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 768 en/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 768 en/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 768 en/gear/paddles/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 768 en/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 768 en/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 768 en/gear/apparel/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 768 en/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 768 en/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 768 en/tour/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 768 en/tour/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 768 en/tour/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 768 en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 768 en/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 768 en/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Schedule stats follow hero 768 en",
+      "ok": true,
+      "detail": [
+        572.765625,
+        604.765625
+      ]
+    },
+    {
+      "name": "Viewport overflow 768 en/level-check/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 768 en/level-check/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 768 en/level-check/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 768 en/video-tools/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 768 en/video-tools/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 768 en/video-tools/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 768 en/learn/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 768 en/learn/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 768 en/learn/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 768 ko/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 768 ko/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 768 ko/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Six visible feature cards 768 ko",
+      "ok": true
+    },
+    {
+      "name": "Original tools reachable 768 ko",
+      "ok": true
+    },
+    {
+      "name": "Viewport overflow 768 ko/gear/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 768 ko/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 768 ko/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 768 ko/gear/paddles/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 768 ko/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 768 ko/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 768 ko/gear/apparel/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 768 ko/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 768 ko/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 768 ko/tour/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 768 ko/tour/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 768 ko/tour/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 768 ko/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 768 ko/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 768 ko/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Schedule stats follow hero 768 ko",
+      "ok": true,
+      "detail": [
+        572.765625,
+        604.765625
+      ]
+    },
+    {
+      "name": "Viewport overflow 768 ko/level-check/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 768 ko/level-check/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 768 ko/level-check/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 768 ko/video-tools/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 768 ko/video-tools/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 768 ko/video-tools/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 768 ko/learn/",
+      "ok": true,
+      "detail": {
+        "w": 768,
+        "sw": 768
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 768 ko/learn/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 768 ko/learn/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 390 en/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 390 en/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 390 en/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Six visible feature cards 390 en",
+      "ok": true
+    },
+    {
+      "name": "Original tools reachable 390 en",
+      "ok": true
+    },
+    {
+      "name": "Viewport overflow 390 en/gear/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 390 en/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 390 en/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 390 en/gear/paddles/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 390 en/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 390 en/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 390 en/gear/apparel/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 390 en/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 390 en/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 390 en/tour/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 390 en/tour/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 390 en/tour/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 390 en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 390 en/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 390 en/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Schedule stats follow hero 390 en",
+      "ok": true,
+      "detail": [
+        838.890625,
+        863.890625
+      ]
+    },
+    {
+      "name": "Viewport overflow 390 en/level-check/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 390 en/level-check/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 390 en/level-check/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 390 en/video-tools/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 390 en/video-tools/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 390 en/video-tools/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 390 en/learn/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 390 en/learn/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 390 en/learn/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 390 ko/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 390 ko/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 390 ko/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Six visible feature cards 390 ko",
+      "ok": true
+    },
+    {
+      "name": "Original tools reachable 390 ko",
+      "ok": true
+    },
+    {
+      "name": "Viewport overflow 390 ko/gear/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 390 ko/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 390 ko/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 390 ko/gear/paddles/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 390 ko/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 390 ko/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 390 ko/gear/apparel/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 390 ko/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 390 ko/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 390 ko/tour/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 390 ko/tour/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 390 ko/tour/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 390 ko/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 390 ko/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 390 ko/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Schedule stats follow hero 390 ko",
+      "ok": true,
+      "detail": [
+        838.890625,
+        863.890625
+      ]
+    },
+    {
+      "name": "Viewport overflow 390 ko/level-check/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 390 ko/level-check/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 390 ko/level-check/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 390 ko/video-tools/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 390 ko/video-tools/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 390 ko/video-tools/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 390 ko/learn/",
+      "ok": true,
+      "detail": {
+        "w": 390,
+        "sw": 390
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 390 ko/learn/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 390 ko/learn/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 360 en/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 360 en/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 360 en/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Six visible feature cards 360 en",
+      "ok": true
+    },
+    {
+      "name": "Original tools reachable 360 en",
+      "ok": true
+    },
+    {
+      "name": "Viewport overflow 360 en/gear/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 360 en/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 360 en/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 360 en/gear/paddles/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 360 en/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 360 en/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 360 en/gear/apparel/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 360 en/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 360 en/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 360 en/tour/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 360 en/tour/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 360 en/tour/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 360 en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 360 en/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 360 en/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Schedule stats follow hero 360 en",
+      "ok": true,
+      "detail": [
+        838.890625,
+        863.890625
+      ]
+    },
+    {
+      "name": "Viewport overflow 360 en/level-check/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 360 en/level-check/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 360 en/level-check/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 360 en/video-tools/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 360 en/video-tools/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 360 en/video-tools/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 360 en/learn/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 360 en/learn/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 360 en/learn/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 360 ko/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 360 ko/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 360 ko/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Six visible feature cards 360 ko",
+      "ok": true
+    },
+    {
+      "name": "Original tools reachable 360 ko",
+      "ok": true
+    },
+    {
+      "name": "Viewport overflow 360 ko/gear/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 360 ko/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 360 ko/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 360 ko/gear/paddles/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 360 ko/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 360 ko/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 360 ko/gear/apparel/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 360 ko/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 360 ko/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 360 ko/tour/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 360 ko/tour/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 360 ko/tour/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 360 ko/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 360 ko/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 360 ko/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Schedule stats follow hero 360 ko",
+      "ok": true,
+      "detail": [
+        865.96875,
+        890.96875
+      ]
+    },
+    {
+      "name": "Viewport overflow 360 ko/level-check/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 360 ko/level-check/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 360 ko/level-check/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 360 ko/video-tools/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 360 ko/video-tools/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 360 ko/video-tools/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Viewport overflow 360 ko/learn/",
+      "ok": true,
+      "detail": {
+        "w": 360,
+        "sw": 360
+      }
+    },
+    {
+      "name": "Visual/text boxes separate 360 ko/learn/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Images fit their viewports 360 ko/learn/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Single selected tab en las-vegas-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel en las-vegas-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved en las-vegas-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Pending score never invented en las-vegas-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab en las-vegas-2026/1",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel en las-vegas-2026/1",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved en las-vegas-2026/1",
+      "ok": true
+    },
+    {
+      "name": "Pending score never invented en las-vegas-2026/1",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab en las-vegas-2026/2",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel en las-vegas-2026/2",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved en las-vegas-2026/2",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en las-vegas-2026/2/[11, 6]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en las-vegas-2026/2/[11, 8]",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab en las-vegas-2026/3",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel en las-vegas-2026/3",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved en las-vegas-2026/3",
+      "ok": true
+    },
+    {
+      "name": "Pending score never invented en las-vegas-2026/3",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab en las-vegas-2026/4",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel en las-vegas-2026/4",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved en las-vegas-2026/4",
+      "ok": true
+    },
+    {
+      "name": "Pending score never invented en las-vegas-2026/4",
+      "ok": true
+    },
+    {
+      "name": "Keyboard right en las-vegas-2026",
+      "ok": true
+    },
+    {
+      "name": "Keyboard end en las-vegas-2026",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab en arizona-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel en arizona-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved en arizona-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en arizona-2026/0/[10, 12]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en arizona-2026/0/[11, 9]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en arizona-2026/0/[11, 6]",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab en arizona-2026/1",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel en arizona-2026/1",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved en arizona-2026/1",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en arizona-2026/1/[11, 9]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en arizona-2026/1/[11, 4]",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab en arizona-2026/2",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel en arizona-2026/2",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved en arizona-2026/2",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en arizona-2026/2/[11, 7]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en arizona-2026/2/[7, 11]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en arizona-2026/2/[15, 13]",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab en arizona-2026/3",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel en arizona-2026/3",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved en arizona-2026/3",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en arizona-2026/3/[11, 4]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en arizona-2026/3/[10, 12]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en arizona-2026/3/[11, 6]",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab en arizona-2026/4",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel en arizona-2026/4",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved en arizona-2026/4",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en arizona-2026/4/[11, 3]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en arizona-2026/4/[11, 6]",
+      "ok": true
+    },
+    {
+      "name": "Keyboard right en arizona-2026",
+      "ok": true
+    },
+    {
+      "name": "Keyboard end en arizona-2026",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab en kuala-lumpur-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel en kuala-lumpur-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved en kuala-lumpur-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en kuala-lumpur-2026/0/[11, 8]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en kuala-lumpur-2026/0/[11, 5]",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab en kuala-lumpur-2026/1",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel en kuala-lumpur-2026/1",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved en kuala-lumpur-2026/1",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en kuala-lumpur-2026/1/[9, 11]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en kuala-lumpur-2026/1/[11, 4]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en kuala-lumpur-2026/1/[11, 5]",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab en kuala-lumpur-2026/2",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel en kuala-lumpur-2026/2",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved en kuala-lumpur-2026/2",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab en kuala-lumpur-2026/3",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel en kuala-lumpur-2026/3",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved en kuala-lumpur-2026/3",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en kuala-lumpur-2026/3/[5, 11]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en kuala-lumpur-2026/3/[11, 5]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en kuala-lumpur-2026/3/[11, 6]",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab en kuala-lumpur-2026/4",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel en kuala-lumpur-2026/4",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved en kuala-lumpur-2026/4",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en kuala-lumpur-2026/4/[5, 11]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en kuala-lumpur-2026/4/[11, 3]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged en kuala-lumpur-2026/4/[12, 10]",
+      "ok": true
+    },
+    {
+      "name": "Keyboard right en kuala-lumpur-2026",
+      "ok": true
+    },
+    {
+      "name": "Keyboard end en kuala-lumpur-2026",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab en mlp-finals-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel en mlp-finals-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved en mlp-finals-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Keyboard right en mlp-finals-2026",
+      "ok": true
+    },
+    {
+      "name": "Keyboard end en mlp-finals-2026",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab ko las-vegas-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel ko las-vegas-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved ko las-vegas-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Pending score never invented ko las-vegas-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab ko las-vegas-2026/1",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel ko las-vegas-2026/1",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved ko las-vegas-2026/1",
+      "ok": true
+    },
+    {
+      "name": "Pending score never invented ko las-vegas-2026/1",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab ko las-vegas-2026/2",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel ko las-vegas-2026/2",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved ko las-vegas-2026/2",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko las-vegas-2026/2/[11, 6]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko las-vegas-2026/2/[11, 8]",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab ko las-vegas-2026/3",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel ko las-vegas-2026/3",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved ko las-vegas-2026/3",
+      "ok": true
+    },
+    {
+      "name": "Pending score never invented ko las-vegas-2026/3",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab ko las-vegas-2026/4",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel ko las-vegas-2026/4",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved ko las-vegas-2026/4",
+      "ok": true
+    },
+    {
+      "name": "Pending score never invented ko las-vegas-2026/4",
+      "ok": true
+    },
+    {
+      "name": "Keyboard right ko las-vegas-2026",
+      "ok": true
+    },
+    {
+      "name": "Keyboard end ko las-vegas-2026",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab ko arizona-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel ko arizona-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved ko arizona-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko arizona-2026/0/[10, 12]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko arizona-2026/0/[11, 9]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko arizona-2026/0/[11, 6]",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab ko arizona-2026/1",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel ko arizona-2026/1",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved ko arizona-2026/1",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko arizona-2026/1/[11, 9]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko arizona-2026/1/[11, 4]",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab ko arizona-2026/2",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel ko arizona-2026/2",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved ko arizona-2026/2",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko arizona-2026/2/[11, 7]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko arizona-2026/2/[7, 11]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko arizona-2026/2/[15, 13]",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab ko arizona-2026/3",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel ko arizona-2026/3",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved ko arizona-2026/3",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko arizona-2026/3/[11, 4]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko arizona-2026/3/[10, 12]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko arizona-2026/3/[11, 6]",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab ko arizona-2026/4",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel ko arizona-2026/4",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved ko arizona-2026/4",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko arizona-2026/4/[11, 3]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko arizona-2026/4/[11, 6]",
+      "ok": true
+    },
+    {
+      "name": "Keyboard right ko arizona-2026",
+      "ok": true
+    },
+    {
+      "name": "Keyboard end ko arizona-2026",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab ko kuala-lumpur-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel ko kuala-lumpur-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved ko kuala-lumpur-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko kuala-lumpur-2026/0/[11, 8]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko kuala-lumpur-2026/0/[11, 5]",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab ko kuala-lumpur-2026/1",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel ko kuala-lumpur-2026/1",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved ko kuala-lumpur-2026/1",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko kuala-lumpur-2026/1/[9, 11]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko kuala-lumpur-2026/1/[11, 4]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko kuala-lumpur-2026/1/[11, 5]",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab ko kuala-lumpur-2026/2",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel ko kuala-lumpur-2026/2",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved ko kuala-lumpur-2026/2",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab ko kuala-lumpur-2026/3",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel ko kuala-lumpur-2026/3",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved ko kuala-lumpur-2026/3",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko kuala-lumpur-2026/3/[5, 11]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko kuala-lumpur-2026/3/[11, 5]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko kuala-lumpur-2026/3/[11, 6]",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab ko kuala-lumpur-2026/4",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel ko kuala-lumpur-2026/4",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved ko kuala-lumpur-2026/4",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko kuala-lumpur-2026/4/[5, 11]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko kuala-lumpur-2026/4/[11, 3]",
+      "ok": true
+    },
+    {
+      "name": "Game score unchanged ko kuala-lumpur-2026/4/[12, 10]",
+      "ok": true
+    },
+    {
+      "name": "Keyboard right ko kuala-lumpur-2026",
+      "ok": true
+    },
+    {
+      "name": "Keyboard end ko kuala-lumpur-2026",
+      "ok": true
+    },
+    {
+      "name": "Single selected tab ko mlp-finals-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Single matching panel ko mlp-finals-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Source result preserved ko mlp-finals-2026/0",
+      "ok": true
+    },
+    {
+      "name": "Keyboard right ko mlp-finals-2026",
+      "ok": true
+    },
+    {
+      "name": "Keyboard end ko mlp-finals-2026",
+      "ok": true
+    },
+    {
+      "name": "Brand chip filters actual cards",
+      "ok": true
+    },
+    {
+      "name": "Only one brand chip selected",
+      "ok": true
+    },
+    {
+      "name": "Dropdown updates chip",
+      "ok": true
+    },
+    {
+      "name": "Reset synchronizes chips and cards",
+      "ok": true
+    },
+    {
+      "name": "Product compare retained",
+      "ok": true
+    },
+    {
+      "name": "Mobile dock has five labeled targets",
+      "ok": true
+    },
+    {
+      "name": "Full menu remains available",
+      "ok": true
+    },
+    {
+      "name": "Menu Escape retained",
+      "ok": true
+    },
+    {
+      "name": "Dock does not cover working controls dupr-self-check/",
+      "ok": true
+    },
+    {
+      "name": "Dock does not cover working controls clip-lite/",
+      "ok": true
+    },
+    {
+      "name": "No uncaught JavaScript errors",
+      "ok": true,
+      "detail": []
+    }
+  ],
+  "externalRequestsBlocked": [
+    "https://crbnpickleball.com/cdn/shop/files/CRBN_Power_1X_AlternativeMain.jpg?v=1771601486&width=1080",
+    "https://images.pickleball.com/profile-images/1782411055134/GabeTardio-3-Edited.png",
+    "https://joola.com/cdn/shop/files/2025-MensClubPrintedPoloSerpCharcoalGray-01.jpg?v=1788364124&width=700",
+    "https://joola.com/cdn/shop/files/2025-WomensClubSkort-Navy-01.jpg?v=1788364177&width=700",
+    "https://joola.com/cdn/shop/files/WomensClubSS-DustyMauveHtr-01.jpg?v=1788362523&width=700",
+    "https://vaticpro.com/cdn/shop/files/DSC03090.jpg?v=1777835695&width=580",
+    "https://www.paddletek.com/cdn/shop/files/Paddletek_Bantam_TKO-C_Ocean_12.7_Front.png?v=1770072518&width=1200",
+    "https://www.ppatour.com/ppa/pros/rachel-rohrabacher.jpg",
+    "https://www.selkirk.com/cdn/shop/files/Canyon-Court-Pickleball-Apparel-Mens-7-Inch-Shorts-Rust.png?v=1781554603&width=300",
+    "https://www.selkirk.com/cdn/shop/files/Canyon-Court-Pickleball-Apparel-Womens-Tank-Top-Blue.png?v=1781552836&width=300",
+    "https://www.sixzeropickleball.com/cdn/shop/files/Ruby-Six-Zero-152745783_6c0f8641-6bfb-4cde-a761-5df8e3c6b6c6.png?v=1759968037&width=1080"
+  ],
+  "scope": "Local HTML/CSS/JS rendering. No external CDN availability, actual Windows runtime or browser encoder validation. In-memory localStorage stand-in."
+}

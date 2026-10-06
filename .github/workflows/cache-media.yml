@@ -1,0 +1,40 @@
+name: Package reviewed media (manual)
+on:
+  workflow_dispatch:
+    inputs:
+      rights_reviewed:
+        description: "I have reviewed the image reuse basis and accept responsibility for these copies."
+        type: boolean
+        required: true
+        default: false
+permissions:
+  contents: read
+jobs:
+  cache:
+    if: ${{ inputs.rights_reviewed == true }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts
+      - name: Download subject-matched images
+        run: npm run media:cache -- --rights-reviewed
+      - name: Build and validate cached version
+        run: npm run check
+      - name: Export changes for operator review
+        uses: actions/upload-artifact@v4
+        with:
+          name: reviewed-media-and-deploy
+          path: |
+            public/assets/media/
+            data/media-cache.json
+            dist/
+      - name: Export failure/success report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: media-packaging-report
+          path: test-results/*.json
+          if-no-files-found: warn

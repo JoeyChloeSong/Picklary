@@ -1,0 +1,1573 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "HTTP /en/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 1440 /en/",
+      "ok": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "Header remains at top 1440 /en/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 1440,
+        "height": 83
+      }
+    },
+    {
+      "name": "No product text/image overlap 1440 /en/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /ko/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 1440 /ko/",
+      "ok": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "Header remains at top 1440 /ko/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 1440,
+        "height": 83
+      }
+    },
+    {
+      "name": "No product text/image overlap 1440 /ko/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/gear/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 1440 /en/gear/",
+      "ok": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "Header remains at top 1440 /en/gear/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 1440,
+        "height": 83
+      }
+    },
+    {
+      "name": "No product text/image overlap 1440 /en/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /ko/gear/paddles/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 1440 /ko/gear/paddles/",
+      "ok": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "Header remains at top 1440 /ko/gear/paddles/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 1440,
+        "height": 83
+      }
+    },
+    {
+      "name": "No product text/image overlap 1440 /ko/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/gear/apparel/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 1440 /en/gear/apparel/",
+      "ok": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "Header remains at top 1440 /en/gear/apparel/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 1440,
+        "height": 83
+      }
+    },
+    {
+      "name": "No product text/image overlap 1440 /en/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/tour/players/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 1440 /en/tour/players/",
+      "ok": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "Header remains at top 1440 /en/tour/players/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 1440,
+        "height": 83
+      }
+    },
+    {
+      "name": "No product text/image overlap 1440 /en/tour/players/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/tour/schedule/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 1440 /en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "Header remains at top 1440 /en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 1440,
+        "height": 83
+      }
+    },
+    {
+      "name": "No product text/image overlap 1440 /en/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Schedule stats below hero 1440 /en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "stats": 574.484375,
+        "hero": 536.484375
+      }
+    },
+    {
+      "name": "HTTP /ko/tour/schedule/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 1440 /ko/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "Header remains at top 1440 /ko/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 1440,
+        "height": 83
+      }
+    },
+    {
+      "name": "No product text/image overlap 1440 /ko/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Schedule stats below hero 1440 /ko/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "stats": 574.484375,
+        "hero": 536.484375
+      }
+    },
+    {
+      "name": "HTTP /en/tour/rankings/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 1440 /en/tour/rankings/",
+      "ok": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "Header remains at top 1440 /en/tour/rankings/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 1440,
+        "height": 83
+      }
+    },
+    {
+      "name": "No product text/image overlap 1440 /en/tour/rankings/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/tour/results/arizona-2026/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 1440 /en/tour/results/arizona-2026/",
+      "ok": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "Header remains at top 1440 /en/tour/results/arizona-2026/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 1440,
+        "height": 83
+      }
+    },
+    {
+      "name": "No product text/image overlap 1440 /en/tour/results/arizona-2026/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/learn/third-shot-drive-or-drop/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 1440 /en/learn/third-shot-drive-or-drop/",
+      "ok": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "Header remains at top 1440 /en/learn/third-shot-drive-or-drop/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 1440,
+        "height": 83
+      }
+    },
+    {
+      "name": "No product text/image overlap 1440 /en/learn/third-shot-drive-or-drop/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /ko/tools/review/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 1440 /ko/tools/review/",
+      "ok": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "Header remains at top 1440 /ko/tools/review/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 1440,
+        "height": 83
+      }
+    },
+    {
+      "name": "No product text/image overlap 1440 /ko/tools/review/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 768 /en/",
+      "ok": true,
+      "detail": {
+        "scroll": 768,
+        "width": 768
+      }
+    },
+    {
+      "name": "Header remains at top 768 /en/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 768,
+        "height": 71
+      }
+    },
+    {
+      "name": "No product text/image overlap 768 /en/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /ko/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 768 /ko/",
+      "ok": true,
+      "detail": {
+        "scroll": 768,
+        "width": 768
+      }
+    },
+    {
+      "name": "Header remains at top 768 /ko/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 768,
+        "height": 71
+      }
+    },
+    {
+      "name": "No product text/image overlap 768 /ko/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/gear/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 768 /en/gear/",
+      "ok": true,
+      "detail": {
+        "scroll": 768,
+        "width": 768
+      }
+    },
+    {
+      "name": "Header remains at top 768 /en/gear/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 768,
+        "height": 71
+      }
+    },
+    {
+      "name": "No product text/image overlap 768 /en/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /ko/gear/paddles/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 768 /ko/gear/paddles/",
+      "ok": true,
+      "detail": {
+        "scroll": 768,
+        "width": 768
+      }
+    },
+    {
+      "name": "Header remains at top 768 /ko/gear/paddles/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 768,
+        "height": 71
+      }
+    },
+    {
+      "name": "No product text/image overlap 768 /ko/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/gear/apparel/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 768 /en/gear/apparel/",
+      "ok": true,
+      "detail": {
+        "scroll": 768,
+        "width": 768
+      }
+    },
+    {
+      "name": "Header remains at top 768 /en/gear/apparel/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 768,
+        "height": 71
+      }
+    },
+    {
+      "name": "No product text/image overlap 768 /en/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/tour/players/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 768 /en/tour/players/",
+      "ok": true,
+      "detail": {
+        "scroll": 768,
+        "width": 768
+      }
+    },
+    {
+      "name": "Header remains at top 768 /en/tour/players/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 768,
+        "height": 71
+      }
+    },
+    {
+      "name": "No product text/image overlap 768 /en/tour/players/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/tour/schedule/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 768 /en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "scroll": 768,
+        "width": 768
+      }
+    },
+    {
+      "name": "Header remains at top 768 /en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 768,
+        "height": 71
+      }
+    },
+    {
+      "name": "No product text/image overlap 768 /en/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Schedule stats below hero 768 /en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "stats": 624.046875,
+        "hero": 586.046875
+      }
+    },
+    {
+      "name": "HTTP /ko/tour/schedule/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 768 /ko/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "scroll": 768,
+        "width": 768
+      }
+    },
+    {
+      "name": "Header remains at top 768 /ko/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 768,
+        "height": 71
+      }
+    },
+    {
+      "name": "No product text/image overlap 768 /ko/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Schedule stats below hero 768 /ko/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "stats": 552.484375,
+        "hero": 514.484375
+      }
+    },
+    {
+      "name": "HTTP /en/tour/rankings/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 768 /en/tour/rankings/",
+      "ok": true,
+      "detail": {
+        "scroll": 768,
+        "width": 768
+      }
+    },
+    {
+      "name": "Header remains at top 768 /en/tour/rankings/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 768,
+        "height": 71
+      }
+    },
+    {
+      "name": "No product text/image overlap 768 /en/tour/rankings/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/tour/results/arizona-2026/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 768 /en/tour/results/arizona-2026/",
+      "ok": true,
+      "detail": {
+        "scroll": 768,
+        "width": 768
+      }
+    },
+    {
+      "name": "Header remains at top 768 /en/tour/results/arizona-2026/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 768,
+        "height": 71
+      }
+    },
+    {
+      "name": "No product text/image overlap 768 /en/tour/results/arizona-2026/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/learn/third-shot-drive-or-drop/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 768 /en/learn/third-shot-drive-or-drop/",
+      "ok": true,
+      "detail": {
+        "scroll": 768,
+        "width": 768
+      }
+    },
+    {
+      "name": "Header remains at top 768 /en/learn/third-shot-drive-or-drop/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 768,
+        "height": 71
+      }
+    },
+    {
+      "name": "No product text/image overlap 768 /en/learn/third-shot-drive-or-drop/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /ko/tools/review/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 768 /ko/tools/review/",
+      "ok": true,
+      "detail": {
+        "scroll": 768,
+        "width": 768
+      }
+    },
+    {
+      "name": "Header remains at top 768 /ko/tools/review/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 768,
+        "height": 71
+      }
+    },
+    {
+      "name": "No product text/image overlap 768 /ko/tools/review/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 390 /en/",
+      "ok": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "Header remains at top 390 /en/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 390,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 390 /en/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /ko/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 390 /ko/",
+      "ok": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "Header remains at top 390 /ko/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 390,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 390 /ko/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/gear/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 390 /en/gear/",
+      "ok": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "Header remains at top 390 /en/gear/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 390,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 390 /en/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /ko/gear/paddles/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 390 /ko/gear/paddles/",
+      "ok": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "Header remains at top 390 /ko/gear/paddles/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 390,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 390 /ko/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/gear/apparel/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 390 /en/gear/apparel/",
+      "ok": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "Header remains at top 390 /en/gear/apparel/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 390,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 390 /en/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/tour/players/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 390 /en/tour/players/",
+      "ok": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "Header remains at top 390 /en/tour/players/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 390,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 390 /en/tour/players/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/tour/schedule/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 390 /en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "Header remains at top 390 /en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 390,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 390 /en/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Schedule stats below hero 390 /en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "stats": 817.046875,
+        "hero": 792.046875
+      }
+    },
+    {
+      "name": "HTTP /ko/tour/schedule/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 390 /ko/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "Header remains at top 390 /ko/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 390,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 390 /ko/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Schedule stats below hero 390 /ko/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "stats": 817.046875,
+        "hero": 792.046875
+      }
+    },
+    {
+      "name": "HTTP /en/tour/rankings/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 390 /en/tour/rankings/",
+      "ok": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "Header remains at top 390 /en/tour/rankings/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 390,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 390 /en/tour/rankings/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/tour/results/arizona-2026/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 390 /en/tour/results/arizona-2026/",
+      "ok": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "Header remains at top 390 /en/tour/results/arizona-2026/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 390,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 390 /en/tour/results/arizona-2026/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/learn/third-shot-drive-or-drop/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 390 /en/learn/third-shot-drive-or-drop/",
+      "ok": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "Header remains at top 390 /en/learn/third-shot-drive-or-drop/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 390,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 390 /en/learn/third-shot-drive-or-drop/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /ko/tools/review/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 390 /ko/tools/review/",
+      "ok": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "Header remains at top 390 /ko/tools/review/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 390,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 390 /ko/tools/review/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 360 /en/",
+      "ok": true,
+      "detail": {
+        "scroll": 360,
+        "width": 360
+      }
+    },
+    {
+      "name": "Header remains at top 360 /en/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 360,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 360 /en/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /ko/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 360 /ko/",
+      "ok": true,
+      "detail": {
+        "scroll": 360,
+        "width": 360
+      }
+    },
+    {
+      "name": "Header remains at top 360 /ko/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 360,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 360 /ko/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/gear/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 360 /en/gear/",
+      "ok": true,
+      "detail": {
+        "scroll": 360,
+        "width": 360
+      }
+    },
+    {
+      "name": "Header remains at top 360 /en/gear/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 360,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 360 /en/gear/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /ko/gear/paddles/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 360 /ko/gear/paddles/",
+      "ok": true,
+      "detail": {
+        "scroll": 360,
+        "width": 360
+      }
+    },
+    {
+      "name": "Header remains at top 360 /ko/gear/paddles/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 360,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 360 /ko/gear/paddles/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/gear/apparel/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 360 /en/gear/apparel/",
+      "ok": true,
+      "detail": {
+        "scroll": 360,
+        "width": 360
+      }
+    },
+    {
+      "name": "Header remains at top 360 /en/gear/apparel/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 360,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 360 /en/gear/apparel/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/tour/players/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 360 /en/tour/players/",
+      "ok": true,
+      "detail": {
+        "scroll": 360,
+        "width": 360
+      }
+    },
+    {
+      "name": "Header remains at top 360 /en/tour/players/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 360,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 360 /en/tour/players/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/tour/schedule/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 360 /en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "scroll": 360,
+        "width": 360
+      }
+    },
+    {
+      "name": "Header remains at top 360 /en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 360,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 360 /en/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Schedule stats below hero 360 /en/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "stats": 926.234375,
+        "hero": 901.234375
+      }
+    },
+    {
+      "name": "HTTP /ko/tour/schedule/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 360 /ko/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "scroll": 360,
+        "width": 360
+      }
+    },
+    {
+      "name": "Header remains at top 360 /ko/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 360,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 360 /ko/tour/schedule/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "Schedule stats below hero 360 /ko/tour/schedule/",
+      "ok": true,
+      "detail": {
+        "stats": 844.125,
+        "hero": 819.125
+      }
+    },
+    {
+      "name": "HTTP /en/tour/rankings/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 360 /en/tour/rankings/",
+      "ok": true,
+      "detail": {
+        "scroll": 360,
+        "width": 360
+      }
+    },
+    {
+      "name": "Header remains at top 360 /en/tour/rankings/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 360,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 360 /en/tour/rankings/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/tour/results/arizona-2026/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 360 /en/tour/results/arizona-2026/",
+      "ok": true,
+      "detail": {
+        "scroll": 360,
+        "width": 360
+      }
+    },
+    {
+      "name": "Header remains at top 360 /en/tour/results/arizona-2026/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 360,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 360 /en/tour/results/arizona-2026/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /en/learn/third-shot-drive-or-drop/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 360 /en/learn/third-shot-drive-or-drop/",
+      "ok": true,
+      "detail": {
+        "scroll": 360,
+        "width": 360
+      }
+    },
+    {
+      "name": "Header remains at top 360 /en/learn/third-shot-drive-or-drop/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 360,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 360 /en/learn/third-shot-drive-or-drop/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /ko/tools/review/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No horizontal overflow 360 /ko/tools/review/",
+      "ok": true,
+      "detail": {
+        "scroll": 360,
+        "width": 360
+      }
+    },
+    {
+      "name": "Header remains at top 360 /ko/tools/review/",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 30,
+        "width": 360,
+        "height": 65
+      }
+    },
+    {
+      "name": "No product text/image overlap 360 /ko/tools/review/",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP /ko/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "Mobile menu opens",
+      "ok": true
+    },
+    {
+      "name": "Escape closes mobile menu",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/gear/paddles/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "Empty search is explained",
+      "ok": true
+    },
+    {
+      "name": "Filter reset restores all cards",
+      "ok": true
+    },
+    {
+      "name": "Brand filter works",
+      "ok": true
+    },
+    {
+      "name": "Three-product comparison opens",
+      "ok": true
+    },
+    {
+      "name": "Three columns in comparison",
+      "ok": true
+    },
+    {
+      "name": "Comparison capped at three",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/tools/self-check/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "Practice assessment produces result",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/tools/review/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "Worksheet row created",
+      "ok": true
+    },
+    {
+      "name": "Notes rendered as text, not HTML",
+      "ok": true
+    },
+    {
+      "name": "Explicit browser save stores note only",
+      "ok": true
+    },
+    {
+      "name": "CSV formula injection protected",
+      "ok": true
+    },
+    {
+      "name": "JSON note export valid",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/tools/review/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "Notes do not auto-load silently",
+      "ok": true
+    },
+    {
+      "name": "Explicit load restores note",
+      "ok": true
+    },
+    {
+      "name": "Delete clears storage and current list",
+      "ok": true
+    },
+    {
+      "name": "Local video metadata decoded",
+      "ok": true
+    },
+    {
+      "name": "Capture current video time",
+      "ok": true
+    },
+    {
+      "name": "Local video uses blob URL",
+      "ok": true
+    },
+    {
+      "name": "HTTP /en/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "HTTP /ko/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "HTTP /en/gear/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "HTTP /ko/gear/paddles/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "HTTP /en/tour/schedule/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "HTTP /ko/tour/schedule/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "HTTP /en/tour/results/arizona-2026/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "HTTP /en/learn/third-shot-drive-or-drop/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "HTTP /en/tour/players/",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "No uncaught JavaScript exceptions",
+      "ok": true,
+      "detail": []
+    }
+  ],
+  "blockedRemoteRequests": 10,
+  "remoteImageAvailability": "NOT TESTED (external requests blocked)",
+  "renderMode": "injected local HTML",
+  "storageMode": "explicit test double (opaque about:blank)",
+  "jsErrors": []
+}

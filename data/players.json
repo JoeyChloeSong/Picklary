@@ -1,0 +1,342 @@
+[
+  {
+    "slug": "ben-johns",
+    "name": "Ben Johns",
+    "country": "USA",
+    "kind": "pro",
+    "media": "ben-johns",
+    "source": "athlete-ben-johns",
+    "style": {
+      "en": "Patient point construction",
+      "ko": "인내심 있는 포인트 구성"
+    },
+    "watch": {
+      "en": "Watch the decision to wait after a neutral dink. Copy the preparation, not the attempt to cover every ball.",
+      "ko": "중립 딩크 후 기다리는 판단을 보세요. 모든 공을 혼자 처리하려 하기보다 준비 동작을 따라 해 보세요."
+    },
+    "lesson": "purposeful-dinking"
+  },
+  {
+    "slug": "anna-leigh-waters",
+    "name": "Anna Leigh Waters",
+    "country": "USA",
+    "kind": "pro",
+    "media": "anna-leigh-waters",
+    "source": "athlete-anna-leigh-waters",
+    "style": {
+      "en": "Early attacking decisions",
+      "ko": "빠른 공격 전환"
+    },
+    "watch": {
+      "en": "Watch how ready position changes before contact. Practice finding a balanced attack window rather than swinging harder.",
+      "ko": "타구 전 준비 위치의 변화를 보세요. 더 세게 치기보다 균형 있는 공격 타이밍을 찾는 연습으로 연결합니다."
+    },
+    "lesson": "purposeful-dinking"
+  },
+  {
+    "slug": "federico-staksrud",
+    "name": "Federico Staksrud",
+    "country": "ARG",
+    "kind": "pro",
+    "media": "federico-staksrud",
+    "source": "athlete-federico-staksrud",
+    "style": {
+      "en": "Singles depth and court position",
+      "ko": "단식의 깊이와 위치"
+    },
+    "watch": {
+      "en": "Track the return and the first recovery step together; the position after a shot matters as much as its pace.",
+      "ko": "리턴과 첫 회복 스텝을 함께 추적하세요. 샷의 속도만큼 타구 후 위치도 중요합니다."
+    },
+    "lesson": "return-depth-and-recovery"
+  },
+  {
+    "slug": "jw-johnson",
+    "name": "JW Johnson",
+    "country": "USA",
+    "kind": "pro",
+    "media": "jw-johnson",
+    "source": "athlete-jw-johnson",
+    "style": {
+      "en": "Compact counter mechanics",
+      "ko": "간결한 카운터 동작"
+    },
+    "watch": {
+      "en": "Study the size of the backswing on a fast exchange. Rehearse a stable contact before trying to add a winner.",
+      "ko": "빠른 교전에서 백스윙 크기를 살펴보세요. 위너를 더하려 하기 전에 안정된 타점을 연습합니다."
+    },
+    "lesson": "transition-reset-footwork"
+  },
+  {
+    "slug": "catherine-parenteau",
+    "name": "Catherine Parenteau",
+    "country": "CAN",
+    "kind": "pro",
+    "media": "catherine-parenteau",
+    "source": "athlete-catherine-parenteau",
+    "style": {
+      "en": "Repeatable all-court choices",
+      "ko": "반복 가능한 올라운드 선택"
+    },
+    "watch": {
+      "en": "Follow how an ordinary neutral shot keeps the point alive. Count unforced risks rather than just highlights.",
+      "ko": "평범한 중립구가 어떻게 포인트를 이어 주는지 보세요. 하이라이트뿐 아니라 불필요하게 위험을 감수한 선택도 셉니다."
+    },
+    "lesson": "match-review-worksheet"
+  },
+  {
+    "slug": "anna-bright",
+    "name": "Anna Bright",
+    "country": "USA",
+    "kind": "pro",
+    "media": "anna-bright",
+    "source": "athlete-anna-bright",
+    "style": {
+      "en": "Doubles anticipation",
+      "ko": "복식에서의 예측"
+    },
+    "watch": {
+      "en": "Watch the paddle and feet before the opponent strikes. Use the next clip to check your own ready position.",
+      "ko": "상대 타구 전 패들과 발의 위치를 보세요. 다음 영상에서는 자신의 준비 위치를 확인해 보세요."
+    },
+    "lesson": "purposeful-dinking"
+  },
+  {
+    "slug": "tyson-mcguffin",
+    "name": "Tyson McGuffin",
+    "country": "USA",
+    "kind": "pro",
+    "media": "tyson-mcguffin",
+    "source": "athlete-tyson-mcguffin",
+    "style": {
+      "en": "Recovery through pressure",
+      "ko": "압박 속 회복"
+    },
+    "watch": {
+      "en": "Follow the reset after a difficult defensive shot. A successful scramble is not permission to rush the next attack.",
+      "ko": "어려운 수비 다음 리셋을 보세요. 한 번 공을 살렸다고 다음 공격을 서두를 필요는 없습니다."
+    },
+    "lesson": "transition-reset-footwork"
+  },
+  {
+    "slug": "riley-newman",
+    "name": "Riley Newman",
+    "country": "USA",
+    "kind": "pro",
+    "media": "riley-newman",
+    "source": "athlete-riley-newman",
+    "style": {
+      "en": "Middle pressure in doubles",
+      "ko": "복식 중앙 압박"
+    },
+    "watch": {
+      "en": "Track the partner’s position when the middle is covered. Do not copy aggressive coverage without agreeing roles.",
+      "ko": "중앙을 커버할 때 파트너의 위치도 보세요. 역할 합의 없이 공격적인 커버 범위만 따라 하지 않습니다."
+    },
+    "lesson": "match-review-worksheet"
+  },
+  {
+    "slug": "james-ignatowich",
+    "name": "James Ignatowich",
+    "country": "USA",
+    "kind": "pro",
+    "media": "james-ignatowich",
+    "source": "athlete-james-ignatowich",
+    "style": {
+      "en": "Preparation and backhand readiness",
+      "ko": "준비 동작과 백핸드 대응"
+    },
+    "watch": {
+      "en": "Focus on early preparation rather than imitating constant movement. Your feet still need to organize the contact.",
+      "ko": "끊임없는 움직임을 흉내 내기보다 이른 준비를 보세요. 타구 순간 발의 균형은 여전히 필요합니다."
+    },
+    "lesson": "transition-reset-footwork"
+  },
+  {
+    "slug": "christian-alshon",
+    "name": "Christian Alshon",
+    "country": "USA",
+    "kind": "pro",
+    "media": "christian-alshon",
+    "source": "athlete-christian-alshon",
+    "style": {
+      "en": "Athletic reach with shot selection",
+      "ko": "긴 리치와 샷 선택"
+    },
+    "watch": {
+      "en": "Separate a spectacular recovery from a repeatable pattern. Review the shot that created the emergency.",
+      "ko": "화려한 회복과 반복 가능한 패턴을 구분하세요. 긴급 수비를 만들었던 이전 샷부터 복기합니다."
+    },
+    "lesson": "match-review-worksheet"
+  },
+  {
+    "slug": "lea-jansen",
+    "name": "Lea Jansen",
+    "country": "USA",
+    "kind": "pro",
+    "media": "lea-jansen",
+    "source": "athlete-lea-jansen",
+    "style": {
+      "en": "Singles rally structure",
+      "ko": "단식 랠리 구성"
+    },
+    "watch": {
+      "en": "Study whether depth creates time for the next step. Do not judge a passing shot without the previous return.",
+      "ko": "깊이가 다음 스텝을 위한 시간을 만드는지 보세요. 이전 리턴 없이 패싱샷 하나만 평가하지 않습니다."
+    },
+    "lesson": "return-depth-and-recovery"
+  },
+  {
+    "slug": "lucy-kovalova",
+    "name": "Lucy Kovalova",
+    "country": "SVK",
+    "kind": "pro",
+    "media": "lucy-kovalova",
+    "source": "athlete-lucy-kovalova",
+    "style": {
+      "en": "Structured doubles exchanges",
+      "ko": "구조적인 복식 교전"
+    },
+    "watch": {
+      "en": "Use a rally to study spacing and compact finishes. An early ready position makes the next volley less rushed.",
+      "ko": "랠리 하나로 간격과 짧은 마무리를 관찰하세요. 준비 위치로 일찍 돌아오면 다음 발리가 덜 급해집니다."
+    },
+    "lesson": "purposeful-dinking"
+  },
+  {
+    "slug": "gabriel-tardio",
+    "name": "Gabriel Tardio",
+    "country": "BOL",
+    "kind": "pro",
+    "media": "gabriel-tardio",
+    "source": "athlete-gabriel-tardio",
+    "style": {
+      "en": "Countering from the right",
+      "ko": "오른쪽에서 만드는 카운터"
+    },
+    "watch": {
+      "en": "Track the first attacking opportunity after a reset, not only the final winner.",
+      "ko": "리셋 다음 처음 생기는 공격 기회를 살펴보세요. 마지막 위너만 보지 않습니다."
+    },
+    "lesson": "transition-reset-footwork"
+  },
+  {
+    "slug": "hayden-patriquin",
+    "name": "Hayden Patriquin",
+    "country": "USA",
+    "kind": "pro",
+    "media": "hayden-patriquin",
+    "source": "athlete-hayden-patriquin",
+    "style": {
+      "en": "Turning recovery into pressure",
+      "ko": "회복을 압박으로 연결"
+    },
+    "watch": {
+      "en": "Follow the recovery step after a poach. Coverage without recovery creates the next opening.",
+      "ko": "포치 다음 회복 스텝을 보세요. 회복 없는 커버는 상대에게 다음 빈틈을 줍니다."
+    },
+    "lesson": "match-review-worksheet"
+  },
+  {
+    "slug": "kate-fahey",
+    "name": "Kate Fahey",
+    "country": "USA",
+    "kind": "pro",
+    "media": "kate-fahey",
+    "source": "athlete-kate-fahey",
+    "style": {
+      "en": "Repeatable singles depth",
+      "ko": "반복 가능한 단식 깊이"
+    },
+    "watch": {
+      "en": "Compare the quality of returns late in a rally or session with the easy early balls.",
+      "ko": "세션 후반 또는 긴 랠리에서 리턴의 깊이가 쉬운 초반 공과 어떻게 다른지 비교합니다."
+    },
+    "lesson": "return-depth-and-recovery"
+  },
+  {
+    "slug": "jorja-johnson",
+    "name": "Jorja Johnson",
+    "country": "USA",
+    "kind": "pro",
+    "media": "jorja-johnson",
+    "source": "athlete-jorja-johnson",
+    "style": {
+      "en": "Feel and directional disguise",
+      "ko": "터치와 방향 위장"
+    },
+    "watch": {
+      "en": "Look for small changes in direction while the preparation stays similar. Practice accuracy before adding disguise.",
+      "ko": "비슷한 준비에서 방향을 조금씩 바꾸는 장면을 찾습니다. 위장보다 정확성을 먼저 연습하세요."
+    },
+    "lesson": "purposeful-dinking"
+  },
+  {
+    "slug": "hurricane-tyra-black",
+    "name": "Hurricane Tyra Black",
+    "country": "USA",
+    "kind": "pro",
+    "media": "hurricane-tyra-black",
+    "source": "athlete-hurricane-tyra-black",
+    "style": {
+      "en": "Defense-to-counter transitions",
+      "ko": "수비에서 카운터로 전환"
+    },
+    "watch": {
+      "en": "Find the difference between a ball to absorb and a ball to redirect. Height and balance change the choice.",
+      "ko": "흡수할 공과 되돌려 공격할 공을 구분해 보세요. 공의 높이와 균형이 선택을 바꿉니다."
+    },
+    "lesson": "transition-reset-footwork"
+  },
+  {
+    "slug": "hunter-johnson",
+    "name": "Hunter Johnson",
+    "country": "USA",
+    "kind": "pro",
+    "media": "hunter-johnson",
+    "source": "athlete-hunter-johnson",
+    "style": {
+      "en": "Serve plus first attack",
+      "ko": "서브와 첫 공격의 연결"
+    },
+    "watch": {
+      "en": "Watch where the serve leaves the receiver and how that shapes the next forehand.",
+      "ko": "서브로 리시버가 어디에 서게 되는지, 그 위치가 다음 포핸드에 어떤 기회를 주는지 보세요."
+    },
+    "lesson": "third-shot-drive-or-drop"
+  },
+  {
+    "slug": "rachel-rohrabacher",
+    "name": "Rachel Rohrabacher",
+    "country": "USA",
+    "kind": "pro",
+    "media": "rachel-rohrabacher",
+    "source": "athlete-rachel-rohrabacher",
+    "style": {
+      "en": "Compact hands and middle pressure",
+      "ko": "짧은 손 동작과 중앙 압박"
+    },
+    "watch": {
+      "en": "Study the split step before a counter and the partner’s position during a middle exchange.",
+      "ko": "카운터 전 스플릿 스텝과 중앙 교전 때 파트너의 위치를 함께 관찰합니다."
+    },
+    "lesson": "purposeful-dinking"
+  },
+  {
+    "slug": "ella-oh",
+    "name": "Ella Oh",
+    "country": "USA",
+    "kind": "junior",
+    "media": "ella-oh",
+    "source": "athlete-ella-oh",
+    "style": {
+      "en": "Junior development spotlight",
+      "ko": "주니어 성장 스포트라이트"
+    },
+    "watch": {
+      "en": "Study preparation and age-appropriate progress rather than comparing a junior’s results to an adult world ranking.",
+      "ko": "성인 세계랭킹과 성적을 비교하기보다 준비 동작과 연령에 맞는 성장 과정을 봅니다."
+    },
+    "lesson": "first-session-plan"
+  }
+]

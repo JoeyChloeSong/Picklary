@@ -1,0 +1,499 @@
+{
+  "usap-rules": {
+    "title": "USA Pickleball: official rules",
+    "url": "https://usapickleball.org/rules/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "usap-equipment": {
+    "title": "USA Pickleball: equipment standards",
+    "url": "https://equipment.usapickleball.org/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "ppa-wpr": {
+    "title": "PPA Tour: World Pickleball Rankings",
+    "url": "https://www.ppatour.com/rankings/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "ppa-schedule": {
+    "title": "PPA Tour: events",
+    "url": "https://www.ppatour.com/events/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "vegas-md": {
+    "title": "Las Vegas men’s doubles final, October 4",
+    "url": "https://pickleball.com/news/alshon-daescu-win-second-straight-title-hand-johns-tardio-first-loss-of-2026",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "vegas-event": {
+    "title": "Rate Las Vegas Open event page",
+    "url": "https://www.ppatour.com/events/2026/rate-las-vegas-open/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": "Some champion/finalist rows conflicted with the timestamped match recap. Do not use uncorroborated finals from this page."
+  },
+  "vegas-draw": {
+    "title": "Las Vegas: draws released",
+    "url": "https://pickleball.com/news/draws-released-for-rate-las-vegas-open",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "arizona-recap": {
+    "title": "Arizona: Championship Sunday recap",
+    "url": "https://pickleball.com/news/mesa-championship-sunday-recap-alshon-daescu-win-thriller-as-waters-takes-two-golds",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "arizona-wd": {
+    "title": "Arizona: women’s doubles official match record",
+    "url": "https://pickleball.com/results/match/2b41bf74-0e8b-4188-a6f1-d9e8c96c138d",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "kl-recap": {
+    "title": "Kuala Lumpur: championship recap",
+    "url": "https://pickleball.com/news/kuala-lumpur-cup-recap-irvine-tardio-earn-double-gold-as-khlif-captures-first-ppa-asia-title",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "kl-event": {
+    "title": "PPA Asia: Kuala Lumpur Cup",
+    "url": "https://www.ppatour-asia.com/tournament/2026/kuala-lumpur-cup/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "mlp-final": {
+    "title": "MLP: 2026 championship result",
+    "url": "https://majorleaguepickleball.co/news/major-league-pickleball-finals-on-cbs-set-all-time-league-viewership-record/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "mlp-schedule": {
+    "title": "Major League Pickleball",
+    "url": "https://majorleaguepickleball.co/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "adsense-ready": {
+    "title": "Google: make your pages ready for AdSense",
+    "url": "https://support.google.com/adsense/answer/7299563?hl=en",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "adsense-replicated": {
+    "title": "Google: replicated content",
+    "url": "https://support.google.com/publisherpolicies/answer/11190248?hl=en",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "adsense-verify": {
+    "title": "Google: connect your site to AdSense",
+    "url": "https://support.google.com/adsense/answer/7584263?hl=en",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "adsense-cmp": {
+    "title": "Google: consent management requirements",
+    "url": "https://support.google.com/adsense/answer/13554116?hl=en",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "netlify-build": {
+    "title": "Netlify: build configuration",
+    "url": "https://docs.netlify.com/build/configure-builds/overview/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "athlete-ben-johns": {
+    "title": "PPA Tour · Ben Johns",
+    "url": "https://www.ppatour.com/athletes/ben-johns/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "athlete-anna-leigh-waters": {
+    "title": "PPA Tour · Anna Leigh Waters",
+    "url": "https://www.ppatour.com/athletes/anna-leigh-waters/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "athlete-federico-staksrud": {
+    "title": "PPA Tour · Federico Staksrud",
+    "url": "https://www.ppatour.com/athletes/federico-staksrud/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "athlete-jw-johnson": {
+    "title": "PPA Tour · JW Johnson",
+    "url": "https://www.ppatour.com/athletes/jw-johnson/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "athlete-catherine-parenteau": {
+    "title": "PPA Tour · Catherine Parenteau",
+    "url": "https://www.ppatour.com/athletes/catherine-parenteau/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "athlete-anna-bright": {
+    "title": "PPA Tour · Anna Bright",
+    "url": "https://www.ppatour.com/athletes/anna-bright/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "athlete-tyson-mcguffin": {
+    "title": "PPA Tour · Tyson McGuffin",
+    "url": "https://www.ppatour.com/athletes/tyson-mcguffin/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "athlete-riley-newman": {
+    "title": "PPA Tour · Riley Newman",
+    "url": "https://www.ppatour.com/athletes/riley-newman/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "athlete-james-ignatowich": {
+    "title": "PPA Tour · James Ignatowich",
+    "url": "https://www.ppatour.com/athletes/james-ignatowich/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "athlete-christian-alshon": {
+    "title": "PPA Tour · Christian Alshon",
+    "url": "https://www.ppatour.com/athletes/christian-alshon/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "athlete-lea-jansen": {
+    "title": "PPA Tour · Lea Jansen",
+    "url": "https://www.ppatour.com/athletes/lea-jansen/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "athlete-lucy-kovalova": {
+    "title": "PPA Tour · Lucy Kovalova",
+    "url": "https://www.ppatour.com/athletes/lucy-kovalova/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "athlete-gabriel-tardio": {
+    "title": "PPA Tour · Gabriel Tardio",
+    "url": "https://www.ppatour.com/athletes/gabriel-tardio/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "athlete-hayden-patriquin": {
+    "title": "PPA Tour · Hayden Patriquin",
+    "url": "https://www.ppatour.com/athletes/hayden-patriquin/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "athlete-kate-fahey": {
+    "title": "PPA Tour · Kate Fahey",
+    "url": "https://www.ppatour.com/athletes/kate-fahey/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "athlete-jorja-johnson": {
+    "title": "PPA Tour · Jorja Johnson",
+    "url": "https://www.ppatour.com/athletes/jorja-johnson/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "athlete-hurricane-tyra-black": {
+    "title": "PPA Tour · Hurricane Tyra Black",
+    "url": "https://www.ppatour.com/athletes/hurricane-tyra-black/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "athlete-hunter-johnson": {
+    "title": "PPA Tour · Hunter Johnson",
+    "url": "https://www.ppatour.com/athletes/hunter-johnson/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "athlete-rachel-rohrabacher": {
+    "title": "PPA Tour · Rachel Rohrabacher",
+    "url": "https://www.ppatour.com/athletes/rachel-rohrabacher/",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "athlete-ella-oh": {
+    "title": "Ella Oh · official press kit",
+    "url": "https://ellaoh.com/press",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-franklin-c45": {
+    "title": "Franklin · C45 Carbon Fiber Series",
+    "url": "https://franklinsports.com/c45-carbon",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-six-zero-dbd": {
+    "title": "Six Zero · Double Black Diamond Control",
+    "url": "https://www.sixzeropickleball.com/products/double-black-diamond",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-six-zero-ruby": {
+    "title": "Six Zero · Ruby",
+    "url": "https://www.sixzeropickleball.com/products/ruby",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-crbn-1x": {
+    "title": "CRBN · 1X Power Series",
+    "url": "https://crbnpickleball.com/products/crbn-1x-power-series-pickleball-paddle",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-paddletek-tko-c": {
+    "title": "Paddletek · Bantam TKO-C",
+    "url": "https://www.paddletek.com/products/bantam-tko-c",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-vatic-prism-flash": {
+    "title": "Vatic Pro · PRISM Flash 16 mm",
+    "url": "https://vaticpro.com/collections/prism",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-joola-perseus-pro-v": {
+    "title": "JOOLA · Perseus Pro V 16 mm",
+    "url": "https://joola.com/products/joola-perseus-pro-v-pickleball-paddle-1",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-selkirk-boomstik": {
+    "title": "Selkirk · LABS Project Boomstik",
+    "url": "https://www.selkirk.com/products/selkirk-labs-project-boomstik",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-volair-mach-2-forza": {
+    "title": "Volair · Mach 2 Forza 16 mm",
+    "url": "https://volair.com/products/mach-2-forza-pickleball-paddle",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-gearbox-pro-ultimate": {
+    "title": "Gearbox · Pro Ultimate Elongated 16 mm",
+    "url": "https://gearboxsports.com/products/pro-ultimate-elongated",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-franklin-x40": {
+    "title": "Franklin · X-40 Outdoor",
+    "url": "https://franklinsports.com/x-40-outdoor-pickleball-packs",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-selkirk-pro-s1": {
+    "title": "Selkirk · Pro S1",
+    "url": "https://www.selkirk.com/products/pro-s1-pickleballs",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-joola-primo": {
+    "title": "JOOLA · Primo",
+    "url": "https://joola.com/products/primo-pickleball-balls",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-gamma-chuck": {
+    "title": "GAMMA · CHUCK Outdoor",
+    "url": "https://gammasports.com/products/chuck-outdoor-pickleballs",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-asics-gel-renma-2": {
+    "title": "ASICS · GEL-RENMA 2",
+    "url": "https://www.asics.com/us/en-us/gel-renma-2/p/ANA_1072A126-500.html",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-wilson-pickle-pro": {
+    "title": "Wilson · Pickle Pro",
+    "url": "https://www.wilson.com/en-us/product/pickle-pro-wrs00753",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-babolat-jet-mach-3": {
+    "title": "Babolat · Jet Mach 3",
+    "url": "https://www.babolat.com/us/news-articles-blog-jet-mach-3/jet-mach-3.html",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-skechers-viper-court-pro-2": {
+    "title": "Skechers · Viper Court Pro 2.0",
+    "url": "https://www.skechers.com/skechers-viper-court-pro-2.0---pickleball/246109_NVY.html",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-selkirk-7-inch-shorts": {
+    "title": "Selkirk · Essentials 2.0 Performance Shorts",
+    "url": "https://www.selkirk.com/products/mens-essentials-2-0-7-inch-performance-shorts",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-selkirk-sportwik-tank": {
+    "title": "Selkirk · Essentials 2.0 Sport-Wik Tank",
+    "url": "https://www.selkirk.com/products/womens-essentials-2-0-sport-wik-tank",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-joola-club-polo": {
+    "title": "JOOLA · Men’s Club Printed Polo",
+    "url": "https://joola.com/collections/joola-pickleball-apparel/products/mens-club-printed-polo",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-joola-club-short-sleeve": {
+    "title": "JOOLA · Women’s Club Short Sleeve",
+    "url": "https://joola.com/collections/joola-pickleball-apparel/products/womens-club-short-sleeve-fall",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-joola-club-skort": {
+    "title": "JOOLA · Women’s Club Skort",
+    "url": "https://joola.com/collections/joola-pickleball-apparel/products/womens-club-skort-1",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-tourna-mega-tac": {
+    "title": "Tourna · Pickleball Mega Tac",
+    "url": "https://www.tourna.com/products/pickleball-mega-tac-black",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-selkirk-core-team-bag": {
+    "title": "Selkirk · Core Line Team Bag",
+    "url": "https://www.selkirk.com/products/core-team-bag",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-crbn-pivot-glasses": {
+    "title": "CRBN · Pivot Pickleball Glasses",
+    "url": "https://crbnpickleball.com/products/best-pickleball-glasses",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-crbn-eraser": {
+    "title": "CRBN · Paddle Eraser",
+    "url": "https://crbnpickleball.com/products/crbn-pickleball-paddle-cleaner-eraser",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "product-gearbox-vision": {
+    "title": "Gearbox · Vision Eyewear",
+    "url": "https://gearboxsports.com/products/gearbox-vision-eyewear-black-frame",
+    "checked": "2026-10-04",
+    "kind": "primary",
+    "note": ""
+  },
+  "picklewave-mens-singles": {
+    "title": "PickleWave · mens-singles",
+    "url": "https://www.picklewave.com/rankings/mens-singles",
+    "checked": "2026-10-04",
+    "kind": "independent-provider",
+    "note": "Independent Elo, not PPA points or official world rankings. Page date label 2026-10-05; match coverage cutoff not independently established."
+  },
+  "picklewave-womens-singles": {
+    "title": "PickleWave · womens-singles",
+    "url": "https://www.picklewave.com/rankings/womens-singles",
+    "checked": "2026-10-04",
+    "kind": "independent-provider",
+    "note": "Independent Elo, not PPA points or official world rankings. Page date label 2026-10-05; match coverage cutoff not independently established."
+  },
+  "picklewave-mens-doubles": {
+    "title": "PickleWave · mens-doubles",
+    "url": "https://www.picklewave.com/rankings/mens-doubles",
+    "checked": "2026-10-04",
+    "kind": "independent-provider",
+    "note": "Independent Elo, not PPA points or official world rankings. Page date label 2026-10-05; match coverage cutoff not independently established."
+  },
+  "picklewave-womens-doubles": {
+    "title": "PickleWave · womens-doubles",
+    "url": "https://www.picklewave.com/rankings/womens-doubles",
+    "checked": "2026-10-04",
+    "kind": "independent-provider",
+    "note": "Independent Elo, not PPA points or official world rankings. Page date label 2026-10-05; match coverage cutoff not independently established."
+  },
+  "picklewave-mixed-doubles": {
+    "title": "PickleWave · mixed-doubles",
+    "url": "https://www.picklewave.com/rankings/mixed-doubles",
+    "checked": "2026-10-04",
+    "kind": "independent-provider",
+    "note": "Independent Elo, not PPA points or official world rankings. Page date label 2026-10-05; match coverage cutoff not independently established."
+  }
+}

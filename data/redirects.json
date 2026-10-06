@@ -1,0 +1,662 @@
+[
+  {
+    "from": "/en/pro-scene/",
+    "to": "/en/tour/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/en/pro-scene/players/",
+    "to": "/en/tour/players/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/en/players/",
+    "to": "/en/tour/players/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/en/pro-scene/results/",
+    "to": "/en/tour/results/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/en/pro-scene/rankings/",
+    "to": "/en/tour/rankings/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/en/tournaments/",
+    "to": "/en/tour/schedule/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/en/tournaments/results/",
+    "to": "/en/tour/results/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/en/paddles/",
+    "to": "/en/gear/paddles/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/en/privacy-policy/",
+    "to": "/en/privacy/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/en/corrections-policy/",
+    "to": "/en/corrections/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/en/cookie-policy/",
+    "to": "/en/privacy/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/en/advertising-disclosure/",
+    "to": "/en/editorial-policy/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/en/pickleball-complete-beginner-guide/",
+    "to": "/en/learn/first-session-plan/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/en/dupr-self-check/",
+    "to": "/en/tools/self-check/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/en/players/ben-johns/",
+    "to": "/en/tour/players/#ben-johns",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/en/players/anna-leigh-waters/",
+    "to": "/en/tour/players/#anna-leigh-waters",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/en/players/federico-staksrud/",
+    "to": "/en/tour/players/#federico-staksrud",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/en/players/jw-johnson/",
+    "to": "/en/tour/players/#jw-johnson",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/en/players/catherine-parenteau/",
+    "to": "/en/tour/players/#catherine-parenteau",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/en/players/anna-bright/",
+    "to": "/en/tour/players/#anna-bright",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/en/players/tyson-mcguffin/",
+    "to": "/en/tour/players/#tyson-mcguffin",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/en/players/riley-newman/",
+    "to": "/en/tour/players/#riley-newman",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/en/players/james-ignatowich/",
+    "to": "/en/tour/players/#james-ignatowich",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/en/players/christian-alshon/",
+    "to": "/en/tour/players/#christian-alshon",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/en/players/lea-jansen/",
+    "to": "/en/tour/players/#lea-jansen",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/en/players/lucy-kovalova/",
+    "to": "/en/tour/players/#lucy-kovalova",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/en/players/gabriel-tardio/",
+    "to": "/en/tour/players/#gabriel-tardio",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/en/players/hayden-patriquin/",
+    "to": "/en/tour/players/#hayden-patriquin",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/en/players/kate-fahey/",
+    "to": "/en/tour/players/#kate-fahey",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/en/players/jorja-johnson/",
+    "to": "/en/tour/players/#jorja-johnson",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/en/players/hurricane-tyra-black/",
+    "to": "/en/tour/players/#hurricane-tyra-black",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/en/players/hunter-johnson/",
+    "to": "/en/tour/players/#hunter-johnson",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/en/players/rachel-rohrabacher/",
+    "to": "/en/tour/players/#rachel-rohrabacher",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/en/players/ella-oh/",
+    "to": "/en/tour/players/#ella-oh",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/en/paddles/joola-perseus-pro-v/",
+    "to": "/en/gear/paddles/#joola-perseus-pro-v",
+    "status": 301,
+    "reason": "Same model/model family now on category page"
+  },
+  {
+    "from": "/en/paddles/six-zero-double-black-diamond-control/",
+    "to": "/en/gear/paddles/#six-zero-dbd",
+    "status": 301,
+    "reason": "Same model/model family now on category page"
+  },
+  {
+    "from": "/en/paddles/six-zero-ruby/",
+    "to": "/en/gear/paddles/#six-zero-ruby",
+    "status": 301,
+    "reason": "Same model/model family now on category page"
+  },
+  {
+    "from": "/en/paddles/franklin-c45/",
+    "to": "/en/gear/paddles/#franklin-c45",
+    "status": 301,
+    "reason": "Same model/model family now on category page"
+  },
+  {
+    "from": "/en/paddles/paddletek-bantam-tko-c/",
+    "to": "/en/gear/paddles/#paddletek-tko-c",
+    "status": 301,
+    "reason": "Same model/model family now on category page"
+  },
+  {
+    "from": "/en/paddles/vatic-pro-prism-flash/",
+    "to": "/en/gear/paddles/#vatic-prism-flash",
+    "status": 301,
+    "reason": "Same model/model family now on category page"
+  },
+  {
+    "from": "/en/paddles/crbn-1x-power-series/",
+    "to": "/en/gear/paddles/#crbn-1x",
+    "status": 301,
+    "reason": "Same model/model family now on category page"
+  },
+  {
+    "from": "/en/paddles/gearbox-pro-power-elongated/",
+    "to": "/en/gear/paddles/#gearbox-pro-ultimate",
+    "status": 301,
+    "reason": "Same model/model family now on category page"
+  },
+  {
+    "from": "/en/paddles/volair-mach-2-forza/",
+    "to": "/en/gear/paddles/#volair-mach-2-forza",
+    "status": 301,
+    "reason": "Same model/model family now on category page"
+  },
+  {
+    "from": "/en/paddles/selkirk-project-boomstik/",
+    "to": "/en/gear/paddles/#selkirk-boomstik",
+    "status": 301,
+    "reason": "Same model/model family now on category page"
+  },
+  {
+    "from": "/en/tournaments/ppa-arizona-open-2026/",
+    "to": "/en/tour/results/arizona-2026/",
+    "status": 301,
+    "reason": "Same named tournament, newly checked result"
+  },
+  {
+    "from": "/en/tournaments/ppa-asia-kuala-lumpur-cup-2026/",
+    "to": "/en/tour/results/kuala-lumpur-2026/",
+    "status": 301,
+    "reason": "Same named tournament, newly checked result"
+  },
+  {
+    "from": "/en/tournaments/mlp-finals-new-york-city-2026/",
+    "to": "/en/tour/results/mlp-finals-2026/",
+    "status": 301,
+    "reason": "Same named tournament, newly checked result"
+  },
+  {
+    "from": "/en/pro-scene/rankings/men-singles/",
+    "to": "/en/tour/rankings/#ms",
+    "status": 301,
+    "reason": "Replaced unsupported values; provider now explicitly labeled"
+  },
+  {
+    "from": "/en/pro-scene/rankings/women-singles/",
+    "to": "/en/tour/rankings/#ws",
+    "status": 301,
+    "reason": "Replaced unsupported values; provider now explicitly labeled"
+  },
+  {
+    "from": "/en/pro-scene/rankings/men-doubles/",
+    "to": "/en/tour/rankings/#md",
+    "status": 301,
+    "reason": "Replaced unsupported values; provider now explicitly labeled"
+  },
+  {
+    "from": "/en/pro-scene/rankings/women-doubles/",
+    "to": "/en/tour/rankings/#wd",
+    "status": 301,
+    "reason": "Replaced unsupported values; provider now explicitly labeled"
+  },
+  {
+    "from": "/en/pro-scene/rankings/mixed-doubles/",
+    "to": "/en/tour/rankings/#xd",
+    "status": 301,
+    "reason": "Replaced unsupported values; provider now explicitly labeled"
+  },
+  {
+    "from": "/en/clip-lite/",
+    "to": "/en/tools/review/",
+    "status": 302,
+    "reason": "Temporary public-feature reduction; worksheet is not an MP4 editor or AI rating"
+  },
+  {
+    "from": "/en/vision-rating/",
+    "to": "/en/tools/review/",
+    "status": 302,
+    "reason": "Temporary public-feature reduction; worksheet is not an MP4 editor or AI rating"
+  },
+  {
+    "from": "/ko/pro-scene/",
+    "to": "/ko/tour/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/ko/pro-scene/players/",
+    "to": "/ko/tour/players/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/ko/players/",
+    "to": "/ko/tour/players/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/ko/pro-scene/results/",
+    "to": "/ko/tour/results/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/ko/pro-scene/rankings/",
+    "to": "/ko/tour/rankings/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/ko/tournaments/",
+    "to": "/ko/tour/schedule/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/ko/tournaments/results/",
+    "to": "/ko/tour/results/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/ko/paddles/",
+    "to": "/ko/gear/paddles/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/ko/privacy-policy/",
+    "to": "/ko/privacy/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/ko/corrections-policy/",
+    "to": "/ko/corrections/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/ko/cookie-policy/",
+    "to": "/ko/privacy/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/ko/advertising-disclosure/",
+    "to": "/ko/editorial-policy/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/ko/pickleball-complete-beginner-guide/",
+    "to": "/ko/learn/first-session-plan/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/ko/dupr-self-check/",
+    "to": "/ko/tools/self-check/",
+    "status": 301,
+    "reason": "Equivalent revised page"
+  },
+  {
+    "from": "/ko/players/ben-johns/",
+    "to": "/ko/tour/players/#ben-johns",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/ko/players/anna-leigh-waters/",
+    "to": "/ko/tour/players/#anna-leigh-waters",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/ko/players/federico-staksrud/",
+    "to": "/ko/tour/players/#federico-staksrud",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/ko/players/jw-johnson/",
+    "to": "/ko/tour/players/#jw-johnson",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/ko/players/catherine-parenteau/",
+    "to": "/ko/tour/players/#catherine-parenteau",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/ko/players/anna-bright/",
+    "to": "/ko/tour/players/#anna-bright",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/ko/players/tyson-mcguffin/",
+    "to": "/ko/tour/players/#tyson-mcguffin",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/ko/players/riley-newman/",
+    "to": "/ko/tour/players/#riley-newman",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/ko/players/james-ignatowich/",
+    "to": "/ko/tour/players/#james-ignatowich",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/ko/players/christian-alshon/",
+    "to": "/ko/tour/players/#christian-alshon",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/ko/players/lea-jansen/",
+    "to": "/ko/tour/players/#lea-jansen",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/ko/players/lucy-kovalova/",
+    "to": "/ko/tour/players/#lucy-kovalova",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/ko/players/gabriel-tardio/",
+    "to": "/ko/tour/players/#gabriel-tardio",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/ko/players/hayden-patriquin/",
+    "to": "/ko/tour/players/#hayden-patriquin",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/ko/players/kate-fahey/",
+    "to": "/ko/tour/players/#kate-fahey",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/ko/players/jorja-johnson/",
+    "to": "/ko/tour/players/#jorja-johnson",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/ko/players/hurricane-tyra-black/",
+    "to": "/ko/tour/players/#hurricane-tyra-black",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/ko/players/hunter-johnson/",
+    "to": "/ko/tour/players/#hunter-johnson",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/ko/players/rachel-rohrabacher/",
+    "to": "/ko/tour/players/#rachel-rohrabacher",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/ko/players/ella-oh/",
+    "to": "/ko/tour/players/#ella-oh",
+    "status": 301,
+    "reason": "Same named player in the revised directory"
+  },
+  {
+    "from": "/ko/paddles/joola-perseus-pro-v/",
+    "to": "/ko/gear/paddles/#joola-perseus-pro-v",
+    "status": 301,
+    "reason": "Same model/model family now on category page"
+  },
+  {
+    "from": "/ko/paddles/six-zero-double-black-diamond-control/",
+    "to": "/ko/gear/paddles/#six-zero-dbd",
+    "status": 301,
+    "reason": "Same model/model family now on category page"
+  },
+  {
+    "from": "/ko/paddles/six-zero-ruby/",
+    "to": "/ko/gear/paddles/#six-zero-ruby",
+    "status": 301,
+    "reason": "Same model/model family now on category page"
+  },
+  {
+    "from": "/ko/paddles/franklin-c45/",
+    "to": "/ko/gear/paddles/#franklin-c45",
+    "status": 301,
+    "reason": "Same model/model family now on category page"
+  },
+  {
+    "from": "/ko/paddles/paddletek-bantam-tko-c/",
+    "to": "/ko/gear/paddles/#paddletek-tko-c",
+    "status": 301,
+    "reason": "Same model/model family now on category page"
+  },
+  {
+    "from": "/ko/paddles/vatic-pro-prism-flash/",
+    "to": "/ko/gear/paddles/#vatic-prism-flash",
+    "status": 301,
+    "reason": "Same model/model family now on category page"
+  },
+  {
+    "from": "/ko/paddles/crbn-1x-power-series/",
+    "to": "/ko/gear/paddles/#crbn-1x",
+    "status": 301,
+    "reason": "Same model/model family now on category page"
+  },
+  {
+    "from": "/ko/paddles/gearbox-pro-power-elongated/",
+    "to": "/ko/gear/paddles/#gearbox-pro-ultimate",
+    "status": 301,
+    "reason": "Same model/model family now on category page"
+  },
+  {
+    "from": "/ko/paddles/volair-mach-2-forza/",
+    "to": "/ko/gear/paddles/#volair-mach-2-forza",
+    "status": 301,
+    "reason": "Same model/model family now on category page"
+  },
+  {
+    "from": "/ko/paddles/selkirk-project-boomstik/",
+    "to": "/ko/gear/paddles/#selkirk-boomstik",
+    "status": 301,
+    "reason": "Same model/model family now on category page"
+  },
+  {
+    "from": "/ko/tournaments/ppa-arizona-open-2026/",
+    "to": "/ko/tour/results/arizona-2026/",
+    "status": 301,
+    "reason": "Same named tournament, newly checked result"
+  },
+  {
+    "from": "/ko/tournaments/ppa-asia-kuala-lumpur-cup-2026/",
+    "to": "/ko/tour/results/kuala-lumpur-2026/",
+    "status": 301,
+    "reason": "Same named tournament, newly checked result"
+  },
+  {
+    "from": "/ko/tournaments/mlp-finals-new-york-city-2026/",
+    "to": "/ko/tour/results/mlp-finals-2026/",
+    "status": 301,
+    "reason": "Same named tournament, newly checked result"
+  },
+  {
+    "from": "/ko/pro-scene/rankings/men-singles/",
+    "to": "/ko/tour/rankings/#ms",
+    "status": 301,
+    "reason": "Replaced unsupported values; provider now explicitly labeled"
+  },
+  {
+    "from": "/ko/pro-scene/rankings/women-singles/",
+    "to": "/ko/tour/rankings/#ws",
+    "status": 301,
+    "reason": "Replaced unsupported values; provider now explicitly labeled"
+  },
+  {
+    "from": "/ko/pro-scene/rankings/men-doubles/",
+    "to": "/ko/tour/rankings/#md",
+    "status": 301,
+    "reason": "Replaced unsupported values; provider now explicitly labeled"
+  },
+  {
+    "from": "/ko/pro-scene/rankings/women-doubles/",
+    "to": "/ko/tour/rankings/#wd",
+    "status": 301,
+    "reason": "Replaced unsupported values; provider now explicitly labeled"
+  },
+  {
+    "from": "/ko/pro-scene/rankings/mixed-doubles/",
+    "to": "/ko/tour/rankings/#xd",
+    "status": 301,
+    "reason": "Replaced unsupported values; provider now explicitly labeled"
+  },
+  {
+    "from": "/ko/clip-lite/",
+    "to": "/ko/tools/review/",
+    "status": 302,
+    "reason": "Temporary public-feature reduction; worksheet is not an MP4 editor or AI rating"
+  },
+  {
+    "from": "/ko/vision-rating/",
+    "to": "/ko/tools/review/",
+    "status": 302,
+    "reason": "Temporary public-feature reduction; worksheet is not an MP4 editor or AI rating"
+  },
+  {
+    "from": "/clip-lite/",
+    "to": "/ko/tools/review/",
+    "status": 302,
+    "reason": "Legacy application retained in source, not published"
+  },
+  {
+    "from": "/clip-lite/en/",
+    "to": "/en/tools/review/",
+    "status": 302,
+    "reason": "Legacy application retained in source, not published"
+  }
+]

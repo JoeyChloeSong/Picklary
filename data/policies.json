@@ -1,0 +1,386 @@
+{
+  "about": {
+    "title": {
+      "en": "About Picklary",
+      "ko": "Picklary 소개"
+    },
+    "dek": {
+      "en": "A small journal for better on-court decisions.",
+      "ko": "코트 위의 더 나은 판단을 위해 전술·장비·경기 결과를 연결하는 독립 저널입니다."
+    },
+    "sections": [
+      {
+        "heading": {
+          "en": "Why this site exists",
+          "ko": "이 사이트를 만든 이유"
+        },
+        "paragraphs": [
+          {
+            "en": "Picklary is an independent pickleball project operated by Shawn. The aim is to make a useful connection between watching a match and improving the next practice session. Rules, equipment information and results are easy to collect; deciding what to do with them is the harder part.",
+            "ko": "Picklary는 Shawn이 운영하는 독립 피클볼 프로젝트입니다. 경기를 보는 일과 다음 연습을 개선하는 일을 연결하고자 합니다. 규칙·장비·결과를 모으는 것보다 그 정보를 어떻게 활용할지 결정하는 일이 더 어렵기 때문입니다."
+          },
+          {
+            "en": "The learning library therefore starts with situations: a deep return, an uncomfortable third shot, a rushed reset or an attack attempted from the wrong height. Each article ends with a task the reader can try and a question to review afterward.",
+            "ko": "실전 가이드는 깊은 리턴, 불편한 3구, 급한 리셋, 적절하지 않은 높이에서의 공격처럼 구체적인 상황에서 시작합니다. 각 글은 직접 해 볼 과제와 연습 후 돌아볼 질문으로 마무리합니다."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "en": "What is original here",
+          "ko": "직접 구성한 콘텐츠"
+        },
+        "paragraphs": [
+          {
+            "en": "Picklary’s contribution is the decision framework, comparison prompts and review workflow. Tournament winners and product specifications are sourced facts, not claimed original discoveries. A result recap is connected to a viewing question; a product note is connected to a test, rather than presented as an unexplained shopping ranking.",
+            "ko": "Picklary가 구성한 핵심은 판단의 틀, 장비 비교 질문, 경기 검토 흐름입니다. 대회 우승자와 제품 사양은 출처가 있는 사실이며 자체 발견이라고 주장하지 않습니다. 경기 결과는 관전 질문으로, 제품 정보는 이유 없는 쇼핑 순위가 아닌 확인 과제로 연결합니다."
+          },
+          {
+            "en": "The local-video worksheet is designed to keep a player focused on the condition before an error. It exports observations and planned changes. It does not claim to recognize players automatically, measure shot speed or produce an official DUPR rating.",
+            "ko": "로컬 영상 분석 도구는 실수 이전의 조건에 집중하도록 설계했습니다. 관찰 내용과 다음에 바꿔 볼 점을 내보내며, 자동 선수 인식·샷 속도 측정·공식 DUPR 산출을 한다고 주장하지 않습니다."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "en": "Who reviews and maintains it",
+          "ko": "운영과 검토"
+        },
+        "paragraphs": [
+          {
+            "en": "Shawn is the site operator and editorial contact. AI-assisted drafting and development may be used. That does not make a draft a verified result or a hands-on equipment test. Source references, evidence labels and correction notes are part of the publication workflow.",
+            "ko": "Shawn은 사이트 운영자이자 편집 문의 담당자입니다. 초안 작성과 개발에 AI의 도움을 사용할 수 있지만, 초안이 곧 검증된 경기 결과나 직접 사용한 장비 리뷰가 되는 것은 아닙니다. 출처, 근거 수준, 정정 기록을 게시 흐름에 포함합니다."
+          },
+          {
+            "en": "The site is not operated by PPA, MLP, USA Pickleball or DUPR. No governing-body endorsement is implied. For registration, eligibility, official ratings and final rulings, use the relevant organization’s own source.",
+            "ko": "이 사이트는 PPA·MLP·USA Pickleball·DUPR가 운영하지 않으며 이들 단체의 보증을 의미하지 않습니다. 참가 등록, 장비 승인, 공식 레이팅, 최종 규정 판단은 해당 기관의 출처를 확인하세요."
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": {
+      "en": "Contact the editor",
+      "ko": "편집자에게 문의하기"
+    },
+    "dek": {
+      "en": "A useful correction starts with a page and a specific observation.",
+      "ko": "수정 제안은 페이지와 구체적인 관찰에서 시작합니다."
+    },
+    "sections": [
+      {
+        "heading": {
+          "en": "Corrections and questions",
+          "ko": "오류 신고와 질문"
+        },
+        "paragraphs": [
+          {
+            "en": "Send the Picklary page address, the sentence or image in question, and a source that shows the correction. For results, include the tournament, division and match round. For equipment, include the exact model and version rather than only the brand name.",
+            "ko": "Picklary 페이지 주소, 문제가 되는 문장 또는 이미지, 정정 근거가 되는 출처를 보내 주세요. 경기 결과는 대회·종목·라운드를, 장비는 브랜드만이 아니라 정확한 모델과 버전을 알려 주시면 좋습니다."
+          },
+          {
+            "en": "We prioritize incorrect identities, scores, broken functionality and privacy issues. A response time cannot be guaranteed. An article may be corrected without retaining the original erroneous value in the main text; material changes are summarized on the corrections page.",
+            "ko": "잘못된 인물 연결, 스코어, 작동 오류와 개인정보 문제를 우선 확인합니다. 회신 시간을 보장하지는 않습니다. 본문의 잘못된 값을 남겨 두지 않고 수정할 수 있으며 중요한 변경은 정정 내역에 요약합니다."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "en": "Image rights and attribution",
+          "ko": "이미지 권리와 출처"
+        },
+        "paragraphs": [
+          {
+            "en": "Rights holders can identify the affected page, the image and the basis of their request. Source attribution is not presented as ownership or permission. We will review requests for correction, removal or a more accurate credit.",
+            "ko": "권리자는 해당 페이지, 이미지, 요청의 근거를 알려 주세요. 출처 표시는 소유권이나 사용 허가를 의미하지 않습니다. 정정·삭제·더 정확한 크레디트 요청을 검토합니다."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "en": "Avoid sending sensitive material",
+          "ko": "민감한 정보는 보내지 마세요"
+        },
+        "paragraphs": [
+          {
+            "en": "Do not send identification documents, account passwords, financial details or private contact information about other players. A written description is usually enough to report a site issue. Get the necessary permission before sharing another person’s match video.",
+            "ko": "신분증, 계정 비밀번호, 금융 정보, 다른 선수의 비공개 연락처는 보내지 마세요. 사이트 오류는 대부분 글로 설명해도 충분합니다. 타인의 경기 영상을 공유할 때는 필요한 동의를 먼저 확인하세요."
+          }
+        ]
+      }
+    ]
+  },
+  "editorial-policy": {
+    "title": {
+      "en": "Editorial method",
+      "ko": "편집 원칙"
+    },
+    "dek": {
+      "en": "Separate the fact, the interpretation and the practice task.",
+      "ko": "경기의 사실, 편집자의 해석, 독자가 직접 해 볼 연습 과제를 구분합니다."
+    },
+    "sections": [
+      {
+        "heading": {
+          "en": "Results need a traceable record",
+          "ko": "결과에는 추적 가능한 기록이 필요합니다"
+        },
+        "paragraphs": [
+          {
+            "en": "A completed date on a calendar is not enough to publish a winner. A result row needs a source that identifies the event and division. Opponents and game points are entered only when verified. A partial record can show confirmed champions while leaving individual game scores unverified.",
+            "ko": "일정의 종료일이 지났다는 이유만으로 우승자를 게시하지 않습니다. 결과의 각 행에는 대회와 종목을 확인할 수 있는 출처가 필요합니다. 상대와 게임별 점수는 확인한 경우에만 입력하며, 우승자가 확인되어도 개별 게임 점수는 미확인으로 남길 수 있습니다."
+          },
+          {
+            "en": "Scores are displayed consistently from the champion’s side. A series score is labeled as a series score. Independent rankings are not relabeled as official PPA standings, and the date displayed by a source is not assumed to prove the freshness of every underlying match.",
+            "ko": "스코어는 우승자 기준으로 일관되게 표시하고 시리즈 점수는 시리즈로 표기합니다. 독립 랭킹을 공식 PPA 순위로 바꾸어 부르지 않으며, 출처 페이지의 날짜만으로 원경기 데이터가 모두 최신이라고 가정하지 않습니다."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "en": "Product research is not a laboratory test",
+          "ko": "제품 조사와 실험은 다릅니다"
+        },
+        "paragraphs": [
+          {
+            "en": "Manufacturer materials identify models and published features. Picklary adds comparison questions. Unless a page includes an actual testing record, do not read it as a claim of hands-on testing, measured spin, measured power or injury prevention. We do not manufacture star ratings or prices to fill a card.",
+            "ko": "제조사 자료로 모델과 공개 특징을 확인하고 Picklary는 비교 질문을 덧붙입니다. 실제 테스트 기록이 없는 페이지는 직접 사용, 실측 스핀·파워 또는 부상 예방의 증거가 아닙니다. 카드를 채우기 위해 별점이나 가격을 만들어 넣지 않습니다."
+          },
+          {
+            "en": "Photographs must identify the named subject or an explicitly labeled model family. An unrelated shoe, a glove under an eyewear label or a different athlete’s portrait is not an acceptable visual substitute.",
+            "ko": "사진은 이름이 표시된 대상 또는 명확히 표기한 제품군과 일치해야 합니다. 다른 브랜드의 신발, 안경 항목의 장갑, 다른 선수의 얼굴을 대신 쓰지 않습니다."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "en": "Practice advice and interpretation",
+          "ko": "연습 제안과 해석"
+        },
+        "paragraphs": [
+          {
+            "en": "Drill targets are suggestions, not research findings or official rating thresholds. A score can suggest a useful viewing question, but it cannot establish a tactical cause without footage or another appropriate record. Viewing prompts are therefore separated from verified results.",
+            "ko": "드릴의 목표 횟수는 제안이며 연구 결과나 공식 레이팅 기준이 아닙니다. 점수는 유용한 관전 질문을 만들 수 있지만 영상이나 적절한 기록 없이 전술적 원인을 확정하지는 못합니다. 관전 질문과 검증된 결과를 분리하는 이유입니다."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "en": "Funding and automation",
+          "ko": "운영 재원과 자동화"
+        },
+        "paragraphs": [
+          {
+            "en": "This edition contains no paid placement or affiliate tracking links. Ad serving is disabled. Future advertising or commercial relationships should be disclosed near relevant content. AI assistance may help drafting or code, but source review and publication remain separate steps. Automated collection should create a review queue, not silently publish unverified results.",
+            "ko": "이 판에는 유료 배치나 제휴 추적 링크가 없으며 광고 게재는 비활성화되어 있습니다. 향후 광고 또는 상업 관계가 생기면 관련 콘텐츠 근처에 표시해야 합니다. AI는 초안이나 코드 작성을 도울 수 있지만 출처 검토와 게시는 별도의 단계입니다. 자동 수집은 미확인 결과를 바로 게시하는 대신 검토 대기 목록을 만들어야 합니다."
+          }
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": {
+      "en": "Privacy",
+      "ko": "개인정보 처리 안내"
+    },
+    "dek": {
+      "en": "What this edition sends, saves and does not collect.",
+      "ko": "이 판이 전송·저장하는 정보와 수집하지 않는 정보."
+    },
+    "sections": [
+      {
+        "heading": {
+          "en": "Operator and contact",
+          "ko": "운영자와 연락처"
+        },
+        "paragraphs": [
+          {
+            "en": "Picklary is operated by Shawn. This notice describes the public v1.0.0 build dated October 4, 2026. Contact iam4na2@gmail.com with questions about this site or information you have emailed to the operator.",
+            "ko": "Picklary는 Shawn이 운영합니다. 이 안내는 2026년 10월 4일 공개용 v1.0.0 빌드의 동작을 설명합니다. 사이트 또는 운영자에게 이메일로 제공한 정보에 관한 문의는 iam4na2@gmail.com으로 보내 주세요."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "en": "Hosting and external images",
+          "ko": "호스팅과 외부 이미지"
+        },
+        "paragraphs": [
+          {
+            "en": "The site is a static website intended for Netlify hosting. Hosting infrastructure can process normal request information such as IP address, requested URL, browser information and timing for delivery and security. This code does not add an analytics tracker or a visitor-account system.",
+            "ko": "이 사이트는 Netlify 호스팅을 위한 정적 웹사이트입니다. 호스팅 인프라는 전송과 보안을 위해 IP 주소, 요청 URL, 브라우저 정보, 요청 시점 같은 일반 접속 정보를 처리할 수 있습니다. 이 코드에는 별도 방문 분석 추적기나 회원 계정 시스템을 넣지 않았습니다."
+          },
+          {
+            "en": "Some product and athlete images are loaded from the linked original source or its image CDN. Your browser must contact that host to display the image; that host may receive your IP address and request metadata. The image elements request no-referrer behavior. The media credits page identifies the sources. External links become subject to the destination’s privacy practices when opened.",
+            "ko": "일부 제품과 선수 이미지는 연결된 원출처 또는 이미지 CDN에서 불러옵니다. 브라우저가 이미지를 표시하려면 해당 호스트에 접속하므로 IP 주소와 요청 정보가 전달될 수 있습니다. 이미지 요소는 no-referrer 동작을 요청합니다. 이미지 출처 페이지에 원출처를 표시했습니다. 외부 링크를 열면 해당 사이트의 개인정보 처리 방식이 적용됩니다."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "en": "Local video and notes",
+          "ko": "로컬 영상과 노트"
+        },
+        "paragraphs": [
+          {
+            "en": "Selecting a video creates a local browser object URL. The review code does not upload the video to Picklary or a third-party processor. CSV and JSON downloads contain your notes, not video bytes. Supported playback depends on your browser and the video codec.",
+            "ko": "영상을 선택하면 브라우저의 로컬 객체 URL을 생성합니다. 분석 코드가 영상을 Picklary나 외부 처리 서버로 업로드하지 않습니다. CSV와 JSON에는 노트만 포함되고 영상 데이터는 포함되지 않습니다. 재생 가능 여부는 브라우저와 영상 코덱에 따라 다릅니다."
+          },
+          {
+            "en": "Notes remain in page memory until you choose “Save here.” That button writes to localStorage on this browser and site origin. “Load” reads it; “Delete all” removes the saved worksheet and clears the current list after confirmation. The site cannot retrieve that local copy for you. Clearing browser site data also removes it. Do not save sensitive notes on a shared device.",
+            "ko": "“이 기기에 저장”을 누르기 전까지 노트는 페이지 메모리에만 있습니다. 저장 버튼은 이 브라우저·사이트의 localStorage에 기록합니다. “불러오기”는 이를 읽고, “모두 삭제”는 확인 후 저장된 노트와 현재 목록을 지웁니다. 사이트 운영자는 이 로컬 사본을 대신 복구할 수 없습니다. 브라우저의 사이트 데이터를 지워도 삭제됩니다. 공용 기기에는 민감한 노트를 저장하지 마세요."
+          },
+          {
+            "en": "The practice priority check does not transmit or persist its answers. Product filters and comparison choices run in page memory. There are no community-registration forms in this edition.",
+            "ko": "연습 우선순위 점검은 응답을 전송하거나 저장하지 않습니다. 제품 필터와 비교 선택도 페이지 메모리에서 처리합니다. 이 판에는 커뮤니티 가입 양식이 없습니다."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "en": "Email, retention and deletion requests",
+          "ko": "이메일·보관·삭제 요청"
+        },
+        "paragraphs": [
+          {
+            "en": "When you email the operator, the operator receives your address and the contents you choose to send. Email may be retained while resolving your request and for relevant site administration. Ask for correction or deletion using the same email address; retention required for an applicable obligation may limit deletion. Do not email personal information that is unnecessary for your request.",
+            "ko": "운영자에게 이메일을 보내면 발신 주소와 직접 보낸 내용을 수신합니다. 문의 처리와 관련 운영 기록을 위해 이메일을 보관할 수 있습니다. 같은 이메일 주소로 정정 또는 삭제를 요청할 수 있으며 적용되는 보관 의무가 있는 경우 삭제가 제한될 수 있습니다. 문의에 불필요한 개인정보는 보내지 마세요."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "en": "Advertising and changes",
+          "ko": "광고와 변경"
+        },
+        "paragraphs": [
+          {
+            "en": "Google AdSense ownership metadata and an ads.txt file are present, but this build does not load an AdSense ad-serving script and does not implement advertising cookies. Before enabling advertising, the operator needs to review the applicable consent requirements, install an appropriate certified consent platform where required, and update this notice to describe the actual implementation.",
+            "ko": "Google AdSense 소유권 확인 메타데이터와 ads.txt 파일은 있지만, 이 빌드는 광고 게재 스크립트를 불러오지 않고 광고 쿠키를 구현하지 않습니다. 광고 활성화 전에는 적용되는 동의 요건을 검토하고, 필요한 경우 적절한 인증 동의 플랫폼을 설치하며 실제 구현에 맞게 이 안내를 수정해야 합니다."
+          },
+          {
+            "en": "This notice must change when the site adds forms, analytics, accounts, an image proxy or an advertising integration. The current version should not be used to describe those future features.",
+            "ko": "양식, 방문 분석, 계정, 이미지 프록시 또는 광고 연동을 추가하면 이 안내도 변경해야 합니다. 현재 안내로 아직 구현하지 않은 기능의 데이터 처리를 설명해서는 안 됩니다."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "en": "Earlier community forms",
+          "ko": "이전 버전의 커뮤니티 양식"
+        },
+        "paragraphs": [
+          {
+            "en": "Earlier editions included community submission forms. This edition no longer accepts those submissions. Replacing a website does not by itself delete data previously received by a hosting provider. For a correction or deletion request relating to an earlier submission, contact the site operator and identify the relevant form without sending unnecessary sensitive information.",
+            "ko": "이전 버전에는 커뮤니티 제출 양식이 있었습니다. 현재 판에서는 해당 제출을 받지 않습니다. 웹사이트를 교체하는 것만으로 호스팅 업체가 이전에 수신한 데이터가 자동 삭제되지는 않습니다. 이전 제출 내용의 정정·삭제는 운영자에게 해당 양식을 알려 요청하고 불필요한 민감정보는 보내지 마세요."
+          }
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": {
+      "en": "Using Picklary",
+      "ko": "Picklary 이용 안내"
+    },
+    "dek": {
+      "en": "Research and practice aids, with their limits made visible.",
+      "ko": "조사와 연습을 돕는 도구의 범위를 분명히 합니다."
+    },
+    "sections": [
+      {
+        "heading": {
+          "en": "Information and decisions",
+          "ko": "정보와 판단"
+        },
+        "paragraphs": [
+          {
+            "en": "Picklary provides editorial information and practice tools. Tournament schedules, eligibility, products and rankings can change. Confirm time-sensitive decisions with the relevant source. A practice prompt is not individualized coaching, medical advice or a guaranteed route to a higher rating.",
+            "ko": "Picklary는 편집 정보와 연습 도구를 제공합니다. 대회 일정, 참가·장비 자격, 제품, 랭킹은 바뀔 수 있습니다. 시점이 중요한 결정은 관련 출처에서 확인하세요. 연습 제안은 개인 맞춤 코칭이나 의료 조언 또는 레이팅 상승 보장이 아닙니다."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "en": "Using the tools",
+          "ko": "도구 사용"
+        },
+        "paragraphs": [
+          {
+            "en": "Keep the original copy of your video and notes. Browser memory, codec support and local storage vary. The current review tool exports a worksheet only; it is not a video encoding service. Review exports before sharing because your own notes may contain identifying details.",
+            "ko": "원본 영상과 노트의 사본을 보관하세요. 브라우저 메모리, 코덱 지원, 로컬 저장 방식은 환경에 따라 다릅니다. 현재 도구는 분석 노트만 내보내며 영상 인코딩 서비스가 아닙니다. 작성한 노트에 식별 정보가 들어 있을 수 있으므로 공유 전에 확인하세요."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "en": "Ownership and third-party material",
+          "ko": "저작물과 외부 자료"
+        },
+        "paragraphs": [
+          {
+            "en": "Product trademarks, photographs and third-party records remain with their respective owners. A source credit is not a license for readers to republish those images. Original Picklary writing and code also have their own terms in the source repository. Do not represent this site as an official tour, governing body or rating provider.",
+            "ko": "제품 상표, 사진과 외부 기록의 권리는 각 소유자에게 있습니다. 출처 표시는 독자가 이미지를 재배포할 수 있는 허가가 아닙니다. Picklary의 글과 코드는 소스 저장소의 별도 조건을 따릅니다. 이 사이트를 공식 투어·규정 기관·레이팅 제공자로 표시하지 마세요."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "en": "Reporting issues",
+          "ko": "문제 알리기"
+        },
+        "paragraphs": [
+          {
+            "en": "Report factual errors, misattributed images or broken functionality through the contact page. Do not send spam, private information about other players or material that you do not have the right to share.",
+            "ko": "사실 오류, 잘못 연결된 이미지, 작동 문제는 문의 페이지로 알려 주세요. 스팸, 다른 선수의 비공개 정보 또는 공유할 권리가 없는 자료는 보내지 마세요."
+          }
+        ]
+      }
+    ]
+  },
+  "corrections": {
+    "title": {
+      "en": "Corrections & changes",
+      "ko": "정정과 변경 내역"
+    },
+    "dek": {
+      "en": "Important changes in this edition.",
+      "ko": "사진 연결, 랭킹 근거, 경기 스코어와 기능의 중요한 수정·변경을 기록합니다."
+    },
+    "sections": [
+      {
+        "heading": {
+          "en": "October 4, 2026 · v1.0.0",
+          "ko": "2026년 10월 4일 · v1.0.0"
+        },
+        "paragraphs": [
+          {
+            "en": "Rebuilt the site around a smaller, source-led editorial library. Removed repeated filler sections, demonstration community content and unsupported numeric product ratings. Corrected image mappings where different players or products had been assigned the same unrelated picture.",
+            "ko": "출처 중심의 편집 콘텐츠로 사이트를 다시 구성했습니다. 반복 설명, 시연용 커뮤니티 콘텐츠, 근거 없는 제품 숫자 점수를 제거했습니다. 서로 다른 선수·제품에 동일한 무관한 사진이 연결된 부분을 정정했습니다."
+          },
+          {
+            "en": "Removed the previous unsupported Top 10 values. The new rankings page labels PPA composite points separately from the independent PickleWave Elo reference. Doubles results and series results are no longer conflated.",
+            "ko": "이전의 근거 불분명한 Top 10 수치를 제거했습니다. 새 랭킹 페이지는 PPA 종합 포인트와 독립 PickleWave Elo 참고 표를 구분합니다. 복식 경기 결과와 시리즈 결과도 섞지 않습니다."
+          },
+          {
+            "en": "Added newly checked Arizona, Kuala Lumpur and Las Vegas result records and the MLP championship-series result. Las Vegas remains a partial record in this edition; Kuala Lumpur men’s doubles game points remain unverified.",
+            "ko": "새로 확인한 애리조나·쿠알라룸푸르·라스베이거스 결과와 MLP 챔피언십 시리즈 결과를 반영했습니다. 이 판의 라스베이거스 결과는 일부만 확인되었고 쿠알라룸푸르 남복의 게임별 점수는 미확인입니다."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "en": "How to request a correction",
+          "ko": "정정 요청 방법"
+        },
+        "paragraphs": [
+          {
+            "en": "Identify the page, the specific claim and a relevant source. Material identity or score corrections should be recorded here. Spelling, formatting and small link repairs may be updated without a separate dated entry.",
+            "ko": "페이지와 구체적인 주장, 관련 출처를 알려 주세요. 인물 연결이나 스코어 같은 중요한 수정은 이곳에 기록합니다. 맞춤법·서식·사소한 링크 수정은 별도 날짜 항목 없이 반영할 수 있습니다."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,25 +1,16 @@
 {
-  "name": "picklelevel",
-  "version": "0.8.2",
+  "name": "picklary-editorial",
+  "version": "1.0.0",
   "private": true,
-  "description": "Picklary v0.8.2 - visual Gear Lab with real paddle imagery and expanded in-site Tour Board finals/results.",
+  "description": "Picklary: bilingual, source-led pickleball learning, gear and tour coverage",
+  "type": "module",
+  "engines": {"node": ">=22"},
   "scripts": {
-    "build": "node build.js && node scripts/check-seo-redirects.js",
-    "start": "node build.js && node start-local.js",
-    "serve": "node start-local.js",
-    "dev": "node build.js && node start-local.js",
-    "ingest": "node ingest/pipeline.js",
-    "ingest:dry": "node ingest/pipeline.js --dry",
-    "digest": "node ingest/digest-builder.js",
-    "agent:status": "node automation/picklelevel-agent.js --status",
-    "agent:scan": "node automation/picklelevel-agent.js --scan",
-    "agent:scan:dry": "node automation/picklelevel-agent.js --scan --dry-run",
-    "agent:publish": "node automation/picklelevel-agent.js --publish-approved",
-    "agent:review": "node automation/picklelevel-agent.js --status",
-    "dupr:refresh": "node automation/update-dupr-snapshot.js"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "license": "MIT"
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/validate.mjs",
+    "check": "npm run build && npm test",
+    "serve": "node scripts/serve.mjs",
+    "media:cache": "node scripts/cache-media.mjs",
+    "check:live": "node scripts/check-live.mjs"
+  }
 }

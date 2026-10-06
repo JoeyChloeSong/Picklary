@@ -1,0 +1,397 @@
+{
+  "checked": "2026-10-04",
+  "wpr": {
+    "men": [
+      {
+        "rank": 1,
+        "name": "Ben Johns",
+        "points": 18432.5
+      },
+      {
+        "rank": 2,
+        "name": "Gabriel Tardio",
+        "points": 13593.8
+      },
+      {
+        "rank": 3,
+        "name": "Christian Alshon",
+        "points": 11837.5
+      },
+      {
+        "rank": 4,
+        "name": "Hayden Patriquin",
+        "points": 11517.5
+      },
+      {
+        "rank": 5,
+        "name": "Federico Staksrud",
+        "points": 11120
+      },
+      {
+        "rank": 6,
+        "name": "JW Johnson",
+        "points": 10450.6
+      },
+      {
+        "rank": 7,
+        "name": "Andrei Daescu",
+        "points": 10230
+      },
+      {
+        "rank": 8,
+        "name": "CJ Klinger",
+        "points": 6112.5
+      },
+      {
+        "rank": 9,
+        "name": "Eric Oncins",
+        "points": 5661.3
+      },
+      {
+        "rank": 10,
+        "name": "Noe Khlif",
+        "points": 5027.5
+      }
+    ],
+    "women": [
+      {
+        "rank": 1,
+        "name": "Anna Leigh Waters",
+        "points": 22105
+      },
+      {
+        "rank": 2,
+        "name": "Anna Bright",
+        "points": 16480
+      },
+      {
+        "rank": 3,
+        "name": "Jorja Johnson",
+        "points": 11336.3
+      },
+      {
+        "rank": 4,
+        "name": "Hurricane Tyra Black",
+        "points": 10260
+      },
+      {
+        "rank": 5,
+        "name": "Parris Todd",
+        "points": 9025
+      },
+      {
+        "rank": 6,
+        "name": "Rachel Rohrabacher",
+        "points": 8845
+      },
+      {
+        "rank": 7,
+        "name": "Catherine Parenteau",
+        "points": 8490
+      },
+      {
+        "rank": 8,
+        "name": "Kate Fahey",
+        "points": 7117.5
+      },
+      {
+        "rank": 9,
+        "name": "Tina Pisnik",
+        "points": 5790
+      },
+      {
+        "rank": 10,
+        "name": "Kaitlyn Christian",
+        "points": 4841.3
+      }
+    ],
+    "source": "ppa-wpr"
+  },
+  "disciplines": [
+    {
+      "division": "MS",
+      "source": "picklewave-mens-singles",
+      "sourceLabelDate": "2026-10-05",
+      "items": [
+        {
+          "rank": 1,
+          "name": "Christopher Haworth",
+          "elo": 2115
+        },
+        {
+          "rank": 2,
+          "name": "Federico Staksrud",
+          "elo": 2038
+        },
+        {
+          "rank": 3,
+          "name": "Hunter Johnson",
+          "elo": 1994
+        },
+        {
+          "rank": 4,
+          "name": "Roscoe Bellamy",
+          "elo": 1962
+        },
+        {
+          "rank": 5,
+          "name": "Zane Ford",
+          "elo": 1939
+        },
+        {
+          "rank": 6,
+          "name": "Christian Alshon",
+          "elo": 1917
+        },
+        {
+          "rank": 7,
+          "name": "Ben Johns",
+          "elo": 1909
+        },
+        {
+          "rank": 8,
+          "name": "Jack Sock",
+          "elo": 1909
+        },
+        {
+          "rank": 9,
+          "name": "Noe Khlif",
+          "elo": 1898
+        },
+        {
+          "rank": 10,
+          "name": "Connor Garnett",
+          "elo": 1857
+        }
+      ]
+    },
+    {
+      "division": "WS",
+      "source": "picklewave-womens-singles",
+      "sourceLabelDate": "2026-10-05",
+      "items": [
+        {
+          "rank": 1,
+          "name": "Anna Leigh Waters",
+          "elo": 2398
+        },
+        {
+          "rank": 2,
+          "name": "Kate Fahey",
+          "elo": 2114
+        },
+        {
+          "rank": 3,
+          "name": "Parris Todd",
+          "elo": 2020
+        },
+        {
+          "rank": 4,
+          "name": "Kaitlyn Christian",
+          "elo": 2020
+        },
+        {
+          "rank": 5,
+          "name": "Lea Jansen",
+          "elo": 2000
+        },
+        {
+          "rank": 6,
+          "name": "Sofia Sewing",
+          "elo": 1966
+        },
+        {
+          "rank": 7,
+          "name": "Katerina Stewart",
+          "elo": 1948
+        },
+        {
+          "rank": 8,
+          "name": "Brooke Buckner",
+          "elo": 1931
+        },
+        {
+          "rank": 9,
+          "name": "Seone Mendez",
+          "elo": 1882
+        },
+        {
+          "rank": 10,
+          "name": "Somer Dalla-bona",
+          "elo": 1858
+        }
+      ]
+    },
+    {
+      "division": "MD",
+      "source": "picklewave-mens-doubles",
+      "sourceLabelDate": "2026-10-05",
+      "items": [
+        {
+          "rank": 1,
+          "name": "Ben Johns",
+          "elo": 2461
+        },
+        {
+          "rank": 2,
+          "name": "Gabriel Tardio",
+          "elo": 2372
+        },
+        {
+          "rank": 3,
+          "name": "Andrei Daescu",
+          "elo": 2246
+        },
+        {
+          "rank": 4,
+          "name": "Hayden Patriquin",
+          "elo": 2187
+        },
+        {
+          "rank": 5,
+          "name": "JW Johnson",
+          "elo": 2130
+        },
+        {
+          "rank": 6,
+          "name": "Christian Alshon",
+          "elo": 2038
+        },
+        {
+          "rank": 7,
+          "name": "Federico Staksrud",
+          "elo": 2026
+        },
+        {
+          "rank": 8,
+          "name": "Dylan Frazier",
+          "elo": 2009
+        },
+        {
+          "rank": 9,
+          "name": "Carson Klinger",
+          "elo": 2001
+        },
+        {
+          "rank": 10,
+          "name": "Will Howells",
+          "elo": 1977
+        }
+      ]
+    },
+    {
+      "division": "WD",
+      "source": "picklewave-womens-doubles",
+      "sourceLabelDate": "2026-10-05",
+      "items": [
+        {
+          "rank": 1,
+          "name": "Anna Leigh Waters",
+          "elo": 2715
+        },
+        {
+          "rank": 2,
+          "name": "Anna Bright",
+          "elo": 2272
+        },
+        {
+          "rank": 3,
+          "name": "Tina Pisnik",
+          "elo": 2209
+        },
+        {
+          "rank": 4,
+          "name": "Hurricane Tyra Black",
+          "elo": 2191
+        },
+        {
+          "rank": 5,
+          "name": "Jackie Kawamoto",
+          "elo": 2183
+        },
+        {
+          "rank": 6,
+          "name": "Parris Todd",
+          "elo": 2161
+        },
+        {
+          "rank": 7,
+          "name": "Megan Fudge",
+          "elo": 2146
+        },
+        {
+          "rank": 8,
+          "name": "Jade Kawamoto",
+          "elo": 2132
+        },
+        {
+          "rank": 9,
+          "name": "Catherine Parenteau",
+          "elo": 2121
+        },
+        {
+          "rank": 10,
+          "name": "Rachel Rohrabacher",
+          "elo": 2117
+        }
+      ]
+    },
+    {
+      "division": "XD",
+      "source": "picklewave-mixed-doubles",
+      "sourceLabelDate": "2026-10-05",
+      "items": [
+        {
+          "rank": 1,
+          "name": "Anna Leigh Waters",
+          "elo": 2501
+        },
+        {
+          "rank": 2,
+          "name": "Ben Johns",
+          "elo": 2418
+        },
+        {
+          "rank": 3,
+          "name": "Anna Bright",
+          "elo": 2372
+        },
+        {
+          "rank": 4,
+          "name": "Andrei Daescu",
+          "elo": 2233
+        },
+        {
+          "rank": 5,
+          "name": "Christian Alshon",
+          "elo": 2204
+        },
+        {
+          "rank": 6,
+          "name": "Hurricane Tyra Black",
+          "elo": 2189
+        },
+        {
+          "rank": 7,
+          "name": "Jorja Johnson",
+          "elo": 2149
+        },
+        {
+          "rank": 8,
+          "name": "Gabriel Tardio",
+          "elo": 2140
+        },
+        {
+          "rank": 9,
+          "name": "JW Johnson",
+          "elo": 2062
+        },
+        {
+          "rank": 10,
+          "name": "Kate Fahey",
+          "elo": 2032
+        }
+      ]
+    }
+  ]
+}

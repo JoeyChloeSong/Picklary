@@ -1,0 +1,79 @@
+{
+  "base": "http://127.0.0.1:8766/",
+  "checkedAt": "2026-10-05T03:23:41.068Z",
+  "ok": true,
+  "checks": [
+    {
+      "url": "/",
+      "status": 301,
+      "expected": 301,
+      "ok": true
+    },
+    {
+      "url": "/en/",
+      "status": 200,
+      "expected": 200,
+      "ok": true
+    },
+    {
+      "url": "/ko/",
+      "status": 200,
+      "expected": 200,
+      "ok": true
+    },
+    {
+      "url": "/en/gear/",
+      "status": 200,
+      "expected": 200,
+      "ok": true
+    },
+    {
+      "url": "/en/tour/results/",
+      "status": 200,
+      "expected": 200,
+      "ok": true
+    },
+    {
+      "url": "/en/tour/schedule/",
+      "status": 200,
+      "expected": 200,
+      "ok": true
+    },
+    {
+      "url": "/en/tour/players/",
+      "status": 200,
+      "expected": 200,
+      "ok": true
+    },
+    {
+      "url": "/en/privacy/",
+      "status": 200,
+      "expected": 200,
+      "ok": true
+    },
+    {
+      "url": "/ads.txt",
+      "status": 200,
+      "expected": 200,
+      "ok": true
+    },
+    {
+      "url": "/robots.txt",
+      "status": 200,
+      "expected": 200,
+      "ok": true
+    },
+    {
+      "url": "/sitemap.xml",
+      "status": 200,
+      "expected": 200,
+      "ok": true
+    },
+    {
+      "url": "/this-page-must-not-exist-release-check/",
+      "status": 404,
+      "expected": 404,
+      "ok": true
+    }
+  ]
+}

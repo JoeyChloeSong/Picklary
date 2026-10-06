@@ -1,0 +1,25 @@
+{
+  "name": "Picklary",
+  "version": "1.0.0",
+  "url": "https://picklary.com",
+  "locales": [
+    "en",
+    "ko"
+  ],
+  "editor": "Shawn",
+  "email": "iam4na2@gmail.com",
+  "editorialDate": "2026-10-04",
+  "publisherId": "ca-pub-3524565373895748",
+  "adServingEnabled": false,
+  "description": {
+    "en": "Practical pickleball decisions. Clear gear comparisons. Sourced pro results.",
+    "ko": "더 나은 선택을 위한 피클볼 전술, 장비 비교, 출처가 있는 프로 경기 결과."
+  },
+  "tagline": {
+    "en": "Play with a plan.",
+    "ko": "생각하며 치는 피클볼."
+  },
+  "mediaMode": "official-source",
+  "mediaRightsNote": "Source identification is not a reuse license. See THIRD_PARTY_NOTICES.md.",
+  "blogUrl": "https://blog.naver.com/arctic"
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Chicago Cup",
+    "tour": "PPA",
+    "start": "2026-10-05",
+    "end": "2026-10-11",
+    "source": "ppa-schedule"
+  },
+  {
+    "title": "Virginia Beach Cup",
+    "tour": "PPA",
+    "start": "2026-10-12",
+    "end": "2026-10-18",
+    "source": "ppa-schedule"
+  },
+  {
+    "title": "MLP Nations Cup · Dallas",
+    "tour": "MLP",
+    "start": "2026-10-30",
+    "end": "2026-11-01",
+    "source": "mlp-schedule"
+  },
+  {
+    "title": "Pickleball World Championships · Farmers Branch",
+    "tour": "PPA",
+    "start": "2026-11-02",
+    "end": "2026-11-08",
+    "source": "ppa-schedule"
+  }
+]

@@ -1,0 +1,437 @@
+[
+  {
+    "slug": "las-vegas-2026",
+    "tour": "PPA",
+    "title": {
+      "en": "Rate Las Vegas Open",
+      "ko": "Rate Las Vegas Open"
+    },
+    "start": "2026-09-28",
+    "end": "2026-10-04",
+    "place": {
+      "en": "Darling Tennis Center · Las Vegas, Nevada",
+      "ko": "Darling Tennis Center · 미국 네바다 라스베이거스"
+    },
+    "checked": "2026-10-04",
+    "status": "partial",
+    "source": "vegas-draw",
+    "intro": {
+      "en": "Men’s doubles final confirmed. The other four finals remain unfilled in this edition until their individual official result records are verified.",
+      "ko": "남자복식 결승 결과를 확인했습니다. 나머지 네 부문은 개별 공식 결과 기록을 확인하기 전까지 이 판에서 확정값을 넣지 않습니다."
+    },
+    "insight": {
+      "en": "Alshon and Daescu followed their Arizona title with another win. The comparison worth watching is how the same partnership performs against different opponents; one final score alone cannot explain which tactic caused the result.",
+      "ko": "Alshon·Daescu가 애리조나에 이어 다시 우승했습니다. 관전 질문은 같은 조합이 서로 다른 상대에게 어떻게 대응하는가입니다. 결승 점수만으로 특정 전술이 승리 원인이라고 단정할 수는 없습니다."
+    },
+    "rows": [
+      {
+        "division": "MS",
+        "winner": [],
+        "runnerUp": [],
+        "games": [],
+        "series": null,
+        "source": null,
+        "status": "pending"
+      },
+      {
+        "division": "WS",
+        "winner": [],
+        "runnerUp": [],
+        "games": [],
+        "series": null,
+        "source": null,
+        "status": "pending"
+      },
+      {
+        "division": "MD",
+        "winner": [
+          "Christian Alshon",
+          "Andrei Daescu"
+        ],
+        "runnerUp": [
+          "Ben Johns",
+          "Gabriel Tardio"
+        ],
+        "games": [
+          [
+            11,
+            6
+          ],
+          [
+            11,
+            8
+          ]
+        ],
+        "series": null,
+        "source": "vegas-md",
+        "status": "confirmed"
+      },
+      {
+        "division": "WD",
+        "winner": [],
+        "runnerUp": [],
+        "games": [],
+        "series": null,
+        "source": null,
+        "status": "pending"
+      },
+      {
+        "division": "XD",
+        "winner": [],
+        "runnerUp": [],
+        "games": [],
+        "series": null,
+        "source": null,
+        "status": "pending"
+      }
+    ],
+    "guide": "purposeful-dinking"
+  },
+  {
+    "slug": "arizona-2026",
+    "tour": "PPA",
+    "title": {
+      "en": "Veolia Arizona Open",
+      "ko": "Veolia Arizona Open"
+    },
+    "start": "2026-09-14",
+    "end": "2026-09-20",
+    "place": {
+      "en": "Arizona Athletic Grounds · Mesa, Arizona",
+      "ko": "Arizona Athletic Grounds · 미국 애리조나 메사"
+    },
+    "checked": "2026-10-04",
+    "status": "complete",
+    "source": "arizona-recap",
+    "intro": {
+      "en": "Five finals, separated by division. Alshon and Daescu won a three-game men’s doubles final; Waters took the singles and mixed doubles titles.",
+      "ko": "다섯 부문의 결승을 종목별로 정리했습니다. Alshon·Daescu는 세 게임의 남복 결승에서 이겼고 Waters는 단식과 혼복을 우승했습니다."
+    },
+    "insight": {
+      "en": "The 15–13 deciding game in men’s doubles is a useful reminder that match closure deserves its own review. In your next close game, record what happened at the first realistic finishing chance—not only who won the last rally.",
+      "ko": "남복 마지막 게임 15–13은 경기 마무리 과정을 따로 돌아볼 이유를 보여 줍니다. 다음 접전에서는 마지막 랠리의 승자뿐 아니라 처음 생긴 실질적인 마무리 기회에서 어떤 선택을 했는지 기록해 보세요."
+    },
+    "rows": [
+      {
+        "division": "MS",
+        "winner": [
+          "Christopher Haworth"
+        ],
+        "runnerUp": [
+          "Federico Staksrud"
+        ],
+        "games": [
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            9
+          ],
+          [
+            11,
+            6
+          ]
+        ],
+        "series": null,
+        "source": "arizona-recap",
+        "status": "confirmed"
+      },
+      {
+        "division": "WS",
+        "winner": [
+          "Anna Leigh Waters"
+        ],
+        "runnerUp": [
+          "Kate Fahey"
+        ],
+        "games": [
+          [
+            11,
+            9
+          ],
+          [
+            11,
+            4
+          ]
+        ],
+        "series": null,
+        "source": "arizona-recap",
+        "status": "confirmed"
+      },
+      {
+        "division": "MD",
+        "winner": [
+          "Christian Alshon",
+          "Andrei Daescu"
+        ],
+        "runnerUp": [
+          "Nicolas Acevedo",
+          "Yuta Funemizu"
+        ],
+        "games": [
+          [
+            11,
+            7
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            15,
+            13
+          ]
+        ],
+        "series": null,
+        "source": "arizona-recap",
+        "status": "confirmed"
+      },
+      {
+        "division": "WD",
+        "winner": [
+          "Parris Todd",
+          "Rachel Rohrabacher"
+        ],
+        "runnerUp": [
+          "Hurricane Tyra Black",
+          "Meghan Dizon"
+        ],
+        "games": [
+          [
+            11,
+            4
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            6
+          ]
+        ],
+        "series": null,
+        "source": "arizona-wd",
+        "status": "confirmed"
+      },
+      {
+        "division": "XD",
+        "winner": [
+          "Anna Leigh Waters",
+          "Ben Johns"
+        ],
+        "runnerUp": [
+          "Rachel Rohrabacher",
+          "Christian Alshon"
+        ],
+        "games": [
+          [
+            11,
+            3
+          ],
+          [
+            11,
+            6
+          ]
+        ],
+        "series": null,
+        "source": "arizona-recap",
+        "status": "confirmed"
+      }
+    ],
+    "guide": "match-review-worksheet"
+  },
+  {
+    "slug": "kuala-lumpur-2026",
+    "tour": "ASIA",
+    "title": {
+      "en": "PPA Asia Kuala Lumpur Cup",
+      "ko": "PPA Asia Kuala Lumpur Cup"
+    },
+    "start": "2026-09-09",
+    "end": "2026-09-13",
+    "place": {
+      "en": "Kuala Lumpur · Malaysia",
+      "ko": "말레이시아 쿠알라룸푸르"
+    },
+    "checked": "2026-10-04",
+    "status": "partial-scores",
+    "source": "kl-recap",
+    "intro": {
+      "en": "All five champion/finalist pairs are recorded. Four finals have verified game scores; men’s doubles points are explicitly left unverified.",
+      "ko": "다섯 부문의 우승·준우승을 정리했습니다. 네 결승의 게임별 점수는 확인했고 남복의 세부 점수는 미확인으로 남겼습니다."
+    },
+    "insight": {
+      "en": "Several finals changed direction after the opening game. That is a prompt to watch adaptation, not proof of a particular tactical adjustment. Compare return depth and the quality of the first transition ball when watching a replay.",
+      "ko": "첫 게임 뒤 흐름이 바뀐 결승들이 있습니다. 이것은 적응 과정을 관찰할 단서이지 특정 전술 수정의 증거는 아닙니다. 다시 볼 때 리턴 깊이와 첫 전환구의 질을 비교해 보세요."
+    },
+    "rows": [
+      {
+        "division": "MS",
+        "winner": [
+          "Tama Shimabukuro"
+        ],
+        "runnerUp": [
+          "Noe Khlif"
+        ],
+        "games": [
+          [
+            11,
+            8
+          ],
+          [
+            11,
+            5
+          ]
+        ],
+        "series": null,
+        "source": "kl-recap",
+        "status": "confirmed"
+      },
+      {
+        "division": "WS",
+        "winner": [
+          "Kaitlyn Christian"
+        ],
+        "runnerUp": [
+          "Brooke Buckner"
+        ],
+        "games": [
+          [
+            9,
+            11
+          ],
+          [
+            11,
+            4
+          ],
+          [
+            11,
+            5
+          ]
+        ],
+        "series": null,
+        "source": "kl-recap",
+        "status": "confirmed"
+      },
+      {
+        "division": "MD",
+        "winner": [
+          "Gabriel Tardio",
+          "Noe Khlif"
+        ],
+        "runnerUp": [
+          "Augustus Ge",
+          "Len Yang"
+        ],
+        "games": [],
+        "series": null,
+        "source": "kl-recap",
+        "status": "winner-confirmed"
+      },
+      {
+        "division": "WD",
+        "winner": [
+          "Jessie Irvine",
+          "Alix Truong"
+        ],
+        "runnerUp": [
+          "Danni-Elle Townsend",
+          "Sahra Dennehy"
+        ],
+        "games": [
+          [
+            5,
+            11
+          ],
+          [
+            11,
+            5
+          ],
+          [
+            11,
+            6
+          ]
+        ],
+        "series": null,
+        "source": "kl-recap",
+        "status": "confirmed"
+      },
+      {
+        "division": "XD",
+        "winner": [
+          "Jessie Irvine",
+          "Gabriel Tardio"
+        ],
+        "runnerUp": [
+          "Danni-Elle Townsend",
+          "Joey Wild"
+        ],
+        "games": [
+          [
+            5,
+            11
+          ],
+          [
+            11,
+            3
+          ],
+          [
+            12,
+            10
+          ]
+        ],
+        "series": null,
+        "source": "kl-recap",
+        "status": "confirmed"
+      }
+    ],
+    "guide": "transition-reset-footwork"
+  },
+  {
+    "slug": "mlp-finals-2026",
+    "tour": "MLP",
+    "title": {
+      "en": "MLP Finals · New York City",
+      "ko": "MLP Finals · 뉴욕"
+    },
+    "start": "2026-08-28",
+    "end": "2026-08-30",
+    "place": {
+      "en": "CityPickle at Wollman Rink · New York",
+      "ko": "CityPickle at Wollman Rink · 미국 뉴욕"
+    },
+    "checked": "2026-10-04",
+    "status": "complete-series",
+    "source": "mlp-final",
+    "intro": {
+      "en": "New Jersey 5s won the championship series over St. Louis Shock. The 2–0 below is the series result, not the score of an individual doubles game.",
+      "ko": "New Jersey 5s가 St. Louis Shock를 꺾고 챔피언십 시리즈에서 우승했습니다. 아래 2–0은 개별 복식 게임 점수가 아닌 시리즈 결과입니다."
+    },
+    "insight": {
+      "en": "Team competition and individual-tour results answer different questions. A team title should not be converted into an individual player ranking. When comparing MLP with PPA, first identify the unit: team series, match, or game.",
+      "ko": "팀 대회와 개인 투어 성적은 서로 다른 질문에 답합니다. 팀 우승을 개인 랭킹으로 바꾸어 해석하면 안 됩니다. MLP와 PPA를 비교할 때는 팀 시리즈·매치·게임 중 어느 단위인지 먼저 구분하세요."
+    },
+    "rows": [
+      {
+        "division": "TEAM",
+        "winner": [
+          "New Jersey 5s"
+        ],
+        "runnerUp": [
+          "St. Louis Shock"
+        ],
+        "games": [],
+        "series": [
+          2,
+          0
+        ],
+        "source": "mlp-final",
+        "status": "series-confirmed"
+      }
+    ],
+    "guide": "match-review-worksheet"
+  }
+]

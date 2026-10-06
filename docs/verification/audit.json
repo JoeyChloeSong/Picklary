@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "editorialDate": "2026-10-04",
+  "technicalStatus": "PASS",
+  "htmlFiles": 76,
+  "sitemapUrls": 66,
+  "internalReferences": 2786,
+  "jsonldBlocks": 74,
+  "guides": 9,
+  "products": 28,
+  "players": 20,
+  "mediaRecords": 48,
+  "localMedia": 17,
+  "remoteMedia": 31,
+  "eventRecords": 4,
+  "confirmedResultRows": 12,
+  "pendingResultRows": 4,
+  "confirmedPodiumsWithoutScores": 1,
+  "exactMigrationRedirects": 110,
+  "adServing": false,
+  "errors": [],
+  "warnings": [
+    "31 of 48 named images use remote sources unless media caching is run; offline checks cannot certify their availability.",
+    "Image reuse rights are not documented. Review THIRD_PARTY_NOTICES.md and docs/MEDIA_RIGHTS_CHECKLIST.csv before publication/monetization.",
+    "Exact Google rejection notice was not available. Technical tests are not an AdSense approval decision.",
+    "4 division finals pending; 1 confirmed podium without game scores. Do not invent missing values.",
+    "Legacy video rendering and retired content are not published; review migration and feature-change notes before replacing production."
+  ]
+}
